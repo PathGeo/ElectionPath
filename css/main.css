@@ -62,11 +62,20 @@ a {text-decoration:none;}
 
 
 /** widget candidate */
-.candidate ul {list-style:none; padding:0px; margin:0px; }
-.candidate ul li {float:left; padding:10px;  width:17.5%; height:75px; font-size:35px; font-weight:bold; border:1px solid #fafafa; text-align:center;}
-.candidate .image {text-align:left;}
-.candidate .image img {height:80px; }
+.candidate > div {float:left;}
+.candidate ul {list-style:none; padding:0px; margin:0px; width:100%; height:100%;}
+.candidate ul li {float:left; padding:10px;}
 
+/** candidate metadata*/
+.candidate_metadata {width:30%;}
+.candidate_metadata .image {height:85px; }
+
+
+/** candidate index*/
+.candidate_index {width:70%;}
+.candidate_index ul li {position:relative; width:21.5%; height:75px; border:1px solid #f1f1f1; text-align:center; -moz-border-radius:5px; -webkit-border-radius:5px; border-radius:5px; }
+.candidate_index ul li label {font-size:34px; font-weight:bold;  }
+.candidate_index ul li p {color:#999999; font-size:10px; position:relative; bottom:0px; }
 
 
 /** widget_controlPanel */

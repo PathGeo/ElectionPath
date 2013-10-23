@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
@@ -80,7 +80,56 @@
 
 	<!-- widgets-->
 	<!-- Michael Aguirre-->
+	<div id='widget_aguirre' class='widget' widget-title='Michael Aguirre' widget-onInit="" widget-onClose="" widget-onClick="" widget-sizeX=6 widget-sizeY=1 widget-row=1 widget-col=1>
+		<div class='candidate'>
+			<ul>
+				<li class='image'><img src='images/Aguirre-image.jpg'/></li>
+				<li class='tweets'>23</li>
+				<li class='followers'>+75</li>
+				<li class='influence'>-3.13%</li>
+				<li class='biggest'>SDSU</li>
+			</ul>
+		</div>
+	</div>
 	
+	<!-- David Alvarez-->
+	<div id='widget_alvarez' class='widget' widget-title='David Alvarez' widget-onInit="" widget-onClose="" widget-onClick="" widget-sizeX=6 widget-sizeY=1 widget-row=1 widget-col=1>
+		<div class='candidate'>
+			<ul>
+				<li class='image'><img src='images/alvarez.jpg'/></li>
+				<li class='tweets'>25</li>
+				<li class='followers'>+60</li>
+				<li class='influence'>-3.13%</li>
+				<li class='biggest'>SDSU</li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Fletcher-->
+	<div id='widget_fletcher' class='widget' widget-title='Fletcher' widget-onInit="" widget-onClose="" widget-onClick="" widget-sizeX=6 widget-sizeY=1 widget-row=1 widget-col=1>
+		<div class='candidate'>
+			<ul>
+				<li class='image'><img src='images/Fletcher.jpg'/></li>
+				<li class='tweets'>23</li>
+				<li class='followers'>+72</li>
+				<li class='influence'>-3.13%</li>
+				<li class='biggest'>SDSU</li>
+			</ul>
+		</div>
+	</div>
+	
+	<!-- Faulconer-->
+	<div id='widget_faulconer' class='widget' widget-title='Faulconer' widget-onInit="" widget-onClose="" widget-onClick="" widget-sizeX=6 widget-sizeY=1 widget-row=1 widget-col=1>
+		<div class='candidate'>
+			<ul>
+				<li class='image'><img src='images/faulconer.jpg'/></li>
+				<li class='tweets'>12</li>
+				<li class='followers'>-12</li>
+				<li class='influence'>-3.13%</li>
+				<li class='biggest'>SDSU</li>
+			</ul>
+		</div>
+	</div>
 	
 
 	
