@@ -1,62 +1,66 @@
 {
-	"aguirre":{
-		"name":"Mike Aguirre",
-		"backgroundColor":"",
-		"url_website":"",
-		"url_twitter":"",
-		"image":"images/Aguirre-image.jpg",
-		"tweets_all": 6600,
-		"tweets_yesterday": 23,
-		"followers_yesterday": 75,
-		"influence": "+3.13%",
-		"biggestFollower":{
-			"name":"SDSU",
-			"url":""
-		}
-	},
-	"alvarez":{
-		"name":"Daivd Alvarez",
-		"backgroundColor":"",
-		"url_website":"",
-		"url_twitter":"",
-		"image":"images/alvarez.jpg",
-		"tweets_all": 6600,
-		"tweets_yesterday": 23,
-		"followers_yesterday": 75,
-		"influence": "+3.13%",
-		"biggestFollower":{
-			"name":"SDSU",
-			"url":""
-		}
-	},
-	"faulconer":{
-		"name":"Kevin Faulconer",
-		"backgroundColor":"",
-		"url_website":"",
-		"url_twitter":"",
-		"image":"images/faulconer.jpg",
-		"tweets_all": 6600,
-		"tweets_yesterday": 23,
-		"followers_yesterday": 75,
-		"influence": "+3.13%",
-		"biggestFollower":{
-			"name":"SDSU",
-			"url":""
-		}
-	},
-	"fletcher":{
-		"name":"Nathan Fletcher",
-		"backgroundColor":"",
-		"url_website":"",
-		"url_twitter":"",
-		"image":"images/Fletcher.jpg",
-		"tweets_all": 6600,
-		"tweets_yesterday": 23,
-		"followers_yesterday": 75,
-		"influence": "+3.13%",
-		"biggestFollower":{
-			"name":"SDSU",
-			"url":""
-		}
-	}
+    "Aguirre": {
+        "backgroundColor": "",
+        "biggestFollower": {
+                "name": "morrowchris",
+                "url": "http://www.twitter.com/morrowchris"
+        },
+        "followers_yesterday": 3,
+        "followers_all": 492,
+        "image": "images/Aguirre-image.jpg",
+        "influence": -0.1,
+        "name": "Mike Aguirre",
+        "tweets_all": 303,
+        "tweets_yesterday": 18,
+        "url_twitter": "http://www.twitter.com/Julesan1",
+        "url_website": ""
+    },
+    "Alvarez": {
+        "backgroundColor": "",
+		"biggestFollower": {
+                "name": "morrowchris",
+                "url": "http://www.twitter.com/morrowchris"
+        },
+        "followers_yesterday": 5,
+        "followers_all": 2136,
+        "image": "images/alvarez.jpg",
+        "influence": 0.1,
+        "name": "David Alvarez",
+        "tweets_all": 686,
+        "tweets_yesterday": 18,
+        "url_twitter": "http://www.twitter.com/AlvarezSD",
+        "url_website": ""
+    },
+    "Faulconer": {
+        "backgroundColor": "",
+        "biggestFollower": {
+                "name": "morrowchris",
+                "url": "http://www.twitter.com/morrowchris"
+        },
+        "followers_yesterday": 9,
+        "followers_all": 3659,
+        "image": "images/faulconer.jpg",
+        "influence": 0.2,
+        "name": "Kevin Faulconer",
+        "tweets_all": 1283,
+        "tweets_yesterday": 53,
+        "url_twitter": "http://www.twitter.com/kevin_faulconer",
+        "url_website": ""
+    },
+    "Fletcher": {
+        "backgroundColor": "",
+        "biggestFollower": {
+                "name": "mariashriver",
+                "url": "http://www.twitter.com/mariashriver"
+        },
+        "followers_yesterday": 7,
+        "followers_all": 6497,
+        "image": "images/Fletcher.jpg",
+        "influence": 0.1,
+        "name": "Nathan Fletcher",
+        "tweets_all": 988,
+        "tweets_yesterday": 38,
+        "url_twitter": "http://www.twitter.com/nathanfletcher",
+        "url_website": ""
+    }
 }

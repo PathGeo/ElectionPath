@@ -68,10 +68,11 @@
 		
 		//create widget
 		if(app.candidates){
-			var html="";
+			var html="",
+				html_addWidget="";
 			
 			$.each(app.candidates, function(k,v){
-				html+="<div id='widget_'"+k+"' class='widget' widget-title='"+v.name+"' widget-onInit='' widget-onClose='' widget-onClick='' widget-sizeX=6 widget-sizeY=1 widget-row=1 widget-col=1>"+
+				html+="<div id='widget_"+k+"' class='widget' widget-title='"+v.name+"' widget-onInit='' widget-onClose='' widget-onClick='' widget-sizeX=6 widget-sizeY=1 widget-row=1 widget-col=1>"+
 					 "<div class='candidate' style='"+((v.backgroundColor!='')?"background-color:"+v.backgroundColor:"")+"'>"+
 					 //metadata
 					 "<div class='candidate_metadata'>"+
@@ -86,14 +87,20 @@
 							"<li><label>"+v.tweets_yesterday+"</label><p>mentioned Yesterday</p></li>"+
 							"<li><label>"+v.followers_yesterday+"</label><p>Followers Yesterday</p></li>"+
 							"<li><label>"+v.influence+"</label><p>Gain or lost of network influence Yesterday</p></li>"+
-							"<li><label>"+v.biggestFollower.name+"</label><p>Biggest new follower</p></li>"+
+							"<li><label>"+((v.biggestFollower.url)?"<a href='"+v.biggestFollower.url+"' target='_blank'>"+v.biggestFollower.name+"</a>":v.biggestFollower.name)+"</label><p>Biggest new follower</p></li>"+
 						"</ul>"+
 					"</div>"+
 					"</div></div>";
+				
+				//html for addWidget dialog
+				html_addWidget+="<li onclick=\"addWidget('widget_"+k+"')\"><img src='"+v.image+"' /><span><b>"+v.name+"</b><br>"+v.name+"</span></li>";
 			})
 			
 			//insert html before controlPanel widget
 			$("#widget_controlPanel").before(html)
+			
+			//inser html before first li of ul in the addWidget dialog
+			$("#dialog_addWidget ul li:first-child").before(html_addWidget);
 		}
 		
 		
@@ -133,6 +140,10 @@
 			submenu_active = false;
 			setTimeout(function() { if (submenu_active === false) $('div#submenu').fadeOut(); }, 400);
 		});
+		
+		
+		//countdown
+		
 		
 		var today = new Date();
 		var dd = today.getDate();
@@ -341,10 +352,24 @@
 	/**
 	 * add a new Widget into the Dashboard 
 	 */
-	function addWidget(){
-		$(".widget").each(function(){
-			var $this=$(this);
-			
+	function addWidget(id){
+		if(!id){
+			$(".widget").each(function(){
+				createWidget($(this));
+			})
+		}else{
+			//check if the widget is already existing
+			if($(".gs_w[id='"+id+"']").length>0){
+				alert('The widget is already existing. You do not need to add duplicate widget. ');
+			}else{
+				createWidget($("#"+id))
+			}
+		}
+		
+		
+		
+		//create widget
+		function createWidget($this){
 			var sizeX=$this.attr("widget-sizeX") || 1,
 				sizeY=$this.attr("widget-sizeY") || 1,
 				row=$this.attr("widget-row") || 1,
@@ -413,13 +438,8 @@
 					});
 				}
 			})
-		})
-		
-		
-		
-		
-		
-		
+			
+		}
 		
 		
 		//close all dialog
