@@ -66,7 +66,7 @@
 						 "<img class='candidate-image' src='"+v.image+"' />"+
 						 "<div class='candidate-metadata'>"+
 							"<img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' />"+
-							"<div class='candidate-twitterYesterday'>"+v.tweets_all+"</div>"+
+							"<div class='candidate-twitterAll'>"+v.tweets_all+"</div>"+
 							"<div class='candidate-info'>"+"<a href='"+v.url_website+"' target='_blank'>Website</a><br><a href='"+v.url_twitter+" target='_blank'>Twitter</a></div>"+
 						 "</div>"+
 					 "</div>"+
