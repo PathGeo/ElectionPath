@@ -60,27 +60,38 @@
 				$candidate=$("#candidate ul");
 			
 			$.each(app.candidates, function(k,v){
-				html="<li>"+
+				html="<li id='"+k+"'>"+
 					 "<div class='candidate-name'>"+v.name +"</div>"+
 					 "<div class='candidate-content'>"+
 						 "<img class='candidate-image' src='"+v.image+"' />"+
 						 "<div class='candidate-metadata'>"+
 							"<img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' />"+
-							"<div class='candidate-twitterAll'>"+v.tweets_all+"</div>"+
-							"<div class='candidate-info'>"+"<a href='"+v.url_website+"' target='_blank'>Website</a><br><a href='"+v.url_twitter+" target='_blank'>Twitter</a></div>"+
+							"<div class='candidate-twitterYesterday'>"+v.tweets_yesterday+"<label>mentioned Yesterday</label></div>"+
+							"<div class='candidate-info'>"+"<a href='"+v.url_website+"' target='_blank'>Website</a><br><a href='"+v.url_twitter+"' target='_blank'>Twitter</a></div>"+
 						 "</div>"+
 					 "</div>"+
 					 "<div class='candidate-index'>"+
 					 	"<ul>"+
-							"<li><label>"+v.tweets_yesterday+"</label>mentioned Yesterday</li>"+
+							"<li><label>"+v.tweets_all+"</label>mentioned since 10.01</li>"+
 							"<li><label>"+v.followers_yesterday+"</label>Followers Yesterday</li>"+
-							"<li><label>"+v.influence+"</label>Network influence Yesterday</li>"+
+							"<li><label>"+v.influence+"</label title='help'>Network influence Yesterday</li>"+
 							"<li><label>"+((v.biggestFollower.url)?"<a href='"+v.biggestFollower.url+"' target='_blank'>"+v.biggestFollower.name+"</a>":v.biggestFollower.name)+"</label>Biggest new follower</li>"+
 						"</ul>"+
 					 "</div>"
 					 "</li>";
 				
 				$candidate.append(html);
+			});
+			
+			//add li's clicking event
+			$candidate.find("li").click(function(){
+				var $this=$(this),
+					id=$this.attr("id");
+				
+				if(app.candidates[id] && id && id!=''){
+					console.log(app.candidates[id]);
+				}
+				
 			});
 		}
 			
