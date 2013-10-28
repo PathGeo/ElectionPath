@@ -16,7 +16,8 @@
 		},
 		dealer:"drew", //currrentDealer
 		controls:{     //leafmap controls
-			toc:null
+			toc:null,
+			geocoding: new L.Control.BingGeocoder('AvZ8vsxrtgnSqfEJF1hU40bASGwxahJJ3_X3dtkd8BSNljatfzfJUvhjo9IGP_P7')
 		}, 
 		hitMapData:{   //heatmap data
 			max:  1,        // Always 1 in tweet data
@@ -53,38 +54,142 @@
 	 * init user interface 
 	 */
 	function init_UI(){		
+		//gridster
+		$(".gridster").append("<ul></ul>");
+
+		app.gridster=$(".gridster > ul").gridster({
+	        widget_margins: [10, 10],
+	        widget_base_dimensions: [$(".gridster").width()/7, $(".gridster").width()/7.45],
+			draggable: {
+	            handle: '.widget-title' //change draggable area to the '.widget-title'
+	        }
+	    }).data("gridster");//.disable(); //disable dragging while init();
+	    
+		
 		//create widget
 		if(app.candidates){
 			var html="",
-				html_addWidget="",
-				$candidate=$("#candidate ul");
+				html_addWidget="";
 			
 			$.each(app.candidates, function(k,v){
-				html="<li>"+
-					 "<div class='candidate-name'>"+v.name +"</div>"+
-					 "<div class='candidate-content'>"+
-						 "<img class='candidate-image' src='"+v.image+"' />"+
-						 "<div class='candidate-metadata'>"+
-							"<img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' />"+
-							"<div class='candidate-twitterYesterday'>"+v.tweets_all+"</div>"+
-							"<div class='candidate-info'>"+"<a href='"+v.url_website+"' target='_blank'>Website</a><br><a href='"+v.url_twitter+" target='_blank'>Twitter</a></div>"+
-						 "</div>"+
-					 "</div>"+
-					 "<div class='candidate-index'>"+
+				html+="<div id='widget_"+k+"' class='widget' widget-title='"+v.name+"' widget-onInit='' widget-onClose='' widget-onClick='' widget-sizeX=6 widget-sizeY=1 widget-row=1 widget-col=1>"+
+					 "<div class='candidate' style='"+((v.backgroundColor!='')?"background-color:"+v.backgroundColor:"")+"'>"+
+					 //metadata
+					 "<div class='candidate_metadata'>"+
 					 	"<ul>"+
-							"<li><label>"+v.tweets_yesterday+"</label>mentioned Yesterday</li>"+
-							"<li><label>"+v.followers_yesterday+"</label>Followers Yesterday</li>"+
-							"<li><label>"+v.influence+"</label>Network influence Yesterday</li>"+
-							"<li><label>"+((v.biggestFollower.url)?"<a href='"+v.biggestFollower.url+"' target='_blank'>"+v.biggestFollower.name+"</a>":v.biggestFollower.name)+"</label>Biggest new follower</li>"+
+					 		"<li><img class='image' src='"+v.image+"'/></li>"+
+							"<li><b>"+v.name+"</b><p></p>Tweets: "+v.tweets_all+"<br><a href='"+v.url_website+"' target='_blank'>Website</a><br><a href='"+v.url_twitter+"' target='_blank'>Twitter</a></li>"+
 						"</ul>"+
-					 "</div>"
-					 "</li>";
+					 "</div>"+
+					 //index
+					 "<div class='candidate_index'>"+
+						 "<ul>"+
+							"<li><label>"+v.tweets_yesterday+"</label><p>mentioned Yesterday</p></li>"+
+							"<li><label>"+v.followers_yesterday+"</label><p>Followers Yesterday</p></li>"+
+							"<li><label>"+v.influence+"</label><p>Gain or lost of network influence Yesterday</p></li>"+
+							"<li><label>"+((v.biggestFollower.url)?"<a href='"+v.biggestFollower.url+"' target='_blank'>"+v.biggestFollower.name+"</a>":v.biggestFollower.name)+"</label><p>Biggest new follower</p></li>"+
+						"</ul>"+
+					"</div>"+
+					"</div></div>";
 				
-				$candidate.append(html);
-			});
+				//html for addWidget dialog
+				html_addWidget+="<li onclick=\"addWidget('widget_"+k+"')\"><img src='"+v.image+"' /><span><b>"+v.name+"</b><br>"+v.name+"</span></li>";
+			})
+			
+			//insert html before controlPanel widget
+			$("#widget_controlPanel").before(html)
+			
+			//inser html before first li of ul in the addWidget dialog
+			$("#dialog_addWidget ul li:first-child").before(html_addWidget);
 		}
-			
-			
+		
+		
+	    //add widget
+		addWidget();
+
+
+		//cursor change while mouseovering on the widget title 
+		$(".widget-title").hover(function(){
+			$(this).css('cursor','move');
+		}, function(){
+			$(this).css('cursor','auto');
+		})
+		
+		
+		
+		/**
+		*logout dropdown event handler
+		*/
+		$('a#link').click(function() {
+			//alert("sdfd");
+			var submenu = $('div#submenu');
+			if (submenu.is(":visible")) {
+				submenu.fadeOut();
+			} else {
+				submenu.fadeIn();
+			}
+		});
+		
+		var submenu_active = false;
+		 
+		$('div#submenu').mouseenter(function() {
+			submenu_active = true;
+		});
+		 
+		$('div#submenu').mouseleave(function() {
+			submenu_active = false;
+			setTimeout(function() { if (submenu_active === false) $('div#submenu').fadeOut(); }, 400);
+		});
+		
+		
+		//countdown
+		
+		
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1; //January is 0!
+
+		var yyyy = today.getFullYear();
+		if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm} today = mm+'/'+dd+'/'+yyyy;
+		
+		var currentTime = new Date()
+		var hours = currentTime.getHours()
+		var minutes = currentTime.getMinutes()
+
+		if (minutes < 10){
+			minutes = "0" + minutes
+		}
+		var suffix = "AM";
+		if (hours >= 12) {
+			suffix = "PM";
+			hours = hours - 12;
+		}
+		if (hours == 0) {
+			hours = 12;
+		}
+	
+		today+= "<span style='padding-left:30px'>" + hours + ":" + minutes + " " + suffix + "</span>";
+
+		$("#date").html(today);
+		
+		
+		//Adjust score text size based on window size
+		//var sectionWidth = $('#widget_reputation').height();
+		
+		//var newFontSizeScore = ($('#widget_reputation').height() - 66);
+		//$('.digital_score').css({"font-size" : newFontSizeScore});
+		
+		//var newFontSizePercent = newFontSizeScore/2;
+		//$('.digital_percent').css({"font-size" : newFontSizePercent});
+		
+		//var arrowSize = (newFontSizePercent*20)/32;
+		//$('.digital_arrow').width(arrowSize);
+		//$('.digital_arrow').height(arrowSize);
+		
+		//$('.digital_table').css({"font-size" : newFontSizePercent});
+		//$('.digital_table').css({"font-size" : newFontSizePercent});
+
+	
 	}
 	
 	

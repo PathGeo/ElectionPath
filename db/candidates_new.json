@@ -1,0 +1,66 @@
+{
+    "Aguirre": {
+        "url_twitter": "http://www.twitter.com/Julesan1",
+        "name": "Mike Aguirre",
+        "image": "images/Aguirre-image.jpg",
+        "influence": "2.50%",
+        "tweets_yesterday": 28,
+        "tweets_all": 335,
+        "url_website": "",
+        "followers_all": 492,
+        "biggestFollower": {
+            "url": "http://www.twitter.com/morrowchris",
+            "name": "morrowchris"
+        },
+        "followers_yesterday": 4,
+        "backgroundColor": ""
+    },
+    "Faulconer": {
+        "url_twitter": "http://www.twitter.com/kevin_faulconer",
+        "name": "Kevin Faulconer",
+        "image": "images/faulconer.jpg",
+        "influence": "-0.10%",
+        "tweets_yesterday": 47,
+        "tweets_all": 1342,
+        "url_website": "",
+        "followers_all": 3659,
+        "biggestFollower": {
+            "url": "http://www.twitter.com/morrowchris",
+            "name": "morrowchris"
+        },
+        "followers_yesterday": 13,
+        "backgroundColor": ""
+    },
+    "Alvarez": {
+        "url_twitter": "http://www.twitter.com/AlvarezSD",
+        "name": "David Alvarez",
+        "image": "images/alvarez.jpg",
+        "influence": "0.10%",
+        "tweets_yesterday": 46,
+        "tweets_all": 724,
+        "url_website": "",
+        "followers_all": 2136,
+        "biggestFollower": {
+            "url": "http://www.twitter.com/morrowchris",
+            "name": "morrowchris"
+        },
+        "followers_yesterday": 10,
+        "backgroundColor": ""
+    },
+    "Fletcher": {
+        "url_twitter": "http://www.twitter.com/nathanfletcher",
+        "name": "Nathan Fletcher",
+        "image": "images/Fletcher.jpg",
+        "influence": "0.00%",
+        "tweets_yesterday": 29,
+        "tweets_all": 1028,
+        "url_website": "",
+        "followers_all": 6497,
+        "biggestFollower": {
+            "url": "http://www.twitter.com/mariashriver",
+            "name": "mariashriver"
+        },
+        "followers_yesterday": 11,
+        "backgroundColor": ""
+    }
+}

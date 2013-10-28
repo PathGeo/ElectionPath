@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
@@ -43,31 +43,18 @@
 
 <body>
 	<!--header section (JOE)-->
-	<div class="outer-north">
-		<div id="header" style="background-color:#ffffff; padding:5px; height:50px">
-			<a href="http://www.pathgeo.com/" ><img src = "images/logo_pathgeo.png" alt="logo" border="0" style = "margin:0px 0px 0px 0px;float:left;" /></a>
-			
-			<!--<div id="log" style="background-color:#ffffff;height:auto;width:80px;float:right;">
-				Log out
-			</div>-->
-
-			<!--<div id="welcome" style="background-color:#ffffff;height:auto;float:right;padding-top:10px;padding-right:20px">
-				Welcome! Mike Baker 
-				Your role is General Manager
-			</div>-->
-			<div id="date" style="padding-left:50px; padding-top: 15px; font-size:20px; float:left; color:#555555"></div>
-			<div id="welcome" style="background-color:#ffffff;height:auto;float:right;padding:0px 50px 0px 0px">
-				<div style="float:right; padding-top:15px; font-size:23px; font-weight:bold;  ">
-					ElectionPath
-				</div>
-
-			</div>
+	<div id="header" style="background-color:#ffffff; padding:5px; height:50px">
+		<label>2013 San Diego Mayor Special Election <p>November 19th, 2013</p></label>
+		
+		<div id='countdown'>
+			31 days
 		</div>
-
-		<!--<div id="subhead" style="background-color:#ffffff ;height:auto;">
-			Social Awareness Marketing (SAM) Dashboard Powered by PathGeo
-		</div>-->
+		
+		<div id='logo'>
+			<a href="http://www.pathgeo.com/" ><img src = "images/logo_pathgeo.png" alt="logo" border="0" style='height:30px'/></a>
+		</div>
 	</div>
+
 
 	<P></P>
 
@@ -80,56 +67,7 @@
 
 	<!-- widgets-->
 	<!-- Michael Aguirre-->
-	<div id='widget_aguirre' class='widget' widget-title='Michael Aguirre' widget-onInit="" widget-onClose="" widget-onClick="" widget-sizeX=6 widget-sizeY=1 widget-row=1 widget-col=1>
-		<div class='candidate'>
-			<ul>
-				<li class='image'><img src='images/Aguirre-image.jpg'/></li>
-				<li class='tweets'>23</li>
-				<li class='followers'>+75</li>
-				<li class='influence'>-3.13%</li>
-				<li class='biggest'>SDSU</li>
-			</ul>
-		</div>
-	</div>
 	
-	<!-- David Alvarez-->
-	<div id='widget_alvarez' class='widget' widget-title='David Alvarez' widget-onInit="" widget-onClose="" widget-onClick="" widget-sizeX=6 widget-sizeY=1 widget-row=1 widget-col=1>
-		<div class='candidate'>
-			<ul>
-				<li class='image'><img src='images/alvarez.jpg'/></li>
-				<li class='tweets'>25</li>
-				<li class='followers'>+60</li>
-				<li class='influence'>-3.13%</li>
-				<li class='biggest'>SDSU</li>
-			</ul>
-		</div>
-	</div>
-	
-	<!-- Fletcher-->
-	<div id='widget_fletcher' class='widget' widget-title='Fletcher' widget-onInit="" widget-onClose="" widget-onClick="" widget-sizeX=6 widget-sizeY=1 widget-row=1 widget-col=1>
-		<div class='candidate'>
-			<ul>
-				<li class='image'><img src='images/Fletcher.jpg'/></li>
-				<li class='tweets'>23</li>
-				<li class='followers'>+72</li>
-				<li class='influence'>-3.13%</li>
-				<li class='biggest'>SDSU</li>
-			</ul>
-		</div>
-	</div>
-	
-	<!-- Faulconer-->
-	<div id='widget_faulconer' class='widget' widget-title='Faulconer' widget-onInit="" widget-onClose="" widget-onClick="" widget-sizeX=6 widget-sizeY=1 widget-row=1 widget-col=1>
-		<div class='candidate'>
-			<ul>
-				<li class='image'><img src='images/faulconer.jpg'/></li>
-				<li class='tweets'>12</li>
-				<li class='followers'>-12</li>
-				<li class='influence'>-3.13%</li>
-				<li class='biggest'>SDSU</li>
-			</ul>
-		</div>
-	</div>
 	
 
 	
@@ -176,13 +114,7 @@
 	<!-- addWidget (Calvin)-->
 	<div id='dialog_addWidget' style='display:none'>
 		<ul>
-			<li onclick='addWidget("widget_reputation")'><img src='images/1362418884_pagespeed.png'   /><span><b>Reputation</b><br>See your reputation score!</span></li>
-			<li onclick='addWidget("widget_visibility")'><img src='images/1362418910_screen_callers-g.png'  onclick='addWidget("widget_visibility")' /><span><b>Visibility</b><br>See your visibility score!</span></li>
-			<li onclick='addWidget("widget_competitor")'><img src='images/1362418858_people_stacked-b.png'   /><span><b>Competitor</b><br>See your competitors score!</span></li>
-			<li onclick='addWidget("widget_map")'><img src='images/1362418842_latitude.png' /><span><b>Map & Top Sales Leads</b><br>See top 10 Sales and Service Leads in the map!</span></li>
-			<li onclick='addWidget("widget_news")'><img src='images/1362418717_reader.png' /><span><b>News Feed</b><br>See relevant dealer news realtime!</span></li>
-			<li onclick='addWidget("widget_chart")'><img src='images/1362418773_analytics.png' /><span><b>Chart</b><br>Infographic your information!</span></li>
-			<li onclick='addWidget("widget_tweetStream")' ><img src='images/1362673036_social_twitter_box_blue.png' /><span><b>Twitter</b><br>See realtime HOT topics in Twitter!</span></li>
+			<li onclick='addWidget("widget_controlPanel")'><img src='images/1362418884_pagespeed.png'   /><span><b>Control Panel</b><br>Informaiton Control Panel</span></li>
 		</ul>
 	</div>
 	

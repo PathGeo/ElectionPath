@@ -16,75 +16,404 @@
 		},
 		dealer:"drew", //currrentDealer
 		controls:{     //leafmap controls
-			toc:null
+			toc:null,
+			geocoding: new L.Control.BingGeocoder('AvZ8vsxrtgnSqfEJF1hU40bASGwxahJJ3_X3dtkd8BSNljatfzfJUvhjo9IGP_P7')
 		}, 
 		hitMapData:{   //heatmap data
 			max:  1,        // Always 1 in tweet data
 			data: []
 		},
 		gridster:null,  //gridster
-		//widgets:["widget_aguirre", "widget_alvarez", "widget_fletcher", "widget_faulconer", "widget_controlPanel"],// "widget_addWidget"],
+		widgets:["widget_Aguirre", "widget_map"],// "widget_addWidget"],
 		constants: {
 			KEYWORDS: ['car', 'buy', 'shopping', 'Ford', 'friendly', 'upset', 'nice', 'bad', 'good', 'helpful', 'mistake']
 		},
 		eventHandler:{
 			click: ('ontouchend' in document.documentElement)? "touchend" : "click", //this is because that the click eventHandler will NOT work in the iOS devices (some conflict with the gridster mouse event)
 			mouseover: "mouseover"
-		},
-		candidates:null
+		}
 	}
 
     
 
 	//dom ready
-	$(function() { 
-	
-		//read candidates information 
-		$.getJSON("db/candidates_new.json", function(json){
-			app.candidates=json;
-			init_UI();
-		});
+	$(function() { 	    
+		init_UI();
+		//init_news_widget();
+		
+		
+		//TEMPORARY way to open map gallery (when map is double clicked)
+//		$("#map").dblclick(function(event) {
+//			showDialog('dialog_map_gallery', 'Map Gallery', {modal:true});
+//			initMapGallery();
+//			//event.preventDefault();
+//			return false;
+//		});		
 	});
 	
 	
+	
+	
+	/**
+	* Creates a google table in news_widget.  Table is populated with data from rss.js.  
+	*/
+	function init_news_widget() {
+		//sort score
+		sortArray(rssFeeds, "score");
+		showNews();
+	}
+	
+	
+	
+	
+	/**
+	 * show news Feed
+	 */
+	function showNews(){
+		//use <ul><li>to show the rssFeeds
+		var html="<ul>";
+		$.each(rssFeeds, function(i,rss){
+			html+="<li rssIndex=" + i +" title='Please click to see the news'><div class='score' title='Relevant Score. Powered by PathGeo'>" + rss.score+"</div><div class='content'><label class='title'>"+ rss.name + " @ " + rss.date + "</label><br>"+ rss.title + "</div></li>";
+		});
+		html+="</ul>";
+		$("#rss_news").html(html);
+		
+		//onclick event on each li
+		$("#rss_news ul li").click(function(){
+			var id=$(this).attr("rssIndex");
+			if(id && id !=""){
+				$("#dialog_news_score").html(rssFeeds[id].score);
+				$("#dialog_news_content").html("<label class='title'>"+ rssFeeds[id].title + "</label><br>" + rssFeeds[id].name + " @ " + rssFeeds[id].date);
+				$("#dialog_news_goto").click(function(){window.open(rssFeeds[id].url)});
+				$("#dialog_news iframe").attr("src", rssFeeds[id].url);
+				showDialog("dialog_news", "news", {modal:true, resizable:false, draggable:false, width:900, height:650, close:function(e,ui){$("#dialog_news iframe").html("").attr("src", "");}});
+			}
+		})
+		
+	}
+	
+	
+	
+	
+	function init_leads(){
+		//tabs
+		//we have to wait until the tabs have been created. Otherwise, the google chart table cannot get the correct width
+		$("#leads").tabs({"create": function(e,ui){
+			//init_leads_table(leads.sales, "sales_leads");
+			//init_leads_table(leads.service, "service_leads");
+			init_leads_table(leads);
+		}});
+	}
 
+
+
+
+	function init_leads_table(leads) {
+		var divName='';
+		
+		//read leads
+		$.each(leads, function(k,v){
+			if(k=='service'){divName='service_leads'}
+			if(k=='sales'){divName='sales_leads'}
+			
+			//adjust divName width and height. It is because using tabs will make the width of 2nd+ tabs to 0. So we need to set up manually.
+			$("#"+divName).css({width: $("#"+divName).parent().width()-40, height: $("#"+divName).parent().height()-65});
+			
+			//sort array 
+			sortArray(v, "score");
+			
+			var html="<ul>";
+			$.each(v, function(i, lead){
+				lead.leadID=i;
+				lead.leadType=k;
+				lead.divName=divName;
+				
+				html+="<li id=" + i + " leadType='" + k + "'>" + 
+				  "<div class='score'>" + lead.score +"</div>"+
+				  "<div class='content'><img title='see more about the lead' src='" + userData[lead.user].image_url + "' /><div><label class='title'>" + lead.user +"</label> says:<br>" + pathgeo.util.highlightKeyword(app.constants.KEYWORDS, lead.text, true) + "</div></div>"+
+				  "</li>";
+			});
+			$("#"+divName).html(html);	
+		});
+		
+		//click event and mouseover event
+		$(".leads ul li .content img").bind(app.eventHandler.click, function(){
+			var idx=$(this).parent().parent().attr("id"), //id in <li>
+				leadType=$(this).parent().parent().attr("leadType"); //leadType in <li>
+				
+			showUserInfoDialog(leads[leadType][idx]);
+		});
+		$(".leads ul li").bind(app.eventHandler.mouseover, function(){
+			//reset background color to avoid the color setted while mouseovering the marker
+			$(".leads ul li").css({"background-color": ""});
+			
+			var idx=$(this).attr("id"),
+				leadType=$(this).attr("leadType");
+			showLocation(leads[leadType][idx]);
+		});
+	}
+	
+	
+	
+	function showUserInfoDialog(lead) {
+		var userInfo=userData[lead.user]
+		
+		//join userinfo and lead, but we should be very carefull if there is any existing key name in two dateset
+		$.extend(userInfo, lead);
+		
+		//user image
+		$("#user_image").attr("src", userInfo.image_url);
+		//user info
+		$(".userInfo").each(function(){
+			if($(this).attr("id") && $(this).attr("id") && userInfo[$(this).attr("id")] && userInfo[$(this).attr("id")]!=''){
+				//if there is appointed format
+				if($(this).attr("textFormat") && $(this).attr("textFormat")!='' && $(this).attr("textFormat").split("{value}").length>1){
+					$(this).html($(this).attr("textFormat").replace(new RegExp("{value}", 'ig'), userInfo[$(this).attr("id")]));
+				}else{
+					$(this).html(userInfo[$(this).attr("id")])
+					//highlight the text
+					if($(this).attr("id")=='text'){$(this).html(pathgeo.util.highlightKeyword(app.constants.KEYWORDS, userInfo[$(this).attr("id")], true))}
+				}
+			}
+		});
+		
+		
+//		var userInfo;
+//		for (var indx in userData) {
+//			if (userData[indx].user_info.screen_name == userName) 
+//				userInfo = userData[indx].user_info;
+//		}
+		//alert(userInfo.image_url);
+//		$("#user_image").attr({"src": userInfo.image_url});
+//		$("#user_description").text(userInfo.description);
+//		$("#user_location").text(userInfo.location);
+//		$("#user_friends_count").text(userInfo.friends_count);
+//		$("#user_followers_count").text(userInfo.followers_count);
+		
+		showDialog('dialog_user_info', "About "+ lead.user, {
+			modal:true,
+			create:function(e,ui){
+				$("#dialog_user_info textarea").blur(); //disable focusing to avoid the vitual keyboard popup i
+			},
+			open:function(e, ui){
+				$("#dialog_user_info textarea").blur(); //disable focusing to avoid the vitual keyboard popup in mobile devices.
+			}
+		}); 
+		
+	}
+	
+	
+	
+	
+	/**
+	 * while mouseovering on the lead, it will trigger showLocation to show location on the map
+	 * @param {Object} Lead
+	 */
+	function showLocation(lead){
+		var userInfo=userData[lead.user]
+		//join userinfo and lead, but we should be very carefull if there is any existing key name in two dateset
+		
+		//hide the markerLead layer
+		app.map.removeLayer(app.layer.markerLead);
+		
+		var idx=Number(lead.leadID);
+		
+		//show
+		if(lead.latlon && lead.latlon.length==2 && lead.latlon[0]!='' && lead.latlon[1]!=''){
+			app.layer.markerLead=L.marker(lead.latlon)//.addTo(app.map); //add marker
+			app.map.panTo(app.layer.markerLead.getLatLng()); //center to the marker
+			
+			//popup info window
+			//var html="<img style='' src='" + userInfo.image_url + "' width=30px height=30px />"+
+			var html="<div class='popup' style=''><b>" + lead.user + "</b> says: <br>"+lead.text+"&nbsp; &nbsp; &nbsp; <a style='cursor:pointer'>more...</a></div>";
+			//app.layer.markerLead.bindPopup(html).openPopup();
+			L.popup().setLatLng(app.layer.markerLead.getLatLng()).setContent(html).openOn(app.map);
+			
+			$(".popup a").bind(app.eventHandler.click, function(){
+				showUserInfoDialog(lead);
+			});
+				
+			
+			//mouseover event on the app.layer.markerLead 
+			//still have some problem!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+			app.layer.markerLead.on("mouseover", function(e){
+					app.layer.markerLead.openPopup();
+					$("#" + lead.divName + " ul li:nth-child(" + (idx + 1) + ")").css({"background-color": "#eeeeee"});
+			}).on("mouseout", function(e){
+					app.layer.markerLead.closePopup();
+					//$("#" + divName + " ul li:nth-child(" + (idx + 1) + ")").css({"background-color": ""});
+				}
+			);
+		}
+	}
+
+
+    function init_Reputation(){
+
+        var keywords = ['GOES UP', 'DROPS'];
+       
+        var html="";
+        $.each(reputSolution, function(i,reputSol){
+			html+="<div class='dia_rep' repIndex=" + i +">\n\
+                    <span class='time'>" + reputSol.time+"</span>\n\
+                    <div class='solution'><img class='image' src= " + reputSol.image_url+ " /><p class='message'>"+ pathgeo.util.highlightKeyword(keywords, reputSol.description, true)  + "</p>\n\
+                    <span class='span'>Solution</span> <span class='span'>Detail</span> <span class='span'>Reply</span> <span class='span'>Save</span>\n\
+                    <br>"+ reputSol.solution + "</div>\n\
+                   </div>";
+		});
+		html+="";
+		$("#reputation").html(html);
+
+        $(".dia_rep").hover(function(){
+			$(this).css('background-color','#BDBDBD');
+            $(this).children().children('.span').css('display','inline')
+		}, function(){
+			$(this).css('background-color','#FFFFFF');
+            $(this).children().children('.span').css('display','none')
+		})
+
+        $(".dia_rep_2").hover(function(){
+			$(this).css('background-color','#BDBDBD')
+		}, function(){
+			$(this).css('background-color','#FFFFFF')
+		})
+    }
+
+    function init_Visibility(){
+
+        var keywords = ['GOES UP', 'DROPS'];
+
+        var html="";
+        $.each(visibSolution, function(i,visibSol){
+			html+="<div class='dia_vis' repIndex=" + i +">\n\
+                    <span class='time'>" + visibSol.time+"</span>\n\
+                    <div class='solution'><img class='image' src= " + visibSol.image_url+ " /><p class='message'>"+ pathgeo.util.highlightKeyword(keywords, visibSol.description, true)  + "</p>\n\
+                    <span class='span' id='btnSolution'>Solution</span> <span class='span' id='btnDetail'>Detail</span> <span class='span' id='btnReply'>Reply</span> <span class='span' id='btnSave'>Save</span>\n\
+                    <br><div class='info' id='txtSolution'>"+ visibSol.solution + "</div></div>\n\
+                   </div>";
+		});
+		html+="";
+		$("#visibility").html(html);
+
+        $(".dia_vis").hover(function(){
+			$(this).css('background-color','#BDBDBD');
+            $(this).children().children('.span').css('display','inline')
+		}, function(){
+			$(this).css('background-color','#FFFFFF');
+            $(this).children().children('.span').css('display','none')
+		})
+
+        $(".dia_vis_2").hover(function(){
+			$(this).css('background-color','#BDBDBD')
+		}, function(){
+			$(this).css('background-color','#FFFFFF')
+		})
+
+        $("#btnSolution").click(function(){
+            $(this).siblings('#txtSolution').css('display','inline')
+        })
+    }
 	
 	/**
 	 * init user interface 
 	 */
 	function init_UI(){		
-		//create widget
-		if(app.candidates){
-			var html="",
-				html_addWidget="",
-				$candidate=$("#candidate ul");
-			
-			$.each(app.candidates, function(k,v){
-				html="<li>"+
-					 "<div class='candidate-name'>"+v.name +"</div>"+
-					 "<div class='candidate-content'>"+
-						 "<img class='candidate-image' src='"+v.image+"' />"+
-						 "<div class='candidate-metadata'>"+
-							"<img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' />"+
-							"<div class='candidate-twitterYesterday'>"+v.tweets_all+"</div>"+
-							"<div class='candidate-info'>"+"<a href='"+v.url_website+"' target='_blank'>Website</a><br><a href='"+v.url_twitter+" target='_blank'>Twitter</a></div>"+
-						 "</div>"+
-					 "</div>"+
-					 "<div class='candidate-index'>"+
-					 	"<ul>"+
-							"<li><label>"+v.tweets_yesterday+"</label>mentioned Yesterday</li>"+
-							"<li><label>"+v.followers_yesterday+"</label>Followers Yesterday</li>"+
-							"<li><label>"+v.influence+"</label>Network influence Yesterday</li>"+
-							"<li><label>"+((v.biggestFollower.url)?"<a href='"+v.biggestFollower.url+"' target='_blank'>"+v.biggestFollower.name+"</a>":v.biggestFollower.name)+"</label>Biggest new follower</li>"+
-						"</ul>"+
-					 "</div>"
-					 "</li>";
-				
-				$candidate.append(html);
-			});
+		//gridster
+		$(".gridster").append("<ul></ul>");
+
+		app.gridster=$(".gridster > ul").gridster({
+	        widget_margins: [15, 15],
+	        widget_base_dimensions: [$(".gridster").width()/7.45, $(".gridster").width()/7.45],
+			draggable: {
+	            handle: '.widget-title' //change draggable area to the '.widget-title'
+	        }
+	    }).data("gridster");//.disable(); //disable dragging while init();
+	    
+		
+	    //load widget
+	    $.each(app.widgets, function(i,widget){
+			addWidget(widget);
+		});
+
+
+		//cursor change while mouseovering on the widget title 
+		$(".widget-title").hover(function(){
+			$(this).css('cursor','move');
+		}, function(){
+			$(this).css('cursor','auto');
+		})
+		
+		
+		
+		/**
+		*logout dropdown event handler
+		*/
+		$('a#link').click(function() {
+			//alert("sdfd");
+			var submenu = $('div#submenu');
+			if (submenu.is(":visible")) {
+				submenu.fadeOut();
+			} else {
+				submenu.fadeIn();
+			}
+		});
+		
+		var submenu_active = false;
+		 
+		$('div#submenu').mouseenter(function() {
+			submenu_active = true;
+		});
+		 
+		$('div#submenu').mouseleave(function() {
+			submenu_active = false;
+			setTimeout(function() { if (submenu_active === false) $('div#submenu').fadeOut(); }, 400);
+		});
+		
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1; //January is 0!
+
+		var yyyy = today.getFullYear();
+		if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm} today = mm+'/'+dd+'/'+yyyy;
+		
+		var currentTime = new Date()
+		var hours = currentTime.getHours()
+		var minutes = currentTime.getMinutes()
+
+		if (minutes < 10){
+			minutes = "0" + minutes
 		}
-			
-			
+		var suffix = "AM";
+		if (hours >= 12) {
+			suffix = "PM";
+			hours = hours - 12;
+		}
+		if (hours == 0) {
+			hours = 12;
+		}
+	
+		today+= "<span style='padding-left:30px'>" + hours + ":" + minutes + " " + suffix + "</span>";
+
+		$("#date").html(today);
+		
+		
+		//Adjust score text size based on window size
+		//var sectionWidth = $('#widget_reputation').height();
+		
+		//var newFontSizeScore = ($('#widget_reputation').height() - 66);
+		//$('.digital_score').css({"font-size" : newFontSizeScore});
+		
+		//var newFontSizePercent = newFontSizeScore/2;
+		//$('.digital_percent').css({"font-size" : newFontSizePercent});
+		
+		//var arrowSize = (newFontSizePercent*20)/32;
+		//$('.digital_arrow').width(arrowSize);
+		//$('.digital_arrow').height(arrowSize);
+		
+		//$('.digital_table').css({"font-size" : newFontSizePercent});
+		//$('.digital_table').css({"font-size" : newFontSizePercent});
+
+	
 	}
 	
 	
@@ -247,94 +576,78 @@
 	/**
 	 * add a new Widget into the Dashboard 
 	 */
-	function addWidget(id){
-		if(!id){
-			$(".widget").each(function(){
-				createWidget($(this));
-			})
-		}else{
-			//check if the widget is already existing
-			if($(".gs_w[id='"+id+"']").length>0){
-				alert('The widget is already existing. You do not need to add duplicate widget. ');
+	function addWidget(dom_id){
+		var $this=$("div[id="+dom_id+"]");
+		
+		var sizeX=$this.attr("widget-sizeX") || 1,
+			sizeY=$this.attr("widget-sizeY") || 1,
+			row=$this.attr("widget-row") || 1,
+			col=$this.attr("widget-col") || 1;
+
+		
+		//add the widget
+		var $widget=app.gridster.add_widget("<li>"+ createWidgetTitle($this) + $this.html() + "</li>", sizeX, sizeY, col, row);
+		
+		//give widget id
+		$widget.attr("id", $this.attr("id"));
+
+		//init the widget
+		//Because while loading all widget into the dashboard, the width of the widgets will be dyanmically increased until to the assigned width
+		//Therefore, we have to wait until the widgets reach the assigned width to call the init function
+		//calculate the widget final width
+		var final_width=(app.gridster.min_widget_width * sizeX) - (app.gridster.options.widget_margins[0] * 2 )-1;
+		var interval=setInterval(function(){
+			if($widget.width() > final_width){
+				clearInterval(interval);
+				
+				//if div contains widget-onInit event
+				if($this.attr("widget-onInit") && $this.attr("widget-onInit")!=""){
+					//window[$this.attr("widget-onInit")]()
+					eval($this.attr("widget-onInit"));
+				}
+			}
+		},100);
+		
+		
+		//onclick event
+		if($this.attr("widget-onClick") && $this.attr("widget-onClick")!=""){
+			//if not addWidget
+			if($widget.attr("id")!="widget_addWidget"){
+				$widget.find(".widget-detail").show().bind(app.eventHandler.click, function(){
+					eval($this.attr("widget-onClick"));
+				});
 			}else{
-				createWidget($("#"+id))
+				$widget.find("div:nth-child(2)").bind(app.eventHandler.click, function(){
+					eval($this.attr("widget-onClick"));
+				});
 			}
 		}
 		
-		
-		
-		//create widget
-		function createWidget($this){
-			var sizeX=$this.attr("widget-sizeX") || 1,
-				sizeY=$this.attr("widget-sizeY") || 1,
-				row=$this.attr("widget-row") || 1,
-				col=$this.attr("widget-col") || 1;
-	
-			
-			//add the widget
-			var $widget=app.gridster.add_widget("<li>"+ createWidgetTitle($this) + $this.html() + "</li>", sizeX, sizeY, col, row);
-			
-			//give widget id
-			$widget.attr("id", $this.attr("id"));
-	
-			//init the widget
-			//Because while loading all widget into the dashboard, the width of the widgets will be dyanmically increased until to the assigned width
-			//Therefore, we have to wait until the widgets reach the assigned width to call the init function
-			//calculate the widget final width
-			var final_width=(app.gridster.min_widget_width * sizeX) - (app.gridster.options.widget_margins[0] * 2 )-1;
-			var interval=setInterval(function(){
-				if($widget.width() > final_width){
-					clearInterval(interval);
-					
-					//if div contains widget-onInit event
-					if($this.attr("widget-onInit") && $this.attr("widget-onInit")!=""){
-						//window[$this.attr("widget-onInit")]()
-						eval($this.attr("widget-onInit"));
-					}
-				}
-			},100);
-			
-			
-			//onclick event
-			if($this.attr("widget-onClick") && $this.attr("widget-onClick")!=""){
-				//if not addWidget
-				if($widget.attr("id")!="widget_addWidget"){
-					$widget.find(".widget-detail").show().bind(app.eventHandler.click, function(){
-						eval($this.attr("widget-onClick"));
-					});
-				}else{
-					$widget.find("div:nth-child(2)").bind(app.eventHandler.click, function(){
-						eval($this.attr("widget-onClick"));
-					});
-				}
-			}
-			
-			//onclose event
-			$widget.find(".widget-close").bind(app.eventHandler.click, function(){
-				if($widget.attr("id")!='widget_addWidget'){
-					showDialog('div_closeWidget', 'Close Widget', {
-						width:300,
-						height:150,
-						resizable:false,
-						draggable:false,
-						modal:true, 
-						buttons: {
-							Confirm: function() {
-								if($this.attr("widget-onClose") && $this.attr("widget-onClose")!=""){
-									eval($this.attr("widget-onClose"));
-								}
-								app.gridster.remove_widget($widget);
-								$(this).dialog("close");
-							},
-							Cancel: function() {
-								$(this ).dialog("close");
+		//onclose event
+		$widget.find(".widget-close").bind(app.eventHandler.click, function(){
+			if($widget.attr("id")!='widget_addWidget'){
+				showDialog('div_closeWidget', 'Close Widget', {
+					width:300,
+					height:150,
+					resizable:false,
+					draggable:false,
+					modal:true, 
+					buttons: {
+						Confirm: function() {
+							if($this.attr("widget-onClose") && $this.attr("widget-onClose")!=""){
+								eval($this.attr("widget-onClose"));
 							}
+							app.gridster.remove_widget($widget);
+							$(this).dialog("close");
+						},
+						Cancel: function() {
+							$(this ).dialog("close");
 						}
-					});
-				}
-			})
-			
-		}
+					}
+				});
+			}
+		})
+		
 		
 		
 		//close all dialog
