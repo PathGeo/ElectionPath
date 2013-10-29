@@ -2,65 +2,134 @@
     "Aguirre": {
         "url_twitter": "http://www.twitter.com/Julesan1",
         "name": "Mike Aguirre",
-        "image": "images/Aguirre-image.jpg",
-        "influence": "2.50%",
-        "tweets_yesterday": 28,
-        "tweets_all": 335,
-        "url_website": "",
-        "followers_all": 492,
-        "biggestFollower": {
-            "url": "http://www.twitter.com/morrowchris",
-            "name": "morrowchris"
-        },
-        "followers_yesterday": 4,
-        "backgroundColor": ""
+        "image": "images/aguirre.png",
+		"url_website": "http://www.mikeformayor.org/",
+		"backgroundColor": "#c91111",
+		"values":[
+			{"date": "2013-10-29",
+			 "influence": "2.50%",
+			 "tweets_yesterday": 28,
+			 "tweets_all": 335,
+			 "followers_all": 492,
+			 "biggestFollowers": [
+				{	"rank": 1, 
+					"url": "http://www.twitter.com/morrowchris",
+					"name": "morrowchris"
+				},
+				{	"rank": 2, 
+					"url": "http://www.twitter.com/morrowchris",
+					"name": "morrowchris"
+				},
+				{	"rank": 3, 
+					"url": "http://www.twitter.com/morrowchris",
+					"name": "morrowchris"
+				}
+			 ],
+			 "followers_yesterday": 4
+			}
+		]
     },
     "Faulconer": {
         "url_twitter": "http://www.twitter.com/kevin_faulconer",
         "name": "Kevin Faulconer",
-        "image": "images/faulconer.jpg",
-        "influence": "-0.10%",
-        "tweets_yesterday": 47,
-        "tweets_all": 1342,
-        "url_website": "",
-        "followers_all": 3659,
-        "biggestFollower": {
-            "url": "http://www.twitter.com/morrowchris",
-            "name": "morrowchris"
-        },
-        "followers_yesterday": 13,
-        "backgroundColor": ""
+        "image": "images/faulconer.png",
+		"url_website": "http://www.kevinfaulconer.com/",
+		"backgroundColor": "#e27c20",
+		"values":[
+			{
+				"date":"2013-10-29",
+				"influence": "-0.10%",
+				"tweets_yesterday": 47,
+				"tweets_all": 1342,
+				"followers_all": 3659,
+				"biggestFollowers": [
+					{
+						"rank":1,
+						"url": "http://www.twitter.com/morrowchris",
+						"name": "morrowchris"
+					},
+					{
+						"rank":2,
+						"url": "http://www.twitter.com/morrowchris",
+						"name": "morrowchris"
+					},
+					{
+						"rank":3,
+						"url": "http://www.twitter.com/morrowchris",
+						"name": "morrowchris"
+					}
+				],
+				"followers_yesterday": 13
+			}
+		]
     },
     "Alvarez": {
         "url_twitter": "http://www.twitter.com/AlvarezSD",
         "name": "David Alvarez",
-        "image": "images/alvarez.jpg",
-        "influence": "0.10%",
-        "tweets_yesterday": 46,
-        "tweets_all": 724,
-        "url_website": "",
-        "followers_all": 2136,
-        "biggestFollower": {
-            "url": "http://www.twitter.com/morrowchris",
-            "name": "morrowchris"
-        },
-        "followers_yesterday": 10,
-        "backgroundColor": ""
+        "image": "images/alvarez.png",
+		"url_website": "http://www.alvarezformayor.com/",
+		"backgroundColor": "#2cc671",
+		"values":[
+			{
+				"date":"2013-10-29",
+				"influence": "0.10%",
+				"tweets_yesterday": 46,
+				"tweets_all": 724,
+				"followers_all": 2136,
+				"biggestFollowers": [
+					{
+						"rank": 1,
+						"url": "http://www.twitter.com/morrowchris",
+						"name": "morrowchris"
+					},
+					{
+						"rank": 2,
+						"url": "http://www.twitter.com/morrowchris",
+						"name": "morrowchris"
+					},
+					{
+						"rank": 3,
+						"url": "http://www.twitter.com/morrowchris",
+						"name": "morrowchris"
+					}
+				],
+				"followers_yesterday": 10
+			}
+		]
     },
     "Fletcher": {
         "url_twitter": "http://www.twitter.com/nathanfletcher",
         "name": "Nathan Fletcher",
-        "image": "images/Fletcher.jpg",
-        "influence": "0.00%",
-        "tweets_yesterday": 29,
-        "tweets_all": 1028,
-        "url_website": "",
-        "followers_all": 6497,
-        "biggestFollower": {
-            "url": "http://www.twitter.com/mariashriver",
-            "name": "mariashriver"
-        },
-        "followers_yesterday": 11,
-        "backgroundColor": ""
+        "image": "images/fletcher.png",
+		"url_website": "http://www.nathanfletcher.com/",
+		"backgroundColor": "#a15fb7",
+		"values":[
+			{
+				"date":"2013-10-29",
+				"influence": "0.00%",
+				"tweets_yesterday": 29,
+				"tweets_all": 1028,
+				"followers_all": 6497,
+				"biggestFollowers": [
+					{
+						"rank":1,
+						"url": "http://www.twitter.com/mariashriver",
+						"name": "mariashriver"
+					},
+					{
+						"rank":2,
+						"url": "http://www.twitter.com/mariashriver",
+						"name": "mariashriver"
+					},
+					{
+						"rank":3,
+						"url": "http://www.twitter.com/mariashriver",
+						"name": "mariashriver"
+					}
+				],
+				"followers_yesterday": 11
+			
+			}
+		]
     }
 }

@@ -1,4 +1,4 @@
-html, body {font-family: "Arial"; font-size:90%; margin:0px; padding:0px; width:100%; 
+html, body {font-family: 'Lato', sans-serif; font-size:90%; margin:0px; padding:0px; width:100%; 
   /**
   background-color: #0B588C;
   background-repeat: no-repeat;
@@ -16,29 +16,38 @@ a:hover {text-decoration:underline;}
 
 .highlightKeyword { font-weight: bold; color:#EC692D}
 
+ul {margin:0px; padding:0px; list-style:none; }
 
 
 /** header */
-#header { background-color:#666666; height:30px; padding:5px; }
+#header { background-color:#ffffff; height:30px; padding:10px; position:relative; }
+
+/** count down */
+#countdown {color:#000000; font-size:18px; position:absolute; left:205px; top:-2px;  }
+#countdown label {color:#FF4B00; font-size:40px; font-weight:bold; }
+
+/**social media */
+#socialmedia {position:absolute; right:0px; top:3px; }
+#socialmedia li {padding:10px; float:left; }
+#socialmedia img {width:25px; height:25px; }
+
 
 /**main content */
 #mainContent {width:94%; padding:5px 3% 0px 3%; }
 #mainContent > div {width:100%; position:relative}
-#mainContent .mainBlock {margin-top:50px;}
+#mainContent .mainBlock {margin-top:30px;}
 
 
 /** title */
-#title h1 label {color:#aaaaaa; font-size:20px;  }
-#title {margin:30px 0px 30px 0px; }
-
-/** count down */
-#countdown {color:#ff0000; font-size:30px; font-weight:bold; position:absolute; right:0px; top:30px;  }
+#title h1 label {color:#aaaaaa; font-size:24px; font-weight:300;   }
+#title {padding:30px 3% 30px 3%; width:94%;  background-color:#f1f1f1; position:relative;}
+#title img {position:absolute; right:0px; top:4px; width:350px; }
 
 
 /** widget candidate */
 #candidate {height:390px; margin-top:50px; }
-#candidate ul {list-style:none; padding:0px; margin:0px; width:100%; height:100%;}
-#candidate > ul > li {float:left; width:24.75%; border:1px solid #f1f1f1; }
+#candidate ul {width:100%; height:100%;}
+#candidate > ul > li {float:left; width:24.75%; border:1px solid #f1f1f1; background-color:#ffffff; }
 #candidate > ul > li:hover {background-color:#f1f1f1;cursor:pointer;}
 
 /** candidate name */
@@ -52,13 +61,13 @@ a:hover {text-decoration:underline;}
 .candidate-metadata {padding:10px; float:left; position:relative;}
 .candidate-twitterImage {width:45px; position:absolute; top:5x; left:5px; }
 .candidate-twitterYesterday {position:absolute; top:15px; left:60px; font-size:30px; font-weight:bold; color:#359BED; }
-.candidate-twitterYesterday label {color:#777777; font-size:10px; font-weight:normal; position:absolute; top:3px; left:38px;}
-.candidate-info {position:absolute; top:70px; left:10px; font-size:11px; color:#777777; font-weight:bold; }
+.candidate-twitterYesterday label {color:#777777; font-size:10px; font-weight:500; position:absolute; top:8px; left:43px;}
+.candidate-info {position:absolute; top:70px; left:10px; font-size:12px; color:#777777; font-weight:500; }
 
 /** candidate index*/
 .candidate-index {width:100%; margin-top:5px; border-top:1px solid #f1f1f1; }
-.candidate-index ul li {position:relative;  color:#777777; font-size:12px; padding:4px 0px 4px 0px }
-.candidate-index ul li label {font-size:25px; font-weight:bold; margin:10px; color:#000000;}
+.candidate-index ul li {position:relative;  color:#777777; font-size:12px; padding:10px 5px 10px 5px; font-weight:500; }
+.candidate-index ul li label {font-size:25px; font-weight:bold;  color:#000000; margin-right:5px; }
 .candidate-index ul li a {font-size:20px;}
 
 

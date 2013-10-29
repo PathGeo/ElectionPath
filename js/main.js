@@ -52,8 +52,15 @@
 	/**
 	 * init user interface 
 	 */
-	function init_UI(){		
-		//create widget
+	function init_UI(){	
+		//calcualte countdown
+		var today=new Date().getTime(),
+			electionDate=new Date("November 19, 2013 08:00:00").getTime(),
+			countdown=Math.round((electionDate-today)/86400/1000);
+		$("#countdown label").html(countdown);
+		
+		
+		//read candidates
 		if(app.candidates){
 			var html="",
 				html_addWidget="",
@@ -61,21 +68,23 @@
 			
 			$.each(app.candidates, function(k,v){
 				html="<li id='"+k+"'>"+
-					 "<div class='candidate-name'>"+v.name +"</div>"+
+					 "<div class='candidate-name' style='background-color:"+v.backgroundColor+"'>"+v.name +"</div>"+
 					 "<div class='candidate-content'>"+
 						 "<img class='candidate-image' src='"+v.image+"' />"+
 						 "<div class='candidate-metadata'>"+
 							"<img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' />"+
-							"<div class='candidate-twitterYesterday'>"+v.tweets_yesterday+"<label>mentioned Yesterday</label></div>"+
+							"<div class='candidate-twitterYesterday'>"+v.values[0].tweets_yesterday+"<label>mentioned Yesterday</label></div>"+
 							"<div class='candidate-info'>"+"<a href='"+v.url_website+"' target='_blank'>Website</a><br><a href='"+v.url_twitter+"' target='_blank'>Twitter</a></div>"+
 						 "</div>"+
 					 "</div>"+
 					 "<div class='candidate-index'>"+
 					 	"<ul>"+
-							"<li><label>"+v.tweets_all+"</label>mentioned since 10.01</li>"+
-							"<li><label>"+v.followers_yesterday+"</label>Followers Yesterday</li>"+
-							"<li><label>"+v.influence+"</label title='help'>Network influence Yesterday</li>"+
-							"<li><label>"+((v.biggestFollower.url)?"<a href='"+v.biggestFollower.url+"' target='_blank'>"+v.biggestFollower.name+"</a>":v.biggestFollower.name)+"</label>Biggest new follower</li>"+
+							"<li><label>"+v.values[0].tweets_all+"</label>mentioned since 10.01</li>"+
+							"<li><label>"+v.values[0].followers_yesterday+"</label>Followers Yesterday</li>"+
+							"<li><label>"+v.values[0].influence+"</label title='help'>Network influence Yesterday</li>"+
+							"<li><label>"+((v.values[0].biggestFollowers[0].url)?"<a href='"+v.values[0].biggestFollowers[0].url+"' target='_blank'>@"+v.values[0].biggestFollowers[0].name+"</a>":"@"+v.values[0].biggestFollowers[0].name)+"</label><br>1st Biggest new follower</li>"+
+							"<li><label>"+((v.values[0].biggestFollowers[1].url)?"<a href='"+v.values[0].biggestFollowers[1].url+"' target='_blank'>@"+v.values[0].biggestFollowers[1].name+"</a>":"@"+v.values[0].biggestFollowers[1].name)+"</label><br>2nd Biggest new follower</li>"+
+							"<li><label>"+((v.values[0].biggestFollowers[2].url)?"<a href='"+v.values[0].biggestFollowers[2].url+"' target='_blank'>@"+v.values[0].biggestFollowers[2].name+"</a>":"@"+v.values[0].biggestFollowers[2].name)+"</label><br>3rd Biggest new follower</li>"+
 						"</ul>"+
 					 "</div>"
 					 "</li>";
@@ -83,19 +92,25 @@
 				$candidate.append(html);
 			});
 			
+			
 			//add li's clicking event
-			$candidate.find("li").click(function(){
+			$candidate.find("> li").click(function(){
 				var $this=$(this),
 					id=$this.attr("id");
 				
 				if(app.candidates[id] && id && id!=''){
 					console.log(app.candidates[id]);
+				}else{
+					console.log("[ERROR] cannot find out the candidate's info in the database. ")
 				}
-				
 			});
+			
+			
+			
 		}
 			
-			
+		
+		
 	}
 	
 	
