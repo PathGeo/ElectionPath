@@ -1,0 +1,18 @@
+{
+	"candidate":"fletcher",
+	"dateFrom":"2013-10-01",
+	"dateTo":"2013-10-20",
+	"urls":[
+		{"value":"url_a", "count":20, "rank":1},
+		{"value":"url_b", "count":18, "rank":2}
+	],
+	"retweets":[
+		{"value":"retweet_a", "count":20, "rank":1},
+		{"value":"retweet_b", "count":18, "rank":2}
+	],
+	"followers":[
+		{"value":"follower_a", "count":20, "rank":1},
+		{"value":"follower_b", "count":18, "rank":2}
+	],
+	"wordcloud":"images/wordcloud/fletcher_20131101.png"
+}
