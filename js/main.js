@@ -119,22 +119,81 @@
 				id=href.split('-')[1];
 			
 			if (id && id != '') {
-				var html='';
-				
-				//request web service to get
-				html="<ul>"+
-					 	"<li>"+"Top Tweeted URL"+"</li>"+
-					 	"<li>"+"Top Follower"+"</li>"+
-					 	"<li>Word-Cloud Map"+"<br><img src='images/Vote-San-Diego-too-noisy.png' style='width:100%;' />"+"</li>"+
-					 "</ul>";
-					 
-				$href.html(html);
+				//request web service to get information
+				query($href);
 			}
 		});
 		
 		//trigger click on the first candidate
 		$("#informationTabs > ul > li > a:nth(0)").trigger('click');
 	}
+	
+	
+	
+	/**
+	 * query Web service
+	 */
+	function query($target){
+		if(app.map){app.map.remove();}
+		
+		//show loading
+		$target.html("<center><img src='images/loading.gif' class='loading' /></center>");
+
+		//request
+		$.getJSON('db/searchResult.json', function(json){
+			if(!json){console.log('[ERROR] query: no json'); return;}
+			
+			var html="<ul>"+
+					 	"<li><br><label>Top Tweeted URLs</label><p>"+((json.urls instanceof Array)?createTable(json.urls):"None")+"</p></li>"+
+					 	"<li><br><label>Top Followers</label><p>"+((json.followers instanceof Array)?createTable(json.followers):"None")+"</p></li>"+
+						"<li><br><label>Top Retweets</label><p>"+((json.retweets instanceof Array)?createTable(json.retweets):"None")+"</p></li>"+
+					 	"<li><br><label>Word-Cloud Map</label><p>"+((json.wordcloud)?"<img src='"+json.wordcloud+"' style='width:100%;' />":"None")+"</p></li>"+
+					 	"<li style='width:66%;'><br><label>Hotspot Map</label><p><div id='map'></div></p></li>"+
+					 "</ul>";
+			
+			$target.html(html);
+			
+			init_map();
+			
+			
+			//create Table
+			function createTable(array){
+				var html_content="",
+					html_header="<tr>",
+					value='';
+				
+				$.each(array, function(i,obj){
+					html_content+='<tr>';
+					
+					$.each(obj, function(k,v){
+						if(k!='url'){
+							//header
+							if(i==0){
+								html_header+="<td>"+k+"</td>";
+							}
+							
+							value="<td>"+v+"</td>";
+							
+							//check if contains url
+							if(k=='value' && obj.url && obj.url!=''){
+								value="<td><a href='" + obj.url + "' target='_blank'>" + v + "</a></td>";
+							}
+							
+							html_content+=value;
+						}
+					});
+					
+					html_content+="</tr>";
+				});
+				html_header+="</tr>";
+			
+				return "<table class='table'>"+html_header+html_content+"</table>";
+			}
+		});
+	}
+	
+	
+	
 	
 	
 	/**
@@ -156,107 +215,10 @@
 			layers: [basemaps["Gray Map"]],
 			attributionControl:false
 		});			
-		
-		//add layers
-		var geojson=leadsToGeojson(leads.service.concat(leads.sales), "latlon");
-		//clusterlayer
-		var clusterMap=pathgeo.layer.markerCluster(geojson,
-				{
-					onEachFeature: function(feature,layer){
-						var html="<div class='popup'><ul><li><label class='score'>" + feature.properties["score"] + "</label><b>" + feature.properties["user"] + ":</b>&nbsp; " + feature.properties["text"] + "</li></ul></div>";
-						html=html.replace(/undefined/g, "Tweet");
-													
-						//highlight keyword
-						html=pathgeo.util.highlightKeyword(app.constants.KEYWORDS, html, true);
-						//info window
-						layer.bindPopup(html,{maxWidth:400, maxHeight:225});
-					}
-				},{
-					clusterclick: function(e){
-						if(!e.layer._popup){
-							var properties=pathgeo.util.readClusterFeatureProperies(e.layer, []);
-							var html="<div class='popup'><b>" + e.layer._childCount + "</b> leads in this area:<p></p><ul>";
-							$.each(properties, function(i, property){
-								html+="<li id=" + property["leadID"] + " leadType='" + property["leadType"] + "' ><label class='score'>" + property["score"] + "</label><b>" + property["user"] + ":</b>&nbsp; " + property["text"] + "</li>";
-							});
-							html+="</ul></div>";
-							html=html.replace(/undefined/g, "Tweet");
-											
-							//highlight keyword
-							html=pathgeo.util.highlightKeyword(app.constants.KEYWORDS, html, true);
-													
-							e.layer.bindPopup(html,{maxWidth:400, maxHeight:225}).openPopup();
-						}else{
-							e.layer.openPopup();
-						}
-						
-						
-						//onclick and onmouseover event
-						//!!!!!!!!! still have some problems!!!!!!!!!!!!!!!!!!!
-						$(".popup ul li").bind(app.eventHandler.click, function(){
-							var lead=leads[$(this).attr("leadType")][$(this).attr("id")];
-							showUserInfoDialog(lead)
-						}).bind(app.eventHandler.mouseover, function(){
-							var lead=leads[$(this).attr("leadType")][$(this).attr("id")];
-							$("#" + lead.divName + " ul li:nth-child(" + (Number(lead.leadID)+1) + ")").css("background-color:#eeeeee;")
-						});
-					}
-				}
-		).addTo(app.map);
-
-
-		//map controls
-		var overlays = {
-			"Marker Map": L.geoJson(geojson, {
-				onEachFeature: function(feature,layer){
-						var html="<div class='popup'><ul><li><label class='score'>" + feature.properties["score"] + "</label><b>" + feature.properties["user"] + ":</b>&nbsp; " + feature.properties["text"] + "</li></ul></div>";
-						html=html.replace(/undefined/g, "Tweet");
-													
-						//highlight keyword
-						html=pathgeo.util.highlightKeyword(app.constants.KEYWORDS, html, true);
-						//info window
-						layer.bindPopup(html,{maxWidth:400, maxHeight:225});
-				}
-			}),
-			"Cluster Map": clusterMap,
-			"Heat Map": pathgeo.layer.heatMap(geojson),
-			"Census Data": L.tileLayer.wms("http://sgis.kisr.edu.kw/geoserver/topp/wms", {layers:"topp:states", attribution:"", format:"image/png", transparent:true})
-		};
-		app.controls.toc=L.control.layers(basemaps, overlays).addTo(app.map);		
-		
-		
-		//bing geocoder
-		app.map.addControl(app.controls.geocoding)
-		
+			
+			
 		//scale bar
 		app.map.addControl(new L.Control.Scale());
-		
-		
-		//show default dealer logo marker
-		app.layer.markerDealer[app.dealer].addTo(app.map);
-		
-		//add buffer around car dealer 32.774917,-117.005639 (1mile = 1609.34 meters)
-		var biffer5m = L.circle([32.774917, -117.005639], 1609.34 * 5, {
-			color: 'red',
-			fillColor: '#f03',
-			weight:2,
-			fillOpacity: 0
-		}).addTo(app.map);
-		
-		var biffer10m = L.circle([32.774917, -117.005639], 1609.34 * 10, {
-			color: 'green',
-			fillColor: '#f03',
-			weight:2,
-			fillOpacity: 0
-		}).addTo(app.map);	
-
-		var biffer15m = L.circle([32.774917, -117.005639], 1609.34 * 15, {
-			color: 'blue',
-			fillColor: '#f03',
-			weight:2,
-			fillOpacity: 0
-		}).addTo(app.map);			
-			
 	}
 
 	

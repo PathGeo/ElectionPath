@@ -18,7 +18,7 @@ a:hover {text-decoration:underline;}
 
 
 .hr{width:100%; margin:50px 0px 50px 0px; border:2px solid #f1f1f1;}
-
+.loading {width:40px; height:40px; }
 
 ul {margin:0px; padding:0px; list-style:none; }
 
@@ -92,12 +92,24 @@ ul {margin:0px; padding:0px; list-style:none; }
 #informationTabs .ui-tabs-selected {background:#ffffff;}
 #informationTabs .ui-tabs-selected a {color:#000000;}
 */
-.informationContent {height:400px; }
+.informationContent {height:800px; }
 .informationContent ul {width:100%;}
-.informationContent ul > li {width:33%; height:300px; float:left; text-align:center; border:1px solid #f1f1f1;}
+.informationContent ul > li {width:33%; height:380px; float:left; text-align:center; border:1px solid #f1f1f1; font-family:"Lato"; }
+.informationContent label {font-weight:600; font-size:14px;}
 
 
+/** table */
+.table {width:90%;  margin:0 auto; border-collapse:collapse; margin-top:20px; }
+.table tr:first-child {background-color:#f1f1f1; font-weight:600; font-size:14px;  }
+.table td {border-bottom:1px solid #f1f1f1; text-align:left; font-size:12px;  padding:5px; font-family:'Lato', sans-serif;}
+.table td:first-child {width:70%;}
+.table tr:not(:first-child):hover {background-color:#f1f1f1; }
+.table a {text-decoration:none; color:#359BED}
+.table a:hover {text-decoration:underline; }
 
+
+/** map */
+#map {width:90%; margin:0 auto; height:100%; margin-top:20px; }
 
 /** widget_controlPanel */
 #controlPanel {margin-top:50px; display:none;}
