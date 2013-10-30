@@ -6,11 +6,11 @@
         "values": [
             {
                 "influence": "1.30%",
-                "followers_yesterday": 4,
+                "tweets_yesterday": 5,
+                "followers_yesterday_new": 4,
                 "followers_all": 492,
-                "date": "20131020",
-                "tweets_all": 406,
-                "tweets_yesterday": 161,
+                "date": "20131011",
+                "tweets_all": 410,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -27,15 +27,16 @@
                         "name": "sdmattpotter",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 1
             },
             {
-                "influence": "92.40%",
-                "followers_yesterday": 6,
+                "influence": "413.40%",
+                "tweets_yesterday": 4,
+                "followers_yesterday_new": 6,
                 "followers_all": 492,
-                "date": "20131021",
-                "tweets_all": 406,
-                "tweets_yesterday": 167,
+                "date": "20131012",
+                "tweets_all": 410,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -52,15 +53,68 @@
                         "name": "sdmattpotter",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 0
+            },
+            {
+                "influence": "94.90%",
+                "tweets_yesterday": 11,
+                "followers_yesterday_new": 6,
+                "followers_all": 492,
+                "date": "20131013",
+                "tweets_all": 410,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/AhtishamWebmast",
+                        "name": "AhtishamWebmast",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/sdmattpotter",
+                        "name": "sdmattpotter",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 0
+            },
+            {
+                "influence": "0.10%",
+                "tweets_yesterday": 2,
+                "followers_yesterday_new": 2,
+                "followers_all": 492,
+                "date": "20131014",
+                "tweets_all": 410,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/AhtishamWebmast",
+                        "name": "AhtishamWebmast",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/sdmattpotter",
+                        "name": "sdmattpotter",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 0
             },
             {
                 "influence": "3.10%",
-                "followers_yesterday": 1,
+                "tweets_yesterday": 114,
+                "followers_yesterday_new": 1,
                 "followers_all": 492,
-                "date": "20131022",
-                "tweets_all": 406,
-                "tweets_yesterday": 176,
+                "date": "20131015",
+                "tweets_all": 410,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -77,15 +131,42 @@
                         "name": "sdmattpotter",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 0
+            },
+            {
+                "influence": "0.30%",
+                "tweets_yesterday": 4,
+                "followers_yesterday_new": 6,
+                "followers_all": 492,
+                "date": "20131016",
+                "tweets_all": 410,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/AhtishamWebmast",
+                        "name": "AhtishamWebmast",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/sdmattpotter",
+                        "name": "sdmattpotter",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 1
             },
             {
                 "influence": "2.00%",
-                "followers_yesterday": 7,
+                "tweets_yesterday": 6,
+                "followers_yesterday_new": 7,
                 "followers_all": 492,
-                "date": "20131023",
-                "tweets_all": 406,
-                "tweets_yesterday": 76,
+                "date": "20131017",
+                "tweets_all": 410,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -102,15 +183,172 @@
                         "name": "sdmattpotter",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 0
+            },
+            {
+                "influence": "4.10%",
+                "tweets_yesterday": 8,
+                "followers_yesterday_new": 1,
+                "followers_all": 492,
+                "date": "20131018",
+                "tweets_all": 410,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/AhtishamWebmast",
+                        "name": "AhtishamWebmast",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/sdmattpotter",
+                        "name": "sdmattpotter",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 2
             },
             {
                 "influence": "13.60%",
-                "followers_yesterday": 5,
+                "tweets_yesterday": 5,
+                "followers_yesterday_new": 5,
+                "followers_all": 492,
+                "date": "20131019",
+                "tweets_all": 410,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/AhtishamWebmast",
+                        "name": "AhtishamWebmast",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/sdmattpotter",
+                        "name": "sdmattpotter",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 2
+            },
+            {
+                "influence": "611.20%",
+                "tweets_yesterday": 2,
+                "followers_yesterday_new": 7,
+                "followers_all": 492,
+                "date": "20131020",
+                "tweets_all": 410,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/AhtishamWebmast",
+                        "name": "AhtishamWebmast",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/sdmattpotter",
+                        "name": "sdmattpotter",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 0
+            },
+            {
+                "influence": "0.10%",
+                "tweets_yesterday": 15,
+                "followers_yesterday_new": 2,
+                "followers_all": 492,
+                "date": "20131021",
+                "tweets_all": 410,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/AhtishamWebmast",
+                        "name": "AhtishamWebmast",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/sdmattpotter",
+                        "name": "sdmattpotter",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 1
+            },
+            {
+                "influence": "4.80%",
+                "tweets_yesterday": 22,
+                "followers_yesterday_new": 5,
+                "followers_all": 492,
+                "date": "20131022",
+                "tweets_all": 410,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/AhtishamWebmast",
+                        "name": "AhtishamWebmast",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/sdmattpotter",
+                        "name": "sdmattpotter",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 0
+            },
+            {
+                "influence": "-1.10%",
+                "tweets_yesterday": 18,
+                "followers_yesterday_new": 3,
+                "followers_all": 492,
+                "date": "20131023",
+                "tweets_all": 410,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/AhtishamWebmast",
+                        "name": "AhtishamWebmast",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/sdmattpotter",
+                        "name": "sdmattpotter",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 1
+            },
+            {
+                "influence": "2.50%",
+                "tweets_yesterday": 28,
+                "followers_yesterday_new": 4,
                 "followers_all": 492,
                 "date": "20131024",
-                "tweets_all": 406,
-                "tweets_yesterday": 90,
+                "tweets_all": 410,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -127,15 +365,16 @@
                         "name": "sdmattpotter",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 1
             },
             {
-                "influence": "%0.10",
-                "followers_yesterday": 2,
+                "influence": "-19.30%",
+                "tweets_yesterday": 21,
+                "followers_yesterday_new": 6,
                 "followers_all": 492,
                 "date": "20131025",
-                "tweets_all": 406,
-                "tweets_yesterday": 104,
+                "tweets_all": 410,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -152,15 +391,16 @@
                         "name": "sdmattpotter",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 3
             },
             {
-                "influence": "%-1.10",
-                "followers_yesterday": 3,
+                "influence": "-50.40%",
+                "tweets_yesterday": 4,
+                "followers_yesterday_new": 2,
                 "followers_all": 492,
                 "date": "20131026",
-                "tweets_all": 406,
-                "tweets_yesterday": 71,
+                "tweets_all": 410,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -177,15 +417,16 @@
                         "name": "sdmattpotter",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 2
             },
             {
-                "influence": "%-19.30",
-                "followers_yesterday": 6,
+                "influence": "0.00%",
+                "tweets_yesterday": 11,
+                "followers_yesterday_new": 3,
                 "followers_all": 492,
                 "date": "20131027",
-                "tweets_all": 406,
-                "tweets_yesterday": 36,
+                "tweets_all": 410,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -202,15 +443,16 @@
                         "name": "sdmattpotter",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 0
             },
             {
-                "influence": "%0.00",
-                "followers_yesterday": 3,
+                "influence": "0.00%",
+                "tweets_yesterday": 21,
+                "followers_yesterday_new": 2,
                 "followers_all": 492,
                 "date": "20131028",
-                "tweets_all": 406,
-                "tweets_yesterday": 32,
+                "tweets_all": 410,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -227,15 +469,16 @@
                         "name": "sdmattpotter",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 0
             },
             {
-                "influence": "%4.20",
-                "followers_yesterday": 3,
+                "influence": "4.20%",
+                "tweets_yesterday": 20,
+                "followers_yesterday_new": 3,
                 "followers_all": 492,
                 "date": "20131029",
-                "tweets_all": 406,
-                "tweets_yesterday": 20,
+                "tweets_all": 410,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -252,7 +495,34 @@
                         "name": "sdmattpotter",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 0
+            },
+            {
+                "influence": "7.80%",
+                "tweets_yesterday": 9,
+                "followers_yesterday_new": 6,
+                "followers_all": 492,
+                "date": "20131030",
+                "tweets_all": 410,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/AhtishamWebmast",
+                        "name": "AhtishamWebmast",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/sdmattpotter",
+                        "name": "sdmattpotter",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 0
             }
         ],
         "url_website": "http://www.mikeformayor.org/",
@@ -264,12 +534,246 @@
         "image": "images/faulconer.png",
         "values": [
             {
-                "influence": "%0.10",
-                "followers_yesterday": 11,
+                "influence": "0.10%",
+                "tweets_yesterday": 58,
+                "followers_yesterday_new": 11,
+                "followers_all": 3659,
+                "date": "20131011",
+                "tweets_all": 1671,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/MarylandTrust",
+                        "name": "MarylandTrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/CarlyforCA",
+                        "name": "CarlyforCA",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 1
+            },
+            {
+                "influence": "-0.50%",
+                "tweets_yesterday": 37,
+                "followers_yesterday_new": 11,
+                "followers_all": 3659,
+                "date": "20131012",
+                "tweets_all": 1671,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/MarylandTrust",
+                        "name": "MarylandTrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/CarlyforCA",
+                        "name": "CarlyforCA",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 2
+            },
+            {
+                "influence": "0.40%",
+                "tweets_yesterday": 43,
+                "followers_yesterday_new": 9,
+                "followers_all": 3659,
+                "date": "20131013",
+                "tweets_all": 1671,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/MarylandTrust",
+                        "name": "MarylandTrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/CarlyforCA",
+                        "name": "CarlyforCA",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 1
+            },
+            {
+                "influence": "0.20%",
+                "tweets_yesterday": 41,
+                "followers_yesterday_new": 8,
+                "followers_all": 3659,
+                "date": "20131014",
+                "tweets_all": 1671,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/MarylandTrust",
+                        "name": "MarylandTrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/CarlyforCA",
+                        "name": "CarlyforCA",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 1
+            },
+            {
+                "influence": "0.80%",
+                "tweets_yesterday": 180,
+                "followers_yesterday_new": 8,
+                "followers_all": 3659,
+                "date": "20131015",
+                "tweets_all": 1671,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/MarylandTrust",
+                        "name": "MarylandTrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/CarlyforCA",
+                        "name": "CarlyforCA",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 0
+            },
+            {
+                "influence": "-0.50%",
+                "tweets_yesterday": 92,
+                "followers_yesterday_new": 14,
+                "followers_all": 3659,
+                "date": "20131016",
+                "tweets_all": 1671,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/MarylandTrust",
+                        "name": "MarylandTrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/CarlyforCA",
+                        "name": "CarlyforCA",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 1
+            },
+            {
+                "influence": "0.40%",
+                "tweets_yesterday": 53,
+                "followers_yesterday_new": 10,
+                "followers_all": 3659,
+                "date": "20131017",
+                "tweets_all": 1671,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/MarylandTrust",
+                        "name": "MarylandTrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/CarlyforCA",
+                        "name": "CarlyforCA",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 1
+            },
+            {
+                "influence": "53.70%",
+                "tweets_yesterday": 38,
+                "followers_yesterday_new": 7,
+                "followers_all": 3659,
+                "date": "20131018",
+                "tweets_all": 1671,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/MarylandTrust",
+                        "name": "MarylandTrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/CarlyforCA",
+                        "name": "CarlyforCA",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 2
+            },
+            {
+                "influence": "-0.10%",
+                "tweets_yesterday": 48,
+                "followers_yesterday_new": 7,
+                "followers_all": 3659,
+                "date": "20131019",
+                "tweets_all": 1671,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/MarylandTrust",
+                        "name": "MarylandTrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/CarlyforCA",
+                        "name": "CarlyforCA",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 5
+            },
+            {
+                "influence": "-0.10%",
+                "tweets_yesterday": 52,
+                "followers_yesterday_new": 11,
                 "followers_all": 3659,
                 "date": "20131020",
-                "tweets_all": 1657,
-                "tweets_yesterday": 642,
+                "tweets_all": 1671,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -286,15 +790,16 @@
                         "name": "CarlyforCA",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 4
             },
             {
-                "influence": "%0.40",
-                "followers_yesterday": 9,
+                "influence": "0.00%",
+                "tweets_yesterday": 34,
+                "followers_yesterday_new": 6,
                 "followers_all": 3659,
                 "date": "20131021",
-                "tweets_all": 1657,
-                "tweets_yesterday": 581,
+                "tweets_all": 1671,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -311,15 +816,16 @@
                         "name": "CarlyforCA",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 3
             },
             {
-                "influence": "%0.80",
-                "followers_yesterday": 8,
+                "influence": "0.80%",
+                "tweets_yesterday": 98,
+                "followers_yesterday_new": 8,
                 "followers_all": 3659,
                 "date": "20131022",
-                "tweets_all": 1657,
-                "tweets_yesterday": 595,
+                "tweets_all": 1671,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -336,15 +842,16 @@
                         "name": "CarlyforCA",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 5
             },
             {
-                "influence": "%0.40",
-                "followers_yesterday": 10,
+                "influence": "0.60%",
+                "tweets_yesterday": 53,
+                "followers_yesterday_new": 9,
                 "followers_all": 3659,
                 "date": "20131023",
-                "tweets_all": 1657,
-                "tweets_yesterday": 376,
+                "tweets_all": 1671,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -361,15 +868,16 @@
                         "name": "CarlyforCA",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 2
             },
             {
-                "influence": "%-0.10",
-                "followers_yesterday": 7,
+                "influence": "-0.10%",
+                "tweets_yesterday": 47,
+                "followers_yesterday_new": 13,
                 "followers_all": 3659,
                 "date": "20131024",
-                "tweets_all": 1657,
-                "tweets_yesterday": 332,
+                "tweets_all": 1671,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -386,15 +894,16 @@
                         "name": "CarlyforCA",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 5
             },
             {
-                "influence": "%0.00",
-                "followers_yesterday": 6,
+                "influence": "0.00%",
+                "tweets_yesterday": 66,
+                "followers_yesterday_new": 10,
                 "followers_all": 3659,
                 "date": "20131025",
-                "tweets_all": 1657,
-                "tweets_yesterday": 298,
+                "tweets_all": 1671,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -411,15 +920,16 @@
                         "name": "CarlyforCA",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 4
             },
             {
-                "influence": "%0.60",
-                "followers_yesterday": 9,
+                "influence": "-0.40%",
+                "tweets_yesterday": 82,
+                "followers_yesterday_new": 10,
                 "followers_all": 3659,
                 "date": "20131026",
-                "tweets_all": 1657,
-                "tweets_yesterday": 248,
+                "tweets_all": 1671,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -436,15 +946,16 @@
                         "name": "CarlyforCA",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 5
             },
             {
-                "influence": "%0.00",
-                "followers_yesterday": 10,
+                "influence": "-0.20%",
+                "tweets_yesterday": 40,
+                "followers_yesterday_new": 5,
                 "followers_all": 3659,
                 "date": "20131027",
-                "tweets_all": 1657,
-                "tweets_yesterday": 188,
+                "tweets_all": 1671,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -461,15 +972,16 @@
                         "name": "CarlyforCA",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 2
             },
             {
-                "influence": "%-0.20",
-                "followers_yesterday": 5,
+                "influence": "-0.40%",
+                "tweets_yesterday": 17,
+                "followers_yesterday_new": 12,
                 "followers_all": 3659,
                 "date": "20131028",
-                "tweets_all": 1657,
-                "tweets_yesterday": 57,
+                "tweets_all": 1671,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -486,15 +998,16 @@
                         "name": "CarlyforCA",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 3
             },
             {
-                "influence": "%6.70",
-                "followers_yesterday": 10,
+                "influence": "6.70%",
+                "tweets_yesterday": 65,
+                "followers_yesterday_new": 10,
                 "followers_all": 3659,
                 "date": "20131029",
-                "tweets_all": 1657,
-                "tweets_yesterday": 65,
+                "tweets_all": 1671,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -511,7 +1024,34 @@
                         "name": "CarlyforCA",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 2
+            },
+            {
+                "influence": "0.80%",
+                "tweets_yesterday": 75,
+                "followers_yesterday_new": 33,
+                "followers_all": 3659,
+                "date": "20131030",
+                "tweets_all": 1671,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/MarylandTrust",
+                        "name": "MarylandTrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/CarlyforCA",
+                        "name": "CarlyforCA",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 1
             }
         ],
         "url_website": "http://www.kevinfaulconer.com/",
@@ -523,12 +1063,246 @@
         "image": "images/alvarez.png",
         "values": [
             {
-                "influence": "%0.10",
-                "followers_yesterday": 13,
+                "influence": "0.10%",
+                "tweets_yesterday": 12,
+                "followers_yesterday_new": 13,
+                "followers_all": 2136,
+                "date": "20131011",
+                "tweets_all": 912,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/SkyFallCarroll",
+                        "name": "SkyFallCarroll",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/AXIA3",
+                        "name": "AXIA3",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 0
+            },
+            {
+                "influence": "-0.50%",
+                "tweets_yesterday": 21,
+                "followers_yesterday_new": 12,
+                "followers_all": 2136,
+                "date": "20131012",
+                "tweets_all": 912,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/SkyFallCarroll",
+                        "name": "SkyFallCarroll",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/AXIA3",
+                        "name": "AXIA3",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 2
+            },
+            {
+                "influence": "-5.10%",
+                "tweets_yesterday": 7,
+                "followers_yesterday_new": 6,
+                "followers_all": 2136,
+                "date": "20131013",
+                "tweets_all": 912,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/SkyFallCarroll",
+                        "name": "SkyFallCarroll",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/AXIA3",
+                        "name": "AXIA3",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 2
+            },
+            {
+                "influence": "0.20%",
+                "tweets_yesterday": 9,
+                "followers_yesterday_new": 9,
+                "followers_all": 2136,
+                "date": "20131014",
+                "tweets_all": 912,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/SkyFallCarroll",
+                        "name": "SkyFallCarroll",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/AXIA3",
+                        "name": "AXIA3",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 0
+            },
+            {
+                "influence": "-0.00%",
+                "tweets_yesterday": 116,
+                "followers_yesterday_new": 3,
+                "followers_all": 2136,
+                "date": "20131015",
+                "tweets_all": 912,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/SkyFallCarroll",
+                        "name": "SkyFallCarroll",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/AXIA3",
+                        "name": "AXIA3",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 4
+            },
+            {
+                "influence": "0.60%",
+                "tweets_yesterday": 15,
+                "followers_yesterday_new": 20,
+                "followers_all": 2136,
+                "date": "20131016",
+                "tweets_all": 912,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/SkyFallCarroll",
+                        "name": "SkyFallCarroll",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/AXIA3",
+                        "name": "AXIA3",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 0
+            },
+            {
+                "influence": "0.10%",
+                "tweets_yesterday": 36,
+                "followers_yesterday_new": 14,
+                "followers_all": 2136,
+                "date": "20131017",
+                "tweets_all": 912,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/SkyFallCarroll",
+                        "name": "SkyFallCarroll",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/AXIA3",
+                        "name": "AXIA3",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 1
+            },
+            {
+                "influence": "270.20%",
+                "tweets_yesterday": 29,
+                "followers_yesterday_new": 12,
+                "followers_all": 2136,
+                "date": "20131018",
+                "tweets_all": 912,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/SkyFallCarroll",
+                        "name": "SkyFallCarroll",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/AXIA3",
+                        "name": "AXIA3",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 2
+            },
+            {
+                "influence": "0.10%",
+                "tweets_yesterday": 29,
+                "followers_yesterday_new": 13,
+                "followers_all": 2136,
+                "date": "20131019",
+                "tweets_all": 912,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/SkyFallCarroll",
+                        "name": "SkyFallCarroll",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/AXIA3",
+                        "name": "AXIA3",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 4
+            },
+            {
+                "influence": "0.80%",
+                "tweets_yesterday": 8,
+                "followers_yesterday_new": 13,
                 "followers_all": 2136,
                 "date": "20131020",
-                "tweets_all": 909,
-                "tweets_yesterday": 282,
+                "tweets_all": 912,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -545,15 +1319,16 @@
                         "name": "AXIA3",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 3
             },
             {
-                "influence": "%-5.10",
-                "followers_yesterday": 6,
+                "influence": "-0.00%",
+                "tweets_yesterday": 23,
+                "followers_yesterday_new": 5,
                 "followers_all": 2136,
                 "date": "20131021",
-                "tweets_all": 909,
-                "tweets_yesterday": 272,
+                "tweets_all": 912,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -570,15 +1345,16 @@
                         "name": "AXIA3",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 3
             },
             {
-                "influence": "%-0.00",
-                "followers_yesterday": 3,
+                "influence": "0.00%",
+                "tweets_yesterday": 27,
+                "followers_yesterday_new": 4,
                 "followers_all": 2136,
                 "date": "20131022",
-                "tweets_all": 909,
-                "tweets_yesterday": 283,
+                "tweets_all": 912,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -595,15 +1371,16 @@
                         "name": "AXIA3",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 1
             },
             {
-                "influence": "%0.10",
-                "followers_yesterday": 14,
+                "influence": "0.80%",
+                "tweets_yesterday": 18,
+                "followers_yesterday_new": 5,
                 "followers_all": 2136,
                 "date": "20131023",
-                "tweets_all": 909,
-                "tweets_yesterday": 170,
+                "tweets_all": 912,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -620,15 +1397,16 @@
                         "name": "AXIA3",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 2
             },
             {
-                "influence": "%0.10",
-                "followers_yesterday": 13,
+                "influence": "0.10%",
+                "tweets_yesterday": 46,
+                "followers_yesterday_new": 10,
                 "followers_all": 2136,
                 "date": "20131024",
-                "tweets_all": 909,
-                "tweets_yesterday": 151,
+                "tweets_all": 912,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -645,15 +1423,16 @@
                         "name": "AXIA3",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 1
             },
             {
-                "influence": "%-0.00",
-                "followers_yesterday": 5,
+                "influence": "0.10%",
+                "tweets_yesterday": 35,
+                "followers_yesterday_new": 14,
                 "followers_all": 2136,
                 "date": "20131025",
-                "tweets_all": 909,
-                "tweets_yesterday": 149,
+                "tweets_all": 912,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -670,15 +1449,16 @@
                         "name": "AXIA3",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 2
             },
             {
-                "influence": "%0.90",
-                "followers_yesterday": 5,
+                "influence": "0.00%",
+                "tweets_yesterday": 39,
+                "followers_yesterday_new": 14,
                 "followers_all": 2136,
                 "date": "20131026",
-                "tweets_all": 909,
-                "tweets_yesterday": 138,
+                "tweets_all": 912,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -695,15 +1475,16 @@
                         "name": "AXIA3",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 1
             },
             {
-                "influence": "%0.10",
-                "followers_yesterday": 14,
+                "influence": "0.30%",
+                "tweets_yesterday": 14,
+                "followers_yesterday_new": 12,
                 "followers_all": 2136,
                 "date": "20131027",
-                "tweets_all": 909,
-                "tweets_yesterday": 88,
+                "tweets_all": 912,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -720,15 +1501,16 @@
                         "name": "AXIA3",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 1
             },
             {
-                "influence": "%0.30",
-                "followers_yesterday": 12,
+                "influence": "-1.10%",
+                "tweets_yesterday": 21,
+                "followers_yesterday_new": 4,
                 "followers_all": 2136,
                 "date": "20131028",
-                "tweets_all": 909,
-                "tweets_yesterday": 35,
+                "tweets_all": 912,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -745,15 +1527,16 @@
                         "name": "AXIA3",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 4
             },
             {
-                "influence": "%0.20",
-                "followers_yesterday": 9,
+                "influence": "0.20%",
+                "tweets_yesterday": 51,
+                "followers_yesterday_new": 9,
                 "followers_all": 2136,
                 "date": "20131029",
-                "tweets_all": 909,
-                "tweets_yesterday": 51,
+                "tweets_all": 912,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/morrowchris",
@@ -770,7 +1553,34 @@
                         "name": "AXIA3",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 2
+            },
+            {
+                "influence": "0.10%",
+                "tweets_yesterday": 34,
+                "followers_yesterday_new": 12,
+                "followers_all": 2136,
+                "date": "20131030",
+                "tweets_all": 912,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/morrowchris",
+                        "name": "morrowchris",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/SkyFallCarroll",
+                        "name": "SkyFallCarroll",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/AXIA3",
+                        "name": "AXIA3",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 0
             }
         ],
         "url_website": "http://www.alvarezformayor.com/",
@@ -782,12 +1592,246 @@
         "image": "images/fletcher.png",
         "values": [
             {
-                "influence": "%-3.20",
-                "followers_yesterday": 9,
+                "influence": "-3.20%",
+                "tweets_yesterday": 50,
+                "followers_yesterday_new": 9,
+                "followers_all": 6497,
+                "date": "20131011",
+                "tweets_all": 1433,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/mariashriver",
+                        "name": "mariashriver",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/carrolltrust",
+                        "name": "carrolltrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/Radioblogger",
+                        "name": "Radioblogger",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 4
+            },
+            {
+                "influence": "-0.40%",
+                "tweets_yesterday": 70,
+                "followers_yesterday_new": 13,
+                "followers_all": 6497,
+                "date": "20131012",
+                "tweets_all": 1433,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/mariashriver",
+                        "name": "mariashriver",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/carrolltrust",
+                        "name": "carrolltrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/Radioblogger",
+                        "name": "Radioblogger",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 2
+            },
+            {
+                "influence": "0.10%",
+                "tweets_yesterday": 23,
+                "followers_yesterday_new": 15,
+                "followers_all": 6497,
+                "date": "20131013",
+                "tweets_all": 1433,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/mariashriver",
+                        "name": "mariashriver",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/carrolltrust",
+                        "name": "carrolltrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/Radioblogger",
+                        "name": "Radioblogger",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 4
+            },
+            {
+                "influence": "0.00%",
+                "tweets_yesterday": 28,
+                "followers_yesterday_new": 13,
+                "followers_all": 6497,
+                "date": "20131014",
+                "tweets_all": 1433,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/mariashriver",
+                        "name": "mariashriver",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/carrolltrust",
+                        "name": "carrolltrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/Radioblogger",
+                        "name": "Radioblogger",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 3
+            },
+            {
+                "influence": "-0.00%",
+                "tweets_yesterday": 112,
+                "followers_yesterday_new": 10,
+                "followers_all": 6497,
+                "date": "20131015",
+                "tweets_all": 1433,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/mariashriver",
+                        "name": "mariashriver",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/carrolltrust",
+                        "name": "carrolltrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/Radioblogger",
+                        "name": "Radioblogger",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 7
+            },
+            {
+                "influence": "0.00%",
+                "tweets_yesterday": 55,
+                "followers_yesterday_new": 14,
+                "followers_all": 6497,
+                "date": "20131016",
+                "tweets_all": 1433,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/mariashriver",
+                        "name": "mariashriver",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/carrolltrust",
+                        "name": "carrolltrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/Radioblogger",
+                        "name": "Radioblogger",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 2
+            },
+            {
+                "influence": "-0.10%",
+                "tweets_yesterday": 21,
+                "followers_yesterday_new": 9,
+                "followers_all": 6497,
+                "date": "20131017",
+                "tweets_all": 1433,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/mariashriver",
+                        "name": "mariashriver",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/carrolltrust",
+                        "name": "carrolltrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/Radioblogger",
+                        "name": "Radioblogger",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 1
+            },
+            {
+                "influence": "12.40%",
+                "tweets_yesterday": 81,
+                "followers_yesterday_new": 6,
+                "followers_all": 6497,
+                "date": "20131018",
+                "tweets_all": 1433,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/mariashriver",
+                        "name": "mariashriver",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/carrolltrust",
+                        "name": "carrolltrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/Radioblogger",
+                        "name": "Radioblogger",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 5
+            },
+            {
+                "influence": "-0.00%",
+                "tweets_yesterday": 27,
+                "followers_yesterday_new": 10,
+                "followers_all": 6497,
+                "date": "20131019",
+                "tweets_all": 1433,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/mariashriver",
+                        "name": "mariashriver",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/carrolltrust",
+                        "name": "carrolltrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/Radioblogger",
+                        "name": "Radioblogger",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 5
+            },
+            {
+                "influence": "-0.00%",
+                "tweets_yesterday": 18,
+                "followers_yesterday_new": 9,
                 "followers_all": 6497,
                 "date": "20131020",
-                "tweets_all": 1417,
-                "tweets_yesterday": 485,
+                "tweets_all": 1433,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/mariashriver",
@@ -804,15 +1848,16 @@
                         "name": "Radioblogger",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 4
             },
             {
-                "influence": "%0.10",
-                "followers_yesterday": 15,
+                "influence": "-0.00%",
+                "tweets_yesterday": 16,
+                "followers_yesterday_new": 9,
                 "followers_all": 6497,
                 "date": "20131021",
-                "tweets_all": 1417,
-                "tweets_yesterday": 381,
+                "tweets_all": 1433,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/mariashriver",
@@ -829,15 +1874,16 @@
                         "name": "Radioblogger",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 4
             },
             {
-                "influence": "%-0.00",
-                "followers_yesterday": 10,
+                "influence": "0.00%",
+                "tweets_yesterday": 88,
+                "followers_yesterday_new": 5,
                 "followers_all": 6497,
                 "date": "20131022",
-                "tweets_all": 1417,
-                "tweets_yesterday": 418,
+                "tweets_all": 1433,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/mariashriver",
@@ -854,15 +1900,16 @@
                         "name": "Radioblogger",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 1
             },
             {
-                "influence": "%-0.10",
-                "followers_yesterday": 9,
+                "influence": "0.10%",
+                "tweets_yesterday": 38,
+                "followers_yesterday_new": 7,
                 "followers_all": 6497,
                 "date": "20131023",
-                "tweets_all": 1417,
-                "tweets_yesterday": 289,
+                "tweets_all": 1433,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/mariashriver",
@@ -879,15 +1926,16 @@
                         "name": "Radioblogger",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 4
             },
             {
-                "influence": "%-0.00",
-                "followers_yesterday": 10,
+                "influence": "0.00%",
+                "tweets_yesterday": 29,
+                "followers_yesterday_new": 11,
                 "followers_all": 6497,
                 "date": "20131024",
-                "tweets_all": 1417,
-                "tweets_yesterday": 216,
+                "tweets_all": 1433,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/mariashriver",
@@ -904,15 +1952,16 @@
                         "name": "Radioblogger",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 2
             },
             {
-                "influence": "%-0.00",
-                "followers_yesterday": 9,
+                "influence": "0.10%",
+                "tweets_yesterday": 58,
+                "followers_yesterday_new": 12,
                 "followers_all": 6497,
                 "date": "20131025",
-                "tweets_all": 1417,
-                "tweets_yesterday": 229,
+                "tweets_all": 1433,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/mariashriver",
@@ -929,15 +1978,16 @@
                         "name": "Radioblogger",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 3
             },
             {
-                "influence": "%0.10",
-                "followers_yesterday": 7,
+                "influence": "0.00%",
+                "tweets_yesterday": 58,
+                "followers_yesterday_new": 10,
                 "followers_all": 6497,
                 "date": "20131026",
-                "tweets_all": 1417,
-                "tweets_yesterday": 183,
+                "tweets_all": 1433,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/mariashriver",
@@ -954,15 +2004,16 @@
                         "name": "Radioblogger",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 4
             },
             {
-                "influence": "%0.10",
-                "followers_yesterday": 12,
+                "influence": "0.00%",
+                "tweets_yesterday": 47,
+                "followers_yesterday_new": 5,
                 "followers_all": 6497,
                 "date": "20131027",
-                "tweets_all": 1417,
-                "tweets_yesterday": 163,
+                "tweets_all": 1433,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/mariashriver",
@@ -979,15 +2030,16 @@
                         "name": "Radioblogger",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 2
             },
             {
-                "influence": "%0.00",
-                "followers_yesterday": 5,
+                "influence": "-0.20%",
+                "tweets_yesterday": 39,
+                "followers_yesterday_new": 2,
                 "followers_all": 6497,
                 "date": "20131028",
-                "tweets_all": 1417,
-                "tweets_yesterday": 86,
+                "tweets_all": 1433,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/mariashriver",
@@ -1004,15 +2056,16 @@
                         "name": "Radioblogger",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 7
             },
             {
-                "influence": "%0.00",
-                "followers_yesterday": 4,
+                "influence": "0.00%",
+                "tweets_yesterday": 81,
+                "followers_yesterday_new": 4,
                 "followers_all": 6497,
                 "date": "20131029",
-                "tweets_all": 1417,
-                "tweets_yesterday": 81,
+                "tweets_all": 1433,
                 "biggestFollowers": [
                     {
                         "url": "http://www.twitter.com/mariashriver",
@@ -1029,7 +2082,34 @@
                         "name": "Radioblogger",
                         "rank": 3
                     }
-                ]
+                ],
+                "followers_yesterday_removed": 4
+            },
+            {
+                "influence": "0.00%",
+                "tweets_yesterday": 129,
+                "followers_yesterday_new": 11,
+                "followers_all": 6497,
+                "date": "20131030",
+                "tweets_all": 1433,
+                "biggestFollowers": [
+                    {
+                        "url": "http://www.twitter.com/mariashriver",
+                        "name": "mariashriver",
+                        "rank": 1
+                    },
+                    {
+                        "url": "http://www.twitter.com/carrolltrust",
+                        "name": "carrolltrust",
+                        "rank": 2
+                    },
+                    {
+                        "url": "http://www.twitter.com/Radioblogger",
+                        "name": "Radioblogger",
+                        "rank": 3
+                    }
+                ],
+                "followers_yesterday_removed": 0
             }
         ],
         "url_website": "http://www.nathanfletcher.com/",

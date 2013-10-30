@@ -35,13 +35,10 @@
 	 * init user interface 
 	 */
 	function init_UI(){	
-		//calcualte countdown
-		var today=new Date().getTime(),
-			electionDate=new Date("November 19, 2013 08:00:00").getTime(),
-			countdown=Math.round((electionDate-today)/86400/1000);
-		$("#countdown label").html(countdown);
-		
-		
+	
+		//init time
+		init_time();
+
 		//tabs
 		init_tabs();
 		
@@ -69,12 +66,12 @@
 					 "<div class='candidate-index'>"+
 					 	"<ul>"+
 							"<li><label>"+v.values[0].tweets_all+"</label>mentioned since 9/29</li>"+
-							"<li><label>+"+v.values[0].followers_yesterday+"</label>NEW Followers Yesterday</li>"+
-							"<li><label>-"+v.values[0].followers_yesterday+"</label>REMOVED Followers Yesterday</li>"+
+							"<li><label>+"+v.values[0].followers_yesterday_new+"</label>NEW Followers Yesterday</li>"+
+							"<li><label>-"+v.values[0].followers_yesterday_removed+"</label>REMOVED Followers Yesterday</li>"+
 							"<li><label>"+v.values[0].influence+"</label title='help'>Network Impact Changes Yesterday</li>"+
-							"<li><label>"+((v.values[0].biggestFollowers[0].url)?"<a href='"+v.values[0].biggestFollowers[0].url+"' target='_blank'>@"+v.values[0].biggestFollowers[0].name+"</a>":"@"+v.values[0].biggestFollowers[0].name)+"</label><br>1st Biggest new follower</li>"+
-							"<li><label>"+((v.values[0].biggestFollowers[1].url)?"<a href='"+v.values[0].biggestFollowers[1].url+"' target='_blank'>@"+v.values[0].biggestFollowers[1].name+"</a>":"@"+v.values[0].biggestFollowers[1].name)+"</label><br>2nd Biggest new follower</li>"+
-							"<li><label>"+((v.values[0].biggestFollowers[2].url)?"<a href='"+v.values[0].biggestFollowers[2].url+"' target='_blank'>@"+v.values[0].biggestFollowers[2].name+"</a>":"@"+v.values[0].biggestFollowers[2].name)+"</label><br>3rd Biggest new follower</li>"+
+							"<li><label>"+((v.values[0].biggestFollowers[0].url)?"<a href='"+v.values[0].biggestFollowers[0].url+"' target='_blank'>@"+v.values[0].biggestFollowers[0].name+"</a>":"@"+v.values[0].biggestFollowers[0].name)+"</label><br>1st Biggest Follower</li>"+
+							"<li><label>"+((v.values[0].biggestFollowers[1].url)?"<a href='"+v.values[0].biggestFollowers[1].url+"' target='_blank'>@"+v.values[0].biggestFollowers[1].name+"</a>":"@"+v.values[0].biggestFollowers[1].name)+"</label><br>2nd Biggest Follower</li>"+
+							"<li><label>"+((v.values[0].biggestFollowers[2].url)?"<a href='"+v.values[0].biggestFollowers[2].url+"' target='_blank'>@"+v.values[0].biggestFollowers[2].name+"</a>":"@"+v.values[0].biggestFollowers[2].name)+"</label><br>3rd Biggest Follower</li>"+
 						"</ul>"+
 					 "</div>"
 					 "</li>";
@@ -103,6 +100,48 @@
 		
 	}
 	
+	
+	
+	
+	/**
+	 * initialize_time
+	 */
+	function init_time(){
+		//calcualte countdown
+		var todayTime=new Date().getTime(),
+			electionTime=new Date("November 19, 2013 08:00:00").getTime(),
+			countdownTime=Math.round((electionTime-todayTime)/86400/1000);
+		$("#countdown label").html(countdownTime);
+		
+		
+		//today's time
+		var today = new Date();
+		var dd = today.getDate();
+		var mm = today.getMonth()+1; //January is 0!
+
+		var yyyy = today.getFullYear();
+		if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm} today = mm+'/'+dd+'/'+yyyy;
+		
+		var currentTime = new Date()
+		var hours = currentTime.getHours()
+		var minutes = currentTime.getMinutes()
+
+		if (minutes < 10){
+			minutes = "0" + minutes
+		}
+		var suffix = "AM";
+		if (hours >= 12) {
+			suffix = "PM";
+			hours = hours - 12;
+		}
+		if (hours == 0) {
+			hours = 12;
+		}
+	
+		today+= "<span style='padding-left:30px'>" + hours + ":" + minutes + " " + suffix + "</span>";
+		
+		$("#clock").html(today);
+	}
 	
 	
 	
