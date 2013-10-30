@@ -21,7 +21,6 @@
 
 	//dom ready
 	$(function() { 
-	
 		//read candidates information 
 		$.getJSON("db/candidates.json", function(json){
 			app.candidates=json;
@@ -115,10 +114,26 @@
 		
 		$("#informationTabs > ul > li > a").click(function(){
 			var $this=$(this),
-				$href=$($this.attr('href'));
+				href=$this.attr('href'),
+				$href=$(href),
+				id=href.split('-')[1];
 			
-			
-		})
+			if (id && id != '') {
+				var html='';
+				
+				//request web service to get
+				html="<ul>"+
+					 	"<li>"+"Top Tweeted URL"+"</li>"+
+					 	"<li>"+"Top Follower"+"</li>"+
+					 	"<li>Word-Cloud Map"+"<br><img src='images/Vote-San-Diego-too-noisy.png' style='width:100%;' />"+"</li>"+
+					 "</ul>";
+					 
+				$href.html(html);
+			}
+		});
+		
+		//trigger click on the first candidate
+		$("#informationTabs > ul > li > a:nth(0)").trigger('click');
 	}
 	
 	

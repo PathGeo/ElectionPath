@@ -92,6 +92,12 @@ ul {margin:0px; padding:0px; list-style:none; }
 #informationTabs .ui-tabs-selected {background:#ffffff;}
 #informationTabs .ui-tabs-selected a {color:#000000;}
 */
+.informationContent {height:400px; }
+.informationContent ul {width:100%;}
+.informationContent ul > li {width:33%; height:300px; float:left; text-align:center; border:1px solid #f1f1f1;}
+
+
+
 
 /** widget_controlPanel */
 #controlPanel {margin-top:50px; display:none;}
