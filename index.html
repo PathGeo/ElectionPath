@@ -40,12 +40,13 @@
 		
 		<!-- count down-->
 		<div id='countdown'>
-			<label></label>&nbsp; days left till the Mayoural Election	
+			<label></label>&nbsp; days left till the Mayoral Election (November 19th)
 		</div>
 		
 		<!-- social media-->
 		<div id='socialmedia'>
 			<ul>
+				<li><div id='stayLoop'><label>Stay in the loop</label><br>follow us for updates</div></li>
 				<li><a href='https://www.facebook.com/pages/PathGeo/274827229311706' target='_blank'><img src='images/1383040715_social_3.png' title='Facebook' /></a></li>
 				<li><a href='https://twitter.com/PathGeo' target='_blank'><img src='images/1383041016_social_8.png' title='Twitter' /></a></li>
 				<li><a href='http://www.linkedin.com/company/pathgeo' target='_blank'><img src='images/1383040971_social_7.png' title='linkedin' /></a></li>
@@ -70,21 +71,41 @@
 			<ul></ul>
 		</div>
 		
-		<!--chart-->
-		<div id='chart' class='mainBlock'>
-			<h2>View by Dates</h2>
-			<img src='images/Election-Path-P1.png' style='width:100%; height:100%; ' />
+		<div class='hr'></div>
+		
+		<!--detailInformation-->
+		<div id='detailInformation' class='mainBlock'>
+			<h2>Detail information per candidate</h2>
+			
+			<!--chart-->
+			<div id='chart'>
+				<ul>
+					<li style='width:25%;'><b>Step 1:</b><br>Click on a specific date on the chart<p></p><br><b>Step 2:</b><br>Select a candidate from below to see what happened that give day to each candidate's social reach or followers</li>
+					<li style='width:70%;'><img src='images/Election-Path-P1.png' style='width:100%; height:300px;' /></li>
+				</ul>
+			</div>
+			
+			<!--information tabs-->
+			<div id='informationTabs' class='tabs'>
+				<ul>
+				    <li><a href="#tabs-aguirre">Mike Aguirre</a></li>
+					<li><a href="#tabs-faulconer">Kevin Faulconer</a></li>
+				    <li><a href="#tabs-alvarez">David Alvarez</a></li>
+					<li><a href="#tabs-fletcher">Nathan Fletcher</a></li>
+				</ul>
+				
+				<div id="tabs-aguirre"></div>
+				<div id="tabs-faulconer"></div>
+				<div id="tabs-alvarez"></div>
+				<div id="tabs-fletcher"></div>
+			</div>
+			
 		</div>
 
 	</div>
 	
 	
 	
-
-
-	<P></P>
-
-
 	
 	<!--map & Top Sales Lead and Top Service Leads (SU & Chris)-->
 	<div id='controlPanel' class='widget' widget-title='Election Information Panel' widget-onInit="init_map();init_leads()" widget-onClose="" widget-onClick="" widget-sizeX=6 widget-sizeY=6 widget-row=6 widget-col=1>

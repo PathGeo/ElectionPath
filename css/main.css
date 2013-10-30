@@ -16,6 +16,10 @@ a:hover {text-decoration:underline;}
 
 .highlightKeyword { font-weight: bold; color:#EC692D}
 
+
+.hr{width:100%; margin:50px 0px 50px 0px; border:2px solid #f1f1f1;}
+
+
 ul {margin:0px; padding:0px; list-style:none; }
 
 
@@ -28,9 +32,10 @@ ul {margin:0px; padding:0px; list-style:none; }
 
 /**social media */
 #socialmedia {position:absolute; right:0px; top:3px; }
-#socialmedia li {padding:10px; float:left; }
+#socialmedia li {padding:10px; float:left; position:relative; }
 #socialmedia img {width:25px; height:25px; }
-
+#socialmedia #stayLoop {position:relative; top:-7px; text-align:right; }
+#socialmedia #stayLoop label {font-size:16px; font-weight:600; color:#FF4B00;}
 
 /**main content */
 #mainContent {width:94%; padding:5px 3% 0px 3%; }
@@ -45,7 +50,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 
 
 /** widget candidate */
-#candidate {height:390px; margin-top:50px; }
+#candidate {height:600px; margin-top:50px; }
 #candidate ul {width:100%; height:100%;}
 #candidate > ul > li {float:left; width:24.75%; border:1px solid #f1f1f1; background-color:#ffffff; }
 #candidate > ul > li:hover {background-color:#f1f1f1;cursor:pointer;}
@@ -60,8 +65,8 @@ ul {margin:0px; padding:0px; list-style:none; }
 /** candidate metadata*/
 .candidate-metadata {padding:10px; float:left; position:relative;}
 .candidate-twitterImage {width:45px; position:absolute; top:5x; left:5px; }
-.candidate-twitterYesterday {position:absolute; top:15px; left:60px; font-size:30px; font-weight:bold; color:#359BED; }
-.candidate-twitterYesterday label {color:#777777; font-size:10px; font-weight:500; position:absolute; top:8px; left:43px;}
+.candidate-twitterYesterday {position:absolute; top:15px; left:55px; font-size:30px; font-weight:bold; color:#359BED; }
+.candidate-twitterYesterday label {color:#777777; font-size:10px; font-weight:500; position:absolute; top:8px; left:55px;}
 .candidate-info {position:absolute; top:70px; left:10px; font-size:12px; color:#777777; font-weight:500; }
 
 /** candidate index*/
@@ -72,9 +77,21 @@ ul {margin:0px; padding:0px; list-style:none; }
 
 
 
-/** chart */
-#chart {display:none;}
+/** detail information */
+#detailInformation {}
+#chart {width:100%; height:350px; }
+#chart ul {width:100%;}
+#chart ul li {float:left; padding:10px; line-height:20px; font-size:14px;  }
+#chart ul li b {font-size:16px; }
 
+/**information tabs */
+#informationTabs .ui-tabs-nav li {width:24.49%;}
+/**
+#informationTabs .ui-tabs-nav li a {color:#ffffff}
+#informationTabs .ui-state-default {background:transparent; }
+#informationTabs .ui-tabs-selected {background:#ffffff;}
+#informationTabs .ui-tabs-selected a {color:#000000;}
+*/
 
 /** widget_controlPanel */
 #controlPanel {margin-top:50px; display:none;}
@@ -82,10 +99,6 @@ ul {margin:0px; padding:0px; list-style:none; }
 
 
 /** jquery ui */
-.ui-widget-overlay {position:fixed}
-.ui-icon-closethick {background:url(../images/1363366802_fileclose.png) no-repeat !important; background-size:100% 100% !important; width:32px; height:32px}
-.ui-dialog-titlebar-close {right:.5em !important; top:30% !important; width:32px !important; height:32px !important}
-.ui-dialog-titlebar-close:hover {background-color:#cccccc; -moz-border-radius:10px; -webkit-border-radius:10px;border-radius:10px;}
 
 
 
