@@ -59,45 +59,45 @@
 						 "<img class='candidate-image' src='"+v.image+"' />"+
 						 "<div class='candidate-metadata'>"+
 							"<img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' />"+
-							"<div class='candidate-twitterYesterday'>"+v.values[0].tweets_yesterday+"<label>mentioned Yesterday</label></div>"+
+							"<div class='candidate-twitterYesterday'><a href='#' class='showTable'>"+v.values[0].tweets_yesterday+"</a><label title='# of tweets mentioned about this candidate Yesterday'>mentions Yesterday</label></div>"+
 							"<div class='candidate-info'>"+"<a href='"+v.url_website+"' target='_blank'>Website</a><br><a href='"+v.url_twitter+"' target='_blank'>Twitter</a></div>"+
 						 "</div>"+
 					 "</div>"+
 					 "<div class='candidate-index'>"+
 					 	"<ul>"+
-							"<li><label>"+v.values[0].tweets_all+"</label>mentioned since 9/29</li>"+
-							"<li><label>+"+v.values[0].followers_yesterday_new+"</label>NEW Followers Yesterday</li>"+
-							"<li><label>-"+v.values[0].followers_yesterday_removed+"</label>REMOVED Followers Yesterday</li>"+
-							"<li><label>"+v.values[0].influence+"</label title='help'>Network Impact Changes Yesterday</li>"+
-							"<li><label>"+((v.values[0].biggestFollowers[0].url)?"<a href='"+v.values[0].biggestFollowers[0].url+"' target='_blank'>@"+v.values[0].biggestFollowers[0].name+"</a>":"@"+v.values[0].biggestFollowers[0].name)+"</label><br>1st Biggest Follower</li>"+
-							"<li><label>"+((v.values[0].biggestFollowers[1].url)?"<a href='"+v.values[0].biggestFollowers[1].url+"' target='_blank'>@"+v.values[0].biggestFollowers[1].name+"</a>":"@"+v.values[0].biggestFollowers[1].name)+"</label><br>2nd Biggest Follower</li>"+
-							"<li><label>"+((v.values[0].biggestFollowers[2].url)?"<a href='"+v.values[0].biggestFollowers[2].url+"' target='_blank'>@"+v.values[0].biggestFollowers[2].name+"</a>":"@"+v.values[0].biggestFollowers[2].name)+"</label><br>3rd Biggest Follower</li>"+
+							"<li><a href='#' class='showTable'>"+v.values[0].tweets_all+"</a><label title='Total # of tweets mentions this candidate from 9/29 to Yesterday'>mentions since 9/29</label></li>"+
+							"<li><a href='#' class='showTable'>+"+v.values[0].followers_yesterday_new+"</a><label title=\"# of new followers added in this candidate's Twitter account\">NEW Followers Yesterday</label></li>"+
+							"<li><a href='#' class='showTable'>-"+v.values[0].followers_yesterday_removed+"</a><label title=\"# of Twitter users 'unfollow' this candidate's Twitter account\">REMOVED Followers Yesterday</label></li>"+
+							"<li><a href='#' class='showTable'>"+v.values[0].influence+"</a><label title=\"The percentage changes of the combined number of 'fans'(followers) from  each new follower\">Network Impact Changes Yesterday</label></li>"+
+							"<li>"+((v.values[0].biggestFollowers[0].url)?"<a href='"+v.values[0].biggestFollowers[0].url+"' target='_blank'>@"+v.values[0].biggestFollowers[0].name+"</a>":"@"+v.values[0].biggestFollowers[0].name)+"</a><br>1st Biggest Follower</li>"+
+							"<li>"+((v.values[0].biggestFollowers[1].url)?"<a href='"+v.values[0].biggestFollowers[1].url+"' target='_blank'>@"+v.values[0].biggestFollowers[1].name+"</a>":"@"+v.values[0].biggestFollowers[1].name)+"</a><br>2nd Biggest Follower</li>"+
+							"<li>"+((v.values[0].biggestFollowers[2].url)?"<a href='"+v.values[0].biggestFollowers[2].url+"' target='_blank'>@"+v.values[0].biggestFollowers[2].name+"</a>":"@"+v.values[0].biggestFollowers[2].name)+"</a><br>3rd Biggest Follower</li>"+
 						"</ul>"+
 					 "</div>"
 					 "</li>";
 				
 				$candidate.append(html);
 			});
-			
+		
 			
 			//add li's clicking event
-			$candidate.find("> li").click(function(){
+			$(".showTable").click(function(){
 				var $this=$(this),
-					id=$this.attr("id");
+					id=$this.parent().parents("li").attr("id");
 				
 				if(app.candidates[id] && id && id!=''){
-					console.log(app.candidates[id]);
+					showTable(id, app.candidates[id]);
 				}else{
 					console.log("[ERROR] cannot find out the candidate's info in the database. ")
 				}
+			}).siblings("label").each(function(){
+				var $this=$(this),
+					title=$this.attr('title');
+				if(title && title!=''){
+					$this.siblings('a.showTable').attr('title', title);
+				}
 			});
-			
-			
-			
 		}
-			
-		
-		
 	}
 	
 	
@@ -166,6 +166,69 @@
 		//trigger click on the first candidate
 		$("#informationTabs > ul > li > a:nth(0)").trigger('click');
 	}
+	
+	
+	
+	
+	/** 
+	 * show table
+	 */
+	function showTable(id, obj){
+		var html="<div class='matrix-candidate'>"+$("li[id='"+id+"'] .candidate-content").html() +"</div><hr><h3>Twitter Data in past 2 weeks: </h3><table class='matrixTable'>",
+			html="<table class='matrixTable'>",
+			html_header="<tr>",
+			html_content="",
+			content="",
+			templates=[
+				{key:"date", title:"Date", description:"Date"},
+				{key:"tweets_all", title:"Tweets <br>since 9/29", description:"Total # of tweets mentioned this candidate from 9/29 to Yesterday"},
+				{key:"tweets_yesterday", title:"Tweets Yesterday", description:"# of tweets mentioned about this candidate Yesterday"},
+				{key:"followers_all", title:"All Follewers", description:"All Followers"},
+				{key:"followers_yesterday_new", title:"NEW<br>Followers Yesterday", description:"# of new followers added in this candidate's Twitter account"},
+				{key:"followers_yesterday_removed", title:"REMOVED<br>Followers Yesterday", description:"# of Twitter users unfollow this candidate's Twitter account"},
+				{key:"influence", title:"Network Impact", description:"The percentage changes of the combined number of fans(followers) from  each new follower"},
+				{key:"biggestFollowers", title:"Biggest Followers", description:"Top 3 Biggest Followers"}
+			];
+			
+		
+		$.each(obj.values, function(i,value){
+			html_content+="<tr>";
+			$.each(templates, function(j,temp){
+				if(i==0){
+					html_header+="<td title='"+temp.description+"'>"+temp.title+"</td>";
+				}
+				content="<td>"+value[temp.key]+"</td>";
+				
+				if(temp.key=='biggestFollowers'){
+					content="<td><ul>";
+					$.each(value[temp.key], function(k,v){
+						content+="<li>Top "+v.rank +":<br><a href='"+v.url+"' target='_blank'>@"+v.name+"</a></li>";
+					});
+					content+="</ul></td>";
+				}
+				
+				html_content+=content;
+			});
+			html_content+="</tr>";
+		});
+		html_header+="</tr>";		
+		
+		html=html+html_header+html_content+"</table>";
+		
+		$("#dialog_table").html(html);
+		setTimeout(function(){
+			showDialog("dialog_table", obj.name+"'s twitter influence index");
+			$(".ui-dialog .ui-widget-header").css({
+				"background":"transparent",
+				"background-color": obj.backgroundColor,
+				"color":"#ffffff"
+			}).find("span").css({
+				"font-size":"16px",
+				"font-family":"'Lato', sans-serif"
+			});
+		}, 10);
+	}
+	
 	
 	
 	
@@ -273,15 +336,17 @@
 	 * @param {Object} dialogOptions
 	 */
 	function showDialog(id, title, dialogOptions){
-		if(!dialogOptions){dialogOptions={}}
+		if (!dialogOptions) {
+			dialogOptions = {}
+		}
 		
 		//options
-		dialogOptions.title=dialogOptions.title || title;
-		dialogOptions.width=dialogOptions.width || 700;
-		dialogOptions.height=dialogOptions.height || 500;
-		dialogOptions.resizable=dialogOptions.resizable || false;
-		dialogOptions.draggable=dialogOptions.draggable || false;
-		//dialogOptions.draggable=false || dialogOptions.draggable;
+		dialogOptions.title = dialogOptions.title || title;
+		dialogOptions.width = dialogOptions.width || 850;
+		dialogOptions.height = dialogOptions.height || 550;
+		dialogOptions.resizable = dialogOptions.resizable || false;
+		dialogOptions.draggable = dialogOptions.draggable || false;
+		dialogOptions.modal = dialogOptions.modal || true; 
 		dialogOptions.dialogClass="";
 		dialogOptions.position=dialogOptions.position || "center";
 		dialogOptions.closeFn=dialogOptions.close || null;
@@ -296,10 +361,6 @@
 		$("body").css("overflow", "hidden");
 		
 		$("#"+id).dialog(dialogOptions);
-		
-		//jquery mobile
-		//$("#"+id).show();
-		//$.mobile.changePage('#'+id, {transition: 'pop', role: 'dialog'});
 	}
 	
 

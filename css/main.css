@@ -55,10 +55,10 @@ ul {margin:0px; padding:0px; list-style:none; }
 #candidate {height:600px; margin-top:50px; }
 #candidate ul {width:100%; height:100%;}
 #candidate > ul > li {float:left; width:24.75%; border:1px solid #f1f1f1; background-color:#ffffff; }
-#candidate > ul > li:hover {background-color:#f1f1f1;cursor:pointer;}
+#candidate > ul > li:hover {background-color:#f1f1f1;}
 
 /** candidate name */
-.candidate-name {width:100%; background-color:#000000; color:#ffffff; font-weight:bold; font-size:15px;  padding:10px 0px 10px 3px;}
+.candidate-name {width:100%; background-color:#000000; color:#ffffff; font-weight:bold; font-size:18px;  padding:8px 0px 8px 5px;}
 .candidate-content {width:100%; height:100px; }
 
 /** candidate-image */
@@ -74,8 +74,8 @@ ul {margin:0px; padding:0px; list-style:none; }
 /** candidate index*/
 .candidate-index {width:100%; margin-top:5px; border-top:1px solid #f1f1f1; }
 .candidate-index ul li {position:relative;  color:#777777; font-size:12px; padding:10px 5px 10px 5px; font-weight:500; }
-.candidate-index ul li label {font-size:25px; font-weight:bold;  color:#000000; margin-right:5px; }
-.candidate-index ul li a {font-size:20px;}
+.candidate-index ul li a.showTable {font-size:25px; font-weight:bold;  margin-right:5px; }
+.candidate-index ul li a {font-size:18px; font-weight:600;}
 
 
 
@@ -110,12 +110,31 @@ ul {margin:0px; padding:0px; list-style:none; }
 .table a:hover {text-decoration:underline; }
 
 
+/** matrix table */
+.matrixTable {width:99%;  margin:0 auto; border-collapse:collapse; margin-top:20px; }
+.matrixTable tr:first-child {background-color:#359BED; color:#ffffff; font-weight:600; font-size:14px;  }
+.matrixTable td {width:200px; border-bottom:1px solid #f1f1f1; text-align:left; font-size:14px;  padding:5px; font-family:'Lato', sans-serif;}
+.matrixTable tr:not(:first-child):hover {background-color:#f1f1f1; }
+.matrixTable a {text-decoration:none; color:#359BED}
+.matrixTable a:hover {text-decoration:underline; }
+
+/** martrix candidate */
+.matrix-candidate {height:130px; }
+.matrix-candidate .candidate-image {height:130px; width:auto;}
+.matrix-candidate a {text-decoration:none; color:#359BED}
+.matrix-candidate a:hover {text-decoration:underline; }
+
+
 /** map */
 #map {width:90%; margin:0 auto; height:100%; margin-top:20px; }
 
 /** widget_controlPanel */
 #controlPanel {margin-top:50px; display:none;}
 
+
+
+/** dialog */
+.dialog {display:none; }
 
 
 /** jquery ui */
