@@ -244,12 +244,14 @@
 		$("#dialog_table").html(html);
 
 		//fix header
-//		$('.matrixTable').fixheadertable({
-//             caption : '',
-//             height  : 420,
-//			 showhide:false,
-//			 sortable:false
-//        });
+		$('.matrixTable').fixheadertable({
+             caption : '',
+             height  : 410,
+			 colratio: [100, 100, 100, 100, 100, 100, 100, 200, 250], 
+			 showhide:false,
+			 sortable:false,
+			 zebra:false
+        });
 		
 		setTimeout(function(){
 			showDialog("dialog_table", obj.name+"'s twitter influence index");

@@ -115,8 +115,12 @@ ul {margin:0px; padding:0px; list-style:none; }
 .matrixTable th {background-color:#359BED; color:#ffffff; font-weight:600; font-size:12px; padding:5px; border:1px solid #dddddd; font-family:'Lato', sans-serif; }
 .matrixTable td {width:200px; border:1px solid #dddddd; text-align:left; font-size:14px;  padding:5px; font-family:'Lato', sans-serif;}
 .matrixTable tr:hover {background-color:#f1f1f1; }
-.matrixTable a {text-decoration:none; color:#359BED}
+.matrixTable a {text-decoration:none; color:#359BED !important}
 .matrixTable a:hover {text-decoration:underline; }
+
+#dialog_table > .ui-widget-content {border:0px; }
+#dialog_table .head {font-family:"Lato"; font-size:14px; }
+#dialog_table .head th {white-space:normal; text-align:left; }
 
 /** martrix candidate */
 .matrix-candidate {height:130px; }
