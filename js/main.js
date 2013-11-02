@@ -80,7 +80,7 @@
 									if(value.biggestFollowers_yesterday[i]){
 										result+="<li>"+((value.biggestFollowers_yesterday[i].url)?"<a href='"+value.biggestFollowers_yesterday[i].url+"' target='_blank'>@"+value.biggestFollowers_yesterday[i].name+"</a>":"@"+value.biggestFollowers_yesterday[i].name)+"</a><br>"+n+" Biggest Follower Yesterday</li>";
 									}else{
-										result+="<li></li>";
+										result+="<li style='height:57px;'></li>";
 									}
 								});
 								return result;
@@ -92,7 +92,7 @@
 									if(value.biggestFollowers_yesterday[i]){
 										result+="<li>"+((value.biggestFollowers[i].url)?"<a href='"+value.biggestFollowers[i].url+"' target='_blank'>@"+value.biggestFollowers[i].name+"</a>":"@"+value.biggestFollowers[i].name)+"</a><br>"+n+" Biggest Follower Yesterday</li>";
 									}else{
-										result+="<li></li>";
+										result+="<li style='height:57px;'></li>";
 									}
 								});
 								return result;
