@@ -47,11 +47,15 @@
 		if(app.candidates){
 			var html="",
 				html_addWidget="",
-				$candidate=$("#candidate ul");
+				$candidate=$("#candidate ul"),
+				value=null,
+				numbers=["1st",'2nd','3rd'];
 			
 			$.each(app.candidates, function(k,v){
 				//reverse array order
 				v.values.reverse()
+				
+				value=v.values[0];
 			
 				html="<li id='"+k+"'>"+
 					 "<div class='candidate-name' style='background-color:"+v.backgroundColor+"'>"+v.name +"</div>"+
@@ -65,18 +69,34 @@
 					 "</div>"+
 					 "<div class='candidate-index'>"+
 					 	"<ul>"+
-							"<li><a href='#' class='showTable'>"+v.values[0].tweets_all+"</a><label title='Total # of tweets mentions this candidate from 10/07 to Yesterday'>mentions since 10/07</label></li>"+
-							"<li><a href='#' class='showTable'>+"+v.values[0].followers_yesterday_new+"</a><label title=\"# of new followers added in this candidate's Twitter account\">NEW Followers Yesterday</label></li>"+
-							"<li><a href='#' class='showTable'>-"+v.values[0].followers_yesterday_removed+"</a><label title=\"# of Twitter users 'unfollow' this candidate's Twitter account\">REMOVED Followers Yesterday</label></li>"+
-							"<li><a href='#' class='showTable'>"+v.values[0].influence+"</a><label title=\"The percentage changes of the combined number of 'fans'(followers) from  each new follower\">Network Impact Changes Yesterday</label></li>"+
+							"<li><a href='#' class='showTable'>"+value.tweets_all+"</a><label title='Total # of tweets mentions this candidate from 10/07 to Yesterday'>mentions since 10/07</label></li>"+
+							"<li><a href='#' class='showTable'>+"+value.followers_yesterday_new+"</a><label title=\"# of new followers added in this candidate's Twitter account\">NEW Followers Yesterday</label></li>"+
+							"<li><a href='#' class='showTable'>-"+value.followers_yesterday_removed+"</a><label title=\"# of Twitter users 'unfollow' this candidate's Twitter account\">REMOVED Followers Yesterday</label></li>"+
+							"<li><a href='#' class='showTable'>"+value.influence+"</a><label title=\"The percentage changes of the combined number of 'fans'(followers) from  each new follower\">Network Impact Changes Yesterday</label></li>"+
 							"<li></li>"+
-							"<li>"+((v.values[0].biggestFollowers_yesterday[0].url)?"<a href='"+v.values[0].biggestFollowers_yesterday[0].url+"' target='_blank'>@"+v.values[0].biggestFollowers_yesterday[0].name+"</a>":"@"+v.values[0].biggestFollowers_yesterday[0].name)+"</a><br>1st Biggest Follower Yesterday</li>"+
-							"<li>"+((v.values[0].biggestFollowers_yesterday[1].url)?"<a href='"+v.values[0].biggestFollowers_yesterday[1].url+"' target='_blank'>@"+v.values[0].biggestFollowers_yesterday[1].name+"</a>":"@"+v.values[0].biggestFollowers_yesterday[1].name)+"</a><br>2nd Biggest Follower Yesterday</li>"+
-							"<li>"+((v.values[0].biggestFollowers_yesterday[2].url)?"<a href='"+v.values[0].biggestFollowers_yesterday[2].url+"' target='_blank'>@"+v.values[0].biggestFollowers_yesterday[2].name+"</a>":"@"+v.values[0].biggestFollowers_yesterday[2].name)+"</a><br>3rd Biggest Follower Yesterday</li>"+
+							(function(){
+								var result='';
+								$.each(numbers, function(i,n){
+									if(value.biggestFollowers_yesterday[i]){
+										result+="<li>"+((value.biggestFollowers_yesterday[i].url)?"<a href='"+value.biggestFollowers_yesterday[i].url+"' target='_blank'>@"+value.biggestFollowers_yesterday[i].name+"</a>":"@"+value.biggestFollowers_yesterday[i].name)+"</a><br>"+n+" Biggest Follower Yesterday</li>";
+									}else{
+										result+="<li></li>";
+									}
+								});
+								return result;
+							})()+
 							"<li></li>"+
-							"<li>"+((v.values[0].biggestFollowers[0].url)?"<a href='"+v.values[0].biggestFollowers[0].url+"' target='_blank'>@"+v.values[0].biggestFollowers[0].name+"</a>":"@"+v.values[0].biggestFollowers[0].name)+"</a><br>1st Biggest Follower</li>"+
-							"<li>"+((v.values[0].biggestFollowers[1].url)?"<a href='"+v.values[0].biggestFollowers[1].url+"' target='_blank'>@"+v.values[0].biggestFollowers[1].name+"</a>":"@"+v.values[0].biggestFollowers[1].name)+"</a><br>2nd Biggest Follower</li>"+
-							"<li>"+((v.values[0].biggestFollowers[2].url)?"<a href='"+v.values[0].biggestFollowers[2].url+"' target='_blank'>@"+v.values[0].biggestFollowers[2].name+"</a>":"@"+v.values[0].biggestFollowers[2].name)+"</a><br>3rd Biggest Follower</li>"+
+							(function(){
+								var result='';
+								$.each(numbers, function(i,n){
+									if(value.biggestFollowers_yesterday[i]){
+										result+="<li>"+((value.biggestFollowers[i].url)?"<a href='"+value.biggestFollowers[i].url+"' target='_blank'>@"+value.biggestFollowers[i].name+"</a>":"@"+value.biggestFollowers[i].name)+"</a><br>"+n+" Biggest Follower Yesterday</li>";
+									}else{
+										result+="<li></li>";
+									}
+								});
+								return result;
+							})()+
 						"</ul>"+
 					 "</div>"
 					 "</li>";
