@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+    <title>Temperatures with Range Selector</title>
+    <!--[if IE]>
+    <script type="text/javascript" src="../excanvas.js"></script>
+    <![endif]-->
+    <!--
+    For production (minified) code, use:
+    <script type="text/javascript" src="dygraph-combined.js"></script>
+    -->
+	
+    <script type="text/javascript" src="data2.js"></script>	
+    <script type="text/javascript" src="../dygraph-dev.js"></script>
+
+
+    <style type="text/css">
+    #graph {
+      border: 1px solid grey;
+	  position:absolute;
+	  padding-top:30px;
+	  padding-left:30px;
+	  padding-right:30px;
+	  padding-bottom:30px;
+    }
+	
+	.dygraph-legend{
+      border: 1px solid grey;
+	  position:relative;
+	  left:200px;
+	  width:500px;
+	}	
+	
+    </style>
+  </head>
+  <body>
+
+	</br>
+	
+    <ul>
+     <li>please click the graph.</li>
+	 <li>You can select the range using the graph at the buttom. Please try to move left-most and right-most buttons.</li>
+	 <li>The range can be also selected by mous panning.</li>
+    </ul>
+	
+	<div id=graph>
+		<div id="noroll" style="width:800px; height:320px;"></div>
+	</div>
+   <!--	
+    <p>
+      Roll period of 14 timesteps, custom range selector height and plot color.
+    </p>
+    <div id="roll14" style="width:800px; height:320px;"></div>
+
+	
+    <p>
+      Demo of range selecor without the chart. (interesting if multiple charts should be synced with one range selector).
+    </p>
+    <div id="nochart" style="width:800px; height:30px;"></div>
+    -->
+    <script type="text/javascript">
+      g1 = new Dygraph(
+          document.getElementById("noroll"),
+          data_temp,
+          {
+            customBars: true,
+            title: '',
+            ylabel: 'The number of Tweets',
+			colors: ['#E80000', '#FF9900', '#339966', '#9900FF' ],
+            legend: 'always',
+            labelsDivStyles: { 'textAlign': 'right' },
+            showRangeSelector: true,
+            highlightCircleSize: 10,
+            rangeSelectorHeight: 50,
+              labelsDivWidth: 80,
+              labelsDivStyles: {
+                'backgroundColor': 'rgba(232, 232, 232, 0.75)',
+                'padding': '4px',
+                'border': '1px solid grey',
+                'borderRadius': '10px',
+                'boxShadow': '4px 4px 4px #888'
+              },			
+             strokeWidth: 2			
+          }
+      );
+	  
+      g2 = new Dygraph(
+          document.getElementById("roll14"),
+          data_temp,
+          {
+            rollPeriod: 7,
+            showRoller: false,
+            customBars: true,
+            title: 'Election-Path: Monitoring Candidates for San Diego Mayoral Special Election',
+            ylabel: 'The number of Tweets',
+            legend: 'always',
+            labelsDivStyles: { 'textAlign': 'right' },
+            xAxisHeight: 14,
+            showRangeSelector: true,
+            rangeSelectorHeight: 30,
+            rangeSelectorPlotStrokeColor: 'red',
+            rangeSelectorPlotFillColor: 'red'
+          }
+      );
+      g3 = new Dygraph(
+          document.getElementById("nochart"),
+          [[0,1],[10,1]],
+          {
+            xAxisHeight: 30,
+            drawXAxis: false,
+            showRangeSelector: true,
+            rangeSelectorHeight: 30
+          }
+      );
+	  
+    </script>
+  </body>
+</html>
