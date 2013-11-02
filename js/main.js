@@ -90,7 +90,7 @@
 								var result='';
 								$.each(numbers, function(i,n){
 									if(value.biggestFollowers_yesterday[i]){
-										result+="<li>"+((value.biggestFollowers[i].url)?"<a href='"+value.biggestFollowers[i].url+"' target='_blank'>@"+value.biggestFollowers[i].name+"</a>":"@"+value.biggestFollowers[i].name)+"</a><br>"+n+" Biggest Follower Yesterday</li>";
+										result+="<li>"+((value.biggestFollowers[i].url)?"<a href='"+value.biggestFollowers[i].url+"' target='_blank'>@"+value.biggestFollowers[i].name+"</a>":"@"+value.biggestFollowers[i].name)+"</a><br>"+n+" Biggest Follower</li>";
 									}else{
 										result+="<li style='height:37px;'></li>";
 									}
