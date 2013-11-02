@@ -65,10 +65,15 @@
 					 "</div>"+
 					 "<div class='candidate-index'>"+
 					 	"<ul>"+
-							"<li><a href='#' class='showTable'>"+v.values[0].tweets_all+"</a><label title='Total # of tweets mentions this candidate from 9/29 to Yesterday'>mentions since 9/29</label></li>"+
+							"<li><a href='#' class='showTable'>"+v.values[0].tweets_all+"</a><label title='Total # of tweets mentions this candidate from 10/07 to Yesterday'>mentions since 10/07</label></li>"+
 							"<li><a href='#' class='showTable'>+"+v.values[0].followers_yesterday_new+"</a><label title=\"# of new followers added in this candidate's Twitter account\">NEW Followers Yesterday</label></li>"+
 							"<li><a href='#' class='showTable'>-"+v.values[0].followers_yesterday_removed+"</a><label title=\"# of Twitter users 'unfollow' this candidate's Twitter account\">REMOVED Followers Yesterday</label></li>"+
 							"<li><a href='#' class='showTable'>"+v.values[0].influence+"</a><label title=\"The percentage changes of the combined number of 'fans'(followers) from  each new follower\">Network Impact Changes Yesterday</label></li>"+
+							"<li></li>"+
+							"<li>"+((v.values[0].biggestFollowers_yesterday[0].url)?"<a href='"+v.values[0].biggestFollowers_yesterday[0].url+"' target='_blank'>@"+v.values[0].biggestFollowers_yesterday[0].name+"</a>":"@"+v.values[0].biggestFollowers_yesterday[0].name)+"</a><br>1st Biggest Follower Yesterday</li>"+
+							"<li>"+((v.values[0].biggestFollowers_yesterday[1].url)?"<a href='"+v.values[0].biggestFollowers_yesterday[1].url+"' target='_blank'>@"+v.values[0].biggestFollowers_yesterday[1].name+"</a>":"@"+v.values[0].biggestFollowers_yesterday[1].name)+"</a><br>2nd Biggest Follower Yesterday</li>"+
+							"<li>"+((v.values[0].biggestFollowers_yesterday[2].url)?"<a href='"+v.values[0].biggestFollowers_yesterday[2].url+"' target='_blank'>@"+v.values[0].biggestFollowers_yesterday[2].name+"</a>":"@"+v.values[0].biggestFollowers_yesterday[2].name)+"</a><br>3rd Biggest Follower Yesterday</li>"+
+							"<li></li>"+
 							"<li>"+((v.values[0].biggestFollowers[0].url)?"<a href='"+v.values[0].biggestFollowers[0].url+"' target='_blank'>@"+v.values[0].biggestFollowers[0].name+"</a>":"@"+v.values[0].biggestFollowers[0].name)+"</a><br>1st Biggest Follower</li>"+
 							"<li>"+((v.values[0].biggestFollowers[1].url)?"<a href='"+v.values[0].biggestFollowers[1].url+"' target='_blank'>@"+v.values[0].biggestFollowers[1].name+"</a>":"@"+v.values[0].biggestFollowers[1].name)+"</a><br>2nd Biggest Follower</li>"+
 							"<li>"+((v.values[0].biggestFollowers[2].url)?"<a href='"+v.values[0].biggestFollowers[2].url+"' target='_blank'>@"+v.values[0].biggestFollowers[2].name+"</a>":"@"+v.values[0].biggestFollowers[2].name)+"</a><br>3rd Biggest Follower</li>"+
@@ -176,18 +181,19 @@
 	function showTable(id, obj){
 		var html="<div class='matrix-candidate'>"+$("li[id='"+id+"'] .candidate-content").html() +"</div><hr><h3>Twitter Data in past 2 weeks: </h3><table class='matrixTable'>",
 			html="<table class='matrixTable'>",
-			html_header="<tr>",
-			html_content="",
+			html_header="<thead><tr>",
+			html_content="<tbody>",
 			content="",
 			templates=[
 				{key:"date", title:"Date", description:"Date"},
-				{key:"tweets_all", title:"Tweets <br>since 9/29", description:"Total # of tweets mentioned this candidate from 9/29 to Yesterday"},
+				{key:"tweets_all", title:"Tweets <br>since 10/07", description:"Total # of tweets mentioned this candidate from 10/07 to Yesterday"},
 				{key:"tweets_yesterday", title:"Tweets Yesterday", description:"# of tweets mentioned about this candidate Yesterday"},
 				{key:"followers_all", title:"All Follewers", description:"All Followers"},
 				{key:"followers_yesterday_new", title:"NEW<br>Followers Yesterday", description:"# of new followers added in this candidate's Twitter account"},
 				{key:"followers_yesterday_removed", title:"REMOVED<br>Followers Yesterday", description:"# of Twitter users unfollow this candidate's Twitter account"},
 				{key:"influence", title:"Network Impact", description:"The percentage changes of the combined number of fans(followers) from  each new follower"},
-				{key:"biggestFollowers", title:"Biggest Followers", description:"Top 3 Biggest Followers"}
+				{key:"biggestFollowers_yesterday", title:"Yesterday Biggest <br>NEW Followers", description:"Top 3 Biggest Followers Yesterday"},
+				{key:"biggestFollowers", title:"Biggest NEW Followers", description:"Top 3 Biggest Followers"}
 			];
 			
 		
@@ -195,11 +201,11 @@
 			html_content+="<tr>";
 			$.each(templates, function(j,temp){
 				if(i==0){
-					html_header+="<td title='"+temp.description+"'>"+temp.title+"</td>";
+					html_header+="<th title='"+temp.description+"'>"+temp.title+"</th>";
 				}
 				content="<td>"+value[temp.key]+"</td>";
 				
-				if(temp.key=='biggestFollowers'){
+				if(temp.key=='biggestFollowers' || temp.key=='biggestFollowers_yesterday'){
 					content="<td><ul>";
 					$.each(value[temp.key], function(k,v){
 						content+="<li>Top "+v.rank +":<br><a href='"+v.url+"' target='_blank'>@"+v.name+"</a></li>";
@@ -211,11 +217,20 @@
 			});
 			html_content+="</tr>";
 		});
-		html_header+="</tr>";		
+		html_header+="</tr></thead>";		
 		
-		html=html+html_header+html_content+"</table>";
+		html=html+html_header+html_content+"</tbody></table>";
 		
 		$("#dialog_table").html(html);
+
+		//fix header
+//		$('.matrixTable').fixheadertable({
+//             caption : '',
+//             height  : 420,
+//			 showhide:false,
+//			 sortable:false
+//        });
+		
 		setTimeout(function(){
 			showDialog("dialog_table", obj.name+"'s twitter influence index");
 			$(".ui-dialog .ui-widget-header").css({

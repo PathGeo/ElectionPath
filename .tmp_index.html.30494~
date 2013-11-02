@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
@@ -12,7 +12,6 @@
 	<link rel="stylesheet" href="js/leaflet/MarkerCluster.css" />
 	<link rel="stylesheet" href="js/leaflet/MarkerCluster.Default.css" />
 	<!--<link href='http://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>-->
-	<link rel="stylesheet" href="css/jquery-tablefixedheader.css" />
     <link rel="stylesheet" href="css/main.css" />
 	
 	
@@ -22,8 +21,6 @@
 	<script src="js/jquery/jquery-1.7.2.min.js"></script>
 	<script src="js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
 	<script scr='js/jquery/jquery.ui.touch-punch.min.js'></script>
-	<script src='js/jquery/jquery-fixheadertable.min.js'></script>
-	
 	<!--leaflet-->
 	<script src="js/leaflet/leaflet.js"></script>
 	<script type="text/javascript" src="js/leaflet/leaflet.heatmap.js"></script>
