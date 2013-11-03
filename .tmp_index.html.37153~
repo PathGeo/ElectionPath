@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
@@ -23,12 +23,6 @@
 	<script src="js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
 	<script scr='js/jquery/jquery.ui.touch-punch.min.js'></script>
 	<script src='js/jquery/jquery-fixheadertable.min.js'></script>
-	
-	<!--chart-->
-	<!--[if IE]>
-    <script type="text/javascript" src="js/chart/excanvas.js"></script>
-    <![endif]-->
-	<script src='js/chart/dygraph-dev.js'></script>
 	
 	<!--leaflet-->
 	<script src="js/leaflet/leaflet.js"></script>
@@ -87,8 +81,7 @@
 		
 		<!-- candidates-->
 		<div id='candidate' class='mainBlock'>
-			<h2>Today's twitter mentions per candidate in the <br>Geo-Targeted San Diego region</h2>
-			<p>Please click on each number to see more detail information.</p>
+			<h2>Today's twitter mentions per candidate</h2>
 			<ul></ul>
 		</div>
 		
@@ -102,7 +95,7 @@
 			<div id='chart'>
 				<ul>
 					<li style='width:25%;'><b>Step 1:</b><br>Click on a specific date on the chart<p></p><br><b>Step 2:</b><br>Select a candidate from below to see what happened that give day to each candidate's social reach or followers</li>
-					<li style='width:70%;'><div id='chart'></div></li>
+					<li style='width:70%;'><img src='images/Election-Path-P1.png' style='width:100%; height:300px;' /></li>
 				</ul>
 			</div>
 			

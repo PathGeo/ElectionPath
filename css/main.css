@@ -53,9 +53,11 @@ ul {margin:0px; padding:0px; list-style:none; }
 
 /** widget candidate */
 #candidate {height:800px; margin-top:50px; }
+#candidate > p {font-size:14px; color:#555555; }
 #candidate ul {width:100%; height:100%;}
 #candidate > ul > li {float:left; width:24.75%; border:1px solid #f1f1f1; background-color:#ffffff; }
 #candidate > ul > li:hover {background-color:#f1f1f1;}
+
 
 /** candidate name */
 .candidate-name {width:100%; background-color:#000000; color:#ffffff; font-weight:bold; font-size:18px;  padding:8px 0px 8px 5px;}

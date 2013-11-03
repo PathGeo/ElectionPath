@@ -14,9 +14,13 @@
 				penske: L.marker([32.774917,-117.005639], {icon: L.icon({iconUrl: 'images/logo_penske.png', iconSize:[60, 35]})})
 			}
 		},
-		candidates:null
+		candidates:null,
+		chart:null
 	}
-
+	
+	//chart
+	var g=null,
+		htmlDate=null;
     
 
 	//dom ready
@@ -25,6 +29,7 @@
 		$.getJSON("db/candidates.json", function(json){
 			app.candidates=json;
 			init_UI();
+			init_chart();
 		});
 	});
 	
@@ -193,6 +198,63 @@
 	}
 	
 	
+	
+	
+	/**
+	 * initialize chart
+	 */
+	function init_chart(callback){
+		$.getJSON('db/chart.json', function(json){
+			if(json){
+				var header='',
+					headers=[],
+					result='';
+				$.each(json, function(k,v){
+					header+=k+", ";
+					if(k!='date'){headers.push(k);}
+				})
+				header+="\n";
+				
+				$.each(json["date"], function(i,v){
+					result+=json["date"][i] + ', '
+					$.each(headers, function(j,header){
+						result+=json[header][i]+';'+json[header][i]+';'+json[header][i]+", ";
+					});
+					result+="\n";
+				});
+				result=header+result;
+				
+				
+				//init chart
+				app.chart=g= new Dygraph(
+		          document.getElementById("chart"),
+		          result,
+		          {
+		            customBars: true,
+		            title: '',
+		            ylabel: 'The number of Tweets',
+					colors: ['#E80000', '#FF9900', '#339966', '#9900FF' ],
+		            legend: 'always',
+		            labelsDivStyles: { 'textAlign': 'right' },
+		            showRangeSelector: true,
+		            highlightCircleSize: 10,
+		            rangeSelectorHeight: 50,
+		              labelsDivWidth: 80,
+		              labelsDivStyles: {
+		                'backgroundColor': 'rgba(232, 232, 232, 0.75)',
+		                'padding': '4px',
+		                'border': '1px solid grey',
+		                'borderRadius': '10px',
+		                'boxShadow': '4px 4px 4px #888'
+		              },			
+		             strokeWidth: 2			
+		          }
+		      );
+			}
+		})
+		
+		
+	}
 	
 	
 	/** 
