@@ -38,7 +38,7 @@ try:
 			del t['_id']
 
 	print ''
-	print json.dumps(output)
+	print json.dumps(tweets)
 except Exception, e:
 	print ''
 	print json.dumps(str(e))
