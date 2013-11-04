@@ -306,7 +306,7 @@
 				{key:"followers_all", title:"All Follewers", description:"All Followers"},
 				{key:"followers_yesterday_new", title:"NEW<br>Followers Yesterday", description:"# of new followers added in this candidate's Twitter account"},
 				{key:"followers_yesterday_removed", title:"REMOVED<br>Followers Yesterday", description:"# of Twitter users unfollow this candidate's Twitter account"},
-				{key:"influence", title:"Network Impact", description:"The percentage changes of the combined number of fans(followers) from  each new follower"},
+				{key:"influence", title:"Network Impact Change", description:"The percentage changes of the combined number of fans(followers) from  each new follower"},
 				{key:"biggestFollowers_yesterday", title:"Yesterday Biggest <br>NEW Followers", description:"Top 3 Biggest Followers Yesterday"},
 				{key:"biggestFollowers", title:"Biggest NEW Followers", description:"Top 3 Biggest Followers"}
 			];
