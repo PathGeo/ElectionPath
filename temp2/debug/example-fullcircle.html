@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet Semicircle example</title>
+
+	<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.css" />
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.ie.css" />
+	<![endif]-->
+	<script src="http://cdn.leafletjs.com/leaflet-0.5.1/leaflet.js"></script>
+	<script src="Semicircle.js"></script>
+</head>
+<body>
+	<div id="map" style="width: 100%; height: 800px; border: 1px solid #ccc"></div>
+
+	<script>
+		var map = L.map('map');
+
+		var radius = 500;
+
+		var latlng = [50.6, -0.0];
+
+		L.circle(latlng, radius, {
+			fill: true,
+			fillColor:'#a1ba03',
+			fillOpacity: 0.5,
+			color: '#a1ba03',
+			opacity: 0.5,
+			startAngle: 0,
+			stopAngle: 360
+		}).addTo(map);
+
+		L.circle(latlng, radius, {
+			fill: true,
+			fillColor:'#fff',
+			fillOpacity: 0.5,
+			color: '#fff',
+			opacity: 0.5,
+			startAngle: 20,
+			stopAngle: 340
+		}).addTo(map);
+
+		map.setView(latlng, 11);
+
+		L.tileLayer(
+			'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+			{
+				attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, <a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+				maxZoom: 18
+			}
+		).addTo(map);
+	</script>
+</body>
+</html>

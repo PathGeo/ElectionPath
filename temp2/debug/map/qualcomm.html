@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Leaflet debug page</title>
+
+	<link rel="stylesheet" href="../../dist/leaflet.css" />
+	<!--[if lte IE 8]><link rel="stylesheet" href="../../dist/leaflet.ie.css" /><![endif]-->
+
+	<link rel="stylesheet" href="../css/screen.css" />
+
+	<script src="../leaflet-include.js"></script>
+</head>
+<body>
+
+	<div id="map"></div>
+	</br></br>
+	Download geo_tweets:
+	<a href="http://mappingideas.sdsu.edu/StreamingAPI/geo_tweets.txt">E:\CDI\CDI_wwwroot\StreamingAPI\geo_tweets</a>
+	
+	<script type="text/javascript">
+
+		function getCloudMadeUrl(styleId) {
+			return 'http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/' + styleId + '/256/{z}/{x}/{y}.png';
+		}
+
+		var cloudmadeAttribution = 'Map data &copy; 2011 OpenStreetMap contributors, Imagery &copy; 2011 CloudMade',
+			cloudmade = new L.TileLayer(getCloudMadeUrl(997), {attribution: cloudmadeAttribution}),
+			cloudmade2 = new L.TileLayer(getCloudMadeUrl(998), {attribution: cloudmadeAttribution}),
+			cloudmade3 = new L.TileLayer(getCloudMadeUrl(22677), {attribution: 'Hello world'});
+
+		var map = new L.Map('map').addLayer(cloudmade).setView(new L.LatLng( 32.783552,-117.119257), 16);
+
+		var marker = new L.CircleMarker(new L.LatLng(32.796486, -117.155167 ), {color: 'red'});
+		//map.addLayer(marker);
+		//marker.bindPopup("Hello World").openPopup();
+
+		var marker2 = new L.Marker(new L.LatLng(32.796486, -117.155167 ));
+		//map.addLayer(marker2);
+		
+var polygon = L.polygon([
+    [32.787000, -117.124579], //left
+	[32.787000, -117.114500], //right
+	[32.778900, -117.114500],
+    [32.778900, -117.124579]
+    
+]).addTo(map);		
+
+		var layersControl = new L.Control.Layers({
+			'CloudMade Fresh': cloudmade,
+			'CloudMade openstreet': cloudmade2,
+			'CloudMade Pale ': cloudmade3
+		}, {
+			'Some marker': marker,
+			'Another marker': marker2
+		});
+
+		map.addControl(layersControl);
+		map.addControl(new L.Control.Scale());
+
+	</script>
+</body>
+</html>
