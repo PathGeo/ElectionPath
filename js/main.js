@@ -399,12 +399,17 @@
 	app.chartEvent.click=function(clickDate){
 		clickDate=clickDate.replace(/\//g,'-');
 		
+		var toDateTime=new Date(clickDate).getTime()+86400000;
+			toDate=new Date(toDateTime);
+			
+		toDate=toDate.getFullYear()+'-'+(toDate.getMonth()+1)+'-'+toDate.getDate();
+		
 		var target=$("#informationTabs .ui-tabs-selected > a").attr('href'),
 			candidate=target.split('-')[1];
 		
 		//request web service to get info. on the clicked date
 		if(candidate && candidate!='' && clickDate && clickDate!=''){
-			getMetrics(candidate, clickDate, clickDate, $(target));
+			getMetrics(candidate, clickDate, toDate, $(target));
 		}
 	}
 	
@@ -439,6 +444,7 @@
 		
 		//request web service
 		$.getJSON('ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate, function(json){
+		//$.getJSON("db/searchResult_template.json", function(json){
 			if(!json){console.log('[ERROR] query: no json'); return;}
 			
 			var html="<ul>"+
@@ -459,37 +465,23 @@
 			//create Table
 			function createTable(array){
 				var html_content="",
-					html_header="<tr>",
+					html_header="<tr><td>#</td><td>value</td><td>count</td></tr>",
 					value='';
 				
 				$.each(array, function(i,obj){
-					html_content+='<tr>';
-					
-					$.each(obj, function(k,v){
-						if(k!='url'){
-							//header
-							if(i==0){
-								html_header+="<td>"+k+"</td>";
-							}
-							
-							value="<td>"+v+"</td>";
-							
-							//check if contains url
-							if(k=='value'){
-								if(obj.url && obj.url!=''){
-									value="<td><a href='" + obj.url + "' target='_blank'>" + v + "</a></td>";
-								}else{
-									value="<td>" + v + "</td>";
-								}
-							}
-							
-							html_content+=value;
-						}
-					});
-					
-					html_content+="</tr>";
+					html_content+='<tr>'+
+								  '<td class="rank">'+obj.rank+'</td>'+
+								  "<td class='value'>"+
+								  (function(){
+								  	if(obj.url){
+										return "<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>";
+									}else{
+										return obj.value;
+									}
+								  })()+"</td>"+
+								  '<td class="count">'+obj.count+"</td>"+
+								  "</tr>";
 				});
-				html_header+="</tr>";
 			
 				return "<table class='table'>"+html_header+html_content+"</table>";
 			}
