@@ -10,6 +10,7 @@ from datetime import datetime, timedelta
 
 USER_URL = 'http://www.twitter.com/%s'
 TWEET_URL = 'http://www.twitter.com/%s/status/%d'
+HASH_URL = 'https://twitter.com/search?q=%%23%s&src=hash'
 
 try: 
 	fields = cgi.FieldStorage()
@@ -52,7 +53,7 @@ try:
 	output = {}
 	output['candidate'] = candidateName
 	output['urls'] = [{'value': item[0], 'url': item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topUrls)]
-	output['hashtags'] = [{'value': '#' + item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topHashes)]
+	output['hashtags'] = [{'value': '#' + item[0], 'url': HASH_URL % item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topHashes)]
 	output['mentions'] = [{'value': '@' + item[0], 'url': USER_URL % item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topMentions)]
 	output['users'] = [{'value': item[0], 'url': USER_URL % item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topUsers)]
 	output['retweets'] = topRTTexts
