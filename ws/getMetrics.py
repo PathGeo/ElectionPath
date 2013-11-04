@@ -34,7 +34,6 @@ try:
 	topHashes = hashCounter.most_common(MAX_RESULTS)
 	topMentions = mentionCounter.most_common(MAX_RESULTS)
 	topUsers = userCounter.most_common(MAX_RESULTS)
-	#topMentions = sorted(mentionCounter.items(), key=lambda x: x[1], reverse=True)[:RESULTS_MAX]
 
 
 	rtCounter = Counter([t['retweeted_id'] for t in tweets if 'retweeted_id' in t])
@@ -49,10 +48,10 @@ try:
 
 	output = {}
 	output['candidate'] = candidateName
-	output['urls'] = [{'value': item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topUrls)]
-	output['hashtags'] = [{'value': item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topHashes)]
-	output['mentions'] = [{'value': item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topMentions)]
-	output['users'] = [{'value': item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topUsers)]
+	output['urls'] = [{'value': item[0], 'url': item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topUrls)]
+	output['hashtags'] = [{'value': '#' + item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topHashes)]
+	output['mentions'] = [{'value': '@' + item[0], 'url': 'http://www.twitter.com/' + item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topMentions)]
+	output['users'] = [{'value': item[0], 'url': 'http://www.twitter.com/' + item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topUsers)]
 	output['retweets'] = topRTTexts
 
 	print ''
