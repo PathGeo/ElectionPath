@@ -443,19 +443,23 @@
 		$target.html("<center><img src='images/loading.gif' class='loading' /></center>");
 		
 		//request web service
-		$.getJSON('ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate, function(json){
-		//$.getJSON("db/searchResult_template.json", function(json){
+		//$.getJSON('ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate, function(json){
+		$.getJSON("db/searchResult.json", function(json){
 			if(!json){console.log('[ERROR] query: no json'); return;}
 			
-			var html="<ul>"+
-					 	"<li><br><label>Top Tweeted URLs</label><p>"+((json.urls instanceof Array)?createTable(json.urls):"None")+"</p></li>"+
-					 	"<li><br><label>Top Followers</label><p>"+((json.users instanceof Array)?createTable(json.users):"None")+"</p></li>"+
-						"<li><br><label>Top Mentions</label><p>"+((json.mentions instanceof Array)?createTable(json.mentions):"None")+"</p></li>"+
-						"<li><br><label>Top Hashtags</label><p>"+((json.hashtags instanceof Array)?createTable(json.hashtags):"None")+"</p></li>"+
-						"<li><br><label>Top Retweets</label><p>"+((json.retweets instanceof Array)?createTable(json.retweets):"None")+"</p></li>"+
-					 	"<li><br><label>Word-Cloud Map</label><p>"+((json.wordcloud)?"<img src='"+json.wordcloud+"' style='width:100%;' />":"None")+"</p></li>"+
-					 	"<li style='width:66%;'><br><label>Hotspot Map</label><p><div id='map'></div></p></li>"+
-					 "</ul>";
+			var html="<table>"+
+						"<tr>"+
+					 	"<td><br><label>Top Followers</label><p>"+((json.users instanceof Array)?createTable(json.users):"None")+"</p></td>"+
+						"<td><br><label>Top Mentions</label><p>"+((json.mentions instanceof Array)?createTable(json.mentions):"None")+"</p></td>"+
+						"<td><br><label>Top Hashtags</label><p>"+((json.hashtags instanceof Array)?createTable(json.hashtags):"None")+"</p></td>"+
+						"</tr><tr>"+
+						"<td><br><label>Top Tweeted URLs</label><p>"+((json.urls instanceof Array)?createTable(json.urls):"None")+"</p></td>"+
+						"<td><br><label>Top Retweets</label><p>"+((json.retweets instanceof Array)?createTable(json.retweets):"None")+"</p></td>"+
+					 	"<td><br><label>Word-Cloud Map</label><p>"+((json.wordcloud)?"<img src='"+json.wordcloud+"' style='width:100%;' />":"None")+"</p></td>"+
+					 	"</tr><tr>"+
+						"<td colspan=3><br><label>Hotspot Map</label><p><div id='map'></div></p></td>"+
+						"</tr>"+
+					 "</table>";
 			
 			$target.html(html);
 			
@@ -465,7 +469,7 @@
 			//create Table
 			function createTable(array){
 				var html_content="",
-					html_header="<tr><td>#</td><td>value</td><td>count</td></tr>",
+					html_header="<tr><td class='rank'>Top</td><td class='value'>Value</td><td class='count'>#</td></tr>",
 					value='';
 				
 				$.each(array, function(i,obj){
