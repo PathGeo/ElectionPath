@@ -8,6 +8,9 @@ from pymongo import MongoClient
 from collections import Counter
 from datetime import datetime, timedelta
 
+USER_URL = 'http://www.twitter.com/%s'
+TWEET_URL = 'http://www.twitter.com/%s/status/%d'
+
 try: 
 	fields = cgi.FieldStorage()
 
@@ -43,15 +46,15 @@ try:
 	for indx, item in enumerate(topRTs):
 		retweeted = col.find_one({'_id': item[0]})
 		if retweeted and 'text' in retweeted:
-			topRTTexts.append({'value': retweeted['text'], 'count': item[1], 'rank': indx + 1})
+			topRTTexts.append({'value': retweeted['text'], 'count': item[1], 'url': TWEET_URL % (retweeted['user_name'], str(retweeted['id'])), 'rank': indx + 1})
 		
 
 	output = {}
 	output['candidate'] = candidateName
 	output['urls'] = [{'value': item[0], 'url': item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topUrls)]
 	output['hashtags'] = [{'value': '#' + item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topHashes)]
-	output['mentions'] = [{'value': '@' + item[0], 'url': 'http://www.twitter.com/' + item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topMentions)]
-	output['users'] = [{'value': item[0], 'url': 'http://www.twitter.com/' + item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topUsers)]
+	output['mentions'] = [{'value': '@' + item[0], 'url': USER_URL % item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topMentions)]
+	output['users'] = [{'value': item[0], 'url': USER_URL % item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topUsers)]
 	output['retweets'] = topRTTexts
 
 	print ''
