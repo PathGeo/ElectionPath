@@ -20,7 +20,7 @@ try:
 	col = MongoClient().test.twitter_search_candidates
 
 	query = {}
-	if candidateName.lower() <> 'all': 
+	if candidateName <> 'All': 
 		query['search_info.keywords'] = candidateName
 	query['geo'] = {'$exists': 1}
 	query['created_at_local'] = {'$gte': dateFrom, '$lt': dateTo}
@@ -29,7 +29,7 @@ try:
 
 	for t in tweets:
 		if 'created_at_local' in t:
-			t['local_time'] = t['created_at_local']
+			t['local_time'] = str(t['created_at_local'])
 			del t['created_at_local']
 		if 'user' in t and 'location' in t['user']:
 			t['location'] = t['user']['location']
@@ -38,7 +38,7 @@ try:
 			del t['_id']
 
 	print ''
-	print json.dumps(tweets)
+	print json.dumps({'results': tweets})
 except Exception, e:
 	print ''
 	print json.dumps(str(e))
