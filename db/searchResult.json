@@ -1,42 +1,138 @@
 {
-	"candidate":"fletcher",
-	"dateFrom":"2013-10-01",
-	"dateTo":"2013-10-20",
-	"urls":[
-		{"value":"http://short.org/@asd", "url":"https://www.pathgeo.com", "count":20, "rank":1},
-		{"value":"http://short.org/$#ERT", "url":"https://www.google.com", "count":18, "rank":2},
-		{"value":"url_b", "url":"", "count":17, "rank":3},
-		{"value":"url_b", "url":"", "count":16, "rank":4},
-		{"value":"url_b", "url":"", "count":15, "rank":5},
-		{"value":"url_b", "url":"", "count":14, "rank":6},
-		{"value":"url_b", "url":"", "count":13, "rank":7},
-		{"value":"url_b", "url":"", "count":12, "rank":8},
-		{"value":"url_b", "url":"", "count":11, "rank":9},
-		{"value":"url_b", "url":"", "count":10, "rank":10}
-	],
-	"retweets":[
-		{"value":"retweet_a", "url":"", "count":20, "rank":1},
-		{"value":"retweet_b", "url":"", "count":18, "rank":2},
-		{"value":"retweet_b", "url":"", "count":17, "rank":3},
-		{"value":"retweet_b", "url":"", "count":16, "rank":4},
-		{"value":"retweet_b", "url":"", "count":15, "rank":5},
-		{"value":"retweet_b", "url":"", "count":14, "rank":6},
-		{"value":"retweet_b", "url":"", "count":13, "rank":7},
-		{"value":"retweet_b", "url":"", "count":12, "rank":8},
-		{"value":"retweet_b", "url":"", "count":11, "rank":9},
-		{"value":"retweet_b", "url":"", "count":10, "rank":10}
-	],
-	"followers":[
-		{"value":"@mariashriver", "url":"https://twitter.com/mariashriver", "count":20, "rank":1},
-		{"value":"@carrolltrust", "url":"https://twitter.com/carrolltrust", "count":18, "rank":2},
-		{"value":"follower_b", "url":"", "count":17, "rank":3},
-		{"value":"follower_b", "url":"", "count":16, "rank":4},
-		{"value":"follower_b", "url":"", "count":15, "rank":5},
-		{"value":"follower_b", "url":"", "count":14, "rank":6},
-		{"value":"follower_b", "url":"", "count":13, "rank":7},
-		{"value":"follower_b", "url":"", "count":12, "rank":8},
-		{"value":"follower_b", "url":"", "count":11, "rank":9},
-		{"value":"follower_b", "url":"", "count":10, "rank":10}
-	],
-	"wordcloud":"images/Vote-San-Diego-too-noisy.png"
+    "users": [
+        {
+            "count": 2,
+            "rank": 1,
+            "value": "bruce4mayorSD"
+        },
+        {
+            "count": 2,
+            "rank": 2,
+            "value": "News_SanDiego"
+        },
+        {
+            "count": 2,
+            "rank": 3,
+            "value": "MichaelSmolens"
+        },
+        {
+            "count": 1,
+            "rank": 4,
+            "value": "UTpolitics"
+        },
+        {
+            "count": 1,
+            "rank": 5,
+            "value": "Rotsart"
+        },
+        {
+            "count": 1,
+            "rank": 6,
+            "value": "sandiegonewz"
+        },
+        {
+            "count": 1,
+            "rank": 7,
+            "value": "LaPlayaHeritage"
+        },
+        {
+            "count": 1,
+            "rank": 8,
+            "value": "robert_veres"
+        },
+        {
+            "count": 1,
+            "rank": 9,
+            "value": "Mike_4_SD_Mayor"
+        },
+        {
+            "count": 1,
+            "rank": 10,
+            "value": "Julesan1"
+        }
+    ],
+    "candidate": "Aguirre",
+    "hashtags": [
+        {
+            "count": 3,
+            "rank": 1,
+            "value": "sandiego"
+        },
+        {
+            "count": 1,
+            "rank": 2,
+            "value": "politics"
+        }
+    ],
+    "retweets": [
+        {
+            "count": 2,
+            "rank": 1,
+            "value": "Want to know the latest in the Aguirre household? Follow @Winston_Aguirre"
+        },
+        {
+            "count": 1,
+            "rank": 2,
+            "value": "How¡¦s a Not-Blessed-by-the-Money Mayoral Candidate Going to Catch a Break?\n\n\"The folks with Coons and the Aguirre... http://t.co/sJy7LWQmyq"
+        }
+    ],
+    "urls": [
+        {
+            "count": 2,
+            "rank": 1,
+            "value": "http://www.utsandiego.com/news/2013/oct/01/mike-aguirre-labor-bona-fides/"
+        },
+        {
+            "count": 1,
+            "rank": 2,
+            "value": "http://www.utsandiego.com/news/2013/oct/01/mike-aguirre-labor-bona-fides/?utm_source=twitterfeed&utm_medium=twitter"
+        },
+        {
+            "count": 1,
+            "rank": 3,
+            "value": "http://q.gs/4rwZ7"
+        },
+        {
+            "count": 1,
+            "rank": 4,
+            "value": "http://www.utsandiego.com/news/2013/oct/01/mike-aguirre-labor-bona-fides/?utm_source=dlvr.it&utm_medium=twitter"
+        },
+        {
+            "count": 1,
+            "rank": 5,
+            "value": "http://www.meetup.com/dfa-23/events/133693572/"
+        },
+        {
+            "count": 1,
+            "rank": 6,
+            "value": "http://q.gs/4rkTK"
+        },
+        {
+            "count": 1,
+            "rank": 7,
+            "value": "http://sandiegofreepress.org/2013/09/teahadists-budget-bomb-ticking-down/"
+        }
+    ],
+    "mentions": [
+        {
+            "count": 3,
+            "rank": 1,
+            "value": "Winston_Aguirre"
+        },
+        {
+            "count": 2,
+            "rank": 2,
+            "value": "Mike_4_SD_Mayor"
+        },
+        {
+            "count": 1,
+            "rank": 3,
+            "value": "vosdscott"
+        },
+        {
+            "count": 1,
+            "rank": 4,
+            "value": "bruce4mayorSD"
+        }
+    ]
 }

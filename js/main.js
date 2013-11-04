@@ -15,13 +15,25 @@
 			}
 		},
 		candidates:null,
-		chart:null
+		chart:null,
+		chartEvent:{
+			click:null,
+			rangeChange:null
+		},
+		dateFrom:null,
+		dateTo:null
 	}
 	
 	//chart
 	var g=null,
 		htmlDate=null;
     
+	
+	//inesrt char into string
+	String.prototype.splice = function( idx, rem, s ) {
+	    return (this.slice(0,idx) + s + this.slice(idx + Math.abs(rem)));
+	};
+
 
 	//dom ready
 	$(function() { 
@@ -43,10 +55,6 @@
 	
 		//init time
 		init_time();
-
-		//tabs
-		init_tabs();
-		
 		
 		//read candidates
 		if(app.candidates){
@@ -83,7 +91,7 @@
 								var result='';
 								$.each(numbers, function(i,n){
 									if(value.biggestFollowers_yesterday[i]){
-										result+="<li>"+((value.biggestFollowers_yesterday[i].url)?"<a href='"+value.biggestFollowers_yesterday[i].url+"' target='_blank'>@"+value.biggestFollowers_yesterday[i].name+"</a>":"@"+value.biggestFollowers_yesterday[i].name)+"</a><br>"+n+" Biggest Follower Yesterday</li>";
+										result+="<li class='biggestFollwers_yesterday'>"+((value.biggestFollowers_yesterday[i].url)?"<a href='"+value.biggestFollowers_yesterday[i].url+"' target='_blank'>@"+value.biggestFollowers_yesterday[i].name+"</a>":"@"+value.biggestFollowers_yesterday[i].name)+"</a><br>"+n+" Biggest Follower Yesterday</li>";
 									}else{
 										result+="<li style='height:37px;'></li>";
 									}
@@ -128,6 +136,7 @@
 				}
 			});
 		}
+	
 	}
 	
 	
@@ -175,30 +184,6 @@
 	
 	
 	
-	/**
-	 * initialize_tabs
-	 */
-	function init_tabs(){
-		$('.tabs').tabs();
-		
-		$("#informationTabs > ul > li > a").click(function(){
-			var $this=$(this),
-				href=$this.attr('href'),
-				$href=$(href),
-				id=href.split('-')[1];
-			
-			if (id && id != '') {
-				//request web service to get information
-				query($href);
-			}
-		});
-		
-		//trigger click on the first candidate
-		$("#informationTabs > ul > li > a:nth(0)").trigger('click');
-	}
-	
-	
-	
 	
 	/**
 	 * initialize chart
@@ -209,21 +194,37 @@
 				var header='',
 					headers=[],
 					result='';
+					
+				//header
 				$.each(json, function(k,v){
 					header+=k+", ";
 					if(k!='date'){headers.push(k);}
 				})
 				header+="\n";
 				
+				//content
 				$.each(json["date"], function(i,v){
 					result+=json["date"][i] + ', '
 					$.each(headers, function(j,header){
 						result+=json[header][i]+';'+json[header][i]+';'+json[header][i]+", ";
 					});
 					result+="\n";
+					
+					//fromdate and todate
+					if(i==0){
+						app.dateFrom=v;
+					}
+					
+					if(i==json["date"].length-1){
+						app.dateTo=v;
+					}
 				});
 				result=header+result;
 				
+				
+				//change data format for fromDate and toDate
+				app.dateFrom=app.dateFrom.splice(4,0,"-").splice(7,0,"-");
+				app.dateTo=app.dateTo.splice(4,0,"-").splice(7,0,"-");
 				
 				//init chart
 				app.chart=g= new Dygraph(
@@ -249,13 +250,44 @@
 		              },			
 		             strokeWidth: 2			
 		          }
-		      );
+		      	);
+				
+				
+				//tabs
+				init_tabs();	
 			}
 		})
 		
 		
 	}
 	
+	
+	
+		
+	/**
+	 * initialize_tabs
+	 */
+	function init_tabs(){
+		$('.tabs').tabs();
+		
+		$("#informationTabs > ul > li > a").click(function(){
+			var $this=$(this),
+				href=$this.attr('href'),
+				$href=$(href),
+				candidate=href.split('-')[1];
+			
+			if(app.dateFrom && app.dateTo && candidate && candidate!=''){
+				getMetrics(candidate, app.dateFrom, app.dateTo, $(href));
+			}
+					
+		});
+		
+		//trigger click on the first candidate
+		$("#informationTabs > ul > li > a:nth(0)").trigger('click');
+	}
+	
+	
+
 	
 	/** 
 	 * show table
@@ -331,69 +363,6 @@
 	
 	
 	
-	/**
-	 * query Web service
-	 */
-	function query($target){
-		if(app.map){app.map.remove();}
-		
-		//show loading
-		$target.html("<center><img src='images/loading.gif' class='loading' /></center>");
-
-		//request
-		$.getJSON('db/searchResult.json', function(json){
-			if(!json){console.log('[ERROR] query: no json'); return;}
-			
-			var html="<ul>"+
-					 	"<li><br><label>Top Tweeted URLs</label><p>"+((json.urls instanceof Array)?createTable(json.urls):"None")+"</p></li>"+
-					 	"<li><br><label>Top Followers</label><p>"+((json.followers instanceof Array)?createTable(json.followers):"None")+"</p></li>"+
-						"<li><br><label>Top Retweets</label><p>"+((json.retweets instanceof Array)?createTable(json.retweets):"None")+"</p></li>"+
-					 	"<li><br><label>Word-Cloud Map</label><p>"+((json.wordcloud)?"<img src='"+json.wordcloud+"' style='width:100%;' />":"None")+"</p></li>"+
-					 	"<li style='width:66%;'><br><label>Hotspot Map</label><p><div id='map'></div></p></li>"+
-					 "</ul>";
-			
-			$target.html(html);
-			
-			init_map();
-			
-			
-			//create Table
-			function createTable(array){
-				var html_content="",
-					html_header="<tr>",
-					value='';
-				
-				$.each(array, function(i,obj){
-					html_content+='<tr>';
-					
-					$.each(obj, function(k,v){
-						if(k!='url'){
-							//header
-							if(i==0){
-								html_header+="<td>"+k+"</td>";
-							}
-							
-							value="<td>"+v+"</td>";
-							
-							//check if contains url
-							if(k=='value' && obj.url && obj.url!=''){
-								value="<td><a href='" + obj.url + "' target='_blank'>" + v + "</a></td>";
-							}
-							
-							html_content+=value;
-						}
-					});
-					
-					html_content+="</tr>";
-				});
-				html_header+="</tr>";
-			
-				return "<table class='table'>"+html_header+html_content+"</table>";
-			}
-		});
-	}
-	
-	
 	
 	
 	
@@ -424,7 +393,110 @@
 
 	
 	
+	/**
+	 * chartEvent
+	 */
+	app.chartEvent.click=function(clickDate){
+		clickDate=clickDate.replace(/\//g,'-');
+		
+		var target=$("#informationTabs .ui-tabs-selected > a").attr('href'),
+			candidate=target.split('-')[1];
+		
+		//request web service to get info. on the clicked date
+		if(candidate && candidate!='' && clickDate && clickDate!=''){
+			getMetrics(candidate, clickDate, clickDate, $(target));
+		}
+	}
 	
+	
+	
+	app.chartEvent.rangeChange=function(fromDate, toDate){
+		fromDate=fromDate.split(" ")[0].replace(/\//g,'-');
+		toDate=toDate.split(" ")[0].replace(/\//g,'-');
+		
+		var target=$("#informationTabs .ui-tabs-selected > a").attr('href'),
+			candidate=target.split('-')[1];
+		
+		//request web service to get info. on the clicked date
+		if(candidate && candidate!='' && fromDate && fromDate!='' && toDate && toDate!=''){
+			getMetrics(candidate, fromDate, toDate, $(target));
+		}
+	}
+	
+	
+	
+	
+	
+	/**
+	 * getMetrics
+	 */
+	function getMetrics(candidate, fromDate, toDate, $target){
+		app.dateFrom=fromDate;
+		app.dateTo=toDate;
+		
+		//show loading
+		$target.html("<center><img src='images/loading.gif' class='loading' /></center>");
+		
+		//request web service
+		$.getJSON('ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate, function(json){
+			if(!json){console.log('[ERROR] query: no json'); return;}
+			
+			var html="<ul>"+
+					 	"<li><br><label>Top Tweeted URLs</label><p>"+((json.urls instanceof Array)?createTable(json.urls):"None")+"</p></li>"+
+					 	"<li><br><label>Top Followers</label><p>"+((json.users instanceof Array)?createTable(json.users):"None")+"</p></li>"+
+						"<li><br><label>Top Mentions</label><p>"+((json.mentions instanceof Array)?createTable(json.mentions):"None")+"</p></li>"+
+						"<li><br><label>Top Hashtags</label><p>"+((json.hashtags instanceof Array)?createTable(json.hashtags):"None")+"</p></li>"+
+						"<li><br><label>Top Retweets</label><p>"+((json.retweets instanceof Array)?createTable(json.retweets):"None")+"</p></li>"+
+					 	"<li><br><label>Word-Cloud Map</label><p>"+((json.wordcloud)?"<img src='"+json.wordcloud+"' style='width:100%;' />":"None")+"</p></li>"+
+					 	"<li style='width:66%;'><br><label>Hotspot Map</label><p><div id='map'></div></p></li>"+
+					 "</ul>";
+			
+			$target.html(html);
+			
+			//init_map();
+			
+			
+			//create Table
+			function createTable(array){
+				var html_content="",
+					html_header="<tr>",
+					value='';
+				
+				$.each(array, function(i,obj){
+					html_content+='<tr>';
+					
+					$.each(obj, function(k,v){
+						if(k!='url'){
+							//header
+							if(i==0){
+								html_header+="<td>"+k+"</td>";
+							}
+							
+							value="<td>"+v+"</td>";
+							
+							//check if contains url
+							if(k=='value'){
+								if(obj.url && obj.url!=''){
+									value="<td><a href='" + obj.url + "' target='_blank'>" + v + "</a></td>";
+								}else{
+									value="<td>" + v + "</td>";
+								}
+							}
+							
+							html_content+=value;
+						}
+					});
+					
+					html_content+="</tr>";
+				});
+				html_header+="</tr>";
+			
+				return "<table class='table'>"+html_header+html_content+"</table>";
+			}
+		});	
+		
+	}
+
 
 	
 	

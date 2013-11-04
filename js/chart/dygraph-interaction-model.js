@@ -684,7 +684,9 @@ Dygraph.Interaction.dragIsPanInteractionModel = {
   },
   mouseup: function(event, g, context) {
 	//Dates pops up when you click on graph
-	alert(htmlDate); 
+	
+	app.chartEvent.click(htmlDate);
+	
     if (context.isPanning) {
       Dygraph.endPan(event, g, context);
     }

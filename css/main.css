@@ -52,7 +52,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 
 
 /** widget candidate */
-#candidate {height:800px; margin-top:50px; }
+#candidate {height:840px; margin-top:50px; }
 #candidate > p {font-size:14px; color:#555555; }
 #candidate ul {width:100%; height:100%;}
 #candidate > ul > li {float:left; width:24.75%; border:1px solid #f1f1f1; background-color:#ffffff; }
@@ -80,13 +80,19 @@ ul {margin:0px; padding:0px; list-style:none; }
 .candidate-index ul li a {font-size:18px; font-weight:600;}
 
 
+.biggestFollwers_yesterday a {color:#FF4B00}
+
 
 /** detail information */
 #detailInformation {}
-#chart {width:100%; height:350px; }
-#chart ul {width:100%;}
-#chart ul li {float:left; padding:10px; line-height:20px; font-size:14px;  }
-#chart ul li b {font-size:16px; }
+
+/**chart */
+#chartContent {width:100%; height:350px; }
+#chartContent ul {width:100%;}
+#chartContent ul li {float:left; padding:10px; line-height:20px; font-size:14px;  }
+#chartContent ul li b {font-size:16px; }
+#chart {width:100%; height:100%;}
+
 
 /**information tabs */
 #informationTabs .ui-tabs-nav li {width:24.49%;}

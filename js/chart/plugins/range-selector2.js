@@ -367,8 +367,10 @@ rangeSelector.prototype.initInteraction_ = function() {
     var xvf = xOptView('valueFormatter');
     var fromDate = xvf(xDataMin, xOptView, Date, g);
     var toDate = xvf(xDataMax, xOptView, Date, g);
+	
     // Dates pops up when you set the range by clicking
-    alert( 'From Date: ' + fromDate + '    To Date: ' + toDate ); 
+	app.chartEvent.rangeChange(fromDate, toDate);
+    
 	
 	
     if (!isZooming) {
@@ -475,8 +477,9 @@ rangeSelector.prototype.initInteraction_ = function() {
   var xvf = xOptView('valueFormatter');
   var fromDate = xvf(xDataMin, xOptView, Date, g);
   var toDate = xvf(xDataMax, xOptView, Date, g);
+  
   // Dates pops up when you pan range selector
-  alert( 'From Date: ' + fromDate + '    To Date: ' + toDate );   
+  app.chartEvent.rangeChange(fromDate, toDate);
   
   
     if (!isPanning) {
