@@ -234,21 +234,22 @@
 		            customBars: true,
 		            title: '',
 		            ylabel: 'The number of Tweets',
-					colors: ['#E80000', '#FF9900', '#339966', '#9900FF' ],
-		            legend: 'always',
-		            labelsDivStyles: { 'textAlign': 'right' },
+					colors: ['#C91111', '#E27C20', '#2CC671', '#A15FB7' ],
 		            showRangeSelector: true,
-		            highlightCircleSize: 10,
+		            highlightCircleSize: 5,
 		            rangeSelectorHeight: 50,
-		              labelsDivWidth: 80,
-		              labelsDivStyles: {
-		                'backgroundColor': 'rgba(232, 232, 232, 0.75)',
+		            labelsDivWidth: 100,
+					labelsDivStyles: { 'textAlign': 'right' },
+		            labelsDivStyles: {
+		                'backgroundColor': 'rgba(255, 255, 255, 0.75)',
 		                'padding': '4px',
 		                'border': '1px solid grey',
-		                'borderRadius': '10px',
-		                'boxShadow': '4px 4px 4px #888'
+		                'borderRadius': '5px',
+		                'boxShadow': '2px 2px 2px #888'
 		              },			
-		             strokeWidth: 2			
+		            strokeWidth: 2,
+					legend: 'onmouseover',
+					hideOverlayOnMouseOut:true		
 		          }
 		      	);
 				

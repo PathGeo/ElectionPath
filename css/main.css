@@ -1,15 +1,4 @@
-html, body {font-family: 'Lato', sans-serif; font-size:90%; margin:0px; padding:0px; width:100%; 
-  /**
-  background-color: #0B588C;
-  background-repeat: no-repeat;
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0B588C), color-stop(50%, #D4E1EA), to(#0B588C));
-  background-image: -webkit-linear-gradient(#0B588C, #D4E1EA 50%, #0B588C);
-  background-image: -moz-linear-gradient(top, #0B588C, #D4E1EA 50%, #0B588C);
-  background-image: -ms-linear-gradient(#0B588C, #D4E1EA 50%, #0B588C);
-  background-image: -o-linear-gradient(#0B588C, #D4E1EA 50%, #0B588C);
-  background-image: linear-gradient(#0B588C, #D4E1EA 50%, #0B588C);
-  */
-}
+html, body {font-family: 'Lato', sans-serif; font-size:90%; margin:0px; padding:0px; width:100%; }
 
 a {text-decoration:none; color:#359BED}
 a:hover {text-decoration:underline;}
@@ -91,7 +80,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 #chartContent ul {width:100%;}
 #chartContent ul li {float:left; padding:10px; line-height:20px; font-size:14px;  }
 #chartContent ul li b {font-size:16px; }
-#chart {width:100%; height:100%;}
+
 
 
 /**information tabs */
@@ -102,7 +91,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 #informationTabs .ui-tabs-selected {background:#ffffff;}
 #informationTabs .ui-tabs-selected a {color:#000000;}
 */
-.informationContent {height:1000px; }
+.informationContent {height:1500px; }
 .informationContent ul {width:100%;}
 .informationContent ul > li {width:33%; height:380px; float:left; text-align:center; border:1px solid #f1f1f1; font-family:"Lato"; }
 .informationContent label {font-weight:600; font-size:14px;}
