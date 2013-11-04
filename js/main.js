@@ -440,6 +440,9 @@
 		app.dateFrom=fromDate;
 		app.dateTo=toDate;
 		
+		//label search date
+		$("#chart_queryDate p").html(app.dateFrom + ' ～ ' +app.dateTo)
+		
 		//show loading
 		$target.html("<center><img src='images/loading.gif' class='loading' /></center>");
 		
@@ -456,9 +459,9 @@
 						"</tr><tr>"+
 						"<td><br><label>Top Tweeted URLs</label><p>"+((json.urls instanceof Array)?createTable(json.urls):"None")+"</p></td>"+
 						"<td><br><label>Top Retweets</label><p>"+((json.retweets instanceof Array)?createTable(json.retweets):"None")+"</p></td>"+
-					 	"<td><br><label>Word-Cloud Map</label><p>"+((json.wordcloud)?"<img src='"+json.wordcloud+"' style='width:100%;' />":"None")+"</p></td>"+
+					 	"<td><br><label>Word-Cloud Map</label><p>"+((json.wordcloud)?"<img src='"+json.wordcloud+"' style='width:100%;' />":"Coming soon..")+"</p></td>"+
 					 	"</tr><tr>"+
-						"<td colspan=3><br><label>Hotspot Map</label><p><div id='map'></div></p></td>"+
+						"<td colspan=3><br><label>Hotspot Map</label><p>Coming soon..</p></td>"+ //<div id='map'></div></p></td>"+
 						"</tr>"+
 					 "</table>";
 			

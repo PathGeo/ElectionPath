@@ -76,11 +76,11 @@ ul {margin:0px; padding:0px; list-style:none; }
 #detailInformation {}
 
 /**chart */
-#chartContent {width:100%; height:350px; }
+#chartContent {width:100%; height:350px; position:relative; }
 #chartContent ul {width:100%;}
 #chartContent ul li {float:left; padding:10px; line-height:20px; font-size:14px;  }
 #chartContent ul li b {font-size:16px; }
-
+#chartContent #chart_queryDate {position:absolute; left:10px; bottom:5px; font-size:14px; font-weight:600; }
 
 
 /**information tabs */
