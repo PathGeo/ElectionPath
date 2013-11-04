@@ -6,7 +6,7 @@ MAX_RESULTS = 10
 
 from pymongo import MongoClient
 from collections import Counter
-from datetime import datetime
+from datetime import datetime, timedelta
 
 try: 
 	fields = cgi.FieldStorage()
@@ -16,7 +16,7 @@ try:
 	dateToStr = fields['dateTo'].value
 
 	dateFrom = datetime.strptime(dateFromStr, '%Y-%m-%d')
-	dateTo = datetime.strptime(dateToStr, '%Y-%m-%d')
+	dateTo = datetime.strptime(dateToStr, '%Y-%m-%d') + timedelta(days=1)
 
 
 	col = MongoClient().test.twitter_search_candidates
