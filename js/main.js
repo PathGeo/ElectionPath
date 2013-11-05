@@ -280,20 +280,29 @@
 		
 		$("#informationTabs > ul > li > a").click(function(){
 			var $this=$(this),
+				$li=$this.parent(),
 				href=$this.attr('href'),
 				$href=$(href),
 				candidate=href.split('-')[1];
 			
 			if(app.dateFrom && app.dateTo && candidate && candidate!=''){
 				getMetrics(candidate, app.dateFrom, app.dateTo, $(href));
-			}	
+			}
+			
+			$li.css({
+				"background":app.candidates[candidate].backgroundColor
+			}).siblings().css({
+				"background":""
+			});
 		});
+		
 		
 		//enable click on each li
 		$("#informationTabs > ul > li").click(function(){
 			var $this=$(this),
 				$a=$this.find('> a');
-
+				candidate=$a.attr("href").split('-')[1];
+				
 			$a.trigger('click');
 		});
 		

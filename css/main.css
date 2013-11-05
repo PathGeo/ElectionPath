@@ -86,7 +86,10 @@ ul {margin:0px; padding:0px; list-style:none; }
 
 
 /**information tabs */
-#informationTabs .ui-tabs-nav li {width:24.49%;}
+#informationTabs .ui-tabs-nav li {width:24.49%;padding:2px 0px 2px 0px; }
+#informationTabs .ui-tabs-nav li.ui-tabs-selected {padding:2px 0px 3px 0px;}
+#informationTabs .ui-tabs-nav li.ui-tabs-selected > a {color:#ffffff;}
+#informationTabs .ui-tabs-nav li > a {font-size:15px; font-family:"Lato"}
 #informationTabs .ui-tabs-nav li:hover {cursor:pointer;}
 /**
 #informationTabs .ui-tabs-nav li a {color:#ffffff}
