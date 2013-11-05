@@ -217,13 +217,15 @@
 		});
 		$.each(chartCSVData.values, function(k, v){
 			dates = k.split('/');
-			csv += dates[2] + ((dates[0].length == 1) ? "0" + dates[0] : dates[0]) + ((dates[1].length == 1) ? "0" + dates[1] : dates[1]) + ", ";
+			k=dates[2] + "-" + ((dates[0].length == 1) ? "0" + dates[0] : dates[0]) + "-" + ((dates[1].length == 1) ? "0" + dates[1] : dates[1]);
+			csv += k.replace(/\-/g,"") + ", ";
+			
 			$.each(v, function(i, val){
 				csv += val + ";" + val + ";" + val + ((i == length - 1) ? " \n" : ", ");
 			});
 			
 			//app.dateFrom
-			if(!finalDate){app.dateFrom=k.replace(/\//g, "-");}
+			if(!finalDate){app.dateFrom=k;}
 			finalDate=k;
 		});
 		
