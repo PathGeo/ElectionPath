@@ -366,7 +366,8 @@
 		//fix header
 		$('.matrixTable').fixheadertable({
              caption : '',
-             height  : 410,
+             height  : $(window).height()-235, //410,
+             width : $(window).width()-80, //410,
 			 colratio: [100, 100, 100, 100, 100, 100, 100, 200, 250], 
 			 showhide:false,
 			 sortable:false,
@@ -535,11 +536,11 @@
 		if (!dialogOptions) {
 			dialogOptions = {}
 		}
-		
+		console.log($(window).width());
 		//options
 		dialogOptions.title = dialogOptions.title || title;
-		dialogOptions.width = dialogOptions.width || 850;
-		dialogOptions.height = dialogOptions.height || 550;
+		dialogOptions.width = dialogOptions.width || $(window).width()-50;
+		dialogOptions.height = dialogOptions.height || $(window).height()-100;
 		dialogOptions.resizable = dialogOptions.resizable || false;
 		dialogOptions.draggable = dialogOptions.draggable || false;
 		dialogOptions.modal = dialogOptions.modal || true; 
