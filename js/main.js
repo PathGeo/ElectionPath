@@ -21,7 +21,11 @@
 			rangeChange:null
 		},
 		dateFrom:null,
-		dateTo:null
+		dateTo:null,
+		chartCSVData:{
+			headers:["Date"],
+			values:{}
+		}
 	}
 	
 	//chart
@@ -62,9 +66,21 @@
 				html_addWidget="",
 				$candidate=$("#candidate ul"),
 				value=null,
-				numbers=["1st",'2nd','3rd'];
+				numbers=["1st",'2nd','3rd'],
+				chartCSVData=app.chartCSVData;
+			
 			
 			$.each(app.candidates, function(k,v){
+				//prepare chart csv content
+				chartCSVData.headers.push(k);
+				$.each(v.values, function(i,val){
+					if(chartCSVData.values[val.date]) {
+						chartCSVData.values[val.date].push(val.tweets_yesterday);
+					}else {
+						chartCSVData.values[val.date] = [val.tweets_yesterday];
+					}
+				});
+				
 				//reverse array order
 				v.values.reverse()
 				
@@ -188,80 +204,68 @@
 	/**
 	 * initialize chart
 	 */
-	function init_chart(callback){
-		$.getJSON('db/chart.json', function(json){
-			if(json){
-				var header='',
-					headers=[],
-					result='';
-					
-				//header
-				$.each(json, function(k,v){
-					header+=k+", ";
-					if(k!='date'){headers.push(k);}
-				})
-				header+="\n";
-				
-				//content
-				$.each(json["date"], function(i,v){
-					result+=json["date"][i] + ', '
-					$.each(headers, function(j,header){
-						result+=json[header][i]+';'+json[header][i]+';'+json[header][i]+", ";
-					});
-					result+="\n";
-					
-					//fromdate and todate
-					if(i==0){
-						app.dateFrom=v;
-					}
-					
-					if(i==json["date"].length-1){
-						app.dateTo=v;
-					}
-				});
-				result=header+result;
-				
-				
-				//change data format for fromDate and toDate
-				app.dateFrom=app.dateFrom.splice(4,0,"-").splice(7,0,"-");
-				app.dateTo=app.dateTo.splice(4,0,"-").splice(7,0,"-");
-				
-				//init chart
-				app.chart=g= new Dygraph(
-		          document.getElementById("chart"),
-		          result,
-		          {
-		            customBars: true,
-		            title: '',
-		            ylabel: 'The number of Tweets',
-					colors: ['#C91111', '#E27C20', '#2CC671', '#A15FB7' ],
-		            showRangeSelector: true,
-		            highlightCircleSize: 5,
-		            rangeSelectorHeight: 50,
-		            labelsDivWidth: 100,
-					labelsDivStyles: { 'textAlign': 'right' },
-		            labelsDivStyles: {
-		                'backgroundColor': 'rgba(255, 255, 255, 0.75)',
-		                'padding': '4px',
-		                'border': '1px solid grey',
-		                'borderRadius': '5px',
-		                'boxShadow': '2px 2px 2px #888',
-						'width':'110px'
-		              },			
-		            strokeWidth: 2,
-					legend: 'always',
-					hideOverlayOnMouseOut:true		
-		          }
-		      	);
-				
-				
-				//tabs
-				init_tabs();	
+	function init_chart(){
+		var csv = "", 
+			dates = null, 
+			chartCSVData = app.chartCSVData,
+			finalDate=null;
+		
+		//header
+		var length = chartCSVData.headers.length - 1;
+		$.each(chartCSVData.headers, function(i, v){
+			csv += v + ((i == length) ? " \n" : ", ");
+		});
+		$.each(chartCSVData.values, function(k, v){
+			dates = k.split('/');
+			csv += dates[2] + ((dates[0].length == 1) ? "0" + dates[0] : dates[0]) + ((dates[1].length == 1) ? "0" + dates[1] : dates[1]) + ", ";
+			$.each(v, function(i, val){
+				csv += val + ";" + val + ";" + val + ((i == length - 1) ? " \n" : ", ");
+			});
+			
+			//app.dateFrom
+			if(!finalDate){app.dateFrom=k.replace(/\//g, "-");}
+			finalDate=k;
+		});
+		
+		//app.dateTo
+		app.dateTo=finalDate.replace(/\//g, "-");
+		
+		//init chart
+		app.chart = g = new Dygraph(
+			document.getElementById("chart"), 
+			csv, 
+			{
+				customBars: true,
+				title: '',
+				ylabel: 'The number of Tweets',
+				colors: ['#C91111', '#E27C20', '#2CC671', '#A15FB7'],
+				showRangeSelector: true,
+				highlightCircleSize: 5,
+				rangeSelectorHeight: 50,
+				labelsDivWidth: 100,
+				labelsDivStyles: {
+					'textAlign': 'right'
+				},
+				labelsDivStyles: {
+					'backgroundColor': 'rgba(255, 255, 255, 0.75)',
+					'padding': '4px',
+					'border': '1px solid grey',
+					'borderRadius': '5px',
+					'boxShadow': '2px 2px 2px #888',
+					'width': '110px'
+				},
+				strokeWidth: 2,
+				legend: 'always',
+				hideOverlayOnMouseOut: true
 			}
-		})
+		);
 		
 		
+		//tabs
+		init_tabs();	
 	}
+		
+
 	
 	
 	

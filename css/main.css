@@ -97,7 +97,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 .informationContent {height:1500px; }
 .informationContent ul {width:100%;}
 .informationContent ul > li {width:33%; height:380px; float:left; text-align:center; border:1px solid #f1f1f1; font-family:"Lato"; }
-.informationContent label {font-weight:600; font-size:14px;}
+.informationContent label {font-weight:600; font-size:16px;}
 .informationContent > table {width:100%; font-family:"Lato"; }
 .informationContent > table td {width:33%;border:1px solid #f1f1f1; text-align:center; vertical-align:top;}
 
