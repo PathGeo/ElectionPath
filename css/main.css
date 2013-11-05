@@ -82,9 +82,12 @@ ul {margin:0px; padding:0px; list-style:none; }
 #chartContent ul li b {font-size:16px; }
 #chartContent #chart_queryDate {position:absolute; left:10px; bottom:5px; font-size:14px; font-weight:600; }
 
+.dygraph-legend {width:110px !important;}
+
 
 /**information tabs */
 #informationTabs .ui-tabs-nav li {width:24.49%;}
+#informationTabs .ui-tabs-nav li:hover {cursor:pointer;}
 /**
 #informationTabs .ui-tabs-nav li a {color:#ffffff}
 #informationTabs .ui-state-default {background:transparent; }
@@ -101,7 +104,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 /** table */
 .table {width:90%;  margin:0 auto; border-collapse:collapse; margin-top:20px; }
 .table tr:first-child {background-color:#f1f1f1; font-weight:600; font-size:14px;  }
-.table td {border-bottom:1px solid #f1f1f1; text-align:left !important; font-size:12px;  padding:5px; font-family:'Lato', sans-serif;}
+.table td {border-bottom:1px solid #f1f1f1; text-align:left !important; font-size:13px;  padding:5px; font-family:'Lato', sans-serif;}
 .table tr:not(:first-child):hover {background-color:#f1f1f1; }
 .table a {text-decoration:none; color:#359BED}
 .table a:hover {text-decoration:underline; }
@@ -149,6 +152,10 @@ ul {margin:0px; padding:0px; list-style:none; }
 
 
 /** jquery ui */
+.ui-widget-overlay {position:fixed}
+.ui-icon-closethick {background:url(../images/1363366802_fileclose.png) no-repeat !important; background-size:100% 100% !important; width:32px; height:32px}
+.ui-dialog-titlebar-close {right:.5em !important; top:30% !important; width:32px !important; height:32px !important;background-color:#eeeeee; -moz-border-radius:10px; -webkit-border-radius:10px;border-radius:10px;}
+.ui-dialog-titlebar-close:hover {background-color:#cccccc; -moz-border-radius:10px; -webkit-border-radius:10px;border-radius:10px;}
 
 
 

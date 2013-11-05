@@ -69,7 +69,7 @@
 				v.values.reverse()
 				
 				value=v.values[0];
-			
+
 				html="<li id='"+k+"'>"+
 					 "<div class='candidate-name' style='background-color:"+v.backgroundColor+"'>"+v.name +"</div>"+
 					 "<div class='candidate-content'>"+
@@ -102,7 +102,7 @@
 							(function(){
 								var result='';
 								$.each(numbers, function(i,n){
-									if(value.biggestFollowers_yesterday[i]){
+									if(value.biggestFollowers[i]){
 										result+="<li>"+((value.biggestFollowers[i].url)?"<a href='"+value.biggestFollowers[i].url+"' target='_blank'>@"+value.biggestFollowers[i].name+"</a>":"@"+value.biggestFollowers[i].name)+"</a><br>"+n+" Biggest Follower</li>";
 									}else{
 										result+="<li style='height:37px;'></li>";
@@ -113,7 +113,7 @@
 						"</ul>"+
 					 "</div>"
 					 "</li>";
-				
+					 
 				$candidate.append(html);
 			});
 		
@@ -149,7 +149,7 @@
 		//calcualte countdown
 		var todayTime=new Date().getTime(),
 			electionTime=new Date("November 19, 2013 08:00:00").getTime(),
-			countdownTime=Math.round((electionTime-todayTime)/86400/1000);
+			countdownTime=Math.round((electionTime-todayTime)/86400/1000)+1;
 		$("#countdown label").html(countdownTime);
 		
 		
@@ -245,10 +245,11 @@
 		                'padding': '4px',
 		                'border': '1px solid grey',
 		                'borderRadius': '5px',
-		                'boxShadow': '2px 2px 2px #888'
+		                'boxShadow': '2px 2px 2px #888',
+						'width':'110px'
 		              },			
 		            strokeWidth: 2,
-					legend: 'onmouseover',
+					legend: 'always',
 					hideOverlayOnMouseOut:true		
 		          }
 		      	);
@@ -279,9 +280,18 @@
 			
 			if(app.dateFrom && app.dateTo && candidate && candidate!=''){
 				getMetrics(candidate, app.dateFrom, app.dateTo, $(href));
-			}
-					
+			}	
 		});
+		
+		//enable click on each li
+		$("#informationTabs > ul > li").click(function(){
+			var $this=$(this),
+				$a=$this.find('> a');
+
+			$a.trigger('click');
+		});
+		
+		
 		
 		//trigger click on the first candidate
 		$("#informationTabs > ul > li > a:nth(0)").trigger('click');
@@ -302,12 +312,12 @@
 			templates=[
 				{key:"date", title:"Date", description:"Date"},
 				{key:"tweets_all", title:"Tweets <br>since 10/07", description:"Total # of tweets mentioned this candidate from 10/07 to Yesterday"},
-				{key:"tweets_yesterday", title:"Tweets Yesterday", description:"# of tweets mentioned about this candidate Yesterday"},
+				{key:"tweets_yesterday", title:"Tweets Today", description:"# of tweets mentioned about this candidate Today"},
 				{key:"followers_all", title:"All Follewers", description:"All Followers"},
-				{key:"followers_yesterday_new", title:"NEW<br>Followers Yesterday", description:"# of new followers added in this candidate's Twitter account"},
-				{key:"followers_yesterday_removed", title:"REMOVED<br>Followers Yesterday", description:"# of Twitter users unfollow this candidate's Twitter account"},
+				{key:"followers_yesterday_new", title:"NEW<br>Followers Today", description:"# of new followers added in this candidate's Twitter account"},
+				{key:"followers_yesterday_removed", title:"REMOVED<br>Followers Today", description:"# of Twitter users unfollow this candidate's Twitter account"},
 				{key:"influence", title:"Network Impact Change", description:"The percentage changes of the combined number of fans(followers) from  each new follower"},
-				{key:"biggestFollowers_yesterday", title:"Yesterday Biggest <br>NEW Followers", description:"Top 3 Biggest Followers Yesterday"},
+				{key:"biggestFollowers_yesterday", title:"Today Biggest <br>NEW Followers", description:"Top 3 Biggest Followers Today"},
 				{key:"biggestFollowers", title:"Biggest NEW Followers", description:"Top 3 Biggest Followers"}
 			];
 			
@@ -349,7 +359,7 @@
         });
 		
 		setTimeout(function(){
-			showDialog("dialog_table", obj.name+"'s twitter influence index");
+			showDialog("dialog_table", obj.name+"'s Twitter Influence Index");
 			$(".ui-dialog .ui-widget-header").css({
 				"background":"transparent",
 				"background-color": obj.backgroundColor,
@@ -410,7 +420,7 @@
 		
 		//request web service to get info. on the clicked date
 		if(candidate && candidate!='' && clickDate && clickDate!=''){
-			getMetrics(candidate, clickDate, toDate, $(target));
+			getMetrics(candidate, clickDate, clickDate, $(target));
 		}
 	}
 	
@@ -453,8 +463,8 @@
 			
 			var html="<table>"+
 						"<tr>"+
-					 	"<td><br><label>Top Followers</label><p>"+((json.users instanceof Array)?createTable(json.users):"None")+"</p></td>"+
-						"<td><br><label>Top Mentions</label><p>"+((json.mentions instanceof Array)?createTable(json.mentions):"None")+"</p></td>"+
+					 	"<td><br><label>Most Active Chatters</label><p>"+((json.users instanceof Array)?createTable(json.users):"None")+"</p></td>"+
+						"<td><br><label>Top Mentioned Persons</label><p>"+((json.mentions instanceof Array)?createTable(json.mentions):"None")+"</p></td>"+
 						"<td><br><label>Top Hashtags</label><p>"+((json.hashtags instanceof Array)?createTable(json.hashtags):"None")+"</p></td>"+
 						"</tr><tr>"+
 						"<td><br><label>Top Tweeted URLs</label><p>"+((json.urls instanceof Array)?createTable(json.urls):"None")+"</p></td>"+
