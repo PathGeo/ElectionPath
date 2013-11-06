@@ -480,7 +480,7 @@
 			var html="<table>"+
 						"<tr>"+
 					 	"<td><br><label>Most Active Chatters</label><p>"+((json.users instanceof Array)?createTable(json.users):"None")+"</p></td>"+
-						"<td><br><label>Top Mentioned Persons</label><p>"+((json.mentions instanceof Array)?createTable(json.mentions):"None")+"</p></td>"+
+						"<td><br><label>Top Mentioned People</label><p>"+((json.mentions instanceof Array)?createTable(json.mentions):"None")+"</p></td>"+
 						"<td><br><label>Top Hashtags</label><p>"+((json.hashtags instanceof Array)?createTable(json.hashtags):"None")+"</p></td>"+
 						"</tr><tr>"+
 						"<td><br><label>Top Tweeted URLs</label><p>"+((json.urls instanceof Array)?createTable(json.urls):"None")+"</p></td>"+
