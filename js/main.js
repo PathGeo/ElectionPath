@@ -475,8 +475,8 @@
 		$target.html("<center><img src='images/loading.gif' class='loading' /></center>");
 		
 		//request web service
-		//$.getJSON('ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate, function(json){
-		$.getJSON("db/searchResult.json", function(json){
+		$.getJSON('ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate, function(json){
+		//$.getJSON("db/searchResult.json", function(json){
 			if(!json){console.log('[ERROR] query: no json'); return;}
 			
 			var html="<table>"+
