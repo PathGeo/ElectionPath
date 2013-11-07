@@ -44,7 +44,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 #candidate {height:840px; margin-top:50px; }
 #candidate > p {font-size:14px; color:#555555; }
 #candidate ul {width:100%; height:100%;}
-#candidate > ul > li {float:left; width:24.75%; border:1px solid #f1f1f1; background-color:#ffffff; }
+#candidate > ul > li {float:left; width:24.63%; border:1px solid #f1f1f1; background-color:#ffffff; }
 #candidate > ul > li:hover {background-color:#f1f1f1;}
 
 
