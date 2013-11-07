@@ -12,7 +12,8 @@
 			markerDealer:{
 				drew: L.marker([32.774917,-117.005639], {icon: L.icon({iconUrl: 'images/logo_ford.png', iconSize:[60, 35]})}),			
 				penske: L.marker([32.774917,-117.005639], {icon: L.icon({iconUrl: 'images/logo_penske.png', iconSize:[60, 35]})})
-			}
+			},
+			ACS_SD:null
 		},
 		candidates:null,
 		chart:null,
@@ -25,7 +26,11 @@
 		chartCSVData:{
 			headers:["Date"],
 			values:{}
-		}
+		},
+		ACS_SD:null,
+		donationData:null,
+		callout:[],
+		chart:[]
 	}
 	
 	//chart
@@ -133,6 +138,11 @@
 					 "</li>";
 					 
 				$candidate.append(html);
+				
+				//give legend background
+				$("#legend-"+k).css({
+					"background-color":v.backgroundColor
+				});
 			});
 		
 			
@@ -404,20 +414,91 @@
 		var basemaps = {
 			"OpenStreetMap": L.tileLayer('http://{s}.tile.cloudmade.com/ad132e106cd246ec961bbdfbe0228fe8/997/256/{z}/{x}/{y}.png', {styleId: 256, attribution: ""}),
 			"Gray Map": L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/{styleId}/256/{z}/{x}/{y}.png', {styleId: 22677, attribution: ""}),
-			"Night View": L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/{styleId}/256/{z}/{x}/{y}.png', {styleId: 999, attribution: ""})
+			"Night View": L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/{styleId}/256/{z}/{x}/{y}.png', {styleId: 999, attribution: ""}),
+			"Light Gray Background Map" : L.tileLayer("http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/{styleId}/256/{z}/{x}/{y}.png", {
+				styleId : 22677,
+				attribution : "Map Provided by <a href='http://cloudmade.com/' target='_blank'>Cloudmade</a>",
+				title : "Cloudmade"
+			}),
+			"OpenStreet Map" : L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+				attribution : "Map Provided by <a href='http://www.openstreetmap.org/' target='_blank'>Open Street Map</a>",
+				title : "Open Street Map",
+				maxZoom:19
+			}),
+			"ESRI Imagery Map" : L.layerGroup([
+				L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
+					serviceName: "World_Imagery",
+					attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
+					title : "ESRI Imagery Map"
+				}),
+				L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
+					serviceName: "Reference/World_Boundaries_and_Places",
+					attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
+					title : "ESRI Imagery Map"
+				})
+			]),
+			"ESRI Street Map" : L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
+				serviceName: "World_Street_Map",
+				attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
+				title : "ESRI Street Map"
+			}),
+			"ESRI National Geographic Map" : L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
+				serviceName: "NatGeo_World_Map",
+				attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
+				title : "ESRI National Geographic Map",
+				maxZoom:16
+			}),
+			"ESRI Terrain Map" : L.layerGroup([
+				L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
+					serviceName: "World_Terrain_Base",
+					attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
+					title : "ESRI Terrain Map",
+					maxZoom:13
+				}),
+				L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
+					serviceName: "Reference/World_Reference_Overlay",
+					attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
+					title : "ESRI Terrain Map",
+					maxZoom:13
+				}),
+			]),
+			"ESRI Topographic Map" : L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
+				serviceName: "World_Topo_Map",
+				attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
+				title : "ESRI Topographic Map"
+			}),
+			"ESRI Light Gray Map" : L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
+				serviceName: "Canvas/World_Light_Gray_Base",
+				attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
+				title : "ESRI Light Gray Map",
+				maxZoom:16
+			})
 		}
 		
 		//init map
 		app.map = L.map('map', {
 			center: [32.774917, -117.005639],
-			zoom: 11,
-			layers: [basemaps["Gray Map"]],
-			attributionControl:false
+			zoom: 10,
+			layers: [basemaps["ESRI Topographic Map"]],
+			attributionControl:true
 		});			
 			
 			
 		//scale bar
 		app.map.addControl(new L.Control.Scale());
+		
+		
+		//read ACS data
+		$.getJSON("db/ACS_SD.json", function(json){
+			app.ACS_SD=json;
+
+			//read donation data
+			$.getScript('db/donation.js', function(script){
+				//donation data will be saved in the app.donationData
+				
+				layerChange();
+			});
+		});
 	}
 
 	
@@ -530,7 +611,510 @@
 		
 	}
 
+	
+	
+	
+	/**
+	 * layerChange 
+	 */
+	function layerChange(){
+		var selectedLayer = $("#sel_census").val();
+		
+		//classification method
+		var classification={
+			"quantile": function(){
+				var ACS_features=app.ACS_SD.features,
+					values = [],
+					j=0;
+				
+				$.each(ACS_features, function(i,feature){
+					if(feature.properties[selectedLayer]!=-999){
+						values[j++] = feature.properties[selectedLayer];
+					}
+				})			
+				
+				values.sort(function(a,b){return a-b});
+				
+				var interval = values.length / 5,
+					intervals = new Array(),
+					next_interval = 0;
+				//intervals[0] = Math.round(values[0]);
+				intervals[0] = values[0];
+				for (var i=1; i<5; i++) {
+					next_interval += interval;
+					j = Math.round(next_interval);
+					intervals[i] = values[j];
+				}
+				//alert(selectedLayer+"  "+intervals[0]+" "+intervals[1]+" "+intervals[2]+" "+intervals[3]+" "+intervals[4]+" "+intervals[5]+" "+intervals[6]+" "+intervals[7]);
+				return intervals
+			},
+			"equal": function(){
+				var ACS_features=app.ACS_SD.features,
+					min = Number.MAX_VALUE,
+					max = Number.MIN_VALUE;
+				
+				$.each(ACS_features, function(i, feature){
+					if (feature.properties[selectedLayer]!=-999){
+						if (min > feature.properties[selectedLayer]) min = feature.properties[selectedLayer];
+						if (max < feature.properties[selectedLayer]) max = feature.properties[selectedLayer];
+					}
+				});
+				
+		
+				var range = max - min,
+					interval = range / 5,
+					intervals = [];
+					
+				//intervals[0] = Math.round(min);
+				intervals[0] = min;
+				//intervals[0] = min;
+				for (var i=1; i<5; i++) {
+					//intervals[i] = Math.round((intervals[i-1] + interval)*10)/10;
+					//intervals[i] = (intervals[i-1] + interval)*10/10;
+					if (selectedLayer == "fam_size"){
+						intervals[i] = Math.round((intervals[i-1] + interval)*100)/100;
+					}
+					else{
+						intervals[i] = Math.round(intervals[i-1] + interval);
+					}
+				}
+				//alert(intervals[0]+" "+intervals[1]+" "+intervals[2]+" "+intervals[3]+" "+intervals[4]+" "+intervals[5]+" "+intervals[6]+" "+intervals[7]);
+				return intervals;
+			}
+		}
+		
+		
+		
+		
+		ACSdata_render(selectedLayer, classification["quantile"]());
+		
+	
+		invokeChart();
+		resizeChart();
+	}
+	
+	
+	
+	//render ACS data
+	function ACSdata_render(item, intervals) {
+		var html=""
+		
+		//title
+		var select = item;
+			if (select == 'income') select = 'Median Household Income ($)';
+			if (select == 'fam_size') select = 'Average Family Size';
+			if (select == 'age0_9') select = 'Age0 - 9';
+			if (select == 'a0_9den') select = 'Age0 - 9 (ratio)';
+			if (select == 'age10_19') select = 'Age10 - 19';
+			if (select == 'a10_19den') select = 'Age10 - 19 (ratio)';
+			if (select == 'age20_64') select = 'Age20 - 64';
+			if (select == 'a20_64den') select = 'Age20 - 64 (ratio)';
+			if (select == 'age65_abov') select = 'Age65 above';
+			if (select == 'a65_den') select = 'Age65 above (ratio)';
 
+			if (select == 'White') select = 'White';
+			if (select == 'White_den') select = 'White (ratio)';
+			if (select == 'Black_AA') select = 'Black or African American';
+			if (select == 'Black_den') select = 'Black or African American (ratio)';
+			if (select == 'Asian') select = 'Asian';
+			if (select == 'Asian_den') select = 'Asian (ratio)';
+			if (select == 'Hispanic') select = 'Hispanic or Latino';
+			if (select == 'Hispanic_d') select = 'Hispanic or Latino (ratio)';
+
+			if (select == 'pop') select = 'Population';
+			if (select == 'popDen') select = 'Population Density';
+ 
+		html+="<h4>"+select+"<h4><ul>";
+		
+		
+		//values
+		var from,to;
+		
+		// get color depending on population density value
+		function getColor1(d) {
+		//alert(d);
+			//var color = ["#FFEDA0","#FED976","#FEB24C","#FD8D3C","#FC4E2A","#E31A1C","#BD0026","#800026"];
+			var color = ["#DBDBDB","#A8A8A8","#7C7C7C","#404040 ","#080808  "];
+			for (var i=color.length-1; i>=0; i--) {
+				//alert(intervals[i]);
+				if (d >= intervals[i]) return color[i];
+			}
+		}
+		
+		
+		//read value
+		$.each(intervals, function(i, interval){
+			from=interval;
+			to=intervals[i+1];
+			
+			html+="<li style='background-color:"+getColor1(from+1)+"' >" + from + (to ? '&ndash;' + to : '+') +"</li>";
+		});
+		
+		
+		//show legend
+		$("#legend_classification").html(html);
+		
+
+		//overlay acs_sd layer
+		if(app.layer.ACS_SD){
+			app.map.removeLayer(app.layer.ACS_SD);
+		}
+		
+		app.layer.ACS_SD = L.geoJson(app.ACS_SD, {
+			style: function(feature){
+				return {
+					weight: 2,
+					opacity: 1,
+					color: 'white',
+					dashArray: '3',
+					fillOpacity: 0.5,
+					fillColor: getColor1(feature.properties[item])
+				};
+			}
+		}).addTo(app.map);
+
+		//app.map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');		
+		
+	}
+
+	
+	
+	function removeChart(){
+		for (var i = 0; i < app.chart.length; i++) {	
+	       app.map.removeLayer(app.chart[i]);
+		   app.map.removeLayer(app.callout[i]);
+	    }
+		app.chart = [];
+		app.callout=[];
+			//map.removeLayer(layerGroup);
+			//layerGroup.removeLayer;
+		
+	}
+	
+	
+	function invokeChart(){
+		var currentZoom = app.map.getZoom();	
+		var data=app.donationData;
+		
+		
+		removeChart();	
+		
+
+		    if (currentZoom >= 15 && currentZoom < 16) {
+				for (var i = 0; i < data.length; i++) {
+					drawMarkers(data[i].Fletcher,  data[i].Faulconer, data[i].Alvarez, data[i].Aguirre, data[i].radi*2*2*2, data[i].lat, data[i].lon, data[i].zip, 80, -100, -50 );				
+				}		
+		    }		
+		    else if (currentZoom >= 14 && currentZoom < 15) {
+				for (var i = 0; i < data.length; i++) {
+					drawMarkers(data[i].Fletcher,  data[i].Faulconer, data[i].Alvarez, data[i].Aguirre, data[i].radi*2*2, data[i].lat, data[i].lon, data[i].zip, 40, -50, -30 );			
+				}		
+		    }		
+		    else if (currentZoom >= 13 && currentZoom < 14) {
+				for (var i = 0; i < data.length; i++) {		
+					drawMarkers(data[i].Fletcher,  data[i].Faulconer, data[i].Alvarez, data[i].Aguirre, data[i].radi*2, data[i].lat, data[i].lon, data[i].zip, 20, -25, -20  );		
+				}		
+		    }
+		    else if (currentZoom >= 12 && currentZoom < 13) {
+				for (var i = 0; i < data.length; i++) {			
+					drawMarkers(data[i].Fletcher,  data[i].Faulconer, data[i].Alvarez, data[i].Aguirre, data[i].radi, data[i].lat, data[i].lon, data[i].zip, 10, -15, -10 );
+					//alert(data[i].Fletcher+' '+data[i].Faulconer+' '+data[i].Alvarez+' '+data[i].Aguirre);
+				}	
+		    }		
+		    else if (currentZoom >= 11 && currentZoom < 12) {
+				for (var i = 0; i < data.length; i++) {
+					drawMarkers(data[i].Fletcher,  data[i].Faulconer, data[i].Alvarez, data[i].Aguirre, data[i].radi*0.5, data[i].lat, data[i].lon, data[i].zip, 0, 0, 0  );
+				}
+		    }		
+		    else if (currentZoom >= 10 && currentZoom < 11) {
+				for (var i = 0; i < data.length; i++) {
+					drawMarkers(data[i].Fletcher,  data[i].Faulconer, data[i].Alvarez, data[i].Aguirre, data[i].radi*0.5*0.5, data[i].lat, data[i].lon, data[i].zip, 0, 0, 0     );
+				}		
+		    }		
+		    else if (currentZoom >= 9 && currentZoom < 10) {
+				for (var i = 0; i < data.length; i++) {
+					drawMarkers(data[i].Fletcher,  data[i].Faulconer, data[i].Alvarez, data[i].Aguirre, data[i].radi*0, data[i].lat, data[i].lon, data[i].zip, 0, 0, 0   );
+				}				
+		    }		
+		    else if (currentZoom >= 8 && currentZoom < 9) {
+				removeChart();		 		
+		    }		
+		    else if (currentZoom >= 7 && currentZoom < 8) {
+	  		
+		    }
+		    else if (currentZoom >= 6 && currentZoom < 7) {
+		     		
+		    }
+		    else if (currentZoom >= 5 && currentZoom < 6) {
+	   		
+		    }
+		    else if (currentZoom >= 4 && currentZoom < 5) {
+	    		
+		    }		
+		    else if (currentZoom >= 3 && currentZoom < 4) {
+			
+		    }			
+		    else if (currentZoom >= 2 && currentZoom < 3) {
+	
+		    }
+		    else if (currentZoom >= 1) {
+	
+		    }
+
+	}
+	
+	
+	
+	function resizeChart(){
+		app.map.on('zoomend', function(e) {
+			var zoom=app.map.getZoom();
+			var data=app.donationData;
+			
+			
+			removeChart();	
+			
+		
+		    if (zoom >= 15 && zoom < 16) {
+				for (var i = 0; i < data.length; i++) {
+					drawMarkers(data[i].Fletcher,  data[i].Faulconer, data[i].Alvarez, data[i].Aguirre, data[i].radi*2*2*2, data[i].lat, data[i].lon,data[i].zip, 80,-100, -50  );
+				}		
+		    }		
+		    else if (zoom >= 14 && zoom < 15) {
+				for (var i = 0; i < data.length; i++) {
+					drawMarkers(data[i].Fletcher,  data[i].Faulconer, data[i].Alvarez, data[i].Aguirre, data[i].radi*2*2, data[i].lat, data[i].lon, data[i].zip, 40, -50, -30  );
+				}		
+	   		
+		    }		
+		    else if (zoom >= 13 && zoom < 14) {
+				for (var i = 0; i < data.length; i++) {
+					//Fletcher, Faulconer, Alvarez, Aguirre, 
+					drawMarkers(data[i].Fletcher,  data[i].Faulconer, data[i].Alvarez, data[i].Aguirre, data[i].radi*2, data[i].lat, data[i].lon, data[i].zip, 20, -25, -20  );
+				}		
+			
+		    }		
+		    else if (zoom >= 12 && zoom < 13) {
+				for (var i = 0; i < data.length; i++) {
+					drawMarkers(data[i].Fletcher,  data[i].Faulconer, data[i].Alvarez, data[i].Aguirre, data[i].radi, data[i].lat, data[i].lon, data[i].zip, 10, -15, -10 );
+				}			
+	   		
+		    }		
+		    else if (zoom >= 11 && zoom < 12) {
+				for (var i = 0; i < data.length; i++) {
+					drawMarkers(data[i].Fletcher,  data[i].Faulconer, data[i].Alvarez, data[i].Aguirre, data[i].radi*0.5, data[i].lat, data[i].lon, data[i].zip, 0, 0, 0  );
+	
+				}		
+			
+		    }		
+		    else if (zoom >= 10 && zoom < 11) {
+				for (var i = 0; i < data.length; i++) {
+					drawMarkers(data[i].Fletcher,  data[i].Faulconer, data[i].Alvarez, data[i].Aguirre, data[i].radi*0.5*0.5, data[i].lat, data[i].lon, data[i].zip, 0, 0, 0   );
+					
+				}		
+	 		
+		    }		
+		    else if (zoom >= 9 && zoom < 10) {
+				for (var i = 0; i < data.length; i++) {
+					drawMarkers(data[i].Fletcher,  data[i].Faulconer, data[i].Alvarez, data[i].Aguirre, data[i].radi*0.5*0.5*0.5, data[i].lat, data[i].lon, data[i].zip, 0, 0, 0   );
+			
+				}			
+	   		
+		    }		
+		    else if (zoom >= 8 && zoom < 9) {
+				for (var i = 0; i < data.length; i++) {
+					drawMarkers(data[i].Fletcher,  data[i].Faulconer, data[i].Alvarez, data[i].Aguirre, data[i].radi*0, data[i].lat, data[i].lon, data[i].zip, 0, 0, 0  );
+			
+				}			
+		    }		
+		    else if (zoom >= 7 && zoom < 8) {
+	  		
+		    }
+		    else if (zoom >= 6 && zoom < 7) {
+		     		
+		    }
+		    else if (zoom >= 5 && zoom < 6) {
+	   		
+		    }
+		    else if (zoom >= 4 && zoom < 5) {
+	    		
+		    }		
+		    else if (zoom >= 3 && zoom < 4) {
+			
+		    }			
+		    else if (zoom >= 2 && zoom < 3) {
+	
+		    }
+		    else if (zoom >= 1) {
+	
+		    }
+							
+		});
+	
+	}
+
+	
+	
+	
+	/**
+	 * addMarker
+	 */
+	function addMarkers(layerGroupName, Fletcher, Faulconer, Alvarez, Aguirre, radi, lat, lng, zip, font, fontlng, fontlat, deltaLng, count, markerFunction, text) {
+	
+		//map.removeLayer(layerGroup);
+		//font =10;
+		var layerGroup = new L.LayerGroup();
+		app.map.addLayer(layerGroup, false);
+		//layerControl.addOverlay(layerGroup, layerGroupName);
+		
+		
+		//text='12345'
+		var call = new L.Callout(new L.LatLng(lat, lng), {
+				direction: L.CalloutLine.DIRECTION.NW,
+				lineStyle: L.CalloutLine.LINESTYLE.STRAIGHT,
+				numberOfSides: 3,
+				arrow: false,
+				color: '#585858 ',
+				fillColor: '#585858 ',
+				position: new L.Point(fontlng, fontlat),
+				//position: new L.Point(-25, -20),
+				//position: new L.Point(-50, -30),
+				//position: new L.Point(-100, -50),
+				size: new L.Point(0, 0),
+				icon: new L.DivIcon({
+					iconSize: new L.Point(0, 0),
+					html: '<div id='+zip +' style="font-size:'+font+'px;font-weight:bold;">' + zip + '</div>',
+					className: 'callout-text'
+				})
+		});
+		
+		//alert(call.length);
+	
+		//callout[callout.length] = call;
+		
+	    app.callout[app.callout.length] = call;
+		
+		
+		app.map.addLayer(call);
+		
+		//alert(callout.toString());
+	
+		//map.clearLayers();
+/*		
+		for (var i = 0; i < count; ++i) {
+			//map.removeLayer(layerGroup);
+			
+			layerGroup.addLayer(markerFunction(new L.LatLng(lat, lng + i * deltaLng), i));
+		}
+*/		
+		var pieChart = markerFunction(new L.LatLng(lat, lng + 0 * deltaLng), 0)
+        app.chart[app.chart.length] = pieChart
+		
+		//layerGroup.removeLayer(chart);
+		layerGroup.addLayer(pieChart);
+		//alert(chart.toString());
+		//layerGroup.removeLayer(chart);
+	};	
+
+	
+
+	/**
+	 * drawMarkers
+	 * @param {Object} Fletcher
+	 * @param {Object} Faulconer
+	 * @param {Object} Alvarez
+	 * @param {Object} Aguirre
+	 * @param {Object} radi
+	 * @param {Object} lat
+	 * @param {Object} lng
+	 * @param {Object} zip
+	 * @param {Object} font
+	 * @param {Object} fontlng
+	 * @param {Object} fontlat
+	 */
+	function drawMarkers(Fletcher, Faulconer, Alvarez, Aguirre, radi, lat, lng, zip, font, fontlng, fontlat){
+	
+		addMarkers('Pie Charts', Fletcher, Faulconer, Alvarez, Aguirre, radi, lat, lng, zip, font, fontlng, fontlat,  2.0, 1, function (latlng) {
+		
+		//alert(radi);
+				var colorValue = Math.random() * 360;
+				var options = {
+					color: '#000',
+					weight: 1,
+					fillColor: 'hsl(' + colorValue + ',100%,50%)',
+					radius: radi,
+					fillOpacity: 1,
+					rotation: 0.0,
+					position: {
+						x: 0,
+						y: 0
+					},
+		/*			
+				    tooltipOptions: {
+				    	iconSize: new L.Point(60, 60)
+				    	//iconAnchor: new L.Point(-5, 100)
+				    },	
+		*/			
+					offset: 0,
+					numberOfSides: 50,
+					barThickness: radi/2
+				};
+		
+				options.data = {
+					'Fletcher': Fletcher,
+					'Faulconer': Faulconer,
+					'Alvarez': Alvarez,
+					'Aguirre': Aguirre
+				};
+				
+				options.chartOptions = {
+					'Fletcher': {
+						fillColor: '#A15FB7',
+						//minValue: 0,
+						//maxValue: 0,
+						//maxHeight: 0,
+						displayText: function (value) {
+							return '$ '+value.toFixed(0)+'<br/><div id=zip> ZIP: '+zip + '</div>';
+						}
+					},
+					'Faulconer': {
+						fillColor: '#E27C20',
+						//minValue: 0,
+						//maxValue: 0,
+						//maxHeight: 0,
+						displayText: function (value) {
+							return '$ '+value.toFixed(0)+'<br/><div id=zip> ZIP: '+zip + '</div>';
+						}
+					},
+					'Alvarez': {
+						fillColor: '#2CC671',
+						//minValue: 0,
+						//maxValue: 0,
+						//maxHeight: 0,
+						displayText: function (value) {
+							return '$ '+value.toFixed(0)+'<br/><div id=zip> ZIP: '+zip + '</div>';
+						}
+					},
+					'Aguirre': {
+						fillColor: '#C91111',
+						//minValue: 0,
+						//maxValue: 0,
+						//maxHeight: 0,
+						displayText: function (value) {
+							return '$ '+value.toFixed(0)+'<br/><div id=zip> ZIP: '+zip + '</div>';
+						}
+					}
+				};
+				
+				return new L.PieChartMarker(latlng, options);
+			});
+	}
+
+	
+	
+	
+	
+
+	
+	
 	
 	
 	/**
@@ -569,7 +1153,7 @@
 	
 
 	
-	
+
 
 
 	
