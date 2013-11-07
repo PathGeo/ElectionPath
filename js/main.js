@@ -92,7 +92,7 @@
 				
 				value=v.values[0];
 
-				html="<li id='"+k+"'>"+
+				html="<li class='candidate-li' id='"+k+"'>"+
 					 "<div class='candidate-name' style='background-color:"+v.backgroundColor+"'>"+v.name +"</div>"+
 					 "<div class='candidate-content'>"+
 					 	 "<ul>"+
@@ -149,7 +149,7 @@
 			//add li's clicking event
 			$(".showTable").click(function(){
 				var $this=$(this),
-					id=$this.parent().parents("li").attr("id");
+					id=$this.parents("li.candidate-li").attr("id");
 				
 				if(app.candidates[id] && id && id!=''){
 					showTable(id, app.candidates[id]);
@@ -1127,7 +1127,7 @@
 		if (!dialogOptions) {
 			dialogOptions = {}
 		}
-		console.log($(window).width());
+		
 		//options
 		dialogOptions.title = dialogOptions.title || title;
 		dialogOptions.width = dialogOptions.width || $(window).width()-50;
