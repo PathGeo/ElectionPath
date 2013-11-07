@@ -58,6 +58,10 @@ try:
 	output['users'] = [{'value': item[0], 'url': USER_URL % item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topUsers)]
 	output['retweets'] = topRTTexts
 
+	import texty
+	text = ' '.join([t['text'] for t in tweets])
+	output['word_frequencies'] = [{'count': count, 'value': value} for value, count in texty.getWordFreqsAsOrderedList(text)[:50]]
+	
 	print ''
 	print json.dumps(output)
 except Exception, e:
