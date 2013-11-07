@@ -45,6 +45,7 @@
 		$.getJSON("db/candidates.json", function(json){
 			app.candidates=json;
 			init_UI();
+			init_map();
 			init_chart();
 		});
 	});
@@ -89,12 +90,13 @@
 				html="<li id='"+k+"'>"+
 					 "<div class='candidate-name' style='background-color:"+v.backgroundColor+"'>"+v.name +"</div>"+
 					 "<div class='candidate-content'>"+
-						 "<img class='candidate-image' src='"+v.image+"' />"+
-						 "<div class='candidate-metadata'>"+
-							"<img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' />"+
-							"<div class='candidate-twitterYesterday'><a href='#' class='showTable'>"+v.values[0].tweets_yesterday+"</a><label title='# of tweets mentioned about this candidate Yesterday'>mentions Yesterday</label></div>"+
-							"<div class='candidate-info'>"+"<a href='"+v.url_website+"' target='_blank'>Website</a><br><a href='"+v.url_twitter+"' target='_blank'>Twitter</a></div>"+
-						 "</div>"+
+					 	 "<ul>"+
+						 	"<li class='candidate-image'><img src='"+v.image+"' /></li>"+
+						 	"<li class='candidate-metadata'>"+
+								"<div class='candidate-twitterYesterday'><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /><a href='#' class='showTable'>"+v.values[0].tweets_yesterday+"</a><label title='# of tweets mentioned about this candidate Yesterday'>mentions Yesterday</label></div>"+
+								"<div class='candidate-info'>"+"<a href='"+v.url_website+"' target='_blank'>Website</a><br><a href='"+v.url_twitter+"' target='_blank'>Twitter</a></div>"+
+							"</li>"+
+						 "</ul>"+
 					 "</div>"+
 					 "<div class='candidate-index'>"+
 					 	"<ul>"+
@@ -473,8 +475,8 @@
 		$target.html("<center><img src='images/loading.gif' class='loading' /></center>");
 		
 		//request web service
-		$.getJSON('ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate, function(json){
-		//$.getJSON("db/searchResult.json", function(json){
+		//$.getJSON('ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate, function(json){
+		$.getJSON("db/searchResult.json", function(json){
 			if(!json){console.log('[ERROR] query: no json'); return;}
 			
 			var html="<table>"+
@@ -486,14 +488,19 @@
 						"<td><br><label>Top Tweeted URLs</label><p>"+((json.urls instanceof Array)?createTable(json.urls):"None")+"</p></td>"+
 						"<td><br><label>Top Retweets</label><p>"+((json.retweets instanceof Array)?createTable(json.retweets):"None")+"</p></td>"+
 					 	"<td><br><label>Word-Cloud Map</label><p>"+((json.wordcloud)?"<img src='"+json.wordcloud+"' style='width:100%;' />":"Coming soon..")+"</p></td>"+
-					 	"</tr><tr>"+
-						"<td colspan=3><br><label>Hotspot Map</label><p>Coming soon..</p></td>"+ //<div id='map'></div></p></td>"+
-						"</tr>"+
+					 	"</tr>"+
+						//"<tr><td colspan=3 id='td_map'><br><label>Donation Map</label><p>Coming soon..</p></td></tr>"+ //<div id='map'></div></p></td>"+
 					 "</table>";
 			
 			$target.html(html);
 			
-			//init_map();
+			
+			
+			
+			
+			//$("#map").appendTo("#td_map")
+			
+			
 			
 			
 			//create Table
