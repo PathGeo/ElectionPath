@@ -568,7 +568,7 @@
 						"</tr><tr>"+
 						"<td><br><label>Top Tweeted URLs</label><p>"+((json.urls instanceof Array)?createTable(json.urls):"None")+"</p></td>"+
 						"<td><br><label>Top Retweets</label><p>"+((json.retweets instanceof Array)?createTable(json.retweets):"None")+"</p></td>"+
-					 	"<td><br><label>Word-Cloud Map</label><p>"+((json.wordcloud)?"<img src='"+json.wordcloud+"' style='width:100%;' />":"Coming soon..")+"</p></td>"+
+					 	"<td><br><label>Word-Cloud Map</label><div id=wordcloud></div></td>"+
 					 	"</tr>"+
 						//"<tr><td colspan=3 id='td_map'><br><label>Donation Map</label><p>Coming soon..</p></td></tr>"+ //<div id='map'></div></p></td>"+
 					 "</table>";
@@ -607,6 +607,71 @@
 			
 				return "<table class='table'>"+html_header+html_content+"</table>";
 			}
+						
+			
+			//create wordCloud  beta
+			var width =400,
+				height = 360;
+			
+			var colors = d3.scale.category20b(); 
+			
+			var layout; 
+			function createWordCloud(cloudtext) { 
+				var  json2 = eval (cloudtext) ;
+	
+				var maxcount = 0;
+				for (var indx in json2) 
+					if (json2[indx].count > maxcount)  { maxcount = json2[indx].count;}
+				
+				if (!layout) {
+					layout = d3.layout.cloud().size([width, height])
+						.words(json2.map(function(d) {
+							return {text: d.value, size: Math.sqrt(d.count/maxcount *100)*8};
+		  
+						}))
+						.rotate(function() { return ~~(Math.random() * 1) * 90; })
+						.font("Impact")
+						.spiral("archimedean")
+						//.spiral("rectangular")
+						.fontSize(function(d) { return d.size; })
+						.on("end", draw)
+						.start();
+				} else {
+					 layout.stop().words(json2.map(function(d) {
+							return {text: d.value, sze: Math.sqrt(d.count/maxcount *100)*8};
+						})).on("end", draw).start();
+				}
+			}
+			
+			function draw(words) {
+				d3.select("svg").remove();
+				d3.select("#wordcloud").append("svg")
+					.attr("width", width)
+					.attr("height", height)
+					.attr("style", "border-color:lightgray;border-style:solid;border-width:1px;")
+					.append("g")
+					.attr("transform", "translate(" + (width/2) + "," + (height/2) + ")")
+					.selectAll("text")
+					.data(words)
+					.enter().append("text")
+					.style("font-size", function(d) { return d.size + "px"; })
+					.style("font-family", "Impact")
+					.attr("text-anchor", "middle")
+					.attr("transform", function(d) {
+						return "translate(" + [d.x, d.y] + ")rotate(" + d.rotate + ")";
+					})
+					.text(function(d) { return d.text; });
+					
+				$("text").css("fill", function() { return colors(this.__data__.text.toLowerCase()); })
+					
+			}
+			
+			
+			createWordCloud(json.word_frequencies);
+			
+			
+			
+			
 		});	
 		
 	}
