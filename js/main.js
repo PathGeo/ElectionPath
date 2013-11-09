@@ -638,11 +638,13 @@
 						.start();
 				} else {
 					 layout.stop().words(json2.map(function(d) {
-							return {text: d.value, sze: Math.sqrt(d.count/maxcount *100)*8};
+							return {text: d.value, size: Math.sqrt(d.count/maxcount *100)*8};
 						})).on("end", draw).start();
 				}
 			}
-			
+			function search(keyword) {
+					console.log(keyword);
+			}
 			function draw(words) {
 				d3.select("svg").remove();
 				d3.select("#wordcloud").append("svg")
@@ -663,6 +665,11 @@
 					.text(function(d) { return d.text; });
 					
 				$("text").css("fill", function() { return colors(this.__data__.text.toLowerCase()); })
+					
+				$("text").click(function() { search(this.__data__.text); }).css("cursor", "pointer")
+						//.mouseover(function() { $(this).css("fill", "#cc2222"); })
+						.mouseover(function() { $(this).css("fill", "#22aa22"); })
+						.mouseout(function() { $(this).css("fill", colors(this.__data__.text.toLowerCase())); });
 					
 			}
 			
