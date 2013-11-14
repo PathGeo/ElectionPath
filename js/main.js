@@ -30,7 +30,8 @@
 		ACS_SD:null,
 		donationData:null,
 		callout:[],
-		chart:[]
+		chart:[],
+		wordCloud:null
 	}
 	
 	//chart
@@ -176,10 +177,12 @@
 	function init_time(){
 		//calcualte countdown
 		var todayTime=new Date().getTime(),
-			electionTime=new Date("November 19, 2013 08:00:00").getTime(),
+			electionTime=new Date(Date.parse("2013-11-19 08:00:00 GMT-0800")).getTime(),
+			//electionTime=new Date("November 19, 2013 08:00:00"),//.getTime(),
 			countdownTime=Math.round((electionTime-todayTime)/86400/1000)+1;
 		$("#countdown label").html(countdownTime);
 		
+		//console.log("ElectionDate=" + new Date(Date.parse("2013-11-19 08:00:00 GMT-0800")))
 		
 		//today's time
 		var today = new Date();
@@ -582,7 +585,7 @@
 			
 			
 			//create word cloud
-			createWordCloud(json.word_frequencies);
+			createWordCloud(json.word_frequencies, $target);
 			
 			
 			
@@ -622,25 +625,24 @@
 	 * create wordcloud
 	 */
 	//create wordCloud  beta	
-	function createWordCloud(cloudtext) { 
-				var width =$('#wordcloud').width(), //400,
+	function createWordCloud(cloudtext, $target) { 
+				var $wordcloud=$target.find('#wordcloud'),
+					width =$wordcloud.width(), //400,
 					height =400;
 				
 				var colors = d3.scale.category20b(); 
-				var layout; 
-					
 				var json2 = cloudtext;
-				
 				var maxcount = 0;
+				
 				
 				for (var indx in json2) 
 					if (json2[indx].count > maxcount)  { maxcount = json2[indx].count;}
 				
-				if (!layout) {
-					layout = d3.layout.cloud().size([width, height])
+
+				if (!app.wordcloud) {
+					app.wordcloud = d3.layout.cloud().size([width, height])
 						.words(json2.map(function(d) {
 							return {text: d.value, size: Math.sqrt(d.count/maxcount *100)*8};
-		  
 						}))
 						.rotate(function() { return ~~(Math.random() * 1) * 90; })
 						.font("Impact")
@@ -650,7 +652,7 @@
 						.on("end", draw)
 						.start();
 				} else {
-					 layout.stop().words(json2.map(function(d) {
+					app.wordcloud.stop().words(json2.map(function(d) {
 							return {text: d.value, size: Math.sqrt(d.count/maxcount *100)*8};
 						})).on("end", draw).start();
 				}
@@ -664,7 +666,7 @@
 			
 			function draw(words) {
 				d3.select("svg").remove();
-				d3.select("#wordcloud").append("svg")
+				d3.select($wordcloud.selector).append("svg")
 					.attr("width", width)
 					.attr("height", height)
 					.attr("style", "border-color:lightgray;border-style:solid;border-width:1px;")
