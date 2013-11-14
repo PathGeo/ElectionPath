@@ -51,7 +51,7 @@
 		$.getJSON("db/candidates.json", function(json){
 			app.candidates=json;
 			init_UI();
-			init_map();
+			init_map("donationMap");
 			init_chart();
 		});
 	});
@@ -177,12 +177,11 @@
 	function init_time(){
 		//calcualte countdown
 		var todayTime=new Date().getTime(),
-			electionTime=new Date(Date.parse("2013-11-19 08:00:00 GMT-0800")).getTime(),
+			electionTime=new Date(2013,11-1,19, 8,0,0).getTime(),
 			//electionTime=new Date("November 19, 2013 08:00:00"),//.getTime(),
-			countdownTime=Math.round((electionTime-todayTime)/86400/1000)+1;
+			countdownTime=parseInt((electionTime-todayTime)/86400/1000)+1;
 		$("#countdown label").html(countdownTime);
 		
-		//console.log("ElectionDate=" + new Date(Date.parse("2013-11-19 08:00:00 GMT-0800")))
 		
 		//today's time
 		var today = new Date();
@@ -192,7 +191,7 @@
 		var yyyy = today.getFullYear();
 		if(dd<10){dd='0'+dd} if(mm<10){mm='0'+mm} today = mm+'/'+dd+'/'+yyyy;
 		
-		var currentTime = new Date()
+		var currentTime = new Date();
 		var hours = currentTime.getHours()
 		var minutes = currentTime.getMinutes()
 
@@ -411,7 +410,7 @@
 	/**
 	 * initilize map
 	 */
-	function init_map(){
+	function init_map(id, features){
 		// start map functions
 		//basemap
 		var basemaps = {
@@ -479,7 +478,7 @@
 		}
 		
 		//init map
-		app.map = L.map('map', {
+		app.map = L.map(id, {
 			center: [32.774917, -117.005639],
 			zoom: 10,
 			layers: [basemaps["ESRI Topographic Map"]],
@@ -559,8 +558,8 @@
 		$target.html("<center><img src='images/loading.gif' class='loading' /></center>");
 		
 		//request web service
-		$.getJSON('ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate, function(json){
-		//$.getJSON("db/searchResult.json", function(json){
+		//$.getJSON('ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate, function(json){
+		$.getJSON("db/searchResult.json", function(json){
 			if(!json){console.log('[ERROR] query: no json'); return;}
 			
 			var html="<table>"+
@@ -573,15 +572,14 @@
 						"<td><br><label>Top Retweets</label><p>"+((json.retweets instanceof Array)?createTable(json.retweets):"None")+"</p></td>"+
 					 	"<td><br><label>Word-Cloud Map</label><P></p><div id='wordcloud'></div></td>"+
 					 	"</tr>"+
-						//"<tr><td colspan=3 id='td_map'><br><label>Donation Map</label><p>Coming soon..</p></td></tr>"+ //<div id='map'></div></p></td>"+
+						//"<tr><td colspan=3 id='td_map'><br><label>GeoTagged Tweets' Map</label><p><div id='map'></div></p></td></tr>"+
 					 "</table>";
 			
 			$target.html(html);
 			
 			
-		
-			//$("#map").appendTo("#td_map")
-			
+			//create social map
+			//createSocialMap(candidate, fromDate, toDate, $target);
 			
 			
 			//create word cloud
@@ -694,6 +692,59 @@
 			
 	}	
 			
+	
+	
+	/**
+	 * create geotagged social map
+	 */
+	function createSocialMap(candidate, dateFrom, dateTo, $target){
+		if(!candidate || candidate=='' || !dateFrom || dateFrom=='' || !dateTo || dateTo==''){
+			console.log('[ERROR] createSocialMap: no candidate or dateFrom or dateTo. Please check again!');
+			return;
+		}
+		
+		var $map=$target.find('#map');
+	
+		//get getTagged json
+		//$.getJSON("ws/getGeoTweets.py?candidate="+candidate+"&dateFrom="+dateFrom+"&dateTo="+dateTo, function(json){
+		console.log("ws/getGeoTweets.py?candidate="+candidate+"&dateFrom="+dateFrom+"&dateTo="+dateTo);
+		
+		$.getJSON("db/geoTweets.json", function(json){
+			if(json && json.results && json.results.length>1){
+				var features=[], feature;
+				
+				$.each(json.results, function(i,result){
+					//create feature object
+					feature={
+						type:"Feature",
+						geometry:null,
+						properties:{}
+					};
+					
+					//read value
+					$.each(result, function(k,v){
+						if(k=='geo'){
+							feature.geometry=v
+						}else{
+							feature.properties[k]=v
+						}
+					});
+					
+					features.push(feature);
+				});
+				
+				
+				//init map and add features
+				init_map($map.selector, features);
+				
+			}else{
+				$target.find("map").html("No GeoTagged Tweets. Please query another date or candidate. Thank you");
+				return;
+			}
+		});
+	}
+	
+	
 	
 	
 	
