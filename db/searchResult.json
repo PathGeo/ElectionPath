@@ -1,138 +1,503 @@
 {
     "users": [
         {
-            "count": 2,
+            "url": "http://www.twitter.com/MomsGarage",
+            "count": 212,
             "rank": 1,
-            "value": "bruce4mayorSD"
+            "value": "MomsGarage"
         },
         {
-            "count": 2,
+            "url": "http://www.twitter.com/Mike_4_SD_Mayor",
+            "count": 21,
             "rank": 2,
-            "value": "News_SanDiego"
-        },
-        {
-            "count": 2,
-            "rank": 3,
-            "value": "MichaelSmolens"
-        },
-        {
-            "count": 1,
-            "rank": 4,
-            "value": "UTpolitics"
-        },
-        {
-            "count": 1,
-            "rank": 5,
-            "value": "Rotsart"
-        },
-        {
-            "count": 1,
-            "rank": 6,
-            "value": "sandiegonewz"
-        },
-        {
-            "count": 1,
-            "rank": 7,
-            "value": "LaPlayaHeritage"
-        },
-        {
-            "count": 1,
-            "rank": 8,
-            "value": "robert_veres"
-        },
-        {
-            "count": 1,
-            "rank": 9,
             "value": "Mike_4_SD_Mayor"
         },
         {
-            "count": 1,
+            "url": "http://www.twitter.com/SanDiegoLandUse",
+            "count": 20,
+            "rank": 3,
+            "value": "SanDiegoLandUse"
+        },
+        {
+            "url": "http://www.twitter.com/CarrieOh_77",
+            "count": 18,
+            "rank": 4,
+            "value": "CarrieOh_77"
+        },
+        {
+            "url": "http://www.twitter.com/LaPlayaHeritage",
+            "count": 17,
+            "rank": 5,
+            "value": "LaPlayaHeritage"
+        },
+        {
+            "url": "http://www.twitter.com/10News",
+            "count": 15,
+            "rank": 6,
+            "value": "10News"
+        },
+        {
+            "url": "http://www.twitter.com/homersapien619",
+            "count": 13,
+            "rank": 7,
+            "value": "homersapien619"
+        },
+        {
+            "url": "http://www.twitter.com/News_SanDiego",
+            "count": 13,
+            "rank": 8,
+            "value": "News_SanDiego"
+        },
+        {
+            "url": "http://www.twitter.com/SanDiegoCP",
+            "count": 11,
+            "rank": 9,
+            "value": "SanDiegoCP"
+        },
+        {
+            "url": "http://www.twitter.com/SanDiego_411",
+            "count": 11,
             "rank": 10,
-            "value": "Julesan1"
+            "value": "SanDiego_411"
         }
     ],
     "candidate": "Aguirre",
     "hashtags": [
         {
-            "count": 3,
+            "url": "https://twitter.com/search?q=%23SDMayor&src=hash",
+            "count": 63,
             "rank": 1,
-            "value": "sandiego"
+            "value": "#SDMayor"
         },
         {
-            "count": 1,
+            "url": "https://twitter.com/search?q=%23sdmayor&src=hash",
+            "count": 53,
             "rank": 2,
-            "value": "politics"
+            "value": "#sdmayor"
+        },
+        {
+            "url": "https://twitter.com/search?q=%23noBSmayor&src=hash",
+            "count": 35,
+            "rank": 3,
+            "value": "#noBSmayor"
+        },
+        {
+            "url": "https://twitter.com/search?q=%23nobsmayor&src=hash",
+            "count": 33,
+            "rank": 4,
+            "value": "#nobsmayor"
+        },
+        {
+            "url": "https://twitter.com/search?q=%23SDmayor&src=hash",
+            "count": 24,
+            "rank": 5,
+            "value": "#SDmayor"
+        },
+        {
+            "url": "https://twitter.com/search?q=%23Aguirre&src=hash",
+            "count": 19,
+            "rank": 6,
+            "value": "#Aguirre"
+        },
+        {
+            "url": "https://twitter.com/search?q=%23sandiego&src=hash",
+            "count": 19,
+            "rank": 7,
+            "value": "#sandiego"
+        },
+        {
+            "url": "https://twitter.com/search?q=%2310TaxDebate&src=hash",
+            "count": 19,
+            "rank": 8,
+            "value": "#10TaxDebate"
+        },
+        {
+            "url": "https://twitter.com/search?q=%23iLikeMike&src=hash",
+            "count": 17,
+            "rank": 9,
+            "value": "#iLikeMike"
+        },
+        {
+            "url": "https://twitter.com/search?q=%23SanDiego&src=hash",
+            "count": 8,
+            "rank": 10,
+            "value": "#SanDiego"
         }
     ],
     "retweets": [
         {
-            "count": 2,
+            "count": 6,
+            "url": "http://www.twitter.com/MeanestBossEver/status/397929971403866112",
             "rank": 1,
-            "value": "Want to know the latest in the Aguirre household? Follow @Winston_Aguirre"
+            "value": "Mike Aguirre is right. Open Data will help the city make better decisions. #noBSmayor"
         },
         {
-            "count": 1,
+            "count": 6,
+            "url": "http://www.twitter.com/citybeatkelly/status/389833366511820800",
             "rank": 2,
-            "value": "How¡¦s a Not-Blessed-by-the-Money Mayoral Candidate Going to Catch a Break?\n\n\"The folks with Coons and the Aguirre... http://t.co/sJy7LWQmyq"
+            "value": "Counting how many times #sdmayor candidate blink per answer: Faulconer: 60+, Alvarez: high 40s, Aguirre: high teens, Fletcher: single digits"
+        },
+        {
+            "count": 6,
+            "url": "http://www.twitter.com/loteck/status/397923721798643712",
+            "rank": 3,
+            "value": "Aguirre's basic idea is to try to default on pension responsibilities &amp; fight it out in the courts, right? #noBSmayor"
+        },
+        {
+            "count": 5,
+            "url": "http://www.twitter.com/LATsandiego/status/392341289821151232",
+            "rank": 4,
+            "value": "Gov. Brown endorses fellow Democrat Nathan Fletcher for SD mayor, not Councilman Alvarez or ex-City Atty. Aguirre, both Democrats."
+        },
+        {
+            "count": 5,
+            "url": "http://www.twitter.com/UTWatchdog/status/394888037295222784",
+            "rank": 5,
+            "value": "Alvarez, Faulconer release college grades http://t.co/BiYr3IYsy1 Aguirre promises disclosure, Fletcher keeps his private"
+        },
+        {
+            "count": 5,
+            "url": "http://www.twitter.com/Volkalize/status/397434919418597376",
+            "rank": 6,
+            "value": "Tell us YOUR STANCE on pension reform!\n\nSee what Mike Aguirre for Mayor of San Diego has to say about #SanDiego... http://t.co/DlxDbTv3jC"
+        },
+        {
+            "count": 4,
+            "url": "http://www.twitter.com/citybeatkelly/status/389834567856963584",
+            "rank": 8,
+            "value": "Can someone cede Mike Aguirre some time so he can finish an answer? #sdmayor"
+        },
+        {
+            "count": 4,
+            "url": "http://www.twitter.com/KPBSnews/status/388082796415438849",
+            "rank": 9,
+            "value": "Check out the third part of our #SDMayor interviews: Tonight, former San Diego City Attorney Mike Aguirre joins us. http://t.co/lMU4hWqvly"
         }
     ],
     "urls": [
         {
-            "count": 2,
+            "url": "http://j.mp/1aBENCd",
+            "count": 7,
             "rank": 1,
-            "value": "http://www.utsandiego.com/news/2013/oct/01/mike-aguirre-labor-bona-fides/"
+            "value": "http://j.mp/1aBENCd"
         },
         {
-            "count": 1,
+            "url": "http://laprensa-sandiego.org/editorial-and-commentary/editorial/we-endorse-mike-aguirre-for-mayor/",
+            "count": 5,
             "rank": 2,
-            "value": "http://www.utsandiego.com/news/2013/oct/01/mike-aguirre-labor-bona-fides/?utm_source=twitterfeed&utm_medium=twitter"
+            "value": "http://laprensa-sandiego.org/editorial-and-commentary/editorial/we-endorse-mike-aguirre-for-mayor/"
         },
         {
-            "count": 1,
+            "url": "http://www.cbs8.com/story/23946497/coffee-with-the-candidates-mike-aguirre?utm_source=twitterfeed&utm_medium=twitter",
+            "count": 5,
             "rank": 3,
-            "value": "http://q.gs/4rwZ7"
+            "value": "http://www.cbs8.com/story/23946497/coffee-with-the-candidates-mike-aguirre?utm_source=twitterfeed&utm_medium=twitter"
         },
         {
-            "count": 1,
+            "url": "http://sandiegofreepress.org/2013/11/my-meet-and-greet-with-michael-aguirre/#.Un5ikPIHx8E.twitter",
+            "count": 5,
             "rank": 4,
-            "value": "http://www.utsandiego.com/news/2013/oct/01/mike-aguirre-labor-bona-fides/?utm_source=dlvr.it&utm_medium=twitter"
+            "value": "http://sandiegofreepress.org/2013/11/my-meet-and-greet-with-michael-aguirre/#.Un5ikPIHx8E.twitter"
         },
         {
-            "count": 1,
+            "url": "http://www.sandiego6.com/story/top-mayoral-candidates-to-debate-at-forum-monday-night-20131111",
+            "count": 5,
             "rank": 5,
-            "value": "http://www.meetup.com/dfa-23/events/133693572/"
+            "value": "http://www.sandiego6.com/story/top-mayoral-candidates-to-debate-at-forum-monday-night-20131111"
         },
         {
-            "count": 1,
+            "url": "http://bit.ly/GJqlwc",
+            "count": 4,
             "rank": 6,
-            "value": "http://q.gs/4rkTK"
+            "value": "http://bit.ly/GJqlwc"
         },
         {
-            "count": 1,
+            "url": "http://www.youtube.com/watch?v=ZeUBcEA-qsw",
+            "count": 4,
             "rank": 7,
-            "value": "http://sandiegofreepress.org/2013/09/teahadists-budget-bomb-ticking-down/"
+            "value": "http://www.youtube.com/watch?v=ZeUBcEA-qsw"
+        },
+        {
+            "url": "http://goo.gl/MhRnRH",
+            "count": 4,
+            "rank": 8,
+            "value": "http://goo.gl/MhRnRH"
+        },
+        {
+            "url": "http://bit.ly/19qh7vI",
+            "count": 4,
+            "rank": 9,
+            "value": "http://bit.ly/19qh7vI"
+        },
+        {
+            "url": "http://vosd.org/1dymvCa",
+            "count": 4,
+            "rank": 10,
+            "value": "http://vosd.org/1dymvCa"
+        }
+    ],
+    "word_frequencies": [
+        {
+            "count": 759,
+            "value": "aguirre"
+        },
+        {
+            "count": 349,
+            "value": "mike"
+        },
+        {
+            "count": 142,
+            "value": "sdmayor"
+        },
+        {
+            "count": 129,
+            "value": "alvarez"
+        },
+        {
+            "count": 122,
+            "value": "fletcher"
+        },
+        {
+            "count": 114,
+            "value": "faulconer"
+        },
+        {
+            "count": 106,
+            "value": "san"
+        },
+        {
+            "count": 100,
+            "value": "mike_4_sd_mayor"
+        },
+        {
+            "count": 96,
+            "value": "diego"
+        },
+        {
+            "count": 72,
+            "value": "nobsmayor"
+        },
+        {
+            "count": 71,
+            "value": "pension"
+        },
+        {
+            "count": 67,
+            "value": "city"
+        },
+        {
+            "count": 63,
+            "value": "mayor"
+        },
+        {
+            "count": 61,
+            "value": "candidate"
+        },
+        {
+            "count": 56,
+            "value": "mayoral"
+        },
+        {
+            "count": 52,
+            "value": "amp"
+        },
+        {
+            "count": 48,
+            "value": "julesan1"
+        },
+        {
+            "count": 45,
+            "value": "nathanfletcher"
+        },
+        {
+            "count": 45,
+            "value": "pensions"
+        },
+        {
+            "count": 42,
+            "value": "debate"
+        },
+        {
+            "count": 40,
+            "value": "$"
+        },
+        {
+            "count": 39,
+            "value": "nt"
+        },
+        {
+            "count": 33,
+            "value": "candidates"
+        },
+        {
+            "count": 33,
+            "value": "¡K"
+        },
+        {
+            "count": 33,
+            "value": "alvarezsd"
+        },
+        {
+            "count": 33,
+            "value": "10news"
+        },
+        {
+            "count": 31,
+            "value": "says"
+        },
+        {
+            "count": 31,
+            "value": "answer"
+        },
+        {
+            "count": 30,
+            "value": "like"
+        },
+        {
+            "count": 29,
+            "value": "vote"
+        },
+        {
+            "count": 29,
+            "value": "one"
+        },
+        {
+            "count": 27,
+            "value": "sandiego"
+        },
+        {
+            "count": 27,
+            "value": "right"
+        },
+        {
+            "count": 26,
+            "value": "michael"
+        },
+        {
+            "count": 26,
+            "value": "b"
+        },
+        {
+            "count": 26,
+            "value": "momsgarage"
+        },
+        {
+            "count": 25,
+            "value": "sd"
+        },
+        {
+            "count": 24,
+            "value": "la"
+        },
+        {
+            "count": 24,
+            "value": "de"
+        },
+        {
+            "count": 24,
+            "value": "would"
+        },
+        {
+            "count": 23,
+            "value": "college"
+        },
+        {
+            "count": 23,
+            "value": "re"
+        },
+        {
+            "count": 22,
+            "value": "nathan"
+        },
+        {
+            "count": 21,
+            "value": "gt"
+        },
+        {
+            "count": 21,
+            "value": "%"
+        },
+        {
+            "count": 21,
+            "value": "10taxdebate"
+        },
+        {
+            "count": 20,
+            "value": "us"
+        },
+        {
+            "count": 20,
+            "value": "see"
+        },
+        {
+            "count": 19,
+            "value": "kpbsnews"
+        },
+        {
+            "count": 19,
+            "value": "support"
         }
     ],
     "mentions": [
         {
-            "count": 3,
+            "url": "http://www.twitter.com/Mike_4_SD_Mayor",
+            "count": 100,
             "rank": 1,
-            "value": "Winston_Aguirre"
+            "value": "@Mike_4_SD_Mayor"
         },
         {
-            "count": 2,
+            "url": "http://www.twitter.com/Julesan1",
+            "count": 48,
             "rank": 2,
-            "value": "Mike_4_SD_Mayor"
+            "value": "@Julesan1"
         },
         {
-            "count": 1,
+            "url": "http://www.twitter.com/nathanfletcher",
+            "count": 45,
             "rank": 3,
-            "value": "vosdscott"
+            "value": "@nathanfletcher"
         },
         {
-            "count": 1,
+            "url": "http://www.twitter.com/AlvarezSD",
+            "count": 34,
             "rank": 4,
-            "value": "bruce4mayorSD"
+            "value": "@AlvarezSD"
+        },
+        {
+            "url": "http://www.twitter.com/10News",
+            "count": 32,
+            "rank": 5,
+            "value": "@10News"
+        },
+        {
+            "url": "http://www.twitter.com/MomsGarage",
+            "count": 26,
+            "rank": 6,
+            "value": "@MomsGarage"
+        },
+        {
+            "url": "http://www.twitter.com/KPBSnews",
+            "count": 19,
+            "rank": 7,
+            "value": "@KPBSnews"
+        },
+        {
+            "url": "http://www.twitter.com/CarrieOh_77",
+            "count": 19,
+            "rank": 8,
+            "value": "@CarrieOh_77"
+        },
+        {
+            "url": "http://www.twitter.com/kevin_faulconer",
+            "count": 17,
+            "rank": 9,
+            "value": "@kevin_faulconer"
+        },
+        {
+            "url": "http://www.twitter.com/citybeatkelly",
+            "count": 15,
+            "rank": 10,
+            "value": "@citybeatkelly"
         }
     ]
 }

@@ -568,7 +568,7 @@
 						"</tr><tr>"+
 						"<td><br><label>Top Tweeted URLs</label><p>"+((json.urls instanceof Array)?createTable(json.urls):"None")+"</p></td>"+
 						"<td><br><label>Top Retweets</label><p>"+((json.retweets instanceof Array)?createTable(json.retweets):"None")+"</p></td>"+
-					 	"<td><br><label>Word-Cloud Map</label><div id=wordcloud></div></td>"+
+					 	"<td><br><label>Word-Cloud Map</label><P></p><div id='wordcloud'></div></td>"+
 					 	"</tr>"+
 						//"<tr><td colspan=3 id='td_map'><br><label>Donation Map</label><p>Coming soon..</p></td></tr>"+ //<div id='map'></div></p></td>"+
 					 "</table>";
@@ -576,11 +576,13 @@
 			$target.html(html);
 			
 			
-			
-			
-			
+		
 			//$("#map").appendTo("#td_map")
 			
+			
+			
+			//create word cloud
+			createWordCloud(json.word_frequencies);
 			
 			
 			
@@ -609,17 +611,28 @@
 			}
 						
 			
-			//create wordCloud  beta
-			var width =400,
-				height = 360;
-			
-			var colors = d3.scale.category20b(); 
-			
-			var layout; 
-			function createWordCloud(cloudtext) { 
-				var  json2 = eval (cloudtext) ;
+		});	
+		
+	}
+
+
 	
+	
+	/**
+	 * create wordcloud
+	 */
+	//create wordCloud  beta	
+	function createWordCloud(cloudtext) { 
+				var width =$('#wordcloud').width(), //400,
+					height =400;
+				
+				var colors = d3.scale.category20b(); 
+				var layout; 
+					
+				var json2 = cloudtext;
+				
 				var maxcount = 0;
+				
 				for (var indx in json2) 
 					if (json2[indx].count > maxcount)  { maxcount = json2[indx].count;}
 				
@@ -641,10 +654,14 @@
 							return {text: d.value, size: Math.sqrt(d.count/maxcount *100)*8};
 						})).on("end", draw).start();
 				}
-			}
+			
+			
+			
 			function search(keyword) {
 					console.log(keyword);
 			}
+			
+			
 			function draw(words) {
 				d3.select("svg").remove();
 				d3.select("#wordcloud").append("svg")
@@ -673,16 +690,8 @@
 					
 			}
 			
+	}	
 			
-			createWordCloud(json.word_frequencies);
-			
-			
-			
-			
-		});	
-		
-	}
-
 	
 	
 	
