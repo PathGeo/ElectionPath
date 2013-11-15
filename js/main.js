@@ -6,7 +6,7 @@
 	
 	//global variables
 	var app={
-		map:null,		// leaflet map object
+		donationMap:null,		// leaflet map object
 		layer:{
 			markerLead:L.marker([0,0]), //marker for top leads
 			markerDealer:{
@@ -31,7 +31,8 @@
 		donationData:null,
 		callout:[],
 		chart:[],
-		wordCloud:null
+		wordCloud:null,
+		testMode:false
 	}
 	
 	//chart
@@ -51,7 +52,7 @@
 		$.getJSON("db/candidates.json", function(json){
 			app.candidates=json;
 			init_UI();
-			init_map("donationMap");
+			//createDonationMap();
 			init_chart();
 		});
 	});
@@ -410,85 +411,18 @@
 	/**
 	 * initilize map
 	 */
-	function init_map(id, features){
-		// start map functions
-		//basemap
-		var basemaps = {
-			"OpenStreetMap": L.tileLayer('http://{s}.tile.cloudmade.com/ad132e106cd246ec961bbdfbe0228fe8/997/256/{z}/{x}/{y}.png', {styleId: 256, attribution: ""}),
-			"Gray Map": L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/{styleId}/256/{z}/{x}/{y}.png', {styleId: 22677, attribution: ""}),
-			"Night View": L.tileLayer('http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/{styleId}/256/{z}/{x}/{y}.png', {styleId: 999, attribution: ""}),
-			"Light Gray Background Map" : L.tileLayer("http://{s}.tile.cloudmade.com/BC9A493B41014CAABB98F0471D759707/{styleId}/256/{z}/{x}/{y}.png", {
-				styleId : 22677,
-				attribution : "Map Provided by <a href='http://cloudmade.com/' target='_blank'>Cloudmade</a>",
-				title : "Cloudmade"
-			}),
-			"OpenStreet Map" : L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-				attribution : "Map Provided by <a href='http://www.openstreetmap.org/' target='_blank'>Open Street Map</a>",
-				title : "Open Street Map",
-				maxZoom:19
-			}),
-			"ESRI Imagery Map" : L.layerGroup([
-				L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
-					serviceName: "World_Imagery",
-					attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
-					title : "ESRI Imagery Map"
-				}),
-				L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
-					serviceName: "Reference/World_Boundaries_and_Places",
-					attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
-					title : "ESRI Imagery Map"
-				})
-			]),
-			"ESRI Street Map" : L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
-				serviceName: "World_Street_Map",
-				attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
-				title : "ESRI Street Map"
-			}),
-			"ESRI National Geographic Map" : L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
-				serviceName: "NatGeo_World_Map",
-				attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
-				title : "ESRI National Geographic Map",
-				maxZoom:16
-			}),
-			"ESRI Terrain Map" : L.layerGroup([
-				L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
-					serviceName: "World_Terrain_Base",
-					attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
-					title : "ESRI Terrain Map",
-					maxZoom:13
-				}),
-				L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
-					serviceName: "Reference/World_Reference_Overlay",
-					attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
-					title : "ESRI Terrain Map",
-					maxZoom:13
-				}),
-			]),
-			"ESRI Topographic Map" : L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
-				serviceName: "World_Topo_Map",
-				attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
-				title : "ESRI Topographic Map"
-			}),
-			"ESRI Light Gray Map" : L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
-				serviceName: "Canvas/World_Light_Gray_Base",
-				attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
-				title : "ESRI Light Gray Map",
-				maxZoom:16
-			})
-		}
+	function createDonationMap(){
 		
 		//init map
-		app.map = L.map(id, {
+		app.donationMap = L.map("donationMap", {
 			center: [32.774917, -117.005639],
 			zoom: 10,
-			layers: [basemaps["ESRI Topographic Map"]],
+			layers: [selectBasemap("ESRI Topographic Map")],
 			attributionControl:true
 		});			
 			
-			
 		//scale bar
-		app.map.addControl(new L.Control.Scale());
-		
+		app.donationMap.addControl(new L.Control.Scale());
 		
 		//read ACS data
 		$.getJSON("db/ACS_SD.json", function(json){
@@ -558,8 +492,8 @@
 		$target.html("<center><img src='images/loading.gif' class='loading' /></center>");
 		
 		//request web service
-		$.getJSON('ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate, function(json){
-		//$.getJSON("db/searchResult.json", function(json){
+		var url=(app.testMode)?"db/searchResult.json":'ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate
+		$.getJSON(url, function(json){
 			if(!json){console.log('[ERROR] query: no json'); return;}
 			
 			var html="<table>"+
@@ -572,14 +506,14 @@
 						"<td><br><label>Top Retweets</label><p>"+((json.retweets instanceof Array)?createTable(json.retweets):"None")+"</p></td>"+
 					 	"<td><br><label>Word-Cloud Map</label><P></p><div id='wordcloud'></div></td>"+
 					 	"</tr>"+
-						//"<tr><td colspan=3 id='td_map'><br><label>GeoTagged Tweets' Map</label><p><div id='map'></div></p></td></tr>"+
+						"<tr><td colspan=3 id='td_map'><br><label>GeoTagged Tweets' Map</label><p><div id='"+candidate+"_socialMap' class='socialMap'></div></p></td></tr>"+
 					 "</table>";
 			
 			$target.html(html);
 			
 			
 			//create social map
-			//createSocialMap(candidate, fromDate, toDate, $target);
+			createSocialMap(candidate, fromDate, toDate);
 			
 			
 			//create word cloud
@@ -697,21 +631,22 @@
 	/**
 	 * create geotagged social map
 	 */
-	function createSocialMap(candidate, dateFrom, dateTo, $target){
+	function createSocialMap(candidate, dateFrom, dateTo){
 		if(!candidate || candidate=='' || !dateFrom || dateFrom=='' || !dateTo || dateTo==''){
 			console.log('[ERROR] createSocialMap: no candidate or dateFrom or dateTo. Please check again!');
 			return;
 		}
 		
-		var $map=$target.find('#map');
+		var mapID=candidate+"_socialMap";
 	
 		//get getTagged json
-		//$.getJSON("ws/getGeoTweets.py?candidate="+candidate+"&dateFrom="+dateFrom+"&dateTo="+dateTo, function(json){
-		console.log("ws/getGeoTweets.py?candidate="+candidate+"&dateFrom="+dateFrom+"&dateTo="+dateTo);
-		
-		$.getJSON("db/geoTweets.json", function(json){
+		var url=(app.testMode)?"db/geoTweets.json":"ws/getGeoTweets.py?candidate="+candidate+"&dateFrom="+dateFrom+"&dateTo="+dateTo
+		$.getJSON(url, function(json){
 			if(json && json.results && json.results.length>1){
-				var features=[], feature;
+				var geojson={
+					type:"FeatureCollection",
+					features:[]
+				}, feature;
 				
 				$.each(json.results, function(i,result){
 					//create feature object
@@ -730,18 +665,109 @@
 						}
 					});
 					
-					features.push(feature);
+					geojson.features.push(feature);
 				});
 				
 				
 				//init map and add features
-				init_map($map.selector, features);
+				var map=L.map(mapID, {
+					center: [32.774917, -117.005639],
+					zoom: 10,
+					layers: [selectBasemap("ESRI Topographic Map")],
+					attributionControl:true
+				});			
+				
+
+				//heatmap
+				var heatMapLayer = pathgeo.layer.heatMap(geojson, 1000, {
+					opacity : 0.55,
+					layerName:"heatMapLayer",
+					visible:false
+				}).addTo(map);
+				
+
+				//zoom to bound
+				map.fitBounds(heatMapLayer._bounds);
+				
 				
 			}else{
 				$target.find("map").html("No GeoTagged Tweets. Please query another date or candidate. Thank you");
 				return;
 			}
 		});
+	}
+	
+	
+	/**
+	 * select base map
+	 * @param {Object} type
+	 */
+	function selectBasemap(type){
+		if(!type || type==''){console.log('[ERROR]selectBasemap: no type'); return;}
+		
+		var basemaps={
+			"OpenStreet Map" : L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+				attribution : "Map Provided by <a href='http://www.openstreetmap.org/' target='_blank'>Open Street Map</a>",
+				title : "Open Street Map",
+				maxZoom:19
+			}),
+			"ESRI Imagery Map" : L.layerGroup([
+				L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
+					serviceName: "World_Imagery",
+					attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
+					title : "ESRI Imagery Map"
+				}),
+				L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
+					serviceName: "Reference/World_Boundaries_and_Places",
+					attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
+					title : "ESRI Imagery Map"
+				})
+			]),
+			"ESRI Street Map" : L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
+				serviceName: "World_Street_Map",
+				attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
+				title : "ESRI Street Map"
+			}),
+			"ESRI National Geographic Map" : L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
+				serviceName: "NatGeo_World_Map",
+				attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
+				title : "ESRI National Geographic Map",
+				maxZoom:16
+			}),
+			"ESRI Terrain Map" : L.layerGroup([
+				L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
+					serviceName: "World_Terrain_Base",
+					attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
+					title : "ESRI Terrain Map",
+					maxZoom:13
+				}),
+				L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
+					serviceName: "Reference/World_Reference_Overlay",
+					attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
+					title : "ESRI Terrain Map",
+					maxZoom:13
+				}),
+			]),
+			"ESRI Topographic Map" : L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
+				serviceName: "World_Topo_Map",
+				attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
+				title : "ESRI Topographic Map"
+			}),
+			"ESRI Light Gray Map" : L.tileLayer("http://server.arcgisonline.com/ArcGIS/rest/services/{serviceName}/MapServer/tile/{z}/{y}/{x}", {
+				serviceName: "Canvas/World_Light_Gray_Base",
+				attribution : "Map Provided by <a href='http://www.arcgis.com/' target='_blank'>ESRI</a>",
+				title : "ESRI Light Gray Map",
+				maxZoom:16
+			})
+		}
+		
+		
+		if(basemaps[type]){
+			return basemaps[type]
+		}else{
+			console.log('[ERROR]selectBasemap: no selected basemap');
+			return;
+		}
 	}
 	
 	
@@ -891,7 +917,7 @@
 
 		//overlay acs_sd layer
 		if(app.layer.ACS_SD){
-			app.map.removeLayer(app.layer.ACS_SD);
+			app.donationMap.removeLayer(app.layer.ACS_SD);
 		}
 		
 		app.layer.ACS_SD = L.geoJson(app.ACS_SD, {
@@ -905,9 +931,9 @@
 					fillColor: getColor1(feature.properties[item])
 				};
 			}
-		}).addTo(app.map);
+		}).addTo(app.donationMap);
 
-		//app.map.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');		
+		//app.donationMap.attributionControl.addAttribution('Population data &copy; <a href="http://census.gov/">US Census Bureau</a>');		
 		
 	}
 
@@ -915,8 +941,8 @@
 	
 	function removeChart(){
 		for (var i = 0; i < app.chart.length; i++) {	
-	       app.map.removeLayer(app.chart[i]);
-		   app.map.removeLayer(app.callout[i]);
+	       app.donationMap.removeLayer(app.chart[i]);
+		   app.donationMap.removeLayer(app.callout[i]);
 	    }
 		app.chart = [];
 		app.callout=[];
@@ -927,7 +953,7 @@
 	
 	
 	function invokeChart(){
-		var currentZoom = app.map.getZoom();	
+		var currentZoom = app.donationMap.getZoom();	
 		var data=app.donationData;
 		
 		
@@ -1000,8 +1026,8 @@
 	
 	
 	function resizeChart(){
-		app.map.on('zoomend', function(e) {
-			var zoom=app.map.getZoom();
+		app.donationMap.on('zoomend', function(e) {
+			var zoom=app.donationMap.getZoom();
 			var data=app.donationData;
 			
 			
@@ -1096,7 +1122,7 @@
 		//map.removeLayer(layerGroup);
 		//font =10;
 		var layerGroup = new L.LayerGroup();
-		app.map.addLayer(layerGroup, false);
+		app.donationMap.addLayer(layerGroup, false);
 		//layerControl.addOverlay(layerGroup, layerGroupName);
 		
 		
@@ -1127,7 +1153,7 @@
 	    app.callout[app.callout.length] = call;
 		
 		
-		app.map.addLayer(call);
+		app.donationMap.addLayer(call);
 		
 		//alert(callout.toString());
 	

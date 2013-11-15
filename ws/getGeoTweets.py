@@ -36,6 +36,10 @@ try:
 			del t['user']
 		if '_id' in t:
 			del t['_id']
+		if 'geo' in t:
+                        lat=t['geo']['coordinates'][0]
+                        lng=t['geo']['coordinates'][1]
+                        t['geo']['coordinates']=[lng, lat]
 
 	print ''
 	print json.dumps({'results': tweets})
