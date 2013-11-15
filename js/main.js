@@ -416,7 +416,7 @@
 		//init map
 		app.donationMap = L.map("donationMap", {
 			center: [32.774917, -117.005639],
-			zoom: 10,
+			zoom: 11,
 			layers: [selectBasemap("ESRI Topographic Map")],
 			attributionControl:true
 		});			
@@ -894,7 +894,7 @@
 		function getColor1(d) {
 		//alert(d);
 			//var color = ["#FFEDA0","#FED976","#FEB24C","#FD8D3C","#FC4E2A","#E31A1C","#BD0026","#800026"];
-			var color = ["#DBDBDB","#A8A8A8","#7C7C7C","#404040 ","#080808  "];
+			var color = ["#DBDBDB","#A8A8A8","#7C7C7C","#404040 ","#080808"];
 			for (var i=color.length-1; i>=0; i--) {
 				//alert(intervals[i]);
 				if (d >= intervals[i]) return color[i];
@@ -1227,7 +1227,7 @@
 				
 				options.chartOptions = {
 					'Fletcher': {
-						fillColor: '#A15FB7',
+						fillColor: '#9900FF',
 						//minValue: 0,
 						//maxValue: 0,
 						//maxHeight: 0,
@@ -1236,7 +1236,7 @@
 						}
 					},
 					'Faulconer': {
-						fillColor: '#E27C20',
+						fillColor: '#FF6633',
 						//minValue: 0,
 						//maxValue: 0,
 						//maxHeight: 0,
@@ -1245,7 +1245,7 @@
 						}
 					},
 					'Alvarez': {
-						fillColor: '#2CC671',
+						fillColor: '#00CC66',
 						//minValue: 0,
 						//maxValue: 0,
 						//maxHeight: 0,
@@ -1254,7 +1254,7 @@
 						}
 					},
 					'Aguirre': {
-						fillColor: '#C91111',
+						fillColor: '#CC0033',
 						//minValue: 0,
 						//maxValue: 0,
 						//maxHeight: 0,
