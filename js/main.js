@@ -181,7 +181,7 @@
 			electionTime=new Date(2013,11-1,19, 0,0,0).getTime(),
 			//electionTime=new Date("November 19, 2013 08:00:00"),//.getTime(),
 			countdownTime=parseInt((electionTime-todayTime)/86400/1000)+1;
-			countdownTime=(countdownTime<0)?0:countdownTime;
+			//countdownTime=(countdownTime<0)?0:countdownTime;
 		$("#countdown label").html(countdownTime);
 		
 		
