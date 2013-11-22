@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:false
+		testMode:true
 	}
 	
 	//chart
@@ -51,6 +51,10 @@
 		//read candidates information 
 		$.getJSON("db/candidates.json", function(json){
 			app.candidates=json;
+			
+			showDialog('dialog_electionResult', 'San Diego Mayoral Special Election on Nov. 19th, 2013', {height:550});
+			
+			
 			init_UI();
 			//createDonationMap();
 			init_chart();
@@ -79,6 +83,14 @@
 			
 			
 			$.each(app.candidates, function(k,v){
+				//hide information
+				if(k=='Faulconer' || k=='Alvarez'){
+					v.values=app.candidates['Aguirre'].values;
+					$.each(v.values, function(j,val){
+						val.tweets_yesterday=0;
+					})
+				}
+	
 				//prepare chart csv content
 				chartCSVData.headers.push(k);
 				$.each(v.values, function(i,val){
@@ -146,7 +158,7 @@
 					"background-color":v.backgroundColor
 				});
 			});
-		
+			
 			
 			//add li's clicking event
 			$(".showTable").click(function(){
@@ -165,6 +177,18 @@
 					$this.siblings('a.showTable').attr('title', title);
 				}
 			});
+			
+			
+			
+			//hide information
+			//$candidate.find(".candidate-li[id='Faulconer'], .candidate-li[id='Alvarez']").append("<div class='candidate-overlay'></div>");
+			$candidate.find(".candidate-li[id='Faulconer'], .candidate-li[id='Alvarez']").each(function(){
+				var $this=$(this);
+				
+				$this.find('.candidate-twitterYesterday > a').html('N/A').unbind('click');
+				$this.find(".candidate-index").html("<div class='candidate-hide'><h2>We are sorry.</h2><p></p>In order to provide more professional services for our customers, we temporally hide the information.<p></p>If you are interested in this information, please <br><a href='mailto:info@pathgeo.com' target='_blank'>CONTACT US</a></div>").css('height', 598)
+			});
+			
 		}
 	
 	}
@@ -301,8 +325,10 @@
 				$href=$(href),
 				candidate=href.split('-')[1];
 			
-			if(app.dateFrom && app.dateTo && candidate && candidate!=''){
-				getMetrics(candidate, app.dateFrom, app.dateTo, $(href));
+			if(app.dateFrom && app.dateTo && candidate && candidate!='' && candidate !='Faulconer' && candidate!='Alvarez'){
+				getMetrics(candidate, app.dateFrom, app.dateTo, $href);
+			}else{
+				$href.html("<div class='candidate-hide'><h2>We are sorry.</h2><p></p>In order to provide more professional services for our customers, we temporally hide the information.<p></p>If you are interested in this information, please <a href='mailto:info@pathgeo.com' target='_blank'>CONTACT US</a></div>")
 			}
 			
 			$li.css({
