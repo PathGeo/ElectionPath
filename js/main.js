@@ -481,8 +481,10 @@
 			candidate=target.split('-')[1];
 		
 		//request web service to get info. on the clicked date
-		if(candidate && candidate!='' && clickDate && clickDate!=''){
+		if(candidate && candidate!='' && clickDate && clickDate!='' && candidate!='Faulconer' && candidate!='Alvarez'){
 			getMetrics(candidate, clickDate, clickDate, $(target));
+		}else{
+			$(target).html("<div class='candidate-hide'><h2>We are sorry.</h2><p></p>In order to provide more professional services for our customers, we temporally hide the information.<p></p>If you are interested in this information, please <a href='mailto:info@pathgeo.com' target='_blank'>CONTACT US</a></div>")
 		}
 	}
 	
@@ -496,8 +498,10 @@
 			candidate=target.split('-')[1];
 		
 		//request web service to get info. on the clicked date
-		if(candidate && candidate!='' && fromDate && fromDate!='' && toDate && toDate!=''){
+		if(candidate && candidate!='' && fromDate && fromDate!='' && toDate && toDate!=''&& candidate!='Faulconer' && candidate!='Alvarez'){
 			getMetrics(candidate, fromDate, toDate, $(target));
+		}else{
+			$(target).html("<div class='candidate-hide'><h2>We are sorry.</h2><p></p>In order to provide more professional services for our customers, we temporally hide the information.<p></p>If you are interested in this information, please <a href='mailto:info@pathgeo.com' target='_blank'>CONTACT US</a></div>")
 		}
 	}
 	
