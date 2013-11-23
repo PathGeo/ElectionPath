@@ -52,7 +52,7 @@
 		$.getJSON("db/candidates.json", function(json){
 			app.candidates=json;
 			
-			showDialog('dialog_electionResult', 'San Diego Mayoral Special Election on Nov. 19th, 2013', {height:550});
+			showDialog('dialog_electionResult', 'PathGeo can provide real-time customizable social media (Big Data) analytics for your election campaign', {height:570});
 			
 			
 			init_UI();
