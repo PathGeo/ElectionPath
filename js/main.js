@@ -186,7 +186,7 @@
 				var $this=$(this);
 				
 				$this.find('.candidate-twitterYesterday > a').html('N/A').unbind('click');
-				$this.find(".candidate-index").html("<div class='candidate-hide'><h2>We are sorry.</h2><p></p>In order to provide more professional services for our customers, we temporally hide the information.<p></p>If you are interested in this information, please <br><a href='mailto:info@pathgeo.com' target='_blank'>CONTACT US</a></div>").css('height', 598)
+				$this.find(".candidate-index").html("<div class='candidate-hide'><h2><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>Contact Us for More Information.</a></h2><p></p>We temporally put the information offline in order to build a sustainable business model for PathGeo<p></p>If you are interested in this information, please <br><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>CONTACT US</a></div>").css('height', 598)
 			});
 			
 		}
@@ -328,7 +328,7 @@
 			if(app.dateFrom && app.dateTo && candidate && candidate!='' && candidate !='Faulconer' && candidate!='Alvarez'){
 				getMetrics(candidate, app.dateFrom, app.dateTo, $href);
 			}else{
-				$href.html("<div class='candidate-hide'><h2>We are sorry.</h2><p></p>In order to provide more professional services for our customers, we temporally hide the information.<p></p>If you are interested in this information, please <a href='mailto:info@pathgeo.com' target='_blank'>CONTACT US</a></div>")
+				$href.html("<div class='candidate-hide'><h2><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>Contact Us for More Information.</a></h2><p></p>We temporally put the information offline in order to build a sustainable business model for PathGeo<p></p>If you are interested in this information, please <a href='https://www.pathgeo.com/?page_id=90' target='_blank'>CONTACT US</a></div>")
 			}
 			
 			$li.css({
@@ -484,7 +484,7 @@
 		if(candidate && candidate!='' && clickDate && clickDate!='' && candidate!='Faulconer' && candidate!='Alvarez'){
 			getMetrics(candidate, clickDate, clickDate, $(target));
 		}else{
-			$(target).html("<div class='candidate-hide'><h2>We are sorry.</h2><p></p>In order to provide more professional services for our customers, we temporally hide the information.<p></p>If you are interested in this information, please <a href='mailto:info@pathgeo.com' target='_blank'>CONTACT US</a></div>")
+			$(target).html("<div class='candidate-hide'><h2><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>Contact Us for More Information.</a></h2><p></p>We temporally put the information offline in order to build a sustainable business model for PathGeo<p></p>If you are interested in this information, please <a href='https://www.pathgeo.com/?page_id=90' target='_blank'>CONTACT US</a></div>")
 		}
 	}
 	
@@ -501,7 +501,7 @@
 		if(candidate && candidate!='' && fromDate && fromDate!='' && toDate && toDate!=''&& candidate!='Faulconer' && candidate!='Alvarez'){
 			getMetrics(candidate, fromDate, toDate, $(target));
 		}else{
-			$(target).html("<div class='candidate-hide'><h2>We are sorry.</h2><p></p>In order to provide more professional services for our customers, we temporally hide the information.<p></p>If you are interested in this information, please <a href='mailto:info@pathgeo.com' target='_blank'>CONTACT US</a></div>")
+			$(target).html("<div class='candidate-hide'><h2><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>Contact Us for More Information.</a></h2><p></p>We temporally put the information offline in order to build a sustainable business model for PathGeo<p></p>If you are interested in this information, please <a href='https://www.pathgeo.com/?page_id=90' target='_blank'>CONTACT US</a></div>")
 		}
 	}
 	
