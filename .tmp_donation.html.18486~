@@ -1,4 +1,4 @@
-﻿
+
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
@@ -78,7 +78,7 @@
 
 
 
-<body style='overflow:auto !important;'>
+<body style='overflow:auto;'>
 	<!-- header-->
 	<div id='header'>
 		<a href="https://www.pathgeo.com/" target='_blank' ><img src = "images/PathGeo-color.png" alt="logo" border="0" style='height:30px'/></a>
