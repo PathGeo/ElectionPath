@@ -18,15 +18,15 @@ ul {margin:0px; padding:0px; list-style:none; }
 /** count down */
 #countdown {color:#000000; font-size:18px; position:absolute; left:205px; top:-2px;  }
 #countdown label {color:#FF4B00; font-size:40px; font-weight:bold; }
-#clock {position:relative; left:51px; top:-44px; font-size:16px; color:#999999;}
+#clock {position:relative; left:54px; top:-44px; font-size:16px; color:#999999;}
 
 
 /**social media */
 #socialmedia {position:absolute; right:0px; top:3px; }
 #socialmedia li {padding:10px; float:left; position:relative; }
 #socialmedia img {width:25px; height:25px; }
-#socialmedia #stayLoop {position:relative; top:-7px; text-align:right; }
-#socialmedia #stayLoop label {font-size:16px; font-weight:600; color:#FF4B00;}
+#socialmedia #stayLoop {position:relative; top:-7px; text-align:right; cursor:pointer; }
+#socialmedia #stayLoop label {font-size:16px; font-weight:600; color:#FF4B00; cursor:pointer; }
 
 
 /**main content */

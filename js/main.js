@@ -52,7 +52,8 @@
 		$.getJSON("db/candidates.json", function(json){
 			app.candidates=json;
 			
-			showDialog('dialog_electionResult', 'PathGeo can provide real-time customizable social media (Big Data) analytics for your election campaign', {height:570});
+			//show press release dialog
+			//showDialog('dialog_electionResult', 'PathGeo can provide real-time customizable social media (Big Data) analytics for your election campaign', {height:570});
 			
 			
 			init_UI();
