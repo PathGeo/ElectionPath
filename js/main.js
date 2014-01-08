@@ -85,12 +85,12 @@
 			
 			$.each(app.candidates, function(k,v){
 				//hide information
-				if(k=='Faulconer' || k=='Alvarez'){
-					v.values=app.candidates['Aguirre'].values;
-					$.each(v.values, function(j,val){
-						val.tweets_yesterday=0;
-					})
-				}
+				// if(k=='Faulconer' || k=='Alvarez'){
+					// v.values=app.candidates['Aguirre'].values;
+					// $.each(v.values, function(j,val){
+						// val.tweets_yesterday=0;
+					// })
+				// }
 	
 				//prepare chart csv content
 				chartCSVData.headers.push(k);
@@ -183,12 +183,12 @@
 			
 			//hide information
 			//$candidate.find(".candidate-li[id='Faulconer'], .candidate-li[id='Alvarez']").append("<div class='candidate-overlay'></div>");
-			$candidate.find(".candidate-li[id='Faulconer'], .candidate-li[id='Alvarez']").each(function(){
-				var $this=$(this);
-				
-				$this.find('.candidate-twitterYesterday > a').html('N/A').unbind('click');
-				$this.find(".candidate-index").html("<div class='candidate-hide'><h2><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>Contact Us for More Information.</a></h2><p></p>We temporally put the information offline in order to build a sustainable business model for PathGeo<p></p>If you are interested in this information, please <br><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>CONTACT US</a></div>").css('height', 598)
-			});
+			// $candidate.find(".candidate-li[id='Faulconer'], .candidate-li[id='Alvarez']").each(function(){
+				// var $this=$(this);
+// 				
+				// $this.find('.candidate-twitterYesterday > a').html('N/A').unbind('click');
+				// $this.find(".candidate-index").html("<div class='candidate-hide'><h2><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>Contact Us for More Information.</a></h2><p></p>We temporally put the information offline in order to build a sustainable business model for PathGeo<p></p>If you are interested in this information, please <br><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>CONTACT US</a></div>").css('height', 598)
+			// });
 			
 		}
 	
