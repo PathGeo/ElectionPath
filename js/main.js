@@ -326,7 +326,7 @@
 				$href=$(href),
 				candidate=href.split('-')[1];
 			
-			if(app.dateFrom && app.dateTo && candidate && candidate!='' && candidate !='Faulconer' && candidate!='Alvarez'){
+			if(app.dateFrom && app.dateTo && candidate && candidate!=''){
 				getMetrics(candidate, app.dateFrom, app.dateTo, $href);
 			}else{
 				$href.html("<div class='candidate-hide'><h2><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>Contact Us for More Information.</a></h2><p></p>We temporally put the information offline in order to build a sustainable business model for PathGeo<p></p>If you are interested in this information, please <a href='https://www.pathgeo.com/?page_id=90' target='_blank'>CONTACT US</a></div>")
