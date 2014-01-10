@@ -1,4 +1,4 @@
-
+﻿
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
@@ -44,9 +44,10 @@
 	
 	<!--leaflet-->
 	<script src="js/leaflet/leaflet.js"></script>
-	<script type="text/javascript" src="js/leaflet/leaflet.heatmap.js"></script>
-	<script type="text/javascript" src="js/leaflet/leaflet.heatmap-leaflet.js"></script>
 	<script src="js/leaflet/leaflet.markercluster.js" type="text/javascript"></script>
+	<script src="js/leaflet/heatmap.js" type="text/javascript"></script>
+	<script src="js/leaflet/heatmap-leaflet.js" type="text/javascript"></script>
+	<script src="js/leaflet/QuadTree.js" type="text/javascript"></script>
 	<script src="js/pieChart/leaflet-dvf.js" type="text/javascript"></script>
 	
     <!--wordCloud-->
@@ -55,6 +56,7 @@
 	<script src="js/wordcloud/colorbrewer.v1.min.js"></script>
     
 	<!--main-->
+	<script src="js/api/pathgeo.layer.js"></script>
 	<script src="js/main.js"></script>
 	
 	<script>
@@ -81,10 +83,12 @@
 			<div id='clock'></div>
 		</div>
 		
+		
+	
 		<!-- social media-->
 		<div id='socialmedia'>
 			<ul>
-				<li><div id='stayLoop'><label>Stay in the loop</label><br>follow us for updates</div></li>
+				<li><div id='stayLoop' onclick="showDialog('dialog_electionResult', 'PathGeo can provide real-time customizable social media (Big Data) analytics for your election campaign', {height:570});"><label>Press Release</label><br>Great Social Insights</div></li>
 				<li><a href='https://www.facebook.com/pages/PathGeo/274827229311706' target='_blank'><img src='images/1383040715_social_3.png' title='Facebook' /></a></li>
 				<li><a href='https://twitter.com/PathGeo' target='_blank'><img src='images/1383041016_social_8.png' title='Twitter' /></a></li>
 				<li><a href='http://www.linkedin.com/company/pathgeo' target='_blank'><img src='images/1383040971_social_7.png' title='linkedin' /></a></li>
@@ -95,7 +99,7 @@
 	
 	<!-- title-->
 	<div id='title'>
-		<h1>ElectionPath <label> - Your social media daily look into the <br><b>2013 San Diego Mayoral Campaign (Nov. 19th)</b></label></h1>
+		<h1>ElectionPath <label> - Your social media daily look into the <br><b>2014 San Diego Mayoral Campaign (Feb. 11th)</b></label></h1>
 		<img src='images/main-img-services.png' />
 	</div>
 	
@@ -144,11 +148,11 @@
 		</div>
 
 		
-		<div class='hr'></div>
+		<!--<div class='hr'></div>-->
 		
 		
 		<!-- map-->
-		<div id='mapContent' class='mainBlock' style=''>
+		<div id='donationContent' class='mainBlock' style=''>
 			<h2>Donation Map</h2>
 			<p>Visualize Socioeconomic and Demographic Data: 
 				<select id='sel_census' onclick='layerChange()'>
@@ -178,7 +182,7 @@
 				</select>
 			</p>
 			<ul>
-				<li><div id='map'></div></li>
+				<li><div id='donationMap'></div></li>
 				<li id='legend'>
 					<h2>Legend</h2>
 					<div id='legend_candidate' class='legend'>
@@ -196,7 +200,7 @@
 		</div>
 		
 		
-		<div class='hr'></div>
+		<!--<div class='hr'></div>-->
 		
 	</div>
 	
@@ -205,7 +209,25 @@
 
 	<!--dialog table-->
 	<div id='dialog_table' class='dialog'></div>
-          
+      
+	  
+	<!--dialog electionResult-->
+	<div id='dialog_electionResult' class='dialog'>
+		<h1>ElectionPath sucessfully predicted San Diego Mayoral Special Election on Nov. 19th, 2013</h1>
+		<p>
+		ElectionPath can provide insights and assessment for your campaign activities with measurable outcomes. The results of San Diego Mayoral Special Election might be a big surprise for many polling firms and politic analysts.  But it is not a surprise at all for ElectionPath.  When people visited the ElectionPath Web App in the early morning of November 19, they saw the following numbers:  Faulconer: 77, Alvarez: 58, Fletcher: 52 (mentioned yesterday), which were approximately matched the real result on November 19th: Faulconer: #1 (43%), Alvarez: #2 (26%), and Fletcher: #3 (24%).
+		</p>
+		<h3>When every traditional polling firm went wrong, ElectionPath got the right number and shows the right path this time. </h3>
+		<ul>
+			<li><a href='http://www.kpbs.org/news/2013/nov/08/social-media-analysis-and-san-diego-mayors-race/' target='_blank'><img src='images/inews.jpg'><br><b>Social Media Analysis And The San Diego Mayor’s Race</b></a></li>
+			<li><a href='http://fox5sandiego.com/2013/11/13/sdsu-professor-analyzes-social-media-effect-on-mayors-race/#axzz2kfegv2UZ' target='_blank'><img src='images/Fox5_sandiego.png'><br><b>SDSU professor analyzes social media effect on mayor’s race</b></a></li>
+			<li><a href='http://www.nbcsandiego.com/news/local/mayor-special-election-update-232434291.html' target='_blank'><img src='images/nbc_sandiego.png'><br><b>Mayoral Election: Turnout Forecast Downgraded</b></a></li>
+			<li><a href='http://www.kusi.com/video?clipId=9529474&autostart=true' target='_blank'><img src='images/kusi.jpg'><br><b>How this "social radar" technology can provide insights on the election</b></a></li>
+		</ul>
+		<p>
+		<b>In order to build a sustainable business model for PathGeo, we temporally put some information offline. Please <a href='https://www.pathgeo.com/?page_id=90' target='_blank'>CONTACT US</a> for more information.</b>
+		</p>
+	</div>    
 	
 </body>
 </html>
