@@ -80,6 +80,7 @@
 		//read candidates
 		if(app.candidates){
 			var html="",
+				html_candidateNav="",
 				html_addWidget="",
 				$candidate=$("#candidate > ul"),
 				value=null,
@@ -157,10 +158,11 @@
 				$candidate.append(html);
 				
 				
-				
-				
-				//header
-				$("#header #candidateInfo > ul").append(html);
+				//candidate info for nav
+				html_candidateNav="<li class='candidate-li' id='"+k+"'>"+
+					 "<div class='candidate-name' style='background-color:"+v.backgroundColor+"'>"+v.name + "</div>"+
+					 "</li>";
+				$("#header #candidateInfo > ul").append(html_candidateNav);
 				
 				//give legend background
 				$("#legend-"+k).css({
