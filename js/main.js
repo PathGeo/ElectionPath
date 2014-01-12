@@ -119,7 +119,7 @@
 								"<div class='candidate-info'>"+"<a href='"+v.url_website+"' target='_blank'>Website</a><br><a href='"+v.url_twitter+"' target='_blank'>Twitter</a></div>"+
 							"</li>"+
 						 "</ul>"+
-						 "<div class='showCandidateIndex'>show more..</div>"+
+						 //"<div class='showCandidateIndex'>show more..</div>"+
 					 "</div>"+
 					 "<div class='candidate-index'>"+
 					 	"<ul>"+
@@ -197,9 +197,9 @@
 			
 			
 			//click event on show more
-			$(".showCandidateIndex").click(function(){
-				$(".candidate-index").show();
-			})
+			// $(".showCandidateIndex").click(function(){
+				// $(".candidate-index").show();
+			// })
 			
 			
 			
@@ -504,10 +504,10 @@
 			candidate=target.split('-')[1];
 		
 		//request web service to get info. on the clicked date
-		if(candidate && candidate!='' && clickDate && clickDate!='' && candidate!='Faulconer' && candidate!='Alvarez'){
+		if(candidate && candidate!='' && clickDate && clickDate!=''){
 			getMetrics(candidate, clickDate, clickDate, $(target));
 		}else{
-			$(target).html("<div class='candidate-hide'><h2><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>Contact Us for More Information.</a></h2><p></p>We temporally put the information offline in order to build a sustainable business model for PathGeo<p></p>If you are interested in this information, please <a href='https://www.pathgeo.com/?page_id=90' target='_blank'>CONTACT US</a></div>")
+			$(target).html("<div class='candidate-hide'><h2><a href='https://www.pathgeo.com/?page_id=13' target='_blank'>Contact Us for More Information.</a></h2><p></p>We temporally put the information offline in order to build a sustainable business model for PathGeo<p></p>If you are interested in this information, please <a href='https://www.pathgeo.com/?page_id=90' target='_blank'>CONTACT US</a></div>")
 		}
 	}
 	
@@ -521,10 +521,10 @@
 			candidate=target.split('-')[1];
 		
 		//request web service to get info. on the clicked date
-		if(candidate && candidate!='' && fromDate && fromDate!='' && toDate && toDate!=''&& candidate!='Faulconer' && candidate!='Alvarez'){
+		if(candidate && candidate!='' && fromDate && fromDate!='' && toDate && toDate!=''){
 			getMetrics(candidate, fromDate, toDate, $(target));
 		}else{
-			$(target).html("<div class='candidate-hide'><h2><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>Contact Us for More Information.</a></h2><p></p>We temporally put the information offline in order to build a sustainable business model for PathGeo<p></p>If you are interested in this information, please <a href='https://www.pathgeo.com/?page_id=90' target='_blank'>CONTACT US</a></div>")
+			$(target).html("<div class='candidate-hide'><h2><a href='https://www.pathgeo.com/?page_id=13' target='_blank'>Contact Us for More Information.</a></h2><p></p>We temporally put the information offline in order to build a sustainable business model for PathGeo<p></p>If you are interested in this information, please <a href='https://www.pathgeo.com/?page_id=90' target='_blank'>CONTACT US</a></div>")
 		}
 	}
 	
@@ -766,10 +766,10 @@
 		    // whether that's below the form
 		    if (y >= top) {
 		      // if so, add the fixed class
-		      $("#header #candidateInfo").show();
+		      //$("#header #candidateInfo").show();
 		    } else {
 		      // otherwise remove it
-		      $("#header #candidateInfo").hide();
+		      //$("#header #candidateInfo").hide();
 		    }
 		  });
 	}

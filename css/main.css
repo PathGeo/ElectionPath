@@ -30,6 +30,8 @@ ul {margin:0px; padding:0px; list-style:none; }
 #menu img {width:25px; height:25px; }
 #menu #stayLoop {position:relative; top:-7px; text-align:right; cursor:pointer; }
 #menu #stayLoop label {font-size:16px; font-weight:600; color:#FF4B00; cursor:pointer; }
+#menu .menu-text {padding-top:15px;}
+
 
 /** candidate info*/
 #candidateInfo {display:none;}
@@ -53,6 +55,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 /** press */
 #title #press {width:60%; color:#aaaaaa; padding-top:8px; }
 #title #press h4 {margin-bottom:5px; }
+#title #press h4 label {font-weight:normal}
 #title #press ul {width:100%; height:20px; position:relative;}
 #title #press ul li {position:relative; float:left; width:22.5%;padding:20px 1% 20px 1%; text-align:left;  }
 #title #press ul li:hover {background-color:#f1f1f1;}
@@ -62,7 +65,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 
 
 /** widget candidate */
-#candidate {height:840px; margin-top:0px; }
+#candidate {height:1200px; margin-top:0px; }
 #candidate > p {font-size:14px; color:#555555; }
 #candidate ul {width:100%; height:100%;}
 #candidate > ul > li {float:left; width:49.63%; border:1px solid #f1f1f1; background-color:#ffffff; position:relative; }
@@ -89,7 +92,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 .candidate-info {position:absolute; top:70px; left:10px; font-size:12px; color:#777777; font-weight:500; }
 
 /** candidate index*/
-.candidate-index {width:100%; margin-top:5px; border-top:1px solid #f1f1f1; display:none; }
+.candidate-index {width:100%; margin-top:5px; border-top:1px solid #f1f1f1; }
 .candidate-index ul li {position:relative;  color:#777777; font-size:12px; padding:10px 5px 10px 5px; font-weight:500; }
 .candidate-index ul li a.showTable {font-size:25px; font-weight:bold;  margin-right:5px; }
 .candidate-index ul li a {font-size:18px; font-weight:600;}
@@ -117,7 +120,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 
 
 /**information tabs */
-#informationTabs .ui-tabs-nav li {width:24.41%;padding:2px 0px 2px 0px; }
+#informationTabs .ui-tabs-nav li {width:48.41%;padding:2px 0px 2px 0px; }
 #informationTabs .ui-tabs-nav li.ui-tabs-selected {padding:2px 0px 3px 0px;}
 #informationTabs .ui-tabs-nav li.ui-tabs-selected > a {color:#ffffff;}
 #informationTabs .ui-tabs-nav li > a {font-size:15px; font-family:"Lato"}
