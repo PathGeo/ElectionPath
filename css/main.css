@@ -33,6 +33,15 @@ ul {margin:0px; padding:0px; list-style:none; }
 #menu .menu-text {padding-top:15px;}
 
 
+/**social media for donation.html */
+#socialmedia {position:absolute; right:0px; top:3px; }
+#socialmedia li {padding:10px; float:left; position:relative; }
+#socialmedia li:hover {color:#FF4B00; cursor:pointer; }
+#socialmedia img {width:25px; height:25px; }
+#socialmedia #stayLoop {position:relative; top:-7px; text-align:right; cursor:pointer; }
+#socialmedia #stayLoop label {font-size:16px; font-weight:600; color:#FF4B00; cursor:pointer; }
+#socialmedia .menu-text {padding-top:15px;}
+
 /** candidate info*/
 #candidateInfo {display:none;}
 #candidateInfo ul {width:100%; height:100%;}
