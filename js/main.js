@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:true
+		testMode:false
 	}
 	
 	//chart
