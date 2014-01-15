@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:false
+		testMode:true
 	}
 	
 	//chart
@@ -564,6 +564,35 @@
 					 "</table>";
 			
 			$target.html(html);
+			
+			
+			//add qtip content
+			$target.find("a").each(function(){
+				var $this=$(this),
+					url=encodeURIComponent($this.attr("href")),
+					apiKey='pnZc5aMtlA2G', //websnapr apikey
+					thumbnail=$("<img />").attr({
+						src: 'http://images.websnapr.com/?url=' + url + '&key=' + apiKey + '&hash=' + encodeURIComponent(websnapr_hash), //websnapr_hash is a function from websnapr script
+			            alt: 'Loading thumbnail...',
+			            width: 202,
+			            height: 152
+					});
+				
+				
+				// $this.qtip({
+					// content: thumbnail,
+		            // position: {
+		                // corner: {
+		                    // tooltip: 'bottomMiddle',
+		                    // target: 'topMiddle'
+		                // }
+		            // },
+		            // style: {
+		                // tip: true, // Give it a speech bubble tip with automatic corner detection
+		                // name: 'dark'
+		            // }
+				// });
+			});
 			
 			
 			//create social map
