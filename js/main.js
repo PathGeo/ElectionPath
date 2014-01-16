@@ -32,7 +32,8 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:false
+		testMode:false,
+		showThumbnail:true
 	}
 	
 	//chart
@@ -579,19 +580,21 @@
 					});
 				
 				
-				// $this.qtip({
-					// content: thumbnail,
-		            // position: {
-		                // corner: {
-		                    // tooltip: 'bottomMiddle',
-		                    // target: 'topMiddle'
-		                // }
-		            // },
-		            // style: {
-		                // tip: true, // Give it a speech bubble tip with automatic corner detection
-		                // name: 'dark'
-		            // }
-				// });
+				if(app.showThumbnail){
+					$this.qtip({
+						content: thumbnail,
+			            position: {
+			                corner: {
+			                    tooltip: 'bottomMiddle',
+			                    target: 'topMiddle'
+			                }
+			            },
+			            style: {
+			                tip: true, // Give it a speech bubble tip with automatic corner detection
+			                name: 'dark'
+			            }
+					});
+				}
 			});
 			
 			
