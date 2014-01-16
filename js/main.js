@@ -33,7 +33,7 @@
 		chart:[],
 		wordCloud:null,
 		testMode:false,
-		showThumbnail:true
+		showThumbnail:false
 	}
 	
 	//chart
