@@ -304,7 +304,7 @@
 				customBars: true,
 				title: '',
 				ylabel: 'The number of Tweets',
-				colors: ['#C91111', '#E27C20', '#2CC671', '#A15FB7'],
+				colors: ['#E27C20', '#2CC671'], //['#C91111', '#E27C20', '#2CC671', '#A15FB7'],
 				showRangeSelector: true,
 				highlightCircleSize: 5,
 				rangeSelectorHeight: 50,
