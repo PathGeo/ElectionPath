@@ -191,8 +191,17 @@ ul {margin:0px; padding:0px; list-style:none; }
 
 
 
-
-
+/** footer */
+#footer {width:94%; height:70px; background-color:#f1f1f1; padding:3%; margin-top:100px; color:#444444; }
+#footer ul {width:100%;}
+#footer > ul > li {float:left; }
+#footer > ul > li:nth-child(1) {width:30%;}
+#footer > ul > li:nth-child(2) {width:70%; }
+#footer #contactInfo > li {padding:5px 0px 10px 0px; position:relative;}
+#footer #contactSocialMedia {position:absolute; left:200px; top:0px; width:50%; }
+#footer #contactSocialMedia > li {float:left; padding:0px 10px 0px 10px; } 
+#footer #contactSocialMedia > li:hover {cursor:pointer;}
+#footer #contactSocialMedia img {width:28px; }
 
 /** map */
 #donationContent {width:100%; height:600px; margin-top:20px; display:none; }
