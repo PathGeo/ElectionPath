@@ -18,19 +18,26 @@ ul {margin:0px; padding:0px; list-style:none; }
 #header { background-color:#ffffff;  padding:10px; position:fixed; width:98%; z-index:1000; box-shadow: 2px 2px 10px #cccccc;}
 
 /** count down */
-#countdown {color:#000000; font-size:18px; position:absolute; left:205px; top:-2px;  }
+#countdown {color:#000000; font-size:18px; position:absolute; left:190px; top:-2px;  }
 #countdown label {color:#FF4B00; font-size:40px; font-weight:bold; }
 #clock {position:relative; left:54px; top:-44px; font-size:16px; color:#999999;}
 
 
-/**social media */
-#menu {position:absolute; right:0px; top:3px; }
+/**menu */
+#menu {position:absolute; right:320px; top:4px; }
 #menu li {padding:10px; float:left; position:relative; }
-#menu li:hover {color:#FF4B00; cursor:pointer; }
+#menu li:hover {color:#FFFFFF; cursor:pointer; border-radius:5px; background-color:#FF4B00 }
 #menu img {width:25px; height:25px; }
 #menu #stayLoop {position:relative; top:-7px; text-align:right; cursor:pointer; }
 #menu #stayLoop label {font-size:16px; font-weight:600; color:#FF4B00; cursor:pointer; }
 #menu .menu-text {padding-top:15px;}
+
+/**share*/
+#share {position:absolute; right:0px; top:13px; }
+#share li {padding:5px; float:left; position:relative; }
+#share li:hover {color:#FF4B00; cursor:pointer; }
+#share img {width:25px; height:25px; }
+#share .menu-text {padding-top:15px;}
 
 
 /**social media for donation.html */
@@ -150,7 +157,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 
 /** table */
 .table {width:90%;  margin:0 auto; border-collapse:collapse; margin-top:20px; }
-.table tr:first-child {background-color:#f1f1f1; font-weight:600; font-size:14px;  }
+.table tr:first-child {background-color:#FF4B00; font-weight:600; font-size:14px; color:#ffffff; }
 .table td {border-bottom:1px solid #f1f1f1; text-align:left !important; font-size:13px;  padding:5px; font-family:'Lato', sans-serif;}
 .table tr:not(:first-child):hover {background-color:#f1f1f1; }
 .table a {text-decoration:none; color:#359BED}

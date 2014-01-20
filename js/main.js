@@ -1,7 +1,7 @@
 	
 	//Load Google Charts and set callback
-	google.load("visualization", "1", {packages:["corechart"]});
-	google.load('visualization', '1', {packages:['table']});
+	//google.load("visualization", "1", {packages:["corechart"]});
+	//google.load('visualization', '1', {packages:['table']});
 
 	
 	//global variables
@@ -62,6 +62,7 @@
 			$.scrollIt();
 		
 			init_UI();
+			
 			//createDonationMap();
 			init_chart();
 		});
@@ -327,6 +328,9 @@
 		);
 		
 		
+		
+	
+		
 		//tabs
 		init_tabs();	
 	}
@@ -553,13 +557,13 @@
 			
 			var html="<table>"+
 						"<tr>"+
-					 	"<td><br><label>Most Active Chatters</label><p>"+((json.users instanceof Array)?createTable(json.users):"None")+"</p></td>"+
-						"<td><br><label>Top Mentioned People</label><p>"+((json.mentions instanceof Array)?createTable(json.mentions):"None")+"</p></td>"+
-						"<td><br><label>Top Hashtags</label><p>"+((json.hashtags instanceof Array)?createTable(json.hashtags):"None")+"</p></td>"+
-						"</tr><tr>"+
 						"<td><br><label>Top Tweeted URLs</label><p>"+((json.urls instanceof Array)?createTable(json.urls):"None")+"</p></td>"+
 						"<td><br><label>Top Retweets</label><p>"+((json.retweets instanceof Array)?createTable(json.retweets):"None")+"</p></td>"+
 					 	"<td><br><label>Word-Cloud Map</label><P></p><div id='wordcloud'></div></td>"+
+					 	"</tr><tr>"+
+					 	"<td><br><label>Most Active Chatters</label><p>"+((json.users instanceof Array)?createTable(json.users):"None")+"</p></td>"+
+						"<td><br><label>Top Mentioned People</label><p>"+((json.mentions instanceof Array)?createTable(json.mentions):"None")+"</p></td>"+
+						"<td><br><label>Top Hashtags</label><p>"+((json.hashtags instanceof Array)?createTable(json.hashtags):"None")+"</p></td>"+
 					 	"</tr>"+
 						"<tr><td colspan=3 id='td_map'><br><label>GeoTagged Tweets' Map</label><p><div id='"+candidate+"_socialMap' class='socialMap'></div></p></td></tr>"+
 					 "</table>";

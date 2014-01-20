@@ -29,12 +29,13 @@
 	
 	
 	<!--chart-->
-	<script type="text/javascript" src="https://www.google.com/jsapi"></script>  
+	<!--<script type="text/javascript" src="https://www.google.com/jsapi"></script> -->
+	
 	<!--jQuery-->
 	<script src="js/jquery/jquery-1.7.2.min.js"></script>
 	<script src="js/jquery/jquery-ui-1.8.16.custom.min.js"></script>
 	<script scr='js/jquery/jquery.ui.touch-punch.min.js'></script>
-	<script src='js/jquery/jquery-fixheadertable.min.js'></script>
+	<!--<script src='js/jquery/jquery-fixheadertable.min.js'></script>-->
 	
 	<!--scroll-->
 	<script src='js/jquery/jquery.scrollIt.min.js'></script>
@@ -54,7 +55,7 @@
 	
 	<!--leaflet-->
 	<script src="js/leaflet/leaflet.js"></script>
-	<script src="js/leaflet/leaflet.markercluster.js" type="text/javascript"></script>
+	<!--<script src="js/leaflet/leaflet.markercluster.js" type="text/javascript"></script>-->
 	<script src="js/leaflet/heatmap.js" type="text/javascript"></script>
 	<script src="js/leaflet/heatmap-leaflet.js" type="text/javascript"></script>
 	<script src="js/leaflet/QuadTree.js" type="text/javascript"></script>
@@ -96,6 +97,21 @@
 	-->
 	
 	
+	<!--twitter share-->
+	<!--<a href="https://twitter.com/share" class="twitter-share-button">Tweet</a>
+	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+	-->
+	
+	<!-- linkedin share-->
+	<!--<script src="//platform.linkedin.com/in.js" type="text/javascript">
+	 lang: en_US
+	</script>
+	<script type="IN/Share" data-url="https://www.pathgeo.com/electionpath" data-counter="top"></script>-->
+	
+	
+	
+	
+	
 	<!-- header-->
 	<div id='header'>
 		<a href="https://www.pathgeo.com/" target='_blank' ><img src = "images/PathGeo-color.png" alt="logo" border="0" style='height:30px'/></a>
@@ -106,21 +122,68 @@
 			<div id='clock'></div>
 		</div>
 		
-		<!-- social media-->
+		<!-- share-->
 		<div id='menu'>
 			<ul>
 				<li data-scroll-nav="0" class='menu-text'>HOME</li>
 				<li data-scroll-nav="1" class='menu-text'>TREND</li>
 				<!--<li data-scroll-nav="2" class='menu-text'>MAP</li>-->
 				<!--<li><div id='stayLoop' onclick="showDialog('dialog_electionResult', 'PathGeo can provide real-time customizable social media (Big Data) analytics for your election campaign', {height:570});">Press</li>-->
-				<li><a href='https://www.facebook.com/sharer/sharer.php?app_id=309437425817038&sdk=joey&u=https%3A%2F%2Fwww.pathgeo.com%2Felectionpath%2F&display=popup' target='_blank'><img src='images/1383040715_social_3.png' title='Share on Facebook' /></a></li>
-				<!--<li><a href='https://www.facebook.com/pages/PathGeo/274827229311706' target='_blank'><img src='images/1383040715_social_3.png' title='Facebook' /></a></li>-->
-				<li><a href='https://twitter.com/PathGeo' target='_blank'><img src='images/1383041016_social_8.png' title='Twitter' /></a></li>
-				<li><a href='http://www.linkedin.com/company/pathgeo' target='_blank'><img src='images/1383040971_social_7.png' title='linkedin' /></a></li>
-				<li><a href='https://plus.google.com/113145853913642679086/posts' target='_blank'><img src='images/1383040961_social_0.png' title='google+' /></a></li>
 			</ul>
 		</div>
 		
+		
+		<!-- share-->
+		<div id='share'>
+			<ul>
+				<!--facebook-->
+				<li>
+					<div id="fb-root"></div>
+					<script>(function(d, s, id) {
+					  var js, fjs = d.getElementsByTagName(s)[0];
+					  if (d.getElementById(id)) return;
+					  js = d.createElement(s); js.id = id;
+					  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+					  fjs.parentNode.insertBefore(js, fjs);
+					}(document, 'script', 'facebook-jssdk'));</script>
+					<div class="fb-share-button" data-href="https://www.pathgeo.com/electionpath" data-type="button"></div>
+				</li>
+				
+				
+				<!-- twitter-->
+				<li>
+					<a href="https://twitter.com/share" class="twitter-share-button" data-url="https://www.pathgeo.com/electionpath" data-count="none">Tweet</a>
+					<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+				</li>
+				
+				
+				<!-- linked -->
+				<li>
+					<script src="//platform.linkedin.com/in.js" type="text/javascript">
+					 lang: en_US
+					</script>
+					<script type="IN/Share" data-url="https://www.pathgeo.com/electionpath"></script>
+				</li>
+				
+				<!--google+ -->
+				<li>
+					<!-- Place this tag where you want the share button to render. -->
+					<div class="g-plus" data-action="share" data-annotation="none"></div>
+					
+					<!-- Place this tag after the last share tag. -->
+					<script type="text/javascript">
+					  (function() {
+					    var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+					    po.src = 'https://apis.google.com/js/platform.js';
+					    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+					  })();
+					</script>	
+				</li>
+			</ul>
+		</div>
+		
+
+				
 		<!-- candidate info-->
 		<span id='candidateInfo'>
 			<ul></ul>
@@ -180,7 +243,7 @@
 			<div id='chartContent'>
 				<ul>
 					<li style='width:25%;'><b>Step 1:</b><br>Click on a specific date on the chart or select a range of dates (gray zone)<p></p><br><b>Step 2:</b><br>Select ONE candidate from below to see what happened that given day or range. (Most popular  re-tweets, Hashtags, mentioned, URLs, chatters, etc.)</li>
-					<li style='width:70%;'><div id='chart' style='width:100%'></div></li>
+					<li style='width:70%;'><div id='chart' style='width:95%'></div></li>
 				</ul>
 			
 				<div id='chart_queryDate'>Current Search Date: <p></p></div>
