@@ -65,6 +65,8 @@
 			
 			//createDonationMap();
 			init_chart();
+			
+		
 		});
 	});
 	
@@ -557,13 +559,13 @@
 			
 			var html="<table>"+
 						"<tr>"+
-						"<td><br><label>Top Tweeted URLs</label><p>"+((json.urls instanceof Array)?createTable(json.urls):"None")+"</p></td>"+
-						"<td><br><label>Top Retweets</label><p>"+((json.retweets instanceof Array)?createTable(json.retweets):"None")+"</p></td>"+
+						"<td><br><label>Top Tweeted Webpages</label><p>"+((json.urls instanceof Array)?createTable("topWebpage",json.urls, {readOpenGraph:true}):"None")+"</p></td>"+
+						"<td><br><label>Top Retweets</label><p>"+((json.retweets instanceof Array)?createTable("topRetweet", json.retweets):"None")+"</p></td>"+
 					 	"<td><br><label>Word-Cloud Map</label><P></p><div id='wordcloud'></div></td>"+
 					 	"</tr><tr>"+
-					 	"<td><br><label>Most Active Chatters</label><p>"+((json.users instanceof Array)?createTable(json.users):"None")+"</p></td>"+
-						"<td><br><label>Top Mentioned People</label><p>"+((json.mentions instanceof Array)?createTable(json.mentions):"None")+"</p></td>"+
-						"<td><br><label>Top Hashtags</label><p>"+((json.hashtags instanceof Array)?createTable(json.hashtags):"None")+"</p></td>"+
+					 	"<td><br><label>Most Active Chatters</label><p>"+((json.users instanceof Array)?createTable("mostActiveChatter",json.users):"None")+"</p></td>"+
+						"<td><br><label>Top Mentioned People</label><p>"+((json.mentions instanceof Array)?createTable("topMentionedPeople", json.mentions):"None")+"</p></td>"+
+						"<td><br><label>Top Hashtags</label><p>"+((json.hashtags instanceof Array)?createTable("topHashtag",json.hashtags):"None")+"</p></td>"+
 					 	"</tr>"+
 						"<tr><td colspan=3 id='td_map'><br><label>GeoTagged Tweets' Map</label><p><div id='"+candidate+"_socialMap' class='socialMap'></div></p></td></tr>"+
 					 "</table>";
@@ -612,10 +614,15 @@
 			
 			
 			//create Table
-			function createTable(array){
+			function createTable(type, array, options){
 				var html_content="",
 					html_header="<tr><td class='rank'>Top</td><td class='value'>Value</td><td class='count'>#</td></tr>",
 					value='';
+				
+				//options
+				if(!options){options={}}
+				options.readOpenGraph=false || options.readOpenGraph;
+				
 				
 				$.each(array, function(i,obj){
 					html_content+='<tr>'+
@@ -629,7 +636,23 @@
 									}
 								  })()+"</td>"+
 								  '<td class="count">'+obj.count+"</td>"+
-								  "</tr>";
+								  "</tr>"+
+
+								  //read open graph for each url
+								  "<tr><td colspan=3 id='opengraph-"+type+"-"+i+"' class='opengraph'>"+
+								  (function(){
+								  	if(options.readOpenGraph){
+								  		$.getJSON("ws/getOpengraph.py?url="+obj.url, function(json){
+									  		if(!json.error){
+									  			var msg="<img src='"+json.image+"' /><label>"+json.description+"</label>";
+									  			$("#opengraph-"+type+"-"+i).html(msg).show().click(function(){
+									  				window.open(obj.url);
+									  			});
+									  		}
+									  	});
+								  	}
+								  })()+
+								  "</td></tr>";
 				});
 			
 				return "<table class='table'>"+html_header+html_content+"</table>";

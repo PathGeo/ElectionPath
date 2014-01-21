@@ -15,7 +15,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 .scroll-index{margin:50px 0px 50px 0px; }
 
 /** header */
-#header { background-color:#ffffff;  padding:10px; position:fixed; width:98%; z-index:1000; box-shadow: 2px 2px 10px #cccccc;}
+#header { background-color:#ffffff;  padding:10px; position:fixed; width:98%; z-index:2000; box-shadow: 2px 2px 10px #cccccc;}
 
 /** count down */
 #countdown {color:#000000; font-size:18px; position:absolute; left:190px; top:-2px;  }
@@ -173,6 +173,12 @@ ul {margin:0px; padding:0px; list-style:none; }
     hyphens: auto;}
 .table .count {width:10% !important;}
 
+
+/**open graph*/
+.opengraph {display:none;}
+.opengraph:hover {cursor:pointer; }
+.opengraph > img {float:left; max-height:100px; max-width:30%;  }
+.opengraph > label {float:right; max-width:65%; padding:0% 2.5% 0% 2.5%; color:#555555; font-size:11px; font-weight:normal;  }
 
 /** matrix table */
 .matrixTable {width:99%;  margin:0 auto; border-collapse:collapse; margin-top:20px; }
