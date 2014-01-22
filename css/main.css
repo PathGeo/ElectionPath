@@ -149,7 +149,8 @@ ul {margin:0px; padding:0px; list-style:none; }
 */
 .informationContent {height:auto; }
 .informationContent ul {width:100%;}
-.informationContent ul > li {width:33%; height:380px; float:left; text-align:center; border:1px solid #f1f1f1; font-family:"Lato"; }
+/*.informationContent ul > li {width:33%; height:380px; float:left; text-align:center; border:1px solid #f1f1f1; font-family:"Lato"; }
+*/
 .informationContent label {font-weight:600; font-size:16px;}
 .informationContent > table {width:100%; font-family:"Lato"; }
 .informationContent > table td {width:33%;border:1px solid #f1f1f1; text-align:center; vertical-align:top;}
@@ -174,11 +175,16 @@ ul {margin:0px; padding:0px; list-style:none; }
 .table .count {width:10% !important;}
 
 
-/**open graph*/
-.opengraph {display:none;}
+
+/** opengraph */
+.opengraph { width:100%;  color:#555555; font-size:11px; font-weight:normal; }
 .opengraph:hover {cursor:pointer; }
-.opengraph > img {float:left; max-height:100px; max-width:30%;  }
-.opengraph > label {float:right; max-width:65%; padding:0% 2.5% 0% 2.5%; color:#555555; font-size:11px; font-weight:normal;  }
+.opengraph li {height:auto; position:relative;}
+.opengraph .opengraph-description {margin-top:10px; }
+.opengraph .opengraph-image {max-height:60px; max-width:30%;}
+.opengraph .opengraph-title {position:absolute;right:0px; top:-2px;  max-width:63%; padding:0% 2.5% 0% 2.5%; font-size:11px; font-weight:600; }
+
+
 
 /** matrix table */
 .matrixTable {width:99%;  margin:0 auto; border-collapse:collapse; margin-top:20px; }

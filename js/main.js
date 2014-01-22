@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:false,
+		testMode:true,
 		showThumbnail:false
 	}
 	
@@ -577,13 +577,13 @@
 			$target.find("a").each(function(){
 				var $this=$(this),
 					url=encodeURIComponent($this.attr("href")),
-					apiKey='pnZc5aMtlA2G', //websnapr apikey
-					thumbnail=$("<img />").attr({
-						src: 'http://images.websnapr.com/?url=' + url + '&key=' + apiKey + '&hash=' + encodeURIComponent(websnapr_hash), //websnapr_hash is a function from websnapr script
-			            alt: 'Loading thumbnail...',
-			            width: 202,
-			            height: 152
-					});
+					apiKey='pnZc5aMtlA2G'; //websnapr apikey
+					// thumbnail=$("<img />").attr({
+						// src: 'http://images.websnapr.com/?url=' + url + '&key=' + apiKey + '&hash=' + encodeURIComponent(websnapr_hash), //websnapr_hash is a function from websnapr script
+			            // alt: 'Loading thumbnail...',
+			            // width: 202,
+			            // height: 152
+					// });
 				
 				
 				if(app.showThumbnail){
@@ -627,32 +627,34 @@
 				$.each(array, function(i,obj){
 					html_content+='<tr>'+
 								  '<td class="rank">'+obj.rank+'</td>'+
-								  "<td class='value'>"+
+								  "<td class='value' id='opengraph-"+type+"-"+i+"'>"+
 								  (function(){
-								  	if(obj.url){
-										return "<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>";
-									}else{
-										return obj.value;
-									}
-								  })()+"</td>"+
-								  '<td class="count">'+obj.count+"</td>"+
-								  "</tr>"+
-
-								  //read open graph for each url
-								  "<tr><td colspan=3 id='opengraph-"+type+"-"+i+"' class='opengraph'>"+
-								  (function(){
-								  	if(options.readOpenGraph){
+								  	var result=obj.value;
+								  	
+								  	if(obj.url){result="<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>"}
+								  	
+									//read opengraph
+									if(options.readOpenGraph){
 								  		$.getJSON("ws/getOpengraph.py?url="+obj.url, function(json){
 									  		if(!json.error){
-									  			var msg="<img src='"+json.image+"' /><label>"+json.description+"</label>";
-									  			$("#opengraph-"+type+"-"+i).html(msg).show().click(function(){
+									  			var msg="<div class='opengraph'><ul>"+
+									  						"<li><img src='"+json.image+"' class='opengraph-image' /><label class='opengraph-title'>"+json.title+"</label></li>"+
+									  						"<li class='opengraph-description'>"+json.description+"</li>"+
+									  					"</ul></div>";
+									  			$("#opengraph-"+type+"-"+i).html(msg).click(function(){
 									  				window.open(obj.url);
-									  			});
+									  			}).find(".opengraph-description").text(function(index, text) {
+												    return text.substr(0, 150) + "....(show more)";
+												});
 									  		}
 									  	});
+									  	
+									  	//result+="<br><img src='images/loading.gif' />Preview";
 								  	}
-								  })()+
-								  "</td></tr>";
+								  	return result;
+								  })()+"</td>"+
+								  '<td class="count">'+obj.count+"</td>"+
+								  "</tr>";
 				});
 			
 				return "<table class='table'>"+html_header+html_content+"</table>";
