@@ -47,7 +47,7 @@ try:
 	for indx, item in enumerate(topRTs):
 		retweeted = col.find_one({'_id': item[0]})
 		if retweeted and 'text' in retweeted:
-			topRTTexts.append({'value': retweeted['text'], 'count': item[1], 'url': TWEET_URL % (retweeted['user']['screen_name'], retweeted['id']), 'rank': indx + 1})
+			topRTTexts.append({'value': retweeted['text'], 'count': item[1], 'url': TWEET_URL % (retweeted['user']['screen_name'], retweeted['id']), 'profile_image': retweeted['profile_image_url'], 'rank': indx + 1})
 		
 
 	output = {}
