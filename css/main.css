@@ -182,7 +182,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 .opengraph li {height:auto; position:relative;}
 .opengraph .opengraph-description {margin-top:10px; }
 .opengraph .opengraph-image {max-height:60px; max-width:30%;}
-.opengraph .opengraph-title {position:absolute;right:0px; top:-2px;  max-width:63%; padding:0% 2.5% 0% 2.5%; font-size:11px; font-weight:600; }
+.opengraph .opengraph-title {position:absolute; left:32%; top:-2px;  max-width:63%; padding:0% 2.5% 0% 2.5%; font-size:11px; font-weight:600; }
 
 
 

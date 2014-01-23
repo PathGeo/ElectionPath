@@ -636,7 +636,7 @@
 									//read opengraph
 									if(options.readOpenGraph){
 								  		$.getJSON("ws/getOpengraph.py?url="+obj.url, function(json){
-									  		if(!json.error){
+									  		if(!json.error && json){
 									  			var msg="<div class='opengraph'><ul>"+
 									  						"<li><img src='"+json.image+"' class='opengraph-image' /><label class='opengraph-title'>"+json.title+"</label></li>"+
 									  						"<li class='opengraph-description'>"+json.description+"</li>"+
@@ -651,6 +651,15 @@
 									  	
 									  	//result+="<br><img src='images/loading.gif' />Preview";
 								  	}
+								  	
+								  	//if retweet
+								  	if(type=='topRetweet'){
+								  		result="<div class='opengraph' onclick=\"window.open('"+obj.url+"')\"><ul>"+
+									  				"<li><img src='"+obj.profile_image+"' class='opengraph-image' /><label class='opengraph-title'>"+obj.profile_screenName+"</label></li>"+
+									  				"<li class='opengraph-description'>"+obj.value+"</li>"+
+									  			"</ul></div>";
+								  	}
+								  	
 								  	return result;
 								  })()+"</td>"+
 								  '<td class="count">'+obj.count+"</td>"+
