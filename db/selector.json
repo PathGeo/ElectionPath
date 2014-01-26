@@ -1,0 +1,137 @@
+{
+	"voice":{
+		"width":150,
+		"selectText": "Select a voice",
+		"ddData":[{
+			"text": "Everyone's voice",
+	        "value": "everyone",
+	        "selected": false,
+	        "description": "Everyone's voice in Twitter",
+	        "imageSrc": ""
+		},
+		{
+			"text": "Candidate's voice",
+	        "value": "candidate",
+	        "selected": false,
+	        "description": "Candidate's voice in Twitter",
+	        "imageSrc": ""
+		}
+		]
+	},
+	
+	"category":{
+		"width":150,
+		"selectText": "Select a category",
+		"ddData":[{
+			"text": "All",
+	        "value": "All",
+	        "selected": false,
+	        "description": "Category",
+	        "imageSrc": ""
+		},
+		{
+			"text": "Business",
+	        "value": "Business",
+	        "selected": false,
+	        "description": "Category",
+	        "imageSrc": ""
+		},
+		{
+			"text": "Debate",
+	        "value": "Debate",
+	        "selected": false,
+	        "description": "Category",
+	        "imageSrc": ""
+		},
+		{
+			"text": "Endorsement",
+	        "value": "Endorsement",
+	        "selected": false,
+	        "description": "Category",
+	        "imageSrc": ""
+		},
+		{
+			"text": "Education",
+	        "value": "Education",
+	        "selected": false,
+	        "description": "Category",
+	        "imageSrc": ""
+		},
+		{
+			"text": "Jobs",
+	        "value": "Jobs",
+	        "selected": false,
+	        "description": "Category",
+	        "imageSrc": ""
+		},
+		{
+			"text": "Labor",
+	        "value": "Labor",
+	        "selected": false,
+	        "description": "Category",
+	        "imageSrc": ""
+		},
+		{
+			"text": "Money",
+	        "value": "Money",
+	        "selected": false,
+	        "description": "Category",
+	        "imageSrc": ""
+		},
+		{
+			"text": "Neighborhood",
+	        "value": "Neighborhood",
+	        "selected": false,
+	        "description": "Category",
+	        "imageSrc": ""
+		},
+		{
+			"text": "Police",
+	        "value": "Police",
+	        "selected": false,
+	        "description": "Category",
+	        "imageSrc": ""
+		}
+		]
+	},
+	
+	"location":{
+		"width":150,
+		"selectText": "Select a location",
+		"ddData":[{
+			"text": "92123",
+	        "value": "92123",
+	        "selected": false,
+	        "description": "Location",
+	        "imageSrc": ""
+		},
+		{
+			"text": "La Mesa",
+	        "value": "La Mesa",
+	        "selected": false,
+	        "description": "Location",
+	        "imageSrc": ""
+		}
+		]
+	},
+	
+	"topic":{
+		"width":150,
+		"selectText": "Select a topic",
+		"ddData":[{
+			"text": "Everyone's voice",
+	        "value": 0,
+	        "selected": false,
+	        "description": "Everyone's voice in Twitter",
+	        "imageSrc": ""
+		},
+		{
+			"text": "Candidate's voice",
+	        "value": 0,
+	        "selected": false,
+	        "description": "Candidate's voice in Twitter",
+	        "imageSrc": ""
+		}
+		]
+	}
+}

@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:true,
+		testMode:false,
 		showThumbnail:false
 	}
 	
@@ -49,8 +49,7 @@
 
 	//dom ready
 	$(function() { 
-		//read selector.json file to compose dropdown list
-		readSelector();
+		
 		
 		//read candidates information 
 		$.getJSON("db/candidates.json", function(json){
@@ -72,28 +71,6 @@
 	});
 	
 	
-	
-	/**
-	 * use ddslick jquery plugin to create dropdown list 
-	 */
-	function readSelector(){
-		$.getJSON("db/selector.json", function(json){
-			$selector=$("#selector");
-			
-			$.each(json, function(k,v){
-				$selector.append("<div id='"+k+"' class='selector'></div>");
-				
-				$selector.find("#"+k).ddslick({
-					data: v.ddData,
-					width: v.width,
-					selectText: v.selectText,
-					onSelected: function(selectedData){
-						console.log(selectedData)
-					}
-				});
-			});
-		})
-	}
 
 	
 	/**
