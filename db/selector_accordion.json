@@ -1,0 +1,10 @@
+{
+	"VOICE":{
+		"description":"Select a voice",
+		"values":["People's Voice", "Candidate's Voice"]
+	},
+	"CATEGORY":{
+		"description":"Select a category",
+		"values":["All", "Education", "Endorsement", "Money", "Debate", "Neighborhood", "Business", "Labor", "Jobs", "Police"]
+	}
+}

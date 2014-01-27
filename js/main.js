@@ -50,7 +50,10 @@
 	//dom ready
 	$(function() { 
 		//read selector.json file to compose dropdown list
-		readSelector();
+		//init_ddslick();
+		
+		//init menu
+		init_menu();
 		
 		//read candidates information 
 		$.getJSON("db/candidates.json", function(json){
@@ -76,8 +79,8 @@
 	/**
 	 * use ddslick jquery plugin to create dropdown list 
 	 */
-	function readSelector(){
-		$.getJSON("db/selector.json", function(json){
+	function init_ddslick(){
+		$.getJSON("db/selector_ddslick.json", function(json){
 			$selector=$("#selector");
 			
 			$.each(json, function(k,v){
@@ -94,6 +97,41 @@
 			});
 		})
 	}
+	
+	
+	
+	/**
+	 * create Menu 
+	 */
+	function init_menu(){
+		$.getJSON("db/selector_accordion.json", function(json){
+			var html="";
+		
+			$.each(json, function(k,v){
+				html+="<div class='menuGroup'>"+
+						  "<h4>"+k+"</h4>"+
+						  "<p>"+v.description+"</p>"+
+						  "<ul class='subMenu'>"+
+						  	(function(){
+						  		var result="";
+						  		$.each(v.values, function(i,val){
+						  			result+="<li>"+val+"</li>";
+						  		})
+						  		return result;
+						  	})()+
+					  	  "</ul>"+
+					  "</div>";
+			});
+			
+			$("#accordionMenu").html(html).find(".subMenu li").click(function(){
+				var $this=$(this);
+				
+				$this.addClass("subMenuClick").siblings().removeClass("subMenuClick")
+			});
+		});
+	}
+	
+	
 
 	
 	/**
