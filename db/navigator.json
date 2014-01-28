@@ -1,0 +1,14 @@
+{
+	"TOPICS":{
+		"description":"",
+		"values":["Home", "Top Webpage", "Top Retweet", "WordCloud", "Time-Series Chart", "Map"]
+	},
+	"VOICE":{
+		"description":"Select a voice",
+		"values":["People's Voice", "Candidate's Voice"]
+	},
+	"CATEGORY":{
+		"description":"Select a category",
+		"values":["All", "Business", "Debate", "Endorsement",  "Jobs and Labor", "Neighborhood"]
+	}
+}

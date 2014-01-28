@@ -62,8 +62,7 @@
 			//show press release dialog
 			//showDialog('dialog_electionResult', 'PathGeo can provide real-time customizable social media (Big Data) analytics for your election campaign', {height:570});
 			
-			//scroll
-			$.scrollIt();
+			
 		
 			init_UI();
 			
@@ -104,7 +103,7 @@
 	 * create Menu 
 	 */
 	function init_menu(){
-		$.getJSON("db/selector_accordion.json", function(json){
+		$.getJSON("db/navigator.json", function(json){
 			var html="";
 		
 			$.each(json, function(k,v){
@@ -115,7 +114,19 @@
 						  	(function(){
 						  		var result="";
 						  		$.each(v.values, function(i,val){
-						  			result+="<li>"+val+"</li>";
+						  			if(k=='TOPICS'){
+						  				if(i==0){
+						  					result+="<li data-scroll-nav='"+i+"' class='subMenuClick'>"+val+"</li>";
+						  				}else{
+						  					result+="<li data-scroll-nav='"+i+"'>"+val+"</li>";
+						  				}
+						  			}else{
+						  				if(i==0){
+						  					result+="<li class='subMenuClick'>"+val+"</li>";
+						  				}else{
+						  					result+="<li>"+val+"</li>";
+						  				}
+						  			}
 						  		})
 						  		return result;
 						  	})()+
@@ -123,11 +134,15 @@
 					  "</div>";
 			});
 			
-			$("#accordionMenu").html(html).find(".subMenu li").click(function(){
+			//click event on each li in subMenu
+			$("#navigator").html(html).find(".subMenu li").click(function(){
 				var $this=$(this);
-				
 				$this.addClass("subMenuClick").siblings().removeClass("subMenuClick")
-			});
+			})
+			
+			
+			//scroll
+			$.scrollIt();
 		});
 	}
 	
