@@ -32,18 +32,13 @@ ul {margin:0px; padding:0px; list-style:none; }
 
 /**menu */
 #menu {position:absolute; right:2%; top:-3px;  }
-#menu li {padding:10px 20px 10px 20px; float:left; position:relative; }
-#menu li:hover {color:#FFFFFF; cursor:pointer; border-radius:5px; background-color:#FF4B00 }
+#menu li {padding:10px 20px 10px 20px; float:left; position:relative; border-left:1px solid #f1f1f1; }
+#menu li:hover {color:#FF4B00; cursor:pointer;  }
 #menu img {width:25px; height:25px; }
 #menu #stayLoop {position:relative; top:-7px; text-align:right; cursor:pointer; }
 #menu #stayLoop label {font-size:16px; font-weight:600; color:#FF4B00; cursor:pointer; }
 #menu .menu-text {padding-top:15px;}
 
-/** selector */
-#selectContent {padding-left:75px !important; }
-#selector {width:100%; height:100%; }
-.dd-container {float:left; padding:0px 5px 0px 5px; font-size:12px; }
-.dd-container a {text-decoration:none; color:#000000;}
 
 /**share*/
 #share {position:absolute; right:20px; top:5px; display:none;  }
@@ -62,19 +57,20 @@ ul {margin:0px; padding:0px; list-style:none; }
 #socialmedia #stayLoop label {font-size:16px; font-weight:600; color:#FF4B00; cursor:pointer; }
 #socialmedia .menu-text {padding-top:15px;}
 
-/** candidate info*/
-#candidateInfo {display:none;}
-#candidateInfo ul {width:100%; height:100%;}
-#candidateInfo > ul > li {float:left; width:49.63%; border:1px solid #f1f1f1; background-color:#ffffff; position:relative; }
-#candidateInfo > ul > li:hover {background-color:#f1f1f1;}
+
+/** candidateNavBar */
+#candidateNavBar {position:absolute; top:40px; right:0px; width:82%; padding:0px 2% 0px 2%; }
+#candidateNavBar {display:none;}
+#candidateNavBar ul {width:100%; height:100%;}
+#candidateNavBar > ul > li {float:left; width:49.63%; border:1px solid #f1f1f1; background-color:#ffffff; position:relative; }
 
 
 /** main */
 #main {height:auto; }
 
 /**accordion Menu*/
-#navigator {width:13%; margin-top:45px; padding:5px 0px 5px 1%; position:fixed; border-right:1px solid #f1f1f1; }
-.menuGroup {margin-bottom:30px;}
+#navigator {width:13%; margin-top:45px; padding:5px 0px 5px 1%; position:fixed; border-right:1px solid #eeeeee; }
+.menuGroup {padding-bottom:30px; border-bottom:1px solid #f1f1f1; }
 .menuGroup h4 {margin-bottom:5px; }
 .menuGroup p {color:#999999; font-size:12px;}
 .menuGroup .subMenu li {padding:4px; padding-left:7px; color:#000000; font-size:12px;  }
@@ -85,7 +81,12 @@ ul {margin:0px; padding:0px; list-style:none; }
 /**main content */
 #mainContent {width:82%; padding:5px 2% 0px 2%; float:right;}
 #mainContent > div {width:100%; position:relative}
-#mainContent .mainBlock {margin:60px 0px 50px 0px;}
+
+.mainBlock {margin:60px 0px 50px 0px; border-bottom:3px solid #f1f1f1; }
+.mainBlock > ul {width:100%; height:100%;}
+.mainBlock > ul > li {float:left; width:49.63%; border:1px solid #f1f1f1; background-color:#ffffff; position:relative; }
+.mainBlock > ul > li:hover {background-color:#f1f1f1;}
+.mainBlock > p {color:#555555; }
 
 
 /** title */
@@ -108,9 +109,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 /** widget candidate */
 #candidate {height:1200px; margin-top:0px; }
 #candidate > p {font-size:14px; color:#555555; }
-#candidate ul {width:100%; height:100%;}
-#candidate > ul > li {float:left; width:49.63%; border:1px solid #f1f1f1; background-color:#ffffff; position:relative; }
-#candidate > ul > li:hover {background-color:#f1f1f1;}
+
 
 
 /** candidate name */

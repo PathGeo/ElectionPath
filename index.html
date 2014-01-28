@@ -168,7 +168,7 @@
 
 		
 		<!-- candidate info-->
-		<span id='candidateInfo'>
+		<span id='candidateNavBar'>
 			<ul></ul>
 		</span>
 	</div>
@@ -181,11 +181,9 @@
 		
 	<!-- main content-->
 	<div id='mainContent'>
-			<!-- scroll index-->
-			<div data-scroll-index="0"  class='scroll-index'></div>
-			
 			<!-- candidates-->
-			<div id='candidate' class='mainBlock' >
+			<div data-scroll-index="0" class='scroll-index' ></div>
+			<div id='candidate' class='mainBlock'>
 				<!-- title-->
 				<div id='title'>
 					<h1>ElectionPath <label> - Your social media daily look into the <br><b>2014 San Diego Mayoral Campaign (Feb. 11th)</b></label></h1>
@@ -197,18 +195,43 @@
 				<p>Please click on each number to see more detail information.</p>
 				<ul></ul>
 			</div>
+
 			
-			<div class='hr'></div>
+	
+			<!-- top webpage-->
+			<div data-scroll-index="1" class='scroll-index' ></div>
+			<div id='topWebpage' class='mainBlock' >
+				<h2>Top Webpage</h2>
+				<p>Top Webpage in last 24 hours</p>
+				<ul></ul>
+			</div>
 			
 			
-			<!-- scroll index-->
-			<div data-scroll-index="1"  class='scroll-index'></div>
-				
-				
-			<!--detailInformation-->
-			<div id='detailInformation' class='mainBlock' >
-				<h2>Detail information per candidate</h2>
-				
+			<!-- top retweet-->
+			<div data-scroll-index="2" class='scroll-index' ></div>
+			<div id='topRetweet' class='mainBlock' >
+				<h2>Top Retweet</h2>
+				<p>Top Retweet in last 24 hours</p>
+				<ul></ul>
+			</div>
+
+			
+			
+			
+			<!-- wordcloud-->
+			<div data-scroll-index="3" class='scroll-index' ></div>
+			<div id='wordcloud' class='mainBlock' >
+				<h2>Word Cloud</h2>
+				<p>Most frequent keywords in last 24 hours</p>
+				<ul></ul>
+			</div>
+		
+			
+			<!-- time-series chart-->	
+			<div data-scroll-index="4" class='scroll-index' ></div>
+			<div id='detailInformation' class='mainBlock'>
+				<h2>Time-Series Chart</h2>
+				<p>Description</p>
 				<!--chart-->
 				<div id='chartContent'>
 					<ul>
@@ -222,22 +245,26 @@
 				<!--information tabs-->
 				<div id='informationTabs' class='tabs'>
 					<ul>
-					    <!--<li><a href="#tabs-Aguirre">Mike Aguirre</a></li>-->
 						<li><a href="#tabs-Faulconer">Kevin Faulconer</a></li>
 					    <li><a href="#tabs-Alvarez">David Alvarez</a></li>
-						<!--<li><a href="#tabs-Fletcher">Nathan Fletcher</a></li>-->
 					</ul>
 					
-					<!--<div id="tabs-Aguirre" class='informationContent'></div>-->
 					<div id="tabs-Faulconer" class='informationContent'></div>
 					<div id="tabs-Alvarez" class='informationContent'></div>
-					<!--<div id="tabs-Fletcher" class='informationContent'></div>-->
 				</div>
 				
 			</div>
-	
 			
-			<!--<div class='hr'></div>-->
+			
+			
+			<!-- top webpage-->
+			<div data-scroll-index="5" class='scroll-index' ></div>
+			<div id='mapContent' class='mainBlock'>
+				<h2>Map</h2>
+				<p>Description</p>
+				
+			</div>
+			
 			
 			
 			<!-- map-->

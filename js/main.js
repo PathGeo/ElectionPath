@@ -52,8 +52,8 @@
 		//read selector.json file to compose dropdown list
 		//init_ddslick();
 		
-		//init menu
-		init_menu();
+		//init navigator
+		init_navigator();
 		
 		//read candidates information 
 		$.getJSON("db/candidates.json", function(json){
@@ -62,14 +62,12 @@
 			//show press release dialog
 			//showDialog('dialog_electionResult', 'PathGeo can provide real-time customizable social media (Big Data) analytics for your election campaign', {height:570});
 			
-			
-		
 			init_UI();
 			
 			//createDonationMap();
 			init_chart();
 			
-		
+			
 		});
 	});
 	
@@ -100,9 +98,9 @@
 	
 	
 	/**
-	 * create Menu 
+	 * create navigator
 	 */
-	function init_menu(){
+	function init_navigator(){
 		$.getJSON("db/navigator.json", function(json){
 			var html="";
 		
@@ -135,10 +133,7 @@
 			});
 			
 			//click event on each li in subMenu
-			$("#navigator").html(html).find(".subMenu li").click(function(){
-				var $this=$(this);
-				$this.addClass("subMenuClick").siblings().removeClass("subMenuClick")
-			})
+			$("#navigator").html(html);
 			
 			
 			//scroll
@@ -242,20 +237,14 @@
 				html_candidateNav="<li class='candidate-li' id='"+k+"'>"+
 					 "<div class='candidate-name' style='background-color:"+v.backgroundColor+"'>"+v.name + "</div>"+
 					 "</li>";
-				$("#header #candidateInfo > ul").append(html_candidateNav);
+				$("#header #candidateNavBar > ul").append(html_candidateNav);
 				
 				//give legend background
 				$("#legend-"+k).css({
 					"background-color":v.backgroundColor
 				});
 			});
-			
-			
-			
-			//stick to nav bar
-			stickToNav($("#candidate .candidate-name"))
-			
-			
+					
 			
 			//add li's clicking event
 			$(".showTable").click(function(){
@@ -292,11 +281,49 @@
 				// $this.find(".candidate-index").html("<div class='candidate-hide'><h2><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>Contact Us for More Information.</a></h2><p></p>We temporally put the information offline in order to build a sustainable business model for PathGeo<p></p>If you are interested in this information, please <br><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>CONTACT US</a></div>").css('height', 598)
 			// });
 			
+			
+			//detect the window's top while scrolling to highlight index in the navigator bar
+			scrollEvent();
 		}
 	
 	}
 	
 	
+	//scroll event
+	//detect the window's top while scrolling to highlight index in the navigator bar
+	function scrollEvent(){
+		var tops=(function(){
+			var results=[];
+			$(".scroll-index").each(function(){
+				results.push($(this).offset().top);
+			})
+			return results;
+		})();
+		
+		var $candidateName=$("#candidate > ul"),
+			$candidateNavBar=$("#candidateNavBar"),
+			top_candidateName=$candidateName.offset().top - parseFloat($candidateName.css('marginTop').replace(/auto/, 100));
+		
+		$(window).scroll(function(event) {
+			// what the y position of the scroll is
+		    var y = $(this).scrollTop();
+		    	
+		   	//highlight navigator
+			$.each(tops, function(i,top){
+				if(y>=top-100){
+					$(".subMenu li[data-scroll-nav='"+i+"']").addClass("subMenuClick").siblings().removeClass("subMenuClick");
+				}
+			})
+			
+			//show hide candidateNavBar in the header
+			console.log("scrollY="+y)
+			if(y>=top_candidateName){
+				$candidateNavBar.show();
+			}else{
+				$candidateNavBar.hide();
+			}
+		});
+	}
 	
 	
 	/**
@@ -897,28 +924,7 @@
 		});
 	}
 	
-	
-	
-	/**
-	 * stick to nav bar 
-	 */
-	function stickToNav($obj){
-		var top = $obj.offset().top - parseFloat($obj.css('marginTop').replace(/auto/, 100));
-		
-		 $(window).scroll(function (event) {
-		    // what the y position of the scroll is
-		    var y = $(this).scrollTop();
-	
-		    // whether that's below the form
-		    if (y >= top) {
-		      // if so, add the fixed class
-		      //$("#header #candidateInfo").show();
-		    } else {
-		      // otherwise remove it
-		      //$("#header #candidateInfo").hide();
-		    }
-		  });
-	}
+
 	
 	
 	

@@ -1,0 +1,273 @@
+{
+	"updateTime":"2014/01/23 01:02:33",
+	"Alvarez":{
+		"backgroundColor": "#2cc671",
+		"image": "images/alvarez.png",
+		"name": "David Alvarez",
+		"url_twitter": "http://www.twitter.com/AlvarezSD",
+		"url_website": "http://www.alvarezformayor.com/",
+		"twitterAnalysis":{
+			"updateFrequency": "24hr",
+			"values":[
+				{
+					"influence": "2.90%",
+					"tweets_yesterday": 15,
+					"followers_yesterday_new": 3,
+					"biggestFollowers_yesterday": [
+						{
+							"url": "http://www.twitter.com/_Starrchild_",
+							"name": "_Starrchild_",
+							"rank": 1
+						},
+						{
+							"url": "http://www.twitter.com/johnnyswartz704",
+							"name": "johnnyswartz704",
+							"rank": 2
+						},
+						{
+							"url": "http://www.twitter.com/Susan_Pohlman",
+							"name": "Susan_Pohlman",
+							"rank": 3
+						}
+					]
+				}
+			]
+		},
+		"topWebpage":{
+			"updateFrequency":"24hr",
+			"values":{
+				"twitter":[
+					{
+						"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
+						"count": 12,
+						"rank": 1,
+						"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
+					}
+				],
+				"google":[
+					{
+						"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
+						"count": 12,
+						"rank": 1,
+						"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
+					}
+				],
+				"bing":[
+					{
+						"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
+						"count": 12,
+						"rank": 1,
+						"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
+					}
+				],
+				"yahoo":[
+					{
+						"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
+						"count": 12,
+						"rank": 1,
+						"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
+					}
+				]
+			}
+		},
+		"topRetweet":{
+			"updateFrequency":"24hr",
+			"values":[
+				 {
+					"count": 8,
+					"profile_screenName": "ChairJessDurfee",
+					"url": "http://www.twitter.com/ChairJessDurfee/status/423648244053184512",
+					"profile_id": 382776432,
+					"profile_image": "http://pbs.twimg.com/profile_images/1566837157/jesspicture_normal.jpg",
+					"rank": 1,
+					"value": "@ToddGloria calls 4 measure to raise the min wage on the Nov ballot. Chilly response from @kevin_faulconer. Happy response by @AlvarezSD"
+				}
+			]
+		},
+		"wordCloud":{
+			"updateFrequency":"24hr",
+			"values":[
+				 {
+					"count": 143,
+					"value": "kevin_faulconer"
+				},
+				{
+					"count": 110,
+					"value": "alvarezsd"
+				},
+				{
+					"count": 83,
+					"value": "faulconer"
+				}
+			]
+		},
+		"topHashtag":{
+			"updateFrequency":"24hr",
+			"values":[
+				 {
+					"url": "https://twitter.com/search?q=%23sdnextmayor&src=hash",
+					"count": 41,
+					"rank": 1,
+					"value": "#sdnextmayor"
+				}
+			]
+		},
+		"topChatter":{
+			"updateFrequency":"24hr",
+			"values":[
+				 {
+					"url": "http://www.twitter.com/KPBSnews",
+					"count": 13,
+					"rank": 1,
+					"value": "KPBSnews"
+				}
+			]
+		},
+		"topMention":{
+			"updateFrequency":"24hr",
+			"values":[
+				{
+					"url": "http://www.twitter.com/kevin_faulconer",
+					"count": 147,
+					"rank": 1,
+					"value": "@kevin_faulconer"
+				}
+			]
+		}
+	},
+	"Faulconer":{
+		"backgroundColor": "#e27c20",
+		"image": "images/faulconer.png",
+		"name": "Kevin Faulconer",
+		"url_twitter": "http://www.twitter.com/kevin_faulconer",
+		"url_website": "http://www.kevinfaulconer.com/",
+		"twitterAnalysis":{
+			"updateFrequency": "24hr",
+			"values":[
+				{
+					"influence": "2.90%",
+					"tweets_yesterday": 15,
+					"followers_yesterday_new": 3,
+					"biggestFollowers_yesterday": [
+						{
+							"url": "http://www.twitter.com/_Starrchild_",
+							"name": "_Starrchild_",
+							"rank": 1
+						},
+						{
+							"url": "http://www.twitter.com/johnnyswartz704",
+							"name": "johnnyswartz704",
+							"rank": 2
+						},
+						{
+							"url": "http://www.twitter.com/Susan_Pohlman",
+							"name": "Susan_Pohlman",
+							"rank": 3
+						}
+					]
+				}
+			]
+		},
+		"topWebpage":{
+			"updateFrequency":"24hr",
+			"values":{
+				"twitter":[
+					{
+						"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
+						"count": 12,
+						"rank": 1,
+						"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
+					}
+				],
+				"google":[
+					{
+						"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
+						"count": 12,
+						"rank": 1,
+						"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
+					}
+				],
+				"bing":[
+					{
+						"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
+						"count": 12,
+						"rank": 1,
+						"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
+					}
+				],
+				"yahoo":[
+					{
+						"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
+						"count": 12,
+						"rank": 1,
+						"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
+					}
+				]
+			}
+		},
+		"topRetweet":{
+			"updateFrequency":"24hr",
+			"values":[
+				 {
+					"count": 8,
+					"profile_screenName": "ChairJessDurfee",
+					"url": "http://www.twitter.com/ChairJessDurfee/status/423648244053184512",
+					"profile_id": 382776432,
+					"profile_image": "http://pbs.twimg.com/profile_images/1566837157/jesspicture_normal.jpg",
+					"rank": 1,
+					"value": "@ToddGloria calls 4 measure to raise the min wage on the Nov ballot. Chilly response from @kevin_faulconer. Happy response by @AlvarezSD"
+				}
+			]
+		},
+		"wordCloud":{
+			"updateFrequency":"24hr",
+			"values":[
+				 {
+					"count": 143,
+					"value": "kevin_faulconer"
+				},
+				{
+					"count": 110,
+					"value": "alvarezsd"
+				},
+				{
+					"count": 83,
+					"value": "faulconer"
+				}
+			]
+		},
+		"topHashtag":{
+			"updateFrequency":"24hr",
+			"values":[
+				 {
+					"url": "https://twitter.com/search?q=%23sdnextmayor&src=hash",
+					"count": 41,
+					"rank": 1,
+					"value": "#sdnextmayor"
+				}
+			]
+		},
+		"topChatter":{
+			"updateFrequency":"24hr",
+			"values":[
+				 {
+					"url": "http://www.twitter.com/KPBSnews",
+					"count": 13,
+					"rank": 1,
+					"value": "KPBSnews"
+				}
+			]
+		},
+		"topMention":{
+			"updateFrequency":"24hr",
+			"values":[
+				{
+					"url": "http://www.twitter.com/kevin_faulconer",
+					"count": 147,
+					"rank": 1,
+					"value": "@kevin_faulconer"
+				}
+			]
+		}
+	}
+}
