@@ -29,7 +29,28 @@
 							"name": "Susan_Pohlman",
 							"rank": 3
 						}
-					]
+					],
+					"followers_all": 493,
+					"date": "10/8/2013",
+					"tweets_all": 15,
+					"biggestFollowers": [
+						{
+							"url": "http://www.twitter.com/morrowchris",
+							"name": "morrowchris",
+							"rank": 1
+						},
+						{
+							"url": "http://www.twitter.com/AhtishamWebmast",
+							"name": "AhtishamWebmast",
+							"rank": 2
+						},
+						{
+							"url": "http://www.twitter.com/sdmattpotter",
+							"name": "sdmattpotter",
+							"rank": 3
+						}
+					],
+					"followers_yesterday_removed": 2
 				}
 			]
 		},
@@ -39,7 +60,25 @@
 				"twitter":[
 					{
 						"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
-						"count": 12,
+						"count": 14,
+						"rank": 1,
+						"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
+					},
+					{
+						"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
+						"count": 14,
+						"rank": 1,
+						"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
+					},
+					{
+						"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
+						"count": 14,
+						"rank": 1,
+						"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
+					},
+					{
+						"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
+						"count": 14,
 						"rank": 1,
 						"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
 					}
@@ -47,7 +86,7 @@
 				"google":[
 					{
 						"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
-						"count": 12,
+						"count": 13,
 						"rank": 1,
 						"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
 					}
@@ -63,7 +102,7 @@
 				"yahoo":[
 					{
 						"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
-						"count": 12,
+						"count": 11,
 						"rank": 1,
 						"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
 					}
@@ -164,7 +203,28 @@
 							"name": "Susan_Pohlman",
 							"rank": 3
 						}
-					]
+					],
+					"followers_all": 493,
+					"date": "10/8/2013",
+					"tweets_all": 15,
+					"biggestFollowers": [
+						{
+							"url": "http://www.twitter.com/morrowchris",
+							"name": "morrowchris",
+							"rank": 1
+						},
+						{
+							"url": "http://www.twitter.com/AhtishamWebmast",
+							"name": "AhtishamWebmast",
+							"rank": 2
+						},
+						{
+							"url": "http://www.twitter.com/sdmattpotter",
+							"name": "sdmattpotter",
+							"rank": 3
+						}
+					],
+					"followers_yesterday_removed": 2
 				}
 			]
 		},

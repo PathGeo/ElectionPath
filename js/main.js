@@ -56,7 +56,7 @@
 		init_navigator();
 		
 		//read candidates information 
-		$.getJSON("db/candidates.json", function(json){
+		$.getJSON("db/candidates_newFormat.json", function(json){
 			app.candidates=json;
 			
 			//show press release dialog
@@ -151,27 +151,73 @@
 	
 		//init time
 		init_time();
-		
+
 		//read candidates
 		if(app.candidates){
-			var html="",
-				html_candidateNav="",
-				html_addWidget="",
-				$candidate=$("#candidate > ul"),
-				value=null,
-				numbers=["1st",'2nd','3rd'],
-				chartCSVData=app.chartCSVData;
+			var html_candidateNav="";
 			
 			
 			$.each(app.candidates, function(k,v){
-				//hide information
-				if(k=='Aguirre' || k=='Fletcher'){
+				if(k!='Alvarez' && k!='Faulconer'){
 					return;
 				}
-	
+				
+				//twitterAnalysis
+				showTwitterAnalysis(k,v);
+				
+				//top Webpage
+				showTopWebpage(k,v);
+				
+				
+				//candidate info for nav
+				html_candidateNav="<li class='candidate-li' id='"+k+"'>"+
+					 "<div class='candidate-name' style='background-color:"+v.backgroundColor+"'>"+v.name + "</div>"+
+					 "</li>";
+				$("#header #candidateNavBar > ul").append(html_candidateNav);
+				
+				//give legend background
+				$("#legend-"+k).css({
+					"background-color":v.backgroundColor
+				});
+			});
+					
+			
+			//add li's clicking event
+			$(".showTable").click(function(){
+				var $this=$(this),
+					id=$this.parents("li.candidate-li").attr("id");
+				
+				if(app.candidates[id] && id && id!=''){
+					showTable(id, app.candidates[id].twitterAnalysis);
+				}else{
+					console.log("[ERROR] cannot find out the candidate's info in the database. ")
+				}
+			}).siblings("label").each(function(){
+				var $this=$(this),
+					title=$this.attr('title');
+				if(title && title!=''){
+					$this.siblings('a.showTable').attr('title', title);
+				}
+			});
+			
+			
+			//detect the window's top while scrolling to highlight index in the navigator bar
+			scrollEvent();
+		}
+		
+		
+		
+		//show twitter analysis
+		function showTwitterAnalysis(name, data){
+			var $candidate=$("#candidate > ul"),
+				value=null,
+				numbers=["1st",'2nd','3rd'],
+				chartCSVData=app.chartCSVData,
+				twitterAnalysis=data.twitterAnalysis;
+				
 				//prepare chart csv content
-				chartCSVData.headers.push(k);
-				$.each(v.values, function(i,val){
+				chartCSVData.headers.push(name);
+				$.each(twitterAnalysis.values, function(i,val){
 					if(chartCSVData.values[val.date]) {
 						chartCSVData.values[val.date].push(val.tweets_yesterday);
 					}else {
@@ -179,19 +225,20 @@
 					}
 				});
 				
-				//reverse array order
-				v.values.reverse()
 				
-				value=v.values[0];
+				//reverse array order
+				twitterAnalysis.values.reverse();
+				
+				value=twitterAnalysis.values[0];
 
-				html="<li class='candidate-li' id='"+k+"'>"+
-					 "<div class='candidate-name' style='background-color:"+v.backgroundColor+"'>"+v.name +"</div>"+
+				html="<li class='candidate-li' id='"+name+"'>"+
+					 "<div class='candidate-name' style='background-color:"+data.backgroundColor+"'>"+data.name +"</div>"+
 					 "<div class='candidate-content'>"+
 					 	 "<ul>"+
-						 	"<li class='candidate-image'><img src='"+v.image+"' /></li>"+
+						 	"<li class='candidate-image'><img src='"+data.image+"' /></li>"+
 						 	"<li class='candidate-metadata'>"+
-								"<div class='candidate-twitterYesterday'><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /><a href='#' class='showTable'>"+v.values[0].tweets_yesterday+"</a><label title='# of tweets mentioned about this candidate Yesterday'>mentions Yesterday</label></div>"+
-								"<div class='candidate-info'>"+"<a href='"+v.url_website+"' target='_blank'>Website</a><br><a href='"+v.url_twitter+"' target='_blank'>Twitter</a></div>"+
+								"<div class='candidate-twitterYesterday'><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /><a href='#' class='showTable'>"+value.tweets_yesterday+"</a><label title='# of tweets mentioned about this candidate Yesterday'>mentions Yesterday</label></div>"+
+								"<div class='candidate-info'>"+"<a href='"+data.url_website+"' target='_blank'>Website</a><br><a href='"+data.url_twitter+"' target='_blank'>Twitter</a></div>"+
 							"</li>"+
 						 "</ul>"+
 						 //"<div class='showCandidateIndex'>show more..</div>"+
@@ -231,62 +278,63 @@
 					 "</li>";
 					 
 				$candidate.append(html);
-				
-				
-				//candidate info for nav
-				html_candidateNav="<li class='candidate-li' id='"+k+"'>"+
-					 "<div class='candidate-name' style='background-color:"+v.backgroundColor+"'>"+v.name + "</div>"+
-					 "</li>";
-				$("#header #candidateNavBar > ul").append(html_candidateNav);
-				
-				//give legend background
-				$("#legend-"+k).css({
-					"background-color":v.backgroundColor
-				});
-			});
-					
-			
-			//add li's clicking event
-			$(".showTable").click(function(){
-				var $this=$(this),
-					id=$this.parents("li.candidate-li").attr("id");
-				
-				if(app.candidates[id] && id && id!=''){
-					showTable(id, app.candidates[id]);
-				}else{
-					console.log("[ERROR] cannot find out the candidate's info in the database. ")
-				}
-			}).siblings("label").each(function(){
-				var $this=$(this),
-					title=$this.attr('title');
-				if(title && title!=''){
-					$this.siblings('a.showTable').attr('title', title);
-				}
-			});
-			
-			
-			//click event on show more
-			// $(".showCandidateIndex").click(function(){
-				// $(".candidate-index").show();
-			// })
-			
-			
-			
-			//hide information
-			//$candidate.find(".candidate-li[id='Faulconer'], .candidate-li[id='Alvarez']").append("<div class='candidate-overlay'></div>");
-			// $candidate.find(".candidate-li[id='Faulconer'], .candidate-li[id='Alvarez']").each(function(){
-				// var $this=$(this);
-// 				
-				// $this.find('.candidate-twitterYesterday > a').html('N/A').unbind('click');
-				// $this.find(".candidate-index").html("<div class='candidate-hide'><h2><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>Contact Us for More Information.</a></h2><p></p>We temporally put the information offline in order to build a sustainable business model for PathGeo<p></p>If you are interested in this information, please <br><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>CONTACT US</a></div>").css('height', 598)
-			// });
-			
-			
-			//detect the window's top while scrolling to highlight index in the navigator bar
-			scrollEvent();
 		}
+		
+		
+		
+		//show top webpage
+		function showTopWebpage(name, data){
+			var html_header="<tr><td class='rank'>Top</td><td class='value'>Value</td><td class='count'>#</td></tr>",
+				value='',
+				$topWebpage=$("#topWebpage > ul"),
+				$tab=$("<div class='tabs'><ul></ul></div>"),
+				topWebpage=data.topWebpage;
+			
+			$.each(topWebpage.values, function(source,vals){
+				$tab.find("> ul").append("<li><a href='#tabs-"+source+"'>"+source+"</a></li>");
+				
+				var html="<div id='tabs-"+source+"'><table class='table'>" + html_header;
+				
+				$.each(vals, function(i,obj){
+					html+='<tr>'+
+						  '<td class="rank">'+obj.rank+'</td>'+
+						  "<td class='value' id='opengraph-"+name+"-"+source+"-"+i+"'>"+
+								(function(){
+								  	var result=obj.value;
+								  	
+								  	if(obj.url){result="<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>"}
+								  	
+									//read opengraph
+								  	$.getJSON("ws/getOpengraph.py?url="+encodeURIComponent(obj.url), function(json){
+									 		if(!json.error && json){
+									  			var msg="<div class='opengraph'><ul>"+
+									  						"<li><img src='"+json.image+"' class='opengraph-image' /><label class='opengraph-title'>"+json.title+"</label></li>"+
+									  						"<li class='opengraph-description'>"+json.description+"</li>"+
+									  					"</ul></div>";
+									  			$("#opengraph-"+name+"-"+source+"-"+i).html(msg).click(function(){
+									  				window.open(obj.url);
+									  			}).find(".opengraph-description").text(function(index, text) {
+												    return text.substr(0, 150) + "....(show more)";
+												});
+									  		}
+									});
+								  	
+								  	return result;
+								})()+
+							"</td>"+
+							'<td class="count">'+obj.count+"</td>"+
+							"</tr>";
+				});
+			
+				$tab.append(html+"</table></div>");
+			});
+			
+			$topWebpage.append("<li><div class='tabs'>"+$tab.html()+"</div></li>");
+		}
+		
 	
 	}
+	
 	
 	
 	//scroll event
@@ -316,7 +364,6 @@
 			})
 			
 			//show hide candidateNavBar in the header
-			console.log("scrollY="+y)
 			if(y>=top_candidateName){
 				$candidateNavBar.show();
 			}else{
