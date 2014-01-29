@@ -168,6 +168,13 @@
 				//top Webpage
 				showTopWebpage(k,v);
 				
+				//top retweet
+				showTopRetweet(k,v); 
+				
+				//showWordcloud 
+				showWordcloud(k,v);
+				
+				
 				
 				//candidate info for nav
 				html_candidateNav="<li class='candidate-li' id='"+k+"'>"+
@@ -332,6 +339,44 @@
 			$topWebpage.append("<li><div class='tabs'>"+$tab.html()+"</div></li>");
 		}
 		
+		
+		
+		//show top retweet
+		function showTopRetweet(name, data){
+			var html="<li><table class='table'><tr><td class='rank'>Top</td><td class='value'>Value</td><td class='count'>#</td></tr>",
+				$topRetweet=$("#topRetweet > ul")
+				topRetweet=data.topRetweet;
+			
+			$.each(topRetweet.values, function(i,obj){
+					html+='<tr>'+
+						  '<td class="rank">'+obj.rank+'</td>'+
+						  "<td class='value'>"+
+								(function(){
+								  	return "<div class='opengraph' onclick=\"window.open('"+obj.url+"')\"><ul>"+
+									  			"<li><img src='"+obj.profile_image+"' class='opengraph-image' /><label class='opengraph-title'>"+obj.profile_screenName+"</label></li>"+
+									  			"<li class='opengraph-description'>"+obj.value+"</li>"+
+									  		"</ul></div>";
+								})()+
+							"</td>"+
+							'<td class="count">'+obj.count+"</td>"+
+							"</tr>";
+			});
+			
+			html+="</table></li>";
+			
+			
+			$topRetweet.append(html);
+		}
+		
+		
+		//show wordcloud
+		function showWordcloud(name, data){
+			$("#wordcloud > ul").append("<li><div id='wordcloud-"+name+"' class='wordcloud'></div></li>");
+			
+			//create word cloud
+			createWordCloud(data.wordCloud.values, $("#wordcloud-"+name));
+		}
+		
 	
 	}
 	
@@ -358,7 +403,7 @@
 		    	
 		   	//highlight navigator
 			$.each(tops, function(i,top){
-				if(y>=top-100){
+				if(y>=top-250){
 					$(".subMenu li[data-scroll-nav='"+i+"']").addClass("subMenuClick").siblings().removeClass("subMenuClick");
 				}
 			})
@@ -830,15 +875,14 @@
 	 * create wordcloud
 	 */
 	//create wordCloud  beta	
-	function createWordCloud(cloudtext, $target) { 
-				var $wordcloud=$target.find('#wordcloud'),
+	function createWordCloud(cloudtext, $target) {
+				var $wordcloud=$target,//.find('#wordcloud'),
 					width =$wordcloud.width(), //400,
 					height =400;
 				
 				var colors = d3.scale.category20b(); 
 				var json2 = cloudtext;
 				var maxcount = 0;
-				
 				
 				for (var indx in json2) 
 					if (json2[indx].count > maxcount)  { maxcount = json2[indx].count;}
@@ -862,7 +906,7 @@
 						})).on("end", draw).start();
 				}
 			
-			
+				
 			
 			function search(keyword) {
 					console.log(keyword);
@@ -870,7 +914,7 @@
 			
 			
 			function draw(words) {
-				d3.select("svg").remove();
+				//d3.select("svg").remove();
 				d3.select($wordcloud.selector).append("svg")
 					.attr("width", width)
 					.attr("height", height)

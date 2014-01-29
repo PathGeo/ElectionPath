@@ -84,9 +84,11 @@ ul {margin:0px; padding:0px; list-style:none; }
 
 .mainBlock {padding:60px 0px 50px 0px; border-bottom:3px solid #f1f1f1; min-height:350px;  }
 .mainBlock > ul {width:100%; overflow:hidden}
-.mainBlock > ul > li {float:left; width:49.63%; border:1px solid #f1f1f1; background-color:#ffffff; position:relative;display:block;  }
-.mainBlock > ul > li:hover {background-color:#f1f1f1;}
+.mainBlock > ul > li {float:left; width:49.63%; background-color:#ffffff; position:relative;display:block;  }
+.mainBlock > ul > li:nth-child(1) {border-right:1px solid #f1f1f1;}
+.mainBlock > ul > li:hover {}
 .mainBlock > p {color:#555555; }
+.mainBlock .ui-widget-content {border:0px; }
 
 
 /** title */
@@ -151,7 +153,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 /** top webpage */
 #topWebpage .tabs {margin:0 auto; width:95%; }
 #topWebpage .ui-tabs .ui-tabs-panel {padding:5px; }
-#topWebpage .table {width:99%;}
+
 
 
 
@@ -193,9 +195,9 @@ ul {margin:0px; padding:0px; list-style:none; }
 .informationContent .socialMap {height:400px; width:100%;}
 
 /** table */
-.table {width:90%;  margin:0 auto; border-collapse:collapse; margin-top:20px; }
-.table tr:first-child {background-color:#FF4B00; font-weight:600; font-size:14px; color:#ffffff; }
-.table td {border-bottom:1px solid #f1f1f1; text-align:left !important; font-size:13px;  padding:5px; font-family:'Lato', sans-serif;}
+.table {width:99%;  margin:0 auto; border-collapse:collapse; margin-top:20px; }
+.table tr:first-child {background-color:#f1f1f1; font-weight:600; font-size:14px; color:#555555; }
+.table td {border-bottom:1px solid #dddddd; text-align:left !important; font-size:13px;  padding:5px; font-family:'Lato', sans-serif;}
 .table tr:not(:first-child):hover {background-color:#f1f1f1; }
 .table a {text-decoration:none; color:#359BED}
 .table a:hover {text-decoration:underline; }
@@ -216,7 +218,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 .opengraph { width:100%;  color:#555555; font-size:11px; font-weight:normal; }
 .opengraph:hover {cursor:pointer; }
 .opengraph li {height:auto; position:relative;}
-.opengraph .opengraph-description {margin-top:10px; }
+.opengraph .opengraph-description {margin-top:10px; font-size:12px;  }
 .opengraph .opengraph-image {max-height:60px; max-width:30%;}
 .opengraph .opengraph-title {position:absolute; left:32%; top:-2px;  max-width:63%; padding:0% 2.5% 0% 2.5%; font-size:11px; font-weight:600; }
 
@@ -280,9 +282,9 @@ ul {margin:0px; padding:0px; list-style:none; }
 
 
 /**word cloud*/
-#wordcloud {margin-top:20px; }
-#wordcloud > svg {border:0px !important;}
-
+.wordcloud {margin-top:20px; }
+.wordcloud > svg {border:0px !important;}
+.wordcloud {width:96%; padding:5px 2% 5px 2%; }
 
 
 /**election resutl*/
