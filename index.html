@@ -229,30 +229,19 @@
 			
 			<!-- time-series chart-->	
 			<div data-scroll-index="4" class='scroll-index' ></div>
-			<div id='detailInformation' class='mainBlock'>
+			<div id='timeSeriesChart' class='mainBlock'>
 				<h2>Time-Series Chart</h2>
 				<p>Description</p>
-				<!--chart-->
-				<div id='chartContent'>
-					<ul>
-						<li style='width:25%;'><b>Step 1:</b><br>Click on a specific date on the chart or select a range of dates (gray zone)<p></p><br><b>Step 2:</b><br>Select ONE candidate from below to see what happened that given day or range. (Most popular  re-tweets, Hashtags, mentioned, URLs, chatters, etc.)</li>
-						<li style='width:70%;'><div id='chart' style='width:95%'></div></li>
-					</ul>
 				
+				<!--chartContent-->
+				<div id='chartContent'>
+					<div id='chart' style='width:100%'></div>
 					<div id='chart_queryDate'>Current Search Date: <p></p></div>
 				</div>
 				
-				<!--information tabs-->
-				<div id='informationTabs' class='tabs'>
-					<ul>
-						<li><a href="#tabs-Faulconer">Kevin Faulconer</a></li>
-					    <li><a href="#tabs-Alvarez">David Alvarez</a></li>
-					</ul>
-					
-					<div id="tabs-Faulconer" class='informationContent'></div>
-					<div id="tabs-Alvarez" class='informationContent'></div>
-				</div>
 				
+				<!-- highlight -->
+				<ul></ul>
 			</div>
 			
 			
@@ -263,58 +252,13 @@
 				<h2>Map</h2>
 				<p>Description</p>
 				
+				<!-- map -->
+				<div id='map'></div>
+				
+				<ul></ul>
 			</div>
 			
-			
-			
-			<!-- map-->
-			<div id='donationContent' class='mainBlock' style='' >
-				<h2>Donation Map</h2>
-				<p>Visualize Socioeconomic and Demographic Data: 
-					<select id='sel_census' onclick='layerChange()'>
-						<option value="income" selected>Median Household Income ($)</option>
-						<!--<option value="pop">Population</option>-->				
-						<option value="popDen">Population Density</option>
-			
-						<!--<option value="White">White</option>-->	
-						<option value="White_den">White (ratio)</option>	
-						<!--<option value="Black_AA">Black or African American </option>-->	
-						<option value="Black_den">Black or African American (ratio)</option>	
-						<!--<option value="Asian">Asian</option>-->	
-						<option value="Asian_den">Asian (ratio)</option>	
-						<!--<option value="Hispanic">Hispanic</option>-->	
-						<option value="Hispanic_d">Hispanic or Latino (ratio)</option>	
-						
-						<option value="fam_size">Average Faimily Size</option>	
-						
-						<!--<option value="age0_9">age 0 - 9</option>-->
-						<option value="a0_9den">Age 0 - 9 (ratio)</option>
-						<!--<option value="age10_19">age 10 - 19</option>-->
-						<option value="a10_19den">Age 10 - 19 (ratio)</option>			
-						<!--<option value="age20_64">age 20  - 64</option>-->
-						<option value="a20_64den">Age 20  - 64 (ratio)</option>			
-						<!--<option value="age65_abov">age 65 and above</option>-->
-						<option value="a65_den">Age 65 and above (ratio)</option>
-					</select>
-				</p>
-				<ul>
-					<li><div id='donationMap'></div></li>
-					<li id='legend'>
-						<h2>Legend</h2>
-						<div id='legend_candidate' class='legend'>
-							<h3>Candidate</h3>
-							<ul>
-								<li id='legend-Aguirre'>Aguirre</li>
-								<li id='legend-Faulconer'>Faulconer</li>
-								<li id='legend-Alvarez'>Alvarez</li>
-								<li id='legend-Fletcher'>Fletcher</li>
-							</ul>
-						</div>
-						<div id='legend_classification' class='legend'></div>
-					</li>
-				</ul>
-			</div>
-			
+
 			
 			<!--<div class='hr'></div>-->
 			<!--footer-->

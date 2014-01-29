@@ -67,33 +67,10 @@
 			//createDonationMap();
 			init_chart();
 			
-			
+			//create map
+			init_map();
 		});
 	});
-	
-	
-	
-	/**
-	 * use ddslick jquery plugin to create dropdown list 
-	 */
-	function init_ddslick(){
-		$.getJSON("db/selector_ddslick.json", function(json){
-			$selector=$("#selector");
-			
-			$.each(json, function(k,v){
-				$selector.append("<div id='"+k+"' class='selector'></div>");
-				
-				$selector.find("#"+k).ddslick({
-					data: v.ddData,
-					width: v.width,
-					selectText: v.selectText,
-					onSelected: function(selectedData){
-						console.log(selectedData)
-					}
-				});
-			});
-		})
-	}
 	
 	
 	
@@ -174,6 +151,9 @@
 				//showWordcloud 
 				showWordcloud(k,v);
 				
+				//show top 1 webpage at highlight date
+				showChartHighlightInfo(k,v);
+				
 				
 				
 				//candidate info for nav
@@ -208,8 +188,15 @@
 			});
 			
 			
+			//readOpenGraph
+			readOpenGraph();
+			
+		
 			//detect the window's top while scrolling to highlight index in the navigator bar
 			scrollEvent();
+			
+			//tabs
+			$('.tabs').tabs();
 		}
 		
 		
@@ -305,26 +292,11 @@
 				$.each(vals, function(i,obj){
 					html+='<tr>'+
 						  '<td class="rank">'+obj.rank+'</td>'+
-						  "<td class='value' id='opengraph-"+name+"-"+source+"-"+i+"'>"+
+						  "<td class='value readOpenGraph'>"+
 								(function(){
 								  	var result=obj.value;
 								  	
 								  	if(obj.url){result="<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>"}
-								  	
-									//read opengraph
-								  	$.getJSON("ws/getOpengraph.py?url="+encodeURIComponent(obj.url), function(json){
-									 		if(!json.error && json){
-									  			var msg="<div class='opengraph'><ul>"+
-									  						"<li><img src='"+json.image+"' class='opengraph-image' /><label class='opengraph-title'>"+json.title+"</label></li>"+
-									  						"<li class='opengraph-description'>"+json.description+"</li>"+
-									  					"</ul></div>";
-									  			$("#opengraph-"+name+"-"+source+"-"+i).html(msg).click(function(){
-									  				window.open(obj.url);
-									  			}).find(".opengraph-description").text(function(index, text) {
-												    return text.substr(0, 150) + "....(show more)";
-												});
-									  		}
-									});
 								  	
 								  	return result;
 								})()+
@@ -377,8 +349,54 @@
 			createWordCloud(data.wordCloud.values, $("#wordcloud-"+name));
 		}
 		
-	
+		
+		//show highlighted info at specific date which the number of tweets is over 100
+		function showChartHighlightInfo(name, data){
+			var html="<li><table class='table'><tr><td>Date</td><td>Webpage</td></tr>",
+				$target=$("#timeSeriesChart > ul"),
+				topURL={},
+				values=data.timeSeriesChart.values;
+			
+			$.each(values, function(i, val){
+				topURL=val.topURLs[0];
+				html+="<tr><td>"+val.date + "<p>"+val.tweets +"</p></td><td class='readOpenGraph'><a href='"+topURL.url+"' target='_blank'>"+topURL.value+"</a></td></tr>";	  
+			});
+			
+			
+			$target.append(html+"</table></li>");
+		}
+
 	}
+	
+	
+	
+	
+	
+	//readOpenGraph
+	function readOpenGraph(){
+		$(".readOpenGraph").each(function(){
+			var $this=$(this),
+				url=$this.find("a").attr("href");
+			
+			//read opengraph
+			$.getJSON("ws/getOpengraph.py?url="+encodeURIComponent(url), function(json){
+				if(!json.error && json){
+					var msg="<div class='opengraph'><ul>"+
+							"<li><img src='"+json.image+"' class='opengraph-image' /><label class='opengraph-title'>"+json.title+"</label></li>"+
+							"<li class='opengraph-description'>"+json.description+"</li>"+
+							"</ul></div>";
+					$this.html(msg).click(function(){
+							window.open(url);
+					}).find(".opengraph-description").text(function(index, text) {
+							return text.substr(0, 150) + "....(show more)";
+					});
+				}
+			});
+		})
+	}
+	
+	
+	
 	
 	
 	
@@ -529,10 +547,82 @@
 	
 		
 		//tabs
-		init_tabs();	
+		//init_tabs();	
 	}
 		
 
+	
+	
+	/**
+	 *initialize map 
+	 */
+	function init_map(){
+		//need to change
+		var dateFrom='2013-10-08',
+			dateTo='2014-01-29',
+			candidate='Alvarez';
+	
+		
+		var url=(app.testMode)?"db/geoTweets.json":"ws/getGeoTweets.py?candidate="+candidate+"&dateFrom="+dateFrom+"&dateTo="+dateTo;
+		var mapID='map';
+		
+		$.getJSON(url, function(json){
+			if(json && json.results && json.results.length>1){
+				var geojson={
+					type:"FeatureCollection",
+					features:[]
+				}, feature;
+				
+				$.each(json.results, function(i,result){
+					//create feature object
+					feature={
+						type:"Feature",
+						geometry:null,
+						properties:{}
+					};
+					
+					//read value
+					$.each(result, function(k,v){
+						if(k=='geo'){
+							feature.geometry=v
+						}else{
+							feature.properties[k]=v
+						}
+					});
+					
+					geojson.features.push(feature);
+				});
+				
+				
+				//init map and add features
+				var map=L.map(mapID, {
+					center: [32.774917, -117.005639],
+					zoom: 10,
+					layers: [selectBasemap("ESRI Topographic Map")],
+					attributionControl:true
+				});			
+				
+
+				//heatmap
+				var heatMapLayer = pathgeo.layer.heatMap(geojson, 1000, {
+					opacity : 0.55,
+					layerName:"heatMapLayer",
+					visible:false
+				}).addTo(map);
+				
+
+				//zoom to bound
+				map.fitBounds(heatMapLayer._bounds);
+				
+				
+			}else{
+				console.log("No GeoTagged Tweets. Please query another date or candidate. Thank you");
+				return;
+			}
+		});
+		
+		
+	}
 	
 	
 	

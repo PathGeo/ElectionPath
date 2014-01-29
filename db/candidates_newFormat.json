@@ -51,6 +51,49 @@
 						}
 					],
 					"followers_yesterday_removed": 2
+				},
+				{
+					"influence": "2.90%",
+					"tweets_yesterday": 15,
+					"followers_yesterday_new": 3,
+					"biggestFollowers_yesterday": [
+						{
+							"url": "http://www.twitter.com/_Starrchild_",
+							"name": "_Starrchild_",
+							"rank": 1
+						},
+						{
+							"url": "http://www.twitter.com/johnnyswartz704",
+							"name": "johnnyswartz704",
+							"rank": 2
+						},
+						{
+							"url": "http://www.twitter.com/Susan_Pohlman",
+							"name": "Susan_Pohlman",
+							"rank": 3
+						}
+					],
+					"followers_all": 493,
+					"date": "10/7/2013",
+					"tweets_all": 15,
+					"biggestFollowers": [
+						{
+							"url": "http://www.twitter.com/morrowchris",
+							"name": "morrowchris",
+							"rank": 1
+						},
+						{
+							"url": "http://www.twitter.com/AhtishamWebmast",
+							"name": "AhtishamWebmast",
+							"rank": 2
+						},
+						{
+							"url": "http://www.twitter.com/sdmattpotter",
+							"name": "sdmattpotter",
+							"rank": 3
+						}
+					],
+					"followers_yesterday_removed": 2
 				}
 			]
 		},
@@ -138,6 +181,35 @@
 					"profile_image": "http://pbs.twimg.com/profile_images/1566837157/jesspicture_normal.jpg",
 					"rank": 1,
 					"value": "@ToddGloria calls 4 measure to raise the min wage on the Nov ballot. Chilly response from @kevin_faulconer. Happy response by @AlvarezSD"
+				}
+			]
+		},
+		"timeSeriesChart":{
+			"updateFrequency":"24hr",
+			"values":[
+				{
+					"date":"2013-11-29",
+					"tweets":200,
+					"topURLs":[
+						{
+							"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
+							"count": 14,
+							"rank": 1,
+							"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
+						}
+					]
+				},
+				{
+					"date":"2013-12-14",
+					"tweets":145,
+					"topURLs":[
+						{
+							"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
+							"count": 14,
+							"rank": 1,
+							"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
+						}
+					]
 				}
 			]
 		},
@@ -482,6 +554,35 @@
 					"profile_image": "http://pbs.twimg.com/profile_images/1566837157/jesspicture_normal.jpg",
 					"rank": 1,
 					"value": "@ToddGloria calls 4 measure to raise the min wage on the Nov ballot. Chilly response from @kevin_faulconer. Happy response by @AlvarezSD"
+				}
+			]
+		},
+		"timeSeriesChart":{
+			"updateFrequency":"24hr",
+			"values":[
+				{
+					"date":"2013-11-29",
+					"tweets":200,
+					"topURLs":[
+						{
+							"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
+							"count": 14,
+							"rank": 1,
+							"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
+						}
+					]
+				},
+				{
+					"date":"2013-12-14",
+					"tweets":145,
+					"topURLs":[
+						{
+							"url": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514",
+							"count": 14,
+							"rank": 1,
+							"value": "http://www.10news.com/news/poll-who-won-todays-debate-between-david-alvarez-and-kevin-faulconer-011514"
+						}
+					]
 				}
 			]
 		},

@@ -22,7 +22,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 #logo {position:absolute; top:2px; left:5px;  z-index:100; width:14%; }
 #logo img {height:30px; }
 #logo:hover {text-decoration:none; cursor:pointer;}
-#logo label {font-size:20px; font-weight:bold; z-index:100; position:absolute; right:5px; top:5px; color:#000000; }
+#logo label {font-size:17px; font-weight:bold; z-index:100; position:absolute; right:5px; top:8px; color:#000000; }
 
 /** count down */
 #countdown {color:#000000; font-size:14px; position:absolute; left:17.7%; top:-3px;   }
@@ -33,7 +33,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 /**menu */
 #menu {position:absolute; right:2%; top:-3px;  }
 #menu li {padding:10px 20px 10px 20px; float:left; position:relative; border-left:1px solid #f1f1f1; }
-#menu li:hover {color:#FF4B00; cursor:pointer;  }
+#menu li:hover {color:#FF4B00; cursor:pointer; background-color:#f1f1f1;  }
 #menu img {width:25px; height:25px; }
 #menu #stayLoop {position:relative; top:-7px; text-align:right; cursor:pointer; }
 #menu #stayLoop label {font-size:16px; font-weight:600; color:#FF4B00; cursor:pointer; }
@@ -83,7 +83,7 @@ ul {margin:0px; padding:0px; list-style:none; }
 #mainContent > div {width:100%; position:relative}
 
 .mainBlock {padding:60px 0px 50px 0px; border-bottom:3px solid #f1f1f1; min-height:350px;  }
-.mainBlock > ul {width:100%; overflow:hidden}
+.mainBlock > ul {width:100%; overflow:hidden; margin-top:30px; }
 .mainBlock > ul > li {float:left; width:49.63%; background-color:#ffffff; position:relative;display:block;  }
 .mainBlock > ul > li:nth-child(1) {border-right:1px solid #f1f1f1;}
 .mainBlock > ul > li:hover {}
@@ -158,41 +158,19 @@ ul {margin:0px; padding:0px; list-style:none; }
 
 
 
-
-
-/** detail information */
-#detailInformation {}
-
 /**chart */
-#chartContent {width:100%; height:350px; position:relative; }
-#chartContent ul {width:100%;}
-#chartContent ul li {float:left; padding:10px; line-height:20px; font-size:14px;  }
-#chartContent ul li b {font-size:16px; }
-#chartContent #chart_queryDate {position:absolute; left:10px; bottom:5px; font-size:14px; font-weight:600; }
-
-.dygraph-legend {width:110px !important; top:-70px !important; font-size:14px !important;}
+#chartContent {position:relative; width:99%; margin:0 auto; margin-top:80px; }
+#chart {position:relative; }
+#chart_queryDate {position:absolute; left:60px; top:-30px ; font-size:13px; font-weight:600; }
+.dygraph-legend {width:110px !important; top:-60px !important; font-size:13px !important; left:auto !important; right:0px !important; }
+.dygraph-legend > span {display:block !important}
 
 
-/**information tabs */
-#informationTabs .ui-tabs-nav li {width:48.41%;padding:2px 0px 2px 0px; }
-#informationTabs .ui-tabs-nav li.ui-tabs-selected {padding:2px 0px 3px 0px;}
-#informationTabs .ui-tabs-nav li.ui-tabs-selected > a {color:#ffffff;}
-#informationTabs .ui-tabs-nav li > a {font-size:15px; font-family:"Lato"}
-#informationTabs .ui-tabs-nav li:hover {cursor:pointer;}
-/**
-#informationTabs .ui-tabs-nav li a {color:#ffffff}
-#informationTabs .ui-state-default {background:transparent; }
-#informationTabs .ui-tabs-selected {background:#ffffff;}
-#informationTabs .ui-tabs-selected a {color:#000000;}
-*/
-.informationContent {height:auto; }
-.informationContent ul {width:100%;}
-/*.informationContent ul > li {width:33%; height:380px; float:left; text-align:center; border:1px solid #f1f1f1; font-family:"Lato"; }
-*/
-.informationContent label {font-weight:600; font-size:16px;}
-.informationContent > table {width:100%; font-family:"Lato"; }
-.informationContent > table td {width:33%;border:1px solid #f1f1f1; text-align:center; vertical-align:top;}
-.informationContent .socialMap {height:400px; width:100%;}
+
+/**map*/
+#map {width:100%; margin:0 auto; height:400px; margin-top:30px;  }
+
+
 
 /** table */
 .table {width:99%;  margin:0 auto; border-collapse:collapse; margin-top:20px; }
