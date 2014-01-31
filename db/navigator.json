@@ -1,7 +1,7 @@
 {
 	"TOPICS":{
 		"description":"",
-		"values":["Home", "Top Webpage", "Top Retweet", "WordCloud", "Time-Series Chart", "Map"]
+		"values":["Home", "Top Webpage", "Top Retweet", "WordCloud", "Time-Series Chart"]
 	},
 	"VOICE":{
 		"description":"Select a voice",

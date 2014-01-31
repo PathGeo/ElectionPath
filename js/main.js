@@ -55,6 +55,9 @@
 		//init navigator
 		init_navigator();
 		
+		//create map
+		init_map();
+		
 		//read candidates information 
 		$.getJSON("db/candidates_newFormat.json", function(json){
 			app.candidates=json;
@@ -67,8 +70,7 @@
 			//createDonationMap();
 			init_chart();
 			
-			//create map
-			init_map();
+			
 		});
 	});
 	
@@ -203,11 +205,13 @@
 		
 		//show twitter analysis
 		function showTwitterAnalysis(name, data){
-			var $candidate=$("#candidate > ul"),
+			var $candidate=$("#home > ul"),
+				$candidateBar=$(".candidateBar > ul"),
 				value=null,
 				numbers=["1st",'2nd','3rd'],
 				chartCSVData=app.chartCSVData,
 				twitterAnalysis=data.twitterAnalysis;
+				
 				
 				//prepare chart csv content
 				chartCSVData.headers.push(name);
@@ -226,17 +230,18 @@
 				value=twitterAnalysis.values[0];
 
 				html="<li class='candidate-li' id='"+name+"'>"+
-					 "<div class='candidate-name' style='background-color:"+data.backgroundColor+"'>"+data.name +"</div>"+
-					 "<div class='candidate-content'>"+
+					 //"<div class='candidate-name' >"+data.name +"</div>"+
+					 "<div class='candidate-content' style='background-color:"+data.backgroundColor+"'>"+
 					 	 "<ul>"+
 						 	"<li class='candidate-image'><img src='"+data.image+"' /></li>"+
 						 	"<li class='candidate-metadata'>"+
+						 		"<div class='candidate-name'>"+data.name+"</div>"+
 								"<div class='candidate-twitterYesterday'><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /><a href='#' class='showTable'>"+value.tweets_yesterday+"</a><label title='# of tweets mentioned about this candidate Yesterday'>mentions Yesterday</label></div>"+
 								"<div class='candidate-info'>"+"<a href='"+data.url_website+"' target='_blank'>Website</a><br><a href='"+data.url_twitter+"' target='_blank'>Twitter</a></div>"+
 							"</li>"+
 						 "</ul>"+
 						 //"<div class='showCandidateIndex'>show more..</div>"+
-					 "</div>"+
+					 "</div>"+ /**
 					 "<div class='candidate-index'>"+
 					 	"<ul>"+
 							"<li><a href='#' class='showTable'>"+value.tweets_all+"</a><label title='Total # of tweets mentions this candidate from 10/07 to Yesterday'>mentions since 10/07</label></li>"+
@@ -269,9 +274,11 @@
 							})()+
 						"</ul>"+
 					 "</div>"
+					 */
 					 "</li>";
 					 
 				$candidate.append(html);
+				$candidateBar.append(html);
 		}
 		
 		
@@ -411,7 +418,7 @@
 			return results;
 		})();
 		
-		var $candidateName=$("#candidate > ul"),
+		var $candidateName=$("#home > ul"),
 			$candidateNavBar=$("#candidateNavBar"),
 			top_candidateName=$candidateName.offset().top - parseFloat($candidateName.css('marginTop').replace(/auto/, 100));
 		
@@ -421,16 +428,16 @@
 		    	
 		   	//highlight navigator
 			$.each(tops, function(i,top){
-				if(y>=top-250){
+				if(y>=top-150){
 					$(".subMenu li[data-scroll-nav='"+i+"']").addClass("subMenuClick").siblings().removeClass("subMenuClick");
 				}
 			})
 			
 			//show hide candidateNavBar in the header
 			if(y>=top_candidateName){
-				$candidateNavBar.show();
+				//$candidateNavBar.show();
 			}else{
-				$candidateNavBar.hide();
+				//$candidateNavBar.hide();
 			}
 		});
 	}
@@ -557,6 +564,10 @@
 	 *initialize map 
 	 */
 	function init_map(){
+		//determine window height
+		$("#map").css("height", $(window).height()-$("#header").height()+35);
+		
+		
 		//need to change
 		var dateFrom='2013-10-08',
 			dateTo='2014-01-29',
@@ -596,10 +607,13 @@
 				
 				//init map and add features
 				var map=L.map(mapID, {
-					center: [32.774917, -117.005639],
+					center: [32.974917, -117.005639],
 					zoom: 10,
-					layers: [selectBasemap("ESRI Topographic Map")],
-					attributionControl:true
+					layers: [selectBasemap("ESRI Light Gray Map")],
+					attributionControl:true,
+					zoomControl:false,
+					scrollWheelZoom:false,
+					doubleClickZoom:false
 				});			
 				
 
@@ -612,7 +626,7 @@
 				
 
 				//zoom to bound
-				map.fitBounds(heatMapLayer._bounds);
+				//map.fitBounds(heatMapLayer._bounds);
 				
 				
 			}else{
