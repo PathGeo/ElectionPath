@@ -83,7 +83,7 @@ li {display:block;}
 #mainContent {width:86%; padding:5px 0% 0px 0%; float:right;}
 #mainContent > div {width:100%; position:relative}
 
-.mainBlock {padding:45px 0px 50px 0px; border-bottom:0px solid #f1f1f1; min-height:350px;  }
+.mainBlock {padding:45px 0px 50px 0px; border-bottom:0px solid #f1f1f1; min-height:550px;  }
 .mainBlock > ul {width:96%; overflow:hidden; margin:0 auto; margin-top:10px; }
 .mainBlock > ul > li {float:left; width:49.63%; background-color:#ffffff; position:relative;display:block;  }
 .mainBlock > ul > li:nth-child(1) {border-right:1px solid #f1f1f1;}
@@ -190,7 +190,7 @@ li {display:block;}
 
 
 /**chart */
-#chartContent {position:relative; width:99%; margin:0 auto; margin-top:80px; margin-bottom:40px; }
+#chartContent {position:relative; width:96%; margin:0 auto; margin-top:80px; margin-bottom:40px; }
 #chart {position:relative; }
 #chart_queryDate {position:absolute; left:60px; top:-30px ; font-size:13px; font-weight:600; }
 .dygraph-legend {width:110px !important; top:-60px !important; font-size:13px !important; left:auto !important; right:0px !important; }
