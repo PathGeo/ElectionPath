@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE7; IE=EmulateIE9">
+    <title>Temperatures with Range Selector</title>
+    <!--[if IE]>
+    <script type="text/javascript" src="../excanvas.js"></script>
+    <![endif]-->
+    <!--
+    For production (minified) code, use:
+    <script type="text/javascript" src="dygraph-combined.js"></script>
+    -->
+	
+    <script type="text/javascript" src="data2.js"></script>	
+    <script type="text/javascript" src="../dygraph-dev.js"></script>
+
+
+    <style type="text/css">
+    #graph {
+      border: 0px solid grey;
+	  position:absolute;
+	  padding-top:30px;
+	  padding-left:30px;
+	  padding-right:150px;
+	  padding-bottom:30px;
+    }
+	
+	.dygraph-legend {width:110px !important; top:-70px !important; font-size:14px !important;}
+	
+    </style>
+  </head>
+  <body>
+
+	</br></br></br></br>
+	
+
+	
+	<div id=graph>
+		<div id="noroll" style="width:800px; height:320px;"></div>
+	</div>
+
+    <script type="text/javascript">
+
+	  var maxRank = 3;    // Highlight columns only top 3
+      g1 = new Dygraph(
+          document.getElementById("noroll"),
+          data_temp,
+          {
+            customBars: true,
+            title: '',
+            ylabel: 'The number of Tweets',
+			//colors: ['#E80000', '#FF9900', '#339966', '#9900FF' ],
+			colors: ['#FF9900', '#339966' ],
+            legend: 'always',
+            showRangeSelector: true,
+            highlightCircleSize: 10,
+            rangeSelectorHeight: 50, 
+            labelsDivWidth: 110, //480,
+			labelsSeparateLines: true,
+            labelsDivStyles: {
+				'textAlign': 'right',
+                'backgroundColor': 'rgba(232, 232, 232, 0.5)',
+                'padding': '4px',
+                'border': '1px solid grey',
+                'borderRadius': '5px',
+                'boxShadow': '4px 4px 4px #888'
+            },		
+            strokeWidth: 2,
+			//valueRange: [0,200],    // Explicitly set the vertical range of the graph to [low, high].
+			underlayCallback: function(canvas, area, g) {
+				
+				// Search rank 3 for highlight columns
+				var rank = getTopThree(g);
+				//alert(rank[0]+" "+rank[1]+" "+rank[2]);
+				
+				// Draw rectangle top 3
+				for (var ii=0; ii<rank.length; ii++) {
+					var i = rank[ii].position;
+					var series = rank[ii].series;
+					if (i < 0) continue;    // length of selected top3 data is less then 3
+					var highValue = 0;
+					var lowValue = Number.MAX_VALUE;
+					for (var j=1; j<g.numColumns(); j++) {
+						var value = g.getValue(i,j).toString().split(",")[1]*1;
+						if (lowValue > value) lowValue  = value;
+						if (highValue < value) highValue = value;
+					}
+					if (highValue > 0) {
+						//var bottom_left = g.toDomCoords(g.getValue(i,0), lowValue);
+						var bottom_left = g.toDomCoords(g.getValue(i,0), 0);
+						var top_right = g.toDomCoords(g.getValue(i,0), highValue);
+
+						var bottom = bottom_left[1];
+						var left   = bottom_left[0]-10;					
+						var top    = top_right[1];
+						var right  = top_right[0]+10;
+						
+						//canvas.fillStyle = "rgba(255, 255, 102, 1.0)";
+						//canvas.fillStyle = "rgba(235, 98, 98, 0.5)";
+						canvas.fillStyle = "rgba(0, 255, 255, 0.5)";
+						
+						canvas.fillRect(left, area.y, right - left, area.h);
+						//canvas.fillRect(left, bottom, right-left, top-bottom);
+												
+						var date = new Date(g.getValue(i,0));
+						//alert(date);
+						var shortText = date.toDateString();
+						canvas.font="bold 12px Arial";
+						canvas.fillStyle = g.getColors()[series];
+						canvas.fillText("["+(ii+1)+"] "+shortText.substring(0,shortText.length-5), right, top);
+					}
+				}
+            },
+			zoomCallback: function(minX, maxX, yRanges) {
+                //s.innerHTML += "<b>Zoom</b> [" + minX + ", " + maxX + ", [" + yRanges + "]]<br/>";
+				//alert("zoomCallback -> "+minX+" "+maxX);
+            },
+			drawCallback: function(me, initial) {
+				//var xRange = me.xAxisRange();
+				//alert("drawCallback -> "+xRange[0]+" "+xRange[1]);
+				//me.setAnnotations(annotations);
+			},
+          }
+      );
+	  
+	  g1.ready(function() {
+		// zooming the last 14days
+		var sIndex = g.numRows()-14;
+		var eIndex = g.numRows()- 1;
+		if (sIndex < 0) sIndex = 0;
+		if (eIndex < 0) eIndex = 0;
+		g1.updateOptions({
+			dateWindow: [g1.getValue(sIndex,0), g1.getValue(eIndex,0)]
+		});
+	  });
+	  
+	  
+	  // Search rank 3 for highlight columns
+	  function getTopThree(g) {
+		var xRange = g.xAxisRange();
+		var rank = [];
+		for (var ii=0; ii<maxRank; ii++) {
+			var maxValue = 0;
+			var maxPosition = {position: -1, series: 0};
+			for (var i=0; i<g.numRows(); i++) {
+				if (g.getValue(i,0) < xRange[0]) continue;    // for rangeSelector
+				if (g.getValue(i,0) > xRange[1]) continue;    // for rangeSelector
+				var ranked = false;
+				for (var jj=0; jj<ii; jj++) {
+					if (rank[jj].position == i) {
+						ranked = true;
+						break;
+					}
+				}
+				if (ranked) continue;
+				var highValue = 0;
+				var series = 0;
+				for (var j=1; j<g.numColumns(); j++) {
+					var value = g.getValue(i,j).toString().split(",")[1]*1;
+					if (highValue < value) {
+						highValue = value;
+						series = j - 1;
+					}
+				}
+				if (maxValue < highValue) {
+					maxValue = highValue;
+					maxPosition = {position: i, series: series};
+				}
+			}
+			rank.push(maxPosition);
+		}
+		return rank;
+	  }
+
+    </script>
+  </body>
+</html>
