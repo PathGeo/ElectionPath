@@ -568,7 +568,7 @@
 		app.dateTo=finalDate.replace(/\//g, "-");
 		
 
-		
+
 		//init chart
 		app.chart = g = new Dygraph(
 			document.getElementById("chart"), 
