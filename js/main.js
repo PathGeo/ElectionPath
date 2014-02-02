@@ -953,6 +953,8 @@
 	 * chartEvent
 	 */
 	app.chartEvent.click=function(clickDate){
+		return; 
+		
 		clickDate=clickDate.replace(/\//g,'-');
 		
 		var toDateTime=new Date(clickDate).getTime()+86400000;
@@ -974,6 +976,8 @@
 	
 	
 	app.chartEvent.rangeChange=function(fromDate, toDate){
+		return;
+		
 		fromDate=fromDate.split(" ")[0].replace(/\//g,'-');
 		toDate=toDate.split(" ")[0].replace(/\//g,'-');
 		
