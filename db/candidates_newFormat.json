@@ -55,7 +55,7 @@
 				},
 				{
 					"influence": "2.90%",
-					"tweets_yesterday": 15,
+					"tweets_yesterday": 100,
 					"followers_yesterday_new": 3,
 					"biggestFollowers_yesterday": [
 						{
@@ -76,6 +76,49 @@
 					],
 					"followers_all": 493,
 					"date": "10/7/2013",
+					"tweets_all": 15,
+					"biggestFollowers": [
+						{
+							"url": "http://www.twitter.com/morrowchris",
+							"name": "morrowchris",
+							"rank": 1
+						},
+						{
+							"url": "http://www.twitter.com/AhtishamWebmast",
+							"name": "AhtishamWebmast",
+							"rank": 2
+						},
+						{
+							"url": "http://www.twitter.com/sdmattpotter",
+							"name": "sdmattpotter",
+							"rank": 3
+						}
+					],
+					"followers_yesterday_removed": 2
+				},
+				{
+					"influence": "2.90%",
+					"tweets_yesterday": 80,
+					"followers_yesterday_new": 3,
+					"biggestFollowers_yesterday": [
+						{
+							"url": "http://www.twitter.com/_Starrchild_",
+							"name": "_Starrchild_",
+							"rank": 1
+						},
+						{
+							"url": "http://www.twitter.com/johnnyswartz704",
+							"name": "johnnyswartz704",
+							"rank": 2
+						},
+						{
+							"url": "http://www.twitter.com/Susan_Pohlman",
+							"name": "Susan_Pohlman",
+							"rank": 3
+						}
+					],
+					"followers_all": 493,
+					"date": "10/6/2013",
 					"tweets_all": 15,
 					"biggestFollowers": [
 						{
@@ -464,7 +507,7 @@
 			"values":[
 				{
 					"influence": "2.90%",
-					"tweets_yesterday": 15,
+					"tweets_yesterday": 35,
 					"followers_yesterday_new": 3,
 					"biggestFollowers_yesterday": [
 						{
@@ -485,6 +528,92 @@
 					],
 					"followers_all": 493,
 					"date": "10/8/2013",
+					"tweets_all": 15,
+					"biggestFollowers": [
+						{
+							"url": "http://www.twitter.com/morrowchris",
+							"name": "morrowchris",
+							"rank": 1
+						},
+						{
+							"url": "http://www.twitter.com/AhtishamWebmast",
+							"name": "AhtishamWebmast",
+							"rank": 2
+						},
+						{
+							"url": "http://www.twitter.com/sdmattpotter",
+							"name": "sdmattpotter",
+							"rank": 3
+						}
+					],
+					"followers_yesterday_removed": 2
+				},
+				{
+					"influence": "2.90%",
+					"tweets_yesterday": 70,
+					"followers_yesterday_new": 3,
+					"biggestFollowers_yesterday": [
+						{
+							"url": "http://www.twitter.com/_Starrchild_",
+							"name": "_Starrchild_",
+							"rank": 1
+						},
+						{
+							"url": "http://www.twitter.com/johnnyswartz704",
+							"name": "johnnyswartz704",
+							"rank": 2
+						},
+						{
+							"url": "http://www.twitter.com/Susan_Pohlman",
+							"name": "Susan_Pohlman",
+							"rank": 3
+						}
+					],
+					"followers_all": 493,
+					"date": "10/7/2013",
+					"tweets_all": 15,
+					"biggestFollowers": [
+						{
+							"url": "http://www.twitter.com/morrowchris",
+							"name": "morrowchris",
+							"rank": 1
+						},
+						{
+							"url": "http://www.twitter.com/AhtishamWebmast",
+							"name": "AhtishamWebmast",
+							"rank": 2
+						},
+						{
+							"url": "http://www.twitter.com/sdmattpotter",
+							"name": "sdmattpotter",
+							"rank": 3
+						}
+					],
+					"followers_yesterday_removed": 2
+				},
+				{
+					"influence": "2.90%",
+					"tweets_yesterday": 150,
+					"followers_yesterday_new": 3,
+					"biggestFollowers_yesterday": [
+						{
+							"url": "http://www.twitter.com/_Starrchild_",
+							"name": "_Starrchild_",
+							"rank": 1
+						},
+						{
+							"url": "http://www.twitter.com/johnnyswartz704",
+							"name": "johnnyswartz704",
+							"rank": 2
+						},
+						{
+							"url": "http://www.twitter.com/Susan_Pohlman",
+							"name": "Susan_Pohlman",
+							"rank": 3
+						}
+					],
+					"followers_all": 493,
+					"date": "10/6/2013",
 					"tweets_all": 15,
 					"biggestFollowers": [
 						{

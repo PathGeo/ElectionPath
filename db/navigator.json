@@ -1,14 +1,20 @@
 {
 	"TOPICS":{
 		"description":"",
-		"values":["Home", "Top Webpage", "Top Retweet", "WordCloud", "Time-Series Chart"]
+		"labels":["Home", "Top Webpage", "Top Retweet", "WordCloud", "Time-Series Chart"],
+		"values":["home", "topWebpage", "topRetweet", "wordCloud", "timeSeriesChart"],
+		"clickFn":""
 	},
 	"VOICE":{
 		"description":"Select a voice",
-		"values":["People's Voice", "Candidate's Voice"]
+		"labels":["People's Voice", "Candidate's Voice"],
+		"values":["people", "candidate"],
+		"clickFn":"readVoice"
 	},
 	"CATEGORY":{
 		"description":"Select a category",
-		"values":["All", "Business", "Debate", "Endorsement",  "Jobs and Labor", "Neighborhood"]
+		"labels":["All", "Business", "Debate", "Endorsement",  "Jobs", "Neighborhood"],
+		"values":["all", "business", "debate", "endorsement",  "jobs", "neighborhood"],
+		"clickFn":""
 	}
 }

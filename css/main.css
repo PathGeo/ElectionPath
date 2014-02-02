@@ -192,7 +192,7 @@ li {display:block;}
 /**chart */
 #chartContent {position:relative; width:96%; margin:0 auto; margin-top:80px; margin-bottom:40px; }
 #chart {position:relative; }
-#chart_queryDate {position:absolute; left:60px; top:-30px ; font-size:13px; font-weight:600; }
+#chart_queryDate {position:absolute; left:60px; top:-30px ; font-size:13px; font-weight:600; display:none;  }
 .dygraph-legend {width:110px !important; top:-60px !important; font-size:13px !important; left:auto !important; right:0px !important; }
 .dygraph-legend > span {display:block !important}
 
@@ -311,6 +311,12 @@ li {display:block;}
 /** dialog */
 .dialog {display:none; }
 
+
+
+/**loading dialog*/
+#dialog_loading {text-align:center;}
+#dialog_loading img {width:40px; }
+.no-close .ui-dialog-titlebar-close {display: none }
 
 /** jquery ui */
 .ui-widget-overlay {position:fixed}

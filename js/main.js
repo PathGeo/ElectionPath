@@ -59,7 +59,42 @@
 		init_map();
 		
 		//read candidates information 
-		$.getJSON("db/candidates_newFormat.json", function(json){
+		readVoice('people')
+	});
+	
+	
+	
+	/**
+	 * read voice from people or candidate 
+	 */
+	function readVoice(source){
+		var urls={
+				"people":"db/people.json",
+				"candidate":"db/candidate.json"
+			}, 
+			url=urls[source] || urls["people"];
+		
+		
+		//show loading dialog and clear content
+		$("#dialog_loading").dialog({
+			modal:true, 
+			title:'Change Election Voice',
+			resizable:false,
+			dialogClass: 'no-close'
+		});
+		$(".mainBlock > ul, .mainBlock .candidateBar > ul").html("");
+		
+		//clear app.chartCSVData
+		app.chartCSVData={
+			headers:["Date"],
+			values:{}
+		};
+		
+		
+		$.getJSON(url, function(json){
+			//destroy loading dialog
+			$("#dialog_loading").dialog("destroy");
+			
 			app.candidates=json;
 			
 			//show press release dialog
@@ -69,10 +104,8 @@
 			
 			//createDonationMap();
 			init_chart();
-			
-			
 		});
-	});
+	}
 	
 	
 	
@@ -89,31 +122,39 @@
 						  "<p>"+v.description+"</p>"+
 						  "<ul class='subMenu'>"+
 						  	(function(){
-						  		var result="";
-						  		$.each(v.values, function(i,val){
-						  			if(k=='TOPICS'){
-						  				if(i==0){
-						  					result+="<li data-scroll-nav='"+i+"' class='subMenuClick'>"+val+"</li>";
-						  				}else{
-						  					result+="<li data-scroll-nav='"+i+"'>"+val+"</li>";
-						  				}
-						  			}else{
-						  				if(i==0){
-						  					result+="<li class='subMenuClick'>"+val+"</li>";
-						  				}else{
-						  					result+="<li>"+val+"</li>";
-						  				}
+						  		var result="", $result="";
+						  		$.each(v.labels, function(i,label){
+						  			$result=$("<li value='"+v.values[i]+"'>"+label+"</li>");
+						  			
+						  			if(k=='TOPICS'){$result.attr("data-scroll-nav", i)}
+						  			if(i==0){$result.addClass('subMenuClick')}
+						  			if(v.clickFn && v.clickFn!=''){
+						  				$result.attr('onclick', v.clickFn +"('"+v.values[i]+"')");
 						  			}
+						  			
+						  			result+=$result[0].outerHTML;
 						  		})
+						  		
+						  		//category
+						  		if(k=='CATEGORY'){
+						  			result='Coming soon';
+						  		}
+						  		
 						  		return result;
 						  	})()+
 					  	  "</ul>"+
 					  "</div>";
 			});
 			
-			//click event on each li in subMenu
 			$("#navigator").html(html);
 			
+			
+			//click event on each li in subMenu
+			$(".subMenu li:not([data-scroll-nav])").click(function(){
+				$(this).addClass("subMenuClick").siblings().removeClass("subMenuClick");
+			})
+			
+
 			
 			//scroll
 			$.scrollIt();
@@ -140,7 +181,7 @@
 				if(k!='Alvarez' && k!='Faulconer'){
 					return;
 				}
-				
+			
 				//twitterAnalysis
 				showTwitterAnalysis(k,v);
 				
@@ -154,7 +195,7 @@
 				showWordcloud(k,v);
 				
 				//show top 1 webpage at highlight date
-				showChartHighlightInfo(k,v);
+				//showChartHighlightInfo(k,v);
 				
 				
 				
@@ -285,30 +326,36 @@
 		
 		//show top webpage
 		function showTopWebpage(name, data){
-			var html_header="<tr><td class='rank'>Top</td><td class='value'>Value</td><td class='count'>#</td></tr>",
+			var html_header="<tr><td class='rank'>Top</td><td class='value'>Webpage</td>",
 				value='',
 				$topWebpage=$("#topWebpage > ul"),
 				$tab=$("<div class='tabs'><ul></ul></div>"),
 				topWebpage=data.topWebpage;
 			
-			$.each(topWebpage.values, function(source,vals){
+			$.each(topWebpage, function(source,val){
 				$tab.find("> ul").append("<li><a href='#tabs-"+source+"'>"+source+"</a></li>");
 				
+				if(source=='Twitter'){
+					html_header+="<td class='count'>#</td></tr>"
+				}else{
+					html_header+="</tr>"
+				}
 				var html="<div id='tabs-"+source+"'><table class='table'>" + html_header;
 				
-				$.each(vals, function(i,obj){
+				
+				$.each(val.values[0], function(i,obj){
 					html+='<tr>'+
-						  '<td class="rank">'+obj.rank+'</td>'+
+						  '<td class="rank">'+obj.ranking+'</td>'+
 						  "<td class='value readOpenGraph'>"+
 								(function(){
-								  	var result=obj.value;
+								  	var result=obj.title;
 								  	
-								  	if(obj.url){result="<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>"}
+								  	if(obj.url){result="<a href='"+obj.url+"' target='_blank'>"+obj.title+"</a>"}
 								  	
 								  	return result;
 								})()+
 							"</td>"+
-							'<td class="count">'+obj.count+"</td>"+
+							((source=='Twitter')?'<td class="count">'+obj.count+"</td>":"")+
 							"</tr>";
 				});
 			
@@ -428,7 +475,7 @@
 		    	
 		   	//highlight navigator
 			$.each(tops, function(i,top){
-				if(y>=top-150){
+				if(y>=top-320){
 					$(".subMenu li[data-scroll-nav='"+i+"']").addClass("subMenuClick").siblings().removeClass("subMenuClick");
 				}
 			})
@@ -495,7 +542,8 @@
 		var csv = "", 
 			dates = null, 
 			chartCSVData = app.chartCSVData,
-			finalDate=null;
+			finalDate=null,
+			highlightDates=[];
 		
 		//header
 		var length = chartCSVData.headers.length - 1;
@@ -518,6 +566,8 @@
 		
 		//app.dateTo
 		app.dateTo=finalDate.replace(/\//g, "-");
+		
+
 		
 		//init chart
 		app.chart = g = new Dygraph(
@@ -545,12 +595,116 @@
 				},
 				strokeWidth: 2,
 				legend: 'always',
-				hideOverlayOnMouseOut: true
+				hideOverlayOnMouseOut: true,
+				underlayCallback: function(canvas, area, g) {
+					// Search rank 3 for highlight columns
+					var rank = function(obj){
+						var xRange = obj.xAxisRange(),
+							rank = [],
+							maxRank=3; 
+							
+						for (var ii=0; ii<maxRank; ii++) {
+							var maxValue = 0;
+							var maxPosition = {position: -1, series: 0};
+							for (var i=0; i<g.numRows(); i++) {
+								if (obj.getValue(i,0) < xRange[0]) continue;    // for rangeSelector
+								if (obj.getValue(i,0) > xRange[1]) continue;    // for rangeSelector
+								var ranked = false;
+								for (var jj=0; jj<ii; jj++) {
+									if (rank[jj].position == i) {
+										ranked = true;
+										break;
+									}
+								}
+								if (ranked) continue;
+								var highValue = 0;
+								var series = 0;
+								for (var j=1; j<obj.numColumns(); j++) {
+									var value = obj.getValue(i,j).toString().split(",")[1]*1;
+									if (highValue < value) {
+										highValue = value;
+										series = j - 1;
+									}
+								}
+								if (maxValue < highValue) {
+									maxValue = highValue;
+									maxPosition = {position: i, series: series};
+								}
+							}
+							rank.push(maxPosition);
+						}
+						return rank;
+					}(g);
+					
+					
+					//alert(rank[0]+" "+rank[1]+" "+rank[2]);
+					
+					// Draw rectangle top 3
+					for (var ii=0; ii<rank.length; ii++) {
+						var i = rank[ii].position;
+						var series = rank[ii].series;
+						if (i < 0) continue;    // length of selected top3 data is less then 3
+						var highValue = 0;
+						var lowValue = Number.MAX_VALUE;
+						for (var j=1; j<g.numColumns(); j++) {
+							var value = g.getValue(i,j).toString().split(",")[1]*1;
+							if (lowValue > value) lowValue  = value;
+							if (highValue < value) highValue = value;
+						}
+						if (highValue > 0) {
+							//var bottom_left = g.toDomCoords(g.getValue(i,0), lowValue);
+							var bottom_left = g.toDomCoords(g.getValue(i,0), 0);
+							var top_right = g.toDomCoords(g.getValue(i,0), highValue);
+	
+							var bottom = bottom_left[1];
+							var left   = bottom_left[0]-10;					
+							var top    = top_right[1];
+							var right  = top_right[0]+10;
+							
+							canvas.fillStyle = "rgba(255, 255, 102, 0.8)";
+							//canvas.fillStyle = "rgba(235, 98, 98, 0.5)";
+							//canvas.fillStyle = "rgba(253,182,24, 0.8)";
+							
+							canvas.fillRect(left, area.y, right - left, area.h);
+							//canvas.fillRect(left, bottom, right-left, top-bottom);
+													
+							var date = new Date(g.getValue(i,0));
+							
+							
+							
+							//highlight dates to get top url on that date
+							// highlightDates.push({
+// 						
+								// date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()			
+							// })
+							
+							//alert(date);
+							var shortText = date.toDateString();
+							canvas.font="bold 12px Arial";
+							canvas.fillStyle = g.getColors()[series];
+							canvas.fillText("["+(ii+1)+"] "+shortText.substring(0,shortText.length-5), right, top);
+						}
+					}
+	            }
+				
 			}
 		);
+
+
+		//zoom to last 14 days
+		app.chart.ready(function() {
+			// zooming the last 14days
+			var sIndex = g.numRows()- 14;
+			var eIndex = g.numRows()- 1;
+			if (sIndex < 0) sIndex = 0;
+			if (eIndex < 0) eIndex = 0;
+			app.chart.updateOptions({
+				dateWindow: [app.chart.getValue(sIndex,0), app.chart.getValue(eIndex,0)]
+			});
+		});
 		
 		
-		
+		//console.log(highlightDates)
 	
 		
 		//tabs
