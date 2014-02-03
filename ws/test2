@@ -1,0 +1,8 @@
+import urllib2
+import json
+response = urllib2.urlopen('http://50.18.30.94:8088/cyberdiscovery/ws/topurls.json?keyword=mayor&engine=BingAzure&category=Education&day=1&recnum=10')
+data = json.load(response)
+array = data['sorted_dict_averagescore']
+print 'url:',array[0][0],' score:',array[0][1]
+print 'url:',array[1][0],' score:',array[1][1]
+    
