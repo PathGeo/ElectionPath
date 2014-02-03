@@ -1,8 +1,8 @@
 {
 	"TOPICS":{
 		"description":"",
-		"labels":["Home", "Top Webpage", "Top Retweet", "WordCloud", "Time-Series Chart"],
-		"values":["home", "topWebpage", "topRetweet", "wordCloud", "timeSeriesChart"],
+		"labels":["Election Path", "Hot Discussion", "Hot News", "Top Story", "WordCloud", "Hot Location"],
+		"values":["home", "topRetweet", "topWebpage-Twitter", "topWebpage-cyber", "wordCloud", "map"],
 		"clickFn":""
 	},
 	"VOICE":{
@@ -13,8 +13,8 @@
 	},
 	"CATEGORY":{
 		"description":"Select a category",
-		"labels":["All", "Business", "Debate", "Endorsement",  "Jobs", "Neighborhood"],
-		"values":["all", "business", "debate", "endorsement",  "jobs", "neighborhood"],
+		"labels":["All", "Business", "Debate", "Education", "Endorsement",  "Jobs", "Neighborhood"],
+		"values":["all", "business", "debate", "education", "endorsement",  "jobs", "neighborhood"],
 		"clickFn":""
 	}
 }

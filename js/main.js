@@ -58,6 +58,9 @@
 		//create map
 		init_map();
 		
+		//init time
+		init_time();
+		
 		//read candidates information 
 		readVoice('people')
 	});
@@ -69,7 +72,7 @@
 	 */
 	function readVoice(source){
 		var urls={
-				"people":"db/people.json",
+				"people":"db/people.json", //"db/candidates_newFormat.json", //,
 				"candidate":"db/candidate.json"
 			}, 
 			url=urls[source] || urls["people"];
@@ -82,7 +85,9 @@
 			resizable:false,
 			dialogClass: 'no-close'
 		});
-		$(".mainBlock > ul, .mainBlock .candidateBar > ul").html("");
+		$(".mainBlock > ul, .mainBlock .candidateBar > ul, #topStory #categories").html("");
+		$("#topStory #categories").append('<ul></ul>');
+		
 		
 		//clear app.chartCSVData
 		app.chartCSVData={
@@ -95,17 +100,303 @@
 			//destroy loading dialog
 			$("#dialog_loading").dialog("destroy");
 			
-			app.candidates=json;
-			
 			//show press release dialog
 			//showDialog('dialog_electionResult', 'PathGeo can provide real-time customizable social media (Big Data) analytics for your election campaign', {height:570});
 			
-			init_UI();
 			
-			//createDonationMap();
-			init_chart();
+			//parse json and show twieeter analysis, chart, topStory(cyberdiscovery) and wordcloud
+			if(json){
+				app.candidates=json;
+				var html_candidateNav="";
+			
+				$.each(json, function(k,v){
+					if(k!='Alvarez' && k!='Faulconer'){
+						return;
+					}
+				
+					//twitterAnalysis
+					showTwitterAnalysis(k,v);
+					
+					//top story
+					showTopStory(k,v);
+					
+					//showWordcloud 
+					showWordcloud(k,v);
+					
+					
+					//candidate info for nav
+					html_candidateNav="<li class='candidate-li' id='"+k+"'>"+
+						 "<div class='candidate-name' style='background-color:"+v.backgroundColor+"'>"+v.name + "</div>"+
+						 "</li>";
+					$("#header #candidateNavBar > ul").append(html_candidateNav);
+					
+					//give legend background
+					$("#legend-"+k).css({
+						"background-color":v.backgroundColor
+					});
+				});
+						
+				
+				//add li's clicking event
+				// $(".showTable").click(function(){
+					// var $this=$(this),
+						// id=$this.parents("li.candidate-li").attr("id");
+// 					
+					// if(app.candidates[id] && id && id!=''){
+						// showTable(id, app.candidates[id].twitterAnalysis);
+					// }else{
+						// console.log("[ERROR] cannot find out the candidate's info in the database. ")
+					// }
+				// }).siblings("label").each(function(){
+					// var $this=$(this),
+						// title=$this.attr('title');
+					// if(title && title!=''){
+						// $this.siblings('a.showTable').attr('title', title);
+					// }
+				// });
+				
+				
+				//init chart;
+				init_chart();
+				
+				
+				
+				//get info of topWebpage, topRetweet, topMention, topHashtag and topChatter from getMetrics.py
+				var endDate=new Date(),
+					fromDate= (function(){this.setDate(this.getDate()-1); return this}).call(new Date),
+					endDate=endDate.getFullYear()+"-"+(endDate.getMonth()+1)+"-"+endDate.getDate(),
+					fromDate=fromDate.getFullYear()+"-"+(fromDate.getMonth()+1)+"-"+fromDate.getDate();
+				
+				getMetrics("Alvarez,Faulconer", fromDate, endDate, function(){
+					//readOpenGraph
+					readOpenGraph();
+				
+			
+					//detect the window's top while scrolling to highlight index in the navigator bar
+					scrollEvent();
+				
+				
+					//tabs
+					$('.tabs').tabs();
+				});
+				
+				
+				
+				
+				
+				
+				
+				
+				
+			}
 		});
 	}
+	
+	
+	
+	//show twitter analysis
+	function showTwitterAnalysis(name, data){
+				var $candidate=$("#home > ul"),
+					$candidateBar=$(".candidateBar > ul"),
+					value=null,
+					numbers=["1st",'2nd','3rd'],
+					chartCSVData=app.chartCSVData,
+					twitterAnalysis=data.twitterAnalysis;
+					
+					
+					//prepare chart csv content
+					chartCSVData.headers.push(name);
+					$.each(twitterAnalysis.values, function(i,val){
+						if(chartCSVData.values[val.date]) {
+							chartCSVData.values[val.date].push(val.tweets_yesterday);
+						}else {
+							chartCSVData.values[val.date] = [val.tweets_yesterday];
+						}
+					});
+					
+					
+					//reverse array order
+					twitterAnalysis.values.reverse();
+					
+					value=twitterAnalysis.values[0];
+	
+					html="<li class='candidate-li' id='"+name+"'>"+
+						 //"<div class='candidate-name' >"+data.name +"</div>"+
+						 "<div class='candidate-content' style='background-color:"+data.backgroundColor+"'>"+
+						 	 "<ul>"+
+							 	"<li class='candidate-image'><img src='"+data.image+"' /></li>"+
+							 	"<li class='candidate-metadata'>"+
+							 		"<div class='candidate-name'>"+data.name+"</div>"+
+									"<div class='candidate-twitterYesterday'><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /><a href='#' class='showTable'>"+value.tweets_yesterday+"</a><label title='# of tweets mentioned about this candidate Yesterday'>mentions Yesterday</label></div>"+
+									"<div class='candidate-info'>"+"<a href='"+data.url_website+"' target='_blank'>Website</a><br><a href='"+data.url_twitter+"' target='_blank'>Twitter</a></div>"+
+								"</li>"+
+							 "</ul>"+
+							 //"<div class='showCandidateIndex'>show more..</div>"+
+						 "</div>"+ /**
+						 "<div class='candidate-index'>"+
+						 	"<ul>"+
+								"<li><a href='#' class='showTable'>"+value.tweets_all+"</a><label title='Total # of tweets mentions this candidate from 10/07 to Yesterday'>mentions since 10/07</label></li>"+
+								"<li><a href='#' class='showTable'>+"+value.followers_yesterday_new+"</a><label title=\"# of new followers added in this candidate's Twitter account\">NEW Followers Yesterday</label></li>"+
+								"<li><a href='#' class='showTable'>-"+value.followers_yesterday_removed+"</a><label title=\"# of Twitter users 'unfollow' this candidate's Twitter account\">REMOVED Followers Yesterday</label></li>"+
+								"<li><a href='#' class='showTable'>"+value.influence+"</a><label title=\"The percentage changes of the combined number of 'fans'(followers) from  each new follower\">Network Impact Changes Yesterday</label></li>"+
+								"<li></li>"+
+								(function(){
+									var result='';
+									$.each(numbers, function(i,n){
+										if(value.biggestFollowers_yesterday[i]){
+											result+="<li class='biggestFollwers_yesterday'>"+((value.biggestFollowers_yesterday[i].url)?"<a href='"+value.biggestFollowers_yesterday[i].url+"' target='_blank'>@"+value.biggestFollowers_yesterday[i].name+"</a>":"@"+value.biggestFollowers_yesterday[i].name)+"</a><br>"+n+" Biggest Follower Yesterday</li>";
+										}else{
+											result+="<li style='height:37px;'></li>";
+										}
+									});
+									return result;
+								})()+
+								"<li></li>"+
+								(function(){
+									var result='';
+									$.each(numbers, function(i,n){
+										if(value.biggestFollowers[i]){
+											result+="<li>"+((value.biggestFollowers[i].url)?"<a href='"+value.biggestFollowers[i].url+"' target='_blank'>@"+value.biggestFollowers[i].name+"</a>":"@"+value.biggestFollowers[i].name)+"</a><br>"+n+" Biggest Follower</li>";
+										}else{
+											result+="<li style='height:37px;'></li>";
+										}
+									});
+									return result;
+								})()+
+							"</ul>"+
+						 "</div>"
+						 */
+						 "</li>";
+						 
+					$candidate.append(html);
+					$candidateBar.append(html);
+	}
+			
+	
+			
+	//show top webpage
+	function showTopWebpage(name, data){
+				var html="<table class='table'><tr><td class='rank'>Top</td><td class='value'>Webpage</td><td class='count'>#</td></tr>",
+					$topWebpage=$("#topWebpage > ul");
+				
+				$.each(data, function(i,obj){
+						html+='<tr>'+
+							  '<td class="rank">'+obj.rank+'</td>'+
+							  "<td class='value readOpenGraph'>"+
+									(function(){
+									  	var result=obj.value;
+									  	
+									  	if(obj.url){result="<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>"}
+									  	
+									  	return result;
+									})()+
+								"</td>"+
+								'<td class="count">'+obj.count+"</td>"+
+								"</tr>";
+				});
+				
+				$topWebpage.append("<li>"+html+"</table></li>");
+	}
+			
+			
+			
+	//show top story
+	function showTopStory(name, data){
+				var html_header="<tr><td class='rank'>Top</td><td class='value'>Webpage</td>",
+					html="";
+					value='',
+					$topStoryUL=$("#topStory > ul"),
+					$categories=$("#categories");
+					$tab=$categories.find(" > ul"),
+					topStory=data.topStory;
+				
+					
+				
+				$.each(topStory.values, function(k,val){
+					$tab.append("<li><a href='#category-"+k+"'>"+(k[0].toUpperCase()+k.slice(1))+"</a></li>");
+					
+					html="<div id='category-"+k+"'><table class='table'>";
+				
+					$.each(val, function(i,obj){
+						html+='<tr>'+
+							  '<td class="rank">'+obj.rank+'</td>'+
+							  "<td class='value readOpenGraph'>"+
+									(function(){
+									  	var result=obj.value;
+									  	
+									  	if(obj.url){result="<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>"}
+									  	
+									  	return result;
+									})()+
+								"</td>"+
+								"</tr>";
+					});
+					
+					html+="</table></div>";
+					
+					$categories.append(html);
+				});
+				
+		
+	}
+			
+			
+			
+	//show top retweet
+	function showTopRetweet(name, data){
+				var html="<li><table class='table'><tr><td class='rank'>Top</td><td class='value'>Value</td><td class='count'>#</td></tr>",
+					$topRetweet=$("#topRetweet > ul");
+				
+				$.each(data, function(i,obj){
+						html+='<tr>'+
+							  '<td class="rank">'+obj.rank+'</td>'+
+							  "<td class='value'>"+
+									(function(){
+									  	return "<div class='opengraph' onclick=\"window.open('"+obj.url+"')\"><ul>"+
+										  			"<li><img src='"+obj.profile_image+"' class='opengraph-image' /><label class='opengraph-title'>"+obj.profile_screenName+"</label></li>"+
+										  			"<li class='opengraph-description'>"+obj.value+"</li>"+
+										  		"</ul></div>";
+									})()+
+								"</td>"+
+								'<td class="count">'+obj.count+"</td>"+
+								"</tr>";
+				});
+				
+				html+="</table></li>";
+				
+				
+				$topRetweet.append(html);
+	}
+			
+			
+			
+	//show wordcloud
+	function showWordcloud(name, data){
+		$("#wordcloud > ul").append("<li><div id='wordcloud-"+name+"' class='wordcloud'></div></li>");
+				
+		//create word cloud
+		createWordCloud(data.wordCloud.values, $("#wordcloud-"+name));
+	}
+			
+		
+			
+	//show highlighted info at specific date which the number of tweets is over 100
+	function showChartHighlightInfo(name, data){
+		var html="<li><table class='table'><tr><td>Date</td><td>Webpage</td></tr>",
+			$target=$("#timeSeriesChart > ul"),
+			topURL={},
+			values=data.timeSeriesChart.values;
+				
+		$.each(values, function(i, val){
+			topURL=val.topURLs[0];
+			html+="<tr><td>"+val.date + "<p>"+val.tweets +"</p></td><td class='readOpenGraph'><a href='"+topURL.url+"' target='_blank'>"+topURL.value+"</a></td></tr>";	  
+		});
+				
+				
+		$target.append(html+"</table></li>");
+	}
+	
+	
 	
 	
 	
@@ -168,257 +459,6 @@
 	 * init user interface 
 	 */
 	function init_UI(){	
-	
-		//init time
-		init_time();
-
-		//read candidates
-		if(app.candidates){
-			var html_candidateNav="";
-			
-			
-			$.each(app.candidates, function(k,v){
-				if(k!='Alvarez' && k!='Faulconer'){
-					return;
-				}
-			
-				//twitterAnalysis
-				showTwitterAnalysis(k,v);
-				
-				//top Webpage
-				showTopWebpage(k,v);
-				
-				//top retweet
-				showTopRetweet(k,v); 
-				
-				//showWordcloud 
-				showWordcloud(k,v);
-				
-				//show top 1 webpage at highlight date
-				//showChartHighlightInfo(k,v);
-				
-				
-				
-				//candidate info for nav
-				html_candidateNav="<li class='candidate-li' id='"+k+"'>"+
-					 "<div class='candidate-name' style='background-color:"+v.backgroundColor+"'>"+v.name + "</div>"+
-					 "</li>";
-				$("#header #candidateNavBar > ul").append(html_candidateNav);
-				
-				//give legend background
-				$("#legend-"+k).css({
-					"background-color":v.backgroundColor
-				});
-			});
-					
-			
-			//add li's clicking event
-			$(".showTable").click(function(){
-				var $this=$(this),
-					id=$this.parents("li.candidate-li").attr("id");
-				
-				if(app.candidates[id] && id && id!=''){
-					showTable(id, app.candidates[id].twitterAnalysis);
-				}else{
-					console.log("[ERROR] cannot find out the candidate's info in the database. ")
-				}
-			}).siblings("label").each(function(){
-				var $this=$(this),
-					title=$this.attr('title');
-				if(title && title!=''){
-					$this.siblings('a.showTable').attr('title', title);
-				}
-			});
-			
-			
-			//readOpenGraph
-			readOpenGraph();
-			
-		
-			//detect the window's top while scrolling to highlight index in the navigator bar
-			scrollEvent();
-			
-			//tabs
-			$('.tabs').tabs();
-		}
-		
-		
-		
-		//show twitter analysis
-		function showTwitterAnalysis(name, data){
-			var $candidate=$("#home > ul"),
-				$candidateBar=$(".candidateBar > ul"),
-				value=null,
-				numbers=["1st",'2nd','3rd'],
-				chartCSVData=app.chartCSVData,
-				twitterAnalysis=data.twitterAnalysis;
-				
-				
-				//prepare chart csv content
-				chartCSVData.headers.push(name);
-				$.each(twitterAnalysis.values, function(i,val){
-					if(chartCSVData.values[val.date]) {
-						chartCSVData.values[val.date].push(val.tweets_yesterday);
-					}else {
-						chartCSVData.values[val.date] = [val.tweets_yesterday];
-					}
-				});
-				
-				
-				//reverse array order
-				twitterAnalysis.values.reverse();
-				
-				value=twitterAnalysis.values[0];
-
-				html="<li class='candidate-li' id='"+name+"'>"+
-					 //"<div class='candidate-name' >"+data.name +"</div>"+
-					 "<div class='candidate-content' style='background-color:"+data.backgroundColor+"'>"+
-					 	 "<ul>"+
-						 	"<li class='candidate-image'><img src='"+data.image+"' /></li>"+
-						 	"<li class='candidate-metadata'>"+
-						 		"<div class='candidate-name'>"+data.name+"</div>"+
-								"<div class='candidate-twitterYesterday'><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /><a href='#' class='showTable'>"+value.tweets_yesterday+"</a><label title='# of tweets mentioned about this candidate Yesterday'>mentions Yesterday</label></div>"+
-								"<div class='candidate-info'>"+"<a href='"+data.url_website+"' target='_blank'>Website</a><br><a href='"+data.url_twitter+"' target='_blank'>Twitter</a></div>"+
-							"</li>"+
-						 "</ul>"+
-						 //"<div class='showCandidateIndex'>show more..</div>"+
-					 "</div>"+ /**
-					 "<div class='candidate-index'>"+
-					 	"<ul>"+
-							"<li><a href='#' class='showTable'>"+value.tweets_all+"</a><label title='Total # of tweets mentions this candidate from 10/07 to Yesterday'>mentions since 10/07</label></li>"+
-							"<li><a href='#' class='showTable'>+"+value.followers_yesterday_new+"</a><label title=\"# of new followers added in this candidate's Twitter account\">NEW Followers Yesterday</label></li>"+
-							"<li><a href='#' class='showTable'>-"+value.followers_yesterday_removed+"</a><label title=\"# of Twitter users 'unfollow' this candidate's Twitter account\">REMOVED Followers Yesterday</label></li>"+
-							"<li><a href='#' class='showTable'>"+value.influence+"</a><label title=\"The percentage changes of the combined number of 'fans'(followers) from  each new follower\">Network Impact Changes Yesterday</label></li>"+
-							"<li></li>"+
-							(function(){
-								var result='';
-								$.each(numbers, function(i,n){
-									if(value.biggestFollowers_yesterday[i]){
-										result+="<li class='biggestFollwers_yesterday'>"+((value.biggestFollowers_yesterday[i].url)?"<a href='"+value.biggestFollowers_yesterday[i].url+"' target='_blank'>@"+value.biggestFollowers_yesterday[i].name+"</a>":"@"+value.biggestFollowers_yesterday[i].name)+"</a><br>"+n+" Biggest Follower Yesterday</li>";
-									}else{
-										result+="<li style='height:37px;'></li>";
-									}
-								});
-								return result;
-							})()+
-							"<li></li>"+
-							(function(){
-								var result='';
-								$.each(numbers, function(i,n){
-									if(value.biggestFollowers[i]){
-										result+="<li>"+((value.biggestFollowers[i].url)?"<a href='"+value.biggestFollowers[i].url+"' target='_blank'>@"+value.biggestFollowers[i].name+"</a>":"@"+value.biggestFollowers[i].name)+"</a><br>"+n+" Biggest Follower</li>";
-									}else{
-										result+="<li style='height:37px;'></li>";
-									}
-								});
-								return result;
-							})()+
-						"</ul>"+
-					 "</div>"
-					 */
-					 "</li>";
-					 
-				$candidate.append(html);
-				$candidateBar.append(html);
-		}
-		
-		
-		
-		//show top webpage
-		function showTopWebpage(name, data){
-			var html_header="<tr><td class='rank'>Top</td><td class='value'>Webpage</td>",
-				value='',
-				$topWebpage=$("#topWebpage > ul"),
-				$tab=$("<div class='tabs'><ul></ul></div>"),
-				topWebpage=data.topWebpage;
-			
-			$.each(topWebpage, function(source,val){
-				$tab.find("> ul").append("<li><a href='#tabs-"+source+"'>"+source+"</a></li>");
-				
-				if(source=='Twitter'){
-					html_header+="<td class='count'>#</td></tr>"
-				}else{
-					html_header+="</tr>"
-				}
-				var html="<div id='tabs-"+source+"'><table class='table'>" + html_header;
-				
-				
-				$.each(val.values[0], function(i,obj){
-					html+='<tr>'+
-						  '<td class="rank">'+obj.ranking+'</td>'+
-						  "<td class='value readOpenGraph'>"+
-								(function(){
-								  	var result=obj.title;
-								  	
-								  	if(obj.url){result="<a href='"+obj.url+"' target='_blank'>"+obj.title+"</a>"}
-								  	
-								  	return result;
-								})()+
-							"</td>"+
-							((source=='Twitter')?'<td class="count">'+obj.count+"</td>":"")+
-							"</tr>";
-				});
-			
-				$tab.append(html+"</table></div>");
-			});
-			
-			$topWebpage.append("<li><div class='tabs'>"+$tab.html()+"</div></li>");
-		}
-		
-		
-		
-		//show top retweet
-		function showTopRetweet(name, data){
-			var html="<li><table class='table'><tr><td class='rank'>Top</td><td class='value'>Value</td><td class='count'>#</td></tr>",
-				$topRetweet=$("#topRetweet > ul")
-				topRetweet=data.topRetweet;
-			
-			$.each(topRetweet.values, function(i,obj){
-					html+='<tr>'+
-						  '<td class="rank">'+obj.rank+'</td>'+
-						  "<td class='value'>"+
-								(function(){
-								  	return "<div class='opengraph' onclick=\"window.open('"+obj.url+"')\"><ul>"+
-									  			"<li><img src='"+obj.profile_image+"' class='opengraph-image' /><label class='opengraph-title'>"+obj.profile_screenName+"</label></li>"+
-									  			"<li class='opengraph-description'>"+obj.value+"</li>"+
-									  		"</ul></div>";
-								})()+
-							"</td>"+
-							'<td class="count">'+obj.count+"</td>"+
-							"</tr>";
-			});
-			
-			html+="</table></li>";
-			
-			
-			$topRetweet.append(html);
-		}
-		
-		
-		//show wordcloud
-		function showWordcloud(name, data){
-			$("#wordcloud > ul").append("<li><div id='wordcloud-"+name+"' class='wordcloud'></div></li>");
-			
-			//create word cloud
-			createWordCloud(data.wordCloud.values, $("#wordcloud-"+name));
-		}
-		
-		
-		//show highlighted info at specific date which the number of tweets is over 100
-		function showChartHighlightInfo(name, data){
-			var html="<li><table class='table'><tr><td>Date</td><td>Webpage</td></tr>",
-				$target=$("#timeSeriesChart > ul"),
-				topURL={},
-				values=data.timeSeriesChart.values;
-			
-			$.each(values, function(i, val){
-				topURL=val.topURLs[0];
-				html+="<tr><td>"+val.date + "<p>"+val.tweets +"</p></td><td class='readOpenGraph'><a href='"+topURL.url+"' target='_blank'>"+topURL.value+"</a></td></tr>";	  
-			});
-			
-			
-			$target.append(html+"</table></li>");
-		}
 
 	}
 	
@@ -671,7 +711,8 @@
 							var date = new Date(g.getValue(i,0));
 							
 							
-							
+							console.log(series);
+							console.log(date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate())
 							//highlight dates to get top url on that date
 							// highlightDates.push({
 // 						
@@ -719,7 +760,7 @@
 	 */
 	function init_map(){
 		//determine window height
-		$("#map").css("height", $(window).height()-$("#header").height()+35);
+		//$("#map").css("height", $(window).height()-$("#header").height()+35);
 		
 		
 		//need to change
@@ -999,74 +1040,86 @@
 	/**
 	 * getMetrics
 	 */
-	function getMetrics(candidate, fromDate, toDate, $target){
+	function getMetrics(candidate, fromDate, toDate, callback){
 		app.dateFrom=fromDate;
 		app.dateTo=toDate;
 		
 		//label search date
 		$("#chart_queryDate p").html(app.dateFrom + ' ～ ' +app.dateTo)
 		
-		//show loading
-		$target.html("<center><img src='images/loading.gif' class='loading' /></center>");
 		
 		//request web service
 		var url=(app.testMode)?"db/searchResult.json":'ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate
 		$.getJSON(url, function(json){
 			if(!json){console.log('[ERROR] query: no json'); return;}
 			
-			var html="<table>"+
-						"<tr>"+
-						"<td><br><label>Top Tweeted Webpages</label><p>"+((json.urls instanceof Array)?createTable("topWebpage",json.urls, {readOpenGraph:true}):"None")+"</p></td>"+
-						"<td><br><label>Top Retweets</label><p>"+((json.retweets instanceof Array)?createTable("topRetweet", json.retweets):"None")+"</p></td>"+
-					 	"<td><br><label>Word-Cloud Map</label><P></p><div id='wordcloud'></div></td>"+
-					 	"</tr><tr>"+
-					 	"<td><br><label>Most Active Chatters</label><p>"+((json.users instanceof Array)?createTable("mostActiveChatter",json.users):"None")+"</p></td>"+
-						"<td><br><label>Top Mentioned People</label><p>"+((json.mentions instanceof Array)?createTable("topMentionedPeople", json.mentions):"None")+"</p></td>"+
-						"<td><br><label>Top Hashtags</label><p>"+((json.hashtags instanceof Array)?createTable("topHashtag",json.hashtags):"None")+"</p></td>"+
-					 	"</tr>"+
-						"<tr><td colspan=3 id='td_map'><br><label>GeoTagged Tweets' Map</label><p><div id='"+candidate+"_socialMap' class='socialMap'></div></p></td></tr>"+
-					 "</table>";
-			
-			$target.html(html);
-			
-			
-			//add qtip content
-			$target.find("a").each(function(){
-				var $this=$(this),
-					url=encodeURIComponent($this.attr("href")),
-					apiKey='pnZc5aMtlA2G'; //websnapr apikey
-					// thumbnail=$("<img />").attr({
-						// src: 'http://images.websnapr.com/?url=' + url + '&key=' + apiKey + '&hash=' + encodeURIComponent(websnapr_hash), //websnapr_hash is a function from websnapr script
-			            // alt: 'Loading thumbnail...',
-			            // width: 202,
-			            // height: 152
-					// });
+			$.each(json, function(k, obj){
+				//show top retweet
+				if(obj.topRetweets){showTopRetweet(k, obj.topRetweets);}
 				
 				
-				if(app.showThumbnail){
-					$this.qtip({
-						content: thumbnail,
-			            position: {
-			                corner: {
-			                    tooltip: 'bottomMiddle',
-			                    target: 'topMiddle'
-			                }
-			            },
-			            style: {
-			                tip: true, // Give it a speech bubble tip with automatic corner detection
-			                name: 'dark'
-			            }
-					});
-				}
+				//show top webpage
+				if(obj.topWebpages){showTopWebpage(k, obj.topWebpages)};
 			});
 			
 			
+			//callback
+			if(callback){callback()}
+			
+			
+			// var html="<table>"+
+						// "<tr>"+
+						// "<td><br><label>Top Tweeted Webpages</label><p>"+((json.urls instanceof Array)?createTable("topWebpage",json.urls, {readOpenGraph:true}):"None")+"</p></td>"+
+						// "<td><br><label>Top Retweets</label><p>"+((json.retweets instanceof Array)?createTable("topRetweet", json.retweets):"None")+"</p></td>"+
+					 	// "<td><br><label>Word-Cloud Map</label><P></p><div id='wordcloud'></div></td>"+
+					 	// "</tr><tr>"+
+					 	// "<td><br><label>Most Active Chatters</label><p>"+((json.users instanceof Array)?createTable("mostActiveChatter",json.users):"None")+"</p></td>"+
+						// "<td><br><label>Top Mentioned People</label><p>"+((json.mentions instanceof Array)?createTable("topMentionedPeople", json.mentions):"None")+"</p></td>"+
+						// "<td><br><label>Top Hashtags</label><p>"+((json.hashtags instanceof Array)?createTable("topHashtag",json.hashtags):"None")+"</p></td>"+
+					 	// "</tr>"+
+						// "<tr><td colspan=3 id='td_map'><br><label>GeoTagged Tweets' Map</label><p><div id='"+candidate+"_socialMap' class='socialMap'></div></p></td></tr>"+
+					 // "</table>";
+// 			
+			// $target.html(html);
+// 			
+// 			
+			// //add qtip content
+			// $target.find("a").each(function(){
+				// var $this=$(this),
+					// url=encodeURIComponent($this.attr("href")),
+					// apiKey='pnZc5aMtlA2G'; //websnapr apikey
+					// // thumbnail=$("<img />").attr({
+						// // src: 'http://images.websnapr.com/?url=' + url + '&key=' + apiKey + '&hash=' + encodeURIComponent(websnapr_hash), //websnapr_hash is a function from websnapr script
+			            // // alt: 'Loading thumbnail...',
+			            // // width: 202,
+			            // // height: 152
+					// // });
+// 				
+// 				
+				// if(app.showThumbnail){
+					// $this.qtip({
+						// content: thumbnail,
+			            // position: {
+			                // corner: {
+			                    // tooltip: 'bottomMiddle',
+			                    // target: 'topMiddle'
+			                // }
+			            // },
+			            // style: {
+			                // tip: true, // Give it a speech bubble tip with automatic corner detection
+			                // name: 'dark'
+			            // }
+					// });
+				// }
+			// });
+			
+			
 			//create social map
-			createSocialMap(candidate, fromDate, toDate);
+			//createSocialMap(candidate, fromDate, toDate);
 			
 			
 			//create word cloud
-			createWordCloud(json.word_frequencies, $target);
+			//createWordCloud(json.word_frequencies, $target);
 			
 			
 			

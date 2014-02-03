@@ -28,7 +28,7 @@ li {display:block;}
 /** count down */
 #countdown {color:#000000; font-size:14px; position:absolute; left:17.7%; top:-3px;   }
 #countdown label {color:#FF4B00; font-size:35px; font-weight:bold; }
-#clock {position:absolute; left:46px; top:6px; font-size:14px; color:#999999;}
+#clock {position:absolute; left:27px; top:6px; font-size:14px; color:#999999;}
 
 
 /**menu */
@@ -125,12 +125,12 @@ li {display:block;}
 #home li {background-color:transparent; }
 */
 #home > h2 {margin-top:30px; }
-#home > ul {position:absolute; top:132px; z-index:100; width:100%; padding:0px; opacity:0.9; background-color:#f1f1f1;  }
+#home > ul {z-index:100; width:100%; padding:0px; opacity:1; background-color:#f1f1f1; margin-top:0px;  }
 #home > ul > li {width:49.9%; }
 
 
 /** title */
-#title {padding:20px 3% 20px 3%; width:94%; background-color:#f1f1f1; position:absolute; font-size:30px; z-index:100; opacity:0.9; }
+#title {padding:20px 3% 20px 3%; width:94%; background-color:#f1f1f1; font-size:30px; z-index:100; opacity:1; }
 #title label {color:#555555; font-size:20px; font-weight:300;   }
 #title img {position:absolute; right:0px; top:4px; height:105px; z-index:10; }
 
@@ -144,7 +144,7 @@ li {display:block;}
 
 /** candidate-image */
 .candidate-image {height:100%; width:20%; padding:10px 2% 0px 2%; }
-.candidate-image img {height:83px; max-width:100%; width:100%; border-radius:100%; }
+.candidate-image img {height:83px; width:83px; border-radius:100%; }
 
 
 /** candidate metadata*/
@@ -186,7 +186,8 @@ li {display:block;}
 #topWebpage .ui-tabs .ui-tabs-panel {padding:5px; }
 
 
-
+/** top story*/
+#topStory #categories {width:96%; margin:0 auto; margin-top:30px; }
 
 
 /**chart */
@@ -199,7 +200,7 @@ li {display:block;}
 
 
 /**map*/
-#map {width:100%; margin:0 auto; height:600px; margin-top:0px;  }
+#map {width:100%; margin:0 auto; height:400px; margin-top:0px;  }
 
 
 
