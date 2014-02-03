@@ -188,6 +188,8 @@ li {display:block;}
 
 /** top story*/
 #topStory #categories {width:96%; margin:0 auto; margin-top:30px; }
+#topStory .tabContent table {width:48%; margin:20px 1% 20px 1%; float:left; }
+
 
 
 /**chart */

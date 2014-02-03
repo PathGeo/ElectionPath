@@ -81,12 +81,13 @@
 		//show loading dialog and clear content
 		$("#dialog_loading").dialog({
 			modal:true, 
-			title:'Change Election Voice',
+			title:'Listen from different voice',
 			resizable:false,
 			dialogClass: 'no-close'
 		});
-		$(".mainBlock > ul, .mainBlock .candidateBar > ul, #topStory #categories").html("");
-		$("#topStory #categories").append('<ul></ul>');
+		
+		$(".mainBlock > ul, .mainBlock .candidateBar > ul").html("");
+		$("#topStory #categories").tabs('destroy').html("").append('<ul></ul>');
 		
 		
 		//clear app.chartCSVData
@@ -302,20 +303,24 @@
 			
 	//show top story
 	function showTopStory(name, data){
-				var html_header="<tr><td class='rank'>Top</td><td class='value'>Webpage</td>",
-					html="";
+				var html="";
 					value='',
 					$topStoryUL=$("#topStory > ul"),
 					$categories=$("#categories");
 					$tab=$categories.find(" > ul"),
-					topStory=data.topStory;
-				
+					topStory=data.topStory,
+					isTabs=$categories.is("[ui-tabs]");			
 					
 				
 				$.each(topStory.values, function(k,val){
-					$tab.append("<li><a href='#category-"+k+"'>"+(k[0].toUpperCase()+k.slice(1))+"</a></li>");
 					
-					html="<div id='category-"+k+"'><table class='table'>";
+					//if this is the first time to creat tabs
+					if(!isTabs && $tab.find("> li a[href='#category-"+k+"']").length==0){
+						$tab.append("<li><a href='#category-"+k+"'>"+(k[0].toUpperCase()+k.slice(1))+"</a></li>");
+						$categories.append("<div id='category-"+k+"' class='tabContent'>"+$(".candidateBar")[0].outerHTML+"</div>");
+					}
+					
+					html="<table class='table'><tr><td class='rank'>Top</td><td class='value'>Webpage</td></tr>";
 				
 					$.each(val, function(i,obj){
 						html+='<tr>'+
@@ -332,9 +337,9 @@
 								"</tr>";
 					});
 					
-					html+="</table></div>";
+					html+="</table>";
 					
-					$categories.append(html);
+					$("#category-"+k).append(html);
 				});
 				
 		

@@ -18,7 +18,7 @@
 			"values":{
 				"business":[
 					{
-                            "url": "http://www.sandiegoreader.com/weblogs/news-ticker/2013/mar/08/assault-weapons-ban-will-be-up-for-discussion-at-u/", 
+                            "url": "http://www.utsandiego.com/news/2014/jan/15/mayor-alvarez-faulconer-first-debate/", 
                             "rank": "1", 
                             "keyword": "\"David Alvarez\" and \"Gun Control\" and \"San Diego\"", 
                             "value": "Assault weapons ban to be discussed at an upcoming committee ...",
@@ -28,7 +28,7 @@
                             "url": "http://www.kpbs.org/news/2013/nov/04/kevin-faulconers-run-down-middle/", 
                             "rank": "1", 
                             "keyword": "\"Kevin Faulconer\" and \"Gun Control\" and \"San Diego\"", 
-                            "url": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
+                            "value": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
 							"source":"google"
                         }, 
                         {
@@ -51,7 +51,7 @@
                             "url": "http://www.kpbs.org/news/2013/nov/04/kevin-faulconers-run-down-middle/", 
                             "rank": "1", 
                             "keyword": "\"Kevin Faulconer\" and \"Gun Control\" and \"San Diego\"", 
-                            "url": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
+                            "value": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
 							"source":"google"
                         }, 
                         {
@@ -74,7 +74,7 @@
                             "url": "http://www.kpbs.org/news/2013/nov/04/kevin-faulconers-run-down-middle/", 
                             "rank": "1", 
                             "keyword": "\"Kevin Faulconer\" and \"Gun Control\" and \"San Diego\"", 
-                            "url": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
+                            "value": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
 							"source":"google"
                         }, 
                         {
@@ -97,7 +97,7 @@
                             "url": "http://www.kpbs.org/news/2013/nov/04/kevin-faulconers-run-down-middle/", 
                             "rank": "1", 
                             "keyword": "\"Kevin Faulconer\" and \"Gun Control\" and \"San Diego\"", 
-                            "url": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
+                            "value": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
 							"source":"google"
                         }, 
                         {
@@ -120,7 +120,7 @@
                             "url": "http://www.kpbs.org/news/2013/nov/04/kevin-faulconers-run-down-middle/", 
                             "rank": "1", 
                             "keyword": "\"Kevin Faulconer\" and \"Gun Control\" and \"San Diego\"", 
-                            "url": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
+                            "value": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
 							"source":"google"
                         }, 
                         {
@@ -143,7 +143,7 @@
                             "url": "http://www.kpbs.org/news/2013/nov/04/kevin-faulconers-run-down-middle/", 
                             "rank": "1", 
                             "keyword": "\"Kevin Faulconer\" and \"Gun Control\" and \"San Diego\"", 
-                            "url": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
+                            "value": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
 							"source":"google"
                         }, 
                         {
@@ -389,7 +389,7 @@
                             "url": "http://www.kpbs.org/news/2013/nov/04/kevin-faulconers-run-down-middle/", 
                             "rank": "1", 
                             "keyword": "\"Kevin Faulconer\" and \"Gun Control\" and \"San Diego\"", 
-                            "url": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
+                            "value": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
 							"source":"google"
                         }, 
                         {
@@ -412,7 +412,7 @@
                             "url": "http://www.kpbs.org/news/2013/nov/04/kevin-faulconers-run-down-middle/", 
                             "rank": "1", 
                             "keyword": "\"Kevin Faulconer\" and \"Gun Control\" and \"San Diego\"", 
-                            "url": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
+                            "value": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
 							"source":"google"
                         }, 
                         {
@@ -435,7 +435,7 @@
                             "url": "http://www.kpbs.org/news/2013/nov/04/kevin-faulconers-run-down-middle/", 
                             "rank": "1", 
                             "keyword": "\"Kevin Faulconer\" and \"Gun Control\" and \"San Diego\"", 
-                            "url": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
+                            "value": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
 							"source":"google"
                         }, 
                         {
@@ -458,7 +458,7 @@
                             "url": "http://www.kpbs.org/news/2013/nov/04/kevin-faulconers-run-down-middle/", 
                             "rank": "1", 
                             "keyword": "\"Kevin Faulconer\" and \"Gun Control\" and \"San Diego\"", 
-                            "url": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
+                            "value": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
 							"source":"google"
                         }, 
                         {
@@ -481,7 +481,7 @@
                             "url": "http://www.kpbs.org/news/2013/nov/04/kevin-faulconers-run-down-middle/", 
                             "rank": "1", 
                             "keyword": "\"Kevin Faulconer\" and \"Gun Control\" and \"San Diego\"", 
-                            "url": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
+                            "value": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
 							"source":"google"
                         }, 
                         {
@@ -504,7 +504,7 @@
                             "url": "http://www.kpbs.org/news/2013/nov/04/kevin-faulconers-run-down-middle/", 
                             "rank": "1", 
                             "keyword": "\"Kevin Faulconer\" and \"Gun Control\" and \"San Diego\"", 
-                            "url": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
+                            "value": "Kevin Faulconer's Run Down The Middle | KPBS San Diego Public ...",
 							"source":"google"
                         }, 
                         {

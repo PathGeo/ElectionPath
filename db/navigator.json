@@ -6,15 +6,9 @@
 		"clickFn":""
 	},
 	"VOICE":{
-		"description":"Select a voice",
+		"description":"Listen from different sources",
 		"labels":["People's Voice", "Candidate's Voice"],
 		"values":["people", "candidate"],
 		"clickFn":"readVoice"
-	},
-	"CATEGORY":{
-		"description":"Select a category",
-		"labels":["All", "Business", "Debate", "Education", "Endorsement",  "Jobs", "Neighborhood"],
-		"values":["all", "business", "debate", "education", "endorsement",  "jobs", "neighborhood"],
-		"clickFn":""
 	}
 }
