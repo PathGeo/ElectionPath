@@ -1,4 +1,5 @@
 html, body {font-family: 'Lato', sans-serif; font-size:90%; margin:0px; padding:0px; width:100%; }
+body {width:99.9%; margin:0 auto; max-width:1000;}
 
 a {text-decoration:none; color:#359BED}
 a:hover {text-decoration:underline;}
@@ -16,7 +17,7 @@ li {display:block;}
 .scroll-index{margin:0px; }
 
 /** header */
-#header { background-color:#ffffff;  padding:0px; position:fixed; width:100%; height:40px;top:0px;  z-index:2000; box-shadow: 2px 4px 10px #cccccc;}
+#header { background-color:#ffffff;  padding:0px; position:fixed; width:100%; height:40px;top:0px; left:0px;  z-index:2000; box-shadow: 2px 4px 10px #cccccc;}
 
 
 /** logo */
@@ -177,7 +178,7 @@ li {display:block;}
 .candidateBar > ul > li {float:left; width:49.9%; }
 .candidateBar .candidate-twitterYesterday {display:none;}
 .candidateBar .candidate-image {padding:5px 2% 0px 2%; width:16%; }
-.candidateBar .candidate-image img {width:50px !important; height:45px !important; }
+.candidateBar .candidate-image img {width:45px !important; height:45px !important; }
 .candidateBar .candidate-name {padding-top:7px; }
 
 

@@ -75,7 +75,19 @@
 				"people":"db/people.json", //"db/candidates_newFormat.json", //,
 				"candidate":"db/candidate.json"
 			}, 
-			url=urls[source] || urls["people"];
+			url=urls[source] || urls["people"],
+			$showhideObj=$("#chartContent, #topStory, .subMenu > li[value='topWebpage-cyber']"),
+			$changeLabel=$("#topRetweet > h2 > label, #topWebpage > h2 > label");
+		
+		
+		//hide some contents if source==candidate
+		if(source=='candidate'){
+			$showhideObj.hide();
+			$changeLabel.html('from Candidate Twitter');
+		}else{
+			$showhideObj.show();
+			$changeLabel.html('from Public and Media Twitters');
+		}
 		
 		
 		//show loading dialog and clear content
@@ -427,14 +439,11 @@
 						  			if(v.clickFn && v.clickFn!=''){
 						  				$result.attr('onclick', v.clickFn +"('"+v.values[i]+"')");
 						  			}
+						  			if(k=='CATEGORY'){$result.attr('data-scroll-goto',3); }
 						  			
 						  			result+=$result[0].outerHTML;
 						  		})
 						  		
-						  		//category
-						  		if(k=='CATEGORY'){
-						  			result='Coming soon';
-						  		}
 						  		
 						  		return result;
 						  	})()+
@@ -459,14 +468,12 @@
 	
 	
 
-	
 	/**
-	 * init user interface 
+	 * go to category 
 	 */
-	function init_UI(){	
-
+	function goCategory(category){
+		$("#categories").tabs("select", "#category-"+category.toLowerCase())
 	}
-	
 	
 	
 	
