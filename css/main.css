@@ -24,7 +24,7 @@ li {display:block;}
 #logo {position:absolute; top:2px; left:5px;  z-index:100; width:14%; }
 #logo img {height:30px; }
 #logo:hover {text-decoration:none; cursor:pointer;}
-#logo label {font-size:17px; font-weight:bold; z-index:100; position:absolute; right:5px; top:8px; color:#000000; }
+#logo label {font-size:17px; font-weight:bold; z-index:100; position:absolute; left:32px;  top:8px; color:#000000; }
 
 /** count down */
 #countdown {color:#000000; font-size:14px; position:absolute; left:17.7%; top:-3px;   }
@@ -189,7 +189,7 @@ li {display:block;}
 
 /** top story*/
 #topStory #categories {width:96%; margin:0 auto; margin-top:30px; }
-#topStory .tabContent table {width:48%; margin:20px 1% 20px 1%; float:left; }
+#topStory .tabContent table {width:47%; padding:20px 1.5% 20px 1.5%; display:table-cell;  }
 
 
 

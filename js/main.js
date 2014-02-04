@@ -321,27 +321,29 @@
 					$categories=$("#categories");
 					$tab=$categories.find(" > ul"),
 					topStory=data.topStory,
-					isTabs=$categories.is("[ui-tabs]");			
+					isTabs=$categories.is("[ui-tabs]"),
+					lowerKey='';			
 					
 				
 				$.each(topStory.values, function(k,val){
+					lowerKey=k.toLowerCase();
 					
 					//if this is the first time to creat tabs
-					if(!isTabs && $tab.find("> li a[href='#category-"+k+"']").length==0){
-						$tab.append("<li><a href='#category-"+k+"'>"+(k[0].toUpperCase()+k.slice(1))+"</a></li>");
-						$categories.append("<div id='category-"+k+"' class='tabContent'>"+$(".candidateBar")[0].outerHTML+"</div>");
+					if(!isTabs && $tab.find("> li a[href='#category-"+lowerKey+"']").length==0){
+						$tab.append("<li><a href='#category-"+lowerKey+"'>"+(k.replace(/_/g," ")[0].toUpperCase()+k.replace(/_/g," ").slice(1))+"</a></li>");
+						$categories.append("<div id='category-"+lowerKey+"' class='tabContent'>"+$(".candidateBar")[0].outerHTML+"</div>");
 					}
 					
-					html="<table class='table'><tr><td class='rank'>Top</td><td class='value'>Webpage</td></tr>";
+					html="<table class='table'><tr><td class='rank'>Rank</td><td class='value'>Webpage</td></tr>";
 				
 					$.each(val, function(i,obj){
 						html+='<tr>'+
-							  '<td class="rank">'+obj.rank+'</td>'+
+							  '<td class="rank">'+obj.ranking+'</td>'+
 							  "<td class='value readOpenGraph'>"+
 									(function(){
 									  	var result=obj.value;
 									  	
-									  	if(obj.url){result="<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>"}
+									  	if(obj.url){result="<a href='"+obj.url+"' target='_blank'>"+obj.title+"</a>"}
 									  	
 									  	return result;
 									})()+
@@ -351,7 +353,7 @@
 					
 					html+="</table>";
 					
-					$("#category-"+k).append(html);
+					$("#category-"+lowerKey).append(html);
 				});
 				
 		
