@@ -201,6 +201,9 @@ li {display:block;}
 .dygraph-legend > span {display:block !important}
 
 
+/**highlight data*/
+#highlightDate table {width:47%; padding:20px 1.5% 20px 1.5%; display:table-cell; }
+#highlightDate table:nth-of-type(n+3) {display:none;}
 
 /**map*/
 #map {width:100%; margin:0 auto; height:400px; margin-top:0px;  }

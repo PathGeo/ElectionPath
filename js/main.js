@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:true,
+		testMode:false,
 		showThumbnail:false
 	}
 	
@@ -694,6 +694,7 @@
 					//alert(rank[0]+" "+rank[1]+" "+rank[2]);
 					
 					// Draw rectangle top 3
+					var dates=[];
 					for (var ii=0; ii<rank.length; ii++) {
 						var i = rank[ii].position;
 						var series = rank[ii].series;
@@ -723,23 +724,27 @@
 							//canvas.fillRect(left, bottom, right-left, top-bottom);
 													
 							var date = new Date(g.getValue(i,0));
+							dates.push(date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate());
 							
 							
-							console.log(series);
-							console.log(date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate())
 							//highlight dates to get top url on that date
 							// highlightDates.push({
 // 						
 								// date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate()			
 							// })
 							
-							//alert(date);
+							
 							var shortText = date.toDateString();
 							canvas.font="bold 12px Arial";
 							canvas.fillStyle = g.getColors()[series];
 							canvas.fillText("["+(ii+1)+"] "+shortText.substring(0,shortText.length-5), right, top);
 						}
 					}
+					
+					
+					//get top 1 webpage on the highlighted dates
+					showTop1Webpage(dates);
+					
 	            }
 				
 			}
@@ -767,6 +772,43 @@
 	}
 		
 
+
+	/**
+	 * show top 1 webpage on the highlighted dates 
+	 */
+	function showTop1Webpage(dates){
+		var url=app.testMode?"db/top1webpage.json":"ws/getTop1Webpage.py?candidates=Faulconer,Alvarez&dates="+dates.join(','),
+			$result=$("#home #highlightDate"),
+			html='',
+			topWebpage='';
+						
+		$.getJSON(url, function(json){
+			$.each(json, function(candidate,v){
+				html="<table class='table'><tr><td class='rank'>Date</td><td class='value'>Webpage</td></tr>";
+				
+				$.each(v, function(date,obj){
+					topWebpage=obj.topWebpages[0];
+					
+					html+='<tr>'+
+						  '<td class="rank">'+date+'</td>'+
+						  "<td class='value readOpenGraph'>"+
+								(function(){
+								  	var result=topWebpage.value;
+								  	
+								  	if(topWebpage.url){result="<a href='"+topWebpage.url+"' target='_blank'>"+topWebpage.value+"</a>"}
+								  	
+								  	return result;
+								})()+
+							"</td>"+
+							"</tr>";
+				});
+				html+="</table>";
+					
+				$result.append(html);
+			})
+		});
+				
+	}
 	
 	
 	/**
