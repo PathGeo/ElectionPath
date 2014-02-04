@@ -207,7 +207,7 @@ li {display:block;}
 #highlightDate table {width:47%; padding:20px 1.5% 20px 1.5%; display:table-cell; }
 #highlightDate table:nth-of-type(n+3) {display:none;}
 #highlightDate table .rank {width:90px !important; }
-#highlightDate #loading {display:block; text-align:center; margin-top:50px; display:none !important;  }
+#highlightDate #loading {display:block; text-align:center; margin-top:50px; display:none;  }
 #highlightDate #loading img {width:30px; }
 
 /**map*/
