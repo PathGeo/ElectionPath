@@ -779,13 +779,20 @@
 	function showTop1Webpage(dates){
 		var url=app.testMode?"db/top1webpage.json":"ws/getTop1Webpage.py?candidates=Faulconer,Alvarez&dates="+dates.join(','),
 			$result=$("#home #highlightDate"),
+			$loading=$result.find("#loading"),
 			html='',
 			topWebpage='';
 		
 		//remove previous results;
 		$result.find(".table").remove();
 		
+		//show loading
+		$loading.show();
+		
 		$.getJSON(url, function(json){
+			//hide loading
+			$loading.hide();
+			
 			$.each(json, function(candidate,v){
 				html="<table class='table'><tr><td class='rank'>Date</td><td class='value'>Hottest Webpage</td></tr>";
 				
