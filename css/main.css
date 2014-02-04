@@ -194,7 +194,9 @@ li {display:block;}
 
 
 /**chart */
-#chartContent {position:relative; width:96%; margin:0 auto; margin-top:80px; margin-bottom:40px; }
+#chartContent {position:relative; width:96%; margin:0 auto; margin-top:90px; margin-bottom:40px; }
+#chartContent > h3 {position:absolute; top:-80px; left:1%; }
+#chartContent > h3 > p {color:#555555; font-size:12px; font-weight:normal; }
 #chart {position:relative; }
 #chart_queryDate {position:absolute; left:60px; top:-30px ; font-size:13px; font-weight:600; display:none;  }
 .dygraph-legend {width:110px !important; top:-60px !important; font-size:13px !important; left:auto !important; right:0px !important; }
@@ -204,6 +206,7 @@ li {display:block;}
 /**highlight data*/
 #highlightDate table {width:47%; padding:20px 1.5% 20px 1.5%; display:table-cell; }
 #highlightDate table:nth-of-type(n+3) {display:none;}
+#highlightDate table .rank {width:90px !important; }
 
 /**map*/
 #map {width:100%; margin:0 auto; height:400px; margin-top:0px;  }

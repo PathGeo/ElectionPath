@@ -33,7 +33,8 @@
 		chart:[],
 		wordCloud:null,
 		testMode:false,
-		showThumbnail:false
+		showThumbnail:false,
+		highlightDates:[]
 	}
 	
 	//chart
@@ -694,7 +695,7 @@
 					//alert(rank[0]+" "+rank[1]+" "+rank[2]);
 					
 					// Draw rectangle top 3
-					var dates=[];
+					app.highlightDates=[];
 					for (var ii=0; ii<rank.length; ii++) {
 						var i = rank[ii].position;
 						var series = rank[ii].series;
@@ -724,7 +725,7 @@
 							//canvas.fillRect(left, bottom, right-left, top-bottom);
 													
 							var date = new Date(g.getValue(i,0));
-							dates.push(date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate());
+							app.highlightDates.push(date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate());
 							
 							
 							//highlight dates to get top url on that date
@@ -740,10 +741,6 @@
 							canvas.fillText("["+(ii+1)+"] "+shortText.substring(0,shortText.length-5), right, top);
 						}
 					}
-					
-					
-					//get top 1 webpage on the highlighted dates
-					showTop1Webpage(dates);
 					
 	            }
 				
@@ -761,6 +758,9 @@
 			app.chart.updateOptions({
 				dateWindow: [app.chart.getValue(sIndex,0), app.chart.getValue(eIndex,0)]
 			});
+			
+			//get top 1 webpage on the highlighted dates
+			showTop1Webpage(app.highlightDates);
 		});
 		
 		
@@ -781,10 +781,13 @@
 			$result=$("#home #highlightDate"),
 			html='',
 			topWebpage='';
-						
+		
+		//remove previous results;
+		$result.find(".table").remove();
+		
 		$.getJSON(url, function(json){
 			$.each(json, function(candidate,v){
-				html="<table class='table'><tr><td class='rank'>Date</td><td class='value'>Webpage</td></tr>";
+				html="<table class='table'><tr><td class='rank'>Date</td><td class='value'>Hottest Webpage</td></tr>";
 				
 				$.each(v, function(date,obj){
 					topWebpage=obj.topWebpages[0];
@@ -1073,6 +1076,11 @@
 	
 	
 	app.chartEvent.rangeChange=function(fromDate, toDate){
+		//get top 1 webpage on the highlighted dates
+		showTop1Webpage(app.highlightDates);
+		
+		
+		
 		return;
 		
 		fromDate=fromDate.split(" ")[0].replace(/\//g,'-');
