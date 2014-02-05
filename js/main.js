@@ -77,17 +77,20 @@
 				"candidate":"db/candidate.json"
 			}, 
 			url=urls[source] || urls["people"],
-			$showhideObj=$("#chartContent, #topStory, .subMenu > li[value='topWebpage-cyber']"),
-			$changeLabel=$("#topRetweet > h2 > label, #topWebpage > h2 > label");
+			$showhideObj=$("#timeSeriesChart, #topStory, .subMenu > li[value='topWebpage-cyber'], .subMenu > li[value='timeSeriesChart']"),
+			$changeRetweetLabel=$("#topRetweet > h2 > label"),
+			$changeWebpageLabel=$("#topWebpage > h2 > label");
 		
 		
 		//hide some contents if source==candidate
 		if(source=='candidate'){
 			$showhideObj.hide();
-			$changeLabel.html('from Candidate Twitter');
+			$changeRetweetLabel.html("from Candidates' Twitter");
+			$changeWebpageLabel.html("from Candidates' Twitter");
 		}else{
 			$showhideObj.show();
-			$changeLabel.html('from Public and Media Twitters');
+			$changeRetweetLabel.html('from the Public and the Media (tweets)');
+			$changeWebpageLabel.html('from San Diego Twitters')
 		}
 		
 		
@@ -238,7 +241,7 @@
 						 //"<div class='candidate-name' >"+data.name +"</div>"+
 						 "<div class='candidate-content' style='background-color:"+data.backgroundColor+"'>"+
 						 	 "<ul>"+
-							 	"<li class='candidate-image'><img src='"+data.image+"' /></li>"+
+							 	"<li class='candidate-image'><img src='"+(data.image.split('.')[0]+"_1x1.png")+"' /></li>"+
 							 	"<li class='candidate-metadata'>"+
 							 		"<div class='candidate-name'>"+data.name+"</div>"+
 									"<div class='candidate-twitterYesterday'><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /><a href='#' class='showTable'>"+value.tweets_yesterday+"</a><label title='# of tweets mentioned about this candidate Yesterday'>mentions Yesterday</label></div>"+
@@ -466,6 +469,9 @@
 			
 			//scroll
 			$.scrollIt();
+			
+			//hide map
+			$("#hotLocation, .subMenu > li[value='map']").hide();
 		});
 	}
 	
@@ -778,7 +784,7 @@
 	 */
 	function showTop1Webpage(dates){
 		var url=app.testMode?"db/top1webpage.json":"ws/getTop1Webpage.py?candidates=Faulconer,Alvarez&dates="+dates.join(','),
-			$result=$("#home #highlightDate"),
+			$result=$("#timeSeriesChart #highlightDate"),
 			$loading=$result.find("#loading"),
 			html='',
 			topWebpage='';
@@ -829,6 +835,7 @@
 		//$("#map").css("height", $(window).height()-$("#header").height()+35);
 		
 		
+		
 		//need to change
 		var dateFrom='2013-10-08',
 			dateTo='2014-01-29',
@@ -868,7 +875,7 @@
 				
 				//init map and add features
 				var map=L.map(mapID, {
-					center: [32.974917, -117.005639],
+					center: [32.774917, -117.005639],
 					zoom: 10,
 					layers: [selectBasemap("ESRI Light Gray Map")],
 					attributionControl:true,

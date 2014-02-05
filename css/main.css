@@ -1,5 +1,5 @@
 html, body {font-family: 'Lato', sans-serif; font-size:90%; margin:0px; padding:0px; width:100%; }
-body {width:99.9%; margin:0 auto; max-width:1000;}
+html {width:99.9%; margin:0 auto; }
 
 a {text-decoration:none; color:#359BED}
 a:hover {text-decoration:underline;}
@@ -72,7 +72,7 @@ li {display:block;}
 
 /**accordion Menu*/
 #navigator {width:13%; margin-top:45px; padding:5px 0px 5px 1%; position:fixed; border-right:1px solid #eeeeee; background-color:#ffffff;  }
-.menuGroup {padding-bottom:30px; border-bottom:1px solid #f1f1f1; }
+.menuGroup {padding-bottom:20px; border-bottom:1px solid #f1f1f1; }
 .menuGroup h4 {margin-bottom:5px; }
 .menuGroup p {color:#999999; font-size:12px;}
 .menuGroup .subMenu li {padding:4px; padding-left:7px; color:#000000; font-size:12px;  }
@@ -132,7 +132,7 @@ li {display:block;}
 
 /** title */
 #title {padding:20px 3% 20px 3%; width:94%; background-color:#f1f1f1; font-size:30px; z-index:100; opacity:1; }
-#title label {color:#555555; font-size:20px; font-weight:300;   }
+#title label {color:#555555; font-size:17px; font-weight:300;   }
 #title img {position:absolute; right:0px; top:4px; height:105px; z-index:10; }
 
 
@@ -211,7 +211,7 @@ li {display:block;}
 #highlightDate #loading img {width:30px; }
 
 /**map*/
-#map {width:100%; margin:0 auto; height:400px; margin-top:0px;  }
+#map {width:100%; margin:0 auto; height:425px; margin-top:0px;  }
 
 
 

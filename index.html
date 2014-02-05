@@ -15,7 +15,7 @@
 	<meta property="article:publisher" content="https://www.facebook.com/pages/PathGeo/274827229311706"/>
 	
 	
-    <title>ElectionPath</title>
+    <title>ElectionPath provides side-by-side comparison, real-time (updated every hour) news, and top story for 2014 San Diego Mayoral Special Election (Run-Off)</title>
     <meta charset="utf-8" />
 	<link rel="stylesheet" href="css/Aristo/Aristo.css" />
 	<link rel="stylesheet" href="js/leaflet/leaflet.css" />
@@ -188,33 +188,16 @@
 			<div id='home' class='mainBlock'>
 				
 				<h2 id='title'>
-					ElectionPath<label> provides real-time and unbiased (raw facts) information about <br><b>the 2014 San Diego Mayoral Special Election</b></label>
+					ElectionPath<label> provides side-by-side comparison, real-time (updated every hour) news, <Br>and top story for <b>the 2014 San Diego Mayoral Special Election (Run-Off)</b></label>
 					<img src='images/main-img-services.png' />
 				</h2>
 				
 				<ul></ul>
 					
+				<!-- map -->
+				<div id='map'></div>
 				
-				
-				<!--chartContent-->
-				<div id='chartContent'>
-					<h3>Top 3 tweets days in last 14 days<P>Please change the range of dates (gray zone) to see top 3 days in the period and the hottest webpage in those days.</P></h3>
-					<div id='chart' style='width:100%'></div>
-					<div id='chart_queryDate'>Current Search Date: <p></p></div>
-				</div>
-				
-				<!--highlight dates-->
-				<div id='highlightDate'>
-					<div class='candidateBar'><ul></ul></div>
-					
-					<!--loading-->
-					<div id='loading'>
-						<img src='images/loading.gif' />
-					</div>
-				</div>
-				
-				
-				
+			
 			</div>
 			
 		
@@ -234,7 +217,7 @@
 			<!-- top webpage-->
 			<div data-scroll-index="2" class='scroll-index' ></div>
 			<div id='topWebpage' class='mainBlock' >
-				<h2>Hot News <label></label><p>Hot URL tweeted in last 24 hours</p></h2>
+				<h2>Top News <label></label><p>Hot URL tweeted in last 24 hours</p></h2>
 				
 				<!--candidate info bar-->
 				<div class='candidateBar'><ul></ul></div>
@@ -247,24 +230,41 @@
 			<!-- top story-->
 			<div data-scroll-index="3" class='scroll-index' ></div>
 			<div id='topStory' class='mainBlock' >
-				<h2>Top Story<p>View top story from the Web in different categories</p></h2>
+				<h2>Top Stories searched from Google, Yahoo, and Bing<p>View top story from the Web in different categories</p></h2>
 				
 				<!--tabs category-->
 				<div id='categories' class='tabs'>
 					<ul></ul>
 				</div>
-				
-				
-				
-				
 			</div>
 			
 
 			
+			<!-- candidates-->
+			<div data-scroll-index="4" class='scroll-index' ></div>
+			<div id='timeSeriesChart' class='mainBlock'>
+				<h2>Time-Series Chart: The TOP THREE most Important events and dates.<P>Please change the range of dates (gray zone) to see top 3 days in the period and the hottest webpage in those days.</P></h2>
+
+				<!--chartContent-->
+				<div id='chartContent'>
+					<div id='chart' style='width:100%'></div>
+					<div id='chart_queryDate'>Current Search Date: <p></p></div>
+				</div>
+				
+				<!--highlight dates-->
+				<div id='highlightDate'>
+					<div class='candidateBar'><ul></ul></div>
+					
+					<!--loading-->
+					<div id='loading'>
+						<img src='images/loading.gif' />
+					</div>
+				</div>
+			</div>
 			
 			
 			<!-- wordcloud-->
-			<div data-scroll-index="4" class='scroll-index' ></div>
+			<div data-scroll-index="5" class='scroll-index' ></div>
 			<div id='wordcloud' class='mainBlock' >
 				<h2>Word Cloud<p>Most frequent keywords in last 24 hours</p></h2>
 				
@@ -278,13 +278,12 @@
 			
 			
 			<!-- hot location -->	
-			<div data-scroll-index="5" class='scroll-index' ></div>
+			<div data-scroll-index="6" class='scroll-index' ></div>
 			<div id='hotLocation' class='mainBlock'>
 				<h2>Hot Location<p>Coming soon....</p></h2>
 				
 				
-				<!-- map -->
-				<div id='map'></div>
+				
 				
 				
 				<!--candidate info bar -->
