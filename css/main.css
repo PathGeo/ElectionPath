@@ -128,7 +128,8 @@ li {display:block;}
 #home > h2 {margin-top:30px; }
 #home > ul {z-index:100; width:100%; padding:0px; opacity:1; background-color:#f1f1f1; margin-top:0px;  }
 #home > ul > li {width:49.9%; }
-
+#home .candidate-name {font-size:28px; }
+#home .candidate-info {display:block; margin-top:15px; }
 
 /** title */
 #title {padding:20px 3% 20px 3%; width:94%; background-color:#f1f1f1; font-size:30px; z-index:100; opacity:1; }
@@ -172,6 +173,8 @@ li {display:block;}
 .biggestFollwers_yesterday a {color:#FF4B00}
 
 
+/** candidate guage*/
+.candidate-guage { width:95%; margin:0 auto; }
 
 
 /**candidateInfo */

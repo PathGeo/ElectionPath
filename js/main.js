@@ -63,7 +63,8 @@
 		init_time();
 		
 		//read candidates information 
-		readVoice('people')
+		readVoice('people');
+		
 	});
 	
 	
@@ -172,7 +173,7 @@
 					// }
 				// });
 				
-				
+						
 				//init chart;
 				init_chart();
 				
@@ -197,17 +198,35 @@
 					$('.tabs').tabs();
 				});
 				
-				
-				
-				
-				
-				
-				
-				
-				
 			}
 		});
 	}
+	
+	
+	/**
+	 * create guage 
+	 */
+	function showGuage(domID, value, options){
+		//set height
+		var $domID=$("#"+domID);
+		$domID.height($domID.width()*0.8);
+		
+		//options
+		if(!options){options={}}
+		
+		options.min=options.min || 0;
+
+		options.shadowOpacity=options.shadowOpacity || 0.5; 
+		options.shadowSize=options.shadowSize || 0;
+		options.shadowVerticalOffset=options.shadowVerticalOffset || 10; 
+
+		options.id=domID;
+		options.value=value; 
+		
+		return new JustGage(options);
+	}
+	
+	
 	
 	
 	
@@ -237,19 +256,21 @@
 					
 					value=twitterAnalysis.values[0];
 	
-					html="<li class='candidate-li' id='"+name+"'>"+
-						 //"<div class='candidate-name' >"+data.name +"</div>"+
-						 "<div class='candidate-content' style='background-color:"+data.backgroundColor+"'>"+
-						 	 "<ul>"+
-							 	"<li class='candidate-image'><img src='"+(data.image.split('.')[0]+"_1x1.png")+"' /></li>"+
-							 	"<li class='candidate-metadata'>"+
-							 		"<div class='candidate-name'>"+data.name+"</div>"+
-									"<div class='candidate-twitterYesterday'><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /><a href='#' class='showTable'>"+value.tweets_yesterday+"</a><label title='# of tweets mentioned about this candidate Yesterday'>mentions Yesterday</label></div>"+
-									"<div class='candidate-info'>"+"<a href='"+data.url_website+"' target='_blank'>Website</a><br><a href='"+data.url_twitter+"' target='_blank'>Twitter</a></div>"+
-								"</li>"+
-							 "</ul>"+
-							 //"<div class='showCandidateIndex'>show more..</div>"+
-						 "</div>"+ /**
+					var htmlNav="<li class='candidate-li' id='"+name+"'>"+
+						 		"<div class='candidate-content' style='background-color:"+data.backgroundColor+"'>"+
+							 	 "<ul>"+
+								 	"<li class='candidate-image'><img src='"+(data.image.split('.')[0]+"_1x1.png")+"' /></li>"+
+								 	"<li class='candidate-metadata'>"+
+								 		"<div class='candidate-name'>"+data.name+"</div>"+
+										//"<div class='candidate-twitterYesterday'><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /><a href='#' class='showTable'>"+value.tweets_yesterday+"</a><label title='# of tweets mentioned about this candidate Yesterday'>mentions Yesterday</label></div>"+
+										"<div class='candidate-info'>"+"<a href='"+data.url_website+"' target='_blank'>Website</a><br><a href='"+data.url_twitter+"' target='_blank'>Twitter</a></div>"+
+									"</li>"+
+								 "</ul>"+
+						 		"</div></li>";
+					
+					var htmlGuage=$(htmlNav).append("<div class='candidate-guage' id='guage-"+name+"'></div>");
+						 
+						  /**
 						 "<div class='candidate-index'>"+
 						 	"<ul>"+
 								"<li><a href='#' class='showTable'>"+value.tweets_all+"</a><label title='Total # of tweets mentions this candidate from 10/07 to Yesterday'>mentions since 10/07</label></li>"+
@@ -283,10 +304,23 @@
 							"</ul>"+
 						 "</div>"
 						 */
-						 "</li>";
 						 
-					$candidate.append(html);
-					$candidateBar.append(html);
+						 
+					$candidate.append(htmlGuage);
+					$candidateBar.append(htmlNav);
+					
+					
+					
+					//show guage
+					setTimeout(function(){
+						showGuage("guage-"+name, value.tweets_yesterday, {
+							title: " ", //data.name,
+							label:"mentioned Yesterday",
+							levelColors: [data.backgroundColor],
+							max:100
+						});
+					},1000)
+					
 	}
 			
 	
