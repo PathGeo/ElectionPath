@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:false,
+		testMode:true,
 		showThumbnail:false,
 		highlightDates:[]
 	}
@@ -106,6 +106,8 @@
 		$(".mainBlock > ul, .mainBlock .candidateBar > ul").html("");
 		$("#topStory #categories").tabs('destroy').html("").append('<ul></ul>');
 		
+		//show loading
+		$(".mainBlock").append("<div class='loadingMainBlock'><img src='images/loading.gif' />");
 		
 		//clear app.chartCSVData
 		app.chartCSVData={
@@ -178,6 +180,9 @@
 				init_chart();
 				
 				
+				//hide loading image
+				$("#home, #wordcloud, #topStory, #timeSeriesChart").find('.loadingMainBlock').hide();
+				
 				
 				//get info of topWebpage, topRetweet, topMention, topHashtag and topChatter from getMetrics.py
 				var endDate=new Date(),
@@ -196,6 +201,10 @@
 				
 					//tabs
 					$('.tabs').tabs();
+					
+					//hide loading
+					//hide loading image
+					$("#topRetweet, #topWebpage").find('.loadingMainBlock').hide();
 				});
 				
 			}
@@ -314,7 +323,7 @@
 					//show guage
 					setTimeout(function(){
 						showGuage("guage-"+name, value.tweets_yesterday, {
-							title: " ", //data.name,
+							title: "Twitter", //data.name,
 							label:"mentioned Yesterday",
 							levelColors: [data.backgroundColor],
 							max:100
@@ -372,11 +381,11 @@
 						$categories.append("<div id='category-"+lowerKey+"' class='tabContent'>"+$(".candidateBar")[0].outerHTML+"</div>");
 					}
 					
-					html="<table class='table'><tr><td class='rank'>Rank</td><td class='value'>Webpage</td></tr>";
+					html="<table class='table'><tr><td class='rank'>Score</td><td class='value'>Webpage</td></tr>";
 				
 					$.each(val, function(i,obj){
 						html+='<tr>'+
-							  '<td class="rank">'+obj.ranking+'</td>'+
+							  '<td class="rank">'+obj.score+'</td>'+
 							  "<td class='value readOpenGraph'>"+
 									(function(){
 									  	var result=obj.value;
@@ -411,7 +420,7 @@
 									(function(){
 									  	return "<div class='opengraph' onclick=\"window.open('"+obj.url+"')\"><ul>"+
 										  			"<li><img src='"+obj.profile_image+"' class='opengraph-image' /><label class='opengraph-title'>"+obj.profile_screenName+"</label></li>"+
-										  			"<li class='opengraph-description'>"+obj.value+"</li>"+
+										  			"<li class='opengraph-description'>"+linkify(obj.value)+"</li>"+
 										  		"</ul></div>";
 									})()+
 								"</td>"+
@@ -424,9 +433,29 @@
 				
 				$topRetweet.append(html);
 	}
+	
+	
+	
+	/**
+	 * convert text to link if contains http, https, ftp, mailto
+	 * from http://stackoverflow.com/questions/247479/jquery-text-to-link-script
+	 * @param {String} content
+	 */
+	function linkify(content){
+		var url1 = /(^|&lt;|\s)(www\..+?\..+?)(\s|&gt;|$)/g,
+      		url2 = /(^|&lt;|\s)(((https?|ftp):\/\/|mailto:).+?)(\s|&gt;|$)/g;
+		
+		content = content.replace(/&/g, '&amp;')
+                         .replace(/</g, '&lt;')
+                         .replace(/>/g, '&gt;')
+                         .replace(url1, '$1<a target="_blank" href="http://$2">$2</a>$3')
+                         .replace(url2, '$1<a target="_blank" href="$2">$2</a>$5');
+						 
+		return content
+	}
 			
 			
-			
+	
 	//show wordcloud
 	function showWordcloud(name, data){
 		$("#wordcloud > ul").append("<li><div id='wordcloud-"+name+"' class='wordcloud'></div></li>");
@@ -532,12 +561,12 @@
 				if(!json.error && json){
 					var msg="<div class='opengraph'><ul>"+
 							"<li><img src='"+json.image+"' class='opengraph-image' /><label class='opengraph-title'>"+json.title+"</label></li>"+
-							"<li class='opengraph-description'>"+json.description+"</li>"+
+							"<li class='opengraph-description'>"+linkify(json.description)+"</li>"+
 							"</ul></div>";
 					$this.html(msg).click(function(){
 							window.open(url);
-					}).find(".opengraph-description").text(function(index, text) {
-							return text.substr(0, 150) + "....(show more)";
+					}).find(".opengraph-description").html(function(index, text) {
+							return text.substr(0, 150) + "....<a target='_blank' href='"+url+"'>show more</a>";
 					});
 				}
 			});
@@ -552,13 +581,6 @@
 	//scroll event
 	//detect the window's top while scrolling to highlight index in the navigator bar
 	function scrollEvent(){
-		var tops=(function(){
-			var results=[];
-			$(".scroll-index").each(function(){
-				results.push($(this).offset().top);
-			})
-			return results;
-		})();
 		
 		var $candidateName=$("#home > ul"),
 			$candidateNavBar=$("#candidateNavBar"),
@@ -569,11 +591,12 @@
 		    var y = $(this).scrollTop();
 		    	
 		   	//highlight navigator
-			$.each(tops, function(i,top){
-				if(y>=top-320){
+		   	$(".scroll-index").each(function(i,idx){
+				if(y>=$(this).offset().top-80){
 					$(".subMenu li[data-scroll-nav='"+i+"']").addClass("subMenuClick").siblings().removeClass("subMenuClick");
 				}
 			})
+	
 			
 			//show hide candidateNavBar in the header
 			if(y>=top_candidateName){
@@ -1160,6 +1183,8 @@
 		$("#chart_queryDate p").html(app.dateFrom + ' ～ ' +app.dateTo)
 		
 		
+		
+		
 		//request web service
 		var url=(app.testMode)?"db/searchResult.json":'ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate
 		$.getJSON(url, function(json){
@@ -1168,7 +1193,6 @@
 			$.each(json, function(k, obj){
 				//show top retweet
 				if(obj.topRetweets){showTopRetweet(k, obj.topRetweets);}
-				
 				
 				//show top webpage
 				if(obj.topWebpages){showTopWebpage(k, obj.topWebpages)};
