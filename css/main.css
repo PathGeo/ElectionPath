@@ -93,6 +93,8 @@ li {display:block;}
 .mainBlock > h2 > p {color:#555555; font-size:13px; font-weight:normal; }
 .mainBlock .ui-widget-content {border:0px; }
 
+.mainBlock .loadingMainBlock {text-align:center;}
+.mainBlock .loadingMainBlock img {width:30px; margin-top:20px; }
 
 
 
@@ -129,7 +131,7 @@ li {display:block;}
 #home > ul {z-index:100; width:100%; padding:0px; opacity:1; background-color:#f1f1f1; margin-top:0px;  }
 #home > ul > li {width:49.9%; }
 #home .candidate-name {font-size:28px; }
-#home .candidate-info {display:block; margin-top:15px; }
+#home .candidate-info {display:block; margin-top:10px; }
 
 /** title */
 #title {padding:20px 3% 20px 3%; width:94%; background-color:#f1f1f1; font-size:30px; z-index:100; opacity:1; }
@@ -185,6 +187,10 @@ li {display:block;}
 .candidateBar .candidate-name {padding-top:7px; }
 
 
+/**top retweet */
+#topRetweet .table tr:not(:first-child) td {height:115px; }
+#topRetweet .opengraph-title {font-size:14px; }
+
 /** top webpage */
 #topWebpage .tabs {margin:0 auto; width:95%; margin-top:5px; }
 #topWebpage .ui-tabs .ui-tabs-panel {padding:5px; }
@@ -221,10 +227,11 @@ li {display:block;}
 /** table */
 .table {width:99%;  margin:0 auto; border-collapse:collapse; margin-top:20px; }
 .table tr:first-child {background-color:#f1f1f1; font-weight:600; font-size:14px; color:#555555; }
-.table td {border-bottom:1px solid #dddddd; text-align:left !important; font-size:13px;  padding:5px; font-family:'Lato', sans-serif;}
+.table td {border-bottom:1px solid #dddddd; text-align:left !important; font-size:13px;  padding:10px 5px 10px 5px; font-family:'Lato', sans-serif;}
 .table tr:not(:first-child):hover {background-color:#f1f1f1; }
 .table a {text-decoration:none; color:#359BED}
 .table a:hover {text-decoration:underline; }
+.table tr td {vertical-align:top}
 .table .rank {width:10% !important; }
 .table .value {width:80% !important; 
 	-ms-word-break: break-all;
@@ -234,7 +241,7 @@ li {display:block;}
 	-webkit-hyphens: auto;
    	-moz-hyphens: auto;
     hyphens: auto;}
-.table .count {width:10% !important;}
+.table .count {width:10% !important; }
 
 
 
@@ -242,9 +249,9 @@ li {display:block;}
 .opengraph { width:100%;  color:#555555; font-size:11px; font-weight:normal; }
 .opengraph:hover {cursor:pointer; }
 .opengraph li {height:auto; position:relative;}
-.opengraph .opengraph-description {margin-top:10px; font-size:12px;  }
-.opengraph .opengraph-image {max-height:60px; max-width:30%;}
-.opengraph .opengraph-title {position:absolute; left:32%; top:-2px;  max-width:63%; padding:0% 2.5% 0% 2.5%; font-size:11px; font-weight:600; }
+.opengraph .opengraph-description {margin-top:5px; font-size:13px;  }
+.opengraph .opengraph-image {height:60px; width:30%; max-width:80px; border-radius:5px;  box-shadow:1px 1px 10px #cccccc; }
+.opengraph .opengraph-title {position:absolute; left:30%; top:-2px;  max-width:65%; padding:0% 2.5% 0% 2.5%; font-size:13px; font-weight:600; }
 
 
 
