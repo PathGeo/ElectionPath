@@ -266,19 +266,22 @@
 					
 					value=twitterAnalysis.values[0];
 	
+	
 					var htmlNav="<li class='candidate-li' id='"+name+"'>"+
 						 		"<div class='candidate-content' style='background-color:"+data.backgroundColor+"'>"+
 							 	 "<ul>"+
-								 	"<li class='candidate-image'><img src='"+(data.image.split('.')[0]+"_1x1.png")+"' /></li>"+
+								 	"<li class='candidate-image'><img src='"+(data.image.split('.')[0]+"_1x1.png")+"' /><div class='candidate-name'>"+data.name+"</div></li>"+
 								 	"<li class='candidate-metadata'>"+
-								 		"<div class='candidate-name'>"+data.name+"</div>"+
-										//"<div class='candidate-twitterYesterday'><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /><a href='#' class='showTable'>"+value.tweets_yesterday+"</a><label title='# of tweets mentioned about this candidate Yesterday'>mentions Yesterday</label></div>"+
-										"<div class='candidate-info'>"+"<a href='"+data.url_website+"' target='_blank'>Website</a><br><a href='"+data.url_twitter+"' target='_blank'>Twitter</a></div>"+
+										"<div class='candidate-twitterInfo'><label title='# of tweets mentioned about this candidate Today'>Today's Mentions: </label><a href='#' class='showTable'>"+(value.tweets_today?value.tweets_today:10)+"</a></div>"+
+										"<div class='candidate-twitterInfo'><label title='# of tweets mentioned about this candidate Yesterday'>Yesterday's Mentions: </label><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /><a href='#' class='showTable'>"+value.tweets_yesterday+"</a></div>"+
+										//"<div class='candidate-info'>"+"<a href='"+data.url_website+"' target='_blank'>Website</a><br><a href='"+data.url_twitter+"' target='_blank'>Twitter</a></div>"+
+										"<div class='candidate-top1Webpage' id='"+name+"'><h3>Today's Hottest Webpage: </h3><img src='images/loading.gif' id='loading' /></div>"+
 									"</li>"+
 								 "</ul>"+
-						 		"</div></li>";
+						 		"</div>"+
+						 		"</li>";
 					
-					var htmlGuage=$(htmlNav).append("<div class='candidate-guage' id='guage-"+name+"'></div>");
+					//var htmlGuage=$(htmlNav).append("<div class='candidate-guage' id='guage-"+name+"'></div>");
 						 
 						  /**
 						 "<div class='candidate-index'>"+
@@ -314,22 +317,20 @@
 							"</ul>"+
 						 "</div>"
 						 */
-						 
-						 
-					$candidate.append(htmlGuage);
-					$candidateBar.append(htmlNav);
+
 					
-					
-					
+					$candidate.append(htmlNav);
+					$candidateBar.append(htmlNav)
+			
 					//show guage
-					setTimeout(function(){
-						showGuage("guage-"+name, value.tweets_yesterday, {
-							title: "Twitter", //data.name,
-							label:"mentioned Yesterday",
-							levelColors: [data.backgroundColor],
-							max:100
-						});
-					},1000)
+					// setTimeout(function(){
+						// showGuage("guage-"+name, value.tweets_yesterday, {
+							// title: "Twitter", //data.name,
+							// label:"mentioned Yesterday",
+							// levelColors: [data.backgroundColor],
+							// max:100
+						// });
+					// },1000)
 					
 	}
 			
@@ -354,6 +355,10 @@
 								"</td>"+
 								//'<td class="count">'+obj.count+"</td>"+
 								"</tr>";
+						
+						if(i==0){
+							$(".candidate-top1Webpage#"+name).append("<table border=0><tr>"+$(html).find(".readOpenGraph")[0].outerHTML+ "</tr></table>").find("img#loading").hide();
+						}
 				});
 				
 				$topWebpage.append("<li>"+html+"</table></li>");
