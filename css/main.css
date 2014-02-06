@@ -99,14 +99,18 @@ li {display:block;}
 
 
 /** press */
-#press {width:60%; color:#aaaaaa; padding-top:8px; }
+#press {width:96%; margin:0 auto;  padding-top:8px; }
 #press h4 {margin-bottom:5px; }
 #press h4 label {font-weight:normal;font-size:12px;}
-#press ul {width:100%; height:20px; position:relative;}
-#press ul li {position:relative; float:left; width:22.5%;padding:20px 1% 20px 1%; text-align:left;  }
-#press ul li:hover {background-color:#f1f1f1;}
+#press ul {width:100%;  position:relative;}
+#press ul li {position:relative; width:96%; padding:30px 2% 30px 2%; text-align:left; border-bottom:1px solid #f1f1f1;  }
+#press ul li > div {display:table-cell;}
+#press .video {padding-right:40px;}
+#press .press_description {width:68%; vertical-align:top;  }
+#press ul li:hover {}
 #press ul li img {width:100%; height:30px; width:80%; max-width:100px; margin-bottom:10px; left:0px;}
 #press ul li b {font-size:14px; font-weight:normal;}
+#press ul li h3 label {color:#777777; font-weight:normal; font-size:13px; }
 
 
 

@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:false,
+		testMode:true,
 		showThumbnail:false,
 		highlightDates:[]
 	}
@@ -64,6 +64,7 @@
 		
 		//read candidates information 
 		readVoice('people');
+		
 		
 	});
 	
@@ -107,7 +108,7 @@
 		$("#topStory #categories").tabs('destroy').html("").append('<ul></ul>');
 		
 		//show loading
-		$(".mainBlock").append("<div class='loadingMainBlock'><img src='images/loading.gif' />");
+		$(".mainBlock:not([id='media'])").append("<div class='loadingMainBlock'><img src='images/loading.gif' />");
 		
 		//clear app.chartCSVData
 		app.chartCSVData={

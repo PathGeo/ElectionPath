@@ -1,8 +1,8 @@
 {
 	"TOPICS":{
 		"description":"",
-		"labels":["Election Path", "Hot Discussion", "Top News", "Top Story", "Time-Series Chart", "WordCloud", "Hot Location"],
-		"values":["home", "topRetweet", "topWebpage-Twitter", "topWebpage-cyber", "timeSeriesChart", "wordCloud", "map"],
+		"labels":["Election Path", "Hot Discussion", "Top News", "Top Story", "Time-Series Chart", "WordCloud", "Hot Location", "The Media"],
+		"values":["home", "topRetweet", "topWebpage-Twitter", "topWebpage-cyber", "timeSeriesChart", "wordCloud", "map", "media"],
 		"clickFn":""
 	},
 	"VOICE":{
