@@ -336,7 +336,7 @@
 			
 	//show top webpage
 	function showTopWebpage(name, data){
-				var html="<table class='table'><tr><td class='rank'>Top</td><td class='value'>Webpage</td><td class='count'>#</td></tr>",
+				var html="<table class='table'><tr><td class='rank'>Top</td><td class='value'>Webpage</td></tr>",
 					$topWebpage=$("#topWebpage > ul");
 				
 				$.each(data, function(i,obj){
@@ -346,12 +346,12 @@
 									(function(){
 									  	var result=obj.value;
 									  	
-									  	if(obj.url){result="<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>"}
+									  	if(obj.url){result="<a href='"+obj.url+"'  tweets='"+obj.count+"' target='_blank'>"+obj.value+"</a>"}
 									  	
 									  	return result;
 									})()+
 								"</td>"+
-								'<td class="count">'+obj.count+"</td>"+
+								//'<td class="count">'+obj.count+"</td>"+
 								"</tr>";
 				});
 				
@@ -410,7 +410,7 @@
 			
 	//show top retweet
 	function showTopRetweet(name, data){
-				var html="<li><table class='table'><tr><td class='rank'>Top</td><td class='value'>Value</td><td class='count'>#</td></tr>",
+				var html="<li><table class='table'><tr><td class='rank'>Top</td><td class='value'>Discussion</td></tr>",
 					$topRetweet=$("#topRetweet > ul");
 				
 				$.each(data, function(i,obj){
@@ -419,12 +419,12 @@
 							  "<td class='value'>"+
 									(function(){
 									  	return "<div class='opengraph' onclick=\"window.open('"+obj.url+"')\"><ul>"+
-										  			"<li><img src='"+obj.profile_image+"' class='opengraph-image' /><label class='opengraph-title'>"+obj.profile_screenName+"</label></li>"+
+										  			"<li><img src='"+obj.profile_image+"' class='opengraph-image' /><div class='opengraph-title'>"+obj.profile_screenName+"<div class='reTweetNumber'>"+obj.count+" retweets</div></div></li>"+
 										  			"<li class='opengraph-description'>"+linkify(obj.value)+"</li>"+
 										  		"</ul></div>";
 									})()+
 								"</td>"+
-								'<td class="count">'+obj.count+"</td>"+
+								//'<td class="count">'+obj.count+"</td>"+
 								"</tr>";
 				});
 				
@@ -566,7 +566,7 @@
 					$this.html(msg).click(function(){
 							window.open(url);
 					}).find(".opengraph-description").html(function(index, text) {
-							return text.substr(0, 150) + "....<a target='_blank' href='"+url+"'>show more</a>";
+							return text.substr(0, 200) + "....<a target='_blank' href='"+url+"'>show more</a>";
 					});
 				}
 			});

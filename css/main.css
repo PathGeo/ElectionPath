@@ -189,7 +189,8 @@ li {display:block;}
 
 /**top retweet */
 #topRetweet .table tr:not(:first-child) td {height:115px; }
-#topRetweet .opengraph-title {font-size:14px; }
+#topRetweet .opengraph-title {font-size:14px;}
+#topRetweet .reTweetNumber {margin-top:15px; position:absolute; padding:4px; border-radius:4px; color:#00ABEC; border:1px solid #00ABEC; font-weight:normal; font-size:12px;  }
 
 /** top webpage */
 #topWebpage .tabs {margin:0 auto; width:95%; margin-top:5px; }
@@ -251,7 +252,7 @@ li {display:block;}
 .opengraph li {height:auto; position:relative;}
 .opengraph .opengraph-description {margin-top:5px; font-size:13px;  }
 .opengraph .opengraph-image {height:60px; width:30%; max-width:80px; border-radius:5px;  box-shadow:1px 1px 10px #cccccc; }
-.opengraph .opengraph-title {position:absolute; left:30%; top:-2px;  max-width:65%; padding:0% 2.5% 0% 2.5%; font-size:13px; font-weight:600; }
+.opengraph .opengraph-title {position:absolute; left:30%; top:-2px;  width:65%; max-width:65%; padding:0% 2.5% 0% 2.5%; font-size:13px; font-weight:600; }
 
 
 
