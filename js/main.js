@@ -155,6 +155,15 @@
 					$("#legend-"+k).css({
 						"background-color":v.backgroundColor
 					});
+					
+					
+					//updated Time
+					if(k.updatedTime){
+						$(".updateTime").show().find('> label').html(k.updatedTime);
+					}else{
+						$(".updateTime").hide();
+					}
+					
 				});
 						
 				
