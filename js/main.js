@@ -51,8 +51,11 @@
 
 	//dom ready
 	$(function() { 
-		//read selector.json file to compose dropdown list
-		//init_ddslick();
+		//calculate mainContent width
+		$("#mainContent").width($("html").width()-$("#navigator").outerWidth()-2);
+		$(window).resize(function(){
+			$("#mainContent").width($("html").width()-$("#navigator").outerWidth()-2);
+		})
 		
 		//init navigator
 		init_navigator();
