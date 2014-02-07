@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:false,
+		testMode:true,
 		showThumbnail:false,
 		highlightDates:[]
 	}
@@ -129,7 +129,7 @@
 			if(json){
 				app.candidates=json;
 				var html_candidateNav="";
-			
+				
 				$.each(json, function(k,v){
 					if(k!='Alvarez' && k!='Faulconer'){
 						return;
@@ -158,11 +158,12 @@
 					
 					
 					//updated Time
-					if(k.updatedTime){
-						$(".updateTime").show().find('> label').html(k.updatedTime);
+					if(v.updatedTime){
+						$(".updateTime").show().find('> label').html(v.updatedTime);
 					}else{
 						$(".updateTime").hide();
 					}
+					
 					
 				});
 						
@@ -273,7 +274,7 @@
 					//reverse array order
 					twitterAnalysis.values.reverse();
 					
-					value=twitterAnalysis.values[0];
+					value=twitterAnalysis.values[1];
 	
 	
 					var htmlNav="<li class='candidate-li' id='"+name+"'>"+
@@ -281,7 +282,7 @@
 							 	 "<ul>"+
 								 	"<li class='candidate-image'><img src='"+(data.image.split('.')[0]+"_1x1.png")+"' /><div class='candidate-name'>"+data.name+"</div></li>"+
 								 	"<li class='candidate-metadata'>"+
-										"<div class='candidate-twitterInfo'><label title='# of tweets mentioned about this candidate Today'>Today's Mentions: </label><a href='#' class='showTable'>"+(value.tweets_today?value.tweets_today:10)+"</a></div>"+
+										"<div class='candidate-twitterInfo'><label title='# of tweets mentioned about this candidate Today'>Today's Mentions: </label><a href='#' class='showTable'>"+(data.tweets_today?data.tweets_today:"?")+"</a></div>"+
 										"<div class='candidate-twitterInfo'><label title='# of tweets mentioned about this candidate Yesterday'>Yesterday's Mentions: </label><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /><a href='#' class='showTable'>"+value.tweets_yesterday+"</a></div>"+
 										//"<div class='candidate-info'>"+"<a href='"+data.url_website+"' target='_blank'>Website</a><br><a href='"+data.url_twitter+"' target='_blank'>Twitter</a></div>"+
 										"<div class='candidate-top1Webpage' id='"+name+"'><h3>Today's Hottest Webpage: </h3><img src='images/loading.gif' id='loading' /></div>"+
@@ -1185,6 +1186,19 @@
 	
 	
 	
+	//convert to pacific time
+	function pacificTime(date){
+		date=new Date(date);
+		var dateUTC=date.getTime()+(date.getTimezoneOffset() * 60000);
+		var datePacific=new Date(dateUTC-(3600000*8));
+		
+		console.log(date);
+		console.log(datePacific);
+		
+		return datePacific.getFullYear()+"-"+(datePacific.getMonth()+1)+"-"+datePacific.getDate();
+	}
+	
+	
 	
 	
 	/**
@@ -1197,7 +1211,9 @@
 		//label search date
 		$("#chart_queryDate p").html(app.dateFrom + ' ～ ' +app.dateTo)
 		
-		
+		//change to pacific time
+		fromDate=pacificTime(fromDate);
+		toDate=pacificTime(toDate);
 		
 		
 		//request web service
