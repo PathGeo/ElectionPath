@@ -34,7 +34,8 @@
 		wordCloud:null,
 		testMode:true,
 		showThumbnail:false,
-		highlightDates:[]
+		highlightDates:[],
+		voice:null
 	}
 	
 	//chart
@@ -95,6 +96,8 @@
 			$changeWebpageLabel.html('from San Diego Twitters')
 		}
 		
+		//set global variable for getMetrics.py
+		app.voice=source; 
 		
 		//show loading dialog and clear content
 		$("#dialog_loading").dialog({
@@ -163,8 +166,7 @@
 					}else{
 						$(".updateTime").hide();
 					}
-					
-					
+
 				});
 						
 				
@@ -1191,10 +1193,7 @@
 		date=new Date(date);
 		var dateUTC=date.getTime()+(date.getTimezoneOffset() * 60000);
 		var datePacific=new Date(dateUTC-(3600000*8));
-		
-		console.log(date);
-		console.log(datePacific);
-		
+
 		return datePacific.getFullYear()+"-"+(datePacific.getMonth()+1)+"-"+datePacific.getDate();
 	}
 	
@@ -1217,7 +1216,7 @@
 		
 		
 		//request web service
-		var url=(app.testMode)?"db/searchResult.json":'ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate
+		var url=(app.testMode)?"db/searchResult.json":'ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate+"&voice="+app.voice;
 		$.getJSON(url, function(json){
 			if(!json){console.log('[ERROR] query: no json'); return;}
 			
