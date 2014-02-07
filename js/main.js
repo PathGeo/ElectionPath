@@ -428,7 +428,7 @@
 									html+='<tr>'+
 										  '<td class="rank">'+obj.score+'</td>'+
 										  "<td class='value readOpenGraph'>"+
-										  	createOpenGraphHTML("<a href='"+obj.url+"' target='_blank'>"+obj.title+"</a>")+
+										  	createOpenGraphHTML("<a href='"+obj.url+"' target='_blank'>"+obj.title+"</a>", null, "<a href='"+obj.url+"' target='_blank'>"+obj.url+"</a>")+
 											"</td>"+
 											"</tr>";
 								});
