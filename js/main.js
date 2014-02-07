@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:false,
+		testMode:true,
 		showThumbnail:false,
 		highlightDates:[],
 		voice:null
@@ -141,8 +141,6 @@
 					//twitterAnalysis
 					showTwitterAnalysis(k,v);
 					
-					//top story
-					showTopStory(k,v);
 					
 					//showWordcloud 
 					showWordcloud(k,v);
@@ -192,9 +190,12 @@
 				//init chart;
 				init_chart();
 				
+				//detect the window's top while scrolling to highlight index in the navigator bar
+				scrollEvent();
+				
 				
 				//hide loading image
-				$("#home, #wordcloud, #topStory, #timeSeriesChart").find('.loadingMainBlock').hide();
+				$("#home, #wordcloud, #timeSeriesChart").find('.loadingMainBlock').hide();
 				
 				
 				//get info of topWebpage, topRetweet, topMention, topHashtag and topChatter from getMetrics.py
@@ -207,18 +208,20 @@
 					//readOpenGraph
 					readOpenGraph();
 				
-			
-					//detect the window's top while scrolling to highlight index in the navigator bar
-					scrollEvent();
-				
-				
-					//tabs
-					$('.tabs').tabs();
-					
 					//hide loading
 					//hide loading image
 					$("#topRetweet, #topWebpage").find('.loadingMainBlock').hide();
 				});
+				
+				
+				//get top story from cyberdiscovery tool
+				showTopStory(function(){
+					//hide loading image
+					$("#topStory").find('.loadingMainBlock').hide();
+					
+					//tabs
+					$('.tabs').tabs();
+				})
 				
 			}
 		});
@@ -379,49 +382,61 @@
 			
 			
 	//show top story
-	function showTopStory(name, data){
+	function showTopStory(callback){
 				var html="";
 					value='',
 					$topStoryUL=$("#topStory > ul"),
 					$categories=$("#categories");
 					$tab=$categories.find(" > ul"),
-					topStory=data.topStory,
 					isTabs=$categories.is("[ui-tabs]"),
-					lowerKey='';			
-					
+					lowerKey='';
 				
-				$.each(topStory.values, function(k,val){
-					lowerKey=k.toLowerCase();
-					
-					//if this is the first time to creat tabs
-					if(!isTabs && $tab.find("> li a[href='#category-"+lowerKey+"']").length==0){
-						$tab.append("<li><a href='#category-"+lowerKey+"'>"+(k.replace(/_/g," ")[0].toUpperCase()+k.replace(/_/g," ").slice(1))+"</a></li>");
-						$categories.append("<div id='category-"+lowerKey+"' class='tabContent'>"+$(".candidateBar")[0].outerHTML+"</div>");
+				//read json
+				$.getJSON("db/cyberdiscovery.json", function(json){
+					if(json){
+						$.each(json, function(name, data){
+							$.each(data.topStory.values, function(k,val){
+								lowerKey=k.toLowerCase();
+								
+								//if this is the first time to creat tabs
+								if(!isTabs && $tab.find("> li a[href='#category-"+lowerKey+"']").length==0){
+									$tab.append("<li><a href='#category-"+lowerKey+"'>"+(k.replace(/_/g," ")[0].toUpperCase()+k.replace(/_/g," ").slice(1))+"</a></li>");
+									$categories.append("<div id='category-"+lowerKey+"' class='tabContent'>"+$(".candidateBar")[0].outerHTML+"</div>");
+								}
+								
+								html="<table class='table'><tr><td class='rank'>Score</td><td class='value'>Webpage</td></tr>";
+							
+								$.each(val, function(i,obj){
+									html+='<tr>'+
+										  '<td class="rank">'+obj.score+'</td>'+
+										  "<td class='value readOpenGraph'>"+
+												(function(){
+												  	var result=obj.title;
+												  	
+												  	if(obj.url){result="<a href='"+obj.url+"' target='_blank'>"+obj.title+"</a>"}
+												  	
+												  	return result;
+												})()+
+											"</td>"+
+											"</tr>";
+								});
+								
+								html+="</table>";
+								
+								$("#category-"+lowerKey).append(html);
+							});
+							
+						})
+						
+						
 					}
 					
-					html="<table class='table'><tr><td class='rank'>Score</td><td class='value'>Webpage</td></tr>";
+				})
 				
-					$.each(val, function(i,obj){
-						html+='<tr>'+
-							  '<td class="rank">'+obj.score+'</td>'+
-							  "<td class='value readOpenGraph'>"+
-									(function(){
-									  	var result=obj.value;
-									  	
-									  	if(obj.url){result="<a href='"+obj.url+"' target='_blank'>"+obj.title+"</a>"}
-									  	
-									  	return result;
-									})()+
-								"</td>"+
-								"</tr>";
-					});
-					
-					html+="</table>";
-					
-					$("#category-"+lowerKey).append(html);
-				});
 				
-		
+				if(callback){
+					callback()
+				}
 	}
 			
 			

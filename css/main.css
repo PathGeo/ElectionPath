@@ -173,6 +173,7 @@ li {display:block;}
 .candidate-top1Webpage table {padding:2%; background-color:#ffffff; border-radius:5px; }
 .candidate-top1Webpage h3 {font-weight:normal; color:#ffffff;}
 .candidate-top1Webpage a {color:#359BED}
+.candidate-top1Webpage .opengraph {height:130px; }
 
 /** candidate index*/
 .candidate-index {width:100%; margin-top:5px; border-top:1px solid #f1f1f1; }
