@@ -594,7 +594,7 @@
 				if(!json.error && json){
 					var msg="<div class='opengraph'><ul>"+
 							"<li><img src='"+json.image+"' class='opengraph-image' /><label class='opengraph-title'>"+json.title+"</label></li>"+
-							"<li class='opengraph-description'>"+linkify(json.description)+"</li>"+
+							"<li class='opengraph-description'>"+((json.description)?linkify(json.description):"")+"</li>"+
 							"</ul></div>";
 					$this.html(msg).click(function(){
 							window.open(url);
