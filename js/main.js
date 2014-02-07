@@ -96,7 +96,7 @@
 		}else{
 			$showhideObj.show();
 			$changeRetweetLabel.html('from the Public and the Media (tweets)');
-			$changeWebpageLabel.html('from San Diego Twitters')
+			$changeWebpageLabel.html('from San Diego Twitter Discussion')
 		}
 		
 		//set global variable for getMetrics.py
@@ -464,12 +464,12 @@
 	 * create opengraph DIV
 	 */
 	function createOpenGraphHTML(title, image, description){
-		image=image || "images/1391780792_Image_-_Google_Docs.png";
+		image=image || "images/main-img-services.png";
 		title=title || "No Title";
 		description=description || "<img src='images/loading.gif' class='loading' />";
 		
 		return html="<div class='opengraph'><ul>"+
-						"<li><img src='"+image+"' class='opengraph-image' /><label class='opengraph-title'>"+title+"</label></li>"+
+						"<li><img src='"+image+"' class='opengraph-image' style='position:relative; top:-5px; width:70px; height:70px; box-shadow:0px 0px 0px #cccccc;' /><label class='opengraph-title'>"+title+"</label></li>"+
 						"<li class='opengraph-description'>"+description+"</li>"+
 				    "</ul></div>";
 	}
