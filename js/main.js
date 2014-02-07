@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:true,
+		testMode:false,
 		showThumbnail:false,
 		highlightDates:[],
 		voice:null
@@ -204,24 +204,27 @@
 					endDate=endDate.getFullYear()+"-"+(endDate.getMonth()+1)+"-"+endDate.getDate(),
 					fromDate=fromDate.getFullYear()+"-"+(fromDate.getMonth()+1)+"-"+fromDate.getDate();
 				
-				getMetrics("Alvarez,Faulconer", fromDate, endDate, function(){
-					//readOpenGraph
-					readOpenGraph();
-				
-					//hide loading
-					//hide loading image
-					$("#topRetweet, #topWebpage").find('.loadingMainBlock').hide();
-				});
-				
-				
+
 				//get top story from cyberdiscovery tool
 				showTopStory(function(){
 					//hide loading image
 					$("#topStory").find('.loadingMainBlock').hide();
 					
+				
 					//tabs
 					$('.tabs').tabs();
-				})
+					
+					
+					//show top webpage and top retweet
+					getMetrics("Alvarez,Faulconer", fromDate, endDate, function(){
+						//readOpenGraph
+						readOpenGraph();
+					
+						//hide loading
+						//hide loading image
+						$("#topRetweet, #topWebpage").find('.loadingMainBlock').hide();
+					});
+				});
 				
 			}
 		});
@@ -428,15 +431,12 @@
 							
 						})
 						
+						if(callback){
+							callback()
+						}
 						
 					}
-					
-				})
-				
-				
-				if(callback){
-					callback()
-				}
+				});
 	}
 			
 			
@@ -859,12 +859,6 @@
 			showTop1Webpage(app.highlightDates);
 		});
 		
-		
-		//console.log(highlightDates)
-	
-		
-		//tabs
-		//init_tabs();	
 	}
 		
 
