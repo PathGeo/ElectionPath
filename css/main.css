@@ -171,7 +171,7 @@ li {display:block;}
 
 /** candidate top 1 webpage */
 .candidate-top1Webpage { margin-top:25px; }
-.candidate-top1Webpage table {padding:2%; background-color:#ffffff; border-radius:5px; }
+.candidate-top1Webpage table {padding:2%; background-color:#ffffff; border-radius:5px; width:98%; }
 .candidate-top1Webpage h3 {font-weight:normal; color:#ffffff;}
 .candidate-top1Webpage a {color:#359BED}
 .candidate-top1Webpage .opengraph {height:130px; }
@@ -214,7 +214,7 @@ li {display:block;}
 
 /** top story*/
 #topStory #categories {width:96%; margin:0 auto; margin-top:30px; }
-#topStory .tabContent table {width:47%; padding:20px 1.5% 20px 1.5%; display:table-cell;  }
+#topStory .tabContent table {width:500px; padding:20px 1.5% 20px 1.5%; display:table-cell;  }
 #topStory .tabContent table tr:not(:first-child) {height:150px; }
 
 
@@ -229,7 +229,7 @@ li {display:block;}
 
 
 /**highlight data*/
-#highlightDate table {width:47%; padding:20px 1.5% 20px 1.5%; display:table-cell; }
+#highlightDate table {width:500px; padding:20px 1.5% 20px 1.5%; display:table-cell; }
 #highlightDate table:nth-of-type(n+3) {display:none;}
 #highlightDate table .rank {width:90px !important; }
 #highlightDate #loading {display:block; text-align:center; margin-top:50px; display:none;  }
@@ -245,6 +245,7 @@ li {display:block;}
 .table tr:first-child {background-color:#f1f1f1; font-weight:600; font-size:14px; color:#555555; }
 .table td {border-bottom:1px solid #dddddd; text-align:left !important; font-size:13px;  padding:10px 5px 10px 5px; font-family:'Lato', sans-serif;}
 .table tr:not(:first-child):hover {background-color:#f1f1f1; }
+.table tr:not(:first-child) {height:150px; }
 .table a {text-decoration:none; color:#359BED}
 .table a:hover {text-decoration:underline; }
 .table tr td {vertical-align:top}
@@ -268,7 +269,7 @@ li {display:block;}
 .opengraph .opengraph-description {margin-top:5px; font-size:13px;  }
 .opengraph .opengraph-image {height:60px; width:30%; max-width:80px; border-radius:5px;  box-shadow:1px 1px 10px #cccccc; }
 .opengraph .opengraph-title {position:absolute; left:30%; top:-2px;  width:65%; max-width:65%; padding:0% 2.5% 0% 2.5%; font-size:13px; font-weight:600; }
-
+.opengraph .loading {width:20px;height:20px; }
 
 
 /** matrix table */

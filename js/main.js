@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:false,
+		testMode:true,
 		showThumbnail:false,
 		highlightDates:[],
 		voice:null
@@ -363,13 +363,7 @@
 						html+='<tr>'+
 							  '<td class="rank">'+obj.rank+'</td>'+
 							  "<td class='value readOpenGraph'>"+
-									(function(){
-									  	var result=obj.value;
-									  	
-									  	if(obj.url){result="<a href='"+obj.url+"'  tweets='"+obj.count+"' target='_blank'>"+obj.value+"</a>"}
-									  	
-									  	return result;
-									})()+
+									createOpenGraphHTML("<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>")+
 								"</td>"+
 								//'<td class="count">'+obj.count+"</td>"+
 								"</tr>";
@@ -413,13 +407,7 @@
 									html+='<tr>'+
 										  '<td class="rank">'+obj.score+'</td>'+
 										  "<td class='value readOpenGraph'>"+
-												(function(){
-												  	var result=obj.title;
-												  	
-												  	if(obj.url){result="<a href='"+obj.url+"' target='_blank'>"+obj.title+"</a>"}
-												  	
-												  	return result;
-												})()+
+										  	createOpenGraphHTML("<a href='"+obj.url+"' target='_blank'>"+obj.title+"</a>")+
 											"</td>"+
 											"</tr>";
 								});
@@ -469,6 +457,22 @@
 	
 	
 	
+	/*
+	 * create opengraph DIV
+	 */
+	function createOpenGraphHTML(title, image, description){
+		image=image || "images/1391780792_Image_-_Google_Docs.png";
+		title=title || "No Title";
+		description=description || "<img src='images/loading.gif' class='loading' />";
+		
+		return html="<div class='opengraph'><ul>"+
+						"<li><img src='"+image+"' class='opengraph-image' /><label class='opengraph-title'>"+title+"</label></li>"+
+						"<li class='opengraph-description'>"+description+"</li>"+
+				    "</ul></div>";
+	}
+	
+	
+	
 	/**
 	 * convert text to link if contains http, https, ftp, mailto
 	 * from http://stackoverflow.com/questions/247479/jquery-text-to-link-script
@@ -508,7 +512,9 @@
 				
 		$.each(values, function(i, val){
 			topURL=val.topURLs[0];
-			html+="<tr><td>"+val.date + "<p>"+val.tweets +"</p></td><td class='readOpenGraph'><a href='"+topURL.url+"' target='_blank'>"+topURL.value+"</a></td></tr>";	  
+			html+="<tr><td>"+val.date + "<p>"+val.tweets +"</p></td><td class='readOpenGraph'>"+
+					createOpenGraphHTML("<a href='"+topURL.url+"' target='_blank'>"+topURL.value+"</a>")+
+				  "</td></tr>";	  
 		});
 				
 				
@@ -604,7 +610,14 @@
 							return text.substr(0, 200) + "....<a target='_blank' href='"+url+"'>show more</a>";
 					});
 				}
+				
+				$this.find('img.loading').hide();
+				
+			}).fail(function(){
+				$this.find('img.loading').hide();
 			});
+			
+			
 		})
 	}
 	
@@ -894,13 +907,7 @@
 					html+='<tr>'+
 						  '<td class="rank">'+date+'</td>'+
 						  "<td class='value readOpenGraph'>"+
-								(function(){
-								  	var result=topWebpage.value;
-								  	
-								  	if(topWebpage.url){result="<a href='"+topWebpage.url+"' target='_blank'>"+topWebpage.value+"</a>"}
-								  	
-								  	return result;
-								})()+
+						  	createOpenGraphHTML("<a href='"+topWebpage.url+"' target='_blank'>"+topWebpage.value+"</a>")+
 							"</td>"+
 							"</tr>";
 				});
