@@ -71,7 +71,7 @@ li {display:block;}
 #main {height:auto; }
 
 /**accordion Menu*/
-#navigator {width:13%; margin-top:45px; padding:5px 0px 5px 1%; position:fixed; border-right:1px solid #eeeeee; background-color:#ffffff;  }
+#navigator {width:13%; margin-top:45px; padding:5px 0px 5px 1%; position:fixed; border-right:1px solid #eeeeee; background-color:#ffffff; border-left:1px solid #eeeeee; }
 .menuGroup {padding-bottom:20px; border-bottom:1px solid #f1f1f1; }
 .menuGroup h4 {margin-bottom:5px; }
 .menuGroup p {color:#999999; font-size:12px;}
@@ -82,7 +82,7 @@ li {display:block;}
 
 
 /**main content */
-#mainContent {width:85.8%; padding:5px 0% 0px 0%; float:right;}
+#mainContent {width:85.8%; padding:5px 0% 0px 0%; float:right; border-right:1px solid #eeeeee;}
 #mainContent > div {width:100%; position:relative}
 
 .mainBlock {padding:45px 0px 50px 0px; border-bottom:0px solid #f1f1f1; min-height:550px;  }

@@ -290,7 +290,7 @@
 							 	 "<ul>"+
 								 	"<li class='candidate-image'><img src='"+(data.image.split('.')[0]+"_1x1.png")+"' /><div class='candidate-name'>"+data.name+"</div></li>"+
 								 	"<li class='candidate-metadata'>"+
-										"<div class='candidate-twitterInfo'><label title='# of tweets mentioned about this candidate Today'>Today's Mentions: </label><a href='#' class='showTable'>"+(data.tweets_today?data.tweets_today:"?")+"</a></div>"+
+										"<div class='candidate-twitterInfo'><label title='# of tweets mentioned about this candidate Today'>Today's Mentions: </label><a href='#' class='showTable'>"+(data.tweets_today?data.tweets_today:"0")+"</a></div>"+
 										"<div class='candidate-twitterInfo'><label title='# of tweets mentioned about this candidate Yesterday'>Yesterday's Mentions: </label><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /><a href='#' class='showTable'>"+value.tweets_yesterday+"</a></div>"+
 										//"<div class='candidate-info'>"+"<a href='"+data.url_website+"' target='_blank'>Website</a><br><a href='"+data.url_twitter+"' target='_blank'>Twitter</a></div>"+
 										"<div class='candidate-top1Webpage' id='"+name+"'><h3>Today's Hottest Webpage: </h3><img src='images/loading.gif' id='loading' /></div>"+
