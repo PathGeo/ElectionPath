@@ -1,6 +1,6 @@
 {
     "Faulconer": {
-        "updatedTime": "2014-02-06 11:54:49", 
+        "updatedTime": "2014-02-06 18:54:11", 
         "wordCloud": {
             "values": [
                 {
@@ -573,6 +573,7 @@
                 ]
             }
         }, 
+        "tweets_today": 0, 
         "image": "images/faulconer.png", 
         "twitterAnalysis": {
             "values": [
@@ -5630,7 +5631,7 @@
     }, 
     "voice": "Candidate", 
     "Alvarez": {
-        "updatedTime": "2014-02-06 11:54:49", 
+        "updatedTime": "2014-02-06 18:54:11", 
         "wordCloud": {
             "values": [
                 {
@@ -6203,6 +6204,7 @@
                 ]
             }
         }, 
+        "tweets_today": 0, 
         "image": "images/alvarez.png", 
         "twitterAnalysis": {
             "values": [

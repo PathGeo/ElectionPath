@@ -1,14 +1,14 @@
 {
     "Faulconer": {
-        "updatedTime": "2014-02-06 11:54:49", 
+        "updatedTime": "2014-02-06 18:54:11", 
         "wordCloud": {
             "values": [
                 {
-                    "count": 3966, 
+                    "count": 3976, 
                     "value": "@kevin_faulconer"
                 }, 
                 {
-                    "count": 1387, 
+                    "count": 1394, 
                     "value": "@alvarezsd"
                 }, 
                 {
@@ -16,19 +16,19 @@
                     "value": "#sdmayor"
                 }, 
                 {
-                    "count": 1040, 
+                    "count": 1046, 
                     "value": "san"
                 }, 
                 {
-                    "count": 842, 
+                    "count": 848, 
                     "value": "diego"
                 }, 
                 {
-                    "count": 743, 
+                    "count": 746, 
                     "value": "mayoral"
                 }, 
                 {
-                    "count": 702, 
+                    "count": 705, 
                     "value": "mayor"
                 }, 
                 {
@@ -36,7 +36,7 @@
                     "value": "@nathanfletcher"
                 }, 
                 {
-                    "count": 507, 
+                    "count": 512, 
                     "value": "#sandiego"
                 }, 
                 {
@@ -52,7 +52,7 @@
                     "value": "election"
                 }, 
                 {
-                    "count": 371, 
+                    "count": 372, 
                     "value": "campaign"
                 }, 
                 {
@@ -60,7 +60,7 @@
                     "value": "debate"
                 }, 
                 {
-                    "count": 331, 
+                    "count": 336, 
                     "value": "city"
                 }, 
                 {
@@ -72,7 +72,7 @@
                     "value": "@faulconer4mayor"
                 }, 
                 {
-                    "count": 286, 
+                    "count": 288, 
                     "value": "candidate"
                 }, 
                 {
@@ -84,11 +84,11 @@
                     "value": "today"
                 }, 
                 {
-                    "count": 268, 
+                    "count": 269, 
                     "value": "says"
                 }, 
                 {
-                    "count": 258, 
+                    "count": 261, 
                     "value": "candidates"
                 }, 
                 {
@@ -100,20 +100,20 @@
                     "value": "@10news"
                 }, 
                 {
+                    "count": 216, 
+                    "value": "support"
+                }, 
+                {
+                    "count": 215, 
+                    "value": "http\u2026"
+                }, 
+                {
                     "count": 214, 
                     "value": "plan"
                 }, 
                 {
                     "count": 213, 
                     "value": "@meanestbossever"
-                }, 
-                {
-                    "count": 212, 
-                    "value": "support"
-                }, 
-                {
-                    "count": 212, 
-                    "value": "http\u2026"
                 }, 
                 {
                     "count": 206, 
@@ -128,11 +128,11 @@
                     "value": "first"
                 }, 
                 {
-                    "count": 174, 
+                    "count": 175, 
                     "value": "\u2026"
                 }, 
                 {
-                    "count": 174, 
+                    "count": 175, 
                     "value": "would"
                 }, 
                 {
@@ -144,7 +144,7 @@
                     "value": "shows"
                 }, 
                 {
-                    "count": 164, 
+                    "count": 167, 
                     "value": "faulconers"
                 }, 
                 {
@@ -161,18 +161,18 @@
                 }, 
                 {
                     "count": 157, 
-                    "value": "@utsandiego"
+                    "value": "latest"
                 }, 
                 {
-                    "count": 156, 
-                    "value": "latest"
+                    "count": 157, 
+                    "value": "@utsandiego"
                 }, 
                 {
                     "count": 155, 
                     "value": "news"
                 }, 
                 {
-                    "count": 154, 
+                    "count": 155, 
                     "value": "lead"
                 }, 
                 {
@@ -573,6 +573,7 @@
                 ]
             }
         }, 
+        "tweets_today": 32, 
         "image": "images/faulconer.png", 
         "twitterAnalysis": {
             "values": [
@@ -5541,7 +5542,7 @@
                 }, 
                 {
                     "influence": "0.00%", 
-                    "tweets_yesterday": 110, 
+                    "tweets_yesterday": 113, 
                     "followers_yesterday_new": 14, 
                     "biggestFollowers_yesterday": [
                         {
@@ -5562,7 +5563,7 @@
                     ], 
                     "followers_all": 4698, 
                     "date": "2/5/2014", 
-                    "tweets_all": 7131, 
+                    "tweets_all": 7134, 
                     "biggestFollowers": [
                         {
                             "url": "http://www.twitter.com/DjKingAssassin", 
@@ -5584,7 +5585,7 @@
                 }, 
                 {
                     "influence": "0.10%", 
-                    "tweets_yesterday": 0, 
+                    "tweets_yesterday": 32, 
                     "followers_yesterday_new": 13, 
                     "biggestFollowers_yesterday": [
                         {
@@ -5605,7 +5606,7 @@
                     ], 
                     "followers_all": 4708, 
                     "date": "2/6/2014", 
-                    "tweets_all": 7131, 
+                    "tweets_all": 7166, 
                     "biggestFollowers": [
                         {
                             "url": "http://www.twitter.com/DjKingAssassin", 
@@ -5630,11 +5631,11 @@
     }, 
     "voice": "People", 
     "Alvarez": {
-        "updatedTime": "2014-02-06 11:54:49", 
+        "updatedTime": "2014-02-06 18:54:11", 
         "wordCloud": {
             "values": [
                 {
-                    "count": 809, 
+                    "count": 812, 
                     "value": "san"
                 }, 
                 {
@@ -5642,19 +5643,19 @@
                     "value": "#sdmayor"
                 }, 
                 {
-                    "count": 693, 
+                    "count": 694, 
                     "value": "mayor"
                 }, 
                 {
-                    "count": 688, 
+                    "count": 691, 
                     "value": "diego"
                 }, 
                 {
-                    "count": 683, 
+                    "count": 686, 
                     "value": "@alvarezsd"
                 }, 
                 {
-                    "count": 514, 
+                    "count": 517, 
                     "value": "mayoral"
                 }, 
                 {
@@ -5662,11 +5663,11 @@
                     "value": "race"
                 }, 
                 {
-                    "count": 387, 
+                    "count": 389, 
                     "value": "#sandiego"
                 }, 
                 {
-                    "count": 299, 
+                    "count": 301, 
                     "value": "vote"
                 }, 
                 {
@@ -5686,19 +5687,19 @@
                     "value": "poll"
                 }, 
                 {
-                    "count": 227, 
+                    "count": 231, 
                     "value": "city"
                 }, 
                 {
-                    "count": 207, 
+                    "count": 208, 
                     "value": "candidate"
                 }, 
                 {
-                    "count": 195, 
+                    "count": 197, 
                     "value": "@kevin_faulconer"
                 }, 
                 {
-                    "count": 187, 
+                    "count": 188, 
                     "value": "campaign"
                 }, 
                 {
@@ -5706,7 +5707,7 @@
                     "value": "today"
                 }, 
                 {
-                    "count": 174, 
+                    "count": 175, 
                     "value": "says"
                 }, 
                 {
@@ -5714,7 +5715,7 @@
                     "value": "@utsandiego"
                 }, 
                 {
-                    "count": 147, 
+                    "count": 149, 
                     "value": "candidates"
                 }, 
                 {
@@ -5730,7 +5731,7 @@
                     "value": "debate"
                 }, 
                 {
-                    "count": 138, 
+                    "count": 139, 
                     "value": "@nbcsandiego"
                 }, 
                 {
@@ -5742,12 +5743,12 @@
                     "value": "first"
                 }, 
                 {
-                    "count": 127, 
-                    "value": "results"
+                    "count": 128, 
+                    "value": "http\u2026"
                 }, 
                 {
-                    "count": 126, 
-                    "value": "http\u2026"
+                    "count": 127, 
+                    "value": "results"
                 }, 
                 {
                     "count": 125, 
@@ -5775,11 +5776,11 @@
                 }, 
                 {
                     "count": 112, 
-                    "value": "endorsement"
+                    "value": "chandler"
                 }, 
                 {
-                    "count": 111, 
-                    "value": "chandler"
+                    "count": 112, 
+                    "value": "endorsement"
                 }, 
                 {
                     "count": 109, 
@@ -5806,7 +5807,7 @@
                     "value": "la"
                 }, 
                 {
-                    "count": 100, 
+                    "count": 102, 
                     "value": "latest"
                 }, 
                 {
@@ -5818,20 +5819,20 @@
                     "value": "back"
                 }, 
                 {
+                    "count": 93, 
+                    "value": "eddie"
+                }, 
+                {
                     "count": 92, 
                     "value": "counted"
                 }, 
                 {
                     "count": 92, 
-                    "value": "eddie"
+                    "value": "make"
                 }, 
                 {
                     "count": 89, 
                     "value": "mayors"
-                }, 
-                {
-                    "count": 87, 
-                    "value": "25%"
                 }
             ]
         }, 
@@ -6203,6 +6204,7 @@
                 ]
             }
         }, 
+        "tweets_today": 24, 
         "image": "images/alvarez.png", 
         "twitterAnalysis": {
             "values": [
@@ -11166,7 +11168,7 @@
                 }, 
                 {
                     "influence": "0.10%", 
-                    "tweets_yesterday": 66, 
+                    "tweets_yesterday": 69, 
                     "followers_yesterday_new": 22, 
                     "biggestFollowers_yesterday": [
                         {
@@ -11187,7 +11189,7 @@
                     ], 
                     "followers_all": 3466, 
                     "date": "2/5/2014", 
-                    "tweets_all": 5100, 
+                    "tweets_all": 5103, 
                     "biggestFollowers": [
                         {
                             "url": "http://www.twitter.com/DjKingAssassin", 
@@ -11209,7 +11211,7 @@
                 }, 
                 {
                     "influence": "0.00%", 
-                    "tweets_yesterday": 0, 
+                    "tweets_yesterday": 24, 
                     "followers_yesterday_new": 12, 
                     "biggestFollowers_yesterday": [
                         {
@@ -11230,7 +11232,7 @@
                     ], 
                     "followers_all": 3477, 
                     "date": "2/6/2014", 
-                    "tweets_all": 5100, 
+                    "tweets_all": 5127, 
                     "biggestFollowers": [
                         {
                             "url": "http://www.twitter.com/DjKingAssassin", 
