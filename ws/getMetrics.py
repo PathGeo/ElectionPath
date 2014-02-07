@@ -19,17 +19,21 @@ try:
 	category = None if 'category' not in fields else fields['category'].value
 	dateFromStr = fields['dateFrom'].value
 	dateToStr = fields['dateTo'].value
+	voice='people' if 'voice' not in fields else fields['voice'].value
 
 	dateFrom = datetime.strptime(dateFromStr, '%Y-%m-%d')
 	dateTo = datetime.strptime(dateToStr, '%Y-%m-%d') + timedelta(days=1)
-
-	col = MongoClient().test.twitter_search_candidates
-
+	
+        col = MongoClient().test.twitter_search_candidates
         #-----------------------------------------------------------------------------
         def doQuery(candidate):
                 query = {'search_info.keywords': candidate, 'created_at_local': {'$gte': dateFrom, '$lt': dateTo}}
                 if category:
                         query['categories'] = category
+
+                #determine userCategory
+                if (voice=='candidate'):
+                        query['user_category']=candidate+"_Team"
                 
                 tweets = list(col.find(query).batch_size(10000))
 	 
