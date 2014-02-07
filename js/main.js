@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:false,
+		testMode:true,
 		showThumbnail:false,
 		highlightDates:[],
 		voice:null
@@ -83,7 +83,7 @@
 				"candidate":"db/candidate.json"
 			}, 
 			url=urls[source] || urls["people"],
-			$showhideObj=$("#timeSeriesChart, #topStory, .subMenu > li[value='topWebpage-cyber'], .subMenu > li[value='timeSeriesChart']"),
+			$showhideObj=$("#topEventDate, #topStory, .subMenu > li[value='topWebpage-cyber'], .subMenu > li[value='topEventDate']"),
 			$changeRetweetLabel=$("#topRetweet > h2 > label"),
 			$changeWebpageLabel=$("#topWebpage > h2 > label");
 		
@@ -198,12 +198,12 @@
 				
 				
 				//hide loading image
-				$("#home, #wordcloud, #timeSeriesChart").find('.loadingMainBlock').hide();
+				$("#home, #wordcloud, #topEventDate").find('.loadingMainBlock').hide();
 				
 				
 				//get info of topWebpage, topRetweet, topMention, topHashtag and topChatter from getMetrics.py
 				var endDate=new Date(),
-					fromDate= (function(){this.setDate(this.getDate()-1); return this}).call(new Date),
+					fromDate= (function(){this.setDate(this.getDate()-2); return this}).call(new Date),
 					endDate=endDate.getFullYear()+"-"+(endDate.getMonth()+1)+"-"+endDate.getDate(),
 					fromDate=fromDate.getFullYear()+"-"+(fromDate.getMonth()+1)+"-"+fromDate.getDate();
 				
@@ -273,13 +273,26 @@
 					
 					//prepare chart csv content
 					chartCSVData.headers.push(name);
+					var v;
 					$.each(twitterAnalysis.values, function(i,val){
-						if(chartCSVData.values[val.date]) {
-							chartCSVData.values[val.date].push(val.tweets_yesterday);
-						}else {
-							chartCSVData.values[val.date] = [val.tweets_yesterday];
+						
+						v=val;
+						//last date
+						if(i==twitterAnalysis.values.length-1){
+							v=twitterAnalysis.values[i-1];
+							v=$.extend({}, v);
+							v.tweets_yesterday='';
 						}
+						
+						
+						if(chartCSVData.values[val.date]) {
+							chartCSVData.values[val.date].push(v.tweets_yesterday);
+						}else {
+							chartCSVData.values[val.date] = [v.tweets_yesterday];
+						}
+											
 					});
+
 					
 					
 					//reverse array order
@@ -289,14 +302,14 @@
 	
 	
 					var htmlNav="<li class='candidate-li' id='"+name+"'>"+
-						 		"<div class='candidate-content' style='background-color:"+data.backgroundColor+"'>"+
+						 		"<div class='candidate-content'>"+
 							 	 "<ul>"+
-								 	"<li class='candidate-image'><img src='"+(data.image.split('.')[0]+"_1x1.png")+"' /><div class='candidate-name'>"+data.name+"</div></li>"+
+								 	"<li class='candidate-image' style='background-color:"+data.backgroundColor+"'><img src='"+(data.image.split('.')[0]+"_1x1.png")+"' /><div class='candidate-name'>"+data.name+"</div></li>"+
 								 	"<li class='candidate-metadata'>"+
 										"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.tweets_today?data.tweets_today:"0")+"</a><label title='# of tweets mentioned about this candidate Today'>mentioned Today so far (since 12am)</label></div>"+
 										"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+value.tweets_yesterday+"</a><label title='# of tweets mentioned about this candidate Yesterday'>mentioned Yesterday </label><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /></div>"+
 										//"<div class='candidate-info'>"+"<a href='"+data.url_website+"' target='_blank'>Website</a><br><a href='"+data.url_twitter+"' target='_blank'>Twitter</a></div>"+
-										"<div class='candidate-top1Webpage' id='"+name+"'><h3>The Hottest News in the Last 24 Hours</h3><img src='images/loading.gif' id='loading' /></div>"+
+										"<div class='candidate-top1Webpage' id='"+name+"'><h3>The Hottest News in the Last 48 Hours: </h3><img src='images/loading.gif' id='loading' /></div>"+
 									"</li>"+
 								 "</ul>"+
 						 		"</div>"+
@@ -514,7 +527,7 @@
 	//show highlighted info at specific date which the number of tweets is over 100
 	function showChartHighlightInfo(name, data){
 		var html="<li><table class='table'><tr><td>Date</td><td>Webpage</td></tr>",
-			$target=$("#timeSeriesChart > ul"),
+			$target=$("#topEventDate > ul"),
 			topURL={},
 			values=data.timeSeriesChart.values;
 				
@@ -610,7 +623,7 @@
 				if(!json.error && json){
 					var msg="<div class='opengraph'><ul>"+
 							"<li><img src='"+((json.image)?json.image:"images/1391780792_Image_-_Google_Docs.png")+"' class='opengraph-image' /><label class='opengraph-title'>"+((json.title)?json.title:value)+"</label></li>"+
-							"<li class='opengraph-description'>"+((json.description)?linkify(json.description):"Unknown. Please view the Webpage.")+"</li>"+
+							"<li class='opengraph-description'>"+((json.description)?linkify(json.description):"Please view the Webpage.")+"</li>"+
 							"</ul></div>";
 					$this.html(msg).click(function(){
 							window.open(url);
@@ -891,7 +904,7 @@
 	 */
 	function showTop1Webpage(dates){
 		var url=app.testMode?"db/top1webpage.json":"ws/getTop1Webpage.py?candidates=Faulconer,Alvarez&dates="+dates.join(','),
-			$result=$("#timeSeriesChart #highlightDate"),
+			$result=$("#topEventDate #highlightDate"),
 			$loading=$result.find("#loading"),
 			html='',
 			topWebpage='';
