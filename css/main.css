@@ -78,6 +78,7 @@ li {display:block;}
 .menuGroup .subMenu li {padding:4px; padding-left:7px; color:#000000; font-size:12px;  }
 .menuGroup .subMenu li:hover { color:#FF4B00; cursor:pointer; }
 .subMenuClick {font-weight:600; background-color:#f1f1f1; }
+.menuGroup .subMenu li[value='candidate'] {display:none; }
 
 
 /**main content */
@@ -214,7 +215,7 @@ li {display:block;}
 /** top story*/
 #topStory #categories {width:96%; margin:0 auto; margin-top:30px; }
 #topStory .tabContent table {width:47%; padding:20px 1.5% 20px 1.5%; display:table-cell;  }
-
+#topStory .tabContent table tr:not(:first-child) {height:150px; }
 
 
 /**chart */
