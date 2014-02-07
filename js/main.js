@@ -293,10 +293,10 @@
 							 	 "<ul>"+
 								 	"<li class='candidate-image'><img src='"+(data.image.split('.')[0]+"_1x1.png")+"' /><div class='candidate-name'>"+data.name+"</div></li>"+
 								 	"<li class='candidate-metadata'>"+
-										"<div class='candidate-twitterInfo'><label title='# of tweets mentioned about this candidate Today'>Today's Mentions: </label><a href='#' class='showTable'>"+(data.tweets_today?data.tweets_today:"0")+"</a></div>"+
-										"<div class='candidate-twitterInfo'><label title='# of tweets mentioned about this candidate Yesterday'>Yesterday's Mentions: </label><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /><a href='#' class='showTable'>"+value.tweets_yesterday+"</a></div>"+
+										"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.tweets_today?data.tweets_today:"0")+"</a><label title='# of tweets mentioned about this candidate Today'>mentioned Today so far (since 12am)</label></div>"+
+										"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+value.tweets_yesterday+"</a><label title='# of tweets mentioned about this candidate Yesterday'>mentioned Yesterday </label><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /></div>"+
 										//"<div class='candidate-info'>"+"<a href='"+data.url_website+"' target='_blank'>Website</a><br><a href='"+data.url_twitter+"' target='_blank'>Twitter</a></div>"+
-										"<div class='candidate-top1Webpage' id='"+name+"'><h3>Today's Hottest Webpage: </h3><img src='images/loading.gif' id='loading' /></div>"+
+										"<div class='candidate-top1Webpage' id='"+name+"'><h3>The Hottest News in the Last 24 Hours</h3><img src='images/loading.gif' id='loading' /></div>"+
 									"</li>"+
 								 "</ul>"+
 						 		"</div>"+
@@ -389,13 +389,18 @@
 					$categories=$("#categories");
 					$tab=$categories.find(" > ul"),
 					isTabs=$categories.is("[ui-tabs]"),
-					lowerKey='';
+					lowerKey='',
+					orders=['Endorsement', 'Debate', 'Neighborhood', 'Business', 'Jobs_and_Labor'];
 				
 				//read json
 				$.getJSON("db/cyberdiscovery.json", function(json){
 					if(json){
 						$.each(json, function(name, data){
-							$.each(data.topStory.values, function(k,val){
+							var values=data.topStory.values;
+							
+							$.each(orders, function(i,k){
+								var val=values[k];
+								
 								lowerKey=k.toLowerCase();
 								
 								//if this is the first time to creat tabs
