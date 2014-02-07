@@ -587,14 +587,16 @@
 	function readOpenGraph(){
 		$(".readOpenGraph").each(function(){
 			var $this=$(this),
-				url=$this.find("a").attr("href");
+				$a=$this.find("a"),
+				url=$a.attr("href"),
+				value=$a.html();
 			
 			//read opengraph
 			$.getJSON("ws/getOpengraph.py?url="+encodeURIComponent(url), function(json){
 				if(!json.error && json){
 					var msg="<div class='opengraph'><ul>"+
-							"<li><img src='"+json.image+"' class='opengraph-image' /><label class='opengraph-title'>"+json.title+"</label></li>"+
-							"<li class='opengraph-description'>"+((json.description)?linkify(json.description):"")+"</li>"+
+							"<li><img src='"+((json.image)?json.image:"images/1391780792_Image_-_Google_Docs.png")+"' class='opengraph-image' /><label class='opengraph-title'>"+((json.title)?json.title:value)+"</label></li>"+
+							"<li class='opengraph-description'>"+((json.description)?linkify(json.description):"Unknown. Please check in the Webpage.")+"</li>"+
 							"</ul></div>";
 					$this.html(msg).click(function(){
 							window.open(url);
