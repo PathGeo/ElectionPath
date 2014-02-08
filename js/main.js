@@ -1229,10 +1229,12 @@
 	
 	//convert to pacific time
 	function pacificTime(date){
-		date=new Date(date);
+		var dates=date.split('-');
+		date=new Date(dates[0], dates[1]-1, dates[2]);
+		
 		var dateUTC=date.getTime()+(date.getTimezoneOffset() * 60000);
 		var datePacific=new Date(dateUTC-(3600000*8));
-
+	
 		return datePacific.getFullYear()+"-"+(datePacific.getMonth()+1)+"-"+datePacific.getDate();
 	}
 	
@@ -1249,9 +1251,11 @@
 		//label search date
 		$("#chart_queryDate p").html(app.dateFrom + ' ～ ' +app.dateTo)
 		
+		
 		//change to pacific time
 		fromDate=pacificTime(fromDate);
 		toDate=pacificTime(toDate);
+	
 		
 		
 		//request web service
