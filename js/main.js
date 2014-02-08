@@ -587,9 +587,7 @@
 			
 			$("#navigator").html(html).append("<div id='powerby'>Powered By<p></p><a href='https://www.pathgeo.com' target='_blank'><img src='images/PathGeo-color.png' id='logo_pathgeo' /></a></div>");
 			
-			console.log($(window).height())
-			console.log($("#header").height())
-			console.log($(window).height()-$("#header").height())
+			
 			$("#powerby").css('top', $(window).height()-120);
 			
 			//click event on each li in subMenu
@@ -631,26 +629,36 @@
 			$.getJSON("ws/getOpengraph.py?url="+encodeURIComponent(url), function(json){
 				if(!json.error && json){
 					var msg="<div class='opengraph'><ul>"+
-							"<li><img src='"+((json.image)?json.image:"images/1391780792_Image_-_Google_Docs.png")+"' class='opengraph-image' /><label class='opengraph-title'>"+((json.title)?json.title:value)+"</label></li>"+
+							"<li><img src='"+((json.image)?json.image:"images/main-img-services.png")+"' class='opengraph-image' /><label class='opengraph-title'>"+((json.title)?json.title:value)+"</label></li>"+
 							"<li class='opengraph-description'>"+((json.description)?linkify(json.description):"Please view the Webpage.")+"</li>"+
 							"</ul></div>";
 					$this.html(msg).click(function(){
 							window.open(url);
 					}).find(".opengraph-description").html(function(index, text) {
 							return text.substr(0, 200) + "....<a target='_blank' href='"+url+"'>show more</a>";
-					});
+					})
 				}
 				
 				$this.find('img.loading').hide();
+
+				shrinkTitle($this);
 				
 			}).fail(function(){
 				$this.find('img.loading').hide();
+
 			});
 			
-			
-		})
+		});
+		
+		
+		function shrinkTitle($obj){
+			// $obj.find(".opengraph-title").html(function(index, text) {
+				// console.log(text);
+				// return text.substr(0, 200) + "....";
+			// })
+		}
+		
 	}
-	
 	
 	
 	
