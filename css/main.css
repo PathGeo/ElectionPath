@@ -85,6 +85,10 @@ li {display:block;}
 #navigator .menuGroup:nth-child(3) > p {display:none; }
 
 
+/**power by*/
+#navigator #powerby { position:absolute; font-size:14px; font-weight:600; width:100%;  }
+#navigator #logo_pathgeo {width:85%;}
+
 /**main content */
 #mainContent {width:85.8%; padding:5px 0% 0px 0%; float:right; border-right:1px solid #eeeeee;}
 #mainContent > div {width:100%; position:relative}
@@ -148,7 +152,7 @@ li {display:block;}
 #title {padding:20px 3% 20px 3%; width:94%; background-color:#f1f1f1; font-size:30px; z-index:100; opacity:1; }
 #title label {color:#555555; font-size:17px; font-weight:300;   }
 #title #logo_electionpath {position:absolute; right:0px; top:4px; height:105px; z-index:10; }
-#home #logo_pathgeo {height:25px; position:relative; top:6px;}
+
 
 
 /** candidate name */

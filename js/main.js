@@ -55,6 +55,7 @@
 		$("#mainContent").width($("html").width()-$("#navigator").outerWidth()-3);
 		$(window).resize(function(){
 			$("#mainContent").width($("html").width()-$("#navigator").outerWidth()-3);
+			$("#powerby").css('top', $(window).height()-120);
 		})
 		
 		//init navigator
@@ -584,8 +585,12 @@
 					  "</div>";
 			});
 			
-			$("#navigator").html(html);
+			$("#navigator").html(html).append("<div id='powerby'>Powered By<p></p><a href='https://www.pathgeo.com' target='_blank'><img src='images/PathGeo-color.png' id='logo_pathgeo' /></a></div>");
 			
+			console.log($(window).height())
+			console.log($("#header").height())
+			console.log($(window).height()-$("#header").height())
+			$("#powerby").css('top', $(window).height()-120);
 			
 			//click event on each li in subMenu
 			$(".subMenu li:not([data-scroll-nav])").click(function(){
