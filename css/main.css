@@ -19,6 +19,7 @@ li {display:block;}
 /** header */
 #header { background-color:#ffffff;  padding:0px; position:fixed; height:40px;top:0px;left:0px; width:100%;  z-index:2000; box-shadow: 2px 4px 10px #cccccc;}
 #header #headerContent {position:relative;}
+.twitter-share-button {width:85px !important; }
 
 /** logo */
 #logo {position:absolute; top:2px; left:5px;  z-index:100; width:14%; }
@@ -71,7 +72,7 @@ li {display:block;}
 #main {height:auto; }
 
 /**accordion Menu*/
-#navigator {width:13%; margin-top:45px; padding:5px 0px 5px 1%; position:fixed; border-right:1px solid #eeeeee; background-color:#ffffff; border-left:1px solid #eeeeee; }
+#navigator {width:13%; height:100%; margin-top:45px; padding:5px 0px 5px 1%; position:fixed; border-right:1px solid #eeeeee; background-color:#ffffff; border-left:1px solid #eeeeee; }
 .menuGroup {padding-bottom:20px; border-bottom:1px solid #f1f1f1; }
 .menuGroup h4 {margin-bottom:5px; }
 .menuGroup p {color:#999999; font-size:12px;}
@@ -80,12 +81,15 @@ li {display:block;}
 .subMenuClick {font-weight:600; background-color:#f1f1f1; }
 .menuGroup .subMenu li[value='candidate'] {display:none; }
 
+#navigator .menuGroup:nth-child(2) {display:none; }
+#navigator .menuGroup:nth-child(3) > p {display:none; }
+
 
 /**main content */
 #mainContent {width:85.8%; padding:5px 0% 0px 0%; float:right; border-right:1px solid #eeeeee;}
 #mainContent > div {width:100%; position:relative}
 
-.mainBlock {padding:45px 0px 50px 0px; border-bottom:0px solid #f1f1f1; min-height:550px;  }
+.mainBlock {padding:45px 0px 30px 0px; border-bottom:0px solid #f1f1f1; min-height:550px;  }
 .mainBlock > ul {width:96%; overflow:hidden; margin:0 auto; margin-top:10px; }
 .mainBlock > ul > li {float:left; width:49.63%; background-color:#ffffff; position:relative;display:block;  }
 .mainBlock > ul > li:nth-child(1) {border-right:1px solid #f1f1f1;}
@@ -143,12 +147,12 @@ li {display:block;}
 /** title */
 #title {padding:20px 3% 20px 3%; width:94%; background-color:#f1f1f1; font-size:30px; z-index:100; opacity:1; }
 #title label {color:#555555; font-size:17px; font-weight:300;   }
-#title img {position:absolute; right:0px; top:4px; height:105px; z-index:10; }
-
+#title #logo_electionpath {position:absolute; right:0px; top:4px; height:105px; z-index:10; }
+#home #logo_pathgeo {height:25px; position:relative; top:6px;}
 
 
 /** candidate name */
-.candidate-name {width:100%; color:#ffffff; font-weight:bold; font-size:18px;  padding:0px; position:absolute; top:30px; left:120px;}
+.candidate-name {width:100%; color:#ffffff; font-weight:bold; font-size:18px;  padding:0px; position:absolute; top:25px; left:120px;}
 .candidate-content {width:100%; height:100%; padding-bottom:10px; border-bottom:0px solid #f1f1f1;  }
 .candidate-content >ul > li {height:100%; }
 
@@ -166,7 +170,8 @@ li {display:block;}
 .candidate-twitterInfo {font-weight:bold; color:#555555; height:70%; width:100%; position:relative; padding:5px 0px 5px 0px; }
 .candidate-twitterInfo > a {font-size:40px; width:40px;  max-width:50%; text-align:left; color:#369BED;   }
 .candidate-twitterInfo label {color:#555555; font-size:16px; font-weight:500; max-width:40%; margin-left:20px; }
-.candidate-info {font-size:12px; color:#777777; font-weight:500; display:none;  }
+.candidate-info {font-size:13px; color:#ffffff; font-weight:normal; position:absolute; top:65px; left:122px;  }
+.candidate-info a {color:#ffffff; margin-right:33px; }
 
 
 /** candidate top 1 webpage */
