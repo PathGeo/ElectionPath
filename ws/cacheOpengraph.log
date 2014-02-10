@@ -1,0 +1,1815 @@
+2014-02-09 10:02:34,078 INFO ------------------------------------------------------------
+2014-02-09 10:02:34,078 INFO START CACHING OPENGRAPH AT Sun Feb 09 10:02:33 +0000 2014
+2014-02-09 10:02:34,078 INFO ------------------------------------------------------------
+2014-02-09 10:02:35,832 ERROR cannot concatenate 'str' and 'long' objects
+2014-02-09 10:02:35,848 ERROR None
+2014-02-09 10:03:17,573 INFO ------------------------------------------------------------
+2014-02-09 10:03:17,573 INFO START CACHING OPENGRAPH AT Sun Feb 09 10:03:17 +0000 2014
+2014-02-09 10:03:17,573 INFO ------------------------------------------------------------
+2014-02-09 10:03:18,305 ERROR 'long_urls'
+2014-02-09 10:03:18,331 ERROR None
+2014-02-09 10:04:06,612 INFO ------------------------------------------------------------
+2014-02-09 10:04:06,612 INFO START CACHING OPENGRAPH AT Sun Feb 09 10:04:06 +0000 2014
+2014-02-09 10:04:06,614 INFO ------------------------------------------------------------
+2014-02-09 10:04:08,344 INFO Success: 403054878068445184, http://www.10news.com/news/special-election-2013-san-diego-mayor-race-results-11192013
+2014-02-09 10:11:28,941 INFO ------------------------------------------------------------
+2014-02-09 10:12:06,348 INFO ------------------------------------------------------------
+2014-02-09 10:12:06,348 INFO START CACHING OPENGRAPH AT 1391969526
+2014-02-09 10:12:06,348 INFO ------------------------------------------------------------
+2014-02-09 10:12:07,825 INFO Success: 403054878320123904, http://www.10news.com/news/special-election-2013-san-diego-mayor-race-results-11192013?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:12:08,150 INFO ------------------------------------------------------------
+2014-02-09 10:12:08,150 INFO FINISH CACHING OPENGRAPH. DURATION=0 MINUTES
+2014-02-09 10:12:08,150 INFO ------------------------------------------------------------
+2014-02-09 10:14:43,171 INFO ------------------------------------------------------------
+2014-02-09 10:14:43,171 INFO START CACHING OPENGRAPH AT Sun Feb 09 10:14:43 +0000 2014
+2014-02-09 10:14:43,171 INFO ------------------------------------------------------------
+2014-02-09 10:14:43,365 INFO Success: 403024482614276096, http://q.gs/54vyZ
+2014-02-09 10:14:43,457 INFO ------------------------------------------------------------
+2014-02-09 10:14:43,457 INFO FINISH CACHING OPENGRAPH. DURATION=0 MINUTES
+2014-02-09 10:14:43,457 INFO ------------------------------------------------------------
+2014-02-09 10:15:26,552 INFO ------------------------------------------------------------
+2014-02-09 10:15:26,552 INFO START CACHING OPENGRAPH AT Sun Feb 09 10:15:26 +0000 2014
+2014-02-09 10:15:26,552 INFO ------------------------------------------------------------
+2014-02-09 10:15:28,112 INFO Success: 403018300709302272, http://www.utsandiego.com/news/2013/nov/19/mayor-special-election-vote-results/
+2014-02-09 10:15:28,325 INFO Success: 403011600275492864, http://www.utsandiego.com/news/2013/nov/19/mayor-special-election-vote-results/
+2014-02-09 10:15:29,174 INFO Success: 402949706927439872, http://sandiegofreepress.org/2013/11/closing-the-deal-for-david-alvarez-your-vote-will-make-a-difference/
+2014-02-09 10:15:30,671 INFO Success: 402960221909557248, https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fjames.s.wyatt.5%2Fposts%2F10201697913106315
+2014-02-09 10:15:31,914 INFO Success: 402936166854696960, https://www.facebook.com/photo.php?fbid=10202524968755406&l=c3363b3485
+2014-02-09 10:21:43,788 INFO ------------------------------------------------------------
+2014-02-09 10:21:43,788 INFO START CACHING OPENGRAPH AT Sun Feb 09 10:21:43 +0000 2014
+2014-02-09 10:21:43,789 INFO ------------------------------------------------------------
+2014-02-09 10:22:01,875 ERROR [Errno 10054] An existing connection was forcibly closed by the remote host
+2014-02-09 10:22:02,114 ERROR None
+2014-02-09 10:22:12,825 ERROR [Errno 10054] An existing connection was forcibly closed by the remote host
+2014-02-09 10:22:12,969 ERROR None
+2014-02-09 10:22:13,634 INFO Success: 402887914532524032, http://youtu.be/6wtw5LjZTlw?a
+2014-02-09 10:22:13,951 INFO Success: 402887961793945600, http://youtu.be/6wtw5LjZTlw?a
+2014-02-09 10:22:14,348 INFO Success: 402891562449108992, http://twitcam.livestream.com/fmt2z
+2014-02-09 10:22:15,039 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:22:15,319 ERROR None
+2014-02-09 10:22:16,990 INFO Success: 402815348053143552, http://fb.me/6jpH6r4Ad
+2014-02-09 10:22:17,388 INFO Success: 402887913525878784, http://youtu.be/CDpwIBS6MNA?a
+2014-02-09 10:22:17,694 INFO Success: 402887868764262400, http://youtu.be/CDpwIBS6MNA?a
+2014-02-09 10:25:00,267 INFO ------------------------------------------------------------
+2014-02-09 10:25:00,267 INFO START CACHING OPENGRAPH AT Sun Feb 09 10:25:00 +0000 2014
+2014-02-09 10:25:00,267 INFO ------------------------------------------------------------
+2014-02-09 10:25:02,747 INFO Success: 403065421089087488, http://www.nbcsandiego.com/news/local/San-Diego-Election-Results-232395621.html
+2014-02-09 10:25:05,697 INFO Success: 403048548519788544, http://www.10news.com/video/live_video
+2014-02-09 10:25:05,992 ERROR HTTP Error 404: Not Found
+2014-02-09 10:25:06,065 ERROR None
+2014-02-09 10:25:10,431 INFO Success: 403067499417042944, http://voiceofsandiego.org/2013/11/19/its-faulconer-and-alvarez/
+2014-02-09 10:25:12,914 INFO Success: 403056994937876481, http://www.sandiego6.com/news/special-election/?adminlkjjkljlkjkl;897798
+2014-02-09 10:25:13,555 ERROR HTTP Error 404: Not Found
+2014-02-09 10:25:13,653 ERROR None
+2014-02-09 10:25:16,289 INFO Success: 403055654501249024, http://www.kpbs.org/news/2013/nov/19/san-diego-mayor-election-results-2013/?utm_source=facebook.com&utm_medium=social-media&utm_campaign=kpbs-facebook
+2014-02-09 10:25:17,691 INFO Success: 403077410406412288, http://www.utsandiego.com/news/2013/nov/19/mayor-special-election-vote-results/
+2014-02-09 10:25:19,078 INFO Success: 403072830457147392, http://www.utsandiego.com/news/2013/nov/19/alvarez-election-faulconer/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:25:22,987 INFO Success: 403072780024823808, http://voiceofsandiego.org/2013/11/19/its-faulconer-and-alvarez/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:25:24,507 INFO Success: 403072285986140160, http://www.utsandiego.com/news/2013/nov/19/alvarez-election-faulconer/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:25:28,808 INFO Success: 403072595488038912, http://voiceofsandiego.org/2013/11/19/its-faulconer-and-alvarez/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:25:30,661 INFO Success: 403072609522155520, http://www.kpbs.org/news/2013/nov/19/san-diego-mayor-election-results-2013/
+2014-02-09 10:25:31,572 INFO Success: 403078665619386368, http://www.kpbs.org/news/2013/nov/19/san-diego-mayor-election-results-2013/
+2014-02-09 10:25:32,127 INFO Success: 403075629891223552, http://instagram.com/p/g7fNw9OiWO/
+2014-02-09 10:25:34,269 INFO Success: 403069573408522240, http://www.kpbs.org/news/2013/nov/19/san-diego-mayor-election-results-2013/?utm_source=t.co&utm_medium=social-media&utm_campaign=kpbsnews-twitter
+2014-02-09 10:25:35,355 INFO Success: 403082529529266177, http://www.pomeradonews.com/2013/11/20/faulconer-alvarez-in-san-diego-mayoral-runoff-election/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:25:35,539 ERROR 'NoneType' object has no attribute 'head'
+2014-02-09 10:25:35,605 ERROR None
+2014-02-09 10:25:35,831 INFO Success: 403090487038316544, http://q.gs/54ylt
+2014-02-09 10:25:36,026 INFO Success: 403090485679378432, http://q.gs/54ylq
+2014-02-09 10:25:38,335 INFO Success: 403082651805835264, http://www.utsandiego.com/news/2013/nov/19/alvarez-election-faulconer/
+2014-02-09 10:25:39,710 INFO Success: 403075151480500224, https://www.facebook.com/photo.php?fbid=684379678246532&l=3c27f63af4
+2014-02-09 10:25:40,164 INFO Success: 403077273328558080, https://www.facebook.com/photo.php?fbid=707856239225449&l=c2528422c6
+2014-02-09 10:25:41,690 INFO Success: 403046837025636352, http://www.10news.com/news/special-election-2013-san-diego-mayor-race-results-11192013
+2014-02-09 10:25:42,941 INFO Success: 403046837025636352, http://ogoing.com
+2014-02-09 10:25:43,467 INFO Success: 402915537291706368, http://twitter.com/nsm
+2014-02-09 10:25:43,651 INFO Success: 403076049434456064, http://www.utsandiego.com/news/2013/nov/19/alvarez-election-faulconer/
+2014-02-09 10:25:43,822 INFO Success: 403046932169248768, http://www.nbcsandiego.com/video/#!/on-air/as-seen-on/Web-Extra--Election-Night-Optimism-at-Fletcher-Camp/232612061
+2014-02-09 10:25:44,653 INFO Success: 403051422196838400, http://www.10news.com/video/live_video
+2014-02-09 10:25:44,788 INFO Success: 403046414973804544, http://www.nbcsandiego.com/video/#!/on-air/as-seen-on/Web-Extra--Election-Night-Optimism-at-Fletcher-Camp/232612061
+2014-02-09 10:25:45,006 INFO Success: 403046154210131968, http://www.nbcsandiego.com/video/#!/on-air/as-seen-on/Web-Extra--Election-Night-Optimism-at-Fletcher-Camp/232612061
+2014-02-09 10:25:45,165 INFO Success: 403018408809082882, http://q.gs/54vl8
+2014-02-09 10:25:47,430 INFO Success: 403031855382802432, http://www.vidalatinasd.com/news/2013/nov/19/mayor-special-election-vote-results/
+2014-02-09 10:25:47,569 INFO Success: 403007630429667328, http://ow.ly/i/3Mf64
+2014-02-09 10:25:47,802 INFO Success: 402979693499908096, https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Falexandra.germon%2Fposts%2F10151966162193592
+2014-02-09 10:25:48,338 INFO Success: 402940562195894272, http://instagram.com/p/g6h95WEBmT/
+2014-02-09 10:25:48,973 INFO Success: 402920340453478400, http://www.ebay.com/itm/ws/eBayISAPI.dll?ViewItem&item=221320526612&item=221320526612
+2014-02-09 10:25:49,447 INFO Success: 402882185348530177, http://ranchobernardo-4sranch.patch.com/groups/elections/p/nathan-fletcher-votes-in-university-city-video-ranchobernardo-4sranch
+2014-02-09 10:25:55,101 INFO Success: 402821577068535808, http://www.sandiegoreader.com/news/2013/oct/29/ticker-ucsd-conceals-fletchers-graduating-late/?utm_source=buffer&utm_campaign=Buffer&utm_content=buffer7eed7&utm_medium=twitter
+2014-02-09 10:25:57,316 INFO Success: 402823270463856640, http://www.sandiegoreader.com/news/2013/oct/29/ticker-ucsd-conceals-fletchers-graduating-late/?utm_source=buffer&utm_campaign=Buffer&utm_content=buffer7eed7&utm_medium=twitter
+2014-02-09 10:25:58,114 INFO Success: 402808980772110336, http://www.awsm.com/
+2014-02-09 10:25:58,546 INFO Success: 402808980772110336, http://www.awsm.com/15832/greyson-fletcher-skating-fdr-best-flow-ever/
+2014-02-09 10:25:59,193 INFO Success: 402823133901516802, http://www.awsm.com/
+2014-02-09 10:25:59,591 INFO Success: 402823133901516802, http://www.awsm.com/15832/greyson-fletcher-skating-fdr-best-flow-ever/
+2014-02-09 10:26:00,642 INFO Success: 402844693488091136, http://sdrostra.com/?p=36550
+2014-02-09 10:26:01,569 INFO Success: 402824578860580864, http://www.sdgln.com/news/2013/10/07/will-the-real-nathan-fletcher-please-stand-up
+2014-02-09 10:26:03,990 INFO Success: 402800079745986560, http://sandiegofreepress.org/2013/11/nathan-fletcher-the-minimum-wage-must-be-raised/#.UopsIYyhAoI.twitter
+2014-02-09 10:26:07,717 INFO Success: 402835998742417408, http://sandiegofreepress.org/2013/11/nathan-fletcher-the-minimum-wage-must-be-raised/?utm_content=buffer25f21&utm_source=buffer&utm_medium=twitter&utm_campaign=Buffer
+2014-02-09 10:26:07,878 ERROR 'NoneType' object has no attribute 'head'
+2014-02-09 10:26:07,915 ERROR None
+2014-02-09 10:26:11,828 INFO Success: 402949758148292608, http://voiceofsandiego.org/2013/11/19/everyone-should-be-able-to-change-their-minds-voices-of-the-voters-in-northern-san-diego/
+2014-02-09 10:26:12,533 INFO Success: 402987211232399360, https://foursquare.com/jrobatlaskw/checkin/528c1eb411d2f510289c3933?s=B9fChxeGIu0HRuF3krFZqKuGLWg&ref=tw
+2014-02-09 10:26:16,493 INFO Success: 403038324849274880, http://voiceofsandiego.org/2013/11/19/first-results-faulconer-on-top-fletcher-in-second/
+2014-02-09 10:26:20,019 INFO Success: 403036709102682112, http://voiceofsandiego.org/2013/11/19/first-results-faulconer-on-top-fletcher-in-second/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:26:23,601 INFO Success: 403036297981202432, http://voiceofsandiego.org/2013/11/19/first-results-faulconer-on-top-fletcher-in-second/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:26:27,095 INFO Success: 403035191381225472, http://voiceofsandiego.org/2013/11/19/first-results-faulconer-on-top-fletcher-in-second/
+2014-02-09 10:26:27,437 INFO Success: 403029137293844480, http://instagram.com/p/g7KMrGyOvK/
+2014-02-09 10:26:31,365 INFO Success: 403068333819322368, http://voiceofsandiego.org/2013/11/19/nathan-fletcher-lost-the-election-when-he-lost-mickey-kasparian/
+2014-02-09 10:26:32,244 INFO Success: 403066853578526721, http://www.utsandiego.com/news/2012/may/30/mayoral-derby-gets-compromised-closes/
+2014-02-09 10:26:36,019 INFO Success: 403066051958554624, http://voiceofsandiego.org/2013/11/19/nathan-fletcher-lost-the-election-when-he-lost-mickey-kasparian/
+2014-02-09 10:26:40,081 INFO Success: 403064638801063937, http://voiceofsandiego.org/2013/11/19/nathan-fletcher-lost-the-election-when-he-lost-mickey-kasparian/
+2014-02-09 10:26:43,782 INFO Success: 403064406562447360, http://voiceofsandiego.org/2013/11/19/nathan-fletcher-lost-the-election-when-he-lost-mickey-kasparian/
+2014-02-09 10:26:47,881 INFO Success: 403064378200571904, http://voiceofsandiego.org/2013/11/19/nathan-fletcher-lost-the-election-when-he-lost-mickey-kasparian/
+2014-02-09 10:26:51,961 INFO Success: 403064337163489280, http://voiceofsandiego.org/2013/11/19/nathan-fletcher-lost-the-election-when-he-lost-mickey-kasparian/
+2014-02-09 10:26:55,562 INFO Success: 403081467443425280, http://voiceofsandiego.org/2013/11/19/nathan-fletcher-lost-the-election-when-he-lost-mickey-kasparian/
+2014-02-09 10:26:59,358 INFO Success: 403085747445448704, http://voiceofsandiego.org/2013/11/19/nathan-fletcher-lost-the-election-when-he-lost-mickey-kasparian/
+2014-02-09 10:26:59,901 INFO Success: 403092214592454656, http://www.topix.com/san-diego/2013/11/faulconer-heads-to-runoff-in-san-diego-mayor-race
+2014-02-09 10:27:00,881 INFO Success: 403077581152735232, http://inewsource.org/faulconer-advances-to-san-diego-mayoral-runoff/
+2014-02-09 10:27:01,108 ERROR HTTP Error 503: Service Unavailable
+2014-02-09 10:27:01,200 ERROR None
+2014-02-09 10:27:01,681 ERROR HTTP Error 404: NOT FOUND
+2014-02-09 10:27:01,746 ERROR None
+2014-02-09 10:27:01,911 INFO Success: 403040723408130049, http://www.10news.com/video/live_video
+2014-02-09 10:27:02,161 INFO Success: 403041539032485888, http://www.utsandiego.com/news/local-topics/politics/special-mayor-election/nov-19/
+2014-02-09 10:27:02,559 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:27:02,615 ERROR None
+2014-02-09 10:27:02,970 INFO Success: 403012782708109312, http://www.10news.com/news/special-election-2013-san-diego-mayor-race-results-11192013
+2014-02-09 10:27:03,288 INFO Success: 403010784508129280, https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2FRReyes2777%2Fposts%2F765822103431693
+2014-02-09 10:27:24,562 ERROR <urlopen error [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+2014-02-09 10:27:24,645 ERROR None
+2014-02-09 10:27:24,914 INFO Success: 403011024154288128, https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2FRReyes2777%2Fposts%2F765822390098331
+2014-02-09 10:27:27,043 INFO Success: 403011260087676928, http://www.sandiego6.com/news/special-election/?adminlkjjkljlkjkl;897798
+2014-02-09 10:27:27,233 INFO Success: 403015343670439936, http://www.10news.com/video/live_video
+2014-02-09 10:27:27,539 INFO Success: 403011879750336512, http://instagram.com/p/g7CYr0H3mv/
+2014-02-09 10:27:32,625 INFO Success: 403011561926582272, http://voiceofsandiego.org/2013/11/19/first-results-faulconer-on-top-fletcher-in-second/?utm_source=twitterfeed&utm_medium=twitter&utm_campaign=Feed%3A+voice-of-san-diego-all-articles+%28All+articles+voiceofsandiego.org+--+full+feed%29
+2014-02-09 10:27:34,934 INFO Success: 403012353869881344, http://www.sandiego6.com/news/special-election/?adminlkjjkljlkjkl;897798
+2014-02-09 10:27:35,427 INFO Success: 403034496347676672, http://www.vidalatinasd.com/news/2013/nov/19/faulconer-fletcherl-a-la-cabeza-sd/
+2014-02-09 10:27:39,286 INFO Success: 402813622021152768, http://voiceofsandiego.org/2013/10/16/kevin-faulconers-bipartisan-bona-fides-have-helped-ocean-beach/
+2014-02-09 10:27:42,984 INFO Success: 402804708382756864, http://voiceofsandiego.org/2013/10/16/kevin-faulconers-bipartisan-bona-fides-have-helped-ocean-beach/
+2014-02-09 10:27:44,348 INFO Success: 402799965165981696, http://bowlersdesk.com/2013/11/19/am-briefing-from-bowlersdesk-com-for-november-19-2013/
+2014-02-09 10:27:45,519 INFO Success: 402965209599311873, http://inewsource.org/the-san-diego-race-for-mayor/
+2014-02-09 10:27:46,138 INFO Success: 403012108364677120, http://www.kpbs.org/news/2013/nov/19/san-diego-mayor-election-results-2013/?utm_source=facebook.com&utm_medium=social-media&utm_campaign=kpbs-facebook
+2014-02-09 10:27:50,529 INFO Success: 403037903908904961, http://voiceofsandiego.org/2013/11/19/voting-for-who-they-know-voices-of-the-voters-in-the-beach-communities/
+2014-02-09 10:27:50,736 INFO Success: 403033444780761090, http://q.gs/54wLP
+2014-02-09 10:27:50,996 INFO Success: 403027582016188416, http://q.gs/54w6I
+2014-02-09 10:27:51,151 INFO Success: 403038472773984256, http://q.gs/54wZK
+2014-02-09 10:27:51,392 ERROR HTTP Error 404: NOT FOUND
+2014-02-09 10:27:51,461 ERROR None
+2014-02-09 10:27:51,635 ERROR HTTP Error 404: Not Found
+2014-02-09 10:27:51,749 ERROR None
+2014-02-09 10:27:52,345 INFO Success: 403059768438583296, http://abcnews.go.com/Politics/wireStory/scandal-weary-san-diego-elect-mayor-20945777
+2014-02-09 10:27:52,604 ERROR HTTP Error 404: Not Found
+2014-02-09 10:27:52,668 ERROR None
+2014-02-09 10:27:52,842 ERROR HTTP Error 404: Not Found
+2014-02-09 10:27:52,954 ERROR None
+2014-02-09 10:27:54,181 INFO Success: 403381101483143168, http://www.utsandiego.com/news/2013/oct/01/mike-aguirre-labor-bona-fides/
+2014-02-09 10:27:57,661 INFO Success: 403101094391189504, http://voiceofsandiego.org/2013/11/19/its-faulconer-and-alvarez/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:27:57,913 INFO Success: 403101542196080641, http://q.gs/54zKP
+2014-02-09 10:27:58,140 INFO Success: 403105571802329088, http://q.gs/54zVq
+2014-02-09 10:27:58,459 INFO Success: 403110401807613952, http://www.10news.com/news/special-election-2013-san-diego-mayor-race-results-11192013
+2014-02-09 10:27:58,782 INFO Success: 403124409906368512, http://www.10news.com/news/special-election-2013-san-diego-mayor-race-results-11192013
+2014-02-09 10:28:02,269 INFO Success: 403148365296586752, http://voiceofsandiego.org/2013/11/19/its-faulconer-and-alvarez/?utm_source=dlvr.it&utm_medium=twitter&utm_campaign=Feed%3A+voice-of-san-diego-all-articles+%28All+articles+voiceofsandiego.org+--+full+feed%29
+2014-02-09 10:28:03,786 INFO Success: 403153522708844544, http://www.utsandiego.com/news/2013/nov/19/democrats-blessing-victory-disguised/
+2014-02-09 10:28:05,701 INFO Success: 403157305966882817, http://www.kpbs.org/news/2013/nov/19/san-diego-mayor-election-results-2013/?utm_source=t.co&utm_medium=social-media&utm_campaign=kpbsnews-twitter
+2014-02-09 10:28:09,492 INFO Success: 403164771517599744, http://voiceofsandiego.org/2013/11/19/its-faulconer-and-alvarez/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:28:09,765 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:28:09,836 ERROR None
+2014-02-09 10:28:09,967 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:28:10,032 ERROR None
+2014-02-09 10:28:11,078 INFO Success: 403195361595912193, http://fox5sandiego.com/2013/11/20/alvarez-appears-headed-to-runoff-with-faulconer/
+2014-02-09 10:28:12,035 INFO Success: 403196050271268865, http://fox5sandiego.com/2013/11/20/alvarez-appears-headed-to-runoff-with-faulconer/?utm_source=dlvr.it&utm_medium=twitter
+2014-02-09 10:28:12,188 ERROR 'NoneType' object has no attribute 'head'
+2014-02-09 10:28:12,230 ERROR None
+2014-02-09 10:28:12,397 INFO Success: 403206092206788608, http://q.gs/555G5
+2014-02-09 10:28:12,513 ERROR HTTP Error 404: Not Found
+2014-02-09 10:28:12,628 ERROR None
+2014-02-09 10:28:13,040 INFO Success: 403238883317780480, https://www.facebook.com/photo.php?fbid=613402058727146&l=74a50a45af
+2014-02-09 10:28:13,482 INFO Success: 403256442452705280, http://www.nbcsandiego.com/news/politics/Nathan-Fletcher-San-Diego-Mayor-Race-Ballot-Count-David-Alvarez-232700281.html
+2014-02-09 10:28:15,881 INFO Success: 403256881244016640, http://www.kpbs.org/news/2013/oct/30/boy-barrio-david-alvarez-and-race-be-mayor/
+2014-02-09 10:28:16,707 INFO Success: 403261852378882048, http://www.utsandiego.com/news/2013/nov/20/fletcher-election-statement-mayoral/
+2014-02-09 10:28:16,970 INFO Success: 403267793522810880, http://www.utsandiego.com/news/2013/nov/19/mayor-special-election-vote-results/
+2014-02-09 10:28:17,303 INFO Success: 403273237825478656, https://www.facebook.com/bambooloungesd/posts/10151537009677824
+2014-02-09 10:28:17,494 INFO Success: 403273801380544512, http://q.gs/559XQ
+2014-02-09 10:28:17,709 INFO Success: 403314569348521984, http://www.10news.com/news/special-election-2013-san-diego-mayor-race-results-11192013
+2014-02-09 10:28:22,615 INFO Success: 403314574289408000, http://abcnews.go.com/US/wireStory/faulconer-cruises-runoff-san-diego-mayor-20946803
+2014-02-09 10:28:23,200 INFO Success: 403317577272655873, http://twitdoc.com/view.asp?id=115633&sid=2H81&ext=PDF&lcl=Alvarez-Votes-v2.pdf&usr=VinceVasquezSD&doc=185886589&key=key-6ztgy0wl9pm6lv10cg9
+2014-02-09 10:28:23,230 ERROR HTTP Error 404: Not Found
+2014-02-09 10:28:23,302 ERROR None
+2014-02-09 10:28:29,023 INFO Success: 403326995783622656, http://sdnews.com/bookmark/24091799
+2014-02-09 10:28:29,220 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:28:29,311 ERROR None
+2014-02-09 10:28:29,482 INFO Success: 403351955654721537, http://q.gs/55DeX
+2014-02-09 10:28:29,698 INFO Success: 403368066135760896, http://q.gs/55EKO
+2014-02-09 10:28:29,908 INFO Success: 403380166878982144, http://q.gs/55ESW
+2014-02-09 10:28:30,073 INFO Success: 403380168346980352, http://q.gs/55Eqp
+2014-02-09 10:28:30,263 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:28:30,328 ERROR None
+2014-02-09 10:28:30,575 INFO Success: 403165453754703872, http://q.gs/552fe
+2014-02-09 10:28:34,107 INFO Success: 403169396337565696, http://voiceofsandiego.org/2013/11/19/nathan-fletcher-lost-the-election-when-he-lost-mickey-kasparian/
+2014-02-09 10:28:34,822 INFO Success: 403190693549457408, http://sdrostra.com/?p=36635
+2014-02-09 10:28:35,904 INFO Success: 403207070310092800, http://inewsource.org/fletcher-does-not-concede-mayors-race-with-34000-ballots-to-be-counted/
+2014-02-09 10:28:36,098 INFO Success: 403222681970950144, http://q.gs/556NX
+2014-02-09 10:28:39,696 INFO Success: 403224039109312512, http://voiceofsandiego.org/2013/11/19/nathan-fletcher-lost-the-election-when-he-lost-mickey-kasparian/
+2014-02-09 10:28:40,586 INFO Success: 403227532134072320, http://www.sandiegometro.com/2013/11/election-report-why-fletcher-lost/
+2014-02-09 10:28:41,539 INFO Success: 403228964669247489, http://inewsource.org/fletcher-does-not-concede-mayors-race-with-34000-ballots-to-be-counted/
+2014-02-09 10:28:42,138 INFO Success: 403232841527750656, https://foursquare.com/richtwoods/checkin/528d037711d2782aff6b860a?s=CfwPHLrETLvEGIOCvYy0ZQ2pBNA&ref=tw
+2014-02-09 10:28:42,301 INFO Success: 403233825058082816, http://q.gs/55787
+2014-02-09 10:28:43,867 INFO Success: 403251405688811520, http://www.nbcsandiego.com/news/local/Nathan-Fletcher-San-Diego-Mayor-Race-Ballot-Count-David-Alvarez-232700281.html
+2014-02-09 10:28:44,131 INFO Success: 403251761374167040, http://www.10news.com/video/live_video
+2014-02-09 10:28:44,362 INFO Success: 403253398998220800, http://www.nbcsandiego.com/news/local/Nathan-Fletcher-San-Diego-Mayor-Race-Ballot-Count-David-Alvarez-232700281.html
+2014-02-09 10:28:44,601 INFO Success: 403253867279704064, http://www.nbcsandiego.com/news/local/Nathan-Fletcher-San-Diego-Mayor-Race-Ballot-Count-David-Alvarez-232700281.html
+2014-02-09 10:28:44,917 INFO Success: 403273512145539072, http://twitdoc.com/view.asp?id=115613&sid=2H7H&ext=PDF&lcl=Fletcher-Votes.pdf&usr=VinceVasquezSD&doc=185847305&key=key-mkzzfbbsk2mkf8xa3c7
+2014-02-09 10:28:45,451 INFO Success: 403289356104134656, http://ranchobernardo-4sranch.patch.com/groups/elections/p/fletcher-ends-pursuit-of-public-office-after-tuesdays-loss-ranchobernardo-4sranch
+2014-02-09 10:28:45,688 INFO Success: 403299567631740929, http://q.gs/55B26
+2014-02-09 10:28:45,993 INFO Success: 403317424969093123, http://twitdoc.com/view.asp?id=115631&sid=2H7Z&ext=PDF&lcl=Fletcher-Votes-v2.pdf&usr=VinceVasquezSD&doc=185886436&key=key-1y8yxqw6hxlspbgziv7f
+2014-02-09 10:28:46,533 INFO Success: 403327732911587328, http://www.youtube.com/watch?v=C8_8phD7AwM&feature=youtu.be
+2014-02-09 10:28:48,230 INFO Success: 403340785807937536, http://www.kpbs.org/news/2013/nov/20/story-behind-nathan-fletchers-loss/?utm_source=t.co&utm_medium=social-media&utm_campaign=kpbsnews-twitter
+2014-02-09 10:28:48,470 INFO Success: 403341922946658304, http://q.gs/55DAo
+2014-02-09 10:28:48,617 INFO Success: 403341925626806272, http://q.gs/55DAr
+2014-02-09 10:28:48,984 INFO Success: 403342633092669440, http://sdrostra.com/?p=36635
+2014-02-09 10:28:49,584 INFO Success: 403347761824681984, http://www.vidalatinasd.com/news/2013/nov/20/fletcher-acepta-su-derrota-y-apoya-a-alvarez-para/
+2014-02-09 10:28:49,749 INFO Success: 403349750574903300, http://q.gs/55DXx
+2014-02-09 10:28:51,329 INFO Success: 403359747648131072, http://www.kpbs.org/news/2013/nov/20/fletcher-says-farewell-politics-concedes-mayors-ra/?utm_source=t.co&utm_medium=social-media&utm_campaign=kpbsnews-twitter
+2014-02-09 10:28:53,880 INFO Success: 403360966147977217, http://www.kpbs.org/news/2013/nov/20/fletcher-says-farewell-politics-concedes-mayors-ra/?utm_source=t.co&utm_medium=social-media&utm_campaign=kpbsnews-twitter
+2014-02-09 10:28:54,273 INFO Success: 403364185867710464, http://www.kpbs.org/news/2013/nov/20/fletcher-says-farewell-politics-concedes-mayors-ra/?utm_source=t.co&utm_medium=social-media&utm_campaign=kpbsnews-twitter
+2014-02-09 10:28:55,036 INFO Success: 403368682614558720, http://www.utsandiego.com/news/2013/nov/20/fletcher-bows-out-public-life/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:28:56,553 INFO Success: 403377139610693632, http://www.kpbs.org/news/2013/nov/20/story-behind-nathan-fletchers-loss/?utm_source=dlvr.it&utm_medium=twitter
+2014-02-09 10:28:57,197 INFO Success: 403383622578622465, http://www.sandiegored.com/noticias/46015/Fletcher-admite-su-tercer-lugar-y-le-da-su-respaldo-a-Alvarez/
+2014-02-09 10:28:58,091 INFO Success: 403392255890702337, http://www.utsandiego.com/news/2013/nov/20/fletcher-bows-out-public-life/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:28:58,630 INFO Success: 403415099211522048, http://www.kpbs.org/news/2013/nov/20/fletcher-says-farewell-politics-concedes-mayors-ra/?utm_source=t.co&utm_medium=social-media&utm_campaign=kpbsnews-twitter
+2014-02-09 10:28:58,821 INFO Success: 403431506728988672, http://www.nbcsandiego.com/video/#!/on-air/as-seen-on/Fletcher--I-Have-No-Regrets/232718791
+2014-02-09 10:28:59,023 INFO Success: 403110641071697920, http://q.gs/54zlY
+2014-02-09 10:29:01,418 INFO Success: 403116732384292864, http://www.kpbs.org/news/2013/nov/19/san-diego-mayor-election-results-2013/
+2014-02-09 10:29:01,993 INFO Success: 403123229566705664, http://www.kpbs.org/news/2013/nov/19/san-diego-mayor-election-results-2013/
+2014-02-09 10:29:03,308 INFO Success: 403161739313029120, http://bowlersdesk.com/2013/11/20/am-briefing-from-bowlersdesk-com-for-november-20-2013/
+2014-02-09 10:29:03,549 INFO Success: 403181857375657984, http://www.utsandiego.com/news/2013/nov/19/mayor-special-election-vote-results/
+2014-02-09 10:29:03,823 INFO Success: 403182062678450176, http://www.utsandiego.com/news/2013/nov/19/mayor-special-election-vote-results/
+2014-02-09 10:29:04,007 INFO Success: 403189684660367360, http://www.nbcsandiego.com/video/#!/on-air/as-seen-on/Kevin-Faulconer-on-Special-Election-Results/232660691
+2014-02-09 10:29:04,987 INFO Success: 403198759598714880, http://inewsource.org/faulconer-advances-to-san-diego-mayoral-runoff/
+2014-02-09 10:29:06,345 INFO Success: 403201950147031042, http://www.sandiego6.com/story/watch-our-newscast-live-at-10-p-m--20131031
+2014-02-09 10:29:06,506 INFO Success: 403202027347386368, http://www.sandiego6.com/story/watch-our-newscast-live-at-10-p-m--20131031
+2014-02-09 10:29:06,802 INFO Success: 403206343915761665, http://UTSanDiego.com
+2014-02-09 10:29:07,118 INFO Success: 403206343915761665, http://www.utsandiego.com/news/2013/nov/19/mayor-special-election-vote-results/
+2014-02-09 10:29:07,404 INFO Success: 403213413557358592, http://www.utsandiego.com/news/2013/nov/19/mayor-special-election-vote-results/
+2014-02-09 10:29:07,584 ERROR 'NoneType' object has no attribute 'head'
+2014-02-09 10:29:07,671 ERROR None
+2014-02-09 10:29:08,628 INFO Success: 403237555883503616, https://www.facebook.com/relaws52/posts/10200114268458708
+2014-02-09 10:29:09,430 INFO Success: 403242749199405057, http://sdgln.com/news/2013/11/20/who-advanced-san-diego-mayoral-election
+2014-02-09 10:29:11,545 INFO Success: 403244302223937536, http://inewsource.org/faulconer-advances-to-san-diego-mayoral-runoff/
+2014-02-09 10:29:11,732 INFO Success: 403267688555753473, http://q.gs/559Cd
+2014-02-09 10:29:12,085 INFO Success: 403273081596043264, http://twitdoc.com/view.asp?id=115612&sid=2H7G&ext=PDF&lcl=Faulconer-Votes.pdf&usr=VinceVasquezSD&doc=185846776&key=key-17m6g04a18y7twz9g5lb
+2014-02-09 10:29:13,053 INFO Success: 403275005523275776, http://inewsource.org/faulconer-advances-to-san-diego-mayoral-runoff/
+2014-02-09 10:29:20,234 INFO Success: 403297973024849920, http://www.nydailynews.com/news/politics/san-diego-voters-propel-faulconer-runoff-race-replace-san-diego-ex-mayor-bob-filner-article-1.1523462
+2014-02-09 10:29:23,999 INFO Success: 403323825200197632, http://voiceofsandiego.org/2013/11/20/faulconer-the-gops-last-best-hope/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:29:24,316 INFO Success: 403364213554286592, http://twitdoc.com/view.asp?id=115632&sid=2H80&ext=PDF&lcl=Faulconer-Votes-v2.pdf&usr=VinceVasquezSD&doc=185886527&key=key-133eafzeyg7ub1h49w2g
+2014-02-09 10:29:24,469 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:29:24,539 ERROR None
+2014-02-09 10:29:28,539 INFO Success: 403680550105255939, http://voiceofsandiego.org/2013/11/21/what-mike-aguirre-won/
+2014-02-09 10:29:32,186 INFO Success: 403694354193453056, http://voiceofsandiego.org/2013/11/21/what-mike-aguirre-won/
+2014-02-09 10:29:35,986 INFO Success: 403624900495028224, http://voiceofsandiego.org/2013/11/21/what-mike-aguirre-won/?utm_source=twitterfeed&utm_medium=twitter&utm_campaign=Feed%3A+voice-of-san-diego-all-articles+%28All+articles+voiceofsandiego.org+--+full+feed%29
+2014-02-09 10:29:39,657 INFO Success: 403627738189135873, http://voiceofsandiego.org/2013/11/21/what-mike-aguirre-won/
+2014-02-09 10:29:44,155 INFO Success: 403631247366160384, http://voiceofsandiego.org/2013/11/21/what-mike-aguirre-won/
+2014-02-09 10:29:45,164 INFO Success: 403644452947783680, http://q.gs/55TF8
+2014-02-09 10:29:46,051 INFO Success: 403514659019317248, http://www.nbcsandiego.com/news/local/NBC-7-News-Live-Stream-Mobile-209691771.html
+2014-02-09 10:29:46,085 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:29:46,157 ERROR None
+2014-02-09 10:29:46,367 INFO Success: 403576498394632193, http://inewsource.org/data-tables/2013-primary-voting-map/2013-primary-voting-map.html
+2014-02-09 10:29:47,065 INFO Success: 403576547569070080, http://www.alvarezformayor.com/yardsign?recruiter_id=61669
+2014-02-09 10:29:47,451 INFO Success: 403578171066314752, http://www.alvarezformayor.com/
+2014-02-09 10:29:48,358 INFO Success: 403598873689874432, https://www.facebook.com/photo.php?fbid=613864005347618&l=026385920a
+2014-02-09 10:29:48,834 INFO Success: 403607695644581888, https://www.facebook.com/SMHSKnightsAtletics/posts/670798749625903
+2014-02-09 10:29:49,174 INFO Success: 403621906504376320, http://twitdoc.com/view.asp?id=115710&sid=2HA6&ext=PDF&lcl=Alvarez-Fletcher-Votes-Combined.pdf&usr=VinceVasquezSD&doc=186121042&key=key-uj6d4m6nemibob6mcvs
+2014-02-09 10:29:50,502 INFO Success: 403623209641472001, http://ringtv.craveonline.com/blog/182053-alvarez-returns-to-mgm-on-march-8-but-against-cotto-
+2014-02-09 10:29:51,522 INFO Success: 403705907751555072, http://www.utsandiego.com/news/2013/nov/21/update-count-mayoral-election/
+2014-02-09 10:29:51,720 INFO Success: 403706884667887617, http://www.utsandiego.com/news/2013/nov/21/update-count-mayoral-election/
+2014-02-09 10:29:52,742 INFO Success: 403709981892939776, http://www.utsandiego.com/news/2013/nov/21/update-count-mayoral-election/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:29:52,993 INFO Success: 403760755151228928, https://www.facebook.com/photo.php?fbid=10202720536760529&l=2a79eb86c8
+2014-02-09 10:29:53,457 INFO Success: 403761113298649088, https://www.facebook.com/jay.jones.18294/posts/10202720575681502
+2014-02-09 10:29:54,349 INFO Success: 403763378365026304, http://www.utsandiego.com/news/2013/nov/21/update-count-mayoral-election/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:29:54,526 INFO Success: 403782459671588864, http://q.gs/55ZoQ
+2014-02-09 10:29:54,742 INFO Success: 403518993975091200, http://q.gs/55LSg
+2014-02-09 10:29:55,562 INFO Success: 403571490613768192, http://www.utsandiego.com/news/2013/nov/20/faulconer-fletcher-alvarez-san-diego-mayor-filner/
+2014-02-09 10:29:56,055 INFO Success: 403577427026534400, http://www.kpbs.org/news/2013/nov/20/fletcher-says-farewell-politics-concedes-mayors-ra/?utm_source=t.co&utm_medium=social-media&utm_campaign=kpbsnews-twitter
+2014-02-09 10:29:56,447 INFO Success: 403578150929448960, http://www.kpbs.org/news/2013/nov/20/fletcher-says-farewell-politics-concedes-mayors-ra/?utm_source=t.co&utm_medium=social-media&utm_campaign=kpbsnews-twitter
+2014-02-09 10:29:57,483 INFO Success: 403620711022862336, http://akpatchauthor.com/
+2014-02-09 10:30:00,273 INFO Success: 403620711022862336, http://akpatchauthor.com/interviews/
+2014-02-09 10:30:04,765 INFO Success: 403692071409565696, http://www.sdcitybeat.com/sandiego/blog-1425-the-sad-exit-of-nathan-fletcher.html
+2014-02-09 10:30:06,230 INFO Success: 403694878825381888, http://www.delmartimes.net/2013/11/21/solana-beach-city-council-discusses-fletcher-cove-report/
+2014-02-09 10:30:10,328 INFO Success: 403513237812965376, http://voiceofsandiego.org/2013/11/21/morning-report-big-gop-hopes-are-on-faulconer/?utm_source=dlvr.it&utm_medium=twitter&utm_campaign=Feed%3A+voice-of-san-diego-all-articles+%28All+articles+voiceofsandiego.org+--+full+feed%29
+2014-02-09 10:30:10,482 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:30:10,556 ERROR None
+2014-02-09 10:30:10,686 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:30:10,752 ERROR None
+2014-02-09 10:30:10,956 INFO Success: 403596195911577601, http://www.youtube.com/watch?v=yDUu_XSIjfM&feature=youtu.be
+2014-02-09 10:30:11,108 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:30:11,171 ERROR None
+2014-02-09 10:30:11,351 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:30:11,456 ERROR None
+2014-02-09 10:30:12,683 INFO Success: 404082475397550080, https://ddaformayor.nationbuilder.com/donate?recruiter_id=58014
+2014-02-09 10:34:12,776 ERROR HTTP Error 504: Gateway Time-out
+2014-02-09 10:34:12,895 ERROR None
+2014-02-09 10:34:13,355 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:34:13,437 ERROR None
+2014-02-09 10:34:14,354 INFO Success: 403925999995596801, http://trendsmap.com/local/us/san+diego
+2014-02-09 10:34:19,066 INFO Success: 403997334448517120, http://voiceofsandiego.org/2013/11/22/sanders-vs-sanders-on-neighborhoods/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:34:19,789 INFO Success: 404045949867393024, http://www.utsandiego.com/news/2013/nov/22/faulconer-campaign-election-mayor/
+2014-02-09 10:34:19,963 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:34:20,091 ERROR None
+2014-02-09 10:34:20,757 INFO Success: 404476358178242560, https://www.facebook.com/geovanny.acost/posts/10151994127704242
+2014-02-09 10:34:21,404 INFO Success: 404481937668341760, http://www.utsandiego.com/news/2013/nov/22/undoing-filners-tourism-marketing-mess/
+2014-02-09 10:34:21,556 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:34:21,628 ERROR None
+2014-02-09 10:34:22,144 INFO Success: 404311051673796608, https://foursquare.com/richtwoods/checkin/5290efa011d20c5173385697?s=m3BLU_NkrWxs0sFBFkKHE4Q69aI&ref=tw
+2014-02-09 10:34:23,002 INFO Success: 404570612196442112, http://youtu.be/V8p11ZYxOsU?a
+2014-02-09 10:34:23,532 INFO Success: 404570628654911488, http://youtu.be/V8p11ZYxOsU?a
+2014-02-09 10:34:23,934 INFO Success: 404689672690884608, https://www.facebook.com/bambooloungesd/posts/10151544006937824
+2014-02-09 10:34:24,147 INFO Success: 403007591665893376, http://ow.ly/i/3MfbI
+2014-02-09 10:34:28,384 INFO Success: 403064745554493441, http://voiceofsandiego.org/2013/11/19/nathan-fletcher-lost-the-election-when-he-lost-mickey-kasparian/
+2014-02-09 10:34:30,401 INFO Success: 403017220491460608, http://www.10news.com/video/live_video
+2014-02-09 10:34:30,568 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:34:30,674 ERROR None
+2014-02-09 10:34:30,822 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:34:30,904 ERROR None
+2014-02-09 10:34:31,398 INFO Success: 403195153763950592, https://www.facebook.com/tjdunnivant/posts/10202455810187414
+2014-02-09 10:34:31,630 INFO Success: 403356042479693825, http://www.utsandiego.com/news/2013/nov/20/faulconer-fletcher-alvarez-san-diego-mayor-filner/
+2014-02-09 10:34:31,898 INFO Success: 403219963114029057, http://sdrostra.com/?p=36623
+2014-02-09 10:34:32,948 INFO Success: 403342184776089600, http://inewsource.org/the-story-behind-nathan-fletchers-loss/
+2014-02-09 10:34:33,302 INFO Success: 403364162132140033, http://twitdoc.com/view.asp?id=115631&sid=2H7Z&ext=PDF&lcl=Fletcher-Votes-v2.pdf&usr=VinceVasquezSD&doc=185886436&key=key-1y8yxqw6hxlspbgziv7f
+2014-02-09 10:34:34,124 INFO Success: 403365047490985984, http://www.utsandiego.com/news/2013/nov/20/fletcher-bows-out-public-life/
+2014-02-09 10:34:34,673 INFO Success: 403431087126638593, http://www.nbcsandiego.com/video/#!/on-air/as-seen-on/Fletcher--I-Have-No-Regrets/232718791
+2014-02-09 10:34:34,890 ERROR 'NoneType' object has no attribute 'head'
+2014-02-09 10:34:34,937 ERROR None
+2014-02-09 10:34:35,933 INFO Success: 403216619796574208, http://inewsource.org/faulconer-advances-to-san-diego-mayoral-runoff/
+2014-02-09 10:34:37,858 INFO Success: 403680300959404032, http://www.sdcitybeat.com/sandiego/blog-1425-the-sad-exit-of-nathan-fletcher.html
+2014-02-09 10:34:39,017 INFO Success: 404022882793435136, http://lgbtweekly.com/2013/11/20/what-happened-to-fletcher/
+2014-02-09 10:34:39,226 ERROR 'NoneType' object has no attribute 'head'
+2014-02-09 10:34:39,293 ERROR None
+2014-02-09 10:34:39,698 INFO Success: 404801698239381504, http://www.youtube.com/watch?v=YY33oEDtJv0&feature=youtu.be&a
+2014-02-09 10:34:40,220 INFO Success: 404802106478977025, http://www.youtube.com/watch?v=I6BXvXXjS2Y&feature=youtu.be
+2014-02-09 10:34:40,915 INFO Success: 404758965428707328, http://www.kpbs.org/events/2013/nov/27/24027/
+2014-02-09 10:34:41,183 INFO Success: 404747729064439808, https://www.facebook.com/photo.php?fbid=663740560343256&l=243d0907e5
+2014-02-09 10:34:41,561 INFO Success: 404998547348922368, https://www.facebook.com/photo.php?fbid=612589358789066&l=6b6cc75cff
+2014-02-09 10:34:41,756 INFO Success: 405139152967979008, http://q.gs/56bpv
+2014-02-09 10:34:42,917 INFO Success: 405039269745405952, http://sandiegofreepress.org/2013/11/redemption-time-alvarez-beats-the-odds-and-keeps-hope-alive/#.UpORPmxcqVs.twitter
+2014-02-09 10:34:43,693 INFO Success: 405214949984964608, http://www.huffingtonpost.com/ian-reifowitz/how-can-progressives-gain_b_4333633.html
+2014-02-09 10:34:53,224 ERROR [Errno 10054] An existing connection was forcibly closed by the remote host
+2014-02-09 10:34:53,358 ERROR None
+2014-02-09 10:34:54,572 INFO Success: 405719133045919744, http://www.huffingtonpost.com/ian-reifowitz/how-can-progressives-gain_b_4333633.html?utm_hp_ref=tw
+2014-02-09 10:34:55,006 INFO Success: 405749174756315136, https://www.facebook.com/bambooloungesd/posts/10151549143122824
+2014-02-09 10:34:55,194 INFO Success: 405824523515084800, http://q.gs/57CQX
+2014-02-09 10:34:55,407 INFO Success: 405836808354672641, http://q.gs/57D4e
+2014-02-09 10:34:56,431 INFO Success: 405843587935793152, http://fox5sandiego.com/2013/11/27/1st-faulconer-alvarez-mayoral-debate-set-for-next-week/
+2014-02-09 10:34:57,434 INFO Success: 405848104768794624, http://fox5sandiego.com/2013/11/27/1st-faulconer-alvarez-mayoral-debate-set-for-next-week/?utm_source=dlvr.it&utm_medium=twitter
+2014-02-09 10:34:57,604 INFO Success: 405870905680596992, http://q.gs/57EhK
+2014-02-09 10:34:58,095 INFO Success: 405770803209584641, http://www.kpbs.org/events/2013/nov/27/24027/
+2014-02-09 10:35:00,454 INFO Success: 405739973199949824, http://www.sdcitybeat.com/sandiego/article-12457-kevin-faulconer-and-his-lying-friends.html
+2014-02-09 10:35:00,930 INFO Success: 405748618566438913, http://www.topix.com/san-diego/2013/11/kevin-faulconer-and-his-lying-friends
+2014-02-09 10:35:03,244 INFO Success: 405838530603388928, http://www.kpbs.org/news/2013/nov/27/first-san-diego-mayoral-forum-be-held-tuesday-ranc/?utm_source=t.co&utm_medium=social-media&utm_campaign=kpbsnews-twitter
+2014-02-09 10:35:04,428 INFO Success: 405852110001930240, http://www.bloomberg.com/news/2013-11-27/democrats-run-biggest-cities-as-u-s-residents-cluster-by-party.html
+2014-02-09 10:35:05,266 INFO Success: 405885570875789312, http://www.sdcitybeat.com/sandiego/article-12457-kevin-faulconer-and-his-lying-friends.html
+2014-02-09 10:35:06,595 INFO Success: 406085785973059584, http://bowlersdesk.com/2013/11/28/1st-faulconer-alvarez-mayoral-debate-set-for-next-week/
+2014-02-09 10:35:06,874 ERROR HTTP Error 404: NOT FOUND
+2014-02-09 10:35:07,013 ERROR None
+2014-02-09 10:35:07,255 ERROR HTTP Error 404: NOT FOUND
+2014-02-09 10:35:07,354 ERROR None
+2014-02-09 10:35:08,983 INFO Success: 406067714919510017, http://www.kpbs.org/news/2013/nov/27/first-san-diego-mayoral-forum-be-held-tuesday-ranc/?utm_source=t.co&utm_medium=social-media&utm_campaign=kpbsnews-twitter
+2014-02-09 10:35:09,944 INFO Success: 406101497139576832, http://www.sdcitybeat.com/sandiego/article-12457-kevin-faulconer-and-his-lying-friends.html
+2014-02-09 10:35:10,812 INFO Success: 406103777419464706, http://www.sdcitybeat.com/sandiego/article-12457-kevin-faulconer-and-his-lying-friends.html
+2014-02-09 10:35:10,944 INFO Success: 406170409097515008, http://ow.ly/i/3RSSm
+2014-02-09 10:35:11,928 INFO Success: 406528587366293504, http://www.lajollalight.com/2013/11/29/mayoral-candidates-to-speak-at-jewish-community-center-in-la-jolla/?utm_source=dlvr.it&utm_medium=twitter
+2014-02-09 10:35:12,236 INFO Success: 406538631172485120, http://www.rjhernandez.org/
+2014-02-09 10:35:15,540 INFO Success: 406613110535892994, http://sdnews.com/bookmark/24140495?utm_source=dlvr.it&utm_medium=twitter
+2014-02-09 10:35:16,848 INFO Success: 406613237455544321, http://sdnews.com/bookmark/24140495
+2014-02-09 10:35:17,336 INFO Success: 406686432317554688, http://twitpic.com/dn2w4p
+2014-02-09 10:35:18,122 INFO Success: 406602993845301248, http://www.sandiegodom.com/sdd/default.aspx?tabid=29&uid=130062320
+2014-02-09 10:35:19,279 INFO Success: 406634269243891713, http://www.sdcitybeat.com/sandiego/article-12460-%E2%80%98there-will-be-negativity.html
+2014-02-09 10:35:20,558 INFO Success: 406927893407612928, http://lgbtweekly.com/2013/11/28/about-alvarez-and-faulconer/
+2014-02-09 10:35:20,848 ERROR HTTP Error 404: NOT FOUND
+2014-02-09 10:35:20,934 ERROR None
+2014-02-09 10:35:21,204 INFO Success: 406848787320414208, https://www.facebook.com/photo.php?fbid=10152044737910926&l=6e841195d7
+2014-02-09 10:35:21,552 INFO Success: 406952708084862976, https://www.facebook.com/southparkscene/posts/10200168630616819
+2014-02-09 10:35:21,867 INFO Success: 406923296202964992, http://instagram.com/p/hE7n0dCHco/
+2014-02-09 10:35:22,293 INFO Success: 407368447958724609, https://www.facebook.com/photo.php?fbid=10201582339059086&l=819fbef647
+2014-02-09 10:35:22,505 INFO Success: 407188527097454593, http://q.gs/58I7U
+2014-02-09 10:35:22,855 INFO Success: 407355124286521345, http://instagram.com/p/hZ5U8krsGB/
+2014-02-09 10:35:24,369 INFO Success: 407782870229712896, https://flipboard.com/section/peninsula-democrat-magazine-bBIwK4
+2014-02-09 10:35:25,964 INFO Success: 407665066516185088, http://pointlomadem.org/2013/11/28/dec-7-monthly-meeting-the-ob-holiday-parade/
+2014-02-09 10:35:26,411 INFO Success: 407627736052551681, https://www.facebook.com/photo.php?fbid=597418670324079&l=bc38de18d7
+2014-02-09 10:35:26,816 INFO Success: 407591974590746624, http://www.kffl.com/gnews.php?id=883004-redskins-london-fletcher-injured
+2014-02-09 10:35:28,023 INFO Success: 407912174724452352, http://ringtv.craveonline.com/blog/182253-miguel-cotto-reportedly-weighing-offers-to-face-martinez-alvarez
+2014-02-09 10:35:29,319 INFO Success: 407970631549198336, http://blog.bellashaye.com/2013/12/03/bella-shayes-december-vip-business-owner-amanda-alvarez/
+2014-02-09 10:35:29,736 INFO Success: 407977106656616448, http://www.tangotraffic.com/
+2014-02-09 10:35:29,846 INFO Success: 407977153850904576, http://www.tangotraffic.com/
+2014-02-09 10:35:29,971 INFO Success: 407977226517237760, http://www.tangotraffic.com/
+2014-02-09 10:35:31,058 INFO Success: 408428514434506752, http://www.utsandiego.com/news/2013/dec/03/mayoral-candidates-outline-themes-in-first-meeting/
+2014-02-09 10:35:31,313 INFO Success: 408353879625973766, http://q.gs/59Smr
+2014-02-09 10:35:31,757 INFO Success: 408377874865848320, https://www.facebook.com/bambooloungesd/posts/10151561470172824
+2014-02-09 10:35:31,954 INFO Success: 408269409300381696, http://q.gs/59MXO
+2014-02-09 10:35:32,391 INFO Success: 408317598208495617, https://www.facebook.com/bambooloungesd/posts/10151561065437824
+2014-02-09 10:35:33,298 INFO Success: 408277511718838272, http://www.pomeradonews.com/2013/12/04/mayoral-candidates-share-views-at-rancho-bernardo-forum/
+2014-02-09 10:35:33,585 INFO Success: 408280504354762752, https://www.facebook.com/photo.php?fbid=571126729623071&l=afce5d6c04
+2014-02-09 10:35:33,997 INFO Success: 408346549249253377, http://www.youtube.com/watch?v=xWYLNE8yLTI&feature=youtu.be&a
+2014-02-09 10:35:34,569 INFO Success: 408747575873789953, http://www.youtube.com/watch?v=WOYJoQ1HbfY&feature=youtu.be
+2014-02-09 10:35:34,890 INFO Success: 408767406316982272, http://www.sandiego.gov/citycouncil/
+2014-02-09 10:35:35,322 INFO Success: 408678646518259712, https://www.facebook.com/bambooloungesd/posts/10151562943077824
+2014-02-09 10:35:35,933 INFO Success: 408726374669881344, https://foursquare.com/richtwoods/checkin/52a0ffb7498eb62b1e5da7f8?s=79aqbkqKHQLx_EBVNiv6QM0Ulgg&ref=tw
+2014-02-09 10:35:36,411 INFO Success: 408666928895369216, http://www.youtube.com/watch?v=3WG7qUVBfhg&feature=youtu.be
+2014-02-09 10:35:37,690 INFO Success: 408682146786979840, http://lgbtweekly.com/2013/12/05/kevin-faulconer-is-ready-to-be-mayor/
+2014-02-09 10:35:38,339 INFO Success: 409011460186972160, http://us4.campaign-archive2.com/?u=63917f04e1d02f253cc70dae5&id=0046b2b7ec
+2014-02-09 10:35:38,611 INFO Success: 409106860583948288, http://sandiegobuzz.blogspot.com/2013/12/faulconer-alvarez-in-dead-heat-for.html
+2014-02-09 10:35:38,816 INFO Success: 409108550229573632, http://q.gs/5AGGx
+2014-02-09 10:35:48,302 ERROR [Errno 10054] An existing connection was forcibly closed by the remote host
+2014-02-09 10:35:48,408 ERROR None
+2014-02-09 10:35:57,983 ERROR [Errno 10054] An existing connection was forcibly closed by the remote host
+2014-02-09 10:35:58,075 ERROR None
+2014-02-09 10:36:16,404 ERROR [Errno 10054] An existing connection was forcibly closed by the remote host
+2014-02-09 10:36:16,516 ERROR None
+2014-02-09 10:36:16,957 INFO Success: 409119269742718976, http://instagram.com/p/hmbvWqn-6G/
+2014-02-09 10:36:18,410 INFO Success: 408979290324082689, http://lgbtweekly.com/2013/12/05/kevin-faulconer-is-ready-to-be-mayor/
+2014-02-09 10:36:18,780 INFO Success: 409134157760331776, https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Flcrsandiego%2Fposts%2F669527016431277
+2014-02-09 10:36:19,615 INFO Success: 409306236014702592, http://us4.campaign-archive1.com/?u=63917f04e1d02f253cc70dae5&id=ef80dd94a5
+2014-02-09 10:36:20,328 INFO Success: 409335571194998784, http://us4.campaign-archive1.com/?u=63917f04e1d02f253cc70dae5&id=ef80dd94a5
+2014-02-09 10:36:20,622 INFO Success: 409359237517963264, https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fevents%2F
+2014-02-09 10:36:20,924 INFO Success: 409360871064743936, https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Fevents%2F
+2014-02-09 10:36:21,398 INFO Success: 409589413539102720, https://www.facebook.com/media/set/?set=a.660813940636220&type=3&l=a5bf6b6d1b
+2014-02-09 10:36:21,801 INFO Success: 409410583809650688, https://www.youtube.com/watch?v=3Vbsl7km7pA&feature=youtube_gdata
+2014-02-09 10:36:22,319 INFO Success: 409411534163820544, https://www.youtube.com/watch?v=3Vbsl7km7pA&feature=youtube_gdata
+2014-02-09 10:36:22,911 INFO Success: 409427243577122816, https://www.youtube.com/watch?v=3Vbsl7km7pA&feature=youtube_gdata
+2014-02-09 10:36:23,394 INFO Success: 409430315845689345, https://www.youtube.com/watch?v=3Vbsl7km7pA&feature=youtube_gdata
+2014-02-09 10:36:23,940 INFO Success: 399039422596775936, http://youtu.be/4NpG4F9yq00
+2014-02-09 10:36:28,073 INFO Success: 396019520566878210, http://dlvr.it/4F4fxB
+2014-02-09 10:36:30,002 INFO Success: 389966864870555648, http://fb.me/6oDtq88hx
+2014-02-09 10:36:31,007 INFO Success: 385216580826562560, http://bit.ly/18MgNLH
+2014-02-09 10:36:32,111 INFO Success: 386266637663358976, http://bit.ly/18YSL05
+2014-02-09 10:36:36,371 INFO Success: 398567496279547904, http://dlvr.it/4HCqkC
+2014-02-09 10:36:36,898 INFO Success: 397195979243270145, http://youtu.be/rKJdYDhBiWI
+2014-02-09 10:36:38,043 INFO Success: 389804877880107008, http://sandiegofreepress.org/2013/10/is-san-diego-in-a-new-york-state-of-mind-de-blasio-and-alvarez-give-us-hope/#.UlwpsRG9HN8.twitter
+2014-02-09 10:36:39,157 INFO Success: 389805302981607424, http://sandiegofreepress.org/2013/10/is-san-diego-in-a-new-york-state-of-mind-de-blasio-and-alvarez-give-us-hope/#.UlwpsRG9HN8.twitter
+2014-02-09 10:36:40,259 INFO Success: 389808286762954752, http://sandiegofreepress.org/2013/10/is-san-diego-in-a-new-york-state-of-mind-de-blasio-and-alvarez-give-us-hope/#.UlwG5jEja2Q.facebook
+2014-02-09 10:36:41,411 INFO Success: 389547144900009984, http://ask.fm/a/6pme2m1h
+2014-02-09 10:36:42,530 INFO Success: 389481506319908867, http://ask.fm/a/73bn8dqd
+2014-02-09 10:36:43,437 INFO Success: 389450472530378752, http://fb.me/2mqjanwsU
+2014-02-09 10:36:43,961 INFO Success: 389461908262117377, http://fb.me/2wSqFywHn
+2014-02-09 10:36:45,026 INFO Success: 389421806668361728, http://bit.ly/GVuApz
+2014-02-09 10:36:45,846 INFO Success: 389432475585622016, https://www.facebook.com/events/170474619813145/
+2014-02-09 10:36:46,727 INFO Success: 389089409372794880, http://j.mp/GTUcDo
+2014-02-09 10:36:47,614 INFO Success: 389029006169100288, http://j.mp/GV4YIB
+2014-02-09 10:36:48,631 INFO Success: 388877392640344064, http://bit.ly/19rJmMX
+2014-02-09 10:36:48,865 INFO Success: 388883429732802560, http://q.gs/4uAe4
+2014-02-09 10:36:49,884 INFO Success: 388873524779048960, http://bit.ly/1cbe8vT
+2014-02-09 10:36:50,795 INFO Success: 388872931893211136, http://bit.ly/1cbe8vT
+2014-02-09 10:36:51,543 INFO Success: 388787371782975489, http://j.mp/1agbwJB
+2014-02-09 10:36:51,980 INFO Success: 388796719711789056, http://www.alvarezformayor.com/?recruiter_id=2475
+2014-02-09 10:36:52,242 INFO Success: 388782816047030272, http://q.gs/4u7SB
+2014-02-09 10:36:53,165 INFO Success: 388730772984561664, http://dlvr.it/470jGf
+2014-02-09 10:36:59,536 INFO Success: 388675731879755776, http://www.sdcitybeat.com/sandiego/article-12279-barrio-logan-and-the-race-for-mayor.html#sdmayor
+2014-02-09 10:36:59,798 ERROR HTTP Error 404: Not Found
+2014-02-09 10:36:59,921 ERROR None
+2014-02-09 10:37:00,115 ERROR HTTP Error 404: Not Found
+2014-02-09 10:37:00,302 ERROR None
+2014-02-09 10:37:01,302 INFO Success: 384506753108279296, http://q.gs/4rFyo
+2014-02-09 10:37:02,667 INFO Success: 384515965352181760, http://bit.ly/18DoeCN
+2014-02-09 10:37:03,923 INFO Success: 384520783990493184, http://bit.ly/18DoeCN
+2014-02-09 10:37:04,595 INFO Success: 384709231061905408, http://fb.me/6uTjC9KeJ
+2014-02-09 10:37:05,798 INFO Success: 384682788076937216, http://fb.me/WP20xDRc
+2014-02-09 10:37:07,335 INFO Success: 387722843330322432, http://wp.me/p2hXlG-1oe
+2014-02-09 10:37:07,575 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:37:07,710 ERROR None
+2014-02-09 10:37:08,750 INFO Success: 384982940624891904, http://bit.ly/19cRape
+2014-02-09 10:37:10,621 ERROR HTTP Error 302: The HTTP server returned a redirect error that would lead to an infinite loop.
+The last 30x error message was:
+Found
+2014-02-09 10:37:11,085 ERROR None
+2014-02-09 10:37:11,250 INFO Success: 385752695312621568, http://q.gs/4s7fL
+2014-02-09 10:37:11,506 INFO Success: 385841779884318720, http://q.gs/4sCUt
+2014-02-09 10:37:12,430 INFO Success: 385894472682201088, http://bit.ly/GA0Ei2
+2014-02-09 10:37:12,783 INFO Success: 385892803487625216, http://bit.ly/18z9cze
+2014-02-09 10:37:13,914 INFO Success: 385895400231538688, http://bit.ly/18Uda6w
+2014-02-09 10:37:14,095 INFO Success: 385901795475595265, http://q.gs/4sFCz
+2014-02-09 10:37:14,292 INFO Success: 385910087111692288, http://q.gs/4sFCz
+2014-02-09 10:37:15,134 INFO Success: 385964389267804160, http://dlvr.it/44gpgG
+2014-02-09 10:37:19,519 INFO Success: 386215535978889216, http://vosd.org/1866iSx
+2014-02-09 10:37:20,516 INFO Success: 386239469789405184, http://inewsource.org/alvarezs-labor-backers-field-well-heeled-political-committee/
+2014-02-09 10:37:20,723 INFO Success: 386327846756438017, http://q.gs/4sWvC
+2014-02-09 10:37:22,207 INFO Success: 386339763428392960, http://bit.ly/17DxsRb
+2014-02-09 10:37:23,782 INFO Success: 386529970522042368, http://eepurl.com/GsSVj
+2014-02-09 10:37:25,604 INFO Success: 386636035381161984, http://www.kpbs.org/news/2013/oct/03/conversation-san-diego-mayoral-candidate-david-alv/
+2014-02-09 10:37:26,151 INFO Success: 386500260094156801, http://www.kpbs.org/news/2013/oct/03/conversation-san-diego-mayoral-candidate-david-alv/
+2014-02-09 10:37:27,634 INFO Success: 386696191930400768, https://ddaformayor.nationbuilder.com/donatee2
+2014-02-09 10:37:28,918 INFO Success: 386261205993943040, http://buff.ly/1g6lcML
+2014-02-09 10:37:29,950 INFO Success: 386957255817433088, http://www.utsandiego.com/news/2013/oct/06/experience-is-the-question-for-alvarez/
+2014-02-09 10:37:30,154 INFO Success: 386989267794161664, http://www.utsandiego.com/news/2013/oct/06/experience-is-the-question-for-alvarez/
+2014-02-09 10:37:30,680 INFO Success: 388016898174365696, http://fb.me/ZuyqwAFF
+2014-02-09 10:37:30,868 INFO Success: 387071838410399744, http://q.gs/4syOJ
+2014-02-09 10:37:31,335 INFO Success: 387117682191241216, http://ow.ly/2Avs96
+2014-02-09 10:37:32,714 INFO Success: 387253057341235201, http://bit.ly/19uCbHC
+2014-02-09 10:37:33,072 INFO Success: 387253923268288512, http://bit.ly/19uCbHC
+2014-02-09 10:37:33,246 INFO Success: 387306758097485824, http://q.gs/4t9TN
+2014-02-09 10:37:34,670 INFO Success: 387330630192623616, http://q.gs/4tAdA
+2014-02-09 10:37:35,197 INFO Success: 387301613024849922, http://fox5sandiego.com
+2014-02-09 10:37:36,627 INFO Success: 387301613024849922, http://bit.ly/1couSCj
+2014-02-09 10:37:36,885 INFO Success: 387371076591689728, http://q.gs/4tCMD
+2014-02-09 10:37:39,118 INFO Success: 387391244998963200, http://bit.ly/16ui0Hk
+2014-02-09 10:37:39,257 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:37:39,329 ERROR None
+2014-02-09 10:37:40,523 INFO Success: 387434387693768704, http://fb.me/2CTu8xBlK
+2014-02-09 10:37:41,147 INFO Success: 387357757487452160, http://fb.me/12hsCB5xY
+2014-02-09 10:37:42,627 INFO Success: 387314578285400064, http://fb.me/VkhBliQL
+2014-02-09 10:37:43,661 INFO Success: 387313724421189632, http://tinyurl.com/n4q7t3s
+2014-02-09 10:37:44,904 INFO Success: 387313724018548736, http://bit.ly/1b4wywV
+2014-02-09 10:37:45,440 INFO Success: 387284959549222912, http://fb.me/2kKrwrvD8
+2014-02-09 10:37:45,823 INFO Success: 387273783641247744, http://bit.ly/19uCbHC
+2014-02-09 10:37:46,002 INFO Success: 387273742750973953, http://www.utsandiego.com/news/2013/oct/07/coons-alvarez-mayoral-filner/
+2014-02-09 10:37:46,604 INFO Success: 387115389852729344, http://fb.me/2uqbHgTpc
+2014-02-09 10:37:47,596 INFO Success: 387063916356182016, http://fb.me/29SZaa73f
+2014-02-09 10:37:48,427 INFO Success: 386935634910126080, http://bit.ly/1ckBBgC
+2014-02-09 10:37:49,719 INFO Success: 386506982464561152, http://wp.me/p2hXlG-1nS
+2014-02-09 10:37:51,000 INFO Success: 386339779110924288, http://tinyurl.com/o6gjtfb
+2014-02-09 10:37:51,359 INFO Success: 386131922109231104, http://fb.me/3lGxW39Cc
+2014-02-09 10:37:52,243 INFO Success: 385990753551269888, http://bit.ly/18WvZUw
+2014-02-09 10:37:52,545 INFO Success: 385962315129946112, http://lnkd.in/bj4rJ_C
+2014-02-09 10:37:57,069 INFO Success: 385907151207956480, http://ow.ly/ptJlH
+2014-02-09 10:37:57,385 INFO Success: 385895865560207361, http://bit.ly/GA0Ei2
+2014-02-09 10:37:57,713 INFO Success: 385890641672404992, http://bit.ly/GA0Ei2
+2014-02-09 10:37:59,033 INFO Success: 385786197538115585, http://bit.ly/GBgrNl
+2014-02-09 10:38:04,157 INFO Success: 385741567178588160, http://vosd.org/18SgQFH
+2014-02-09 10:38:08,052 INFO Success: 385740924354965505, http://vosd.org/18SgQFH
+2014-02-09 10:38:11,805 INFO Success: 385590894776172544, http://voiceofsandiego.org/2013/09/26/5-things-david-alvarez-has-done/
+2014-02-09 10:38:12,861 INFO Success: 385581425035972608, http://bit.ly/19mxwkO
+2014-02-09 10:38:13,571 INFO Success: 385573587819560960, http://youtu.be/s9pZ9ep19Hk
+2014-02-09 10:38:14,006 INFO Success: 385562661338898432, http://fb.me/HjkkJIUL
+2014-02-09 10:38:18,117 INFO Success: 385496203820937216, http://vosd.org/18QgsFT
+2014-02-09 10:38:18,548 INFO Success: 385218858690158592, http://youtu.be/FG0t4qXQWNg
+2014-02-09 10:38:18,984 INFO Success: 385205622595018752, http://youtu.be/lCa7-jdQLD0
+2014-02-09 10:38:19,663 INFO Success: 384995523834310656, http://bit.ly/1bZNFUr
+2014-02-09 10:38:20,461 INFO Success: 384937025339551746, http://saraxwalker.tumblr.com/post/60503556271
+2014-02-09 10:38:21,835 INFO Success: 384920952511139840, http://buff.ly/1hgsprm
+2014-02-09 10:38:22,434 INFO Success: 384898141503643648, http://youtu.be/3QH78fkeH6g?a
+2014-02-09 10:38:22,926 INFO Success: 384898122927071232, http://youtu.be/3QH78fkeH6g?a
+2014-02-09 10:38:23,471 INFO Success: 384897141728374784, http://youtu.be/L9zpCRYGEHs?a
+2014-02-09 10:38:23,733 INFO Success: 384853400887635970, http://q.gs/4rV6K
+2014-02-09 10:38:25,368 INFO Success: 384844084923215875, http://bit.ly/18HGM70
+2014-02-09 10:38:26,496 INFO Success: 384843879784017921, http://bit.ly/18HGM70
+2014-02-09 10:38:27,305 INFO Success: 384842990608343040, http://bit.ly/18HGM70
+2014-02-09 10:38:28,490 INFO Success: 384840810027429888, http://bit.ly/18HGM70
+2014-02-09 10:38:29,551 INFO Success: 384839317228879872, http://bit.ly/16bwYln
+2014-02-09 10:38:29,911 INFO Success: 384839150806892544, http://bit.ly/16bwYln
+2014-02-09 10:38:30,565 INFO Success: 384814833335427072, http://fb.me/6vlq7uUSq
+2014-02-09 10:38:31,733 INFO Success: 384734154551590912, https://ddaformayor.nationbuilder.com/donate
+2014-02-09 10:38:35,938 INFO Success: 387600645370679296, http://vosd.org/1crzrMb
+2014-02-09 10:38:40,137 INFO Success: 387599809890107392, http://vosd.org/1crzrMb
+2014-02-09 10:38:44,052 INFO Success: 387635614633721858, http://fb.me/14T3AQX4h
+2014-02-09 10:38:47,862 INFO Success: 387623045218959360, http://ow.ly/pC9Sh
+2014-02-09 10:38:48,887 INFO Success: 387622319624962048, http://www.sandiegoreader.com/weblogs/big-screen/2013/oct/08/review-david-alvarezs-building-blocks-commercial/
+2014-02-09 10:38:52,901 INFO Success: 387650123099930624, http://fb.me/2JMTRG7gu
+2014-02-09 10:38:56,852 INFO Success: 387642467681460224, http://fb.me/2JMTRG7gu
+2014-02-09 10:39:00,605 INFO Success: 387673369912836097, http://fb.me/KF8Bd2VA
+2014-02-09 10:39:05,029 INFO Success: 387920774608064512, http://vosd.org/1bb780N
+2014-02-09 10:39:08,990 INFO Success: 387921119447367680, http://vosd.org/1bb780N
+2014-02-09 10:39:09,648 INFO Success: 388007942718361600, https://www.facebook.com/events/170474619813145/
+2014-02-09 10:39:10,197 INFO Success: 388070066891522049, http://fb.me/1nEfOMsJu
+2014-02-09 10:39:10,693 INFO Success: 388068027948085248, http://fb.me/YAjEERPc
+2014-02-09 10:39:16,716 ERROR 'NoneType' object has no attribute 'head'
+2014-02-09 10:39:16,769 ERROR None
+2014-02-09 10:39:20,892 INFO Success: 390850240313442304, http://vosd.org/18p7T6Q
+2014-02-09 10:39:21,081 INFO Success: 390862442433355776, http://q.gs/4vT8u
+2014-02-09 10:39:25,392 INFO Success: 390856336033865728, http://vosd.org/18p7T6Q
+2014-02-09 10:39:29,920 INFO Success: 390891133670531073, http://vosd.org/18pExVT
+2014-02-09 10:39:30,753 INFO Success: 393020211466498049, http://www.sdcitybeat.com/sandiego/article-12345-david-alvarez-for-san-diego-mayor.html
+2014-02-09 10:39:34,901 ERROR 'NoneType' object has no attribute 'head'
+2014-02-09 10:39:34,950 ERROR None
+2014-02-09 10:39:36,292 INFO Success: 393787409185263618, http://j.mp/1g0pxmh
+2014-02-09 10:39:39,970 INFO Success: 394986292523855872, http://ow.ly/2B8kNO
+2014-02-09 10:39:44,006 INFO Success: 395601921521639424, http://vosd.org/16KYAzS
+2014-02-09 10:39:48,374 INFO Success: 395598113919877121, http://vosd.org/16KYAzS
+2014-02-09 10:39:53,223 INFO Success: 395600357377593345, http://vosd.org/16KYAzS
+2014-02-09 10:39:53,832 ERROR HTTP Error 404: Not Found
+2014-02-09 10:39:53,941 ERROR None
+2014-02-09 10:39:54,151 INFO Success: 395660160187641858, http://q.gs/4z27G
+2014-02-09 10:39:58,938 INFO Success: 395940544758571009, http://ow.ly/qmqTK
+2014-02-09 10:39:59,625 INFO Success: 396041255970283520, http://fb.me/JhlstSjV
+2014-02-09 10:40:00,217 INFO Success: 396039004912500737, http://VotePickard.com
+2014-02-09 10:40:00,775 INFO Success: 396047995743244288, http://fb.me/1Z3aIxErY
+2014-02-09 10:40:01,933 INFO Success: 396079238731665408, http://bit.ly/1dTQMhz
+2014-02-09 10:40:02,496 INFO Success: 396079238731665408, http://bit.ly/Epic21
+2014-02-09 10:40:03,082 INFO Success: 396092847457583104, http://youtu.be/z-KeENeR6aM?a
+2014-02-09 10:40:03,946 INFO Success: 396146705504030720, http://bit.ly/1dWbU6W
+2014-02-09 10:40:14,134 INFO Success: 396714454551130113, http://ht.ly/2BevsV
+2014-02-09 10:40:18,663 INFO Success: 396799877834764290, http://bit.ly/1dDn25X
+2014-02-09 10:40:19,552 ERROR HTTP Error 404: Not Found
+2014-02-09 10:40:19,710 ERROR None
+2014-02-09 10:40:21,200 ERROR 'NoneType' object has no attribute 'head'
+2014-02-09 10:40:21,292 ERROR None
+2014-02-09 10:40:23,076 INFO Success: 396862940680171521, http://bit.ly/1aTgNdU
+2014-02-09 10:40:24,421 INFO Success: 396893988025688064, http://bit.ly/1aTtLIs
+2014-02-09 10:40:24,717 INFO Success: 397039519889125377, http://youtu.be/CDpwIBS6MNA?a
+2014-02-09 10:40:25,918 INFO Success: 397031199522041856, http://lat.ms/1dF6j2d
+2014-02-09 10:40:26,411 INFO Success: 397030449341399040, http://fw.to/0EXcgeb
+2014-02-09 10:40:27,456 INFO Success: 397042301400141824, http://bit.ly/1e7xzt0
+2014-02-09 10:40:28,351 INFO Success: 397039070653587457, http://www.sdcitybeat.com/sandiego/article-12345-david-alvarez-for-san-diego-mayor.html
+2014-02-09 10:40:28,523 INFO Success: 397034110993977345, http://www.latimes.com/local/la-me-sd-mayoral-race-20131103,0,5570429.story
+2014-02-09 10:40:30,107 ERROR 'NoneType' object has no attribute 'head'
+2014-02-09 10:40:30,160 ERROR None
+2014-02-09 10:40:30,993 INFO Success: 397098428502528000, http://bit.ly/19rkqr7
+2014-02-09 10:40:31,924 INFO Success: 397098427848220672, http://bit.ly/19rkqr1
+2014-02-09 10:40:35,236 INFO Success: 397108082762715136, http://bit.ly/1aVTONp
+2014-02-09 10:40:35,424 INFO Success: 397139761493602304, http://www.latimes.com/local/la-me-sd-mayoral-race-20131103,0,5570429.story
+2014-02-09 10:40:36,032 INFO Success: 397188835680874496, http://fb.me/6zfZlhmie
+2014-02-09 10:40:36,408 INFO Success: 397435989632634880, http://www.alvarezformayor.com/
+2014-02-09 10:40:37,056 INFO Success: 397450570493349888, http://sdrostra.com/?p=36358
+2014-02-09 10:40:40,493 INFO Success: 397494948322615296, http://ow.ly/qtCPO
+2014-02-09 10:40:41,532 INFO Success: 397485839627743232, http://is.gd/aLvAZi
+2014-02-09 10:40:41,864 INFO Success: 397493980809551872, http://www.alvarezformayor.com/volunteer
+2014-02-09 10:40:42,947 INFO Success: 397521263888826369, http://bit.ly/172DZ4V
+2014-02-09 10:40:43,536 INFO Success: 397521263888826369, http://bit.ly/Epic21
+2014-02-09 10:40:44,395 INFO Success: 397521262617972736, http://bit.ly/172DZ4V
+2014-02-09 10:40:44,926 INFO Success: 397521262617972736, http://bit.ly/Epic21
+2014-02-09 10:40:47,151 INFO Success: 397536271826169856, http://bit.ly/1iHV1dR
+2014-02-09 10:40:47,730 INFO Success: 397567005358034944, http://youtu.be/MjPBl7c8PBk?a
+2014-02-09 10:40:48,273 INFO Success: 397574111922102272, http://bit.ly/172EuvI
+2014-02-09 10:40:48,971 INFO Success: 397574111922102272, http://bit.ly/Epic21
+2014-02-09 10:40:49,237 INFO Success: 397614249423675392, http://instagram.com/p/gUnsRSEtpo/
+2014-02-09 10:40:53,842 INFO Success: 397797040752558081, http://vosd.org/1gp8af2
+2014-02-09 10:40:58,088 INFO Success: 397797040752558081, http://vosd.org/1a5FfHQ
+2014-02-09 10:40:59,032 INFO Success: 397825783651377152, http://fb.me/1Q7DhbKSw
+2014-02-09 10:41:08,638 ERROR [Errno 10054] An existing connection was forcibly closed by the remote host
+2014-02-09 10:41:08,793 ERROR None
+2014-02-09 10:41:18,614 ERROR [Errno 10054] An existing connection was forcibly closed by the remote host
+2014-02-09 10:41:18,756 ERROR None
+2014-02-09 10:41:22,595 INFO Success: 399270451777916928, http://ow.ly/2BoHYw
+2014-02-09 10:41:23,052 INFO Success: 399270450561564672, http://ow.ly/2BoHZ5
+2014-02-09 10:41:23,723 INFO Success: 399242322074152960, http://fb.me/28u1CJ4ta
+2014-02-09 10:41:24,819 INFO Success: 399014204663160832, http://fb.me/2NsuILBAa
+2014-02-09 10:41:25,723 INFO Success: 398971057891069952, http://bit.ly/1awvdME
+2014-02-09 10:41:29,142 INFO Success: 398971097385029632, http://ow.ly/qDGWK
+2014-02-09 10:41:32,316 INFO Success: 398910606419324928, http://ow.ly/qDljQ
+2014-02-09 10:41:32,684 INFO Success: 398814188103299072, http://ow.ly/qCFia
+2014-02-09 10:41:33,102 INFO Success: 398664653427187712, http://instagram.com/p/gcJgLeP2st/
+2014-02-09 10:41:36,993 INFO Success: 398517126094663681, http://ow.ly/2BnuX6
+2014-02-09 10:41:37,509 INFO Success: 398231418884472832, http://youtu.be/bWbY7bUDAQk
+2014-02-09 10:41:38,266 INFO Success: 398175075397931008, http://ow.ly/qyMow
+2014-02-09 10:41:39,792 INFO Success: 398175288627953664, http://fb.me/2Dk4hjuCP
+2014-02-09 10:41:40,326 INFO Success: 397929593870749696, http://youtu.be/paTPIaoGfZE?a
+2014-02-09 10:41:40,713 ERROR HTTP Error 404: Not Found
+2014-02-09 10:41:40,927 ERROR None
+2014-02-09 10:41:42,450 INFO Success: 397897116502065152, http://dlvr.it/4GZfDV
+2014-02-09 10:41:42,618 INFO Success: 397890442210971648, http://q.gs/50eD6
+2014-02-09 10:41:43,894 INFO Success: 397881001961349120, http://bit.ly/1cOsLom
+2014-02-09 10:41:45,486 INFO Success: 397859244684226560, http://yhoo.it/1cOcY98
+2014-02-09 10:41:46,283 INFO Success: 397850434339348480, http://4sq.com/Hv0mcJ
+2014-02-09 10:41:47,786 INFO Success: 397845731895046144, http://bit.ly/178msxw
+2014-02-09 10:41:48,243 INFO Success: 397808276790059008, http://ow.ly/2BjNIe
+2014-02-09 10:41:52,391 INFO Success: 397789056278360064, http://vosd.org/1a5FfHQ
+2014-02-09 10:41:56,051 INFO Success: 397789056278360064, http://vosd.org/16APdk2
+2014-02-09 10:41:59,859 INFO Success: 397793521085599745, http://vosd.org/1a5FfHQ
+2014-02-09 10:42:01,026 INFO Success: 397807372514918400, http://fb.me/3tCz0Gz84
+2014-02-09 10:42:01,217 INFO Success: 397759924924448768, http://q.gs/50X2C
+2014-02-09 10:42:01,654 INFO Success: 397760308342571008, http://www.youtube.com/watch?v=JHiKDa4ip_Q&sns=tw
+2014-02-09 10:42:02,701 INFO Success: 397730154400985089, http://bit.ly/1752pjH
+2014-02-09 10:42:03,250 INFO Success: 397760209998712833, http://fb.me/6z1KOw8PB
+2014-02-09 10:42:04,588 INFO Success: 397561418926792704, http://bit.ly/1aYRk2L
+2014-02-09 10:42:05,950 INFO Success: 397563986876444672, http://bit.ly/1aZY6oN
+2014-02-09 10:42:07,190 INFO Success: 397565046030893056, http://bit.ly/1aYRk2L
+2014-02-09 10:42:07,812 INFO Success: 397562481817944064, http://bit.ly/1aYRk2L
+2014-02-09 10:42:08,733 INFO Success: 397545086235738112, http://j.mp/1a3YkKx
+2014-02-09 10:42:09,701 INFO Success: 397551081686712320, http://bit.ly/1aZY6oN
+2014-02-09 10:42:10,125 INFO Success: 397549129485672448, http://bit.ly/1752pjH
+2014-02-09 10:42:10,704 INFO Success: 397546301279449088, http://fb.me/3aS2lCLYd
+2014-02-09 10:42:11,611 INFO Success: 397539628778921984, http://bit.ly/1b1vcml
+2014-02-09 10:42:12,105 INFO Success: 397472796629938176, http://twitdoc.com/2FDD
+2014-02-09 10:42:12,852 INFO Success: 397492548438331392, http://4sq.com/1aAzuos
+2014-02-09 10:42:13,246 INFO Success: 397487243557761024, http://bit.ly/1aYFDsW
+2014-02-09 10:42:13,497 INFO Success: 397448841277890560, http://q.gs/50JTZ
+2014-02-09 10:42:14,582 INFO Success: 397479386850406400, http://inewsource.org/the-truth-about-nathan-fletcher/
+2014-02-09 10:42:17,270 INFO Success: 397449547351601152, http://bit.ly/184SUfa
+2014-02-09 10:42:21,119 INFO Success: 397454421061533696, http://fb.me/11QxMt2Fw
+2014-02-09 10:42:22,299 INFO Success: 397365824023166976, http://bit.ly/1dHCe1S
+2014-02-09 10:42:26,214 INFO Success: 397335430074339328, http://vosd.org/1cGiwT5
+2014-02-09 10:42:26,431 INFO Success: 397333129083379712, http://q.gs/50DA3
+2014-02-09 10:42:27,813 INFO Success: 397430487213678592, http://fb.me/2vHXfKaGu
+2014-02-09 10:42:29,819 INFO Success: 397168871146549248, http://bit.ly/1aUxsxC
+2014-02-09 10:42:31,158 INFO Success: 397160892762038272, http://sdrostra.com/?p=36345
+2014-02-09 10:42:34,828 INFO Success: 397152083562213376, http://ow.ly/qrVk7
+2014-02-09 10:42:37,203 INFO Success: 397123176062148608, http://www.sandiegoreader.com/news/2013/oct/29/ticker-ucsd-conceals-fletchers-graduating-late/
+2014-02-09 10:42:37,655 INFO Success: 397065002542067712, http://10news.com/news/politics/poll-kevin-faulconer-leaps-ahead-of-former-frontrunner-nathan-fletcher-in-san-diego-mayoral-race11032013
+2014-02-09 10:42:38,112 INFO Success: 396998111098204161, http://bit.ly/17FA4yR
+2014-02-09 10:42:38,980 ERROR HTTP Error 404: NOT FOUND
+2014-02-09 10:42:39,096 ERROR None
+2014-02-09 10:42:40,121 INFO Success: 396833429712420864, http://twitdoc.com/2FJ8
+2014-02-09 10:42:41,203 ERROR HTTP Error 404: NOT FOUND
+2014-02-09 10:42:41,364 ERROR None
+2014-02-09 10:42:44,940 ERROR HTTP Error 404: NOT FOUND
+2014-02-09 10:42:45,043 ERROR None
+2014-02-09 10:42:45,759 ERROR HTTP Error 404: NOT FOUND
+2014-02-09 10:42:45,914 ERROR None
+2014-02-09 10:42:46,121 INFO Success: 396784820837036032, http://q.gs/4zsYv
+2014-02-09 10:42:46,632 INFO Success: 396785344340692994, http://twitdoc.com/2FJ8
+2014-02-09 10:42:47,121 INFO Success: 396763837208072193, http://twitdoc.com/2FJ8
+2014-02-09 10:42:47,571 INFO Success: 396767569274605568, http://twitdoc.com/2FJ8
+2014-02-09 10:42:48,138 INFO Success: 396745158672134144, http://twitdoc.com/2FJ8
+2014-02-09 10:42:48,936 INFO Success: 396744568260939776, http://twitdoc.com/2FJ8
+2014-02-09 10:42:49,388 INFO Success: 396750472029032448, http://twitdoc.com/2FJ8
+2014-02-09 10:42:49,562 INFO Success: 396727445849505792, http://q.gs/4zqLV
+2014-02-09 10:42:50,720 INFO Success: 396731774207655936, http://bit.ly/1dCJ0Gk
+2014-02-09 10:42:51,548 INFO Success: 396673265084956672, http://4sq.com/1e3lKnx
+2014-02-09 10:42:51,756 INFO Success: 396485614796697600, http://q.gs/4zgPP
+2014-02-09 10:42:53,194 INFO Success: 396488113734025217, http://j.mp/1b12Xmk
+2014-02-09 10:42:54,101 INFO Success: 396470713475149824, http://bit.ly/1e0AeEK
+2014-02-09 10:42:55,457 INFO Success: 396464373842980864, http://bit.ly/1aiISHf
+2014-02-09 10:42:56,497 INFO Success: 396464655310139392, http://bit.ly/1e0AeEK
+2014-02-09 10:42:56,783 INFO Success: 396465999899160577, http://q.gs/4zfWW
+2014-02-09 10:42:57,788 INFO Success: 396455375576113153, http://bit.ly/1e0AeEK
+2014-02-09 10:42:58,700 INFO Success: 396456144249434112, http://bit.ly/1e0AeEK
+2014-02-09 10:42:58,888 INFO Success: 396446057409703936, http://q.gs/4zehB
+2014-02-09 10:42:59,851 INFO Success: 396431313311260672, http://bit.ly/1cwmSMH
+2014-02-09 10:43:00,967 INFO Success: 396319678857220096, http://bit.ly/1aNj0aJ
+2014-02-09 10:43:01,970 INFO Success: 396322297922867200, http://bit.ly/1aNj0aJ
+2014-02-09 10:43:02,969 INFO Success: 396125771258806272, http://www.utsandiego.com/news/2013/oct/31/critics-focus-on-fletchers-about-face-on-issues/
+2014-02-09 10:43:03,154 INFO Success: 396055501529559040, http://q.gs/4zLzC
+2014-02-09 10:43:04,125 INFO Success: 396056958857674752, http://utsd.us/16QUJfu
+2014-02-09 10:43:05,328 INFO Success: 396061267305431041, http://bit.ly/1dV685r
+2014-02-09 10:43:05,687 INFO Success: 396056891563864064, http://utsd.us/16QUJfu
+2014-02-09 10:43:06,510 INFO Success: 396048287330881537, http://bit.ly/1crAngn
+2014-02-09 10:43:06,881 INFO Success: 396047650862034944, http://bit.ly/16QPRXL
+2014-02-09 10:43:08,549 INFO Success: 395960146259890176, http://j.mp/1aLD0KO
+2014-02-09 10:43:08,999 INFO Success: 395936043616071680, http://twitdoc.com/2FDD
+2014-02-09 10:43:09,127 INFO Success: 395957047704825856, http://www.kevinfaulconer.com/media/videos/
+2014-02-09 10:43:10,405 INFO Success: 395899935763496960, http://j.mp/1aFhdma
+2014-02-09 10:43:10,663 INFO Success: 395742636637569026, http://q.gs/4z5uh
+2014-02-09 10:43:10,841 INFO Success: 395742638793449472, http://q.gs/4z5uk
+2014-02-09 10:43:11,653 INFO Success: 395721360128761858, http://dlvr.it/4Dp1WK
+2014-02-09 10:43:11,823 INFO Success: 395724673398226944, http://q.gs/4z5DS
+2014-02-09 10:43:12,967 INFO Success: 395725816325087232, http://bit.ly/1drmCPX
+2014-02-09 10:43:14,000 INFO Success: 395725816933281793, http://bit.ly/1dQ54zF
+2014-02-09 10:43:14,592 INFO Success: 395701452309405697, http://goo.gl/TJ7zRs
+2014-02-09 10:43:15,385 INFO Success: 395732385414656000, http://bit.ly/1dQ54zF
+2014-02-09 10:43:15,596 INFO Success: 395697729579388928, http://m.utsandiego.com/news/2013/oct/29/nathan-fletcher-all-things-to-all-people/
+2014-02-09 10:43:16,058 INFO Success: 395689489420390400, http://twitdoc.com/2FDD
+2014-02-09 10:43:17,023 INFO Success: 395692329392021504, http://twitdoc.com/2FDD
+2014-02-09 10:43:17,348 INFO Success: 395639943915384832, http://instagram.com/p/gGqBc2MaoF/
+2014-02-09 10:43:17,979 ERROR HTTP Error 404: Not Found
+2014-02-09 10:43:18,085 ERROR None
+2014-02-09 10:43:19,405 INFO Success: 395658899090468864, http://bit.ly/1aEwpzR
+2014-02-09 10:43:20,380 INFO Success: 395615482960556032, http://bit.ly/19btakV
+2014-02-09 10:43:23,878 INFO Success: 395610717241761792, http://ow.ly/26i2lU
+2014-02-09 10:43:26,845 INFO Success: 395620772762226688, http://ow.ly/qkF3Q
+2014-02-09 10:43:27,085 INFO Success: 395611381531426817, http://ow.ly/qkF3Q
+2014-02-09 10:43:29,460 INFO Success: 395582671734456320, http://buff.ly/16IrmkF
+2014-02-09 10:43:30,265 INFO Success: 395587657121529856, http://buff.ly/16IrmkF
+2014-02-09 10:43:31,381 INFO Success: 395590243459813376, http://j.mp/1aI59Cp
+2014-02-09 10:43:33,627 INFO Success: 395553753098891264, http://bit.ly/HtSgRr
+2014-02-09 10:43:35,884 INFO Success: 395557060378505216, http://bit.ly/1isQMTo
+2014-02-09 10:43:38,019 INFO Success: 395557374905556993, http://bit.ly/1isQMTo
+2014-02-09 10:43:38,924 INFO Success: 395554135120314368, http://bit.ly/1isQMTo
+2014-02-09 10:43:40,733 INFO Success: 395556140995461120, http://bit.ly/HtSgRr
+2014-02-09 10:43:41,858 INFO Success: 395521204930772992, http://buff.ly/1ipFFKU
+2014-02-09 10:43:43,056 INFO Success: 395449181835235328, http://bit.ly/Hr5YFA
+2014-02-09 10:43:47,690 INFO Success: 395534607606878208, http://ow.ly/qjQrU
+2014-02-09 10:43:48,414 INFO Success: 395426367807844352, http://www.sandiegoreader.com/news/2013/oct/29/ticker-ucsd-conceals-fletchers-graduating-late/
+2014-02-09 10:43:48,858 INFO Success: 395418765053001728, http://www.utsandiego.com/news/2013/oct/29/nathan-fletcher-all-things-to-all-people/
+2014-02-09 10:43:50,596 INFO Success: 395427712866586624, http://j.mp/1f33V5z
+2014-02-09 10:43:51,918 INFO Success: 395413944099438592, http://j.mp/1f33V5z
+2014-02-09 10:43:53,762 INFO Success: 395421077066625024, http://fb.me/2ZXOZg3Zi
+2014-02-09 10:43:56,420 INFO Success: 395403229615640577, http://bit.ly/1aGoML3
+2014-02-09 10:43:59,654 INFO Success: 395409935615291392, http://bit.ly/HtCoOC
+2014-02-09 10:43:59,855 INFO Success: 395412759522717697, http://www.utsandiego.com/news/2013/oct/29/nathan-fletcher-all-things-to-all-people/
+2014-02-09 10:44:01,108 INFO Success: 395402012810305537, http://j.mp/HoYHFT
+2014-02-09 10:44:01,292 INFO Success: 395393677255651328, http://m.utsandiego.com/news/2013/oct/29/nathan-fletcher-all-things-to-all-people/
+2014-02-09 10:44:02,555 INFO Success: 395372264406777857, http://bit.ly/1aFXZyA
+2014-02-09 10:44:03,119 INFO Success: 395378247892213760, http://ow.ly/qj4vc
+2014-02-09 10:44:03,479 INFO Success: 395347659080216576, http://q.gs/4ymyB
+2014-02-09 10:44:03,665 INFO Success: 395347660065873920, http://q.gs/4ymyC
+2014-02-09 10:44:04,502 INFO Success: 395341455042285568, http://j.mp/1aFV5K6
+2014-02-09 10:44:05,631 INFO Success: 395341889827635200, http://dlvr.it/4DRr8g
+2014-02-09 10:44:08,316 INFO Success: 395350066548199424, http://ow.ly/2BapSs
+2014-02-09 10:44:08,940 INFO Success: 395323928710631424, http://youtu.be/Tg2iSVdxd-I
+2014-02-09 10:44:09,239 INFO Success: 395351306237657088, http://ow.ly/2BamG2
+2014-02-09 10:44:10,512 INFO Success: 395351847034044416, http://bit.ly/1aFXZyA
+2014-02-09 10:44:11,132 INFO Success: 395313503520980992, http://youtu.be/9wi53MeAItQ?a
+2014-02-09 10:44:11,809 INFO Success: 395320048937472001, http://www.sandiegoreader.com/news/2013/oct/29/ticker-ucsd-conceals-fletchers-graduating-late/
+2014-02-09 10:44:12,927 INFO Success: 395317438289838080, http://j.mp/1cixoqu
+2014-02-09 10:44:13,941 INFO Success: 395321484551282688, http://whereisfletcher.com/10news-nathan-fletchers-lack-transparency/
+2014-02-09 10:44:15,697 INFO Success: 395296044755341312, http://bit.ly/1chQ9dG
+2014-02-09 10:44:16,477 INFO Success: 395297379684855809, http://dlvr.it/4DQ4Ks
+2014-02-09 10:44:19,265 INFO Success: 395306011034005504, http://sandiegofreepress.org/2013/10/whats-next-for-political-reporting-in-san-diego-a-nose-hair-census/#comment-972388
+2014-02-09 10:44:19,503 INFO Success: 395266517958287361, http://q.gs/4yiq6
+2014-02-09 10:44:19,739 INFO Success: 395273630847741953, http://q.gs/4yjBW
+2014-02-09 10:44:20,105 INFO Success: 395276339328352256, http://www.youtube.com/watch?v=V466j632rBc&feature=youtu.be
+2014-02-09 10:44:21,891 INFO Success: 395264314593918976, http://tinyurl.com/n49aerd
+2014-02-09 10:44:22,543 INFO Success: 395251484385767424, http://www.youtube.com/watch?v=-cRnOMuOEII
+2014-02-09 10:44:23,348 INFO Success: 395259484530294785, http://ow.ly/qikt5
+2014-02-09 10:44:25,453 INFO Success: 395240981731094528, http://bit.ly/Ht0klf
+2014-02-09 10:44:26,500 INFO Success: 395228926420602880, http://bit.ly/1chiocD
+2014-02-09 10:44:26,676 INFO Success: 395209923102928897, http://q.gs/4yfMg
+2014-02-09 10:44:27,292 INFO Success: 395242376949944321, http://fox5sandiego.com
+2014-02-09 10:44:28,374 INFO Success: 395242376949944321, http://ift.tt/HqIWhZ
+2014-02-09 10:44:31,232 INFO Success: 395195336387330048, http://ow.ly/qbLnP
+2014-02-09 10:44:32,349 INFO Success: 395191722701234176, http://bit.ly/16G0i5A
+2014-02-09 10:44:32,647 INFO Success: 395173101622681600, http://q.gs/4ydGy
+2014-02-09 10:44:33,707 INFO Success: 395227038694404097, http://bit.ly/1chh5u4
+2014-02-09 10:44:34,825 INFO Success: 395138738193301504, http://wp.me/pFr7n-19t
+2014-02-09 10:44:35,697 INFO Success: 395138785371242496, http://goo.gl/fb/09Zs9
+2014-02-09 10:44:37,013 INFO Success: 395052012372361216, http://bit.ly/16AEsLl
+2014-02-09 10:44:37,490 INFO Success: 395052798087163905, http://dlvr.it/4D8r9M
+2014-02-09 10:44:37,691 INFO Success: 395064098058010624, http://q.gs/4yZ6y
+2014-02-09 10:44:39,744 INFO Success: 395193712323477505, http://bit.ly/1dIpgDN
+2014-02-09 10:44:41,091 INFO Success: 395009630117842944, http://bit.ly/1aC4gLL
+2014-02-09 10:44:41,631 INFO Success: 394998398341767169, http://espn.go.com/blog/san-diego-chargers/post/_/id/1266/qb-rivers-faces-ironman-mlb-fletcher
+2014-02-09 10:44:41,937 INFO Success: 394984875888881664, http://q.gs/4yWSu
+2014-02-09 10:44:42,750 INFO Success: 394916648743751680, http://bit.ly/1aC40wc
+2014-02-09 10:44:42,963 INFO Success: 394917353030291456, http://q.gs/4yT31
+2014-02-09 10:44:44,009 INFO Success: 394928459623178240, http://fb.me/2crpWBkaC
+2014-02-09 10:44:44,173 INFO Success: 394929609910673408, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27928
+2014-02-09 10:44:45,141 INFO Success: 394908074752094208, http://inewsource.org/follow-the-money-updated-daily/
+2014-02-09 10:44:46,154 INFO Success: 394888605925404672, http://ow.ly/i/3ynU0
+2014-02-09 10:44:49,854 INFO Success: 394897638086438912, http://ow.ly/qfM5z
+2014-02-09 10:44:50,888 INFO Success: 394890405332131842, http://bit.ly/1aNLsWt
+2014-02-09 10:44:52,273 INFO Success: 394918372783046657, http://bit.ly/16AEsLl
+2014-02-09 10:44:52,430 INFO Success: 394896936039227392, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27928
+2014-02-09 10:44:56,733 INFO Success: 394887060764372992, http://voiceofsandiego.org/2013/10/28/fact-check-city-workers-and-401ks/
+2014-02-09 10:44:57,815 INFO Success: 394882768082980864, http://bit.ly/1cdeWzz
+2014-02-09 10:44:58,266 INFO Success: 394861733161889792, http://www.youtube.com/watch?v=aWI7sEX3ME8&feature=youtu.be
+2014-02-09 10:45:02,240 INFO Success: 394882924405088256, http://fb.me/1ZGtckE98
+2014-02-09 10:45:03,088 INFO Success: 394600605010128896, http://fb.me/2vntGhzFD
+2014-02-09 10:45:04,063 INFO Success: 394603014083727360, http://bit.ly/1ayCtM8
+2014-02-09 10:45:04,719 INFO Success: 394523515053174785, http://fb.me/2CIG9nwzy
+2014-02-09 10:45:06,038 INFO Success: 394489978727583744, http://bit.ly/1hhB1AN
+2014-02-09 10:45:07,230 INFO Success: 394481256903106560, http://www.stayarlington.com/mcm
+2014-02-09 10:45:07,769 INFO Success: 394362815336566784, http://youtu.be/F50FCnAjl3U
+2014-02-09 10:45:08,901 INFO Success: 394346937958146048, http://www.10news.com/news/san-diego-mayoral-candidates-go-in-depth-nathan-fletcher-102513
+2014-02-09 10:45:14,411 INFO Success: 394349419149029376, http://buff.ly/1iiHadT
+2014-02-09 10:45:15,957 INFO Success: 394346947110137856, http://bit.ly/1hhB1AN
+2014-02-09 10:45:17,381 INFO Success: 394331523018928128, http://bit.ly/1hhB1AN
+2014-02-09 10:45:17,846 INFO Success: 394208760844926976, http://ow.ly/qbLnP
+2014-02-09 10:45:18,862 INFO Success: 394184656200814592, http://bit.ly/1dbAoWK
+2014-02-09 10:45:20,325 INFO Success: 394105085997113344, http://bit.ly/HkZeJ8
+2014-02-09 10:45:24,128 INFO Success: 394092232036593664, http://ow.ly/2B4kNT
+2014-02-09 10:45:25,559 INFO Success: 394104931021766656, http://fb.me/1SBx8mMV1
+2014-02-09 10:45:26,555 INFO Success: 394092232267280384, http://ow.ly/2B4kNF
+2014-02-09 10:45:26,976 INFO Success: 393950519942598657, http://q.gs/4xo3b
+2014-02-09 10:45:27,381 INFO Success: 393953316649963520, http://www.10news.com/news/investigations/san-diego-mayoral-candidates-pull-double-duty-with-work-campaigns
+2014-02-09 10:45:27,565 INFO Success: 393953806355939328, http://www.10news.com/news/investigations/san-diego-mayoral-candidates-pull-double-duty-with-work-campaigns
+2014-02-09 10:45:29,249 INFO Success: 393920703827050497, http://bit.ly/1iiNrpM
+2014-02-09 10:45:29,696 INFO Success: 393859116344410112, http://q.gs/4xkMX
+2014-02-09 10:45:30,369 INFO Success: 393866201845497857, http://ow.ly/qbSmR
+2014-02-09 10:45:30,842 INFO Success: 393835747028897792, http://youtu.be/U7qpw0hZGhs
+2014-02-09 10:45:32,111 INFO Success: 393803545608060928, http://sandiegofreepress.org/2013/10/why-i-am-not-voting-for-nathan-fletcher/#.Umq1K1zFcvQ.twitter
+2014-02-09 10:45:32,744 INFO Success: 393785442254213121, http://j.mp/16AjvQQ
+2014-02-09 10:45:33,845 ERROR 'NoneType' object has no attribute 'head'
+2014-02-09 10:45:33,903 ERROR None
+2014-02-09 10:45:35,148 INFO Success: 393724523981201408, http://sandiegofreepress.org/2013/10/why-i-am-not-voting-for-nathan-fletcher/#.UmpsEW4hhNY.twitter
+2014-02-09 10:45:36,480 INFO Success: 393756134290366464, http://sandiegofreepress.org/2013/10/why-i-am-not-voting-for-nathan-fletcher/
+2014-02-09 10:45:37,470 INFO Success: 393588306341920768, http://bit.ly/19Co6W2
+2014-02-09 10:45:38,029 INFO Success: 393591245043269632, http://ow.ly/q9CNN
+2014-02-09 10:45:38,482 INFO Success: 393594953433358336, http://ow.ly/q9CNN
+2014-02-09 10:45:39,033 INFO Success: 393600775697334272, http://ow.ly/q9CNN
+2014-02-09 10:45:39,365 INFO Success: 393573992470024193, http://www.youtube.com/watch?v=Bat95uRedJE&feature=youtu.be
+2014-02-09 10:45:40,108 INFO Success: 393501323280121856, http://youtu.be/Bat95uRedJE
+2014-02-09 10:45:40,617 INFO Success: 393424802784231425, http://ow.ly/2B0RyQ
+2014-02-09 10:45:40,839 INFO Success: 393362159855345664, http://q.gs/4xJZ3
+2014-02-09 10:45:45,490 INFO Success: 393349481485193216, http://vosd.org/1d1A4Kg
+2014-02-09 10:45:49,825 INFO Success: 393339109290156033, http://vosd.org/1acYu10
+2014-02-09 10:45:50,469 INFO Success: 393240197678133248, http://youtu.be/7Blw6grURiU
+2014-02-09 10:45:50,707 INFO Success: 393137741241655296, http://q.gs/4x95o
+2014-02-09 10:45:53,678 INFO Success: 393148166927040512, http://simonduringer.com/?p=629
+2014-02-09 10:45:56,615 INFO Success: 393109505384677376, http://ow.ly/q6Whs
+2014-02-09 10:45:58,237 INFO Success: 392892786942287873, http://simonduringer.com/?p=629
+2014-02-09 10:45:59,065 INFO Success: 392849925634920448, http://dlvr.it/4BKdP5
+2014-02-09 10:46:00,319 INFO Success: 392785437942493184, http://sandiegodom.com/mls/130056544.aspx
+2014-02-09 10:46:03,641 INFO Success: 392781911699259392, http://simonduringer.com/?p=629
+2014-02-09 10:46:07,732 INFO Success: 392743152324329472, http://simonduringer.com/?p=629
+2014-02-09 10:46:08,160 INFO Success: 392729050307121152, http://ow.ly/2AX4jG
+2014-02-09 10:46:09,512 INFO Success: 392705184519823360, http://bit.ly/1bTqCat
+2014-02-09 10:46:10,336 INFO Success: 392668469428506624, http://4sq.com/1eGtbP5
+2014-02-09 10:46:11,576 INFO Success: 392657045934972929, http://bit.ly/1a99vCq
+2014-02-09 10:46:12,677 INFO Success: 392661360988798978, http://bit.ly/1a99vCq
+2014-02-09 10:46:17,173 INFO Success: 392515551022436354, http://ow.ly/q2zP1
+2014-02-09 10:46:18,948 INFO Success: 392515481828982785, http://ow.ly/q2zP1
+2014-02-09 10:46:19,539 INFO Success: 392496297514512384, http://bit.ly/1dcWFWF
+2014-02-09 10:46:20,118 INFO Success: 392493964399370240, http://ow.ly/q2zP1
+2014-02-09 10:46:21,131 INFO Success: 392497284430458880, http://ow.ly/q2zP1
+2014-02-09 10:46:22,368 INFO Success: 392469223596761089, http://shar.es/EViZI
+2014-02-09 10:46:22,599 INFO Success: 392470247128563712, http://q.gs/4wb3A
+2014-02-09 10:46:23,802 INFO Success: 392478972736311296, http://bit.ly/GZrukq
+2014-02-09 10:46:25,200 INFO Success: 392479074477543425, http://bit.ly/19p4sNf
+2014-02-09 10:46:26,618 INFO Success: 392481978538143745, http://dlvr.it/4B05zR
+2014-02-09 10:46:28,413 INFO Success: 392442590098096128, http://bit.ly/1aAzz6d
+2014-02-09 10:46:29,576 INFO Success: 392429461800361984, http://bit.ly/19p4sNf
+2014-02-09 10:46:29,892 INFO Success: 392428647442702336, http://q.gs/4wZAN
+2014-02-09 10:46:30,427 INFO Success: 392427016823115777, http://bit.ly/19p4sNf
+2014-02-09 10:46:31,072 INFO Success: 392430450553004033, http://bit.ly/19p4sNf
+2014-02-09 10:46:31,243 INFO Success: 392420460421316609, http://q.gs/4wYl5
+2014-02-09 10:46:31,941 INFO Success: 392423338334638080, http://kgtv.m0bl.net/r/1ospn0
+2014-02-09 10:46:35,825 INFO Success: 392423211545014272, http://voiceofsandiego.org/2013/10/13/vosd-radio-dont-tax-me-bro/
+2014-02-09 10:46:38,523 ERROR 'NoneType' object has no attribute 'head'
+2014-02-09 10:46:38,572 ERROR None
+2014-02-09 10:46:39,858 INFO Success: 392418536510861312, http://bit.ly/1cPWRIO
+2014-02-09 10:46:40,101 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:46:40,233 ERROR None
+2014-02-09 10:46:41,243 INFO Success: 392393142143418368, http://bit.ly/19oQCKJ
+2014-02-09 10:46:41,476 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:46:41,595 ERROR None
+2014-02-09 10:46:44,792 INFO Success: 392351323238461440, http://ow.ly/q1UkC
+2014-02-09 10:46:45,012 INFO Success: 392349927151394816, http://www.utsandiego.com/news/2013/oct/21/jerry-brown-endorses-fletcher-mayor/
+2014-02-09 10:46:45,566 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:46:45,706 ERROR None
+2014-02-09 10:46:46,663 INFO Success: 392353961476231168, http://bit.ly/1dbn4nO
+2014-02-09 10:46:46,973 INFO Success: 392346809890529280, http://www.utsandiego.com/news/2013/oct/21/jerry-brown-endorses-fletcher-mayor/
+2014-02-09 10:46:47,411 INFO Success: 392311102144393216, http://www.youtube.com/watch?v=9R6yIGF017g&feature=youtu.be
+2014-02-09 10:46:48,430 INFO Success: 392289237371854848, http://bit.ly/19nxLQg
+2014-02-09 10:46:48,773 INFO Success: 391948343116451840, http://bit.ly/19W69R6
+2014-02-09 10:46:50,144 INFO Success: 391919315106009088, http://bit.ly/19k8Qx1
+2014-02-09 10:46:50,986 INFO Success: 391565808767209472, http://bit.ly/1a13TKq
+2014-02-09 10:46:51,209 INFO Success: 391349161984946177, http://q.gs/4vq2X
+2014-02-09 10:46:51,470 INFO Success: 391325199410282496, http://q.gs/4vowm
+2014-02-09 10:46:52,720 INFO Success: 391345775004766208, http://bit.ly/18uavjW
+2014-02-09 10:46:52,854 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:46:52,948 ERROR None
+2014-02-09 10:46:56,743 INFO Success: 391044815150153728, http://ift.tt/17PGzKT
+2014-02-09 10:46:58,095 INFO Success: 390912042565373953, http://utsd.us/19N966A
+2014-02-09 10:46:59,173 INFO Success: 390911752893767680, http://fb.me/16NRt3V0R
+2014-02-09 10:47:04,954 INFO Success: 390948572243697664, http://ow.ly/pVlp0
+2014-02-09 10:47:05,572 INFO Success: 390916908889178112, http://fb.me/16NRt3V0R
+2014-02-09 10:47:06,506 INFO Success: 390918902756417536, http://sandiegodom.com/mls/130055669.aspx
+2014-02-09 10:47:06,903 INFO Success: 390914271183241217, http://bit.ly/19N966B
+2014-02-09 10:47:11,266 INFO Success: 390927002426806272, http://vosd.org/19UEsdo
+2014-02-09 10:47:11,470 INFO Success: 390925799290707969, http://q.gs/4vWXG
+2014-02-09 10:47:11,665 INFO Success: 390926547013496832, http://q.gs/4vWZg
+2014-02-09 10:47:12,191 ERROR HTTP Error 404: NOT FOUND
+2014-02-09 10:47:12,332 ERROR None
+2014-02-09 10:47:13,240 INFO Success: 390918748473163776, http://bit.ly/1cZGjk6
+2014-02-09 10:47:13,657 INFO Success: 390697382989422592, https://www.youtube.com/watch?feature=player_embedded&v=Vi2fw-OUrX4#t=166
+2014-02-09 10:47:16,710 INFO Success: 390667929945382912, http://fb.me/1YRLF6W2p
+2014-02-09 10:47:17,381 INFO Success: 390563970630696960, http://bit.ly/17uh2Yi
+2014-02-09 10:47:18,477 INFO Success: 390563970630696960, http://bit.ly/GZrukq
+2014-02-09 10:47:19,052 INFO Success: 390383354421727232, http://fb.me/1ZZEZB68D
+2014-02-09 10:47:19,726 INFO Success: 390198922380976128, http://www.kpbs.org/news/2013/oct/15/motivation-nathan-fletcher-political-metamorphosis/
+2014-02-09 10:47:20,450 INFO Success: 390190994861613056, http://bit.ly/GZwaGZ
+2014-02-09 10:47:21,336 INFO Success: 390185861591363584, http://fb.me/17XvrLIWJ
+2014-02-09 10:47:22,063 INFO Success: 390160369995767808, http://www.kpbs.org/news/2013/oct/15/motivation-nathan-fletcher-political-metamorphosis/
+2014-02-09 10:47:23,160 INFO Success: 390163928187432961, http://bit.ly/GZrukq
+2014-02-09 10:47:23,802 INFO Success: 390151653162500096, http://www.kpbs.org/news/2013/oct/15/motivation-nathan-fletcher-political-metamorphosis/
+2014-02-09 10:47:24,365 INFO Success: 390144015594557440, http://www.kpbs.org/news/2013/oct/15/motivation-nathan-fletcher-political-metamorphosis/
+2014-02-09 10:47:25,461 INFO Success: 390151969727184896, http://bit.ly/GZrukq
+2014-02-09 10:47:26,673 INFO Success: 390119187588190208, http://bit.ly/GZrukq
+2014-02-09 10:47:26,832 INFO Success: 390127337225723904, http://q.gs/4uvqs
+2014-02-09 10:47:27,785 INFO Success: 390121847032786944, http://bit.ly/GZsNzK
+2014-02-09 10:47:28,936 INFO Success: 390119031245520897, http://bit.ly/GZrukq
+2014-02-09 10:47:32,752 INFO Success: 389998740024459264, http://ow.ly/pNvII
+2014-02-09 10:47:35,723 INFO Success: 390031103094173696, http://ow.ly/2AJRqg
+2014-02-09 10:47:36,168 INFO Success: 389988198215987200, http://ow.ly/pNvII
+2014-02-09 10:47:37,500 INFO Success: 389994233144557568, http://buff.ly/H0nCPk
+2014-02-09 10:47:37,997 INFO Success: 390000703222992896, http://youtu.be/rviV5dIgbdE
+2014-02-09 10:47:39,407 INFO Success: 389963891427782656, http://ow.ly/pNvII
+2014-02-09 10:47:39,894 INFO Success: 389986477620199424, http://ow.ly/pNvII
+2014-02-09 10:47:40,375 INFO Success: 389965960431804417, http://ow.ly/pNvII
+2014-02-09 10:47:41,130 INFO Success: 389964443796246528, http://bit.ly/1hSDqzl
+2014-02-09 10:47:42,428 INFO Success: 389936210988531712, http://bit.ly/1gGaKMb
+2014-02-09 10:47:43,915 INFO Success: 389936236083040257, http://bit.ly/1gGaKMb
+2014-02-09 10:47:44,483 INFO Success: 389946642935582721, http://bit.ly/1gGaKMb
+2014-02-09 10:47:45,338 INFO Success: 389902304435896320, http://bit.ly/19CbL2V
+2014-02-09 10:47:45,546 INFO Success: 389905934798958593, http://q.gs/4unEW
+2014-02-09 10:47:45,924 INFO Success: 389907640521723905, http://bit.ly/1cPHUJf
+2014-02-09 10:47:48,013 INFO Success: 389912860974804992, http://bit.ly/19CbL2V
+2014-02-09 10:47:48,628 INFO Success: 389894980728143872, http://bit.ly/1bsF8G1
+2014-02-09 10:47:49,351 INFO Success: 389904791943790592, http://j.mp/165AT4X
+2014-02-09 10:47:49,926 INFO Success: 389798153605902336, http://youtu.be/caYzQ-bCTmY?a
+2014-02-09 10:47:51,184 INFO Success: 389805635443122176, http://bit.ly/19yI96D
+2014-02-09 10:47:52,253 INFO Success: 389805961269223424, http://bit.ly/19yI96D
+2014-02-09 10:47:52,881 INFO Success: 389785025828237312, http://sdrostra.com/?p=36144
+2014-02-09 10:47:53,365 INFO Success: 389772619911659520, http://ow.ly/pNvII
+2014-02-09 10:47:53,924 INFO Success: 389769548574244864, http://bit.ly/19yI96D
+2014-02-09 10:47:54,369 INFO Success: 389771386140774401, http://ow.ly/pNvII
+2014-02-09 10:47:54,828 INFO Success: 389777455709712384, http://ow.ly/pNvII
+2014-02-09 10:47:55,282 INFO Success: 389775064595304449, http://ow.ly/pNvII
+2014-02-09 10:47:56,957 INFO Success: 389551343284662272, http://bit.ly/19JGRta
+2014-02-09 10:47:58,072 INFO Success: 389531056212168704, http://www.utsandiego.com/news/2013/oct/13/tp-rebuilding-city-will-take-investment-leadership/
+2014-02-09 10:47:58,250 INFO Success: 389529732745670656, http://www.utsandiego.com/news/2013/oct/13/tp-rebuilding-city-will-take-investment-leadership/
+2014-02-09 10:47:58,627 INFO Success: 389430594444070913, http://bit.ly/19JGRta
+2014-02-09 10:47:58,977 INFO Success: 389419113774186496, http://bit.ly/19JGRta
+2014-02-09 10:48:00,351 INFO Success: 389429109857587201, http://www.delmartimes.net/?p=58280
+2014-02-09 10:48:01,726 INFO Success: 389363574969094144, http://bit.ly/19Crwso
+2014-02-09 10:48:01,937 INFO Success: 389370149175713792, http://q.gs/4uQcc
+2014-02-09 10:48:02,282 INFO Success: 389360940455448578, http://bit.ly/19JGRta
+2014-02-09 10:48:02,838 INFO Success: 389087822184841217, http://youtu.be/Tg2iSVdxd-I
+2014-02-09 10:48:04,059 INFO Success: 389088897201758208, http://bit.ly/16CuP2k
+2014-02-09 10:48:04,631 INFO Success: 389093917213196288, http://youtu.be/caYzQ-bCTmY?a
+2014-02-09 10:48:05,506 INFO Success: 389079379340320768, http://youtu.be/caYzQ-bCTmY?a
+2014-02-09 10:48:05,989 INFO Success: 389083111167778816, http://bit.ly/GTW3I8
+2014-02-09 10:48:06,599 INFO Success: 389069616032395264, http://fb.me/6pBHSwZwe
+2014-02-09 10:48:08,003 INFO Success: 389049635899064320, http://bit.ly/16CuP2k
+2014-02-09 10:48:12,562 INFO Success: 389052221284814848, http://voiceofsandiego.org/2013/10/11/fletcher-raise-the-linkage-fee/
+2014-02-09 10:48:12,986 INFO Success: 388907689012514816, http://youtu.be/caYzQ-bCTmY?a
+2014-02-09 10:48:13,454 INFO Success: 388900761268011008, http://youtu.be/caYzQ-bCTmY?a
+2014-02-09 10:48:13,875 INFO Success: 388885888945500160, http://youtu.be/caYzQ-bCTmY?a
+2014-02-09 10:48:14,315 INFO Success: 388886345784889344, http://youtu.be/caYzQ-bCTmY?a
+2014-02-09 10:48:14,836 INFO Success: 388876359109337088, http://youtu.be/caYzQ-bCTmY?a
+2014-02-09 10:48:15,369 INFO Success: 388883291199139840, http://youtu.be/caYzQ-bCTmY?a
+2014-02-09 10:48:15,793 INFO Success: 388886086035849216, http://youtu.be/caYzQ-bCTmY?a
+2014-02-09 10:48:19,943 INFO Success: 388939221412900864, http://ift.tt/187grze
+2014-02-09 10:48:21,184 INFO Success: 388861190362771456, http://on.nbc7.com/UmRQt7r
+2014-02-09 10:48:21,657 INFO Success: 388874467906048000, http://youtu.be/caYzQ-bCTmY?a
+2014-02-09 10:48:22,092 INFO Success: 388846328002142208, http://youtu.be/caYzQ-bCTmY?a
+2014-02-09 10:48:22,561 INFO Success: 388856587055816704, http://on.nbc7.com/UmRQt7r
+2014-02-09 10:48:23,052 INFO Success: 388849728685092864, http://ow.ly/pKoRy
+2014-02-09 10:48:23,440 INFO Success: 388857888317267968, http://on.nbc7.com/UmRQt7r
+2014-02-09 10:48:27,426 INFO Success: 388839117506625536, http://vosd.org/1bktpcL
+2014-02-09 10:48:28,900 INFO Success: 388880544366608384, http://fb.me/MNeQpLBB
+2014-02-09 10:48:29,032 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:48:29,115 ERROR None
+2014-02-09 10:48:50,200 ERROR <urlopen error [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+2014-02-09 10:48:50,358 ERROR None
+2014-02-09 10:48:54,272 INFO Success: 388904125401817088, http://dlvr.it/476HcB
+2014-02-09 10:48:57,053 INFO Success: 388792607783911424, http://socialnetworkingnewsportal.com/2013/10/11/mcfly-tom-fletcher-on-keith-lemons-through-the-keyhole-7th-sep-2013-hd/
+2014-02-09 10:49:01,494 INFO Success: 388784433798447104, http://vosd.org/185UkJl
+2014-02-09 10:49:05,813 INFO Success: 388789313426567168, http://www.impaq.me/l/Vcw6DSvIvA
+2014-02-09 10:49:05,967 INFO Success: 388782814742597632, http://q.gs/4u7SA
+2014-02-09 10:49:07,384 INFO Success: 388756873287311360, http://buff.ly/1cEGAsw
+2014-02-09 10:49:08,519 INFO Success: 388760812170805250, http://j.mp/1cEWaEy
+2014-02-09 10:49:09,358 INFO Success: 388762453242179584, http://dlvr.it/4726sT
+2014-02-09 10:49:10,196 INFO Success: 388766608744665088, http://goo.gl/KgbxFY
+2014-02-09 10:49:10,382 INFO Success: 388767842763411456, http://q.gs/4u6nx
+2014-02-09 10:49:11,473 INFO Success: 388757190045356032, http://j.mp/GU3Epo
+2014-02-09 10:49:12,697 INFO Success: 388764937373224960, http://j.mp/1cEWaEy
+2014-02-09 10:49:13,688 INFO Success: 388770342682251264, http://bit.ly/1cF1acw
+2014-02-09 10:49:17,765 INFO Success: 388727657753374720, http://bit.ly/19q8u6y
+2014-02-09 10:49:18,053 INFO Success: 388733866648686593, http://sdrostra.com/?p=36085
+2014-02-09 10:49:19,072 INFO Success: 388767387526246400, http://bit.ly/1cF1acw
+2014-02-09 10:49:20,242 INFO Success: 388712260740603904, http://j.mp/15ZbZ7c
+2014-02-09 10:49:24,948 INFO Success: 388689678078967808, http://bit.ly/1g63trq
+2014-02-09 10:49:26,223 INFO Success: 388508710974152704, http://dlvr.it/46nJJ7
+2014-02-09 10:49:27,782 INFO Success: 388487132828168192, http://fb.me/2p9RoRyGn
+2014-02-09 10:49:27,926 INFO Success: 388469273741758464, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27877
+2014-02-09 10:49:29,038 INFO Success: 388470054657851392, http://bit.ly/1cBv0yw
+2014-02-09 10:49:29,387 INFO Success: 388470055572209664, http://bit.ly/1cBv0yw
+2014-02-09 10:49:30,117 INFO Success: 388452785890418688, http://whereisfletcher.com/
+2014-02-09 10:49:30,247 INFO Success: 388457015124582400, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27877
+2014-02-09 10:49:30,553 INFO Success: 388409074427371520, http://whereisfletcher.com/
+2014-02-09 10:49:30,788 INFO Success: 388409380606967808, http://q.gs/4tsPb
+2014-02-09 10:49:31,571 INFO Success: 388411169259941888, http://bit.ly/19mwojA
+2014-02-09 10:49:32,467 INFO Success: 388409339201212416, http://4sq.com/15rpjPa
+2014-02-09 10:49:33,443 INFO Success: 388421932657303552, http://skateboard.tv/video/27328/interro-greyson-with-greyson-fletcher-part-2
+2014-02-09 10:49:36,239 INFO Success: 388403326683209728, http://ow.ly/pHcFc
+2014-02-09 10:49:39,184 INFO Success: 388416132790898689, http://ow.ly/2ACCGy
+2014-02-09 10:49:40,361 INFO Success: 388391829973921792, http://bit.ly/17ruM51
+2014-02-09 10:49:41,177 INFO Success: 388416212352630784, http://ow.ly/2ACCpv
+2014-02-09 10:49:41,411 INFO Success: 388382309868519425, http://sdrostra.com/?p=36085
+2014-02-09 10:49:41,575 INFO Success: 388388034858586113, http://www.utsandiego.com/news/2013/oct/10/brown-fletcher-mayoral-endorsment/
+2014-02-09 10:49:42,653 INFO Success: 388387827227951104, http://bit.ly/19meTjo
+2014-02-09 10:49:43,773 INFO Success: 388332116074708992, http://wp.me/p2OItl-dva
+2014-02-09 10:49:44,778 INFO Success: 388098694282625024, http://dlvr.it/46Qq7w
+2014-02-09 10:49:45,108 INFO Success: 388104047388917760, http://bit.ly/1c1HBbo
+2014-02-09 10:49:45,430 INFO Success: 388104048307474432, http://bit.ly/1c1HBbo
+2014-02-09 10:49:46,782 INFO Success: 388102803874668544, http://j.mp/19iJTAF
+2014-02-09 10:49:47,982 INFO Success: 388088418707980288, http://buff.ly/GPeM6X
+2014-02-09 10:49:48,924 INFO Success: 388115278845853696, http://bit.ly/19lWm8x
+2014-02-09 10:49:49,312 INFO Success: 388108017062785024, http://utsd.us/1bddJaW
+2014-02-09 10:49:50,492 INFO Success: 388103536610795520, http://bit.ly/19lWm8x
+2014-02-09 10:49:54,664 INFO Success: 387431096839057408, http://ow.ly/pAuFj
+2014-02-09 10:49:54,854 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:49:55,017 ERROR None
+2014-02-09 10:49:56,329 INFO Success: 387628370583756800, http://bit.ly/1b823Xd
+2014-02-09 10:49:56,690 INFO Success: 384549018975875072, http://ow.ly/2AiZRi
+2014-02-09 10:49:58,032 INFO Success: 384682171614912513, http://bit.ly/18Dw5QW
+2014-02-09 10:49:59,035 INFO Success: 385177212376199169, http://bit.ly/19VMyQK
+2014-02-09 10:49:59,210 INFO Success: 385177339505545216, http://q.gs/4rji3
+2014-02-09 10:49:59,556 INFO Success: 385193580823719936, http://bit.ly/19VMyQJ
+2014-02-09 10:49:59,831 INFO Success: 385175888821633026, http://m.utsandiego.com/news/2013/oct/01/fletcher-bike-ride-safety-cycling-plan/
+2014-02-09 10:50:00,230 INFO Success: 385198758176108544, http://bit.ly/1bspPxV
+2014-02-09 10:50:00,586 INFO Success: 385200007889956864, http://bit.ly/19VMyQJ
+2014-02-09 10:50:00,979 INFO Success: 385159485934665728, http://bit.ly/19VMyQJ
+2014-02-09 10:50:01,553 INFO Success: 385444235484626945, http://fb.me/16mvAnwh7
+2014-02-09 10:50:03,634 INFO Success: 385528730589728768, http://www.sdcitybeat.com/sandiego/article-12257-nathan-fletcher-find.html
+2014-02-09 10:50:03,845 INFO Success: 385541058509025280, http://q.gs/4rzRj
+2014-02-09 10:50:05,436 INFO Success: 385546152797798400, http://inewsource.org/follow-the-money-updated-daily/
+2014-02-09 10:50:05,604 INFO Success: 385586426319867904, http://q.gs/4s10s
+2014-02-09 10:50:06,029 INFO Success: 385613725853839360, http://instagram.com/p/e_Zrs9HEhr/
+2014-02-09 10:50:06,382 ERROR HTTP Error 404: Not Found
+2014-02-09 10:50:06,539 ERROR None
+2014-02-09 10:50:07,861 INFO Success: 385843329088643072, http://bit.ly/1bAC9fk
+2014-02-09 10:50:08,990 INFO Success: 385922695356874752, http://bit.ly/1bAC9fk
+2014-02-09 10:50:10,221 INFO Success: 385947800447373313, http://www.sandiegoreader.com/weblogs/news-ticker/2013/oct/03/donor-in-big-money-filner-border-scandal-turns-to-/
+2014-02-09 10:50:10,394 INFO Success: 385923244638748672, http://q.gs/4sFeQ
+2014-02-09 10:50:10,826 INFO Success: 384573349264781312, http://fb.me/2RtYLEmJN
+2014-02-09 10:50:12,056 INFO Success: 385960419858190336, http://dlvr.it/44gh9q
+2014-02-09 10:50:13,249 INFO Success: 385964213333553152, http://dlvr.it/44gh9q
+2014-02-09 10:50:13,555 INFO Success: 385981949715558400, http://m.utsandiego.com/news/2013/oct/03/san-diego-mayor-special-election-polls/
+2014-02-09 10:50:13,746 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:50:13,842 ERROR None
+2014-02-09 10:50:15,371 INFO Success: 386160836882223104, http://fb.me/1WuzBdg2N
+2014-02-09 10:50:15,950 INFO Success: 385086402704465920, http://fb.me/2GDDPy0fH
+2014-02-09 10:50:16,118 INFO Success: 386165937453293568, http://q.gs/4sPv6
+2014-02-09 10:50:17,188 INFO Success: 385431925919186944, http://bit.ly/GzKJkw
+2014-02-09 10:50:18,453 INFO Success: 386217719369981952, http://sandiegofreepress.org/2013/10/the-mystery-of-why-qualcomm-adopted-nathan-fletcher/#.Uk8bcqqm-wd.twitter
+2014-02-09 10:50:19,451 INFO Success: 386173698329165824, http://bit.ly/1fOx7RL
+2014-02-09 10:50:20,611 ERROR HTTP Error 404: Not Found
+2014-02-09 10:50:20,825 ERROR None
+2014-02-09 10:50:21,946 INFO Success: 386176967852060672, http://sandiegofreepress.org/2013/10/the-mystery-of-why-qualcomm-adopted-nathan-fletcher/#.Uk728H9Jyi0.twitter
+2014-02-09 10:50:23,052 INFO Success: 386283136889671680, http://bit.ly/GDCkMU
+2014-02-09 10:50:24,151 INFO Success: 386233754898804736, http://sandiegofreepress.org/2013/10/the-mystery-of-why-qualcomm-adopted-nathan-fletcher/#.Uk8bcqqm-wd.twitter
+2014-02-09 10:50:25,286 INFO Success: 386509809488371713, http://sandiegofreepress.org/2013/10/the-mystery-of-why-qualcomm-adopted-nathan-fletcher/#.UlAstR6qCRF.twitter
+2014-02-09 10:50:26,483 INFO Success: 386201002434502658, http://sandiegofreepress.org/2013/10/the-mystery-of-why-qualcomm-adopted-nathan-fletcher/#.Uk728H9Jyi0.twitter
+2014-02-09 10:50:29,954 INFO Success: 385546931407454208, http://ow.ly/2AonAJ
+2014-02-09 10:50:31,096 INFO Success: 386217444089405441, http://sandiegofreepress.org/2013/10/the-mystery-of-why-qualcomm-adopted-nathan-fletcher/#.Uk8bcqqm-wd.twitter
+2014-02-09 10:50:32,213 INFO Success: 386219267152044032, http://sandiegofreepress.org/2013/10/the-mystery-of-why-qualcomm-adopted-nathan-fletcher/#.Uk8bcqqm-wd.twitter
+2014-02-09 10:50:33,267 INFO Success: 386661622661783552, http://bit.ly/15OtNll
+2014-02-09 10:50:34,176 INFO Success: 385635014257704960, http://fb.me/35IntDCmD
+2014-02-09 10:50:35,276 INFO Success: 386847460384976897, http://sandiegofreepress.org/2013/10/the-mystery-of-why-qualcomm-adopted-nathan-fletcher/#.Uk8bcqqm-wd.twitter
+2014-02-09 10:50:36,433 INFO Success: 385857466619424768, http://tmblr.co/ZGT_3xwi89MC
+2014-02-09 10:50:37,651 INFO Success: 387047600651649025, http://bit.ly/15OtNll
+2014-02-09 10:50:39,532 INFO Success: 387247738590482432, http://wp.me/pFr7n-18p
+2014-02-09 10:50:41,206 INFO Success: 385935361722957824, http://bit.ly/19XVZOq
+2014-02-09 10:50:42,293 INFO Success: 387252224000139265, http://wp.me/pFr7n-18p
+2014-02-09 10:50:42,596 ERROR HTTP Error 404: Not Found
+2014-02-09 10:50:42,726 ERROR None
+2014-02-09 10:50:43,673 INFO Success: 386592391647346689, http://tmblr.co/ZGT_3xwt3hB0
+2014-02-09 10:50:47,188 INFO Success: 386166417143635968, http://ow.ly/2ArFWd
+2014-02-09 10:50:47,990 INFO Success: 386166419656040448, http://ow.ly/2ArFVf
+2014-02-09 10:50:48,713 INFO Success: 386593796047527936, http://tmblr.co/ZGT_3xwt3hB0
+2014-02-09 10:50:49,138 ERROR HTTP Error 404: Not Found
+2014-02-09 10:50:49,298 ERROR None
+2014-02-09 10:50:50,282 INFO Success: 386252671185072128, http://inewsource.org/follow-the-money-updated-daily/
+2014-02-09 10:50:51,015 INFO Success: 386582237233573888, http://tmblr.co/ZGT_3xwt3hB0
+2014-02-09 10:50:51,358 INFO Success: 386907332569227264, http://instagram.com/p/fIm0C8rAHa/
+2014-02-09 10:50:52,697 INFO Success: 387258133225029633, http://sandiegofreepress.org/2013/10/for-fletcher-history-is-the-narrative-that-hurts/#.UlLl2vCVwrg.twitter
+2014-02-09 10:50:54,039 INFO Success: 387258537954385920, http://sandiegofreepress.org/2013/10/for-fletcher-history-is-the-narrative-that-hurts/#.UlLl2vCVwrg.twitter
+2014-02-09 10:50:54,836 INFO Success: 387035862535380993, http://weheartit.com/link/ftA2kS
+2014-02-09 10:50:56,888 INFO Success: 387254572516798464, https://sdmayoralcandidatespeakerseries.eventbrite.com/?nomo=1
+2014-02-09 10:50:58,319 INFO Success: 387272666358362112, http://sandiegofreepress.org/2013/10/for-fletcher-history-is-the-narrative-that-hurts/#.UlLzRn1Lg0J.twitter
+2014-02-09 10:51:01,308 INFO Success: 387275469084954624, http://ow.ly/pzZk0
+2014-02-09 10:51:02,539 INFO Success: 387282712513368064, http://sandiegofreepress.org/2013/10/for-fletcher-history-is-the-narrative-that-hurts/
+2014-02-09 10:51:02,756 INFO Success: 387305009248890880, http://q.gs/4t9Of
+2014-02-09 10:51:04,730 INFO Success: 387318145150500864, http://www.kpbs.org/news/2013/oct/07/conversation-san-diego-mayoral-candidate-nathan-fl/
+2014-02-09 10:51:05,296 INFO Success: 387321047290486784, http://www.kpbs.org/news/2013/oct/07/conversation-san-diego-mayoral-candidate-nathan-fl/
+2014-02-09 10:51:05,809 INFO Success: 387319466377617408, http://www.kpbs.org/news/2013/oct/07/conversation-san-diego-mayoral-candidate-nathan-fl/
+2014-02-09 10:51:06,918 INFO Success: 387323177241546752, http://sandiegodom.com/mls/130053777.aspx
+2014-02-09 10:51:07,986 INFO Success: 387306762443190272, http://tmblr.co/ZGT_3xx2lsyG
+2014-02-09 10:51:08,318 INFO Success: 387330206685335552, http://q.gs/4tAbu
+2014-02-09 10:51:09,191 INFO Success: 387319086839263233, http://ow.ly/pAljb
+2014-02-09 10:51:10,269 INFO Success: 387343881416609792, http://goo.gl/guWaFy
+2014-02-09 10:51:10,815 INFO Success: 387348934030413825, http://fb.me/3nyJHJqqx
+2014-02-09 10:51:11,035 INFO Success: 387326453118812160, http://sdgln.com/news/2013/10/07/will-the-real-nathan-fletcher-please-stand-up#sthash.WFtDDhb6.dpuf
+2014-02-09 10:51:12,005 INFO Success: 387351200741343233, http://bit.ly/GEatvo
+2014-02-09 10:51:13,494 INFO Success: 387352442754846720, http://bit.ly/1gk37Lk
+2014-02-09 10:51:13,822 INFO Success: 387355714647511041, http://ow.ly/pAljb
+2014-02-09 10:51:15,351 INFO Success: 387356731434889216, http://bit.ly/1gk37Lk
+2014-02-09 10:51:15,622 INFO Success: 387355715855482880, http://ow.ly/pAljb
+2014-02-09 10:51:15,746 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:51:15,898 ERROR None
+2014-02-09 10:51:17,479 INFO Success: 387355884609093632, http://BowlersDesk.com
+2014-02-09 10:51:18,191 INFO Success: 387355884609093632, http://wp.me/pFr7n-18p
+2014-02-09 10:51:18,974 INFO Success: 387355958936354816, http://goo.gl/fb/Yhv65
+2014-02-09 10:51:19,885 INFO Success: 387359963473252352, http://bit.ly/1gk37Lk
+2014-02-09 10:51:20,154 INFO Success: 387357598933979136, http://www.sdgln.com/news/2013/10/07/will-the-real-nathan-fletcher-please-stand-up#sthash.qB4sqdIg.Xrdlos3U.dpbs
+2014-02-09 10:51:21,003 INFO Success: 387359358096801792, http://bit.ly/1gk37Lk
+2014-02-09 10:51:21,907 INFO Success: 387363089035051009, http://bit.ly/1gk37Lk
+2014-02-09 10:51:23,296 INFO Success: 387370274536312832, http://bit.ly/GIStjd
+2014-02-09 10:51:23,421 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:51:23,601 ERROR None
+2014-02-09 10:51:23,769 INFO Success: 387373789282988032, http://q.gs/4tCU9
+2014-02-09 10:51:24,391 INFO Success: 387380015001653249, http://bit.ly/1fVOobC
+2014-02-09 10:51:27,592 INFO Success: 387377919792013312, http://ow.ly/2Ax0UQ
+2014-02-09 10:51:27,826 INFO Success: 387379048160456704, http://ow.ly/2AwXA2
+2014-02-09 10:51:28,200 INFO Success: 387395649760526336, http://bit.ly/1bSArGk
+2014-02-09 10:51:29,134 INFO Success: 384820784520523776, http://inewsource.org/follow-the-money-updated-daily/
+2014-02-09 10:51:32,220 INFO Success: 385466611496267776, http://sandiegofreepress.org/2013/10/fletcher-faulconer-peters-and-the-bi-partisan-shuffle/#.UkxhWvgydwI.twitter
+2014-02-09 10:51:36,404 INFO Success: 385466685831917568, http://sandiegofreepress.org/2013/10/fletcher-faulconer-peters-and-the-bi-partisan-shuffle/#.UkxhWvgydwI.twitter
+2014-02-09 10:51:39,519 INFO Success: 385495876938235904, http://bit.ly/15LXsGm
+2014-02-09 10:51:42,440 INFO Success: 385554995388882944, http://fb.me/16CUhCuyo
+2014-02-09 10:51:43,711 INFO Success: 385827304976695296, http://on.nbc7.com/rxIBhZ4
+2014-02-09 10:51:44,917 INFO Success: 385836569388539904, http://bit.ly/18UJ0y0
+2014-02-09 10:51:45,519 INFO Success: 386088903523827712, http://www.nbcsandiego.com/news/local/New-Poll-Shows-Faulconer-and-Fletcher-Neck-and-Neck--226328821.html
+2014-02-09 10:51:46,210 INFO Success: 385846875552620544, http://fb.me/NQx3xr4P
+2014-02-09 10:51:47,703 INFO Success: 385837391975415809, http://bit.ly/16ldef5
+2014-02-09 10:51:49,313 INFO Success: 386171849224519680, http://fb.me/Zw46UsWO
+2014-02-09 10:51:49,881 INFO Success: 387297148691169280, http://www.nbcsandiego.com/news/local/New-Poll-Shows-Faulconer-and-Fletcher-Neck-and-Neck--226328821.html
+2014-02-09 10:51:51,095 INFO Success: 387755656943374336, http://fb.me/2XSJ5EXbG
+2014-02-09 10:51:51,973 INFO Success: 385783421777096704, http://skateboard.tv/video/27201/interro-greyson-with-greyson-fletcher-part-1
+2014-02-09 10:51:52,763 INFO Success: 387036457371570176, http://weheartit.com/link/QIAdfN
+2014-02-09 10:51:53,260 INFO Success: 385989301386747904, http://www.nbcsandiego.com/news/local/New-Poll-Shows-Faulconer-and-Fletcher-Neck-and-Neck--226328821.html
+2014-02-09 10:51:53,977 INFO Success: 385981377797050368, http://fb.me/XMBln3L1
+2014-02-09 10:51:54,398 INFO Success: 387302776364998656, http://shar.es/EmWBC
+2014-02-09 10:51:55,552 INFO Success: 387298322756947968, http://4sq.com/1cos9bY
+2014-02-09 10:52:16,651 ERROR <urlopen error [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+2014-02-09 10:52:16,782 ERROR None
+2014-02-09 10:52:17,819 INFO Success: 385784003657093120, http://skateboard.tv/video/27201/interro-greyson-with-greyson-fletcher-part-1
+2014-02-09 10:52:19,236 INFO Success: 386178298323038208, http://sandiegofreepress.org/2013/10/the-mystery-of-why-qualcomm-adopted-nathan-fletcher/#.Uk728H9Jyi0.twitter
+2014-02-09 10:52:20,707 INFO Success: 386166718243950592, http://fb.me/1WuzBdg2N
+2014-02-09 10:52:21,368 INFO Success: 385836898612035584, http://on.nbc7.com/rxIBhZ4
+2014-02-09 10:52:21,913 INFO Success: 385836666554179584, http://bit.ly/1bAC9fk
+2014-02-09 10:52:23,062 INFO Success: 385836564057571328, http://bit.ly/17xwJBf
+2014-02-09 10:52:24,220 INFO Success: 385536969654022144, http://www.sdcitybeat.com/sandiego/article-12257-nathan-fletcher-finds-himself-on-a-political-desert-%C3%A2%C2%80%C2%98isle%C3%A2%C2%80%C2%99.html
+2014-02-09 10:52:24,588 ERROR HTTP Error 404: NOT FOUND
+2014-02-09 10:52:24,703 ERROR None
+2014-02-09 10:52:25,028 INFO Success: 384740617236254720, http://instagram.com/p/e5Ndu6FM-D/
+2014-02-09 10:52:25,243 INFO Success: 387400442793046017, http://news360.com/article/204091666
+2014-02-09 10:52:25,785 INFO Success: 387398339454840833, http://fb.me/MMwM7okp
+2014-02-09 10:52:27,213 INFO Success: 387568114520817664, http://bit.ly/1cpwYBT
+2014-02-09 10:52:28,332 INFO Success: 387589161659924480, http://bit.ly/GJZUYq
+2014-02-09 10:52:28,709 INFO Success: 387583623081525248, http://ow.ly/pBTlW
+2014-02-09 10:52:29,779 INFO Success: 387582886385184770, http://bit.ly/GJZUYq
+2014-02-09 10:52:30,365 INFO Success: 387579497702518784, http://bit.ly/GJZUYq
+2014-02-09 10:52:30,532 INFO Success: 387649413968953344, http://q.gs/4tOEY
+2014-02-09 10:52:30,677 INFO Success: 387672111671570432, http://www.utsandiego.com/news/2013/oct/07/nathan-fletcher-mayor-barrio-logan/
+2014-02-09 10:52:30,890 INFO Success: 387694104953360384, http://www.utsandiego.com/news/2013/oct/07/nathan-fletcher-mayor-barrio-logan/
+2014-02-09 10:52:31,055 INFO Success: 387689024778801152, http://www.utsandiego.com/news/2013/oct/07/nathan-fletcher-mayor-barrio-logan/
+2014-02-09 10:52:32,246 INFO Success: 387727401566076928, http://buff.ly/GJR0tt
+2014-02-09 10:52:32,444 INFO Success: 387749037589291008, http://q.gs/4tSmx
+2014-02-09 10:52:34,250 INFO Success: 387747672875991040, http://vosd.org/19yv6Q9
+2014-02-09 10:52:34,805 INFO Success: 387771763180195840, http://youtu.be/8g5X8ZUtcMs?aCari
+2014-02-09 10:52:35,207 INFO Success: 387793794625986561, http://ow.ly/pBTlW
+2014-02-09 10:52:35,730 INFO Success: 387789866337308672, http://fb.me/ZC0XsiwZ
+2014-02-09 10:52:36,256 INFO Success: 387794415378386944, http://bit.ly/GJZUYq
+2014-02-09 10:52:37,259 INFO Success: 387839256955076608, http://obrag.org/?p=77262#.UlT_pvVA5pY.twitter
+2014-02-09 10:52:37,943 INFO Success: 387859068708061184, http://bit.ly/1culZXP
+2014-02-09 10:52:38,180 INFO Success: 387948656357543937, http://q.gs/4taF6
+2014-02-09 10:52:59,312 ERROR <urlopen error [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+2014-02-09 10:52:59,440 ERROR None
+2014-02-09 10:53:00,632 INFO Success: 387958627383775232, http://bit.ly/1bZFvJ4
+2014-02-09 10:53:01,191 INFO Success: 387965246197207041, http://bit.ly/1bZFvJ4
+2014-02-09 10:53:01,885 INFO Success: 387989662733987840, http://bit.ly/15HkJhZ
+2014-02-09 10:53:03,137 INFO Success: 388000267628601344, http://www.prnewswire.com/news-releases/biocom-announces-2013-san-diego-mayoral-primary-endorsement-227093531.html
+2014-02-09 10:53:03,964 INFO Success: 388017274353098752, http://4sq.com/1e9dLmd
+2014-02-09 10:53:09,378 INFO Success: 388022821374668800, http://htl.li/pERsy
+2014-02-09 10:53:09,966 INFO Success: 388021178473791488, http://bit.ly/17gdnNM
+2014-02-09 10:53:12,476 INFO Success: 388021227698147328, http://www.10news.com/news/qualcomm-ceo-paul-jacobs-demands-apology-for-ad-about-nathan-fletcher-100913
+2014-02-09 10:53:12,923 INFO Success: 388019764255137792, http://www.10news.com/news/qualcomm-ceo-paul-jacobs-demands-apology-for-ad-about-nathan-fletcher-100913
+2014-02-09 10:53:13,411 INFO Success: 388068330328055808, http://htl.li/pERsy
+2014-02-09 10:53:14,457 INFO Success: 388102313468235776, http://j.mp/19iJTAF
+2014-02-09 10:53:14,805 INFO Success: 388115934923091969, http://dlvr.it/46RNzy
+2014-02-09 10:53:16,246 INFO Success: 388107952756109312, http://j.mp/19iNtdX
+2014-02-09 10:53:16,723 INFO Success: 388153265860669440, http://ow.ly/pFzLH
+2014-02-09 10:53:16,951 INFO Success: 388400160503365632, http://sdrostra.com/?p=36085
+2014-02-09 10:53:17,319 INFO Success: 388410175457357824, http://bit.ly/19mwojA
+2014-02-09 10:53:17,388 INFO Success: 388445271287283712, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27877
+2014-02-09 10:53:17,519 INFO Success: 388438354145988608, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27877
+2014-02-09 10:53:17,612 INFO Success: 388457283237068800, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27877
+2014-02-09 10:53:18,318 INFO Success: 388453193434165248, http://www.stopaceparking.com/publicofficials/nathanfletcher.html
+2014-02-09 10:53:18,390 INFO Success: 388465603914121217, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27877
+2014-02-09 10:53:18,506 INFO Success: 388458199990284288, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27877
+2014-02-09 10:53:18,615 INFO Success: 388472629679497217, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27877
+2014-02-09 10:53:39,743 ERROR <urlopen error [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+2014-02-09 10:53:39,877 ERROR None
+2014-02-09 10:53:44,457 INFO Success: 388685522282901504, http://ow.ly/pIZY7
+2014-02-09 10:53:44,591 INFO Success: 388720642431787008, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27877
+2014-02-09 10:53:44,693 INFO Success: 388720876692074496, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27877
+2014-02-09 10:53:44,841 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:53:44,996 ERROR None
+2014-02-09 10:53:46,147 INFO Success: 388727839865835520, http://bit.ly/19q8u6y
+2014-02-09 10:53:46,713 INFO Success: 388727525113085952, http://bit.ly/19q8u6y
+2014-02-09 10:54:07,798 ERROR <urlopen error [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+2014-02-09 10:54:07,927 ERROR None
+2014-02-09 10:54:29,016 ERROR <urlopen error [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+2014-02-09 10:54:29,145 ERROR None
+2014-02-09 10:54:29,480 INFO Success: 388777728675434496, http://instagram.com/p/fV5HeiMZOd/
+2014-02-09 10:54:30,059 INFO Success: 388849701618843649, http://youtu.be/caYzQ-bCTmY?a
+2014-02-09 10:54:30,611 INFO Success: 388847582190919681, http://youtu.be/caYzQ-bCTmY?a
+2014-02-09 10:54:31,625 INFO Success: 388859908038221824, http://www.nbcsandiego.com/news/local/Fletcher-Campaign-Challenges-Opponents-To-Take-Pay-Cut--227464451.html
+2014-02-09 10:54:52,855 ERROR <urlopen error [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+2014-02-09 10:54:53,010 ERROR None
+2014-02-09 10:54:53,436 INFO Success: 388874794558451712, http://youtu.be/caYzQ-bCTmY?a
+2014-02-09 10:54:55,026 INFO Success: 388914610428198913, http://bit.ly/1agzODi
+2014-02-09 10:54:56,259 INFO Success: 389034941977460736, http://bit.ly/16CuP2k
+2014-02-09 10:54:59,934 INFO Success: 389058616193339392, http://voiceofsandiego.org/2013/10/11/fletcher-raise-the-linkage-fee/
+2014-02-09 10:55:00,403 INFO Success: 389084257311666176, http://bit.ly/GTW3I8
+2014-02-09 10:55:02,448 INFO Success: 389410169920425984, http://bit.ly/19JGRta
+2014-02-09 10:55:02,756 INFO Success: 389408824269885440, http://bit.ly/19JGRta
+2014-02-09 10:55:02,969 INFO Success: 389455059131441152, http://q.gs/4uU5G
+2014-02-09 10:55:04,240 INFO Success: 389766464859041792, http://bit.ly/19yI96D
+2014-02-09 10:55:04,592 INFO Success: 389825431169675265, http://bit.ly/19JGRta
+2014-02-09 10:55:04,903 INFO Success: 389824567243730944, http://bit.ly/19JGRta
+2014-02-09 10:55:07,325 INFO Success: 390128126698606592, http://bit.ly/GZwaGZ
+2014-02-09 10:55:12,581 INFO Success: 390124036334051328, http://ow.ly/pPTkb
+2014-02-09 10:55:13,223 INFO Success: 390151062977388545, http://www.kpbs.org/news/2013/oct/15/motivation-nathan-fletcher-political-metamorphosis/
+2014-02-09 10:55:13,779 INFO Success: 390147920109920257, http://www.kpbs.org/news/2013/oct/15/motivation-nathan-fletcher-political-metamorphosis/
+2014-02-09 10:55:14,421 INFO Success: 390148971320320000, http://fb.me/1BQ6lS3ws
+2014-02-09 10:55:15,483 INFO Success: 390182698708242432, http://fb.me/6AwQhDmBn
+2014-02-09 10:55:16,651 INFO Success: 390184592684384256, http://bit.ly/GZrukq
+2014-02-09 10:55:17,280 INFO Success: 390203891867856896, http://ow.ly/pPTkb
+2014-02-09 10:55:17,788 INFO Success: 390198877011197952, http://youtu.be/MsFZkNmm2v8
+2014-02-09 10:55:18,887 INFO Success: 390228442916356096, http://bit.ly/GZrukq
+2014-02-09 10:55:20,045 INFO Success: 390239901834563584, http://bit.ly/GZrukq
+2014-02-09 10:55:20,486 INFO Success: 390251179520708608, http://www.stopaceparking.com/publicofficials/nathanfletcher.html
+2014-02-09 10:55:21,724 INFO Success: 390250437934587904, http://bit.ly/GZrukq
+2014-02-09 10:55:22,308 INFO Success: 390329176374263808, http://www.kpbs.org/news/2013/oct/15/motivation-nathan-fletcher-political-metamorphosis/
+2014-02-09 10:55:25,180 INFO Success: 390327528973697025, http://ow.ly/pQWQG
+2014-02-09 10:55:26,293 INFO Success: 390373803144282112, http://bit.ly/GZrukq
+2014-02-09 10:55:27,555 INFO Success: 390484320525496320, http://bit.ly/169f58x
+2014-02-09 10:55:27,868 INFO Success: 390708469701300224, http://instagram.com/p/fjnO1cPo6J/
+2014-02-09 10:55:32,651 INFO Success: 390899865741295617, http://voiceofsandiego.org/2011/12/18/for-fletcher-military-and-political-identities-rooted-in-the-personal/
+2014-02-09 10:55:37,200 INFO Success: 390899865741295617, http://voiceofsandiego.org/2013/10/04/5-things-kevin-faulconer-has-done/
+2014-02-09 10:55:38,720 INFO Success: 390918758552043520, http://utsd.us/19N966A
+2014-02-09 10:55:40,188 INFO Success: 390915484591587328, http://wp.me/p2OItl-dJr
+2014-02-09 10:55:40,548 INFO Success: 390914910185455616, http://utsd.us/19N966A
+2014-02-09 10:55:43,142 INFO Success: 390914253378834432, http://ow.ly/25vQOk
+2014-02-09 10:55:44,190 INFO Success: 390914253378834432, http://ow.ly/i/3scrz
+2014-02-09 10:55:44,338 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:55:44,493 ERROR None
+2014-02-09 10:55:45,026 INFO Success: 390912193480646656, http://fb.me/16NRt3V0R
+2014-02-09 10:55:45,500 INFO Success: 390912111096107008, http://fb.me/16NRt3V0R
+2014-02-09 10:55:46,015 INFO Success: 390911410932170752, http://fb.me/16NRt3V0R
+2014-02-09 10:55:47,644 INFO Success: 390935151766953984, http://ow.ly/pVlp0
+2014-02-09 10:55:48,326 INFO Success: 390942159869718528, http://on.nbc7.com/5eWnijl
+2014-02-09 10:55:48,505 INFO Success: 390941403301163008, http://q.gs/4vXHu
+2014-02-09 10:55:52,743 INFO Success: 390933559755563008, http://vosd.org/16ROcod
+2014-02-09 10:55:54,048 INFO Success: 390933088395472896, http://bit.ly/1gOOtMt
+2014-02-09 10:55:54,502 INFO Success: 390932205884932096, http://ow.ly/pVlp0
+2014-02-09 10:55:54,746 INFO Success: 390929407164301313, http://q.gs/4vWjJ
+2014-02-09 10:55:55,397 INFO Success: 390930628751151104, http://bit.ly/1gOOtMt
+2014-02-09 10:55:56,924 INFO Success: 390981986237419520, http://tinyurl.com/mm7f4ux
+2014-02-09 10:55:57,137 INFO Success: 390987184599093248, http://q.gs/4vZTf
+2014-02-09 10:56:18,413 ERROR <urlopen error [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+2014-02-09 10:56:18,571 ERROR None
+2014-02-09 10:56:18,809 INFO Success: 390976248618307584, http://q.gs/4vZ0z
+2014-02-09 10:56:19,799 INFO Success: 390981986128384000, http://bit.ly/16SjIT7
+2014-02-09 10:56:20,010 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:56:20,170 ERROR None
+2014-02-09 10:56:20,609 INFO Success: 391023359976562688, http://ow.ly/pVlp0
+2014-02-09 10:56:21,062 INFO Success: 391042705146396672, http://ow.ly/pVlp0
+2014-02-09 10:56:21,470 INFO Success: 391255973748547584, http://ift.tt/19eFxM3
+2014-02-09 10:56:22,588 INFO Success: 391276307344285696, http://bit.ly/H7d0OH
+2014-02-09 10:56:25,742 INFO Success: 391284693242765312, http://ow.ly/2AQLjB
+2014-02-09 10:56:26,888 INFO Success: 391292533348642818, http://tinyurl.com/kvtyby7
+2014-02-09 10:56:48,061 ERROR <urlopen error [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+2014-02-09 10:56:48,217 ERROR None
+2014-02-09 10:56:49,303 INFO Success: 391353954191159296, http://bit.ly/177k5eC
+2014-02-09 10:56:50,059 INFO Success: 391370919467560960, http://fb.me/19WPIKSCI
+2014-02-09 10:56:50,470 INFO Success: 391637588978581504, http://www.youtube.com/watch?v=9R6yIGF017g&sns=tw
+2014-02-09 10:56:54,092 INFO Success: 392358769708900352, http://goo.gl/NgLHov
+2014-02-09 10:56:55,167 INFO Success: 392372141376557056, http://bit.ly/19ogKW7
+2014-02-09 10:57:16,293 ERROR <urlopen error [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+2014-02-09 10:57:16,464 ERROR None
+2014-02-09 10:57:17,744 INFO Success: 392439294393995264, http://bit.ly/1aAzz6d
+2014-02-09 10:57:18,858 INFO Success: 392439278447235072, http://bit.ly/1aAzz6d
+2014-02-09 10:57:19,453 INFO Success: 392439197250109440, http://bit.ly/1aAzz6d
+2014-02-09 10:57:20,944 INFO Success: 392493120166039552, http://ow.ly/q2zP1
+2014-02-09 10:57:26,142 INFO Success: 392793050788802560, http://wp.me/p3gfUV-rf
+2014-02-09 10:57:29,367 INFO Success: 392787698626228224, http://wp.me/p14tVz-HI
+2014-02-09 10:57:29,986 INFO Success: 392787695312699393, http://wp.me/p14tVz-HI
+2014-02-09 10:57:30,739 INFO Success: 393041477602770944, http://4sq.com/163JIKm
+2014-02-09 10:57:32,260 INFO Success: 393054066341056512, http://bit.ly/1h71v89
+2014-02-09 10:57:36,694 INFO Success: 393083260072259584, http://vosd.org/1djymGS
+2014-02-09 10:57:38,298 INFO Success: 393077203086639104, http://bit.ly/16tzdTc
+2014-02-09 10:57:39,874 INFO Success: 393165556624658432, http://bit.ly/1aaF3G3
+2014-02-09 10:57:40,040 INFO Success: 393408879632994304, http://q.gs/4xMVK
+2014-02-09 10:57:44,625 INFO Success: 393416200169869312, http://vosd.org/1acYu10
+2014-02-09 10:57:45,441 INFO Success: 393439476837384192, http://ow.ly/q904h
+2014-02-09 10:57:45,733 INFO Success: 393448491475034112, http://ow.ly/q904h
+2014-02-09 10:57:46,180 INFO Success: 393494196608569345, http://youtu.be/Bat95uRedJE
+2014-02-09 10:57:46,611 INFO Success: 393493507530190848, http://youtu.be/Bat95uRedJE
+2014-02-09 10:57:47,081 INFO Success: 393493779241385984, http://youtu.be/Bat95uRedJE
+2014-02-09 10:57:47,625 INFO Success: 393519601792724992, http://youtu.be/Bat95uRedJE
+2014-02-09 10:57:48,131 INFO Success: 393567818223849472, http://youtu.be/Bat95uRedJE
+2014-02-09 10:57:48,464 INFO Success: 393590444287729664, http://ow.ly/q9CNN
+2014-02-09 10:57:49,634 INFO Success: 393783116222840832, http://sandiegofreepress.org/2013/10/why-i-am-not-voting-for-nathan-fletcher/#.UmqihWF5wRo.twitter
+2014-02-09 10:57:51,700 INFO Success: 394214950559678465, http://bit.ly/1dbUEHU
+2014-02-09 10:57:52,075 INFO Success: 394931567945990144, http://m.utsandiego.com/news/2013/oct/28/san-diego-mayoral-candidate-college-transcripts/
+2014-02-09 10:57:53,155 INFO Success: 395090819704561664, http://votesmart.org/candidate/key-votes/104432/nathan-fletcher#.Um9kkOW2yEI.twitter
+2014-02-09 10:57:55,101 INFO Success: 395253148417150976, http://www.sandiegoreader.com/news/2013/oct/29/ticker-ucsd-conceals-fletchers-graduating-late/
+2014-02-09 10:57:55,848 INFO Success: 395364129126748160, http://on.nbc7.com/DxHmI8a
+2014-02-09 10:57:56,779 INFO Success: 395359216170323969, http://bit.ly/1aFXZyA
+2014-02-09 10:57:57,660 INFO Success: 395668107634958336, http://dlvr.it/4Dlf5C
+2014-02-09 10:57:57,907 INFO Success: 395660160850354176, http://q.gs/4z27H
+2014-02-09 10:57:59,055 INFO Success: 395659477157826560, http://dlvr.it/4Dlf5C
+2014-02-09 10:58:00,513 INFO Success: 396053822453190659, http://bit.ly/1dV685r
+2014-02-09 10:58:01,525 INFO Success: 396433151896997888, http://ude.my/c1hea
+2014-02-09 10:58:02,601 INFO Success: 396431981346447360, http://bit.ly/1cwmSMH
+2014-02-09 10:58:03,362 INFO Success: 396438821174116352, http://bit.ly/1cwmSMH
+2014-02-09 10:58:04,017 ERROR HTTP Error 404: NOT FOUND
+2014-02-09 10:58:04,158 ERROR None
+2014-02-09 10:58:05,436 INFO Success: 397402561667276800, http://fb.me/25Rs3kVfX
+2014-02-09 10:58:06,615 INFO Success: 397403496036970496, http://bit.ly/1gn6mTK
+2014-02-09 10:58:10,082 INFO Success: 397401073507254272, http://ow.ly/qtnW4
+2014-02-09 10:58:11,486 INFO Success: 397398578034782208, http://fb.me/25Rs3kVfX
+2014-02-09 10:58:12,585 INFO Success: 397396523786715136, http://ow.ly/qtnW4
+2014-02-09 10:58:17,489 INFO Success: 397410484439498752, http://ow.ly/qtgjK
+2014-02-09 10:58:18,598 INFO Success: 397407380922593281, http://fb.me/25Rs3kVfX
+2014-02-09 10:58:18,836 INFO Success: 397428926059794434, http://q.gs/50IKv
+2014-02-09 10:58:19,806 INFO Success: 397549548676976640, http://bit.ly/1752pjH
+2014-02-09 10:58:19,984 INFO Success: 397548214431129600, http://q.gs/50OJa
+2014-02-09 10:58:20,325 INFO Success: 397573743930638336, http://bit.ly/1752pjH
+2014-02-09 10:58:22,145 INFO Success: 397810847512133633, http://twitdoc.com/2FRP
+2014-02-09 10:58:22,494 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:58:22,634 ERROR None
+2014-02-09 10:58:22,835 INFO Success: 398239800739655680, http://sdrostra.com/?p=36358#comment-355695
+2014-02-09 10:58:23,852 INFO Success: 398264271160614912, http://bit.ly/1aG7Y8T
+2014-02-09 10:58:24,779 INFO Success: 398264849727123457, http://bit.ly/19ELYZW
+2014-02-09 10:58:24,990 INFO Success: 398258774068056064, http://q.gs/50wCu
+2014-02-09 10:58:25,617 INFO Success: 398252821063426048, http://instagram.com/p/gZORgpKb9s/
+2014-02-09 10:58:27,308 INFO Success: 398507103259615232, http://bit.ly/1cYaq8v
+2014-02-09 10:58:28,194 INFO Success: 398494889639301120, http://bit.ly/19ELYZW
+2014-02-09 10:58:29,155 INFO Success: 398517500234567680, http://www.delmartimes.net/?p=59889
+2014-02-09 10:58:29,420 INFO Success: 398524056128868352, http://q.gs/518Jv
+2014-02-09 10:58:30,688 INFO Success: 398622192079884288, http://bit.ly/1bfPYyM
+2014-02-09 10:58:32,068 INFO Success: 398623484064321536, http://bit.ly/1cYTzm4
+2014-02-09 10:58:32,582 INFO Success: 398640578281611264, http://youtu.be/yYyrWlCM2pA
+2014-02-09 10:58:33,125 INFO Success: 398641742427455488, http://youtu.be/LAhNyvTF5Uw
+2014-02-09 10:58:33,358 INFO Success: 398845750768984064, http://q.gs/51O4I
+2014-02-09 10:58:34,786 INFO Success: 398920649713799169, http://bit.ly/1gwPEBD
+2014-02-09 10:58:35,359 INFO Success: 399013043553988608, http://fb.me/6iHu9ChY7
+2014-02-09 10:58:36,331 INFO Success: 399012621946744832, http://bit.ly/1awvdME
+2014-02-09 10:58:36,724 INFO Success: 399011694325669888, http://bit.ly/1awvdME
+2014-02-09 10:58:36,904 INFO Success: 399271802574098432, http://q.gs/51h8N
+2014-02-09 10:58:37,464 INFO Success: 399267510815424512, http://bit.ly/168F90G#Rusty
+2014-02-09 10:58:37,726 INFO Success: 399248353680035841, http://q.gs/51fwS
+2014-02-09 10:58:41,496 INFO Success: 399206848567324672, http://voiceofsandiego.org/2013/11/08/the-story-behind-the-college-complaint-against-faulconer/
+2014-02-09 10:58:41,641 ERROR HTTP Error 403: Forbidden
+2014-02-09 10:58:41,717 ERROR None
+2014-02-09 10:58:46,095 INFO Success: 399161482799513600, http://ift.tt/1cKh6Lp
+2014-02-09 10:58:47,214 INFO Success: 398979552585986048, http://j.mp/18ewvMw
+2014-02-09 10:58:50,880 INFO Success: 398965186805387264, http://ift.tt/17T1vFs
+2014-02-09 10:58:51,944 INFO Success: 398972945504010240, http://bit.ly/1d6BfHy
+2014-02-09 10:58:53,377 INFO Success: 398968369392521216, http://bit.ly/1d6BfHy
+2014-02-09 10:59:30,209 INFO Success: 398840994658938880, http://dlvr.it/4HScBV
+2014-02-09 10:59:33,259 INFO Success: 398676503304884224, http://fb.me/6z12OJuCZ
+2014-02-09 10:59:34,170 INFO Success: 398660619378778113, http://bit.ly/1bbD32K
+2014-02-09 10:59:35,641 INFO Success: 398653003340595202, http://bit.ly/1bbD32K
+2014-02-09 10:59:39,267 INFO Success: 398496066263212032, http://voiceofsandiego.org/2013/11/07/kevin-faulconer-the-no-1-second-choice/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-09 10:59:43,155 INFO Success: 398511381450084353, http://ift.tt/16JORYs
+2014-02-09 10:59:47,000 INFO Success: 398492964663873536, http://fb.me/QfLkkOYZ
+2014-02-09 10:59:48,065 INFO Success: 398491002475798528, http://fb.me/2xVojdE26
+2014-02-09 10:59:50,983 INFO Success: 398193572920324096, http://bit.ly/1baApIE
+2014-02-09 10:59:52,082 INFO Success: 398202158807392256, http://bit.ly/1fixeBm
+2014-02-09 10:59:52,460 INFO Success: 398164150708232193, http://goo.gl/MhRnRH
+2014-02-09 10:59:52,631 INFO Success: 398164707099430913, http://goo.gl/MhRnRH
+2014-02-09 10:59:53,065 INFO Success: 398103068429926401, http://j.mp/1fiwQTm
+2014-02-09 10:59:53,385 INFO Success: 398102714577469441, http://bit.ly/HJznKo
+2014-02-09 10:59:54,104 INFO Success: 397958185765457921, http://thinkprogress.org/justice/2013/10/23/2819911/california-appeals-court-upholds-assault-rifle-ban/
+2014-02-09 10:59:54,493 INFO Success: 397936738980466688, http://bit.ly/1fixeBm
+2014-02-09 10:59:54,927 INFO Success: 397912433521860609, http://fb.me/1VQyWObDH
+2014-02-09 10:59:56,119 INFO Success: 397913207634796544, http://bit.ly/1b6FdyT
+2014-02-09 10:59:58,283 INFO Success: 397885853281701888, http://www.kpbs.org/news/2013/nov/04/poll-councilman-kevin-faulconer-front-runner-san/
+2014-02-09 11:00:04,799 INFO Success: 397847077419745281, http://shrd.by/9CT41Z
+2014-02-09 11:00:06,137 INFO Success: 397846175941812225, http://sandiegofreepress.org/2013/11/why-kevin-faulconer-has-a-chance-but-shouldnt/#.UnlqvIjosjY.twitter
+2014-02-09 11:01:51,112 ERROR ''
+2014-02-09 11:01:51,358 ERROR None
+2014-02-09 11:01:54,237 INFO Success: 397849718526857216, http://fb.me/Y67ejXzi
+2014-02-09 11:01:55,216 INFO Success: 397795708012883968, http://inewsource.org/kevin-faulconers-run-down-the-middle/
+2014-02-09 11:02:00,723 INFO Success: 397758561104588800, http://vosd.org/1b21QpV
+2014-02-09 11:02:04,226 INFO Success: 397757746436927488, http://ow.ly/quIkT
+2014-02-09 11:02:08,832 INFO Success: 397750309209903104, http://vosd.org/1b21QpV
+2014-02-09 11:02:09,558 INFO Success: 397779739428921344, http://youtu.be/zWqZixZD-BM
+2014-02-09 11:02:10,137 INFO Success: 397778300363239424, http://youtu.be/_1jaRtFLU-0
+2014-02-09 11:02:11,105 INFO Success: 397564403111182336, http://ift.tt/17J1TpU
+2014-02-09 11:02:11,444 INFO Success: 397566378166583296, http://q.gs/50Oyy
+2014-02-09 11:02:11,617 INFO Success: 397566723609460736, http://q.gs/50Ozm
+2014-02-09 11:02:12,036 INFO Success: 397560125059502080, http://ift.tt/17J1TpU
+2014-02-09 11:02:16,198 INFO Success: 397387933277487104, http://ow.ly/qs3zm
+2014-02-09 11:02:16,401 INFO Success: 397376813065719808, http://q.gs/50FDL
+2014-02-09 11:02:16,822 ERROR HTTP Error 404: NOT FOUND
+2014-02-09 11:02:16,979 ERROR None
+2014-02-09 11:02:17,358 ERROR HTTP Error 404: NOT FOUND
+2014-02-09 11:02:17,464 ERROR None
+2014-02-09 11:02:20,194 ERROR HTTP Error 404: NOT FOUND
+2014-02-09 11:02:20,358 ERROR None
+2014-02-09 11:02:20,545 INFO Success: 397093902051573760, http://www.utsandiego.com/news/2013/nov/03/faulconer-vaults-into-lead-in-new-poll/
+2014-02-09 11:02:20,928 INFO Success: 397088145344569344, http://bit.ly/1aV6bcz
+2014-02-09 11:02:21,256 INFO Success: 397042366269235200, http://bit.ly/1aV6bcz
+2014-02-09 11:02:24,812 INFO Success: 397043946263957504, http://ow.ly/qrvYK
+2014-02-09 11:02:25,187 INFO Success: 397041161644167168, http://bit.ly/1aV6bcz
+2014-02-09 11:02:29,335 INFO Success: 396737742048350208, http://ow.ly/qqKHB
+2014-02-09 11:02:29,565 INFO Success: 396465120613654529, http://q.gs/4zfTd
+2014-02-09 11:02:29,747 INFO Success: 396357324693962752, http://www.kevinfaulconer.com/issues/details.htm?PageDataID=27978
+2014-02-09 11:02:33,288 INFO Success: 395977512238333952, http://sandiegofreepress.org/2013/10/why-blackface-isnt-funny-and-other-halloween-tales/
+2014-02-09 11:02:35,723 INFO Success: 395986511679586304, http://fb.me/1GhAyg9D7
+2014-02-09 11:02:36,278 INFO Success: 395976443101868032, http://fb.me/2HqqBc5DE
+2014-02-09 11:02:37,203 INFO Success: 395418496156188672, http://www.10news.com/news/kevin-faulconer-campaign-commercial-uses-face-familiar-to-san-diegans-102913
+2014-02-09 11:02:37,437 INFO Success: 395365342932770817, http://q.gs/4ynjw
+2014-02-09 11:02:38,838 INFO Success: 395331774181433344, http://www.huffingtonpost.com/2013/10/29/john-mccain-enda_n_4175050.html?ref=topbar
+2014-02-09 11:02:39,312 INFO Success: 395188977281409024, http://www.youtube.com/watch?v=_CpIr1NP0Wg&feature=youtu.be
+2014-02-09 11:02:44,609 ERROR 'NoneType' object has no attribute 'head'
+2014-02-09 11:02:44,694 ERROR None
+2014-02-09 11:02:45,115 INFO Success: 395039213571170304, http://instagram.com/p/gCTGK7uyzH/
+2014-02-09 11:02:46,009 INFO Success: 394893787023298560, http://www.utsandiego.com/news/2013/Oct/28/san-diego-mayoral-candidate-college-transcripts/?#article-copy
+2014-02-09 11:02:46,095 INFO Success: 394895856416993280, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27928
+2014-02-09 11:02:46,835 INFO Success: 394850478711791616, http://www.utsandiego.com/news/2013/oct/27/tp-faulconer-consistency-key-in-moving-economy/
+2014-02-09 11:02:46,973 INFO Success: 394851569612492800, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27927
+2014-02-09 11:02:47,539 INFO Success: 394318293839790082, http://youtu.be/M_iyQ_rtNXI
+2014-02-09 11:02:48,099 INFO Success: 394316884369108992, http://youtu.be/M_iyQ_rtNXI
+2014-02-09 11:02:48,506 INFO Success: 394243125125734400, http://youtu.be/M_iyQ_rtNXI
+2014-02-09 11:02:52,634 INFO Success: 394227690628460544, http://ow.ly/q1dkE
+2014-02-09 11:02:56,542 INFO Success: 394168410294480897, http://ow.ly/qcHiC
+2014-02-09 11:03:00,727 INFO Success: 394168410294480897, http://ow.ly/qcHk7
+2014-02-09 11:03:04,336 INFO Success: 394168410294480897, http://ow.ly/qcHoU
+2014-02-09 11:03:05,141 INFO Success: 393979692128415744, http://fb.me/203cRiL11
+2014-02-09 11:03:05,407 INFO Success: 393896790816067584, http://q.gs/4xm5h
+2014-02-09 11:03:05,490 INFO Success: 393875018834137088, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27923
+2014-02-09 11:03:06,799 INFO Success: 393875863839571968, http://bit.ly/1hgKmc7
+2014-02-09 11:03:08,099 INFO Success: 393886712050372608, http://bit.ly/18UkjEe
+2014-02-09 11:03:09,661 INFO Success: 393881388450971648, http://bit.ly/18UkjEe
+2014-02-09 11:03:10,588 INFO Success: 393855465542541313, http://youtu.be/2O_iWU-DMY0
+2014-02-09 11:03:10,687 INFO Success: 393837341233524736, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27923
+2014-02-09 11:03:11,484 INFO Success: 393825858323873792, http://youtu.be/Y4_jKiDBu08
+2014-02-09 11:03:12,450 INFO Success: 393548028159590400, http://a2013mayoralforum-estw.eventbrite.com
+2014-02-09 11:03:16,503 INFO Success: 393441991683354624, http://vosd.org/19AZHjD
+2014-02-09 11:03:17,921 INFO Success: 393432167394447360, https://twitpic.com/dib997
+2014-02-09 11:03:22,506 INFO Success: 393432167394447360, http://voiceofsandiego.org/2013/10/24/morning-report-the-short-arm-of-fletchers-big-law/
+2014-02-09 11:03:26,482 INFO Success: 393444317877895169, http://dlvr.it/4BtS8t
+2014-02-09 11:03:26,663 INFO Success: 393122767928700929, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27914
+2014-02-09 11:03:26,759 INFO Success: 393142272922902528, http://www.kevinfaulconer.com/issues/repair.htm
+2014-02-09 11:03:26,884 INFO Success: 393143321930891264, http://www.kevinfaulconer.com/issues/repair.htm
+2014-02-09 11:03:27,124 INFO Success: 392900230082863104, http://q.gs/4wwCm
+2014-02-09 11:03:48,335 ERROR <urlopen error [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+2014-02-09 11:03:48,585 ERROR None
+2014-02-09 11:03:49,687 INFO Success: 392857780865884160, http://bit.ly/17a1yMz
+2014-02-09 11:03:50,500 INFO Success: 392857780966551552, http://tinyurl.com/kuv2h6q
+2014-02-09 11:03:50,897 INFO Success: 392727371318841344, http://ow.ly/q4tfF
+2014-02-09 11:03:52,398 INFO Success: 392719668374282240, http://bit.ly/1bTBoOc
+2014-02-09 11:03:53,749 INFO Success: 392436594558267392, http://sdrostra.com/?p=36240
+2014-02-09 11:03:57,346 INFO Success: 392408801561018369, http://ow.ly/q2oLz
+2014-02-09 11:04:02,145 INFO Success: 392410322016800769, http://ow.ly/q2dOz
+2014-02-09 11:04:04,509 INFO Success: 392409011183943680, http://ow.ly/q2dOz
+2014-02-09 11:04:08,063 INFO Success: 392385922303795200, http://ow.ly/q2eHm
+2014-02-09 11:04:08,292 INFO Success: 392391959353884672, http://q.gs/4wX5Q
+2014-02-09 11:04:08,756 INFO Success: 392372821235490816, http://youtu.be/brhVZu3C230
+2014-02-09 11:04:09,901 INFO Success: 392363396256894977, http://bit.ly/1cPbxb7
+2014-02-09 11:04:10,095 INFO Success: 392372845247864832, http://q.gs/4wW0t
+2014-02-09 11:04:10,404 INFO Success: 392375448014839808, http://q.gs/4wWAD
+2014-02-09 11:04:11,956 INFO Success: 392365213334253571, http://bit.ly/1a0dQWu
+2014-02-09 11:04:12,348 INFO Success: 392375094061699072, http://bit.ly/1cPbxb8
+2014-02-09 11:04:16,203 INFO Success: 392350293179916288, http://voiceofsandiego.org/2013/10/20/vosd-radio-about-face-filner/
+2014-02-09 11:04:20,486 INFO Success: 392359512415293440, http://vosd.org/1a8wg9r
+2014-02-09 11:04:22,042 INFO Success: 392340423122763777, http://BowlersDesk.com
+2014-02-09 11:04:23,230 INFO Success: 392340423122763777, http://wp.me/pFr7n-18Z
+2014-02-09 11:04:23,479 INFO Success: 392317922929934338, http://sdrostra.com/?p=36240
+2014-02-09 11:04:25,790 INFO Success: 392318908465569792, http://www.kpbs.org/news/2013/oct/21/not-loudest-guy-room/
+2014-02-09 11:04:25,927 INFO Success: 392321023628283904, http://ow.ly/i/3tPe2
+2014-02-09 11:04:29,960 INFO Success: 392321023628283904, http://ow.ly/q0fIZ
+2014-02-09 11:04:30,704 INFO Success: 392321907540127744, http://ow.ly/q1fXx
+2014-02-09 11:04:31,859 INFO Success: 392323447503978497, http://goo.gl/fb/2LN5o
+2014-02-09 11:04:32,585 INFO Success: 392323474431414272, http://BowlersDesk.com
+2014-02-09 11:04:33,819 INFO Success: 392323474431414272, http://wp.me/pFr7n-18Z
+2014-02-09 11:04:34,569 INFO Success: 392330089826103296, http://BowlersDesk.com
+2014-02-09 11:04:35,290 INFO Success: 392330089826103296, http://wp.me/pFr7n-18Z
+2014-02-09 11:04:35,828 INFO Success: 392323245208522752, http://ow.ly/q1fXx
+2014-02-09 11:04:37,454 INFO Success: 392304355493150720, http://ow.ly/q0fre
+2014-02-09 11:04:39,188 INFO Success: 392299102312333312, http://ow.ly/q0fz5
+2014-02-09 11:04:40,859 INFO Success: 392307057388687360, http://ow.ly/q0fD1
+2014-02-09 11:04:42,480 INFO Success: 392288739286073344, http://ow.ly/q0fre
+2014-02-09 11:04:44,124 INFO Success: 392284577789902848, http://ow.ly/q0fre
+2014-02-09 11:04:44,487 INFO Success: 392289567010590721, http://bit.ly/1daH7CX
+2014-02-09 11:04:44,723 INFO Success: 392283458598236160, http://q.gs/4wPzW
+2014-02-09 11:04:46,173 INFO Success: 391959283618705408, http://www.utsandiego.com/news/2013/Oct/20/faulconer-mayor-san-diego-filner/?#article-copy
+2014-02-09 11:04:46,576 INFO Success: 391927798941491200, http://bit.ly/1bLAHX9
+2014-02-09 11:04:46,815 INFO Success: 391938067277168640, http://q.gs/4wBKb
+2014-02-09 11:04:47,167 INFO Success: 391943166443532291, http://bit.ly/16orLDs
+2014-02-09 11:04:48,358 INFO Success: 391919316985061376, http://bit.ly/170ATlm
+2014-02-09 11:04:48,891 INFO Success: 391729071513546752, http://youtu.be/x2P7h3twnCQ
+2014-02-09 11:04:50,059 INFO Success: 391629571805560833, http://bit.ly/1i3h91Z
+2014-02-09 11:04:50,891 INFO Success: 391358777762381824, http://www.utsandiego.com/news/2013/oct/17/police-officers-union-endorse-fletcher-mayor/
+2014-02-09 11:04:52,069 INFO Success: 391346747542618112, http://bit.ly/19YLGgy
+2014-02-09 11:04:53,019 INFO Success: 391334487822311424, http://po.st/NUk3Of
+2014-02-09 11:04:53,282 INFO Success: 391296910327181313, http://q.gs/4vnXd
+2014-02-09 11:04:54,349 INFO Success: 391288119619637248, http://bit.ly/1fJ5yID
+2014-02-09 11:04:56,319 INFO Success: 391277601135681536, http://bit.ly/19eZfHI
+2014-02-09 11:04:57,055 INFO Success: 391264737096650752, http://fox5sandiego.com
+2014-02-09 11:04:58,197 INFO Success: 391264737096650752, http://ift.tt/1fIScMC
+2014-02-09 11:04:58,266 INFO Success: 391176526370451456, http://www.kevinfaulconer.com/
+2014-02-09 11:04:58,604 INFO Success: 391176526370451456, http://www.sandiego.gov/citycouncil/cd2/staff/faulconer.shtml
+2014-02-09 11:04:59,232 INFO Success: 391071169132380160, http://fb.me/3k8dC8NIG
+2014-02-09 11:04:59,778 INFO Success: 391070719511363585, http://fb.me/3eOkR22GJ
+2014-02-09 11:05:00,145 INFO Success: 391043102875463681, http://instagram.com/p/fl9DfcOy-I/
+2014-02-09 11:05:00,831 INFO Success: 390700328511086592, http://fb.me/2HOcTflB8
+2014-02-09 11:05:01,111 INFO Success: 390556776904802304, http://q.gs/4vFlz
+2014-02-09 11:05:02,086 INFO Success: 390589829743783936, http://bit.ly/1cuBjBr
+2014-02-09 11:05:07,078 INFO Success: 390545037031116800, http://www.sdcitybeat.com/sandiego/article-12322-kevin-faulconers-pr-days.html
+2014-02-09 11:05:08,094 INFO Success: 390584780783247360, http://bit.ly/GYy4HM
+2014-02-09 11:05:12,193 INFO Success: 390542122966724608, http://vosd.org/1cVCkoE
+2014-02-09 11:05:12,970 INFO Success: 390544789286166529, http://www.sdcitybeat.com/sandiego/article-12322-kevin-faulconers-pr-days.html
+2014-02-09 11:05:17,446 INFO Success: 390305853875949568, http://vosd.org/19GFrMa
+2014-02-09 11:05:17,713 INFO Success: 390278805698256896, http://q.gs/4v3BO
+2014-02-09 11:05:17,937 INFO Success: 390260528737562624, http://q.gs/4v2OP
+2014-02-09 11:05:18,016 INFO Success: 390244430650671104, http://www.kevinfaulconer.com/issues/article2.htm
+2014-02-09 11:05:18,970 INFO Success: 390247364755083265, http://bit.ly/18juaTF
+2014-02-09 11:05:20,131 INFO Success: 390213181836365825, http://bit.ly/1cniksw
+2014-02-09 11:05:24,933 INFO Success: 390165902152720384, http://ow.ly/pQ1Rw
+2014-02-09 11:05:26,104 INFO Success: 390111477375320065, http://fox5sandiego.com/2013/10/14/mayoral-candidates-grill-each-other/#ixzz2hnXnborZ
+2014-02-09 11:05:26,687 INFO Success: 390007580049022976, http://fb.me/NZn1U3C2
+2014-02-09 11:05:36,670 INFO Success: 389835245958488064, http://vosd.org/1emg9WQ
+2014-02-09 11:05:37,217 INFO Success: 389836031551619072, http://youtu.be/fYMHWzjGbDE
+2014-02-09 11:05:42,007 INFO Success: 389834110757531648, http://vosd.org/1emg9WQ
+2014-02-09 11:05:42,266 ERROR 'NoneType' object has no attribute 'head'
+2014-02-09 11:05:42,306 ERROR None
+2014-02-09 11:05:42,921 INFO Success: 389759334927720448, http://youtu.be/fYMHWzjGbDE
+2014-02-09 11:05:43,668 INFO Success: 389632850175082497, http://instagram.com/p/fancHUqm-I/
+2014-02-09 11:05:44,684 INFO Success: 389476796858503168, http://fb.me/Z0Dv1XpD
+2014-02-09 11:05:44,822 ERROR HTTP Error 403: Forbidden
+2014-02-09 11:05:44,911 ERROR None
+2014-02-09 11:05:46,210 INFO Success: 389369552825352192, http://tinyurl.com/mh9ksbp
+2014-02-09 11:05:47,187 INFO Success: 389369553177690112, http://bit.ly/1cKpfhS
+2014-02-09 11:05:53,305 INFO Success: 389008313733488640, http://vosd.org/1cH9GaV
+2014-02-09 11:05:57,684 INFO Success: 389005444762451968, http://vosd.org/1cH9GaV
+2014-02-09 11:06:01,851 INFO Success: 389005520751058944, http://vosd.org/1cH9GaV
+2014-02-09 11:06:02,112 INFO Success: 389016818628575232, http://q.gs/4uEwg
+2014-02-09 11:06:06,611 INFO Success: 388823936261042176, http://vosd.org/1bkhLOY
+2014-02-09 11:06:06,842 INFO Success: 388827406737235968, http://q.gs/4u9Cc
+2014-02-09 11:06:06,986 ERROR HTTP Error 403: Forbidden
+2014-02-09 11:06:07,092 ERROR None
+2014-02-09 11:06:07,641 INFO Success: 388763028113481728, http://bit.ly/1cEXTtH
+2014-02-09 11:06:08,259 INFO Success: 388749958255759363, http://conta.cc/18VAf8a
+2014-02-09 11:06:08,555 INFO Success: 388746298225983488, http://sdrostra.com/?p=36103
+2014-02-09 11:06:09,022 INFO Success: 388705322552291328, http://fb.me/1WuoPVHJs
+2014-02-09 11:06:11,677 INFO Success: 388520725381775361, http://ow.ly/pHQZW
+2014-02-09 11:06:11,857 INFO Success: 388456939363241984, http://ow.ly/pHQZW
+2014-02-09 11:06:12,122 INFO Success: 388385539780407296, http://q.gs/4trFQ
+2014-02-09 11:06:16,328 INFO Success: 390289143453868033, http://vosd.org/1cqXYyA
+2014-02-09 11:06:17,026 INFO Success: 384542192054063104, http://fb.me/2VdelTHwA
+2014-02-09 11:06:17,792 INFO Success: 384546779875659776, http://utsandiego.com/news/2013/sep/28/kevin-faulconer-campaign-volunteer-kickoff/
+2014-02-09 11:06:17,917 INFO Success: 384695117921001472, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27812
+2014-02-09 11:06:21,861 INFO Success: 384810607096365056, http://ow.ly/pmznx
+2014-02-09 11:06:22,283 INFO Success: 384813800911695872, http://q.gs/4rTbW
+2014-02-09 11:06:22,740 INFO Success: 384811493948010496, http://ow.ly/pmznx
+2014-02-09 11:06:23,273 INFO Success: 384814134900314112, http://ow.ly/pmznx
+2014-02-09 11:06:24,950 INFO Success: 384814005631455233, http://ow.ly/pmznx
+2014-02-09 11:06:25,897 INFO Success: 384750415406825474, http://bit.ly/1dSw9Q1
+2014-02-09 11:06:26,263 INFO Success: 384752422700081152, http://bit.ly/1dSw9Q1
+2014-02-09 11:06:26,460 INFO Success: 385187563499057153, http://q.gs/4rk5O
+2014-02-09 11:06:30,151 INFO Success: 384809084111052800, http://ow.ly/2Aktzm
+2014-02-09 11:06:34,378 INFO Success: 384845057565528064, http://vosd.org/16bAoV2
+2014-02-09 11:06:38,638 INFO Success: 384849300414812161, http://fb.me/1yAyKgkAE
+2014-02-09 11:06:38,940 INFO Success: 385422296770306048, https://twitter.com/MeanestBossEver/status/384914455055712256
+2014-02-09 11:06:40,891 INFO Success: 385440817147437056, http://vosd.org/17sNddJ
+2014-02-09 11:06:41,378 INFO Success: 385440083442016257, http://www.kevinfaulconer.com/media/pressreleases/
+2014-02-09 11:06:43,365 INFO Success: 385446072207691776, http://vosd.org/17sNddJ
+2014-02-09 11:06:44,329 INFO Success: 385493721095352320, http://fb.me/2LP8qTHS9
+2014-02-09 11:06:44,621 INFO Success: 385543224292413440, http://q.gs/4rzWK
+2014-02-09 11:06:45,790 INFO Success: 385615490540122112, http://buff.ly/1bs1R9i
+2014-02-09 11:06:45,931 INFO Success: 385839913507102720, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27850
+2014-02-09 11:06:46,165 INFO Success: 386175178503233536, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27857
+2014-02-09 11:06:48,931 INFO Success: 386177318344880129, http://sandiegofreepress.org/2013/10/projected-low-turnout-in-mayoral-special-election-favors-faulconer/#.Uk73RBHBB0U.twitter
+2014-02-09 11:06:53,263 INFO Success: 386230803618725888, http://vosd.org/1cdqzty
+2014-02-09 11:06:58,719 INFO Success: 385989089834835968, http://fb.me/18BcPV8fz
+2014-02-09 11:06:58,963 INFO Success: 386204775601041409, http://q.gs/4sSD8
+2014-02-09 11:07:03,141 INFO Success: 386210860462780416, http://vosd.org/1cdqzty
+2014-02-09 11:07:04,078 INFO Success: 386217762475225088, http://paper.li/jcrandall619/1364327483
+2014-02-09 11:07:04,160 INFO Success: 386174988014731264, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27857
+2014-02-09 11:07:09,789 INFO Success: 386460997482856448, http://vosd.org/1cg3Hto
+2014-02-09 11:07:14,089 INFO Success: 386478789850828800, http://vosd.org/1aVJtkX
+2014-02-09 11:07:14,286 ERROR HTTP Error 403: Forbidden
+2014-02-09 11:07:14,441 ERROR None
+2014-02-09 11:07:14,792 INFO Success: 387333344351879168, http://Instagram.com/p/fLaPvuOyyI/
+2014-02-09 11:07:16,388 INFO Success: 384856009808019456, http://bit.ly/15FGQ8E
+2014-02-09 11:07:17,773 INFO Success: 388018682821361664, http://fb.me/ZqvTlYCu
+2014-02-09 11:07:18,038 INFO Success: 386299096136286209, http://q.gs/4sW3j
+2014-02-09 11:07:39,240 ERROR <urlopen error [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+2014-02-09 11:07:39,392 ERROR None
+2014-02-09 11:07:40,486 INFO Success: 385920259070242816, http://www.sdcta.org/Events/Event.asp?Event=66C
+2014-02-09 11:07:41,267 INFO Success: 385879628323094528, http://www.utsandiego.com/news/2012/Aug/02/tp-heart-and-sole/
+2014-02-09 11:07:41,369 INFO Success: 385840027751575552, http://www.kevinfaulconer.com/media/pressreleases/press.htm?PageDataID=27850
+2014-02-09 11:07:44,144 ERROR 'NoneType' object has no attribute 'head'
+2014-02-09 11:07:44,188 ERROR None
+2014-02-09 11:07:47,727 INFO Success: 384871891380355073, http://dlvr.it/43j1Pm
+2014-02-09 11:07:48,188 INFO Success: 384863885376774144, http://q.gs/4rVTZ
+2014-02-09 11:07:48,653 INFO Success: 384859508821856257, http://q.gs/4rVJi
+2014-02-09 11:07:48,960 INFO Success: 384804414420054017, http://q.gs/4rTC8
+2014-02-09 11:07:50,279 INFO Success: 384801301365661696, http://bit.ly/GzCNiw
+2014-02-09 11:07:50,612 INFO Success: 384763334781722625, http://bit.ly/1bXvJK6
+2014-02-09 11:07:50,812 INFO Success: 384758368683827200, http://q.gs/4rRBN
+2014-02-09 11:07:52,362 INFO Success: 384756057597149184, http://snlg.ht/19ufJtZ
+2014-02-09 11:07:53,448 INFO Success: 384746391496450050, http://bit.ly/18DmhIA
+2014-02-09 11:07:57,743 INFO Success: 384744188593438720, http://vosd.org/19QWPOa
+2014-02-09 11:07:58,286 INFO Success: 384744188593438720, http://twitter.com/nsm
+2014-02-09 11:08:03,236 INFO Success: 384743775748124673, http://vosd.org/19QWPOa
+2014-02-09 11:08:03,750 INFO Success: 384743775748124673, http://twitter.com/nsm
+2014-02-09 11:08:07,315 INFO Success: 385813981065007104, http://yfrog.com/odnxxnlqj
+2014-02-09 11:08:08,081 INFO Success: 387607412091285504, http://www.utsandiego.com/news/2013/oct/07/nathan-fletcher-mayor-barrio-logan/
+2014-02-09 11:08:08,704 INFO Success: 387622429620588544, http://bit.ly/GLBlcK
+2014-02-09 11:08:10,066 INFO Success: 387675547339608065, http://fb.me/3bGffDGzw
+2014-02-09 11:08:13,466 INFO Success: 387674422569467904, http://sdmag.us/2nm
+2014-02-09 11:08:13,826 INFO Success: 387673068039991296, http://www.youtube.com/watch?v=ygOUYZXhF0o
+2014-02-09 11:08:15,128 INFO Success: 387696052330983424, http://www.sandiegoreader.com/weblogs/news-ticker/2013/oct/08/gop-fat-cats-go-after-super-rich-qualcomm-democrat/?utm_content=buffera9589&utm_source=buffer&utm_medium=twitter&utm_campaign=Buffer
+2014-02-09 11:08:16,529 INFO Success: 387683328788553729, http://fb.me/VIQxVCmh
+2014-02-09 11:08:17,792 INFO Success: 387704403068604416, http://sdmag.us/2nm
+2014-02-09 11:08:21,948 INFO Success: 387993159348670464, http://vosd.org/GzJxNj
+2014-02-10 01:05:05,240 INFO ------------------------------------------------------------
+2014-02-10 01:05:05,257 INFO START CACHING OPENGRAPH AT Mon Feb 10 01:05:04 +0000 2014
+2014-02-10 01:05:05,259 INFO ------------------------------------------------------------
+2014-02-10 01:05:08,401 ERROR HTTP Error 403: Forbidden
+2014-02-10 01:05:08,619 ERROR None
+2014-02-10 01:05:08,999 ERROR HTTP Error 403: Forbidden
+2014-02-10 01:05:09,134 ERROR None
+2014-02-10 01:05:10,634 INFO Success: 432582902958653440, http://sdrostra.com/?p=37330
+2014-02-10 01:05:10,983 INFO Success: 432584077397737474, http://sdrostra.com/?p=37330
+2014-02-10 01:05:11,911 INFO Success: 432593258657906688, http://www.utsandiego.com/news/2014/feb/09/david-alvarez-san-diego-mayor-candidate/
+2014-02-10 01:05:13,410 INFO Success: 432594454172536832, https://www.facebook.com/GreenExpertsAcademy/posts/10203122155194193
+2014-02-10 01:05:13,674 INFO Success: 432594696591138816, http://engagesandiego.nationbuilder.com/takeaction?recruiter_id=22
+2014-02-10 01:05:14,493 INFO Success: 432594698411053056, http://www.utsandiego.com/news/2014/feb/09/poll-mayors-race-a-dead-heat/
+2014-02-10 01:05:15,299 INFO Success: 432595270702882816, http://www.utsandiego.com/news/2014/jan/25/san-diego-mayoral-candidates-issues/
+2014-02-10 01:05:17,617 INFO Success: 432598047109832704, http://www.politico.com/story/2014/02/barack-obama-david-alvarez-san-diego-103291.html
+2014-02-10 01:05:18,986 INFO Success: 432599503984545792, http://www.10news.com/news/race-for-san-diego-mayor-within-1-point-according-to-10newsu-t-san-diego-poll
+2014-02-10 01:05:20,431 INFO Success: 432601618639368192, http://www.utsandiego.com/news/2014/feb/08/donna-frye-david-alvarez-mayor/
+2014-02-10 01:05:20,841 INFO Success: 432602338755616768, https://www.facebook.com/lilianagarciarivera/posts/10152212605649349
+2014-02-10 01:05:21,053 INFO Success: 432602865996013568, http://www.utsandiego.com/news/2014/feb/08/donna-frye-david-alvarez-mayor/
+2014-02-10 01:05:21,526 INFO Success: 432608705692319744, https://www.facebook.com/RicardoYFabiola2013/posts/641598115896838
+2014-02-10 01:05:21,865 INFO Success: 432608760398225408, http://www.utsandiego.com/news/2014/feb/09/david-alvarez-san-diego-mayor-candidate/
+2014-02-10 01:05:22,082 INFO Success: 432610005729034240, http://q.gs/5ZH3i
+2014-02-10 01:05:22,358 INFO Success: 432610006895034368, http://q.gs/5ZH3j
+2014-02-10 01:05:23,878 INFO Success: 432612377369251840, http://sandiegofreepress.org/2014/02/president-obama-endorses-david-alvarez-for-mayor/?utm_content=buffer5a2d6&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+2014-02-10 01:05:25,301 INFO Success: 432613085111943168, http://sandiegofreepress.org/2014/02/president-obama-endorses-david-alvarez-for-mayor/?utm_content=buffer5a2d6&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+2014-02-10 01:05:26,048 INFO Success: 432613530869981184, http://www.10news.com/news/race-for-san-diego-mayor-within-1-point-according-to-10newsu-t-san-diego-poll
+2014-02-10 01:05:27,732 INFO Success: 432614407298768896, http://sandiegofreepress.org/2014/02/president-obama-endorses-david-alvarez-for-mayor/?utm_content=buffer5a2d6&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+2014-02-10 01:05:28,470 INFO Success: 432618621517324289, http://www.10news.com/news/race-for-san-diego-mayor-within-1-point-according-to-10newsu-t-san-diego-poll
+2014-02-10 01:05:28,694 INFO Success: 432578624290439168, http://www.sandiegored.com/noticias/47469/Se-calienta-la-lucha-por-la-alcaldia-de-San-Diego-a-pocos-dias-de-la-eleccion/
+2014-02-10 01:05:29,084 INFO Success: 432583674286985217, http://www.youtube.com/watch?v=yH2uhTSYC-o&feature=youtu.be
+2014-02-10 01:05:29,401 INFO Success: 432584197140512768, http://www.youtube.com/watch?v=yH2uhTSYC-o&feature=youtu.be
+2014-02-10 01:05:29,779 INFO Success: 432590190205345793, https://vine.co/v/MWij5uYbldH
+2014-02-10 01:05:29,933 INFO Success: 432593260755046400, http://www.utsandiego.com/news/2014/feb/09/kevin-faulconer-san-diego-mayor-candidate/
+2014-02-10 01:05:30,290 INFO Success: 432594385058791424, https://vine.co/v/MWij5uYbldH
+2014-02-10 01:05:30,648 INFO Success: 432602146349907969, https://vine.co/v/MWij5uYbldH
+2014-02-10 01:05:30,815 INFO Success: 432605125668917248, http://www.utsandiego.com/news/2014/Feb/08/joe-carroll-kevin-faulconer/
+2014-02-10 01:05:31,009 INFO Success: 432606099665997825, http://www.utsandiego.com/news/2014/Feb/08/joe-carroll-kevin-faulconer/
+2014-02-10 01:05:31,845 INFO Success: 432608758649212928, http://sandiegofreepress.org/2014/02/how-kevin-faulconer-made-barrio-logan-united/
+2014-02-10 01:05:32,000 INFO Success: 432608761815908353, http://www.utsandiego.com/news/2014/feb/09/kevin-faulconer-san-diego-mayor-candidate/
+2014-02-10 01:05:32,131 ERROR HTTP Error 403: Forbidden
+2014-02-10 01:05:32,229 ERROR None
+2014-02-10 01:05:32,407 INFO Success: 432610007687770112, http://q.gs/5ZH3l
+2014-02-10 01:05:32,811 INFO Success: 432616604430368768, http://www.youtube.com/watch?v=yH2uhTSYC-o&feature=youtu.be
+2014-02-10 01:05:33,549 INFO Success: 432629104819453952, http://legalinsurrection.com/2014/02/who-will-replace-bob-filthy-filner/
+2014-02-10 01:05:34,737 INFO Success: 432622966208491520, http://www.sandiegoreader.com/news/2014/jan/25/ticker-out-town-money-backs-out-town-hit/?utm_content=buffer9f7f4&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+2014-02-10 01:05:34,966 INFO Success: 432630048278208512, http://instagram.com/p/kNfO4LHNX1/
+2014-02-10 01:05:35,150 INFO Success: 432634247937941504, http://www.utsandiego.com/news/2014/Feb/08/joe-carroll-kevin-faulconer/
+2014-02-10 01:05:35,957 INFO Success: 432639756673888257, http://www.10news.com/news/race-for-san-diego-mayor-within-1-point-according-to-10newsu-t-san-diego-poll
+2014-02-10 01:05:36,229 INFO Success: 432640587465252864, http://instagram.com/p/kNkBomB7xn/
+2014-02-10 01:05:36,744 INFO Success: 432645909592023041, http://www.surveyusa.com/client/PollReport.aspx?g=eb73f6b9-9b58-4c80-9fbd-57350f4ef288
+2014-02-10 01:05:37,092 INFO Success: 432647299077242881, https://www.facebook.com/jeffrey.redondo/posts/10202926953605874
+2014-02-10 01:05:37,210 INFO Success: 432648093339619328, http://www.surveyusa.com/client/PollReport.aspx?g=eb73f6b9-9b58-4c80-9fbd-57350f4ef288
+2014-02-10 01:05:38,769 INFO Success: 432663845484494848, http://www.kpbs.org/news/2014/feb/08/president-obama-endorses-alvarez-san-diego-mayors-/
+2014-02-10 01:05:39,130 INFO Success: 432657211807248384, http://www.youtube.com/watch?v=yH2uhTSYC-o&feature=youtu.be
+2014-02-10 01:05:39,513 INFO Success: 432658146306170880, http://sandiego.schmap.com/restaurants/gossip_grill?t=0vD6aT
+2014-02-10 01:05:39,684 INFO Success: 432667982318153728, http://www.utsandiego.com/news/2014/feb/08/san-diego-endorsement-obama-mayor-alvarez/
+2014-02-10 01:05:40,096 ERROR HTTP Error 403: Forbidden
+2014-02-10 01:05:40,180 ERROR None
+2014-02-10 01:05:40,530 INFO Success: 432674491245023232, https://www.facebook.com/jeffrey.redondo/posts/10202927728745252
+2014-02-10 01:05:41,614 INFO Success: 432682064090251264, http://www.utsandiego.com/news/2014/feb/09/will-alvarezs-ground-game-overtake-faulconer/
+2014-02-10 01:05:42,053 ERROR 'NoneType' object has no attribute 'head'
+2014-02-10 01:05:42,111 ERROR None
+2014-02-10 01:05:42,328 INFO Success: 432683980865814528, http://www.utsandiego.com/news/2014/feb/09/will-alvarezs-ground-game-overtake-faulconer/
+2014-02-10 01:05:42,707 ERROR HTTP Error 403: Forbidden
+2014-02-10 01:05:42,790 ERROR None
+2014-02-10 01:05:44,065 INFO Success: 432688047629402112, http://www.utsandiego.com/news/2014/feb/01/alvarez-once-helped-filner-then-helped-force-him/
+2014-02-10 01:05:45,858 INFO Success: 432688499301437442, http://www.utsandiego.com/news/2014/feb/09/will-alvarezs-ground-game-overtake-faulconer/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-10 01:05:46,401 INFO Success: 432688789912178688, http://ringtv.craveonline.com/news/318019-alfredo-angulo-2#.UvgsWbrpCxA.twitter
+2014-02-10 01:05:46,612 INFO Success: 432688942979096576, http://www.utsandiego.com/news/2014/feb/08/donna-frye-david-alvarez-mayor/
+2014-02-10 01:05:47,334 INFO Success: 432689051569627136, http://www.utsandiego.com/news/2014/feb/09/will-alvarezs-ground-game-overtake-faulconer/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-10 01:05:47,691 ERROR 'NoneType' object has no attribute 'head'
+2014-02-10 01:05:47,747 ERROR None
+2014-02-10 01:05:48,414 INFO Success: 432691415898791936, http://www.utsandiego.com/news/2014/feb/09/will-alvarezs-ground-game-overtake-faulconer/?utm_source=twitterfeed&utm_medium=twitter
+2014-02-10 01:05:48,983 INFO Success: 432692026417897473, https://www.facebook.com/tjdunnivant/posts/10203085061598306
+2014-02-10 01:05:50,665 INFO Success: 432682929064382464, http://www.kpbs.org/news/2014/feb/06/mike-aguirre-endorses-kevin-faulconer-san-diego/
+2014-02-10 01:05:51,316 INFO Success: 432684065570168832, http://www.kpbs.org/news/2014/feb/06/mike-aguirre-endorses-kevin-faulconer-san-diego/
+2014-02-10 01:05:51,940 INFO Success: 432684538276626432, http://www.kpbs.org/news/2014/feb/06/mike-aguirre-endorses-kevin-faulconer-san-diego/
+2014-02-10 01:05:52,861 INFO Success: 432689676911378432, http://www.utsandiego.com/news/2014/feb/09/poll-mayors-race-a-dead-heat/?utm_content=buffer1be78&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+2014-02-10 01:05:53,072 INFO Success: 432700821176721410, http://www.politico.com/story/2014/02/barack-obama-david-alvarez-san-diego-103291.html
+2014-02-10 01:05:53,253 INFO Success: 432708613753147392, http://q.gs/5ZNjb
+2014-02-10 01:05:54,423 INFO Success: 432699990545530881, http://www.sandiegoreader.com/news/2014/feb/05/ticker-d-dumanis-rakes-21000-used-car-interests/?utm_content=buffera9a99&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+2014-02-10 01:05:54,881 INFO Success: 432702133272453120, http://www.sandiegoreader.com/news/2014/feb/05/ticker-d-dumanis-rakes-21000-used-car-interests/?utm_content=buffera9a99&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+2014-02-10 01:05:55,881 INFO Success: 432702853803560960, http://www.sandiegoreader.com/news/2014/feb/05/ticker-d-dumanis-rakes-21000-used-car-interests/?utm_content=buffera9a99&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+2014-02-10 01:05:56,328 INFO Success: 432706697145356288, http://www.sandiegoreader.com/news/2014/feb/05/ticker-d-dumanis-rakes-21000-used-car-interests/?utm_content=buffera9a99&utm_medium=social&utm_source=twitter.com&utm_campaign=buffer
+2014-02-10 01:05:56,483 INFO Success: 432723608595464195, http://m.utsandiego.com/news/2014/feb/08/donna-frye-david-alvarez-mayor/
+2014-02-10 01:05:57,403 INFO Success: 432723647401562112, http://sandiegofreepress.org/2014/02/how-kevin-faulconer-made-barrio-logan-united/
+2014-02-10 01:05:57,599 INFO Success: 432731823735447552, http://www.utsandiego.com/news/2014/feb/01/alvarez-once-helped-filner-then-helped-force-him/
+2014-02-10 01:05:57,858 INFO Success: 432738084644347904, http://www.utsandiego.com/news/2014/feb/08/donna-frye-david-alvarez-mayor/
+2014-02-10 01:05:58,059 INFO Success: 432738118832111616, http://www.utsandiego.com/news/2014/feb/09/poll-mayors-race-a-dead-heat/
+2014-02-10 01:05:58,618 INFO Success: 432738614733471744, http://www.utsandiego.com/news/2014/feb/09/poll-mayors-race-a-dead-heat/
+2014-02-10 01:06:00,992 INFO Success: 432738847357546498, http://www.utsandiego.com/news/2014/feb/08/donna-frye-david-alvarez-mayor/
+2014-02-10 01:06:01,198 INFO Success: 432738903334715392, http://www.utsandiego.com/news/2014/feb/09/poll-mayors-race-a-dead-heat/
+2014-02-10 01:06:01,443 INFO Success: 432740343847854080, http://www.utsandiego.com/news/2014/feb/09/poll-mayors-race-a-dead-heat/
+2014-02-10 01:06:01,871 INFO Success: 432734479807823872, https://www.facebook.com/jeffrey.redondo/posts/10202927728745252
+2014-02-10 01:06:02,105 ERROR HTTP Error 404: NOT FOUND
+2014-02-10 01:06:02,342 ERROR None
+2014-02-10 01:06:02,592 INFO Success: 432749122056380416, http://instagram.com/p/kOVYZVQrkx/
+2014-02-10 01:06:02,832 INFO Success: 432749340231073792, http://www.utsandiego.com/news/2014/feb/09/poll-mayors-race-a-dead-heat/
+2014-02-10 01:06:03,098 INFO Success: 432749404714307584, http://www.utsandiego.com/news/2014/feb/08/donna-frye-david-alvarez-mayor/
+2014-02-10 01:06:03,158 ERROR HTTP Error 403: Forbidden
+2014-02-10 01:06:03,367 ERROR None
+2014-02-10 01:06:04,612 INFO Success: 432755827871858688, http://www.nbcsandiego.com/news/local/No-Slowing-Down-for-Mayoral-Campaigns-244662181.html
+2014-02-10 01:06:04,993 INFO Success: 432746268537139200, https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Flcrsandiego%2Fposts%2F707607879259571
+2014-02-10 01:06:05,303 INFO Success: 432747387724234753, https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Flcrsandiego%2Fposts%2F707608885926137
+2014-02-10 01:06:06,911 INFO Success: 432747467810287616, http://www.kpbs.org/news/2014/feb/09/faulconers-tax-returns-show-income-nearly-doubled-/
+2014-02-10 01:06:07,378 INFO Success: 432747951027675136, http://www.kpbs.org/news/2014/feb/09/faulconers-tax-returns-show-income-nearly-doubled-/
+2014-02-10 01:06:07,693 INFO Success: 432749350629150720, https://www.facebook.com/login.php?next=https%3A%2F%2Fwww.facebook.com%2Flcrsandiego%2Fposts%2F707610812592611
+2014-02-10 01:06:08,131 INFO Success: 432751268025475072, http://www.kpbs.org/news/2014/feb/09/faulconers-tax-returns-show-income-nearly-doubled-/
+2014-02-10 01:06:08,562 INFO Success: 432756641318989825, http://www.kpbs.org/news/2014/feb/09/faulconers-tax-returns-show-income-nearly-doubled-/
+2014-02-10 01:06:08,996 INFO Success: 432757571754020864, http://www.kpbs.org/news/2014/feb/09/faulconers-tax-returns-show-income-nearly-doubled-/?utm_source=facebook.com&utm_medium=social-media&utm_campaign=kpbs-facebook
+2014-02-10 01:06:10,002 INFO Success: 432757904211316737, http://www.nbcsandiego.com/news/local/No-Slowing-Down-for-Mayoral-Campaigns-244662181.html
+2014-02-10 01:06:10,220 INFO Success: 432760296935927808, https://twitter.com/nbcsandiego/status/432755827871858688
+2014-02-10 01:06:11,197 INFO Success: 432770465275195392, http://www.nbcsandiego.com/news/local/No-Slowing-Down-for-Mayoral-Campaigns-244662181.html
+2014-02-10 01:06:11,855 INFO Success: 432761531626184704, http://www.kpbs.org/news/2014/feb/09/faulconers-tax-returns-show-income-nearly-doubled-/?utm_source=facebook.com&utm_medium=social-media&utm_campaign=kpbs-facebook
+2014-02-10 01:06:12,941 INFO Success: 432763926908923904, http://inewsource.org/faulconers-tax-returns-show-income-nearly-doubled-in-2012/
+2014-02-10 01:06:14,131 INFO Success: 432763926908923904, http://ogoing.com
+2014-02-10 01:06:14,375 INFO Success: 432767425289805824, http://q.gs/5ZRA4
+2014-02-10 01:06:15,089 INFO Success: 432767737790595072, https://www.pathgeo.com/electionpath/
+2014-02-10 01:06:17,210 INFO Success: 432768060034789376, http://www.kpbs.org/news/2014/feb/09/faulconers-tax-returns-show-income-nearly-doubled-/?utm_source=dlvr.it&utm_medium=twitter
+2014-02-10 01:06:38,500 ERROR <urlopen error [Errno 10060] A connection attempt failed because the connected party did not properly respond after a period of time, or established connection failed because connected host has failed to respond>
+2014-02-10 01:06:38,671 ERROR None
+2014-02-10 01:06:39,092 INFO Success: 432772172113653760, http://www.kpbs.org/news/2014/feb/09/faulconers-tax-returns-show-income-nearly-doubled-/
+2014-02-10 01:06:39,364 INFO Success: 432781208809123840, https://twitter.com/toniatkins/status/432372174934904832/photo/1
+2014-02-10 01:06:40,946 INFO Success: 432782131035516928, http://www.nbcsandiego.com/news/local/No-Slowing-Down-for-Mayoral-Campaigns-244662181.html
+2014-02-10 01:06:40,953 INFO ------------------------------------------------------------
+2014-02-10 01:06:40,959 INFO FINISH CACHING OPENGRAPH. DURATION=1 MINUTES
+2014-02-10 01:06:40,963 INFO ------------------------------------------------------------
+2014-02-10 03:00:02,686 INFO ------------------------------------------------------------
+2014-02-10 03:00:02,756 INFO START CACHING OPENGRAPH AT Mon Feb 10 03:00:02 +0000 2014
+2014-02-10 03:00:02,756 INFO ------------------------------------------------------------
+2014-02-10 03:00:02,782 INFO ------------------------------------------------------------
+2014-02-10 03:00:02,782 INFO FINISH CACHING OPENGRAPH. DURATION=0 MINUTES
+2014-02-10 03:00:02,782 INFO ------------------------------------------------------------
