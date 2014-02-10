@@ -18,6 +18,7 @@ try:
         candidates = fields['candidates'].value.title().split(",")
         category = None if 'category' not in fields else fields['category'].value
         dates= fields['dates'].value.split(",")
+        dates=sorted(dates, key=lambda d: map(int, d.split('-')))
 
         col = MongoClient().test.twitter_search_candidates
 
@@ -40,7 +41,7 @@ try:
                 topUrls = urlCounter.most_common(MAX_RESULTS)
                 
 
-                output = {}
+                output = {'date': date}
                 #output['candidate'] = candidate
                 output['topWebpages'] = [{'value': item[0], 'url': item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topUrls)]
                 
@@ -51,9 +52,9 @@ try:
         #query each candidate
         output={}
         for candidate in candidates:
-                output[candidate]={}
+                output[candidate]=[]
                 for date in dates:
-                        output[candidate][date]=doQuery(candidate, date)
+                        output[candidate].append(doQuery(candidate, date))
                 
         
 

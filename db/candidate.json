@@ -1,6 +1,6 @@
 {
     "Faulconer": {
-        "updatedTime": "2014-02-10 00:54:05", 
+        "updatedTime": "2014-02-10 07:54:05", 
         "wordCloud": {
             "values": [
                 {
@@ -922,7 +922,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "0.40%", 
+                    "influence": "0.30%", 
                     "tweets_yesterday": 23, 
                     "followers_yesterday_new": 10, 
                     "biggestFollowers_yesterday": [
@@ -965,7 +965,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "54.40%", 
+                    "influence": "54.30%", 
                     "tweets_yesterday": 6, 
                     "followers_yesterday_new": 7, 
                     "biggestFollowers_yesterday": [
@@ -3024,7 +3024,7 @@
                     "followers_yesterday_removed": 9
                 }, 
                 {
-                    "influence": "-0.40%", 
+                    "influence": "-0.30%", 
                     "tweets_yesterday": 1, 
                     "followers_yesterday_new": 13, 
                     "biggestFollowers_yesterday": [
@@ -4643,7 +4643,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "13.20%", 
+                    "influence": "13.00%", 
                     "tweets_yesterday": 6, 
                     "followers_yesterday_new": 8, 
                     "biggestFollowers_yesterday": [
@@ -5754,13 +5754,56 @@
                         }
                     ], 
                     "followers_yesterday_removed": 1
+                }, 
+                {
+                    "influence": "0.00%", 
+                    "tweets_yesterday": 0, 
+                    "followers_yesterday_new": 18, 
+                    "biggestFollowers_yesterday": [
+                        {
+                            "url": "http://www.twitter.com/DGarayPR", 
+                            "name": "DGarayPR", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/Bobbie_B_", 
+                            "name": "Bobbie_B_", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/SanDiegoRadioJo", 
+                            "name": "SanDiegoRadioJo", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_all": 4753, 
+                    "date": "2/10/2014", 
+                    "tweets_all": 841, 
+                    "biggestFollowers": [
+                        {
+                            "url": "http://www.twitter.com/DjKingAssassin", 
+                            "name": "DjKingAssassin", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/morrowchris", 
+                            "name": "morrowchris", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/CollChris", 
+                            "name": "CollChris", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_yesterday_removed": 3
                 }
             ]
         }
     }, 
     "voice": "Candidate", 
     "Alvarez": {
-        "updatedTime": "2014-02-10 00:54:05", 
+        "updatedTime": "2014-02-10 07:54:05", 
         "wordCloud": {
             "values": [
                 {
@@ -6725,7 +6768,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "284.30%", 
+                    "influence": "284.20%", 
                     "tweets_yesterday": 1, 
                     "followers_yesterday_new": 12, 
                     "biggestFollowers_yesterday": [
@@ -7284,7 +7327,7 @@
                     "followers_yesterday_removed": 0
                 }, 
                 {
-                    "influence": "0.80%", 
+                    "influence": "1.00%", 
                     "tweets_yesterday": 1, 
                     "followers_yesterday_new": 11, 
                     "biggestFollowers_yesterday": [
@@ -9161,7 +9204,7 @@
                     "followers_yesterday_removed": 0
                 }, 
                 {
-                    "influence": "-2.70%", 
+                    "influence": "-2.60%", 
                     "tweets_yesterday": 0, 
                     "followers_yesterday_new": 9, 
                     "biggestFollowers_yesterday": [
@@ -10393,7 +10436,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "22.20%", 
+                    "influence": "21.90%", 
                     "tweets_yesterday": 2, 
                     "followers_yesterday_new": 11, 
                     "biggestFollowers_yesterday": [
@@ -11490,6 +11533,49 @@
                     ], 
                     "followers_all": 3593, 
                     "date": "2/9/2014", 
+                    "tweets_all": 74, 
+                    "biggestFollowers": [
+                        {
+                            "url": "http://www.twitter.com/DjKingAssassin", 
+                            "name": "DjKingAssassin", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/morrowchris", 
+                            "name": "morrowchris", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/SkyFallCarroll", 
+                            "name": "SkyFallCarroll", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_yesterday_removed": 2
+                }, 
+                {
+                    "influence": "0.40%", 
+                    "tweets_yesterday": 0, 
+                    "followers_yesterday_new": 47, 
+                    "biggestFollowers_yesterday": [
+                        {
+                            "url": "http://www.twitter.com/Hip_M0M", 
+                            "name": "Hip_M0M", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/BRios82", 
+                            "name": "BRios82", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/longdrivesouth", 
+                            "name": "longdrivesouth", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_all": 3638, 
+                    "date": "2/10/2014", 
                     "tweets_all": 74, 
                     "biggestFollowers": [
                         {

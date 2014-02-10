@@ -50,6 +50,9 @@ try:
                 topMentions = mentionCounter.most_common(MAX_RESULTS)
                 topUsers = userCounter.most_common(MAX_RESULTS)
 
+                print ''
+                print topUrls
+
 
                 rtCounter = Counter([t['retweeted_id'] for t in tweets if 'retweeted_id' in t])
                 topRTs = rtCounter.most_common(MAX_RESULTS)
