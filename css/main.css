@@ -27,13 +27,13 @@ li {display:block;}
 
 
 /** logo */
-#logo {position:absolute; top:2px; left:5px;  z-index:100; width:14%; }
+#logo {position:absolute; top:2px; left:7px;  z-index:100; width:14%; }
 #logo img {height:30px; }
 #logo:hover {text-decoration:none; cursor:pointer;}
 #logo label {font-size:17px; font-weight:bold; z-index:100; position:absolute; left:32px;  top:8px; color:#000000; }
 
 /** count down */
-#countdown {color:#000000; font-size:14px; position:absolute; left:17.7%; top:-3px;   }
+#countdown {color:#000000; font-size:14px; position:absolute; left:166px; top:-3px;   }
 #countdown label {color:#FF4B00; font-size:35px; font-weight:bold; }
 #clock {position:absolute; left:27px; top:6px; font-size:14px; color:#999999;}
 
@@ -49,11 +49,12 @@ li {display:block;}
 
 
 /**share*/
-#share {margin-top:50px;  }
-#share li {padding:5px 0px 5px 0px;  position:relative; }
+#share {position:absolute; right:0px; top:6px;  }
+#share li {padding:5px 0px 5px 7px;  position:relative; float:left; }
 #share li:hover {color:#FF4B00; cursor:pointer; }
 #share img {width:25px; height:25px; }
 #share .menu-text {padding-top:15px;}
+#share .IN-widget > span:nth-child(2) > span.IN-right {top:-4px; }
 
 
 /**social media for donation.html */
