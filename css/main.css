@@ -21,6 +21,11 @@ li {display:block;}
 #header #headerContent {position:relative;}
 .twitter-share-button {width:85px !important; }
 
+/**power by*/
+#header #powerby { position:absolute; font-size:13px; color:#555555; font-weight:normal; right:2px; top:0px;  }
+#header #logo_pathgeo {height:30px; margin-top:4px;}
+
+
 /** logo */
 #logo {position:absolute; top:2px; left:5px;  z-index:100; width:14%; }
 #logo img {height:30px; }
@@ -44,8 +49,8 @@ li {display:block;}
 
 
 /**share*/
-#share {position:absolute; right:20px; top:5px;  }
-#share li {padding:5px 0px 5px 10px; float:left; position:relative; }
+#share {margin-top:50px;  }
+#share li {padding:5px 0px 5px 0px;  position:relative; }
 #share li:hover {color:#FF4B00; cursor:pointer; }
 #share img {width:25px; height:25px; }
 #share .menu-text {padding-top:15px;}
@@ -85,9 +90,7 @@ li {display:block;}
 #navigator .menuGroup:nth-child(3) > p {display:none; }
 
 
-/**power by*/
-#navigator #powerby { position:absolute; font-size:14px; font-weight:600; width:100%;  }
-#navigator #logo_pathgeo {width:85%;}
+
 
 /**main content */
 #mainContent {width:85.8%; padding:5px 0% 0px 0%; float:right; border-right:1px solid #eeeeee;}
@@ -241,6 +244,7 @@ li {display:block;}
 #highlightDate table {width:500px; padding:20px 1.5% 20px 1.5%; display:table-cell; }
 #highlightDate table:nth-of-type(n+3) {display:none;}
 #highlightDate table .rank {width:90px !important; }
+#highlightDate table .value {width:75% !important; }
 #highlightDate #loading {display:block; text-align:center; margin-top:50px; display:none;  }
 #highlightDate #loading img {width:30px; }
 
@@ -248,6 +252,11 @@ li {display:block;}
 #map {width:100%; margin:0 auto; height:425px; margin-top:0px;  }
 
 
+/**feedback*/
+#feedback form {margin:0 auto;  width:90%;}
+#feedback form textarea {width:100%; height:200px; resize: none; border:1px solid #cccccc; }
+#feedback form #ss-submit {float:right; }
+#feedback .loadingMainBlock {display:none; }
 
 /** table */
 .table {width:99%;  margin:0 auto; border-collapse:collapse; margin-top:20px; }

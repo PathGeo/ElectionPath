@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:false,
+		testMode:true,
 		showThumbnail:false,
 		highlightDates:[],
 		voice:null
@@ -55,7 +55,6 @@
 		$("#mainContent").width($("html").width()-$("#navigator").outerWidth()-3);
 		$(window).resize(function(){
 			$("#mainContent").width($("html").width()-$("#navigator").outerWidth()-3);
-			$("#powerby").css('top', $(window).height()-120);
 		})
 		
 		//init navigator
@@ -276,7 +275,6 @@
 					chartCSVData.headers.push(name);
 					var v;
 					$.each(twitterAnalysis.values, function(i,val){
-						
 						v=val;
 						//last date
 						if(i==twitterAnalysis.values.length-1){
@@ -529,23 +527,7 @@
 			
 		
 			
-	//show highlighted info at specific date which the number of tweets is over 100
-	function showChartHighlightInfo(name, data){
-		var html="<li><table class='table'><tr><td>Date</td><td>Webpage</td></tr>",
-			$target=$("#topEventDate > ul"),
-			topURL={},
-			values=data.timeSeriesChart.values;
-				
-		$.each(values, function(i, val){
-			topURL=val.topURLs[0];
-			html+="<tr><td>"+val.date + "<p>"+val.tweets +"</p></td><td class='readOpenGraph'>"+
-					createOpenGraphHTML("<a href='"+topURL.url+"' target='_blank'>"+topURL.value+"</a>")+
-				  "</td></tr>";	  
-		});
-				
-				
-		$target.append(html+"</table></li>");
-	}
+
 	
 	
 	
@@ -568,7 +550,7 @@
 						  		$.each(v.labels, function(i,label){
 						  			$result=$("<li value='"+v.values[i]+"'>"+label+"</li>");
 						  			
-						  			if(k=='TOPICS'){$result.attr("data-scroll-nav", i)}
+						  			if(k=='VIEW'){$result.attr("data-scroll-nav", i)}
 						  			if(i==0){$result.addClass('subMenuClick')}
 						  			if(v.clickFn && v.clickFn!=''){
 						  				$result.attr('onclick', v.clickFn +"('"+v.values[i]+"')");
@@ -585,10 +567,8 @@
 					  "</div>";
 			});
 			
-			$("#navigator").html(html).append("<div id='powerby'>Powered By<p></p><a href='https://www.pathgeo.com' target='_blank'><img src='images/PathGeo-color.png' id='logo_pathgeo' /></a></div>");
+			$("#navigator-menu").html(html);
 			
-			
-			$("#powerby").css('top', $(window).height()-120);
 			
 			//click event on each li in subMenu
 			$(".subMenu li:not([data-scroll-nav])").click(function(){
@@ -939,11 +919,14 @@
 			$.each(json, function(candidate,v){
 				html="<table class='table'><tr><td class='rank'>Date</td><td class='value'>Hottest Webpage</td></tr>";
 				
-				$.each(v, function(date,obj){
+				//reverse array to show the nearest date first
+				v.reverse();
+				
+				$.each(v, function(i,obj){
 					topWebpage=obj.topWebpages[0];
 					
 					html+='<tr>'+
-						  '<td class="rank">'+date+'</td>'+
+						  '<td class="rank">'+obj.date+'</td>'+
 						  "<td class='value readOpenGraph'>"+
 						  	createOpenGraphHTML("<a href='"+topWebpage.url+"' target='_blank'>"+topWebpage.value+"</a>")+
 							"</td>"+
