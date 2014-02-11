@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:false,
+		testMode:true,
 		showThumbnail:false,
 		highlightDates:[],
 		voice:null
@@ -385,10 +385,11 @@
 							  	if(obj.opengraph){
 									var op=obj.opengraph;
 									op.title=op.title || "<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>";
-									op.description=op.description || "<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>";
-							  		return "<td class='value'>"+createOpenGraphHTML(op.title, op.image, op.description)
+									op.description=(op.description)?String(op.description).substr(0, 200) + "....<a target='_blank' href='"+obj.url+"'>show more</a>":"<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>";
+									
+							  		return "<td class='value'>"+createOpenGraphHTML(obj.url, op.title, op.image, op.description)
 							  	}else{
-							  		return "<td class='value readOpenGraph'>"+createOpenGraphHTML("<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>")
+							  		return "<td class='value readOpenGraph'>"+createOpenGraphHTML(obj.url, "<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>")
 							  	}
 							  })()+
 								"</td></tr>";
@@ -440,7 +441,7 @@
 									html+='<tr>'+
 										  '<td class="rank">'+obj.score+'</td>'+
 										  "<td class='value readOpenGraph'>"+
-										  	createOpenGraphHTML("<a href='"+obj.url+"' target='_blank'>"+obj.title+"</a>", null, "<a href='"+obj.url+"' target='_blank'>"+obj.url+"</a>")+
+										  	createOpenGraphHTML(obj.url, "<a href='"+obj.url+"' target='_blank'>"+obj.title+"</a>", null, "<a href='"+obj.url+"' target='_blank'>"+obj.url+"</a>")+
 											"</td>"+
 											"</tr>";
 								});
@@ -493,14 +494,14 @@
 	/*
 	 * create opengraph DIV
 	 */
-	function createOpenGraphHTML(title, image, description){
+	function createOpenGraphHTML(url, title, image, description){
 		image=image || "images/main-img-services.png";
-		title=title || "No Title";
+		title=title || "<a href='"+url+"' target='_blank'>"+url+"</a>";
 		description=description || "<img src='images/loading.gif' class='loading' />";
-		
+
 		return html="<div class='opengraph'><ul>"+
 						"<li><img src='"+image+"' class='opengraph-image' style='position:relative; top:-5px; width:70px; height:70px; box-shadow:0px 0px 0px #cccccc;' /><label class='opengraph-title'>"+title+"</label></li>"+
-						"<li class='opengraph-description'>"+description+"</li>"+
+						"<li class='opengraph-description'>"+description +"</li>"+
 				    "</ul></div>";
 	}
 	
@@ -937,7 +938,7 @@
 					html+='<tr>'+
 						  '<td class="rank">'+obj.date+'</td>'+
 						  "<td class='value readOpenGraph'>"+
-						  	createOpenGraphHTML("<a href='"+topWebpage.url+"' target='_blank'>"+topWebpage.value+"</a>")+
+						  	createOpenGraphHTML(topWebpage.url,"<a href='"+topWebpage.url+"' target='_blank'>"+topWebpage.value+"</a>")+
 							"</td>"+
 							"</tr>";
 				});
