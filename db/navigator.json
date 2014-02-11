@@ -13,7 +13,7 @@
 	},
 	"CATEGORY":{
 		"description":"Select a category in Top Story",
-		"labels":["Endorsement", "Debate", "Neighborhood", "Business", "Jobs"],
+		"labels":["Endorsement", "Debate", "Neighborhood", "Business", "Job and Labor"],
 		"values":["endorsement", "debate", "neighborhood", "business", "jobs_and_labor"],
 		"clickFn":"goCategory"
 	}
