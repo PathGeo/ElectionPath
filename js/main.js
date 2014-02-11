@@ -381,14 +381,20 @@
 				$.each(data, function(i,obj){
 						html+='<tr>'+
 							  '<td class="rank">'+obj.rank+'</td>'+
-							  "<td class='value readOpenGraph'>"+
-									createOpenGraphHTML("<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>")+
-								"</td>"+
-								//'<td class="count">'+obj.count+"</td>"+
-								"</tr>";
+							  (function(){
+							  	if(obj.opengraph){
+									var op=obj.opengraph;
+									op.title=op.title || "<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>";
+									op.description=op.description || "<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>";
+							  		return "<td class='value'>"+createOpenGraphHTML(op.title, op.image, op.description)
+							  	}else{
+							  		return "<td class='value readOpenGraph'>"+createOpenGraphHTML("<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>")
+							  	}
+							  })()+
+								"</td></tr>";
 						
 						if(i==0){
-							$(".candidate-top1Webpage#"+name).append("<table border=0><tr>"+$(html).find(".readOpenGraph")[0].outerHTML+ "</tr></table>").find("img#loading").hide();
+							$(".candidate-top1Webpage#"+name).append("<table border=0><tr>"+$(html).find(".value")[0].outerHTML+ "</tr></table>").find("img#loading").hide();
 						}
 				});
 				
