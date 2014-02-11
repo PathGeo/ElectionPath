@@ -1,6 +1,6 @@
 {
     "Faulconer": {
-        "updatedTime": "2014-02-10 07:54:05", 
+        "updatedTime": "2014-02-11 05:54:07", 
         "wordCloud": {
             "values": [
                 {
@@ -4643,7 +4643,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "13.00%", 
+                    "influence": "12.90%", 
                     "tweets_yesterday": 6, 
                     "followers_yesterday_new": 8, 
                     "biggestFollowers_yesterday": [
@@ -4653,8 +4653,8 @@
                             "rank": 1
                         }, 
                         {
-                            "url": "http://www.twitter.com/LibertyZabala", 
-                            "name": "LibertyZabala", 
+                            "url": "http://www.twitter.com/LibertyNBC7SD", 
+                            "name": "LibertyNBC7SD", 
                             "rank": 2
                         }, 
                         {
@@ -5771,8 +5771,8 @@
                             "rank": 2
                         }, 
                         {
-                            "url": "http://www.twitter.com/SanDiegoRadioJo", 
-                            "name": "SanDiegoRadioJo", 
+                            "url": "http://www.twitter.com/BaysicAgenda", 
+                            "name": "BaysicAgenda", 
                             "rank": 3
                         }
                     ], 
@@ -5797,13 +5797,56 @@
                         }
                     ], 
                     "followers_yesterday_removed": 3
+                }, 
+                {
+                    "influence": "0.00%", 
+                    "tweets_yesterday": 0, 
+                    "followers_yesterday_new": 19, 
+                    "biggestFollowers_yesterday": [
+                        {
+                            "url": "http://www.twitter.com/ebushh00", 
+                            "name": "ebushh00", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/CleansweepUSA", 
+                            "name": "CleansweepUSA", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/MattShupePR", 
+                            "name": "MattShupePR", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_all": 4766, 
+                    "date": "2/11/2014", 
+                    "tweets_all": 841, 
+                    "biggestFollowers": [
+                        {
+                            "url": "http://www.twitter.com/DjKingAssassin", 
+                            "name": "DjKingAssassin", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/morrowchris", 
+                            "name": "morrowchris", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/CollChris", 
+                            "name": "CollChris", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_yesterday_removed": 6
                 }
             ]
         }
     }, 
     "voice": "Candidate", 
     "Alvarez": {
-        "updatedTime": "2014-02-10 07:54:05", 
+        "updatedTime": "2014-02-11 05:54:07", 
         "wordCloud": {
             "values": [
                 {
@@ -10436,7 +10479,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "21.90%", 
+                    "influence": "21.70%", 
                     "tweets_yesterday": 2, 
                     "followers_yesterday_new": 11, 
                     "biggestFollowers_yesterday": [
@@ -10451,8 +10494,8 @@
                             "rank": 2
                         }, 
                         {
-                            "url": "http://www.twitter.com/LibertyZabala", 
-                            "name": "LibertyZabala", 
+                            "url": "http://www.twitter.com/LibertyNBC7SD", 
+                            "name": "LibertyNBC7SD", 
                             "rank": 3
                         }
                     ], 
@@ -11595,6 +11638,49 @@
                         }
                     ], 
                     "followers_yesterday_removed": 2
+                }, 
+                {
+                    "influence": "1.10%", 
+                    "tweets_yesterday": 0, 
+                    "followers_yesterday_new": 57, 
+                    "biggestFollowers_yesterday": [
+                        {
+                            "url": "http://www.twitter.com/1SHRED", 
+                            "name": "1SHRED", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/760david", 
+                            "name": "760david", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/Air1socal", 
+                            "name": "Air1socal", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_all": 3692, 
+                    "date": "2/11/2014", 
+                    "tweets_all": 74, 
+                    "biggestFollowers": [
+                        {
+                            "url": "http://www.twitter.com/DjKingAssassin", 
+                            "name": "DjKingAssassin", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/morrowchris", 
+                            "name": "morrowchris", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/SkyFallCarroll", 
+                            "name": "SkyFallCarroll", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_yesterday_removed": 3
                 }
             ]
         }

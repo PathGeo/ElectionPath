@@ -54,9 +54,27 @@ lastUpdateTime=col_update.find().sort("updateTime",-1)[0]["updateTime"]
 
 
 #query source db
-query={"created_at_local":{"$lt": now, "$gt":lastUpdateTime}}
-#query={"created_at_local":{"$lt": now}}
+query={"created_at_local":{"$lt": now, "$gt":lastUpdateTime, "entities.long_urls":{"$exists": True}}}
+#query={"created_at_local":{"$lt": now}, "entities.long_urls":{"$exists":True}, "entities.opengraphs":{"$exists": False}}
 tweets=col_source.find(query)
+
+'''
+print tweets.count()
+count=0
+for t in tweets:
+    if 'entities' in t:
+        print t['entities']['long_urls']
+        print '-'*60
+        count+=1
+
+    if(count>20):
+        break
+
+
+import sys
+sys.exit()
+'''
+
 
 
 #read tweets
@@ -83,6 +101,7 @@ for tweet in tweets:
 
             except Exception, e:
                 import traceback
+                LOGGER.error("Error: "+ str(tweet["id"])+", "+url)
                 LOGGER.error(str(e))
                 LOGGER.error(str(traceback.print_exc()))
 

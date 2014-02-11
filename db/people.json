@@ -1,38 +1,38 @@
 {
     "Faulconer": {
-        "updatedTime": "2014-02-10 06:54:05", 
+        "updatedTime": "2014-02-11 05:54:07", 
         "wordCloud": {
             "values": [
                 {
-                    "count": 4168, 
+                    "count": 4289, 
                     "value": "@kevin_faulconer"
                 }, 
                 {
-                    "count": 1464, 
+                    "count": 1493, 
                     "value": "@alvarezsd"
                 }, 
                 {
-                    "count": 1399, 
+                    "count": 1437, 
                     "value": "#sdmayor"
                 }, 
                 {
-                    "count": 1116, 
+                    "count": 1153, 
                     "value": "san"
                 }, 
                 {
-                    "count": 907, 
+                    "count": 934, 
                     "value": "diego"
                 }, 
                 {
-                    "count": 790, 
+                    "count": 839, 
                     "value": "mayor"
                 }, 
                 {
-                    "count": 772, 
+                    "count": 785, 
                     "value": "mayoral"
                 }, 
                 {
-                    "count": 539, 
+                    "count": 557, 
                     "value": "#sandiego"
                 }, 
                 {
@@ -40,44 +40,44 @@
                     "value": "@nathanfletcher"
                 }, 
                 {
-                    "count": 467, 
+                    "count": 474, 
                     "value": "race"
                 }, 
                 {
-                    "count": 457, 
-                    "value": "poll"
-                }, 
-                {
-                    "count": 431, 
+                    "count": 464, 
                     "value": "election"
                 }, 
                 {
-                    "count": 408, 
+                    "count": 464, 
+                    "value": "poll"
+                }, 
+                {
+                    "count": 421, 
                     "value": "campaign"
                 }, 
                 {
-                    "count": 362, 
-                    "value": "city"
+                    "count": 403, 
+                    "value": "vote"
                 }, 
                 {
-                    "count": 352, 
-                    "value": "vote"
+                    "count": 370, 
+                    "value": "city"
                 }, 
                 {
                     "count": 342, 
                     "value": "debate"
                 }, 
                 {
-                    "count": 307, 
+                    "count": 328, 
                     "value": "today"
                 }, 
                 {
-                    "count": 301, 
-                    "value": "@faulconer4mayor"
+                    "count": 310, 
+                    "value": "candidate"
                 }, 
                 {
-                    "count": 300, 
-                    "value": "candidate"
+                    "count": 306, 
+                    "value": "@faulconer4mayor"
                 }, 
                 {
                     "count": 280, 
@@ -88,40 +88,48 @@
                     "value": "says"
                 }, 
                 {
-                    "count": 267, 
+                    "count": 272, 
                     "value": "candidates"
                 }, 
                 {
-                    "count": 246, 
-                    "value": "new"
-                }, 
-                {
-                    "count": 245, 
+                    "count": 262, 
                     "value": "@10news"
                 }, 
                 {
-                    "count": 235, 
+                    "count": 257, 
+                    "value": "new"
+                }, 
+                {
+                    "count": 239, 
                     "value": "support"
                 }, 
                 {
-                    "count": 226, 
+                    "count": 230, 
                     "value": "http\u2026"
+                }, 
+                {
+                    "count": 218, 
+                    "value": "@meanestbossever"
                 }, 
                 {
                     "count": 215, 
                     "value": "plan"
                 }, 
                 {
-                    "count": 215, 
-                    "value": "@meanestbossever"
-                }, 
-                {
                     "count": 206, 
                     "value": "@mike_4_sd_mayor"
                 }, 
                 {
-                    "count": 196, 
+                    "count": 198, 
                     "value": "would"
+                }, 
+                {
+                    "count": 195, 
+                    "value": "\u2026"
+                }, 
+                {
+                    "count": 193, 
+                    "value": "next"
                 }, 
                 {
                     "count": 188, 
@@ -129,27 +137,27 @@
                 }, 
                 {
                     "count": 186, 
-                    "value": "\u2026"
-                }, 
-                {
-                    "count": 182, 
-                    "value": "first"
-                }, 
-                {
-                    "count": 180, 
-                    "value": "like"
-                }, 
-                {
-                    "count": 179, 
-                    "value": "next"
-                }, 
-                {
-                    "count": 176, 
                     "value": "faulconers"
                 }, 
                 {
-                    "count": 172, 
+                    "count": 184, 
+                    "value": "first"
+                }, 
+                {
+                    "count": 182, 
+                    "value": "like"
+                }, 
+                {
+                    "count": 173, 
                     "value": "shows"
+                }, 
+                {
+                    "count": 171, 
+                    "value": "get"
+                }, 
+                {
+                    "count": 166, 
+                    "value": "one"
                 }, 
                 {
                     "count": 166, 
@@ -160,12 +168,16 @@
                     "value": "@nbcsandiego"
                 }, 
                 {
-                    "count": 161, 
-                    "value": "get"
+                    "count": 162, 
+                    "value": "latest"
+                }, 
+                {
+                    "count": 162, 
+                    "value": "@kpbsnews"
                 }, 
                 {
                     "count": 161, 
-                    "value": "latest"
+                    "value": "lead"
                 }, 
                 {
                     "count": 160, 
@@ -173,35 +185,23 @@
                 }, 
                 {
                     "count": 159, 
-                    "value": "one"
-                }, 
-                {
-                    "count": 159, 
                     "value": "@utsandiego"
                 }, 
                 {
-                    "count": 158, 
-                    "value": "lead"
-                }, 
-                {
-                    "count": 156, 
-                    "value": "@kpbsnews"
-                }, 
-                {
-                    "count": 147, 
+                    "count": 155, 
                     "value": "special"
                 }, 
                 {
-                    "count": 145, 
-                    "value": "results"
+                    "count": 150, 
+                    "value": "@elirubenstein"
                 }, 
                 {
-                    "count": 145, 
+                    "count": 149, 
                     "value": "cant"
                 }, 
                 {
-                    "count": 144, 
-                    "value": "@earthysara"
+                    "count": 149, 
+                    "value": "show"
                 }
             ]
         }, 
@@ -573,7 +573,7 @@
                 ]
             }
         }, 
-        "tweets_today": 6, 
+        "tweets_today": 8, 
         "image": "images/faulconer.png", 
         "twitterAnalysis": {
             "values": [
@@ -4643,7 +4643,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "13.00%", 
+                    "influence": "12.90%", 
                     "tweets_yesterday": 227, 
                     "followers_yesterday_new": 8, 
                     "biggestFollowers_yesterday": [
@@ -4653,8 +4653,8 @@
                             "rank": 1
                         }, 
                         {
-                            "url": "http://www.twitter.com/LibertyZabala", 
-                            "name": "LibertyZabala", 
+                            "url": "http://www.twitter.com/LibertyNBC7SD", 
+                            "name": "LibertyNBC7SD", 
                             "rank": 2
                         }, 
                         {
@@ -5757,7 +5757,7 @@
                 }, 
                 {
                     "influence": "0.00%", 
-                    "tweets_yesterday": 6, 
+                    "tweets_yesterday": 236, 
                     "followers_yesterday_new": 18, 
                     "biggestFollowers_yesterday": [
                         {
@@ -5771,14 +5771,14 @@
                             "rank": 2
                         }, 
                         {
-                            "url": "http://www.twitter.com/SanDiegoRadioJo", 
-                            "name": "SanDiegoRadioJo", 
+                            "url": "http://www.twitter.com/BaysicAgenda", 
+                            "name": "BaysicAgenda", 
                             "rank": 3
                         }
                     ], 
                     "followers_all": 4753, 
                     "date": "2/10/2014", 
-                    "tweets_all": 7606, 
+                    "tweets_all": 7836, 
                     "biggestFollowers": [
                         {
                             "url": "http://www.twitter.com/DjKingAssassin", 
@@ -5797,89 +5797,132 @@
                         }
                     ], 
                     "followers_yesterday_removed": 3
+                }, 
+                {
+                    "influence": "0.00%", 
+                    "tweets_yesterday": 8, 
+                    "followers_yesterday_new": 19, 
+                    "biggestFollowers_yesterday": [
+                        {
+                            "url": "http://www.twitter.com/ebushh00", 
+                            "name": "ebushh00", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/CleansweepUSA", 
+                            "name": "CleansweepUSA", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/MattShupePR", 
+                            "name": "MattShupePR", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_all": 4766, 
+                    "date": "2/11/2014", 
+                    "tweets_all": 7844, 
+                    "biggestFollowers": [
+                        {
+                            "url": "http://www.twitter.com/DjKingAssassin", 
+                            "name": "DjKingAssassin", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/morrowchris", 
+                            "name": "morrowchris", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/CollChris", 
+                            "name": "CollChris", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_yesterday_removed": 6
                 }
             ]
         }
     }, 
     "voice": "People", 
     "Alvarez": {
-        "updatedTime": "2014-02-10 06:54:05", 
+        "updatedTime": "2014-02-11 05:54:07", 
         "wordCloud": {
             "values": [
                 {
-                    "count": 930, 
+                    "count": 1024, 
                     "value": "san"
                 }, 
                 {
-                    "count": 875, 
+                    "count": 916, 
                     "value": "#sdmayor"
                 }, 
                 {
-                    "count": 810, 
-                    "value": "mayor"
-                }, 
-                {
-                    "count": 805, 
+                    "count": 888, 
                     "value": "diego"
                 }, 
                 {
-                    "count": 793, 
+                    "count": 869, 
                     "value": "@alvarezsd"
                 }, 
                 {
-                    "count": 536, 
+                    "count": 861, 
+                    "value": "mayor"
+                }, 
+                {
+                    "count": 548, 
                     "value": "mayoral"
                 }, 
                 {
-                    "count": 479, 
+                    "count": 486, 
                     "value": "race"
                 }, 
                 {
-                    "count": 435, 
+                    "count": 448, 
                     "value": "#sandiego"
                 }, 
                 {
-                    "count": 363, 
+                    "count": 398, 
                     "value": "vote"
                 }, 
                 {
-                    "count": 286, 
-                    "value": "election"
-                }, 
-                {
-                    "count": 281, 
+                    "count": 315, 
                     "value": "support"
                 }, 
                 {
-                    "count": 280, 
+                    "count": 301, 
+                    "value": "election"
+                }, 
+                {
+                    "count": 285, 
                     "value": "poll"
+                }, 
+                {
+                    "count": 255, 
+                    "value": "city"
                 }, 
                 {
                     "count": 251, 
                     "value": "runoff"
                 }, 
                 {
-                    "count": 243, 
-                    "value": "city"
-                }, 
-                {
-                    "count": 218, 
+                    "count": 223, 
                     "value": "@kevin_faulconer"
                 }, 
                 {
-                    "count": 218, 
-                    "value": "candidate"
-                }, 
-                {
-                    "count": 209, 
+                    "count": 223, 
                     "value": "endorses"
                 }, 
                 {
-                    "count": 198, 
+                    "count": 221, 
+                    "value": "candidate"
+                }, 
+                {
+                    "count": 205, 
                     "value": "campaign"
                 }, 
                 {
-                    "count": 187, 
+                    "count": 190, 
                     "value": "today"
                 }, 
                 {
@@ -5887,75 +5930,79 @@
                     "value": "says"
                 }, 
                 {
+                    "count": 169, 
+                    "value": "next"
+                }, 
+                {
                     "count": 168, 
                     "value": "@utsandiego"
                 }, 
                 {
-                    "count": 158, 
-                    "value": "next"
+                    "count": 160, 
+                    "value": "candidates"
                 }, 
                 {
-                    "count": 151, 
-                    "value": "candidates"
+                    "count": 152, 
+                    "value": "endorsement"
                 }, 
                 {
                     "count": 145, 
                     "value": "debate"
                 }, 
                 {
+                    "count": 144, 
+                    "value": "http\u2026"
+                }, 
+                {
                     "count": 142, 
                     "value": "@nbcsandiego"
+                }, 
+                {
+                    "count": 141, 
+                    "value": "@10news"
+                }, 
+                {
+                    "count": 141, 
+                    "value": "new"
+                }, 
+                {
+                    "count": 141, 
+                    "value": "like"
                 }, 
                 {
                     "count": 140, 
                     "value": "precincts"
                 }, 
                 {
-                    "count": 140, 
-                    "value": "http\u2026"
-                }, 
-                {
-                    "count": 139, 
-                    "value": "endorsement"
-                }, 
-                {
                     "count": 138, 
-                    "value": "new"
-                }, 
-                {
-                    "count": 136, 
-                    "value": "like"
-                }, 
-                {
-                    "count": 135, 
-                    "value": "@10news"
-                }, 
-                {
-                    "count": 135, 
                     "value": "first"
                 }, 
                 {
-                    "count": 130, 
+                    "count": 135, 
+                    "value": "one"
+                }, 
+                {
+                    "count": 135, 
                     "value": "@kpbsnews"
                 }, 
                 {
                     "count": 128, 
-                    "value": "one"
-                }, 
-                {
-                    "count": 127, 
                     "value": "results"
                 }, 
                 {
-                    "count": 123, 
+                    "count": 127, 
                     "value": "got"
+                }, 
+                {
+                    "count": 124, 
+                    "value": "obama"
                 }, 
                 {
                     "count": 121, 
                     "value": "councilman"
                 }, 
                 {
-                    "count": 119, 
+                    "count": 120, 
                     "value": "lead"
                 }, 
                 {
@@ -5964,47 +6011,43 @@
                 }, 
                 {
                     "count": 115, 
-                    "value": "obama"
+                    "value": "la"
                 }, 
                 {
                     "count": 114, 
-                    "value": "la"
+                    "value": "\u2026"
+                }, 
+                {
+                    "count": 113, 
+                    "value": "mayors"
+                }, 
+                {
+                    "count": 113, 
+                    "value": "votes"
                 }, 
                 {
                     "count": 112, 
                     "value": "chandler"
                 }, 
                 {
-                    "count": 111, 
-                    "value": "votes"
+                    "count": 107, 
+                    "value": "get"
                 }, 
                 {
-                    "count": 110, 
-                    "value": "\u2026"
+                    "count": 103, 
+                    "value": "make"
                 }, 
                 {
-                    "count": 109, 
-                    "value": "mayors"
+                    "count": 103, 
+                    "value": "special"
                 }, 
                 {
                     "count": 102, 
                     "value": "latest"
                 }, 
                 {
-                    "count": 100, 
-                    "value": "special"
-                }, 
-                {
                     "count": 98, 
-                    "value": "get"
-                }, 
-                {
-                    "count": 97, 
-                    "value": "make"
-                }, 
-                {
-                    "count": 97, 
-                    "value": "back"
+                    "value": "|"
                 }
             ]
         }, 
@@ -6376,7 +6419,7 @@
                 ]
             }
         }, 
-        "tweets_today": 18, 
+        "tweets_today": 28, 
         "image": "images/alvarez.png", 
         "twitterAnalysis": {
             "values": [
@@ -10436,7 +10479,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "21.90%", 
+                    "influence": "21.70%", 
                     "tweets_yesterday": 147, 
                     "followers_yesterday_new": 11, 
                     "biggestFollowers_yesterday": [
@@ -10451,8 +10494,8 @@
                             "rank": 2
                         }, 
                         {
-                            "url": "http://www.twitter.com/LibertyZabala", 
-                            "name": "LibertyZabala", 
+                            "url": "http://www.twitter.com/LibertyNBC7SD", 
+                            "name": "LibertyNBC7SD", 
                             "rank": 3
                         }
                     ], 
@@ -11555,7 +11598,7 @@
                 }, 
                 {
                     "influence": "0.40%", 
-                    "tweets_yesterday": 18, 
+                    "tweets_yesterday": 254, 
                     "followers_yesterday_new": 47, 
                     "biggestFollowers_yesterday": [
                         {
@@ -11576,7 +11619,7 @@
                     ], 
                     "followers_all": 3638, 
                     "date": "2/10/2014", 
-                    "tweets_all": 5616, 
+                    "tweets_all": 5852, 
                     "biggestFollowers": [
                         {
                             "url": "http://www.twitter.com/DjKingAssassin", 
@@ -11595,6 +11638,49 @@
                         }
                     ], 
                     "followers_yesterday_removed": 2
+                }, 
+                {
+                    "influence": "1.10%", 
+                    "tweets_yesterday": 28, 
+                    "followers_yesterday_new": 57, 
+                    "biggestFollowers_yesterday": [
+                        {
+                            "url": "http://www.twitter.com/1SHRED", 
+                            "name": "1SHRED", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/760david", 
+                            "name": "760david", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/Air1socal", 
+                            "name": "Air1socal", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_all": 3692, 
+                    "date": "2/11/2014", 
+                    "tweets_all": 5880, 
+                    "biggestFollowers": [
+                        {
+                            "url": "http://www.twitter.com/DjKingAssassin", 
+                            "name": "DjKingAssassin", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/morrowchris", 
+                            "name": "morrowchris", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/SkyFallCarroll", 
+                            "name": "SkyFallCarroll", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_yesterday_removed": 3
                 }
             ]
         }

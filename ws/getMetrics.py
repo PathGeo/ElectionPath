@@ -39,20 +39,64 @@ try:
 	 
                 entitySets = [t for t in tweets if 'entities' in t]
 
+                hashList=[]
+                mentionList=[]
+                urlList=[]
+                opengraphs={}
 
-                hashCounter = Counter([hashtag.lower() for t in entitySets if 'hashtags' in t['entities'] for hashtag in t['entities']['hashtags']])
-                urlCounter = Counter([url for t in entitySets if 'long_urls' in t['entities'] for url in t['entities']['long_urls']])
-                mentionCounter = Counter([mention for t in entitySets if 'user_mentions' in t['entities'] for mention in t['entities']['user_mentions']])
+                for t in entitySets:
+                        entities=t['entities']
+
+                        #hashtag
+                        if 'hashtags' in entities:
+                                hashList+=[hashtag.lower() for hashtag in entities['hashtags']]
+
+                        #mention
+                        if 'user_mentions' in entities:
+                                mentionList+=[mention for mention in entities['user_mentions']]
+
+                        #url
+                        if 'long_urls' in entities:
+                                for i in range(len(entities['long_urls'])):
+                                        url=entities['long_urls'][i]
+                                        urlList.append(url)
+
+                                        #opengraphs
+                                        if url not in opengraphs:
+                                                '''
+                                                print ''
+                                                print i
+                                                print 'URL='+url
+                                                print 'OPENGRAPHS'
+                                                print entities['opengraphs']
+                                                '''
+                                                
+                                                opengraphs[url]= None if 'opengraphs' not in entities or not len(entities['opengraphs']) or (i > len(entities['opengraphs'])-1) else entities['opengraphs'][i]
+
+                                                
+                                                #print opengraphs
+                                                #print "-"*60
+                                                
+
+                #counter
+                hashCounter = Counter(hashList)
+                mentionCounter = Counter(mentionList)
+                urlCounter= Counter(urlList)
                 userCounter = Counter([t['user']['screen_name'] for t in tweets])
 
-                topUrls = urlCounter.most_common(MAX_RESULTS)
+                
                 topHashes = hashCounter.most_common(MAX_RESULTS)
                 topMentions = mentionCounter.most_common(MAX_RESULTS)
                 topUsers = userCounter.most_common(MAX_RESULTS)
+                topUrls = urlCounter.most_common(MAX_RESULTS)
 
-                print ''
-                print topUrls
-
+                
+                #integrate opengraphs into topURLS
+                for i in range(len(topUrls)):
+                        url=topUrls[i][0]
+                        
+                        topUrls[i]+=(opengraphs[url],)
+                        
 
                 rtCounter = Counter([t['retweeted_id'] for t in tweets if 'retweeted_id' in t])
                 topRTs = rtCounter.most_common(MAX_RESULTS)
@@ -66,7 +110,7 @@ try:
 
                 output = {}
                 output['candidate'] = candidate
-                output['topWebpages'] = [{'value': item[0], 'url': item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topUrls)]
+                output['topWebpages'] = [{'value': item[0], 'url': item[0], 'count': item[1], 'rank': indx + 1, 'opengraph': item[2] } for indx, item in enumerate(topUrls)]
                 output['topHashtags'] = [{'value': '#' + item[0], 'url': HASH_URL % item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topHashes)]
                 output['topMentions'] = [{'value': '@' + item[0], 'url': USER_URL % item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topMentions)]
                 output['topChatters'] = [{'value': item[0], 'url': USER_URL % item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topUsers)]
