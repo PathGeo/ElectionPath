@@ -394,7 +394,10 @@
 								"</td></tr>";
 						
 						if(i==0){
-							$(".candidate-top1Webpage#"+name).append("<table border=0><tr>"+$(html).find(".value")[0].outerHTML+ "</tr></table>").find("img#loading").hide();
+							var classes=(obj.opengraph)?".value":".readOpenGraph";
+							var index=(obj.opengraph)?1:0;
+							$(".candidate-top1Webpage#"+name).append("<table border=0><tr>"+$(html).find(classes)[index].outerHTML+ "</tr></table>").find("img#loading").hide();
+							
 						}
 				});
 				
