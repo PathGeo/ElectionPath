@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:false,
+		testMode:true,
 		showThumbnail:false,
 		highlightDates:[],
 		voice:null
@@ -384,12 +384,9 @@
 							  (function(){
 							  	if(obj.opengraph){
 									var op=obj.opengraph;
-									op.title=op.title || "<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>";
-									op.description=(op.description)?String(op.description).substr(0, 200) + "....<a target='_blank' href='"+obj.url+"'>show more</a>":"<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>";
-									
 							  		return "<td class='value'>"+createOpenGraphHTML(obj.url, op.title, op.image, op.description)
 							  	}else{
-							  		return "<td class='value readOpenGraph'>"+createOpenGraphHTML(obj.url, "<a href='"+obj.url+"' target='_blank'>"+obj.value+"</a>")
+							  		return "<td class='value readOpenGraph'>"+createOpenGraphHTML(obj.url);
 							  	}
 							  })()+
 								"</td></tr>";
@@ -440,9 +437,21 @@
 								$.each(val, function(i,obj){
 									html+='<tr>'+
 										  '<td class="rank">'+obj.score+'</td>'+
-										  "<td class='value readOpenGraph'>"+
-										  	createOpenGraphHTML(obj.url, "<a href='"+obj.url+"' target='_blank'>"+obj.title+"</a>", null, "<a href='"+obj.url+"' target='_blank'>"+obj.url+"</a>")+
-											"</td>"+
+										  (function(){
+										  	var result= "<td class='value readOpenGraph'>"+
+										  				createOpenGraphHTML(obj.url)+
+														"</td>";
+										  	
+										  	if(obj.opengraph){
+										  		var op=obj.opengraph;
+										  		
+										  		result= "<td class='value'>"+
+										  				createOpenGraphHTML(obj.url, op.title, op.image, op.description)+
+														"</td>";
+										  	}
+										  	
+										  	return result;
+										  })()+
 											"</tr>";
 								});
 								
@@ -497,7 +506,7 @@
 	function createOpenGraphHTML(url, title, image, description){
 		image=image || "images/main-img-services.png";
 		title=title || "<a href='"+url+"' target='_blank'>"+url+"</a>";
-		description=description || "<img src='images/loading.gif' class='loading' />";
+		description=(description)?String(description).substr(0, 150) + "....<a href='"+url+"' target='_blank'>show more</a>" : "<a href='"+url+"' target='_blank'>"+url+"</a>";
 
 		return html="<div class='opengraph'><ul>"+
 						"<li><img src='"+image+"' class='opengraph-image' style='position:relative; top:-5px; width:70px; height:70px; box-shadow:0px 0px 0px #cccccc;' /><label class='opengraph-title'>"+title+"</label></li>"+
@@ -615,9 +624,12 @@
 				url=$a.attr("href"),
 				value=$a.html();
 			
+			//show loading image in the description
+			$this.find(".opengraph-description").html("<img src='images/loading.gif' class='loading' />");
+			
 			//read opengraph
 			$.getJSON("ws/getOpengraph.py?url="+encodeURIComponent(url), function(json){
-				if(!json.error && json){
+				if(json){
 					var msg="<div class='opengraph'><ul>"+
 							"<li><img src='"+((json.image)?json.image:"images/main-img-services.png")+"' class='opengraph-image' /><label class='opengraph-title'>"+((json.title)?json.title:value)+"</label></li>"+
 							"<li class='opengraph-description'>"+((json.description)?linkify(json.description):"Please view the Webpage.")+"</li>"+
@@ -625,7 +637,7 @@
 					$this.html(msg).click(function(){
 							window.open(url);
 					}).find(".opengraph-description").html(function(index, text) {
-							return text.substr(0, 200) + "....<a target='_blank' href='"+url+"'>show more</a>";
+							return text.substr(0, 150) + "....<a target='_blank' href='"+url+"'>show more</a>";
 					})
 				}
 				
@@ -938,7 +950,7 @@
 					html+='<tr>'+
 						  '<td class="rank">'+obj.date+'</td>'+
 						  "<td class='value readOpenGraph'>"+
-						  	createOpenGraphHTML(topWebpage.url,"<a href='"+topWebpage.url+"' target='_blank'>"+topWebpage.value+"</a>")+
+						  	createOpenGraphHTML(topWebpage.url)+
 							"</td>"+
 							"</tr>";
 				});
