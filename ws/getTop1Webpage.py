@@ -36,14 +36,39 @@ try:
          
                 entitySets = [t for t in tweets if 'entities' in t]
 
-                urlCounter = Counter([url for t in entitySets if 'long_urls' in t['entities'] for url in t['entities']['long_urls']])
+                #get url and opengraph
+                urlList=[]
+                opengraphs={}
+                for t in entitySets:
+                        entities=t['entities']
+                        if 'long_urls' in entities:
+                                long_urls=entities['long_urls']
+                                for i in range(len(long_urls)):
+                                        url=long_urls[i]
+                                        urlList.append(url)
+
+                                        #opengraph
+                                        if 'url' not in opengraphs:
+                                                opengraphs[url]= None if 'opengraphs' not in entities or not len(entities['opengraphs']) or (i > len(entities['opengraphs'])-1) else entities['opengraphs'][i]
+
+
+                
+                urlCounter=Counter(urlList)
+                #urlCounter = Counter([url for t in entitySets if 'long_urls' in t['entities'] for url in t['entities']['long_urls']])
   
                 topUrls = urlCounter.most_common(MAX_RESULTS)
                 
+                #integrate opengraphs into topURLS
+                for i in range(len(topUrls)):
+                        url=topUrls[i][0]
+                        
+                        topUrls[i]+=(opengraphs[url],)
+                        
+
 
                 output = {'date': date}
                 #output['candidate'] = candidate
-                output['topWebpages'] = [{'value': item[0], 'url': item[0], 'count': item[1], 'rank': indx + 1} for indx, item in enumerate(topUrls)]
+                output['topWebpages'] = [{'value': item[0], 'url': item[0], 'count': item[1], 'rank': indx + 1, 'opengraph': item[2]} for indx, item in enumerate(topUrls)]
                 
                 return output
         #-----------------------------------------------------------------------------       

@@ -1,10 +1,10 @@
 {
     "Faulconer": {
-        "updatedTime": "2014-02-13 20:54:07", 
+        "updatedTime": "2014-02-13 21:54:10", 
         "wordCloud": {
             "values": [
                 {
-                    "count": 5361, 
+                    "count": 5363, 
                     "value": "@kevin_faulconer"
                 }, 
                 {
@@ -80,7 +80,7 @@
                     "value": "candidate"
                 }, 
                 {
-                    "count": 342, 
+                    "count": 343, 
                     "value": "debate"
                 }, 
                 {
@@ -128,7 +128,7 @@
                     "value": "@utsandiego"
                 }, 
                 {
-                    "count": 254, 
+                    "count": 255, 
                     "value": "@toddgloria"
                 }, 
                 {
@@ -573,7 +573,7 @@
                 ]
             }
         }, 
-        "tweets_today": 130, 
+        "tweets_today": 136, 
         "image": "images/faulconer.png", 
         "twitterAnalysis": {
             "values": [
@@ -5886,7 +5886,7 @@
                 }, 
                 {
                     "influence": "9.10%", 
-                    "tweets_yesterday": 130, 
+                    "tweets_yesterday": 136, 
                     "followers_yesterday_new": 288, 
                     "biggestFollowers_yesterday": [
                         {
@@ -5907,7 +5907,7 @@
                     ], 
                     "followers_all": 5272, 
                     "date": "2/13/2014", 
-                    "tweets_all": 10039, 
+                    "tweets_all": 10045, 
                     "biggestFollowers": [
                         {
                             "url": "http://www.twitter.com/DjKingAssassin", 
@@ -5932,7 +5932,7 @@
     }, 
     "voice": "People", 
     "Alvarez": {
-        "updatedTime": "2014-02-13 20:54:07", 
+        "updatedTime": "2014-02-13 21:54:10", 
         "wordCloud": {
             "values": [
                 {
@@ -5948,7 +5948,7 @@
                     "value": "diego"
                 }, 
                 {
-                    "count": 1005, 
+                    "count": 1006, 
                     "value": "mayor"
                 }, 
                 {
@@ -5996,7 +5996,7 @@
                     "value": "@kevin_faulconer"
                 }, 
                 {
-                    "count": 257, 
+                    "count": 258, 
                     "value": "@utsandiego"
                 }, 
                 {
@@ -6505,7 +6505,7 @@
                 ]
             }
         }, 
-        "tweets_today": 43, 
+        "tweets_today": 45, 
         "image": "images/alvarez.png", 
         "twitterAnalysis": {
             "values": [
@@ -11813,7 +11813,7 @@
                 }, 
                 {
                     "influence": "2.30%", 
-                    "tweets_yesterday": 43, 
+                    "tweets_yesterday": 45, 
                     "followers_yesterday_new": 44, 
                     "biggestFollowers_yesterday": [
                         {
@@ -11834,7 +11834,7 @@
                     ], 
                     "followers_all": 3860, 
                     "date": "2/13/2014", 
-                    "tweets_all": 6948, 
+                    "tweets_all": 6950, 
                     "biggestFollowers": [
                         {
                             "url": "http://www.twitter.com/DjKingAssassin", 
