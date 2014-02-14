@@ -32,7 +32,7 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:true,
+		testMode:false,
 		showThumbnail:false,
 		highlightDates:[],
 		voice:null
@@ -949,9 +949,19 @@
 					
 					html+='<tr>'+
 						  '<td class="rank">'+obj.date+'</td>'+
-						  "<td class='value readOpenGraph'>"+
-						  	createOpenGraphHTML(topWebpage.url)+
-							"</td>"+
+						  (function(){
+						  	var result="<td class='value readOpenGraph'>"+
+									  	createOpenGraphHTML(topWebpage.url)+
+										"</td>";
+										
+							if(topWebpage.opengraph){
+								result="<td class='value readOpenGraph'>"+
+									  	createOpenGraphHTML(topWebpage.url, topWebpage.title, topWebpage.image, topWebpage.description)+
+										"</td>";
+							}
+							
+							return result;
+						  })()+
 							"</tr>";
 				});
 				html+="</table>";
