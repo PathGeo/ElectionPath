@@ -166,7 +166,7 @@ li {display:block;}
 
 
 /** candidate-image */
-.candidate-image {height:100%; width:96%; padding:10px 2% 10px 2%; }
+.candidate-image {height:100%; width:96%; padding:10px 2% 10px 2%; position:relative;  }
 .candidate-image img {height:83px; width:83px; border-radius:100%; }
 
 
@@ -214,6 +214,10 @@ li {display:block;}
 .candidateBar .candidate-name {top:15px; left:80px;  }
 .candidateBar .candidate-metadata {display:none;}
 .candidateBar .candidate-content {padding-bottom:0px; }
+
+
+.win {position:absolute; right:5px; bottom:10px; width:70px !important; height:70px !important;  }
+.candidateBar .win {bottom:2px !important; }
 
 /**top retweet */
 #topRetweet .table tr:not(:first-child) td {height:115px; }

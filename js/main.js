@@ -69,7 +69,6 @@
 		//read candidates information 
 		readVoice('people');
 		
-		
 	});
 	
 	
@@ -229,6 +228,10 @@
 					});
 				});
 				
+				
+				//win
+				$(".candidate-li[id='Faulconer'] .candidate-image").append('<img src="images/1392414183_trophy.png" class="win" />');
+	
 			}
 		});
 	}
