@@ -1,18 +1,18 @@
 {
     "Faulconer": {
-        "updatedTime": "2014-02-13 21:54:10", 
+        "updatedTime": "2014-02-14 06:54:05", 
         "wordCloud": {
             "values": [
                 {
-                    "count": 5363, 
+                    "count": 5371, 
                     "value": "@kevin_faulconer"
                 }, 
                 {
-                    "count": 1860, 
+                    "count": 1863, 
                     "value": "san"
                 }, 
                 {
-                    "count": 1839, 
+                    "count": 1840, 
                     "value": "@alvarezsd"
                 }, 
                 {
@@ -20,11 +20,11 @@
                     "value": "#sdmayor"
                 }, 
                 {
-                    "count": 1501, 
+                    "count": 1505, 
                     "value": "mayor"
                 }, 
                 {
-                    "count": 1484, 
+                    "count": 1485, 
                     "value": "diego"
                 }, 
                 {
@@ -36,11 +36,11 @@
                     "value": "#sandiego"
                 }, 
                 {
-                    "count": 676, 
+                    "count": 678, 
                     "value": "city"
                 }, 
                 {
-                    "count": 663, 
+                    "count": 665, 
                     "value": "race"
                 }, 
                 {
@@ -56,7 +56,7 @@
                     "value": "@nathanfletcher"
                 }, 
                 {
-                    "count": 509, 
+                    "count": 511, 
                     "value": "next"
                 }, 
                 {
@@ -64,7 +64,7 @@
                     "value": "poll"
                 }, 
                 {
-                    "count": 447, 
+                    "count": 448, 
                     "value": "campaign"
                 }, 
                 {
@@ -104,7 +104,7 @@
                     "value": "http\u2026"
                 }, 
                 {
-                    "count": 294, 
+                    "count": 296, 
                     "value": "precincts"
                 }, 
                 {
@@ -128,7 +128,7 @@
                     "value": "@utsandiego"
                 }, 
                 {
-                    "count": 255, 
+                    "count": 256, 
                     "value": "@toddgloria"
                 }, 
                 {
@@ -136,7 +136,7 @@
                     "value": "lead"
                 }, 
                 {
-                    "count": 244, 
+                    "count": 245, 
                     "value": "get"
                 }, 
                 {
@@ -148,7 +148,7 @@
                     "value": "@meanestbossever"
                 }, 
                 {
-                    "count": 230, 
+                    "count": 233, 
                     "value": "\u2026"
                 }, 
                 {
@@ -169,14 +169,14 @@
                 }, 
                 {
                     "count": 220, 
-                    "value": "great"
-                }, 
-                {
-                    "count": 218, 
                     "value": "congratulations"
                 }, 
                 {
-                    "count": 216, 
+                    "count": 220, 
+                    "value": "great"
+                }, 
+                {
+                    "count": 217, 
                     "value": "mayors"
                 }, 
                 {
@@ -573,7 +573,7 @@
                 ]
             }
         }, 
-        "tweets_today": 136, 
+        "tweets_today": 2, 
         "image": "images/faulconer.png", 
         "twitterAnalysis": {
             "values": [
@@ -3282,7 +3282,7 @@
                     "followers_yesterday_removed": 4
                 }, 
                 {
-                    "influence": "0.10%", 
+                    "influence": "0.20%", 
                     "tweets_yesterday": 6, 
                     "followers_yesterday_new": 12, 
                     "biggestFollowers_yesterday": [
@@ -4643,7 +4643,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "12.70%", 
+                    "influence": "12.60%", 
                     "tweets_yesterday": 227, 
                     "followers_yesterday_new": 8, 
                     "biggestFollowers_yesterday": [
@@ -5886,7 +5886,7 @@
                 }, 
                 {
                     "influence": "9.10%", 
-                    "tweets_yesterday": 136, 
+                    "tweets_yesterday": 139, 
                     "followers_yesterday_new": 288, 
                     "biggestFollowers_yesterday": [
                         {
@@ -5907,7 +5907,50 @@
                     ], 
                     "followers_all": 5272, 
                     "date": "2/13/2014", 
-                    "tweets_all": 10045, 
+                    "tweets_all": 10048, 
+                    "biggestFollowers": [
+                        {
+                            "url": "http://www.twitter.com/DjKingAssassin", 
+                            "name": "DjKingAssassin", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/morrowchris", 
+                            "name": "morrowchris", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/CollChris", 
+                            "name": "CollChris", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_yesterday_removed": 2
+                }, 
+                {
+                    "influence": "0.30%", 
+                    "tweets_yesterday": 2, 
+                    "followers_yesterday_new": 35, 
+                    "biggestFollowers_yesterday": [
+                        {
+                            "url": "http://www.twitter.com/RichardGrenell", 
+                            "name": "RichardGrenell", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/olinhyde", 
+                            "name": "olinhyde", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/SDFoodBank", 
+                            "name": "SDFoodBank", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_all": 5305, 
+                    "date": "2/14/2014", 
+                    "tweets_all": 10050, 
                     "biggestFollowers": [
                         {
                             "url": "http://www.twitter.com/DjKingAssassin", 
@@ -5932,11 +5975,11 @@
     }, 
     "voice": "People", 
     "Alvarez": {
-        "updatedTime": "2014-02-13 21:54:10", 
+        "updatedTime": "2014-02-14 06:54:05", 
         "wordCloud": {
             "values": [
                 {
-                    "count": 1217, 
+                    "count": 1219, 
                     "value": "san"
                 }, 
                 {
@@ -5944,11 +5987,11 @@
                     "value": "#sdmayor"
                 }, 
                 {
-                    "count": 1042, 
+                    "count": 1044, 
                     "value": "diego"
                 }, 
                 {
-                    "count": 1006, 
+                    "count": 1007, 
                     "value": "mayor"
                 }, 
                 {
@@ -6012,7 +6055,7 @@
                     "value": "campaign"
                 }, 
                 {
-                    "count": 231, 
+                    "count": 232, 
                     "value": "today"
                 }, 
                 {
@@ -6044,7 +6087,7 @@
                     "value": "@nbcsandiego"
                 }, 
                 {
-                    "count": 185, 
+                    "count": 186, 
                     "value": "next"
                 }, 
                 {
@@ -6505,7 +6548,7 @@
                 ]
             }
         }, 
-        "tweets_today": 45, 
+        "tweets_today": 1, 
         "image": "images/alvarez.png", 
         "twitterAnalysis": {
             "values": [
@@ -8660,7 +8703,7 @@
                     "followers_yesterday_removed": 3
                 }, 
                 {
-                    "influence": "7.20%", 
+                    "influence": "7.10%", 
                     "tweets_yesterday": 12, 
                     "followers_yesterday_new": 9, 
                     "biggestFollowers_yesterday": [
@@ -9333,7 +9376,7 @@
                     "followers_yesterday_removed": 0
                 }, 
                 {
-                    "influence": "-2.60%", 
+                    "influence": "-2.70%", 
                     "tweets_yesterday": 31, 
                     "followers_yesterday_new": 9, 
                     "biggestFollowers_yesterday": [
@@ -11813,7 +11856,7 @@
                 }, 
                 {
                     "influence": "2.30%", 
-                    "tweets_yesterday": 45, 
+                    "tweets_yesterday": 46, 
                     "followers_yesterday_new": 44, 
                     "biggestFollowers_yesterday": [
                         {
@@ -11834,7 +11877,7 @@
                     ], 
                     "followers_all": 3860, 
                     "date": "2/13/2014", 
-                    "tweets_all": 6950, 
+                    "tweets_all": 6951, 
                     "biggestFollowers": [
                         {
                             "url": "http://www.twitter.com/DjKingAssassin", 
@@ -11853,6 +11896,49 @@
                         }
                     ], 
                     "followers_yesterday_removed": 22
+                }, 
+                {
+                    "influence": "-0.40%", 
+                    "tweets_yesterday": 1, 
+                    "followers_yesterday_new": 16, 
+                    "biggestFollowers_yesterday": [
+                        {
+                            "url": "http://www.twitter.com/MsAnnaEspinoza", 
+                            "name": "MsAnnaEspinoza", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/SDFoodBank", 
+                            "name": "SDFoodBank", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/UTTVSD", 
+                            "name": "UTTVSD", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_all": 3868, 
+                    "date": "2/14/2014", 
+                    "tweets_all": 6952, 
+                    "biggestFollowers": [
+                        {
+                            "url": "http://www.twitter.com/DjKingAssassin", 
+                            "name": "DjKingAssassin", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/morrowchris", 
+                            "name": "morrowchris", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/SkyFallCarroll", 
+                            "name": "SkyFallCarroll", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_yesterday_removed": 8
                 }
             ]
         }
