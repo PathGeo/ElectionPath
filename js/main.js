@@ -439,14 +439,14 @@
 										  '<td class="rank">'+obj.score+'</td>'+
 										  (function(){
 										  	var result= "<td class='value readOpenGraph'>"+
-										  				createOpenGraphHTML(obj.url)+
+										  				createOpenGraphHTML(obj.url, obj.title)+
 														"</td>";
 										  	
 										  	if(obj.opengraph && obj.opengraph.image){
 										  		var op=obj.opengraph;
 										  		
 										  		result= "<td class='value'>"+
-										  				createOpenGraphHTML(obj.url, op.title, op.image, op.description)+
+										  				createOpenGraphHTML(obj.url, obj.title, op.image, op.description)+
 														"</td>";
 										  	}
 										  	
