@@ -382,7 +382,7 @@
 						html+='<tr>'+
 							  '<td class="rank">'+obj.rank+'</td>'+
 							  (function(){
-							  	if(obj.opengraph){
+							  	if(obj.opengraph && obj.opengraph.image){
 									var op=obj.opengraph;
 							  		return "<td class='value'>"+createOpenGraphHTML(obj.url, op.title, op.image, op.description)
 							  	}else{
@@ -442,7 +442,7 @@
 										  				createOpenGraphHTML(obj.url)+
 														"</td>";
 										  	
-										  	if(obj.opengraph){
+										  	if(obj.opengraph && obj.opengraph.image){
 										  		var op=obj.opengraph;
 										  		
 										  		result= "<td class='value'>"+
@@ -954,8 +954,8 @@
 									  	createOpenGraphHTML(topWebpage.url)+
 										"</td>";
 										
-							if(topWebpage.opengraph){
-								result="<td class='value readOpenGraph'>"+
+							if(topWebpage.opengraph && topWebpage.opengraph.image){
+								result="<td class='value'>"+
 									  	createOpenGraphHTML(topWebpage.url, topWebpage.title, topWebpage.image, topWebpage.description)+
 										"</td>";
 							}
