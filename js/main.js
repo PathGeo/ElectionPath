@@ -505,7 +505,7 @@
 	 */
 	function createOpenGraphHTML(url, title, image, description){
 		image=image || "images/main-img-services.png";
-		title=title || "<a href='"+url+"' target='_blank'>"+url+"</a>";
+		title=title || "<a href='"+url+"' target='_blank'>"+((url.length>90)?String(url).substr(0,90)+"...":url)+"</a>";
 		description=(description)?String(description).substr(0, 150) + "....<a href='"+url+"' target='_blank'>show more</a>" : "<a href='"+url+"' target='_blank'>"+url+"</a>";
 
 		return html="<div class='opengraph'><ul>"+
@@ -622,7 +622,7 @@
 			var $this=$(this),
 				$a=$this.find("a"),
 				url=$a.attr("href"),
-				value=$a.html();
+				value=$a[0].outerHTML;
 			
 			//show loading image in the description
 			$this.find(".opengraph-description").html("<img src='images/loading.gif' class='loading' />");

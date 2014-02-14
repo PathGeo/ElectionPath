@@ -248,6 +248,7 @@ li {display:block;}
 #highlightDate table .value {width:75% !important; }
 #highlightDate #loading {display:block; text-align:center; margin-top:50px; display:none;  }
 #highlightDate #loading img {width:30px; }
+#highlightDate .opengraph-description {margin-top:20px; }
 
 /**map*/
 #map {width:100%; margin:0 auto; height:425px; margin-top:0px;  }
