@@ -641,25 +641,14 @@
 					})
 				}
 				
-				$this.find('img.loading').hide();
-
-				shrinkTitle($this);
-				
 			}).fail(function(){
-				$this.find('img.loading').hide();
-
+				$this.find(".opengraph-description").html("<a href='"+url+"' target='_blank'>"+url+"</a>");
+				
 			});
 			
 		});
 		
-		
-		function shrinkTitle($obj){
-			// $obj.find(".opengraph-title").html(function(index, text) {
-				// console.log(text);
-				// return text.substr(0, 200) + "....";
-			// })
-		}
-		
+	
 	}
 	
 	
