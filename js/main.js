@@ -215,7 +215,7 @@
 					
 				
 					//tabs
-					$('.tabs').tabs();
+					init_tabs();
 					
 					
 					//show top webpage and top retweet
@@ -428,7 +428,7 @@
 								
 								//if this is the first time to creat tabs
 								if(!isTabs && $tab.find("> li a[href='#category-"+lowerKey+"']").length==0){
-									$tab.append("<li><a href='#category-"+lowerKey+"'>"+(k.replace(/_/g," ")[0].toUpperCase()+k.replace(/_/g," ").slice(1))+"</a></li>");
+									$tab.append("<li><a value='"+lowerKey+"' href='#category-"+lowerKey+"'>"+(k.replace(/_/g," ")[0].toUpperCase()+k.replace(/_/g," ").slice(1))+"</a></li>");
 									$categories.append("<div id='category-"+lowerKey+"' class='tabContent'>"+$(".candidateBar")[0].outerHTML+"</div>");
 								}
 								
@@ -1050,24 +1050,13 @@
 	function init_tabs(){
 		$('.tabs').tabs();
 		
-		$("#informationTabs > ul > li > a").click(function(){
+		$("#categories> ul > li > a").click(function(){
 			var $this=$(this),
 				$li=$this.parent(),
-				href=$this.attr('href'),
-				$href=$(href),
-				candidate=href.split('-')[1];
+				category=$this.attr('value');
 			
-			if(app.dateFrom && app.dateTo && candidate && candidate!=''){
-				getMetrics(candidate, app.dateFrom, app.dateTo, $href);
-			}else{
-				$href.html("<div class='candidate-hide'><h2><a href='https://www.pathgeo.com/?page_id=90' target='_blank'>Contact Us for More Information.</a></h2><p></p>We temporally put the information offline in order to build a sustainable business model for PathGeo<p></p>If you are interested in this information, please <a href='https://www.pathgeo.com/?page_id=90' target='_blank'>CONTACT US</a></div>")
-			}
+			$(".subMenu > li[value='"+category+"']").addClass('subMenuClick').siblings().removeClass('subMenuClick');
 			
-			$li.css({
-				"background":app.candidates[candidate].backgroundColor
-			}).siblings().css({
-				"background":""
-			});
 		});
 		
 		
