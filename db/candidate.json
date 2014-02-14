@@ -1,6 +1,6 @@
 {
     "Faulconer": {
-        "updatedTime": "2014-02-11 05:54:07", 
+        "updatedTime": "2014-02-13 20:54:07", 
         "wordCloud": {
             "values": [
                 {
@@ -228,27 +228,6 @@
                     }, 
                     {
                         "category": "Jobs_and_Labor", 
-                        "url": "http://www.utsandiego.com/news/2014/jan/18/mayor-san-diego-endorse-kevin-faulconer/", 
-                        "score": "94", 
-                        "keyword": "\"Kevin Faulconer\" and \"Labor\" and \"San Diego\"", 
-                        "title": "For mayor of San Diego: Kevin Faulconer is clear choice ..."
-                    }, 
-                    {
-                        "category": "Jobs_and_Labor", 
-                        "url": "http://www.utsandiego.com/news/2014/jan/18/mayor-san-diego-endorse-kevin-faulconer/", 
-                        "score": "94", 
-                        "keyword": "\"Kevin Faulconer\" and \"Labor\" and \"San Diego\"", 
-                        "title": "For mayor of San Diego: Kevin Faulconer is clear choice ..."
-                    }, 
-                    {
-                        "category": "Jobs_and_Labor", 
-                        "url": "http://www.utsandiego.com/news/2014/jan/18/mayor-san-diego-endorse-kevin-faulconer/", 
-                        "score": "94", 
-                        "keyword": "\"Kevin Faulconer\" and \"Labor\" and \"San Diego\"", 
-                        "title": "For mayor of San Diego: Kevin Faulconer is clear choice ..."
-                    }, 
-                    {
-                        "category": "Jobs_and_Labor", 
                         "url": "http://en.wikipedia.org/wiki/Kevin_Faulconer", 
                         "score": "94", 
                         "keyword": "\"Kevin Faulconer\" and \"union\" and \"San Diego\"", 
@@ -260,13 +239,6 @@
                         "score": "94", 
                         "keyword": "\"Kevin Faulconer\" and \"union\" and \"San Diego\"", 
                         "title": "Kevin Faulconer - Wikipedia, the free encyclopedia"
-                    }, 
-                    {
-                        "category": "Jobs_and_Labor", 
-                        "url": "http://www.utsandiego.com/news/2014/jan/18/mayor-san-diego-endorse-kevin-faulconer/", 
-                        "score": "94", 
-                        "keyword": "\"Kevin Faulconer\" and \"Labor\" and \"San Diego\"", 
-                        "title": "For mayor of San Diego: Kevin Faulconer is clear choice ..."
                     }, 
                     {
                         "category": "Jobs_and_Labor", 
@@ -281,6 +253,34 @@
                         "score": "94", 
                         "keyword": "\"Kevin Faulconer\" and \"union\" and \"San Diego\"", 
                         "title": "Kevin Faulconer - Wikipedia, the free encyclopedia"
+                    }, 
+                    {
+                        "category": "Jobs_and_Labor", 
+                        "url": "http://www.kevinfaulconer.com/about/", 
+                        "score": "94", 
+                        "keyword": "\"Kevin Faulconer\" and \"Labor\" and \"San Diego\"", 
+                        "title": "Kevin Faulconer"
+                    }, 
+                    {
+                        "category": "Jobs_and_Labor", 
+                        "url": "http://www.sandiego.gov/citycouncil/cd2/index.shtml", 
+                        "score": "94", 
+                        "keyword": "\"Kevin Faulconer\" and \"Jobs\" and \"San Diego\"", 
+                        "title": "City Council District 2 | City of San Diego"
+                    }, 
+                    {
+                        "category": "Jobs_and_Labor", 
+                        "url": "http://en.wikipedia.org/wiki/Kevin_Faulconer", 
+                        "score": "94", 
+                        "keyword": "\"Kevin Faulconer\" and \"union\" and \"San Diego\"", 
+                        "title": "Kevin Faulconer - Wikipedia, the free encyclopedia"
+                    }, 
+                    {
+                        "category": "Jobs_and_Labor", 
+                        "url": "http://www.kevinfaulconer.com/about/", 
+                        "score": "94", 
+                        "keyword": "\"Kevin Faulconer\" and \"Labor\" and \"San Diego\"", 
+                        "title": "Kevin Faulconer"
                     }
                 ], 
                 "Neighborhood": [
@@ -314,17 +314,17 @@
                     }, 
                     {
                         "category": "Neighborhood", 
-                        "url": "http://www.kevinfaulconer.com/issues/repair.htm", 
+                        "url": "http://www.whitepages.com/name/Kevin-Faulconer/San-Diego-CA", 
                         "score": "94", 
-                        "keyword": "\"Kevin Faulconer\" and \"streets\" and \"San Diego\"", 
-                        "title": "Kevin Faulconer | Issues"
+                        "keyword": "\"Kevin Faulconer\" and \"neighbor\" and \"San Diego\"", 
+                        "title": "Kevin Faulconer in San Diego CA | WhitePages"
                     }, 
                     {
                         "category": "Neighborhood", 
-                        "url": "http://www.kevinfaulconer.com/issues/repair.htm", 
+                        "url": "http://www.kevinfaulconer.com/", 
                         "score": "94", 
-                        "keyword": "\"Kevin Faulconer\" and \"streets\" and \"San Diego\"", 
-                        "title": "Kevin Faulconer | Issues"
+                        "keyword": "\"Kevin Faulconer\" and \"neighborhood\" and \"San Diego\"", 
+                        "title": "Kevin Faulconer"
                     }, 
                     {
                         "category": "Neighborhood", 
@@ -509,6 +509,48 @@
                     }, 
                     {
                         "category": "Endorsement", 
+                        "url": "http://www.sdjewishworld.com/2014/01/28/endorsement-kevin-faulconer-san-diego-mayor/", 
+                        "score": "94", 
+                        "keyword": "\"Kevin Faulconer\" and \"Endorsement\" and \"San Diego\"", 
+                        "title": "Endorsement: Kevin Faulconer for San Diego Mayor - San ..."
+                    }, 
+                    {
+                        "category": "Endorsement", 
+                        "url": "http://www.sdjewishworld.com/2014/01/28/endorsement-kevin-faulconer-san-diego-mayor/", 
+                        "score": "94", 
+                        "keyword": "\"Kevin Faulconer\" and \"Endorsement\" and \"San Diego\"", 
+                        "title": "Endorsement: Kevin Faulconer for San Diego Mayor - San ..."
+                    }, 
+                    {
+                        "category": "Endorsement", 
+                        "url": "http://www.sdjewishworld.com/2014/01/28/endorsement-kevin-faulconer-san-diego-mayor/", 
+                        "score": "94", 
+                        "keyword": "\"Kevin Faulconer\" and \"Endorsement\" and \"San Diego\"", 
+                        "title": "Endorsement: Kevin Faulconer for San Diego Mayor - San ..."
+                    }, 
+                    {
+                        "category": "Endorsement", 
+                        "url": "http://www.sdjewishworld.com/2014/01/28/endorsement-kevin-faulconer-san-diego-mayor/", 
+                        "score": "94", 
+                        "keyword": "\"Kevin Faulconer\" and \"Endorsement\" and \"San Diego\"", 
+                        "title": "Endorsement: Kevin Faulconer for San Diego Mayor - San ..."
+                    }, 
+                    {
+                        "category": "Endorsement", 
+                        "url": "http://www.huffingtonpost.com/2014/02/12/kevin-faulconer-san-diego-mayor_n_4772269.html", 
+                        "score": "94", 
+                        "keyword": "\"Kevin Faulconer\" and \"support\" and \"San Diego\"", 
+                        "title": "Kevin Faulconer, Republican, Wins San Diego Election For Mayor"
+                    }, 
+                    {
+                        "category": "Endorsement", 
+                        "url": "http://sdgln.com/news/2014/01/23/lgbt-figures-endorse-kevin-faulconer-mayor-sandiego", 
+                        "score": "94", 
+                        "keyword": "\"Kevin Faulconer\" and \"Endorse\" and \"San Diego\"", 
+                        "title": "Local LGBT figures endorse Kevin Faulconer for San Diego ..."
+                    }, 
+                    {
+                        "category": "Endorsement", 
                         "url": "http://www.kpbs.org/news/2014/jan/09/san-diego-coalition-pastors-endorses-faulconer/", 
                         "score": "94", 
                         "keyword": "\"Kevin Faulconer\" and \"Endorse\" and \"San Diego\"", 
@@ -520,48 +562,6 @@
                         "score": "94", 
                         "keyword": "\"Kevin Faulconer\" and \"Endorsement\" and \"San Diego\"", 
                         "title": "ENDORSEMENTS - Kevin Faulconer"
-                    }, 
-                    {
-                        "category": "Endorsement", 
-                        "url": "http://www.kevinfaulconer.com/about/endorsements.htm", 
-                        "score": "94", 
-                        "keyword": "\"Kevin Faulconer\" and \"Endorsement\" and \"San Diego\"", 
-                        "title": "ENDORSEMENTS - Kevin Faulconer"
-                    }, 
-                    {
-                        "category": "Endorsement", 
-                        "url": "http://www.sandiego.gov/citycouncil/cd2/", 
-                        "score": "94", 
-                        "keyword": "\"Kevin Faulconer\" and \"support\" and \"San Diego\"", 
-                        "title": "City Council District 2 | City of San Diego"
-                    }, 
-                    {
-                        "category": "Endorsement", 
-                        "url": "http://www.sandiego.gov/citycouncil/cd2/", 
-                        "score": "94", 
-                        "keyword": "\"Kevin Faulconer\" and \"support\" and \"San Diego\"", 
-                        "title": "City Council District 2 | City of San Diego"
-                    }, 
-                    {
-                        "category": "Endorsement", 
-                        "url": "http://www.kevinfaulconer.com/about/endorsements.htm", 
-                        "score": "94", 
-                        "keyword": "\"Kevin Faulconer\" and \"Endorsement\" and \"San Diego\"", 
-                        "title": "ENDORSEMENTS - Kevin Faulconer"
-                    }, 
-                    {
-                        "category": "Endorsement", 
-                        "url": "http://sdgln.com/news/2014/01/23/lgbt-figures-endorse-kevin-faulconer-mayor-sandiego", 
-                        "score": "94", 
-                        "keyword": "\"Kevin Faulconer\" and \"Endorse\" and \"San Diego\"", 
-                        "title": "Local LGBT figures endorse Kevin Faulconer for San Diego ..."
-                    }, 
-                    {
-                        "category": "Endorsement", 
-                        "url": "http://www.sandiego.gov/citycouncil/cd2/", 
-                        "score": "94", 
-                        "keyword": "\"Kevin Faulconer\" and \"support\" and \"San Diego\"", 
-                        "title": "City Council District 2 | City of San Diego"
                     }, 
                     {
                         "category": "Endorsement", 
@@ -707,7 +707,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "-0.50%", 
+                    "influence": "-0.40%", 
                     "tweets_yesterday": 13, 
                     "followers_yesterday_new": 11, 
                     "biggestFollowers_yesterday": [
@@ -922,7 +922,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "0.30%", 
+                    "influence": "0.40%", 
                     "tweets_yesterday": 23, 
                     "followers_yesterday_new": 10, 
                     "biggestFollowers_yesterday": [
@@ -3325,7 +3325,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "0.20%", 
+                    "influence": "0.30%", 
                     "tweets_yesterday": 2, 
                     "followers_yesterday_new": 4, 
                     "biggestFollowers_yesterday": [
@@ -3335,13 +3335,13 @@
                             "rank": 1
                         }, 
                         {
-                            "url": "http://www.twitter.com/maumirelest", 
-                            "name": "maumirelest", 
+                            "url": "http://www.twitter.com/dangilleon", 
+                            "name": "dangilleon", 
                             "rank": 2
                         }, 
                         {
-                            "url": "http://www.twitter.com/dangilleon", 
-                            "name": "dangilleon", 
+                            "url": "http://www.twitter.com/maumirelest", 
+                            "name": "maumirelest", 
                             "rank": 3
                         }
                     ], 
@@ -4643,7 +4643,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "12.90%", 
+                    "influence": "12.70%", 
                     "tweets_yesterday": 6, 
                     "followers_yesterday_new": 8, 
                     "biggestFollowers_yesterday": [
@@ -5670,7 +5670,7 @@
                     "followers_yesterday_removed": 2
                 }, 
                 {
-                    "influence": "0.10%", 
+                    "influence": "0.20%", 
                     "tweets_yesterday": 0, 
                     "followers_yesterday_new": 13, 
                     "biggestFollowers_yesterday": [
@@ -5840,13 +5840,99 @@
                         }
                     ], 
                     "followers_yesterday_removed": 6
+                }, 
+                {
+                    "influence": "2.30%", 
+                    "tweets_yesterday": 0, 
+                    "followers_yesterday_new": 228, 
+                    "biggestFollowers_yesterday": [
+                        {
+                            "url": "http://www.twitter.com/chrisbrowntv", 
+                            "name": "chrisbrowntv", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/billpostmus", 
+                            "name": "billpostmus", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/BettinaVLA", 
+                            "name": "BettinaVLA", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_all": 4986, 
+                    "date": "2/12/2014", 
+                    "tweets_all": 841, 
+                    "biggestFollowers": [
+                        {
+                            "url": "http://www.twitter.com/DjKingAssassin", 
+                            "name": "DjKingAssassin", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/morrowchris", 
+                            "name": "morrowchris", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/CollChris", 
+                            "name": "CollChris", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_yesterday_removed": 8
+                }, 
+                {
+                    "influence": "9.10%", 
+                    "tweets_yesterday": 0, 
+                    "followers_yesterday_new": 288, 
+                    "biggestFollowers_yesterday": [
+                        {
+                            "url": "http://www.twitter.com/michellemalkin", 
+                            "name": "michellemalkin", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/hipEchik", 
+                            "name": "hipEchik", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/Michael_Potter_", 
+                            "name": "Michael_Potter_", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_all": 5272, 
+                    "date": "2/13/2014", 
+                    "tweets_all": 841, 
+                    "biggestFollowers": [
+                        {
+                            "url": "http://www.twitter.com/DjKingAssassin", 
+                            "name": "DjKingAssassin", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/morrowchris", 
+                            "name": "morrowchris", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/CollChris", 
+                            "name": "CollChris", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_yesterday_removed": 2
                 }
             ]
         }
     }, 
     "voice": "Candidate", 
     "Alvarez": {
-        "updatedTime": "2014-02-11 05:54:07", 
+        "updatedTime": "2014-02-13 20:54:07", 
         "wordCloud": {
             "values": [
                 {
@@ -6081,24 +6167,17 @@
                     }, 
                     {
                         "category": "Jobs_and_Labor", 
-                        "url": "http://www.kpbs.org/news/2014/jan/27/faulconer-continues-attack-labor-support-alvarez-t/", 
+                        "url": "http://twitter.com/AlvarezSD", 
                         "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"Labor\" and \"San Diego\"", 
-                        "title": "Faulconer Continues Attack On Labor Support Of Alvarez ..."
+                        "keyword": "\"David Alvarez\" and \"Jobs\" and \"San Diego\"", 
+                        "title": "David Alvarez (AlvarezSD) on Twitter"
                     }, 
                     {
                         "category": "Jobs_and_Labor", 
-                        "url": "http://www.nbcsandiego.com/news/local/San-Diego-Labor-Council-Endorses-Alvarez--222774351.html", 
+                        "url": "http://twitter.com/AlvarezSD", 
                         "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"Labor\" and \"San Diego\"", 
-                        "title": "San Diego Labor Council Endorses Alvarez | NBC 7 San Diego"
-                    }, 
-                    {
-                        "category": "Jobs_and_Labor", 
-                        "url": "http://en.wikipedia.org/wiki/David_Alvarez_(American_politician)", 
-                        "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"union\" and \"San Diego\"", 
-                        "title": "David Alvarez (politician) - Wikipedia, the free encyclopedia"
+                        "keyword": "\"David Alvarez\" and \"Jobs\" and \"San Diego\"", 
+                        "title": "David Alvarez (AlvarezSD) on Twitter"
                     }, 
                     {
                         "category": "Jobs_and_Labor", 
@@ -6127,6 +6206,13 @@
                         "score": "94", 
                         "keyword": "\"David Alvarez\" and \"union\" and \"San Diego\"", 
                         "title": "David Alvarez (politician) - Wikipedia, the free encyclopedia"
+                    }, 
+                    {
+                        "category": "Jobs_and_Labor", 
+                        "url": "http://twitter.com/AlvarezSD", 
+                        "score": "94", 
+                        "keyword": "\"David Alvarez\" and \"Jobs\" and \"San Diego\"", 
+                        "title": "David Alvarez (AlvarezSD) on Twitter"
                     }
                 ], 
                 "Neighborhood": [
@@ -6218,59 +6304,59 @@
                     }, 
                     {
                         "category": "Debate", 
+                        "url": "http://www.alvarezformayor.com/debate_with_nbc_7_san_diego", 
+                        "score": "94", 
+                        "keyword": "\"David Alvarez\" and \"Debate\" and \"San Diego\"", 
+                        "title": "Debate with NBC 7 San Diego - David Alvarez for Mayor"
+                    }, 
+                    {
+                        "category": "Debate", 
+                        "url": "http://www.alvarezformayor.com/debate_with_nbc_7_san_diego", 
+                        "score": "94", 
+                        "keyword": "\"David Alvarez\" and \"Debate\" and \"San Diego\"", 
+                        "title": "Debate with NBC 7 San Diego - David Alvarez for Mayor"
+                    }, 
+                    {
+                        "category": "Debate", 
+                        "url": "http://www.alvarezformayor.com/", 
+                        "score": "94", 
+                        "keyword": "\"David Alvarez\" and \"Debate\" and \"San Diego\"", 
+                        "title": "David Alvarez for Mayor"
+                    }, 
+                    {
+                        "category": "Debate", 
+                        "url": "http://www.alvarezformayor.com/", 
+                        "score": "94", 
+                        "keyword": "\"David Alvarez\" and \"Debate\" and \"San Diego\"", 
+                        "title": "David Alvarez for Mayor"
+                    }, 
+                    {
+                        "category": "Debate", 
+                        "url": "http://www.alvarezformayor.com/", 
+                        "score": "94", 
+                        "keyword": "\"David Alvarez\" and \"Debate\" and \"San Diego\"", 
+                        "title": "David Alvarez for Mayor"
+                    }, 
+                    {
+                        "category": "Debate", 
+                        "url": "http://www.alvarezformayor.com/debate_with_nbc_7_san_diego", 
+                        "score": "94", 
+                        "keyword": "\"David Alvarez\" and \"Debate\" and \"San Diego\"", 
+                        "title": "Debate with NBC 7 San Diego - David Alvarez for Mayor"
+                    }, 
+                    {
+                        "category": "Debate", 
+                        "url": "http://www.alvarezformayor.com/debate_with_nbc_7_san_diego", 
+                        "score": "94", 
+                        "keyword": "\"David Alvarez\" and \"Debate\" and \"San Diego\"", 
+                        "title": "Debate with NBC 7 San Diego - David Alvarez for Mayor"
+                    }, 
+                    {
+                        "category": "Debate", 
                         "url": "http://www.kpbs.org/news/2014/jan/15/david-alvarez-kevin-faulconer-go-negative-first-sa/", 
                         "score": "94", 
                         "keyword": "\"David Alvarez\" and \"Debate\" and \"San Diego\"", 
                         "title": "Alvarez, Faulconer Go Negative In First San Diego Mayoral ..."
-                    }, 
-                    {
-                        "category": "Debate", 
-                        "url": "http://www.alvarezformayor.com/debate_with_nbc_7_san_diego", 
-                        "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"Debate\" and \"San Diego\"", 
-                        "title": "Debate with NBC 7 San Diego - David Alvarez for Mayor"
-                    }, 
-                    {
-                        "category": "Debate", 
-                        "url": "http://www.alvarezformayor.com/debate_with_nbc_7_san_diego", 
-                        "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"Debate\" and \"San Diego\"", 
-                        "title": "Debate with NBC 7 San Diego - David Alvarez for Mayor"
-                    }, 
-                    {
-                        "category": "Debate", 
-                        "url": "http://www.alvarezformayor.com/debate_with_nbc_7_san_diego", 
-                        "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"Debate\" and \"San Diego\"", 
-                        "title": "Debate with NBC 7 San Diego - David Alvarez for Mayor"
-                    }, 
-                    {
-                        "category": "Debate", 
-                        "url": "http://www.alvarezformayor.com/debate_with_nbc_7_san_diego", 
-                        "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"Debate\" and \"San Diego\"", 
-                        "title": "Debate with NBC 7 San Diego - David Alvarez for Mayor"
-                    }, 
-                    {
-                        "category": "Debate", 
-                        "url": "http://www.alvarezformayor.com/", 
-                        "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"Debate\" and \"San Diego\"", 
-                        "title": "David Alvarez for Mayor"
-                    }, 
-                    {
-                        "category": "Debate", 
-                        "url": "http://www.alvarezformayor.com/", 
-                        "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"Debate\" and \"San Diego\"", 
-                        "title": "David Alvarez for Mayor"
-                    }, 
-                    {
-                        "category": "Debate", 
-                        "url": "http://www.alvarezformayor.com/", 
-                        "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"Debate\" and \"San Diego\"", 
-                        "title": "David Alvarez for Mayor"
                     }
                 ], 
                 "Business": [
@@ -6278,6 +6364,34 @@
                         "category": "Business", 
                         "url": "http://www.sandiego.gov/citycouncil/cd8/about/index.shtml", 
                         "score": "94", 
+                        "keyword": "\"David Alvarez\" and \"develop\" and \"San Diego\"", 
+                        "title": "About David Alvarez - City of San Diego Official Website"
+                    }, 
+                    {
+                        "category": "Business", 
+                        "url": "http://www.sandiego.gov/citycouncil/cd8/about/index.shtml", 
+                        "score": "94", 
+                        "keyword": "\"David Alvarez\" and \"develop\" and \"San Diego\"", 
+                        "title": "About David Alvarez - City of San Diego Official Website"
+                    }, 
+                    {
+                        "category": "Business", 
+                        "url": "http://www.sandiego.gov/citycouncil/cd8/about/index.shtml", 
+                        "score": "94", 
+                        "keyword": "\"David Alvarez\" and \"tourism\" and \"San Diego\"", 
+                        "title": "About David Alvarez - City of San Diego Official Website"
+                    }, 
+                    {
+                        "category": "Business", 
+                        "url": "http://www.sandiego.gov/citycouncil/cd8/about/index.shtml", 
+                        "score": "94", 
+                        "keyword": "\"David Alvarez\" and \"tourism\" and \"San Diego\"", 
+                        "title": "About David Alvarez - City of San Diego Official Website"
+                    }, 
+                    {
+                        "category": "Business", 
+                        "url": "http://www.sandiego.gov/citycouncil/cd8/about/index.shtml", 
+                        "score": "94", 
                         "keyword": "\"David Alvarez\" and \"business\" and \"San Diego\"", 
                         "title": "About David Alvarez - City of San Diego Official Website"
                     }, 
@@ -6292,34 +6406,6 @@
                         "category": "Business", 
                         "url": "http://www.sandiego.gov/citycouncil/cd8/about/index.shtml", 
                         "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"develop\" and \"San Diego\"", 
-                        "title": "About David Alvarez - City of San Diego Official Website"
-                    }, 
-                    {
-                        "category": "Business", 
-                        "url": "http://www.sandiego.gov/citycouncil/cd8/about/index.shtml", 
-                        "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"develop\" and \"San Diego\"", 
-                        "title": "About David Alvarez - City of San Diego Official Website"
-                    }, 
-                    {
-                        "category": "Business", 
-                        "url": "http://www.linkedin.com/pub/david-alvarez-cpa/a/7aa/724", 
-                        "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"tax\" and \"San Diego\"", 
-                        "title": "David Alvarez, CPA | LinkedIn"
-                    }, 
-                    {
-                        "category": "Business", 
-                        "url": "http://www.linkedin.com/pub/david-alvarez-cpa/a/7aa/724", 
-                        "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"tax\" and \"San Diego\"", 
-                        "title": "David Alvarez, CPA | LinkedIn"
-                    }, 
-                    {
-                        "category": "Business", 
-                        "url": "http://www.sandiego.gov/citycouncil/cd8/about/index.shtml", 
-                        "score": "94", 
                         "keyword": "\"David Alvarez\" and \"tourism\" and \"San Diego\"", 
                         "title": "About David Alvarez - City of San Diego Official Website"
                     }, 
@@ -6327,7 +6413,7 @@
                         "category": "Business", 
                         "url": "http://www.sandiego.gov/citycouncil/cd8/about/index.shtml", 
                         "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"tourism\" and \"San Diego\"", 
+                        "keyword": "\"David Alvarez\" and \"develop\" and \"San Diego\"", 
                         "title": "About David Alvarez - City of San Diego Official Website"
                     }, 
                     {
@@ -6348,38 +6434,24 @@
                 "Endorsement": [
                     {
                         "category": "Endorsement", 
-                        "url": "http://pointlomadem.org/2014/01/10/san-diego-lifeguards-endorse-david-alvarez-for-mayor/", 
-                        "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"Endorse\" and \"San Diego\"", 
-                        "title": "San Diego Lifeguards Endorse David Alvarez for Mayor ..."
-                    }, 
-                    {
-                        "category": "Endorsement", 
-                        "url": "http://pointlomadem.org/2014/01/10/san-diego-lifeguards-endorse-david-alvarez-for-mayor/", 
-                        "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"Endorse\" and \"San Diego\"", 
-                        "title": "San Diego Lifeguards Endorse David Alvarez for Mayor ..."
-                    }, 
-                    {
-                        "category": "Endorsement", 
-                        "url": "http://www.sdcitybeat.com/sandiego/article-12345-david-alvarez-for-san-diego-mayor.html", 
-                        "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"Endorsement\" and \"San Diego\"", 
-                        "title": "David Alvarez for San Diego mayor"
-                    }, 
-                    {
-                        "category": "Endorsement", 
-                        "url": "http://www.sdcitybeat.com/sandiego/article-12345-david-alvarez-for-san-diego-mayor.html", 
-                        "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"Endorsement\" and \"San Diego\"", 
-                        "title": "David Alvarez for San Diego mayor"
-                    }, 
-                    {
-                        "category": "Endorsement", 
-                        "url": "http://www.utsandiego.com/news/2014/jan/07/mayor-faulconer-alvarez-endorsements-support/", 
+                        "url": "http://www.alvarezformayor.com/", 
                         "score": "94", 
                         "keyword": "\"David Alvarez\" and \"support\" and \"San Diego\"", 
-                        "title": "Alvarez, Faulconer shoring up support | UTSanDiego.com"
+                        "title": "David Alvarez for Mayor"
+                    }, 
+                    {
+                        "category": "Endorsement", 
+                        "url": "http://www.sdcitybeat.com/sandiego/article-12345-david-alvarez-for-san-diego-mayor.html", 
+                        "score": "94", 
+                        "keyword": "\"David Alvarez\" and \"Endorsement\" and \"San Diego\"", 
+                        "title": "David Alvarez for San Diego mayor"
+                    }, 
+                    {
+                        "category": "Endorsement", 
+                        "url": "http://www.sdcitybeat.com/sandiego/article-12345-david-alvarez-for-san-diego-mayor.html", 
+                        "score": "94", 
+                        "keyword": "\"David Alvarez\" and \"Endorsement\" and \"San Diego\"", 
+                        "title": "David Alvarez for San Diego mayor"
                     }, 
                     {
                         "category": "Endorsement", 
@@ -6397,10 +6469,17 @@
                     }, 
                     {
                         "category": "Endorsement", 
-                        "url": "http://pointlomadem.org/2014/01/10/san-diego-lifeguards-endorse-david-alvarez-for-mayor/", 
+                        "url": "http://www.alvarezformayor.com/", 
                         "score": "94", 
-                        "keyword": "\"David Alvarez\" and \"Endorse\" and \"San Diego\"", 
-                        "title": "San Diego Lifeguards Endorse David Alvarez for Mayor ..."
+                        "keyword": "\"David Alvarez\" and \"support\" and \"San Diego\"", 
+                        "title": "David Alvarez for Mayor"
+                    }, 
+                    {
+                        "category": "Endorsement", 
+                        "url": "http://www.sdcitybeat.com/sandiego/article-12345-david-alvarez-for-san-diego-mayor.html", 
+                        "score": "94", 
+                        "keyword": "\"David Alvarez\" and \"Endorsement\" and \"San Diego\"", 
+                        "title": "David Alvarez for San Diego mayor"
                     }, 
                     {
                         "category": "Endorsement", 
@@ -6415,6 +6494,13 @@
                         "score": "94", 
                         "keyword": "\"David Alvarez\" and \"Endorsement\" and \"San Diego\"", 
                         "title": "David Alvarez for San Diego mayor"
+                    }, 
+                    {
+                        "category": "Endorsement", 
+                        "url": "http://www.alvarezformayor.com/", 
+                        "score": "94", 
+                        "keyword": "\"David Alvarez\" and \"support\" and \"San Diego\"", 
+                        "title": "David Alvarez for Mayor"
                     }
                 ]
             }
@@ -6467,7 +6553,7 @@
                     "followers_yesterday_removed": 5
                 }, 
                 {
-                    "influence": "1.80%", 
+                    "influence": "1.70%", 
                     "tweets_yesterday": 1, 
                     "followers_yesterday_new": 16, 
                     "biggestFollowers_yesterday": [
@@ -6596,7 +6682,7 @@
                     "followers_yesterday_removed": 2
                 }, 
                 {
-                    "influence": "-5.10%", 
+                    "influence": "-6.00%", 
                     "tweets_yesterday": 0, 
                     "followers_yesterday_new": 6, 
                     "biggestFollowers_yesterday": [
@@ -6639,7 +6725,7 @@
                     "followers_yesterday_removed": 2
                 }, 
                 {
-                    "influence": "0.20%", 
+                    "influence": "0.30%", 
                     "tweets_yesterday": 1, 
                     "followers_yesterday_new": 9, 
                     "biggestFollowers_yesterday": [
@@ -6811,7 +6897,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "284.20%", 
+                    "influence": "272.80%", 
                     "tweets_yesterday": 1, 
                     "followers_yesterday_new": 12, 
                     "biggestFollowers_yesterday": [
@@ -8961,7 +9047,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "3.40%", 
+                    "influence": "3.30%", 
                     "tweets_yesterday": 0, 
                     "followers_yesterday_new": 9, 
                     "biggestFollowers_yesterday": [
@@ -10221,7 +10307,7 @@
                     "followers_yesterday_removed": 2
                 }, 
                 {
-                    "influence": "-0.40%", 
+                    "influence": "-0.50%", 
                     "tweets_yesterday": 2, 
                     "followers_yesterday_new": 19, 
                     "biggestFollowers_yesterday": [
@@ -10479,7 +10565,7 @@
                     "followers_yesterday_removed": 1
                 }, 
                 {
-                    "influence": "21.70%", 
+                    "influence": "21.30%", 
                     "tweets_yesterday": 2, 
                     "followers_yesterday_new": 11, 
                     "biggestFollowers_yesterday": [
@@ -11681,6 +11767,92 @@
                         }
                     ], 
                     "followers_yesterday_removed": 3
+                }, 
+                {
+                    "influence": "4.90%", 
+                    "tweets_yesterday": 0, 
+                    "followers_yesterday_new": 157, 
+                    "biggestFollowers_yesterday": [
+                        {
+                            "url": "http://www.twitter.com/TomHall", 
+                            "name": "TomHall", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/BoldProgressive", 
+                            "name": "BoldProgressive", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/COACHELLAEVENTS", 
+                            "name": "COACHELLAEVENTS", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_all": 3838, 
+                    "date": "2/12/2014", 
+                    "tweets_all": 74, 
+                    "biggestFollowers": [
+                        {
+                            "url": "http://www.twitter.com/DjKingAssassin", 
+                            "name": "DjKingAssassin", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/morrowchris", 
+                            "name": "morrowchris", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/SkyFallCarroll", 
+                            "name": "SkyFallCarroll", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_yesterday_removed": 11
+                }, 
+                {
+                    "influence": "2.30%", 
+                    "tweets_yesterday": 0, 
+                    "followers_yesterday_new": 44, 
+                    "biggestFollowers_yesterday": [
+                        {
+                            "url": "http://www.twitter.com/TheCoffeeBean", 
+                            "name": "TheCoffeeBean", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/bresathooe", 
+                            "name": "bresathooe", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/MarcEmmelmann", 
+                            "name": "MarcEmmelmann", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_all": 3860, 
+                    "date": "2/13/2014", 
+                    "tweets_all": 74, 
+                    "biggestFollowers": [
+                        {
+                            "url": "http://www.twitter.com/DjKingAssassin", 
+                            "name": "DjKingAssassin", 
+                            "rank": 1
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/morrowchris", 
+                            "name": "morrowchris", 
+                            "rank": 2
+                        }, 
+                        {
+                            "url": "http://www.twitter.com/SkyFallCarroll", 
+                            "name": "SkyFallCarroll", 
+                            "rank": 3
+                        }
+                    ], 
+                    "followers_yesterday_removed": 22
                 }
             ]
         }

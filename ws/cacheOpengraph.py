@@ -1,4 +1,4 @@
-import opengraph
+import opengraph, time
 from pymongo import MongoClient
 from datetime import datetime
 
@@ -6,6 +6,10 @@ from datetime import datetime
 DATETIME_FORMAT = '%a %b %d %H:%M:%S +0000 %Y'
 DB_SOURCE='test'
 COL_SOURCE='twitter_search_candidates'
+
+DB_CYBER='electionpath'
+COL_CYBER='webresults'
+
 DB='electionpath'
 COL_UPDATE='opengraphUpdate'
 
@@ -54,40 +58,20 @@ lastUpdateTime=col_update.find().sort("updateTime",-1)[0]["updateTime"]
 
 
 #query source db
-query={"created_at_local":{"$lt": now, "$gt":lastUpdateTime, "entities.long_urls":{"$exists": True}}}
+query={"created_at_local":{"$lt": now, "$gt":lastUpdateTime}, "entities.long_urls":{"$exists": True}}}
 #query={"created_at_local":{"$lt": now}, "entities.long_urls":{"$exists":True}, "entities.opengraphs":{"$exists": False}}
 tweets=col_source.find(query)
-
-'''
-print tweets.count()
-count=0
-for t in tweets:
-    if 'entities' in t:
-        print t['entities']['long_urls']
-        print '-'*60
-        count+=1
-
-    if(count>20):
-        break
-
-
-import sys
-sys.exit()
-'''
-
 
 
 #read tweets
 count=0
 
-import time
+
 startTime=time.time()
 
 LOGGER.info("-"*60)
-LOGGER.info("START CACHING OPENGRAPH AT " + now.strftime(DATETIME_FORMAT))
+LOGGER.info("START CACHING OPENGRAPH in Twitter DB AT " + now.strftime(DATETIME_FORMAT))
 LOGGER.info("-"*60)
-
-
 
 for tweet in tweets:
     if("entities" in tweet and "long_urls" in tweet["entities"] and "opengraphs" not in tweet["entities"]):
@@ -112,19 +96,64 @@ for tweet in tweets:
         count+=1
 
 
+endTime=time.time()
 
+LOGGER.info("-"*60)
+LOGGER.info("FINISH CACHING OPENGRAPH in Twitter DB. DURATION=%d MINUTES" % int((endTime - startTime)/60))
+LOGGER.info("-"*60)
+
+
+
+
+'''
+
+#cache cyber db
+col_cyber=mongoClient[DB_CYBER][COL_CYBER]
+query={"url":{"$exists":True}}
+#query={"search_date":{"$lt": now}, "url":{"$exists":True}}
+#query={"search_date":{"$lt": now, "$gt":lastUpdateTime}, "url":{"$exists":True}}
+cybers=col_cyber.find(query)
+count_cyber=0
+startTime=time.time()
+
+LOGGER.info("-"*60)
+LOGGER.info("START CACHING OPENGRAPH in Cyber DB AT " + now.strftime(DATETIME_FORMAT))
+LOGGER.info("-"*60)
+
+for cyber in cybers:
+    url=cyber['url']
+    
+    try:
+        if 'url' in cyber and not 'opengraph' in cyber:
+            
+            cyber['opengraph']=getOpengraph(url)
+
+            print cyber
+            
+            col_cyber.save(cyber)
+            LOGGER.info("Success: "+ str(cyber["_id"])+", "+url)
+            
+            count_cyber+=1
+        
+    except Exception, e:
+        import traceback
+        LOGGER.error("Error: "+ str(cyber["_id"])+", "+url)
+        LOGGER.error(str(e))
+        LOGGER.error(str(traceback.print_exc()))
 
 endTime=time.time()
 
 LOGGER.info("-"*60)
-LOGGER.info("FINISH CACHING OPENGRAPH. DURATION=%d MINUTES" % int((endTime - startTime)/60))
+LOGGER.info("FINISH CACHING OPENGRAPH in Cyber DB. DURATION=%d MINUTES" % int((endTime - startTime)/60))
 LOGGER.info("-"*60)
- 
+
+'''
 
 #save update time into a collectoin in the Mongodb
 col_update.insert({
     "updateTime": now,
-    "count": count
+    "count": count,
+    #"countCyber":count_cyber
 })
 
     
