@@ -32,10 +32,11 @@
 		callout:[],
 		chart:[],
 		wordCloud:null,
-		testMode:false,
+		testMode:true,
 		showThumbnail:false,
 		highlightDates:[],
-		voice:null
+		voice:null,
+		finalJSON:null
 	}
 	
 	//chart
@@ -78,7 +79,7 @@
 	 */
 	function readVoice(source){
 		var urls={
-				"people":"db/people.json", //"db/candidates_newFormat.json", //,
+				"people":"db/final.json",//"db/people.json", //"db/candidates_newFormat.json", //,
 				"candidate":"db/candidate.json"
 			}, 
 			url=urls[source] || urls["people"],
@@ -132,7 +133,7 @@
 			
 			//parse json and show twieeter analysis, chart, topStory(cyberdiscovery) and wordcloud
 			if(json){
-				app.candidates=json;
+				app.finalJSON=json;
 				var html_candidateNav="";
 				
 				$.each(json, function(k,v){
@@ -419,9 +420,12 @@
 					orders=['Endorsement', 'Debate', 'Neighborhood', 'Business', 'Jobs_and_Labor'];
 				
 				//read json
-				$.getJSON("db/cyberdiscovery.json", function(json){
-					if(json){
-						$.each(json, function(name, data){
+				//$.getJSON("db/cyberdiscovery.json", function(json){
+					//if(json){
+					if(app.finalJSON){
+						$.each(app.finalJSON, function(name, data){
+							if(name=='voice'){return;}
+							
 							var values=data.topStory.values;
 							
 							$.each(orders, function(i,k){
@@ -470,7 +474,7 @@
 						}
 						
 					}
-				});
+				//});
 	}
 			
 			
@@ -914,7 +918,8 @@
 	 * show top 1 webpage on the highlighted dates 
 	 */
 	function showTop1Webpage(dates){
-		var url=app.testMode?"db/top1webpage.json":"ws/getTop1Webpage.py?candidates=Faulconer,Alvarez&dates="+dates.join(','),
+		//var url=app.testMode?"db/top1webpage.json":"ws/getTop1Webpage.py?candidates=Faulconer,Alvarez&dates="+dates.join(','),
+		var url=app.testMode?"db/final.json":"ws/getTop1Webpage.py?candidates=Faulconer,Alvarez&dates="+dates.join(','),
 			$result=$("#topEventDate #highlightDate"),
 			$loading=$result.find("#loading"),
 			html='',
@@ -926,17 +931,18 @@
 		//show loading
 		$loading.show();
 		
-		$.getJSON(url, function(json){
+		//$.getJSON(url, function(json){
 			//hide loading
 			$loading.hide();
 			
-			$.each(json, function(candidate,v){
+			$.each(app.finalJSON, function(candidate,v){
+				if(candidate=='voice'){return; }
 				html="<table class='table'><tr><td class='rank'>Date</td><td class='value'>Hottest Webpage</td></tr>";
 				
 				//reverse array to show the nearest date first
-				v.reverse();
+				v.top1Webpages.reverse();
 				
-				$.each(v, function(i,obj){
+				$.each(v.top1Webpages, function(i,obj){
 					topWebpage=obj.topWebpages[0];
 					
 					html+='<tr>'+
@@ -960,7 +966,7 @@
 					
 				$result.append(html);
 			})
-		});
+		//});
 				
 	}
 	
@@ -1272,11 +1278,11 @@
 		
 		
 		//request web service
-		var url=(app.testMode)?"db/searchResult.json":'ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate+"&voice="+app.voice;
-		$.getJSON(url, function(json){
-			if(!json){console.log('[ERROR] query: no json'); return;}
+		var url=(app.testMode)?"db/final.json":'ws/getMetrics.py?candidate='+candidate+'&dateFrom='+fromDate+'&dateTo='+toDate+"&voice="+app.voice;
+		//$.getJSON(url, function(json){
+			if(!app.finalJSON){console.log('[ERROR] query: no json'); return;}
 			
-			$.each(json, function(k, obj){
+			$.each(app.finalJSON, function(k, obj){
 				//show top retweet
 				if(obj.topRetweets){showTopRetweet(k, obj.topRetweets);}
 				
@@ -1402,7 +1408,7 @@
 			}
 						
 			
-		});	
+		//});	
 		
 	}
 
