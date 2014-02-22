@@ -702,8 +702,8 @@
 			//electionTime=new Date("November 19, 2013 08:00:00"),//.getTime(),
 			countdownTime=parseInt((electionTime-todayTime)/86400/1000)+1;
 			//countdownTime=(countdownTime<0)?0:countdownTime;
-		$("#countdown label").html(countdownTime);
-		
+		//$("#countdown label").html(countdownTime);
+		$("#countdown label").html(0);
 		
 		//today's time
 		var today = new Date();
