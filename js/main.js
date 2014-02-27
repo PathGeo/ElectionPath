@@ -937,7 +937,7 @@
 			//hide loading
 			$loading.hide();
 			
-			$.each(app.finalJSON, function(candidate,v){
+			$.each(json, function(candidate,v){
 				if(candidate=='voice'){return; }
 				html="<table class='table'><tr><td class='rank'>Date</td><td class='value'>Hottest Webpage</td></tr>";
 				
