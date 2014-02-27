@@ -221,7 +221,7 @@
 					//show top webpage and top retweet
 					getMetrics("Alvarez,Faulconer", fromDate, endDate, function(){
 						//readOpenGraph
-						readOpenGraph();
+						readOpenGraph(".readOpenGraph");
 					
 						//hide loading
 						//hide loading image
@@ -624,8 +624,8 @@
 	
 	
 	//readOpenGraph
-	function readOpenGraph(){
-		$(".readOpenGraph").each(function(){
+	function readOpenGraph(classes){
+		$(classes).each(function(){
 			var $this=$(this),
 				$a=$this.find("a"),
 				url=$a.attr("href"),
@@ -942,15 +942,15 @@
 				html="<table class='table'><tr><td class='rank'>Date</td><td class='value'>Hottest Webpage</td></tr>";
 				
 				//reverse array to show the nearest date first
-				v.top1Webpages.reverse();
+				v.reverse();
 				
-				$.each(v.top1Webpages, function(i,obj){
+				$.each(v, function(i,obj){
 					topWebpage=obj.topWebpages[0];
 					
 					html+='<tr>'+
 						  '<td class="rank">'+obj.date+'</td>'+
 						  (function(){
-						  	var result="<td class='value readOpenGraph'>"+
+						  	var result="<td class='value top1webpage readOpenGraph'>"+
 									  	createOpenGraphHTML(topWebpage.url)+
 										"</td>";
 										
@@ -968,6 +968,9 @@
 					
 				$result.append(html);
 			})
+			
+			//read opengraph
+			readOpenGraph(".top1webpage.readOpenGraph")
 		});
 				
 	}
