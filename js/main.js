@@ -919,11 +919,13 @@
 	 */
 	function showTop1Webpage(dates){
 		//var url=app.testMode?"db/top1webpage.json":"ws/getTop1Webpage.py?candidates=Faulconer,Alvarez&dates="+dates.join(','),
-		var url=app.testMode?"db/final.json":"ws/getTop1Webpage.py?candidates=Faulconer,Alvarez&dates="+dates.join(','),
+		var url=(app.testMode==false)?"db/final.json":"ws/getTop1Webpage.py?candidates=Faulconer,Alvarez&dates="+dates.join(','),
 			$result=$("#topEventDate #highlightDate"),
 			$loading=$result.find("#loading"),
 			html='',
 			topWebpage='';
+		
+		
 		
 		//remove previous results;
 		$result.find(".table").remove();
@@ -931,7 +933,7 @@
 		//show loading
 		$loading.show();
 		
-		//$.getJSON(url, function(json){
+		$.getJSON(url, function(json){
 			//hide loading
 			$loading.hide();
 			
@@ -966,7 +968,7 @@
 					
 				$result.append(html);
 			})
-		//});
+		});
 				
 	}
 	
