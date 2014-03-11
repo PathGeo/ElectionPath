@@ -1,5 +1,5 @@
 {
-    "Faulconer": {
+    "Lien": {
         "updatedTime": "2014-02-14 06:54:05", 
         "wordCloud": {
             "values": [
@@ -206,9 +206,10 @@
             ]
         }, 
         "url_website": "http://www.kevinfaulconer.com/", 
-        "url_twitter": "http://www.twitter.com/kevin_faulconer", 
-        "name": "Kevin Faulconer", 
-        "backgroundColor": "#e27c20", 
+        "url_twitter": "http://www.twitter.com/kevin_faulconer",
+		"url_facebook": "https://www.facebook.com/pages/Sean-Lien/135764659787797?rf=166219450083065",
+        "name": "連勝文 Sean Lien", 
+        "backgroundColor": "#018CD5", 
         "topStory": {
             "values": {
                 "Jobs_and_Labor": [
@@ -574,7 +575,7 @@
             }
         }, 
         "tweets_today": 2, 
-        "image": "images/faulconer.png", 
+        "image": "images/lien.png", 
         "twitterAnalysis": {
             "values": [
                 {
@@ -5974,7 +5975,7 @@
         }
     }, 
     "voice": "People", 
-    "Alvarez": {
+    "Ko": {
         "updatedTime": "2014-02-14 06:54:05", 
         "wordCloud": {
             "values": [
@@ -6182,8 +6183,9 @@
         }, 
         "url_website": "http://www.alvarezformayor.com/", 
         "url_twitter": "http://www.twitter.com/AlvarezSD", 
-        "name": "David Alvarez", 
-        "backgroundColor": "#2cc671", 
+		"url_facebook": "https://www.facebook.com/DoctorKoWJ", 
+        "name": "柯文哲 WenJer Ko", 
+        "backgroundColor": "#1ACD02", 
         "topStory": {
             "values": {
                 "Jobs_and_Labor": [
@@ -6549,7 +6551,7 @@
             }
         }, 
         "tweets_today": 1, 
-        "image": "images/alvarez.png", 
+        "image": "images/ko.png", 
         "twitterAnalysis": {
             "values": [
                 {

@@ -96,7 +96,7 @@
 		}else{
 			$showhideObj.show();
 			$changeRetweetLabel.html('from the Public and the Media (tweets)');
-			$changeWebpageLabel.html('from San Diego Twitter Discussion')
+			$changeWebpageLabel.html('from Taipei City Twitter Discussion')
 		}
 		
 		//set global variable for getMetrics.py
@@ -137,7 +137,7 @@
 				var html_candidateNav="";
 				
 				$.each(json, function(k,v){
-					if(k!='Alvarez' && k!='Faulconer'){
+					if(k!='Ko' && k!='Lien'){
 						return;
 					}
 				
@@ -698,12 +698,12 @@
 	function init_time(){
 		//calcualte countdown
 		var todayTime=new Date().getTime(),
-			electionTime=new Date(2014,2-1,11, 0,0,0).getTime(),
+			electionTime=new Date(2014,11-1,29, 0,0,0).getTime(),
 			//electionTime=new Date("November 19, 2013 08:00:00"),//.getTime(),
 			countdownTime=parseInt((electionTime-todayTime)/86400/1000)+1;
 			//countdownTime=(countdownTime<0)?0:countdownTime;
-		//$("#countdown label").html(countdownTime);
-		$("#countdown label").html(0);
+		$("#countdown label").html(countdownTime);
+		
 		
 		//today's time
 		var today = new Date();
@@ -1287,12 +1287,16 @@
 		//$.getJSON(url, function(json){
 			if(!app.finalJSON){console.log('[ERROR] query: no json'); return;}
 			
+			
 			$.each(app.finalJSON, function(k, obj){
-				//show top retweet
-				if(obj.topRetweets){showTopRetweet(k, obj.topRetweets);}
+				if(k!='voice'){
+					//show top retweet
+					if(obj.topRetweets){showTopRetweet(k, obj.topRetweets);}
+					
+					//show top webpage
+					if(obj.topWebpages){showTopWebpage(k, obj.topWebpages)};
+				}
 				
-				//show top webpage
-				if(obj.topWebpages){showTopWebpage(k, obj.topWebpages)};
 			});
 			
 			
