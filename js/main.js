@@ -79,7 +79,7 @@
 	 */
 	function readVoice(source){
 		var urls={
-				"people":"db/final.json",//"db/people.json", //"db/candidates_newFormat.json", //,
+				"people":"db/taipeimayor.json", //"db/final.json",//"db/people.json", //"db/candidates_newFormat.json", //,
 				"candidate":"db/candidate.json"
 			}, 
 			url=urls[source] || urls["people"],
@@ -141,8 +141,23 @@
 						return;
 					}
 				
-					//twitterAnalysis
-					showTwitterAnalysis(k,v);
+					console.log(v)
+					
+					
+					//basic information
+					showBasicInfo(k,v);
+					
+					
+					//show content
+					showContent(k,v);
+					
+					//show top post
+					//showTopPost(k,v);
+					
+					//show hot link
+					//showHotLink(k,v);
+					
+					return; 
 					
 					
 					//showWordcloud 
@@ -189,12 +204,20 @@
 					// }
 				// });
 				
-						
-				//init chart;
-				init_chart();
+				
 				
 				//detect the window's top while scrolling to highlight index in the navigator bar
 				scrollEvent();
+				
+				
+				
+				
+				return;
+				
+				//init chart;
+				init_chart();
+				
+				
 				
 				
 				//hide loading image
@@ -238,35 +261,11 @@
 	}
 	
 	
-	/**
-	 * create guage 
-	 */
-	function showGuage(domID, value, options){
-		//set height
-		var $domID=$("#"+domID);
-		$domID.height($domID.width()*0.8);
-		
-		//options
-		if(!options){options={}}
-		
-		options.min=options.min || 0;
-
-		options.shadowOpacity=options.shadowOpacity || 0.5; 
-		options.shadowSize=options.shadowSize || 0;
-		options.shadowVerticalOffset=options.shadowVerticalOffset || 10; 
-
-		options.id=domID;
-		options.value=value; 
-		
-		return new JustGage(options);
-	}
 	
 	
 	
-	
-	
-	//show twitter analysis
-	function showTwitterAnalysis(name, data){
+	//show basic info
+	function showBasicInfo(name, data){
 				var $candidate=$("#home > ul"),
 					$candidateBar=$(".candidateBar > ul"),
 					value=null,
@@ -276,6 +275,7 @@
 					
 					
 					//prepare chart csv content
+					/**
 					chartCSVData.headers.push(name);
 					var v;
 					$.each(twitterAnalysis.values, function(i,val){
@@ -295,14 +295,9 @@
 						}
 											
 					});
-
+					*/
 					
 					
-					//reverse array order
-					twitterAnalysis.values.reverse();
-					
-					value=twitterAnalysis.values[1];
-	
 	
 					var htmlNav="<li class='candidate-li' id='"+name+"'>"+
 						 		"<div class='candidate-content'>"+
@@ -310,71 +305,77 @@
 								 	"<li class='candidate-image' style='background-color:"+data.backgroundColor+"'>"+
 								 		"<img src='"+(data.image.split('.')[0]+"_1x1.png")+"' />"+
 								 		"<div class='candidate-name'>"+data.name+"</div>"+
-								 		"<div class='candidate-info'><a href='"+data.url_website+"' target='_blank'>Website</a><a href='"+data.url_twitter+"' target='_blank'>Twitter</a></div>"+
+								 		"<div class='candidate-info'><a href='"+data.url_website+"' target='_blank'>Website</a><a href='"+data.url_facebook+"' target='_blank'>Facebook</a></div>"+
 								 	"</li>"+
 								 	"<li class='candidate-metadata'>"+
-										"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.tweets_today?data.tweets_today:"0")+"</a><label title='# of tweets mentioned about this candidate Today'>mentioned Today so far (since 12am)</label></div>"+
-										"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+value.tweets_yesterday+"</a><label title='# of tweets mentioned about this candidate Yesterday'>mentioned Yesterday </label><img src='images/1382989480_Twitter_NEW.png' class='candidate-twitterImage' /></div>"+
-										
-										"<div class='candidate-top1Webpage' id='"+name+"'><h3>The Hottest News in the Last 48 Hours: </h3><img src='images/loading.gif' id='loading' /></div>"+
+										"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.likes?data.likes:"0")+"</a><label title='# of total likes'> Likes</label></div>"+
+										"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.talking_about_count?data.talking_about_count:"0")+"</a><label title='# of comments'> total comments</label></div>"+
+										"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.likes_sincelastupdate?data.likes_sincelastupdate:"0")+"</a><label title='# of likes yesterday'> new Likes (since Yesterday)</label></div>"+
+										"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.talking_about_sincelastupdate?data.talking_about_sincelastupdate:"0")+"</a><label title='# of new comments (since Yesterday)'> new comments (since Yesterday)</label></div>"+
 									"</li>"+
 								 "</ul>"+
 						 		"</div>"+
 						 		"</li>";
 					
-					//var htmlGuage=$(htmlNav).append("<div class='candidate-guage' id='guage-"+name+"'></div>");
-						 
-						  /**
-						 "<div class='candidate-index'>"+
-						 	"<ul>"+
-								"<li><a href='#' class='showTable'>"+value.tweets_all+"</a><label title='Total # of tweets mentions this candidate from 10/07 to Yesterday'>mentions since 10/07</label></li>"+
-								"<li><a href='#' class='showTable'>+"+value.followers_yesterday_new+"</a><label title=\"# of new followers added in this candidate's Twitter account\">NEW Followers Yesterday</label></li>"+
-								"<li><a href='#' class='showTable'>-"+value.followers_yesterday_removed+"</a><label title=\"# of Twitter users 'unfollow' this candidate's Twitter account\">REMOVED Followers Yesterday</label></li>"+
-								"<li><a href='#' class='showTable'>"+value.influence+"</a><label title=\"The percentage changes of the combined number of 'fans'(followers) from  each new follower\">Network Impact Changes Yesterday</label></li>"+
-								"<li></li>"+
-								(function(){
-									var result='';
-									$.each(numbers, function(i,n){
-										if(value.biggestFollowers_yesterday[i]){
-											result+="<li class='biggestFollwers_yesterday'>"+((value.biggestFollowers_yesterday[i].url)?"<a href='"+value.biggestFollowers_yesterday[i].url+"' target='_blank'>@"+value.biggestFollowers_yesterday[i].name+"</a>":"@"+value.biggestFollowers_yesterday[i].name)+"</a><br>"+n+" Biggest Follower Yesterday</li>";
-										}else{
-											result+="<li style='height:37px;'></li>";
-										}
-									});
-									return result;
-								})()+
-								"<li></li>"+
-								(function(){
-									var result='';
-									$.each(numbers, function(i,n){
-										if(value.biggestFollowers[i]){
-											result+="<li>"+((value.biggestFollowers[i].url)?"<a href='"+value.biggestFollowers[i].url+"' target='_blank'>@"+value.biggestFollowers[i].name+"</a>":"@"+value.biggestFollowers[i].name)+"</a><br>"+n+" Biggest Follower</li>";
-										}else{
-											result+="<li style='height:37px;'></li>";
-										}
-									});
-									return result;
-								})()+
-							"</ul>"+
-						 "</div>"
-						 */
-
+					
 					
 					$candidate.append(htmlNav);
 					$candidateBar.append(htmlNav)
 			
-					//show guage
-					// setTimeout(function(){
-						// showGuage("guage-"+name, value.tweets_yesterday, {
-							// title: "Twitter", //data.name,
-							// label:"mentioned Yesterday",
-							// levelColors: [data.backgroundColor],
-							// max:100
-						// });
-					// },1000)
-					
 	}
 			
+	
+	
+	//show content
+	function showContent(name, data){
+		var targets={
+			"TopPost":{
+				"label":"Post",
+				"domID":"topPost"
+			},
+			"HotLink":{
+				"label":"Link",
+				"domID":"hotLink"
+			},
+			"HotStory":{
+				"label":"Story",
+				"domID":"hotStory"
+			},
+			"HotVideo":{
+				"label":"video",
+				"domID":"hotVideo"
+			}
+		}
+		
+		
+		$.each(targets, function(k,v){
+			var values=data[k],
+				html="<table class='table'><tr><td class='rank'>Top</td><td class='value'>"+v.label+"</td></tr>",
+				$target=$("#"+v.domID+" > ul");
+				
+			$.each(values, function(i,obj){
+				html+='<tr>'+
+					  '<td class="rank">'+obj.rank+'</td>'+
+					  (function(){
+							//if(obj.opengraph && obj.opengraph.image){
+						  		return "<td class='value'>"+createOpenGraphHTML(obj.link, obj.from_name, obj.picture, obj.message)
+						  	//}else{
+						  	//	return "<td class='value readOpenGraph'>"+createOpenGraphHTML(obj.url);
+						  	//}
+					  })()+		 
+					  "</td></tr>";
+			})
+			
+			$target.append("<li>"+html+"</table></li>")
+		});
+	}
+	
+	
+	
+	
+	
+	
+	
 	
 			
 	//show top webpage
@@ -405,6 +406,7 @@
 				
 				$topWebpage.append("<li>"+html+"</table></li>");
 	}
+			
 			
 			
 			
@@ -513,10 +515,33 @@
 	function createOpenGraphHTML(url, title, image, description){
 		image=image || "images/main-img-services.png";
 		title=title || "<a href='"+url+"' target='_blank'>"+((url.length>90)?String(url).substr(0,90)+"...":url)+"</a>";
-		description=(description)?String(description).substr(0, 150) + "....<a href='"+url+"' target='_blank'>show more</a>" : "<a href='"+url+"' target='_blank'>"+url+"</a>";
-
+		description=(description)?String(description).substr(0, 150) + "....<a href='"+url+"' target='_blank'>show more</a>" : "<a href='"+url+"' target='_blank'>"+url+"</a>",
+		isVideo=false,
+		videoEmbedHtml="";
+		
+		//check if url is from youtube
+		var check=url.match('www.youtube.com') || url.match(/www.facebook.com\/photo.php\?v=(.*)/);//url.split('www.youtube.com') || url.split('www.facebook.com/photo.php');
+		if (check){
+			isVideo=true;
+			videoEmbedHtml=(function(){
+				if(check[0]=='www.youtube.com'){
+					return "<iframe class='opengraph-video'  src='http://www.youtube.com/embed/"+ decodeURIComponent(url+"&").match(/v=(.*)&/)[1].split('&')[0] +"' frameborder='0' allowfullscreen></iframe>";
+				}else{
+					return "<div class='fb-post opengraph-video' data-href='https://"+check[0]+"'></div>"
+				}
+			})();
+			
+			console.log(videoEmbedHtml)
+		}
+		
 		return html="<div class='opengraph'><ul>"+
-						"<li><img src='"+image+"' class='opengraph-image' style='position:relative; top:-5px; width:70px; height:70px; box-shadow:0px 0px 0px #cccccc;' /><label class='opengraph-title'>"+title+"</label></li>"+
+						(function(){
+							if(isVideo){
+								return "<li>"+videoEmbedHtml+"</li>";
+							}else{
+								return "<li><img src='"+image+"' class='opengraph-image' style='position:relative; top:-5px; width:70px; height:70px; box-shadow:0px 0px 0px #cccccc;' /><label class='opengraph-title'>"+title+"</label></li>";
+							}
+						})()+
 						"<li class='opengraph-description'>"+description +"</li>"+
 				    "</ul></div>";
 	}

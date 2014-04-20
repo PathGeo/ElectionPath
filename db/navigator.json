@@ -1,8 +1,8 @@
 {
 	"VIEW":{
 		"description":"",
-		"labels":["Election Path", "Top News", "Hot Discussion", "Top Story", "Top Event/Date", "WordCloud", "Hot Location", "The Media", "Feedback"],
-		"values":["home", "topWebpage-Twitter", "topRetweet",  "topWebpage-cyber", "topEventDate", "wordCloud", "map", "media", "feedback"],
+		"labels":["Election Path", "Top Post", "Hot Link", "Hot Video", "Top Event/Date", "WordCloud", "Hot Location", "The Media", "Feedback"],
+		"values":["home", "topPost", "hotLink",  "hotVideo", "topEventDate", "wordCloud", "map", "media", "feedback"],
 		"clickFn":""
 	},
 	"VOICE":{
