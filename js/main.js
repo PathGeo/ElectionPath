@@ -525,7 +525,7 @@
 			isVideo=true;
 			videoEmbedHtml=(function(){
 				if(check[0]=='www.youtube.com'){
-					return "<iframe class='opengraph-video'  src='http://www.youtube.com/embed/"+ decodeURIComponent(url+"&").match(/v=(.*)&/)[1].split('&')[0] +"' frameborder='0' allowfullscreen></iframe>";
+					return "<iframe class='opengraph-video'  src='https://www.youtube.com/embed/"+ decodeURIComponent(url+"&").match(/v=(.*)&/)[1].split('&')[0] +"' frameborder='0' allowfullscreen></iframe>";
 				}else{
 					return "<div class='fb-post opengraph-video' data-href='https://"+check[0]+"'></div>"
 				}
