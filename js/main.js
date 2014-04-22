@@ -511,9 +511,11 @@
 		var thumbnail=obj.thumbnail || "images/main-img-services.png",
 			url=obj.link,
 			fromName=obj.from_name|| "<a href='"+url+"' target='_blank'>"+((url.length>90)?String(url).substr(0,90)+"...":url)+"</a>",
-			description=(obj.message)?String(obj.message).substr(0, 150) + "....<a href='"+url+"' target='_blank'>show more</a>" : "<a href='"+url+"' target='_blank'>"+url+"</a>",
+			description=(obj.message)?String(obj.message).substr(0, 125) + "....<a href='"+url+"' target='_blank'>show more</a>" : "<a href='"+url+"' target='_blank'>"+url+"</a>",
+			time=(obj.updated_time!="")?obj.updated_time:((obj.created_time)?obj.created_time:""),
 			isVideo=false,
-			videoEmbedHtml="";
+			videoEmbedHtml="",
+			picture=(obj.picture && obj.picture!='')?obj.picture:"images/main-img-services.png";
 		
 		//check if url is from youtube
 		var check=url.match('www.youtube.com') || url.match(/www.facebook.com\/photo.php\?v=(.*)/);//url.split('www.youtube.com') || url.split('www.facebook.com/photo.php');
@@ -529,25 +531,26 @@
 			description=(obj.message)?String(obj.message).substr(0, 17) + "....<a href='"+url+"' target='_blank'>show more</a>" : "<a href='"+url+"' target='_blank'>"+url+"</a>";
 		}
 		
-		return html="<div class='opengraph'><ul>"+
+		return 	"<div class='opengraph'><ul>"+
 						"<li>"+
 							"<img src='"+thumbnail+"' class='opengraph-image' style='position:relative; top:-5px; width:70px; height:70px; box-shadow:0px 0px 0px #cccccc;' />"+
 							"<label class='opengraph-title'>"+fromName+"</label>" +
+							"<div class='opengraph-time'>"+time+"</div>"+
 							"<div class='opengraph-socialCount'><img src='images/1398142713_138.png' title='likes' /> "+obj.likes_count +"&nbsp; &nbsp; <img src='images/1398142699_03.png' title='share' /> "+obj.shares_count+"&nbsp; &nbsp; <img src='images/1398142732_06.png' title='comments' /> " + obj.comment_count + "</div>"+
 						"</li>"+
 						(function(){
+							var truen="";
 							if(isVideo){
 								return "<li>"+videoEmbedHtml+"</li>";
 							}else{
 								if(obj.picture && obj.picture!=''){
-									return "<li><img src='"+ obj.picture +"' class='opengraph-picture' /></li>";
+									return "<li><a href='"+url+"' target='_blank'><img src='"+ picture +"' class='opengraph-picture' /></a><div class='opengraph-description'>"+description +"</div></li>";
 								}else{
 									return "";
 								}
-								
 							}
 						})()+
-						"<li class='opengraph-description'>"+description +"</li>"+
+						
 				    "</ul></div>";
 	}
 	
