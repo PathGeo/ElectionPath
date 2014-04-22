@@ -1,6 +1,8 @@
 html, body {font-family: 'Lato', sans-serif; font-size:90%; margin:0px; padding:0px; width:100%; }
 html, #headerContent, body {max-width:1005px; width:99.9%; margin:0 auto; }
 
+body {background-color:#fafafa}
+
 a {text-decoration:none; color:#359BED}
 a:hover {text-decoration:underline;}
 
@@ -270,7 +272,8 @@ li {display:block;}
 .table tr:first-child {background-color:#f1f1f1; font-weight:600; font-size:14px; color:#555555; }
 .table td {border-bottom:1px solid #dddddd; text-align:left !important; font-size:13px;  padding:10px 5px 10px 5px; font-family:'Lato', sans-serif;}
 .table tr:not(:first-child):hover {background-color:#f1f1f1; }
-.table tr:not(:first-child) {height:150px; }
+.table tr:not(:first-child) {height:230px; max-height:230px; }
+.table tr:not(:first-child) .rank {font-size:28px;}
 .table a {text-decoration:none; color:#359BED}
 .table a:hover {text-decoration:underline; }
 .table tr td {vertical-align:top}
@@ -293,9 +296,12 @@ li {display:block;}
 .opengraph li {height:auto; position:relative;}
 .opengraph .opengraph-description {margin-top:5px; font-size:13px;  }
 .opengraph .opengraph-image {height:60px; width:30%; max-width:80px; border-radius:5px;  box-shadow:1px 1px 10px #cccccc; }
-.opengraph .opengraph-title {position:absolute; left:30%; top:-2px;  width:65%; max-width:65%; padding:0% 2.5% 0% 2.5%; font-size:13px; font-weight:600; }
+.opengraph .opengraph-title {position:absolute; left:30%; top:-2px;  width:68%; max-width:68%; padding:0% 1% 0% 1%; font-size:13px; font-weight:600; }
+.opengraph .opengraph-socialCount {position:absolute; left:30%; top:30px; width:68%; max-width:68%; padding:0% 1% 0% 1%; font-size:13px;}
+.opengraph .opengraph-socialCount img {height:20px; width:20px; }
 .opengraph .loading {width:20px;height:20px; }
-.opengraph .opengraph-video {width:100%; height:200px; }
+.opengraph .opengraph-video {width:97%; height:180px; }
+.opengraph .opengraph-picture {width:97%; height:180px;}
 
 
 /** matrix table */
