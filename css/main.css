@@ -19,7 +19,7 @@ li {display:block;}
 .scroll-index{margin:0px; }
 
 /** header */
-#header { background-color:#ffffff;  padding:0px; position:fixed; height:40px;top:0px;left:0px; width:100%;  z-index:2000; box-shadow: 2px 4px 10px #cccccc;}
+#header { background-color:#ffffff;  padding:0px; height:86px;top:0px;left:0px; width:100%;  z-index:2000; box-shadow: 2px 4px 10px #cccccc;}
 #header #headerContent {position:relative;}
 .twitter-share-button {width:85px !important; }
 
@@ -80,26 +80,27 @@ li {display:block;}
 #main {height:auto; }
 
 /**accordion Menu*/
-#navigator {width:13%; height:100%; margin-top:45px; padding:5px 0px 5px 1%; position:fixed; border-right:1px solid #eeeeee; background-color:#ffffff; border-left:1px solid #eeeeee; }
-.menuGroup {padding-bottom:20px; border-bottom:1px solid #f1f1f1; }
+#navigator {width:100%; height:50px; margin-top:50px; padding:0px; position:absolute; }
+.menuGroup {padding-bottom:0px; border-bottom:0px solid #f1f1f1; }
 .menuGroup h4 {margin-bottom:5px; }
 .menuGroup p {color:#999999; font-size:12px;}
-.menuGroup .subMenu li {padding:4px; padding-left:7px; color:#000000; font-size:12px;  }
+.menuGroup .subMenu li {float:left; padding:10px 0px 10px 0px; color:#000000; font-size:12px; width:12.30%; text-align:center; border:1px solid #f1f1f1;  }
 .menuGroup .subMenu li:hover { color:#FF4B00; cursor:pointer; }
-.subMenuClick {font-weight:600; background-color:#f1f1f1; }
+.subMenuClick {font-weight:bold; background-color:#f1f1f1; }
 .menuGroup .subMenu li[value='candidate'] {display:none; }
 
 #navigator .menuGroup:nth-child(2) {display:none; }
+#navigator .menuGroup:nth-child(3) {display:none; }
 #navigator .menuGroup:nth-child(3) > p {display:none; }
 
 
 
 
 /**main content */
-#mainContent {width:85.8%; padding:5px 0% 0px 0%; float:right; border-right:1px solid #eeeeee;}
+#mainContent {width:100%; padding:0px 0% 0px 0%; float:left; border-right:1px solid #eeeeee; margin-top:0px; background-color:#ffffff;  }
 #mainContent > div {width:100%; position:relative}
 
-.mainBlock {padding:45px 0px 30px 0px; border-bottom:0px solid #f1f1f1; min-height:550px;  }
+.mainBlock {padding:91px 0px 30px 0px; border-bottom:0px solid #f1f1f1; min-height:550px;  }
 .mainBlock > ul {width:96%; overflow:hidden; margin:0 auto; margin-top:10px; }
 .mainBlock > ul > li {float:left; width:49.63%; background-color:#ffffff; position:relative;display:block;  }
 .mainBlock > ul > li:nth-child(1) {border-right:1px solid #f1f1f1;}
@@ -146,7 +147,7 @@ li {display:block;}
 
 #home li {background-color:transparent; }
 */
-#home > h2 {margin-top:30px; }
+#home > h2 {margin-top:0px; }
 #home > ul {z-index:100; width:100%; padding:0px; opacity:1; background-color:#f1f1f1; margin-top:0px;  }
 #home > ul > li {width:49.9%; }
 #home .candidate-name {font-size:28px; }

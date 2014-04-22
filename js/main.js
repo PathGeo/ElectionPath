@@ -141,13 +141,9 @@
 						return;
 					}
 				
-					console.log(v)
-					
-					
 					//basic information
 					showBasicInfo(k,v);
-					
-					
+						
 					//show content
 					showContent(k,v);
 					
@@ -158,8 +154,6 @@
 					}else{
 						$(".updateTime").hide();
 					}
-					
-					return; 
 					
 					
 					//candidate info for nav
@@ -172,9 +166,6 @@
 					$("#legend-"+k).css({
 						"background-color":v.backgroundColor
 					});
-					
-					
-					
 
 				});
 						
@@ -204,12 +195,8 @@
 				scrollEvent();
 				
 				
-				
-				
-				return;
-				
 				//init chart;
-				init_chart();
+				//init_chart();
 				
 				
 				
@@ -218,6 +205,9 @@
 				$("#home, #wordcloud, #topEventDate").find('.loadingMainBlock').hide();
 				
 				
+				return;
+
+
 				//get info of topWebpage, topRetweet, topMention, topHashtag and topChatter from getMetrics.py
 				var endDate=new Date(),
 					fromDate= (function(){this.setDate(this.getDate()-2); return this}).call(new Date),
@@ -299,7 +289,7 @@
 								 	"<li class='candidate-image' style='background-color:"+data.backgroundColor+"'>"+
 								 		"<img src='"+data.image+"' />"+ //"<img src='"+(data.image.split('.')[0]+"_1x1.png")+"' />"+
 								 		"<div class='candidate-name'>"+data.name+"</div>"+
-								 		"<div class='candidate-info'><a href='"+data.url_website+"' target='_blank'>Website</a><a href='"+data.url_facebook+"' target='_blank'>Facebook</a></div>"+
+								 		"<div class='candidate-info'><a href='"+data.url_website+"' target='_blank'>官網</a><a href='"+data.url_facebook+"' target='_blank'>Facebook</a></div>"+
 								 	"</li>"+
 								 	"<li class='candidate-metadata'>"+
 								 		"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.likes_sincelastupdate?data.likes_sincelastupdate:"0")+"</a><label title='# of likes yesterday'> 昨日新增按讚人數</label></div>"+
@@ -600,9 +590,11 @@
 			var html="";
 		
 			$.each(json, function(k,v){
+				if(k!='VIEW'){return;}
+				
 				html+="<div class='menuGroup'>"+
-						  "<h4>"+k+"</h4>"+
-						  "<p>"+v.description+"</p>"+
+						  //"<h4>"+k+"</h4>"+
+						  //"<p>"+v.description+"</p>"+
 						  "<ul class='subMenu'>"+
 						  	(function(){
 						  		var result="", $result="";
@@ -700,12 +692,17 @@
 	function scrollEvent(){
 		
 		var $candidateName=$("#home > ul"),
+			$header=$("#header"),
+			$firstContent=$("div#home.mainBlock"),
 			$candidateNavBar=$("#candidateNavBar"),
-			top_candidateName=$candidateName.offset().top - parseFloat($candidateName.css('marginTop').replace(/auto/, 100));
+			top_candidateName=$candidateName.offset().top - parseFloat($candidateName.css('marginTop').replace(/auto/, 100)),
+			top_header=$header.offset().top - parseFloat($header.css('marginTop').replace(/auto/, 100));
 		
 		$(window).scroll(function(event) {
 			// what the y position of the scroll is
 		    var y = $(this).scrollTop();
+		    
+		    
 		    	
 		   	//highlight navigator
 		   	$(".scroll-index").each(function(i,idx){
@@ -714,12 +711,13 @@
 				}
 			})
 	
-			
 			//show hide candidateNavBar in the header
-			if(y>=top_candidateName){
-				//$candidateNavBar.show();
+			if(y>top_header){
+				$header.css({"position":"fixed"})
+				$firstContent.css({"margin-top":"91px"})
 			}else{
-				//$candidateNavBar.hide();
+				$header.css({"position":"initial"})
+				$firstContent.css({"margin-top":"0px"})
 			}
 		});
 	}

@@ -1,8 +1,8 @@
 {
 	"VIEW":{
 		"description":"",
-		"labels":["Election Path", "Top Post", "Hot Link", "Hot Video", "Top Event/Date", "Hot Location", "The Media", "Feedback"],
-		"values":["home", "topPost", "hotLink",  "hotVideo", "topEventDate", "map", "media", "feedback"],
+		"labels":["Election Path", "熱門議題", "熱門連結", "熱門故事", "熱門影片", "歷史分析", "相關報導", "意見回饋"],
+		"values":["home", "topPost", "hotLink", "hotStory", "hotVideo", "topEventDate", "media", "feedback"],
 		"clickFn":""
 	},
 	"VOICE":{

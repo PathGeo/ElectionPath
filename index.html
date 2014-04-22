@@ -142,20 +142,18 @@
 						</li>
 					</ul>
 			</div>
-				
-				
-	
+			
+			
+			<!--accordion menu-->
+			<div id='navigator'>
+				<div id='navigator-menu'></div>
+			</div>
+			
 		</div>
 	</div>
 	
 	
-	<!--accordion menu-->
-	<div id='navigator'>
-		<div id='navigator-menu'></div>
-		
-		
-		
-	</div>
+	
 	
 
 		
@@ -168,11 +166,11 @@
 			<div id='home' class='mainBlock'>
 				
 				<h2 id='title'>
-					ElectionPath<label> provides side-by-side comparison, real-time news, <br>with the top story for <b>the 2014 Taipei City Mayoral Special Election</b></label>
+					ElectionPath<label> 針對2014台北市長選舉<Br>提供"連勝文"與"柯文哲"候選人的Facebook熱門活動與比較分析</label>
 					<img src='images/main-img-services.png' id='logo_electionpath'/>
 				</h2>
 				
-				<div class='updateTime'>The content has been updated at <label></label> (PST)<!--In order to demonstrate the dynamic changes during the election day, <br>we "froze" the data content on Feb 14, 2014 (two days after the election day). --></div>
+				<div class='updateTime'>資料更新時間: <label></label> (PST)<!--In order to demonstrate the dynamic changes during the election day, <br>we "froze" the data content on Feb 14, 2014 (two days after the election day). --></div>
 				
 				<ul></ul>
 				
@@ -208,10 +206,18 @@
 				<ul></ul>
 			</div>
 			
-			
-			
-			<!-- top story-->
+			<!-- hot video-->
 			<div data-scroll-index="3" class='scroll-index' ></div>
+			<div id='hotStory' class='mainBlock' >
+				<h2>Hot Story 熱門故事<label></label><p>過去48小時在Facebook討論的熱門故事</p></h2>
+			
+				<ul></ul>
+			</div>
+			
+			
+			
+			<!-- hot video-->
+			<div data-scroll-index="4" class='scroll-index' ></div>
 			<div id='hotVideo' class='mainBlock' >
 				<h2>Hot Video 熱門影片<label></label><p>過去48小時在Facebook討論的熱門影片</p></h2>
 				
@@ -228,9 +234,9 @@
 
 			
 			<!-- candidates-->
-			<div data-scroll-index="4" class='scroll-index' ></div>
+			<div data-scroll-index="5" class='scroll-index' ></div>
 			<div id='topEventDate' class='mainBlock'>
-				<h2>Top Event / Date: The TOP THREE most Important events and dates.<P>Please change the range of dates (gray zone) to see top 3 days in the period and the hottest webpage in those days.</P></h2>
+				<h2>歷史分析: 回顧過去最熱門的三大議題.<P>請調整下圖的日期區間(灰色地區)來回顧在此時間段的三大熱門議題</P></h2>
 
 				<!--chartContent-->
 				<div id='chartContent'>
@@ -264,7 +270,7 @@
 			
 			
 			<!-- hot location -->	
-			<div data-scroll-index="6" class='scroll-index' ></div>
+			<!--<div data-scroll-index="6" class='scroll-index' ></div>-->
 			<div id='hotLocation' class='mainBlock'>
 				<h2>Hot Location<p>Coming soon....</p></h2>
 				
@@ -283,9 +289,9 @@
 			
 			
 			<!-- hot location -->	
-			<div data-scroll-index="7" class='scroll-index' ></div>
+			<div data-scroll-index="6" class='scroll-index' ></div>
 			<div id='media' class='mainBlock'>
-				<h2>The media highlighted ElectionPath on 2013 San Diego Mayor Election<p>Click the following links to see the media</p></h2>
+				<h2>相關媒體報導<p></p></h2>
 						
 				<div id='press'>
 					<ul>
@@ -330,9 +336,9 @@
 
 			
 			<!--user feedback-->
-			<div data-scroll-index="8" class='scroll-index' ></div>
+			<div data-scroll-index="7" class='scroll-index' ></div>
 			<div id='feedback' class='mainBlock' >
-				<h2>User Feedback<p>Please tell us what you like or what you don't like ElectionPath</p></h2>
+				<h2>意見回饋<p>請告訴我們任何關於ElectionPath的意見</p></h2>
 			
 				<form action="https://docs.google.com/forms/d/1kOGLA8tBmHVcFxmSYQlgTs-xncEdJ-UvUIgU9K2ncXA/formResponse" method="POST" id="ss-form" target="_self" onsubmit=""><ol style="padding-left: 0">
 					<textarea name="entry.1715933675" rows="8" cols="0" class="ss-q-long" id="entry_1715933675" dir="auto" aria-label="Please tell us what you think  " aria-required="true" required=""></textarea>
