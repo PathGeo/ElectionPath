@@ -202,7 +202,7 @@
 				
 				
 				//hide loading image
-				$("#home, #wordcloud, #topEventDate").find('.loadingMainBlock').hide();
+				$(".loadingMainBlock").hide();
 				
 				
 				return;
@@ -498,10 +498,10 @@
 	 */
 	function createOpenGraphHTML(obj){
 		
-		var thumbnail=obj.thumbnail || "images/main-img-services.png",
+		var thumbnail=obj.from_picture || "images/main-img-services.png",
 			url=obj.link,
 			fromName=obj.from_name|| "<a href='"+url+"' target='_blank'>"+((url.length>90)?String(url).substr(0,90)+"...":url)+"</a>",
-			description=(obj.message)?String(obj.message).substr(0, 125) + "....<a href='"+url+"' target='_blank'>show more</a>" : "<a href='"+url+"' target='_blank'>"+url+"</a>",
+			description=(obj.message)?((obj.message.length>100)?String(obj.message).substr(0, 100) + "....<a href='"+url+"' target='_blank'>show more</a>": obj.message):"",
 			time=(obj.updated_time!="")?obj.updated_time:((obj.created_time)?obj.created_time:""),
 			isVideo=false,
 			videoEmbedHtml="",
@@ -522,22 +522,25 @@
 		}
 		
 		return 	"<div class='opengraph'><ul>"+
-						"<li>"+
+						"<li style='margin-bottom:10px; '>"+
 							"<img src='"+thumbnail+"' class='opengraph-image' style='position:relative; top:-5px; width:70px; height:70px; box-shadow:0px 0px 0px #cccccc;' />"+
 							"<label class='opengraph-title'>"+fromName+"</label>" +
 							"<div class='opengraph-time'>"+time+"</div>"+
 							"<div class='opengraph-socialCount'><img src='images/1398142713_138.png' title='likes' /> "+obj.likes_count +"&nbsp; &nbsp; <img src='images/1398142699_03.png' title='share' /> "+obj.shares_count+"&nbsp; &nbsp; <img src='images/1398142732_06.png' title='comments' /> " + obj.comment_count + "</div>"+
 						"</li>"+
 						(function(){
-							var truen="";
 							if(isVideo){
 								return "<li>"+videoEmbedHtml+"</li>";
 							}else{
-								if(obj.picture && obj.picture!=''){
-									return "<li><a href='"+url+"' target='_blank'><img src='"+ picture +"' class='opengraph-picture' /></a><div class='opengraph-description'>"+description +"</div></li>";
-								}else{
-									return "";
-								}
+								return "<li><a href='"+url+"' target='_blank'><img src='"+ picture +"' class='opengraph-picture' /></a>"+
+										(function(){
+											if(description!=""){
+												return "<div class='opengraph-description'>"+description +"</div>"
+											}else{
+												return ""
+											}
+										})()+
+									   "</li>";
 							}
 						})()+
 						
