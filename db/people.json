@@ -1,26 +1,26 @@
 {
     "Faulconer": {
-        "updatedTime": "2014-04-23 11:54:09", 
+        "updatedTime": "2014-04-25 12:54:08", 
         "wordCloud": {
             "values": [
                 {
-                    "count": 7183, 
+                    "count": 7244, 
                     "value": "@kevin_faulconer"
                 }, 
                 {
-                    "count": 2886, 
+                    "count": 2919, 
                     "value": "mayor"
                 }, 
                 {
-                    "count": 2694, 
+                    "count": 2700, 
                     "value": "san"
                 }, 
                 {
-                    "count": 2199, 
+                    "count": 2206, 
                     "value": "diego"
                 }, 
                 {
-                    "count": 1887, 
+                    "count": 1894, 
                     "value": "@alvarezsd"
                 }, 
                 {
@@ -28,15 +28,15 @@
                     "value": "#sdmayor"
                 }, 
                 {
-                    "count": 1217, 
+                    "count": 1224, 
                     "value": "#sandiego"
                 }, 
                 {
-                    "count": 1181, 
+                    "count": 1188, 
                     "value": "city"
                 }, 
                 {
-                    "count": 893, 
+                    "count": 898, 
                     "value": "new"
                 }, 
                 {
@@ -48,12 +48,12 @@
                     "value": "race"
                 }, 
                 {
-                    "count": 622, 
-                    "value": "vote"
+                    "count": 629, 
+                    "value": "today"
                 }, 
                 {
-                    "count": 608, 
-                    "value": "today"
+                    "count": 622, 
+                    "value": "vote"
                 }, 
                 {
                     "count": 601, 
@@ -68,7 +68,7 @@
                     "value": "@nathanfletcher"
                 }, 
                 {
-                    "count": 509, 
+                    "count": 516, 
                     "value": "@toddgloria"
                 }, 
                 {
@@ -80,7 +80,7 @@
                     "value": "poll"
                 }, 
                 {
-                    "count": 432, 
+                    "count": 438, 
                     "value": "http\u2026"
                 }, 
                 {
@@ -96,7 +96,7 @@
                     "value": "mayorelect"
                 }, 
                 {
-                    "count": 391, 
+                    "count": 392, 
                     "value": "faulconers"
                 }, 
                 {
@@ -104,11 +104,11 @@
                     "value": "chief"
                 }, 
                 {
-                    "count": 368, 
+                    "count": 371, 
                     "value": "great"
                 }, 
                 {
-                    "count": 363, 
+                    "count": 370, 
                     "value": "forward"
                 }, 
                 {
@@ -128,27 +128,27 @@
                     "value": "debate"
                 }, 
                 {
-                    "count": 329, 
-                    "value": "council"
+                    "count": 330, 
+                    "value": "support"
                 }, 
                 {
-                    "count": 324, 
+                    "count": 330, 
                     "value": "plan"
                 }, 
                 {
-                    "count": 316, 
-                    "value": "support"
+                    "count": 330, 
+                    "value": "council"
                 }, 
                 {
                     "count": 316, 
                     "value": "@faulconer4mayor"
                 }, 
                 {
-                    "count": 306, 
+                    "count": 309, 
                     "value": "@kevin_faulconers"
                 }, 
                 {
-                    "count": 303, 
+                    "count": 304, 
                     "value": "get"
                 }, 
                 {
@@ -156,7 +156,7 @@
                     "value": "news"
                 }, 
                 {
-                    "count": 300, 
+                    "count": 301, 
                     "value": "@utsandiego"
                 }, 
                 {
@@ -164,7 +164,7 @@
                     "value": "precincts"
                 }, 
                 {
-                    "count": 292, 
+                    "count": 293, 
                     "value": "\u2026"
                 }, 
                 {
@@ -573,7 +573,7 @@
                 ]
             }
         }, 
-        "tweets_today": 9, 
+        "tweets_today": 2, 
         "image": "images/faulconer.png", 
         "twitterAnalysis": {
             "values": [
@@ -8853,7 +8853,7 @@
                 }, 
                 {
                     "influence": "0.00%", 
-                    "tweets_yesterday": 9, 
+                    "tweets_yesterday": 21, 
                     "followers_yesterday_new": 18, 
                     "biggestFollowers_yesterday": [
                         {
@@ -8874,7 +8874,7 @@
                     ], 
                     "followers_all": 6447, 
                     "date": "4/23/2014", 
-                    "tweets_all": 13529, 
+                    "tweets_all": 13541, 
                     "biggestFollowers": [
                         {
                             "url": "http://www.twitter.com/DjKingAssassin", 
@@ -8899,11 +8899,11 @@
     }, 
     "voice": "People", 
     "Alvarez": {
-        "updatedTime": "2014-04-23 11:54:09", 
+        "updatedTime": "2014-04-25 12:54:08", 
         "wordCloud": {
             "values": [
                 {
-                    "count": 1274, 
+                    "count": 1275, 
                     "value": "san"
                 }, 
                 {
@@ -8911,7 +8911,7 @@
                     "value": "#sdmayor"
                 }, 
                 {
-                    "count": 1097, 
+                    "count": 1098, 
                     "value": "diego"
                 }, 
                 {
@@ -8931,7 +8931,7 @@
                     "value": "mayoral"
                 }, 
                 {
-                    "count": 547, 
+                    "count": 548, 
                     "value": "#sandiego"
                 }, 
                 {
@@ -9039,12 +9039,12 @@
                     "value": "counted"
                 }, 
                 {
-                    "count": 171, 
-                    "value": "http\u2026"
+                    "count": 176, 
+                    "value": "la"
                 }, 
                 {
-                    "count": 169, 
-                    "value": "la"
+                    "count": 171, 
+                    "value": "http\u2026"
                 }, 
                 {
                     "count": 166, 
@@ -9095,7 +9095,7 @@
                     "value": "get"
                 }, 
                 {
-                    "count": 128, 
+                    "count": 129, 
                     "value": "council"
                 }, 
                 {
@@ -9472,7 +9472,7 @@
                 ]
             }
         }, 
-        "tweets_today": 2, 
+        "tweets_today": 1, 
         "image": "images/alvarez.png", 
         "twitterAnalysis": {
             "values": [
@@ -17727,7 +17727,7 @@
                 }, 
                 {
                     "influence": "-0.20%", 
-                    "tweets_yesterday": 2, 
+                    "tweets_yesterday": 8, 
                     "followers_yesterday_new": 7, 
                     "biggestFollowers_yesterday": [
                         {
@@ -17748,7 +17748,7 @@
                     ], 
                     "followers_all": 4209, 
                     "date": "4/23/2014", 
-                    "tweets_all": 7609, 
+                    "tweets_all": 7615, 
                     "biggestFollowers": [
                         {
                             "url": "http://www.twitter.com/DjKingAssassin", 
