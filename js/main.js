@@ -282,6 +282,16 @@
 					*/
 					
 					
+					var compareValue_likes=(data.likes_sincelastupdate / (data.likes - data.likes_sincelastupdate)* 100),
+						compareValue_talking=(data.talking_about_sincelastupdate / (data.talking_about_count - data.talking_about_sincelastupdate)* 100),
+						compareImage=function(val){
+							if(val>=0){
+								return "images/1398401411_arrow-up_red.png"
+							}else{
+								return "images/1398401486_arrow-down_green.png"
+							}
+						}
+					
 	
 					var htmlNav="<li class='candidate-li' id='"+name+"'>"+
 						 		"<div class='candidate-content'>"+
@@ -292,10 +302,10 @@
 								 		"<div class='candidate-info'><a href='"+data.url_website+"' target='_blank'>官網</a><a href='"+data.url_facebook+"' target='_blank'>Facebook</a></div>"+
 								 	"</li>"+
 								 	"<li class='candidate-metadata'>"+
-								 		"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.likes_sincelastupdate?data.likes_sincelastupdate:"0")+"</a><label title='# of likes yesterday'> 昨日新增按讚人數</label></div>"+
-										"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.talking_about_sincelastupdate?data.talking_about_sincelastupdate:"0")+"</a><label title='# of active users yesterday'> 昨日討論熱度</label></div>"+
-										"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.likes?data.likes:"0")+"</a><label title='# of total likes'> 總按讚人數</label></div>"+
-										"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.talking_about_count?data.talking_about_count:"0")+"</a><label title='# of active users last week'> 總討論熱度</label></div>"+
+								 		//"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.likes_sincelastupdate?data.likes_sincelastupdate:"0")+"</a><label title='# of likes yesterday'> 昨日新增按讚人數</label></div>"+
+										//"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.talking_about_sincelastupdate?data.talking_about_sincelastupdate:"0")+"</a><label title='# of active users yesterday'> 昨日討論熱度</label></div>"+
+										"<div class='candidate-twitterInfo'><a href='#' class='showTable total_value'>"+(data.likes?data.likes:"0")+"</a><label title='# of total likes' class='total_label'> 總按讚人數</label><img class='compare_image' src='"+compareImage(compareValue_likes)+"' /><label class='compare_label'>過去24hr</label><a href='#' class='compare_value'>"+compareValue_likes.toFixed(1)+"%</a></div>"+
+										"<div class='candidate-twitterInfo'><a href='#' class='showTable total_value'>"+(data.talking_about_count?data.talking_about_count:"0")+"</a><label title='# of talking about this in 7 days' class='total_label'> 本周總討論人數</label><img class='compare_image' src='"+compareImage(compareValue_talking)+"' /><label class='compare_label'>過去一周</label><a href='#' class='compare_value'>"+compareValue_talking.toFixed(1)+"%</a></div>"+
 									"</li>"+
 								 "</ul>"+
 						 		"</div>"+
