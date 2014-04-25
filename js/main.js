@@ -525,7 +525,8 @@
 				if(check[0]=='www.youtube.com'){
 					return "<iframe class='opengraph-video'  src='https://www.youtube.com/embed/"+ decodeURIComponent(url+"&").match(/v=(.*)&/)[1].split('&')[0] +"' frameborder='0' allowfullscreen></iframe>";
 				}else{
-					return "<div class='fb-post opengraph-video' data-href='https://"+check[0]+"'></div>"
+					return "<iframe class='opengraph-video' src='https://www.facebook.com/video/embed?video_id="+check[1]+"' frameborder='0' allowfullscreen></iframe>"; 
+					//return "<div class='fb-post opengraph-video' data-href='https://"+check[0]+"'></div>"
 				}
 			})();
 			description=(obj.message)?String(obj.message).substr(0, 17) + "....<a href='"+url+"' target='_blank'>show more</a>" : "<a href='"+url+"' target='_blank'>"+url+"</a>";
