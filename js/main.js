@@ -37,7 +37,7 @@
 		highlightDates:[],
 		voice:null,
 		finalJSON:null,
-		chart:{
+		pieChart:{
 			columns:["類別"],
 			values:{}
 		},
@@ -198,6 +198,9 @@
 					// }
 				// });
 				
+				//create chart
+				createPieChart();
+	
 	
 				//show time series data
 				showTimeSeriesData();
@@ -352,7 +355,7 @@
 		
 		
 		//chart columnn
-		app.chart.columns.push(name);
+		app.pieChart.columns.push(name);
 		
 		
 		$.each(targets, function(k,v){
@@ -382,7 +385,7 @@
 			//prepare chart' data
 			if(k=='TopPost' || k=='HotStory'){
 				var val=data[k+'_count'],
-					target=app.chart.values;
+					target=app.pieChart.values;
 				
 				$.each(val, function(n,number){
 					type=n.split('_')[2];
@@ -406,12 +409,12 @@
 	
 	
 	//create piechart
-	function createChart(){
+	function createPieChart(){
 		$(".chart").each(function(){
 			var $this=$(this),
 				domID=$this.attr('id'),
 				id=domID.split('_')[1]+'_count';
-				values=app.chart.values[id],
+				values=app.pieChart.values[id],
 				array=[],
 				data=null,
 				options={
@@ -436,7 +439,7 @@
 				
 			//$this.html('綜合比較<p></p>')
 			
-			
+	
 			$.each(values, function(k,v){
 				$this.append("<div class='pieChart' id='"+domID+"_" +k +"'></div>");
 				
