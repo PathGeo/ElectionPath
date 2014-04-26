@@ -949,7 +949,7 @@
 				customBars: false,
 				title: '',
 				ylabel: 'Number',
-				colors: ['#E27C20', '#2CC671'], //['#C91111', '#E27C20', '#2CC671', '#A15FB7'],
+				colors: ['#018CD5', '#1ACD02'], //['#C91111', '#E27C20', '#2CC671', '#A15FB7'],
 				showRangeSelector: true,
 				highlightCircleSize: 5,
 				rangeSelectorHeight: 50,
