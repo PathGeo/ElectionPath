@@ -40,6 +40,10 @@
 		chart:{
 			columns:["類別"],
 			values:{}
+		},
+		timeSeriesData:{
+			headers:[],
+			values:{}
 		}
 	}
 	
@@ -195,8 +199,8 @@
 				// });
 				
 	
-				//show chart
-				createChart();
+				//show time series data
+				showTimeSeriesData();
 				
 				
 				//detect the window's top while scrolling to highlight index in the navigator bar
@@ -437,6 +441,7 @@
 				$this.append("<div class='pieChart' id='"+domID+"_" +k +"'></div>");
 				
 				options.title=labels[k];
+				//console.log(v)
 				
 				data=google.visualization.arrayToDataTable(v);
 				chart=new google.visualization.PieChart(document.getElementById(domID+"_"+k));
@@ -449,6 +454,39 @@
 	}
 	
 	
+	
+	//show Time-seris daata
+	function showTimeSeriesData(){
+		var url='db/taipeimayor_timeseries_template.JSON';
+		
+		$.getJSON(url, function(json){
+			if(json){
+				//date structure
+				var target=app.timeSeriesData,
+					values=target.values;
+				target.headers=["Date"].concat(json.candidates),
+					
+				//give value
+				$.each(json, function(k,v){
+					if(k=='candidates'||k=='dates'){
+						return;
+					}
+
+					values[k]=[];
+					
+					$.each(v, function(i,arr){
+						values[k].push([new Date(json['dates'][i])].concat(arr));
+					})
+				})	
+				
+				
+				showTimeSeriesChart('likes');
+			}
+			
+			
+			
+		});
+	}
 	
 	
 	
@@ -867,7 +905,8 @@
 	/**
 	 * initialize chart
 	 */
-	function init_chart(){
+	function showTimeSeriesChart(type){
+		/**
 		var csv = "", 
 			dates = null, 
 			chartCSVData = app.chartCSVData,
@@ -895,17 +934,21 @@
 		
 		//app.dateTo
 		app.dateTo=finalDate.replace(/\//g, "-");
+		*/
+		type=type || 'likes';
 		
-
-
+		var target=app.timeSeriesData;
+	
+		
 		//init chart
 		app.chart = g = new Dygraph(
 			document.getElementById("chart"), 
-			csv, 
+			target.values[type], 
 			{
-				customBars: true,
+				labels:target.headers,
+				customBars: false,
 				title: '',
-				ylabel: 'The number of Tweets',
+				ylabel: 'Number',
 				colors: ['#E27C20', '#2CC671'], //['#C91111', '#E27C20', '#2CC671', '#A15FB7'],
 				showRangeSelector: true,
 				highlightCircleSize: 5,
@@ -931,7 +974,7 @@
 						var xRange = obj.xAxisRange(),
 							rank = [],
 							maxRank=3; 
-							
+						
 						for (var ii=0; ii<maxRank; ii++) {
 							var maxValue = 0;
 							var maxPosition = {position: -1, series: 0};
@@ -949,17 +992,20 @@
 								var highValue = 0;
 								var series = 0;
 								for (var j=1; j<obj.numColumns(); j++) {
-									var value = obj.getValue(i,j).toString().split(",")[1]*1;
+									var value = obj.getValue(i,j)//.toString();//.split(",")[1]*1;
 									if (highValue < value) {
 										highValue = value;
 										series = j - 1;
 									}
+								
 								}
+								
 								if (maxValue < highValue) {
 									maxValue = highValue;
 									maxPosition = {position: i, series: series};
 								}
 							}
+						
 							rank.push(maxPosition);
 						}
 						return rank;
@@ -970,6 +1016,7 @@
 					
 					// Draw rectangle top 3
 					app.highlightDates=[];
+					
 					for (var ii=0; ii<rank.length; ii++) {
 						var i = rank[ii].position;
 						var series = rank[ii].series;
@@ -977,7 +1024,7 @@
 						var highValue = 0;
 						var lowValue = Number.MAX_VALUE;
 						for (var j=1; j<g.numColumns(); j++) {
-							var value = g.getValue(i,j).toString().split(",")[1]*1;
+							var value = g.getValue(i,j);//.toString().split(",")[1]*1;
 							if (lowValue > value) lowValue  = value;
 							if (highValue < value) highValue = value;
 						}
@@ -999,6 +1046,7 @@
 							//canvas.fillRect(left, bottom, right-left, top-bottom);
 													
 							var date = new Date(g.getValue(i,0));
+						
 							app.highlightDates.push(date.getFullYear()+"-"+(date.getMonth()+1)+"-"+date.getDate());
 							
 							
@@ -1033,8 +1081,8 @@
 				dateWindow: [app.chart.getValue(sIndex,0), app.chart.getValue(eIndex,0)]
 			});
 			
-			//get top 1 webpage on the highlighted dates
-			showTop1Webpage(app.highlightDates);
+			//get top 1 webpage on the highlighted date
+			//showTop1Webpage(app.highlightDates);
 		});
 		
 	}
