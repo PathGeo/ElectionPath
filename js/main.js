@@ -1,6 +1,6 @@
 	
 	//Load Google Charts and set callback
-	//google.load("visualization", "1", {packages:["corechart"]});
+	google.load("visualization", "1", {packages:["corechart"]});
 	//google.load('visualization', '1', {packages:['table']});
 
 	
@@ -36,7 +36,11 @@
 		showThumbnail:false,
 		highlightDates:[],
 		voice:null,
-		finalJSON:null
+		finalJSON:null,
+		chart:{
+			columns:["類別"],
+			values:{}
+		}
 	}
 	
 	//chart
@@ -147,6 +151,8 @@
 					//show content
 					showContent(k,v);
 					
+				
+					
 					
 					//updated Time
 					if(v.updatedTime){
@@ -189,6 +195,8 @@
 				// });
 				
 	
+				//show chart
+				createChart();
 				
 				
 				//detect the window's top while scrolling to highlight index in the navigator bar
@@ -305,7 +313,7 @@
 								 		//"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.likes_sincelastupdate?data.likes_sincelastupdate:"0")+"</a><label title='# of likes yesterday'> 昨日新增按讚人數</label></div>"+
 										//"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.talking_about_sincelastupdate?data.talking_about_sincelastupdate:"0")+"</a><label title='# of active users yesterday'> 昨日討論熱度</label></div>"+
 										"<div class='candidate-twitterInfo'><a href='#' class='showTable total_value'>"+(data.likes?data.likes:"0")+"</a><label title='# of total likes' class='total_label'> 總按讚人數</label><img class='compare_image' src='"+compareImage(compareValue_likes)+"' /><label class='compare_label'>過去24hr</label><a href='#' class='compare_value'>"+compareValue_likes.toFixed(1)+"%</a></div>"+
-										"<div class='candidate-twitterInfo'><a href='#' class='showTable total_value'>"+(data.talking_about_count?data.talking_about_count:"0")+"</a><label title='# of talking about this in 7 days' class='total_label'> 本周總討論人數</label><img class='compare_image' src='"+compareImage(compareValue_talking)+"' /><label class='compare_label'>過去一周</label><a href='#' class='compare_value'>"+compareValue_talking.toFixed(1)+"%</a></div>"+
+										"<div class='candidate-twitterInfo'><a href='#' class='showTable total_value'>"+(data.talking_about_count?data.talking_about_count:"0")+"</a><label title='在本周曾經按讚, 分享,或留言的人數' class='total_label'> 本周活躍粉絲數</label><img class='compare_image' src='"+compareImage(compareValue_talking)+"' /><label class='compare_label'>過去24hr</label><a href='#' class='compare_value'>"+compareValue_talking.toFixed(1)+"%</a></div>"+
 									"</li>"+
 								 "</ul>"+
 						 		"</div>"+
@@ -336,7 +344,11 @@
 				"label":"影片",
 				"domID":"hotVideo"
 			}
-		}
+		};
+		
+		
+		//chart columnn
+		app.chart.columns.push(name);
 		
 		
 		$.each(targets, function(k,v){
@@ -360,11 +372,81 @@
 					  "</td></tr>";
 			})
 			
-			$target.append("<li>"+html+"</table></li>")
+			$target.append("<li>"+html+"</table></li>");
+			
+			
+			//prepare chart' data
+			if(k=='TopPost' || k=='HotStory'){
+				var val=data[k+'_count'],
+					target=app.chart.values;
+				
+				$.each(val, function(n,number){
+					type=n.split('_')[2];
+					if(!target[k+'_count']){
+						target[k+'_count']={}
+					}
+					
+					
+					if(!target[k+'_count'][type]){
+						target[k+'_count'][type]=[["候選人", "人數"]];
+					}
+					
+					target[k+'_count'][type].push([name, number]);
+				});
+			}
+			
 		});
+
 	}
 	
 	
+	
+	//create piechart
+	function createChart(){
+		$(".chart").each(function(){
+			var $this=$(this),
+				domID=$this.attr('id'),
+				id=domID.split('_')[1]+'_count';
+				values=app.chart.values[id],
+				array=[],
+				data=null,
+				options={
+					"title":"",
+					"width":'200%',
+					"height":300,
+					"slices":[{"color":"#018CD5"}, {"color":"#1ACD02"}],
+					is3D: true,
+					legend:"none",
+					titleTextStyle:{
+						"fontSize":18
+					}
+				},
+				chart=null,
+				labels={
+					"posts":"總文章數",
+					"likes":"總按讚數",
+					"comments":"總討論數",
+					"shares":"總分享數",
+					"stories":"總文章數"
+				}
+				
+			//$this.html('綜合比較<p></p>')
+			
+			
+			$.each(values, function(k,v){
+				$this.append("<div class='pieChart' id='"+domID+"_" +k +"'></div>");
+				
+				options.title=labels[k];
+				
+				data=google.visualization.arrayToDataTable(v);
+				chart=new google.visualization.PieChart(document.getElementById(domID+"_"+k));
+				chart.draw(data, options);
+			});
+			
+		});
+		
+		
+	}
 	
 	
 	
