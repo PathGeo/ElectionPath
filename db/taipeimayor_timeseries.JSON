@@ -1,95 +1,102 @@
 {
     "date": [
-        "20140425"
+        "2014/04/25",
+        "2014/04/26",
+        "2014/04/27",
+        "2014/04/28"
     ],
-    "連勝文_likes": [
-        73344
+    "candidates": [
+        "連勝文",
+        "柯文哲"
     ],
-    "連勝文_talking_about_count": [
-        36127
+    "likes": [
+        [
+            73344,
+            265543
+        ],
+        [
+            73347,
+            265636
+        ],
+        [
+            73319,
+            266682
+        ],
+        [
+            73326,
+            266867
+        ]
     ],
-    "連勝文_total_active_posts": [
-        137
+    "totalPosts": [
+        [
+            137,
+            133
+        ],
+        [
+            137,
+            133
+        ],
+        [
+            137,
+            133
+        ],
+        [
+            137,
+            133
+        ]
     ],
-    "連勝文_total_post_likes": [
-        122679
+    "totalPostLikes": [
+        [
+            122679,
+            292468
+        ],
+        [
+            122850,
+            293189
+        ],
+        [
+            122945,
+            293934
+        ],
+        [
+            122979,
+            294094
+        ]
     ],
-    "連勝文_total_post_comments": [
-        7935
+    "totalPostComments": [
+        [
+            7935,
+            6163
+        ],
+        [
+            7973,
+            6196
+        ],
+        [
+            7991,
+            6251
+        ],
+        [
+            8011,
+            6274
+        ]
     ],
-    "連勝文_total_post_shares": [
-        3244
-    ],
-    "連勝文_hour48_active_posts": [
-        33
-    ],
-    "連勝文_hour48_post_likes": [
-        1278
-    ],
-    "連勝文_hour48_post_comments": [
-        80
-    ],
-    "連勝文_hour48_post_shares": [
-        10
-    ],
-    "柯文哲_likes": [
-        265543
-    ],
-    "柯文哲_talking_about_count": [
-        33645
-    ],
-    "柯文哲_total_active_posts": [
-        133
-    ],
-    "柯文哲_total_post_likes": [
-        292468
-    ],
-    "柯文哲_total_post_comments": [
-        6163
-    ],
-    "柯文哲_total_post_shares": [
-        12358
-    ],
-    "柯文哲_hour48_active_posts": [
-        48
-    ],
-    "柯文哲_hour48_post_likes": [
-        5350
-    ],
-    "柯文哲_hour48_post_comments": [
-        157
-    ],
-    "柯文哲_hour48_post_shares": [
-        620
-    ],
-    "顧立雄_likes": [
-        22886
-    ],
-    "顧立雄_talking_about_count": [
-        6588
-    ],
-    "顧立雄_total_active_posts": [
-        29
-    ],
-    "顧立雄_total_post_likes": [
-        74497
-    ],
-    "顧立雄_total_post_comments": [
-        1850
-    ],
-    "顧立雄_total_post_shares": [
-        3264
-    ],
-    "顧立雄_hour48_active_posts": [
-        14
-    ],
-    "顧立雄_hour48_post_likes": [
-        548
-    ],
-    "顧立雄_hour48_post_comments": [
-        15
-    ],
-    "顧立雄_hour48_post_shares": [
-        45
+    "totalPostShares": [
+        [
+            3244,
+            12358
+        ],
+        [
+            3249,
+            12386
+        ],
+        [
+            3250,
+            12429
+        ],
+        [
+            3251,
+            12444
+        ]
     ]
 }

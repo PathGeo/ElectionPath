@@ -460,7 +460,7 @@
 	
 	//show Time-seris daata
 	function showTimeSeriesData(){
-		var url='db/taipeimayor_timeseries_template.JSON';
+		var url='db/taipeimayor_timeseries.JSON';
 		
 		$.getJSON(url, function(json){
 			if(json){
@@ -471,14 +471,14 @@
 					
 				//give value
 				$.each(json, function(k,v){
-					if(k=='candidates'||k=='dates'){
+					if(k=='candidates'||k=='date'){
 						return;
 					}
 
 					values[k]=[];
 					
 					$.each(v, function(i,arr){
-						values[k].push([new Date(json['dates'][i])].concat(arr));
+						values[k].push([new Date(json['date'][i])].concat(arr));
 					})
 				})	
 				
