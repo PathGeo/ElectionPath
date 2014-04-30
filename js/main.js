@@ -273,6 +273,23 @@
 					twitterAnalysis=data.twitterAnalysis;
 					
 					
+					
+					//show fanpages
+					if(data.fanpages && data.fanpages.length>=1){
+						var ids={
+							"連勝文":"lien",
+							"柯文哲":"ko"
+						},
+						$id=$("#aboutData > label#"+ids[name]),
+						html='',
+						length=data.fanpages.length;
+						
+						$.each(data.fanpages, function(i,obj){
+							html+="<a href='"+obj.url+"' target='_blank'>"+obj.name+"</a>" + ((i==length-1)?"":", ");
+						})
+						$id.html(html);
+					}
+					
 					//prepare chart csv content
 					/**
 					chartCSVData.headers.push(name);
@@ -319,8 +336,8 @@
 								 	"<li class='candidate-metadata'>"+
 								 		//"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.likes_sincelastupdate?data.likes_sincelastupdate:"0")+"</a><label title='# of likes yesterday'> 昨日新增按讚人數</label></div>"+
 										//"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.talking_about_sincelastupdate?data.talking_about_sincelastupdate:"0")+"</a><label title='# of active users yesterday'> 昨日討論熱度</label></div>"+
-										"<div class='candidate-twitterInfo'><a href='#' class='showTable total_value'>"+(data.likes?data.likes:"0")+"</a><label title='# of total likes' class='total_label'> 總按讚人數</label><img class='compare_image' src='"+compareImage(compareValue_likes)+"' /><label class='compare_label'>過去24hr</label><a href='#' class='compare_value'>"+compareValue_likes.toFixed(1)+"%</a></div>"+
-										"<div class='candidate-twitterInfo'><a href='#' class='showTable total_value'>"+(data.talking_about_count?data.talking_about_count:"0")+"</a><label title='在本周曾經按讚, 分享,或留言的人數' class='total_label'> 本周活躍粉絲數</label><img class='compare_image' src='"+compareImage(compareValue_talking)+"' /><label class='compare_label'>過去24hr</label><a href='#' class='compare_value'>"+compareValue_talking.toFixed(1)+"%</a></div>"+
+										"<div class='candidate-twitterInfo'><a href='#' class='showTable total_value'>"+(data.likes?data.likes:"0")+"</a><label title='# of total likes' class='total_label'> *總按讚人數</label><img class='compare_image' src='"+compareImage(compareValue_likes)+"' /><label class='compare_label'>過去24hr</label><a href='#' class='compare_value'>"+compareValue_likes.toFixed(1)+"%</a></div>"+
+										"<div class='candidate-twitterInfo'><a href='#' class='showTable total_value'>"+(data.talking_about_count?data.talking_about_count:"0")+"</a><label title='在本周曾經按讚, 分享,或留言的人數' class='total_label'> *本周活躍粉絲數</label><img class='compare_image' src='"+compareImage(compareValue_talking)+"' /><label class='compare_label'>過去24hr</label><a href='#' class='compare_value'>"+compareValue_talking.toFixed(1)+"%</a></div>"+
 									"</li>"+
 								 "</ul>"+
 						 		"</div>"+
@@ -483,13 +500,35 @@
 				})	
 				
 				
-				showTimeSeriesChart('likes');
+				
 			}
 			
 			
 			
+			//show chart selector
+			(function(){
+				$.getJSON('db/selector_ddslick.json', function(result){
+					if(result){
+						result=result.chart;
+						$("#chart_selector").ddslick({
+							data:result.ddData,
+							width:result.width,
+							selectText:result.selectText,
+							onSelected:function(data){
+								showTimeSeriesChart(data.selectedData.value);
+							}
+						})
+						
+					}
+				});
+			})()
+			
+			
 		});
 	}
+	
+	
+	
 	
 	
 	
@@ -941,8 +980,8 @@
 		type=type || 'likes';
 		
 		var target=app.timeSeriesData;
-	
 		
+
 		//init chart
 		app.chart = g = new Dygraph(
 			document.getElementById("chart"), 
