@@ -1,135 +1,40 @@
 {
-	"voice":{
-		"width":150,
-		"selectText": "Select a voice",
+	"chart":{
+		"width":200,
+		"selectText": "請選擇比較項目",
 		"ddData":[{
-			"text": "Everyone's voice",
-	        "value": "everyone",
-	        "selected": false,
-	        "description": "Everyone's voice in Twitter",
+			"text": "每日按讚數 (Likes)",
+	        "value": "likes",
+	        "selected": true,
+	        "description": "每日按讚數(Likes)",
 	        "imageSrc": ""
 		},
 		{
-			"text": "Candidate's voice",
-	        "value": "candidate",
+			"text": "每日文章數 (Posts)",
+	        "value": "totalPosts",
 	        "selected": false,
-	        "description": "Candidate's voice in Twitter",
-	        "imageSrc": ""
-		}
-		]
-	},
-	
-	"category":{
-		"width":150,
-		"selectText": "Select a category",
-		"ddData":[{
-			"text": "All",
-	        "value": "All",
-	        "selected": false,
-	        "description": "Category",
+	        "description": "每日文章數(Posts)",
 	        "imageSrc": ""
 		},
 		{
-			"text": "Business",
-	        "value": "Business",
+			"text": "每日文章按讚數 (Likes)",
+	        "value": "totalPostLikes",
 	        "selected": false,
-	        "description": "Category",
+	        "description": "每日文章按讚數(Likes)",
 	        "imageSrc": ""
 		},
 		{
-			"text": "Debate",
-	        "value": "Debate",
+			"text": "每日文章討論數 (Comments)",
+	        "value": "totalPostComments",
 	        "selected": false,
-	        "description": "Category",
+	        "description": "每日討論數(Comments)",
 	        "imageSrc": ""
 		},
 		{
-			"text": "Endorsement",
-	        "value": "Endorsement",
+			"text": "每日文章分享數 (Shares)",
+	        "value": "totalPostShares",
 	        "selected": false,
-	        "description": "Category",
-	        "imageSrc": ""
-		},
-		{
-			"text": "Education",
-	        "value": "Education",
-	        "selected": false,
-	        "description": "Category",
-	        "imageSrc": ""
-		},
-		{
-			"text": "Jobs",
-	        "value": "Jobs",
-	        "selected": false,
-	        "description": "Category",
-	        "imageSrc": ""
-		},
-		{
-			"text": "Labor",
-	        "value": "Labor",
-	        "selected": false,
-	        "description": "Category",
-	        "imageSrc": ""
-		},
-		{
-			"text": "Money",
-	        "value": "Money",
-	        "selected": false,
-	        "description": "Category",
-	        "imageSrc": ""
-		},
-		{
-			"text": "Neighborhood",
-	        "value": "Neighborhood",
-	        "selected": false,
-	        "description": "Category",
-	        "imageSrc": ""
-		},
-		{
-			"text": "Police",
-	        "value": "Police",
-	        "selected": false,
-	        "description": "Category",
-	        "imageSrc": ""
-		}
-		]
-	},
-	
-	"location":{
-		"width":150,
-		"selectText": "Select a location",
-		"ddData":[{
-			"text": "92123",
-	        "value": "92123",
-	        "selected": false,
-	        "description": "Location",
-	        "imageSrc": ""
-		},
-		{
-			"text": "La Mesa",
-	        "value": "La Mesa",
-	        "selected": false,
-	        "description": "Location",
-	        "imageSrc": ""
-		}
-		]
-	},
-	
-	"topic":{
-		"width":150,
-		"selectText": "Select a topic",
-		"ddData":[{
-			"text": "Everyone's voice",
-	        "value": 0,
-	        "selected": false,
-	        "description": "Everyone's voice in Twitter",
-	        "imageSrc": ""
-		},
-		{
-			"text": "Candidate's voice",
-	        "value": 0,
-	        "selected": false,
-	        "description": "Candidate's voice in Twitter",
+	        "description": "每日分享數(Shares)",
 	        "imageSrc": ""
 		}
 		]

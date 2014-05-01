@@ -221,6 +221,10 @@ li {display:block;}
 /** candidate guage*/
 .candidate-guage { width:95%; margin:0 auto; }
 
+/** about data */
+#aboutData {width:98%; text-align:right; padding:10px; color:#777777; }
+
+
 
 /**candidateInfo */
 .candidateBar > ul {width:100%;}
@@ -259,6 +263,7 @@ li {display:block;}
 #chart_queryDate {position:absolute; left:60px; top:-30px ; font-size:13px; font-weight:600; display:none;  }
 .dygraph-legend {width:110px !important; top:-60px !important; font-size:13px !important; left:auto !important; right:0px !important; }
 .dygraph-legend > span {display:block !important}
+#chart_selector {position:absolute; z-index:1000000; top:-70px; left:55px; }
 
 
 /**highlight data*/
