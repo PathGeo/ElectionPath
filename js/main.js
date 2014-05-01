@@ -948,35 +948,6 @@
 	 * initialize chart
 	 */
 	function showTimeSeriesChart(type){
-		/**
-		var csv = "", 
-			dates = null, 
-			chartCSVData = app.chartCSVData,
-			finalDate=null,
-			highlightDates=[];
-		
-		//header
-		var length = chartCSVData.headers.length - 1;
-		$.each(chartCSVData.headers, function(i, v){
-			csv += v + ((i == length) ? " \n" : ", ");
-		});
-		$.each(chartCSVData.values, function(k, v){
-			dates = k.split('/');
-			k=dates[2] + "-" + ((dates[0].length == 1) ? "0" + dates[0] : dates[0]) + "-" + ((dates[1].length == 1) ? "0" + dates[1] : dates[1]);
-			csv += k.replace(/\-/g,"") + ", ";
-			
-			$.each(v, function(i, val){
-				csv += val + ";" + val + ";" + val + ((i == length - 1) ? " \n" : ", ");
-			});
-			
-			//app.dateFrom
-			if(!finalDate){app.dateFrom=k;}
-			finalDate=k;
-		});
-		
-		//app.dateTo
-		app.dateTo=finalDate.replace(/\//g, "-");
-		*/
 		type=type || 'likes';
 		
 		var target=app.timeSeriesData;
@@ -990,7 +961,7 @@
 				labels:target.headers,
 				customBars: false,
 				title: '',
-				ylabel: 'Number',
+				ylabel: '',
 				colors: ['#018CD5', '#1ACD02'], //['#C91111', '#E27C20', '#2CC671', '#A15FB7'],
 				showRangeSelector: true,
 				highlightCircleSize: 5,
