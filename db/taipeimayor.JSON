@@ -8,8 +8,45 @@
         "talking_about_count": 15888,
         "likes_sincelastupdate": -3,
         "talking_about_sincelastupdate": -6147,
-        "url_facebook": "https://www.facebook.com/pages/%E9%80%A3%E5%8B%9D%E6%96%87/652438848137404",
-        "TopPost_count": {
+        "officialPage":{
+			"name":"連勝文",
+			"url":"https://www.facebook.com/pages/%E9%80%A3%E5%8B%9D%E6%96%87/652438848137404",
+			"since":"2014-03-19",
+			"likes":20000,
+			"talking_about_count":10000,
+			"likes_sincelastupdate":-3,
+			"talking_about_sincelastupdate":-6147
+		},
+		"fanPages":[
+			{
+				"name":"支持 連勝文 選台北市市長",
+				"url":"https://www.facebook.com/pages/支持 連勝文 選台北市市長",
+				"since":"2014-xx-xx",
+				"likes":20000,
+				"talking_about_count":10000,
+				"likes_sincelastupdate":-3,
+				"talking_about_sincelastupdate":-6147
+			},
+			{
+				"name":"XXXXX",
+				"url":"https://www.facebook.com/pages/XXXX",
+				"since":"2014-xx-xx",
+				"likes":20000,
+				"talking_about_count":10000,
+				"likes_sincelastupdate":-3,
+				"talking_about_sincelastupdate":-6147
+			},
+			{
+				"name":"XXXXXX",
+				"url":"https://www.facebook.com/pages/XXXX",
+				"since":"2014-xx-xx",
+				"likes":20000,
+				"talking_about_count":10000,
+				"likes_sincelastupdate":-3,
+				"talking_about_sincelastupdate":-6147
+			}
+		],
+		"TopPost_count": {
             "total_active_posts": 137,
             "total_post_likes": 123146,
             "total_post_comments": 8089,
@@ -424,7 +461,35 @@
         "talking_about_count": 73160,
         "likes_sincelastupdate": 133,
         "talking_about_sincelastupdate": -717,
-        "url_facebook": "https://www.facebook.com/DoctorKoWJ",
+		"officialPage":{
+			"name":"柯文哲",
+			"url":"https://www.facebook.com/DoctorKoWJ",
+			"since":"2011-10-20",
+			"likes":250000,
+			"talking_about_count":30000,
+			"likes_sincelastupdate":133,
+			"talking_about_sincelastupdate":-717
+		},
+		"fanPages":[
+			{
+				"name":"柯文哲我們愛你我們需要你",
+				"url":"https://www.facebook.com/pages/柯文哲我們愛你我們需要你",
+				"since":"2014-xx-xx",
+				"likes":20000,
+				"talking_about_count":10000,
+				"likes_sincelastupdate":-3,
+				"talking_about_sincelastupdate":-6147
+			},
+			{
+				"name":"柯文哲競選台北市長後援會",
+				"url":"https://www.facebook.com/pages/柯文哲競選台北市長後援會",
+				"since":"2014-xx-xx",
+				"likes":20000,
+				"talking_about_count":10000,
+				"likes_sincelastupdate":-3,
+				"talking_about_sincelastupdate":-6147
+			}
+		],
         "TopPost_count": {
             "total_active_posts": 133,
             "total_post_likes": 294634,

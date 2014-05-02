@@ -290,28 +290,20 @@
 						$id.html(html);
 					}
 					
-					//prepare chart csv content
-					/**
-					chartCSVData.headers.push(name);
-					var v;
-					$.each(twitterAnalysis.values, function(i,val){
-						v=val;
-						//last date
-						if(i==twitterAnalysis.values.length-1){
-							v=twitterAnalysis.values[i-1];
-							v=$.extend({}, v);
-							v.tweets_yesterday='';
-						}
-						
-						
-						if(chartCSVData.values[val.date]) {
-							chartCSVData.values[val.date].push(v.tweets_yesterday);
-						}else {
-							chartCSVData.values[val.date] = [v.tweets_yesterday];
-						}
-											
-					});
-					*/
+					
+					//prepare pie chart for likes and talking about this
+					data._pieChart={
+						likes:[
+							["來源", "數量"],
+							["官方臉書", data.officialPage.likes],
+							["粉絲專頁", (data.likes-data.officialPage.likes)]
+						],
+						talkings:[
+							["來源", "數量"],
+							["官方臉書", data.officialPage.talking_about_count],
+							["粉絲專頁", (data.talking_about_count-data.officialPage.talking_about_count)]
+						]
+					}
 					
 					
 					var compareValue_likes=(data.likes_sincelastupdate / (data.likes - data.likes_sincelastupdate)* 100),
@@ -336,8 +328,15 @@
 								 	"<li class='candidate-metadata'>"+
 								 		//"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.likes_sincelastupdate?data.likes_sincelastupdate:"0")+"</a><label title='# of likes yesterday'> 昨日新增按讚人數</label></div>"+
 										//"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.talking_about_sincelastupdate?data.talking_about_sincelastupdate:"0")+"</a><label title='# of active users yesterday'> 昨日討論熱度</label></div>"+
-										"<div class='candidate-twitterInfo'><a href='#' class='showTable total_value'>"+(data.likes?data.likes:"0")+"</a><label title='# of total likes' class='total_label'> *總按讚人數</label><img class='compare_image' src='"+compareImage(compareValue_likes)+"' /><label class='compare_label'>過去24hr</label><a href='#' class='compare_value'>"+compareValue_likes.toFixed(1)+"%</a></div>"+
-										"<div class='candidate-twitterInfo'><a href='#' class='showTable total_value'>"+(data.talking_about_count?data.talking_about_count:"0")+"</a><label title='在本周曾經按讚, 分享,或留言的人數' class='total_label'> *本周活躍粉絲數</label><img class='compare_image' src='"+compareImage(compareValue_talking)+"' /><label class='compare_label'>過去24hr</label><a href='#' class='compare_value'>"+compareValue_talking.toFixed(1)+"%</a></div>"+
+										"<div class='candidate-twitterInfo'>"+
+											"<div title='# of total likes' class='total_label'>總按讚人數<br><a href='#' class='showTable total_value'>"+(data.likes?data.likes:"0")+"</a></div>"+
+											"<div class='candidate-pieChart' id='likes_"+name+"'></div>"+
+											"<div class='compare'><img class='compare_image' src='"+compareImage(compareValue_likes)+"' /><label class='compare_label'>過去24hr</label><a href='#' class='compare_value'>"+data.likes_sincelastupdate + "("+compareValue_likes.toFixed(1)+"%)</a></div></div>"+
+										"<div class='candidate-twitterInfo'>"+
+											"<div title='在本周曾經按讚, 分享,或留言的人數' class='total_label'>本周活躍粉絲數<br><a href='#' class='showTable total_value'>"+(data.talking_about_count?data.talking_about_count:"0")+"</a></div>"+
+											"<div class='candidate-pieChart' id='talkings_"+name+"'></div>"+
+											"<div class='compare'><img class='compare_image' src='"+compareImage(compareValue_talking)+"' /><label class='compare_label'>過去24hr</label><a href='#' class='compare_value'>"+compareValue_talking.toFixed(1)+"%</a></div></div>"+
+										"<div class='candidate-description'></div>"+
 									"</li>"+
 								 "</ul>"+
 						 		"</div>"+
@@ -400,7 +399,7 @@
 			
 			
 			//prepare chart' data
-			if(k=='TopPost' || k=='HotStory'){
+			//if(k=='TopPost' || k=='HotStory'){
 				var val=data[k+'_count'],
 					target=app.pieChart.values;
 				
@@ -417,7 +416,8 @@
 					
 					target[k+'_count'][type].push([name, number]);
 				});
-			}
+			//}
+			
 			
 		});
 
@@ -427,6 +427,41 @@
 	
 	//create piechart
 	function createPieChart(){
+		var options={
+				"title":"",
+				"width":'200%',
+				"height":300,
+				"slices":[{"color":"#018CD5"}, {"color":"#1ACD02"}],
+				is3D: true,
+				legend:"none",
+				titleTextStyle:{
+					"fontSize":18
+				},
+				backgroundColor: { fill:'transparent' }
+		};
+		
+		
+		
+		//for cadidate's likes and talking
+		$(".candidate-pieChart").each(function(){
+			var $this=$(this),
+				id=$this.attr('id'),
+				candidate=id.split("_")[1],
+				topic=id.split("_")[0];
+				datas=app.finalJSON[candidate]._pieChart;
+			
+			options.slices=[{"color":"#FF4B08"}, {"color":"#FFB304"}];
+			//options.title="來源";
+		
+			$.each(datas, function(k,v){
+				drawPieChart(v, id, options)
+			})
+		});
+		
+		
+		
+		//for toppost, hotlink, hotstory, hotvideo
+		options.slices=[{"color":"#018CD5"}, {"color":"#1ACD02"}];
 		$(".chart").each(function(){
 			var $this=$(this),
 				domID=$this.attr('id'),
@@ -434,44 +469,46 @@
 				values=app.pieChart.values[id],
 				array=[],
 				data=null,
-				options={
-					"title":"",
-					"width":'200%',
-					"height":300,
-					"slices":[{"color":"#018CD5"}, {"color":"#1ACD02"}],
-					is3D: true,
-					legend:"none",
-					titleTextStyle:{
-						"fontSize":18
-					}
-				},
-				chart=null,
 				labels={
 					"posts":"總文章數",
 					"likes":"總按讚數",
 					"comments":"總討論數",
 					"shares":"總分享數",
-					"stories":"總文章數"
+					"stories":"總文章數",
+					"videos":"總影片數",
+					"links":"總連結數"
 				}
 				
 			//$this.html('綜合比較<p></p>')
-			
-	
+
 			$.each(values, function(k,v){
 				$this.append("<div class='pieChart' id='"+domID+"_" +k +"'></div>");
 				
 				options.title=labels[k];
 				//console.log(v)
 				
-				data=google.visualization.arrayToDataTable(v);
-				chart=new google.visualization.PieChart(document.getElementById(domID+"_"+k));
-				chart.draw(data, options);
+				drawPieChart(v, domID+"_"+k, options);
 			});
 			
 		});
 		
 		
 	}
+	
+	
+	
+	
+	//draw pieChart
+	function drawPieChart(dataArray, domID, options){
+		var data=google.visualization.arrayToDataTable(dataArray),
+			chart=new google.visualization.PieChart(document.getElementById(domID));
+		chart.draw(data, options);
+		
+		return chart
+	}
+	
+	
+	
 	
 	
 	
@@ -674,10 +711,14 @@
 			url=obj.link,
 			fromName=obj.from_name|| "<a href='"+url+"' target='_blank'>"+((url.length>90)?String(url).substr(0,90)+"...":url)+"</a>",
 			description=(obj.message)?((obj.message.length>100)?String(obj.message).substr(0, 100) + "....<a href='"+url+"' target='_blank'>show more</a>": obj.message):"",
-			time=(obj.updated_time!="")?obj.updated_time:((obj.created_time)?obj.created_time:""),
+			time=(obj.created_time!="")?obj.created_time:((obj.updated_time)?obj.updated_time:""),
 			isVideo=false,
 			videoEmbedHtml="",
 			picture=(obj.picture && obj.picture!='')?obj.picture:"images/main-img-services.png";
+		
+		
+		//time
+		time=time.replace("T","&nbsp; &nbsp; ");
 		
 		//check if url is from youtube
 		var check=url.match('www.youtube.com') || url.match(/www.facebook.com\/photo.php\?v=(.*)/);//url.split('www.youtube.com') || url.split('www.facebook.com/photo.php');

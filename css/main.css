@@ -182,13 +182,15 @@ li {display:block;}
 
 /** candidate metadata*/
 .candidate-metadata {width:92%; height:100%; padding:10px 4% 10px 4%; position:relative; padding-top:10px; color:#555555;  }
-.candidate-metadata a {color:#ffffff; }
 .candidate-metadata > div {min-height:50px; }
 .candidate-twitterImage {height:50%; max-width:25%; display:none; }
-.candidate-twitterInfo {font-weight:bold; color:#555555; height:100px; width:100%; position:relative; padding:5px 0px 5px 0px; }
-.candidate-twitterInfo > * {position:absolute;}
-.candidate-twitterInfo > a {font-size:40px; width:40px;  max-width:50%; text-align:left; color:#369BED;   }
-.candidate-twitterInfo label {color:#555555; font-size:16px; font-weight:500; max-width:40%; }
+.candidate-twitterInfo {font-weight:bold; color:#555555;  width:44%; position:relative; padding:1%; margin:2%; float:left; text-align:center; }
+.candidate-twitterInfo > div { color:#555555; font-size:16px; font-weight:500;}
+.candidate-twitterInfo > div a {font-size:40px; width:40px;  max-width:50%; text-align:left; color:#369BED;}
+.candidate-twitterInfo .candidate-pieChart {top:-70px; }
+.candidate-twitterInfo .compare {position:relative; top:-120px; }
+
+
 .candidate-info {font-size:13px; color:#ffffff; font-weight:normal; position:absolute; top:65px; left:122px;  }
 .candidate-info a {color:#ffffff; margin-right:33px; }
 .total_value {left:0px; top:20px; }
