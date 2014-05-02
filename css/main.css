@@ -181,23 +181,27 @@ li {display:block;}
 
 
 /** candidate metadata*/
-.candidate-metadata {width:92%; height:100%; padding:10px 4% 10px 4%; position:relative; padding-top:10px; color:#555555;  }
+.candidate-metadata {width:92%; height:100%; padding:10px 4% 10px 4%; position:relative; padding-top:10px; color:#555555; display:inline-block }
 .candidate-metadata > div {min-height:50px; }
 .candidate-twitterImage {height:50%; max-width:25%; display:none; }
 .candidate-twitterInfo {font-weight:bold; color:#555555;  width:44%; position:relative; padding:1%; margin:2%; float:left; text-align:center; }
 .candidate-twitterInfo > div { color:#555555; font-size:16px; font-weight:500;}
 .candidate-twitterInfo > div a {font-size:40px; width:40px;  max-width:50%; text-align:left; color:#369BED;}
 .candidate-twitterInfo .candidate-pieChart {top:-70px; }
+.candidate-twitterInfo .pieChart-title {position:absolute; top:215px; left:40%; font-size:12px; }
 .candidate-twitterInfo .compare {position:relative; top:-120px; }
+.candidate-twitterInfo .compare > * {position:absolute;}
+.candidate-description {position:absolute; bottom:-15px; text-align:right; width:93%; font-size:12px; color:#777777; }
 
 
 .candidate-info {font-size:13px; color:#ffffff; font-weight:normal; position:absolute; top:65px; left:122px;  }
 .candidate-info a {color:#ffffff; margin-right:33px; }
 .total_value {left:0px; top:20px; }
 .total_label {left:0px; top:0px; }
-.compare_value {left:63%; top:0px;  }
-.compare_label {left:63%; top:42px;}
-.compare_image {left:50%;}
+.compare_value {left:30%; top:0px;font-size:34px !important;  }
+.compare_value label {font-size:18px !important; }
+.compare_label {left:30%; top:42px;}
+.compare_image {left:0px; top:0px;  }
 
 /** candidate top 1 webpage */
 .candidate-top1Webpage { margin-top:25px; border-top:1px solid #f1f1f1;}

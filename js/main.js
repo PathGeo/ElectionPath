@@ -274,20 +274,13 @@
 					
 					
 					
-					//show fanpages
-					if(data.fanpages && data.fanpages.length>=1){
-						var ids={
-							"連勝文":"lien",
-							"柯文哲":"ko"
-						},
-						$id=$("#aboutData > label#"+ids[name]),
-						html='',
-						length=data.fanpages.length;
-						
-						$.each(data.fanpages, function(i,obj){
-							html+="<a href='"+obj.url+"' target='_blank'>"+obj.name+"</a>" + ((i==length-1)?"":", ");
-						})
-						$id.html(html);
+					//fanpage name
+					fanpageName='';
+					if(data.fanPages && data.fanPages.length>=1){
+						var length=data.fanPages-1;
+						$.each(data.fanPages, function(i, obj){
+							fanpageName+="<a href='"+ obj.url +"' target='_blank'>"+obj.name+"</a>" + ((i==length-1)?"":", ")
+						});
 					}
 					
 					
@@ -330,13 +323,13 @@
 										//"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.talking_about_sincelastupdate?data.talking_about_sincelastupdate:"0")+"</a><label title='# of active users yesterday'> 昨日討論熱度</label></div>"+
 										"<div class='candidate-twitterInfo'>"+
 											"<div title='# of total likes' class='total_label'>總按讚人數<br><a href='#' class='showTable total_value'>"+(data.likes?data.likes:"0")+"</a></div>"+
-											"<div class='candidate-pieChart' id='likes_"+name+"'></div>"+
-											"<div class='compare'><img class='compare_image' src='"+compareImage(compareValue_likes)+"' /><label class='compare_label'>過去24hr</label><a href='#' class='compare_value'>"+data.likes_sincelastupdate + "("+compareValue_likes.toFixed(1)+"%)</a></div></div>"+
+											"<div class='candidate-pieChart' id='likes_"+name+"'></div><div class='pieChart-title'>來源分佈</div>"+
+											"<div class='compare'><img class='compare_image' src='"+compareImage(compareValue_likes)+"' /><label class='compare_label'>過去24hr</label><a href='#' class='compare_value'>"+data.likes_sincelastupdate + "<label>("+compareValue_likes.toFixed(1)+"%)</label></a></div></div>"+
 										"<div class='candidate-twitterInfo'>"+
 											"<div title='在本周曾經按讚, 分享,或留言的人數' class='total_label'>本周活躍粉絲數<br><a href='#' class='showTable total_value'>"+(data.talking_about_count?data.talking_about_count:"0")+"</a></div>"+
-											"<div class='candidate-pieChart' id='talkings_"+name+"'></div>"+
-											"<div class='compare'><img class='compare_image' src='"+compareImage(compareValue_talking)+"' /><label class='compare_label'>過去24hr</label><a href='#' class='compare_value'>"+compareValue_talking.toFixed(1)+"%</a></div></div>"+
-										"<div class='candidate-description'></div>"+
+											"<div class='candidate-pieChart' id='talkings_"+name+"'></div><div class='pieChart-title'>來源分佈</div>"+
+											"<div class='compare'><img class='compare_image' src='"+compareImage(compareValue_talking)+"' /><label class='compare_label'>過去24hr</label><a href='#' class='compare_value'>"+data.talking_about_sincelastupdate +"<label>("+compareValue_talking.toFixed(1)+"%)</label></a></div></div>"+
+										"<div class='candidate-description'>*"+name+"粉絲專頁包括: "+fanpageName+"</div>"+
 									"</li>"+
 								 "</ul>"+
 						 		"</div>"+
@@ -448,14 +441,19 @@
 				id=$this.attr('id'),
 				candidate=id.split("_")[1],
 				topic=id.split("_")[0];
-				datas=app.finalJSON[candidate]._pieChart;
+				datas=app.finalJSON[candidate]._pieChart,
+				chart=null,
+				backgroundColor=app.finalJSON[candidate].backgroundColor;
 			
-			options.slices=[{"color":"#FF4B08"}, {"color":"#FFB304"}];
+			options.slices=[{"color":backgroundColor}, {"color":"#cccccc"}];
 			//options.title="來源";
 		
 			$.each(datas, function(k,v){
-				drawPieChart(v, id, options)
-			})
+				chart=drawPieChart(v, id, options);
+			
+			});
+			
+			
 		});
 		
 		
