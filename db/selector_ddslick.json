@@ -3,6 +3,32 @@
 		"width":200,
 		"selectText": "請選擇比較項目",
 		"ddData":[{
+			"text": "每日按讚數",
+	        "value": "likes",
+	        "selected": true,
+	        "description": "每日按讚數(Likes)",
+	        "imageSrc": ""
+		},
+		{
+			"text": "每日活躍粉絲數",
+	        "value": "talkingAbout",
+	        "selected": false,
+	        "description": "每日活躍粉絲數 (TalkingAbout)",
+	        "imageSrc": ""
+		},
+		{
+			"text": "每日文章數",
+	        "value": "totalPosts",
+	        "selected": false,
+	        "description": "每日文章數(Posts)",
+	        "imageSrc": ""
+		}
+		]
+	},
+	"backup":{
+		"width":200,
+		"selectText": "請選擇比較項目",
+		"ddData":[{
 			"text": "每日按讚數 (Likes)",
 	        "value": "likes",
 	        "selected": true,
