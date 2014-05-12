@@ -371,22 +371,30 @@
 			var values=data[k],
 				html="<table class='table'><tr><td class='rank'>排名</td><td class='value'>"+v.label+"</td></tr>",
 				$target=$("#"+v.domID+" > ul");
-				
+			
+
 			$.each(values, function(i,obj){
-				html+='<tr>'+
-					  '<td class="rank">'+obj.rank+'</td>'+
-					  "<td class='value'>"+createOpenGraphHTML(obj) +
-					  /**
-					  (function(){
-							//if(obj.opengraph && obj.opengraph.image){
-						  		return "<td class='value'>"+createOpenGraphHTML(obj)
-						  	//}else{
-						  	//	return "<td class='value readOpenGraph'>"+createOpenGraphHTML(obj.url);
-						  	//}
-					  })()+	
-					  */	 
-					  "</td></tr>";
+					html+='<tr>'+
+						  '<td class="rank">'+obj.rank+'</td>'+
+						  "<td class='value'>"+(function(){
+						  	if(k=='HotStory' || k=='TopPost'){
+						  		return "<div class='fb-post' data-href='"+obj.link+"' data-width=420 ></div>";	
+						  	}else{
+						  		return createOpenGraphHTML(obj)
+						  	}
+						  })() +
+						  /**
+						  (function(){
+								//if(obj.opengraph && obj.opengraph.image){
+							  		return "<td class='value'>"+createOpenGraphHTML(obj)
+							  	//}else{
+							  	//	return "<td class='value readOpenGraph'>"+createOpenGraphHTML(obj.url);
+							  	//}
+						  })()+	
+						  */	 
+						  "</td></tr>";
 			})
+			
 			
 			$target.append("<li>"+html+"</table></li>");
 			
