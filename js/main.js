@@ -297,7 +297,7 @@
 							["粉絲專頁", (data.talking_about_count-data.officialPage.talking_about_count)]
 						]
 					}
-					
+				
 					
 					var compareValue_likes=(data.likes_sincelastupdate / (data.likes - data.likes_sincelastupdate)* 100),
 						compareValue_talking=(data.talking_about_sincelastupdate / (data.talking_about_count - data.talking_about_sincelastupdate)* 100),
@@ -317,8 +317,13 @@
 								 		"<img src='"+data.image+"' />"+ //"<img src='"+(data.image.split('.')[0]+"_1x1.png")+"' />"+
 								 		"<div class='candidate-name'>"+data.name+"</div>"+
 								 		"<div class='candidate-info'><a href='"+data.officialPage.url+"' target='_blank'>官方Facebook</a></div>"+
-								 	"</li>"+
-								 	"<li class='candidate-metadata'>"+
+								 	"</li>";
+								 	
+					
+					$candidateBar.append(htmlNav +"</ul></div>");		 	
+								 	
+						
+						htmlNav+="<li class='candidate-metadata'>"+
 								 		//"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.likes_sincelastupdate?data.likes_sincelastupdate:"0")+"</a><label title='# of likes yesterday'> 昨日新增按讚人數</label></div>"+
 										//"<div class='candidate-twitterInfo'><a href='#' class='showTable'>"+(data.talking_about_sincelastupdate?data.talking_about_sincelastupdate:"0")+"</a><label title='# of active users yesterday'> 昨日討論熱度</label></div>"+
 										"<div class='candidate-twitterInfo'>"+
@@ -335,8 +340,10 @@
 						 		"</div>"+
 						 		"</li>";
 					
+					
 					$candidate.append(htmlNav);
-					$candidateBar.append(htmlNav);
+					
+					
 	}
 			
 	
@@ -377,8 +384,9 @@
 					html+='<tr>'+
 						  '<td class="rank">'+obj.rank+'</td>'+
 						  "<td class='value'>"+(function(){
-						  	if(k=='HotStory' || k=='TopPost'){
-						  		return "<div class='fb-post' data-href='"+obj.link+"' data-width=420 ></div>";	
+						  	if(k=='TopPost'){
+						  		var link="https://www.facebook.com/permalink.php?story_fbid="+obj.story_fbid+"&id="+obj.id;
+						  		return "<div class='fb-post' data-href='"+link+"' data-width=420 ></div>";	
 						  	}else{
 						  		return createOpenGraphHTML(obj)
 						  	}
@@ -449,18 +457,14 @@
 				id=$this.attr('id'),
 				candidate=id.split("_")[1],
 				topic=id.split("_")[0];
-				datas=app.finalJSON[candidate]._pieChart,
+				datas=app.finalJSON[candidate]._pieChart[topic],
 				chart=null,
 				backgroundColor=app.finalJSON[candidate].backgroundColor;
 			
 			options.slices=[{"color":backgroundColor}, {"color":"#cccccc"}];
 			//options.title="來源";
-		
-			$.each(datas, function(k,v){
-				chart=drawPieChart(v, id, options);
 			
-			});
-			
+			chart=drawPieChart(datas, id, options);
 			
 		});
 		
