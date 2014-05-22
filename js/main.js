@@ -718,7 +718,7 @@
 	function createOpenGraphHTML(obj){
 		
 		var thumbnail=obj.from_picture || "images/main-img-services.png",
-			url=obj.link,
+			url=(obj.link && obj.link!='')?obj.link:"https://www.facebook.com/permalink.php?story_fbid="+obj.story_fbid+"&id="+obj.id,
 			fromName=obj.from_name|| "<a href='"+url+"' target='_blank'>"+((url.length>90)?String(url).substr(0,90)+"...":url)+"</a>",
 			description=(obj.message)?((obj.message.length>100)?String(obj.message).substr(0, 100) + "....<a href='"+url+"' target='_blank'>show more</a>": obj.message):"",
 			time=(obj.created_time!="")?obj.created_time:((obj.updated_time)?obj.updated_time:""),
